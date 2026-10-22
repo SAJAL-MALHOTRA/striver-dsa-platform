@@ -1,0 +1,2942 @@
+{
+  "video_id": "7zmgQSJghpo",
+  "title": "G-16. Number of Distinct Islands | Constructive Thinking + DFS | C++ | Java",
+  "duration_sec": 1082,
+  "num_segments": 489,
+  "segments": [
+    {
+      "start": 3.04,
+      "end": 6.32,
+      "duration": 3.28,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.48,
+      "end": 8.0,
+      "duration": 3.52,
+      "text": "i hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.32,
+      "end": 10.56,
+      "duration": 4.24,
+      "text": "so in this video we are going to solve"
+    },
+    {
+      "start": 8.0,
+      "end": 12.96,
+      "duration": 4.96,
+      "text": "the problem number of distinct islands"
+    },
+    {
+      "start": 10.56,
+      "end": 16.32,
+      "duration": 5.76,
+      "text": "let's read what the problem states given"
+    },
+    {
+      "start": 12.96,
+      "end": 18.08,
+      "duration": 5.12,
+      "text": "a boolean 2d matrix of size n cross m"
+    },
+    {
+      "start": 16.32,
+      "end": 20.0,
+      "duration": 3.68,
+      "text": "you have to find the number of distinct"
+    },
+    {
+      "start": 18.08,
+      "end": 20.88,
+      "duration": 2.8,
+      "text": "islands uh where a group of connected"
+    },
+    {
+      "start": 20.0,
+      "end": 22.96,
+      "duration": 2.96,
+      "text": "ones"
+    },
+    {
+      "start": 20.88,
+      "end": 25.52,
+      "duration": 4.64,
+      "text": "form an island again very important to"
+    },
+    {
+      "start": 22.96,
+      "end": 28.4,
+      "duration": 5.44,
+      "text": "notice horizontally or vertically that"
+    },
+    {
+      "start": 25.52,
+      "end": 30.56,
+      "duration": 5.04,
+      "text": "means only these directions are allowed"
+    },
+    {
+      "start": 28.4,
+      "end": 31.68,
+      "duration": 3.28,
+      "text": "uh two islands are considered to be"
+    },
+    {
+      "start": 30.56,
+      "end": 34.72,
+      "duration": 4.16,
+      "text": "distinct"
+    },
+    {
+      "start": 31.68,
+      "end": 37.28,
+      "duration": 5.6,
+      "text": "if and only if one island is"
+    },
+    {
+      "start": 34.72,
+      "end": 39.76,
+      "duration": 5.04,
+      "text": "equal to the another not rotated or"
+    },
+    {
+      "start": 37.28,
+      "end": 42.72,
+      "duration": 5.44,
+      "text": "reflected let me explain you so imagine"
+    },
+    {
+      "start": 39.76,
+      "end": 46.4,
+      "duration": 6.64,
+      "text": "this is the n cross m matrix that is"
+    },
+    {
+      "start": 42.72,
+      "end": 47.68,
+      "duration": 4.96,
+      "text": "given to you just imagine so if i take"
+    },
+    {
+      "start": 46.4,
+      "end": 51.28,
+      "duration": 4.88,
+      "text": "this one"
+    },
+    {
+      "start": 47.68,
+      "end": 53.28,
+      "duration": 5.6,
+      "text": "this is an island and if i take this one"
+    },
+    {
+      "start": 51.28,
+      "end": 55.6,
+      "duration": 4.32,
+      "text": "they might look identical but they are"
+    },
+    {
+      "start": 53.28,
+      "end": 56.72,
+      "duration": 3.44,
+      "text": "somewhere rotated this portion is"
+    },
+    {
+      "start": 55.6,
+      "end": 57.76,
+      "duration": 2.16,
+      "text": "rotated"
+    },
+    {
+      "start": 56.72,
+      "end": 60.24,
+      "duration": 3.52,
+      "text": "twice"
+    },
+    {
+      "start": 57.76,
+      "end": 62.48,
+      "duration": 4.72,
+      "text": "anticlockwise to get this so you cannot"
+    },
+    {
+      "start": 60.24,
+      "end": 65.28,
+      "duration": 5.04,
+      "text": "say them to be identical you cannot say"
+    },
+    {
+      "start": 62.48,
+      "end": 66.24,
+      "duration": 3.76,
+      "text": "them to be identical got it but had this"
+    },
+    {
+      "start": 65.28,
+      "end": 67.76,
+      "duration": 2.48,
+      "text": "been"
+    },
+    {
+      "start": 66.24,
+      "end": 70.0,
+      "duration": 3.76,
+      "text": "something like this"
+    },
+    {
+      "start": 67.76,
+      "end": 73.6,
+      "duration": 5.84,
+      "text": "had this been like 1 and 0"
+    },
+    {
+      "start": 70.0,
+      "end": 76.32,
+      "duration": 6.32,
+      "text": "then i could have said this and this is"
+    },
+    {
+      "start": 73.6,
+      "end": 78.96,
+      "duration": 5.36,
+      "text": "identical then i could have said but as"
+    },
+    {
+      "start": 76.32,
+      "end": 79.76,
+      "duration": 3.44,
+      "text": "of now i cannot because they are"
+    },
+    {
+      "start": 78.96,
+      "end": 83.2,
+      "duration": 4.24,
+      "text": "not"
+    },
+    {
+      "start": 79.76,
+      "end": 87.28,
+      "duration": 7.52,
+      "text": "got it but i can say this guy and this"
+    },
+    {
+      "start": 83.2,
+      "end": 88.56,
+      "duration": 5.36,
+      "text": "guy to be an identical island so the"
+    },
+    {
+      "start": 87.28,
+      "end": 90.64,
+      "duration": 3.36,
+      "text": "definition of island is they are"
+    },
+    {
+      "start": 88.56,
+      "end": 93.44,
+      "duration": 4.88,
+      "text": "connected so all of these guys are"
+    },
+    {
+      "start": 90.64,
+      "end": 95.28,
+      "duration": 4.64,
+      "text": "connected this guy is connected"
+    },
+    {
+      "start": 93.44,
+      "end": 97.36,
+      "duration": 3.92,
+      "text": "this guy is connected and this guy is"
+    },
+    {
+      "start": 95.28,
+      "end": 99.28,
+      "duration": 4.0,
+      "text": "connected so the ones that are connected"
+    },
+    {
+      "start": 97.36,
+      "end": 101.28,
+      "duration": 3.92,
+      "text": "are marked with the red color and this"
+    },
+    {
+      "start": 99.28,
+      "end": 104.0,
+      "duration": 4.72,
+      "text": "and this are identical so i can count"
+    },
+    {
+      "start": 101.28,
+      "end": 105.92,
+      "duration": 4.64,
+      "text": "them as one i can count them as two and"
+    },
+    {
+      "start": 104.0,
+      "end": 106.96,
+      "duration": 2.96,
+      "text": "i can count this as three so there are"
+    },
+    {
+      "start": 105.92,
+      "end": 108.16,
+      "duration": 2.24,
+      "text": "three"
+    },
+    {
+      "start": 106.96,
+      "end": 109.52,
+      "duration": 2.56,
+      "text": "unique"
+    },
+    {
+      "start": 108.16,
+      "end": 111.84,
+      "duration": 3.68,
+      "text": "distinct"
+    },
+    {
+      "start": 109.52,
+      "end": 114.08,
+      "duration": 4.56,
+      "text": "islands"
+    },
+    {
+      "start": 111.84,
+      "end": 117.28,
+      "duration": 5.44,
+      "text": "three unique distinct islands had the"
+    },
+    {
+      "start": 114.08,
+      "end": 119.6,
+      "duration": 5.52,
+      "text": "question been something like this"
+    },
+    {
+      "start": 117.28,
+      "end": 120.64,
+      "duration": 3.36,
+      "text": "then there would have been"
+    },
+    {
+      "start": 119.6,
+      "end": 122.24,
+      "duration": 2.64,
+      "text": "one"
+    },
+    {
+      "start": 120.64,
+      "end": 124.8,
+      "duration": 4.16,
+      "text": "both of them are equal"
+    },
+    {
+      "start": 122.24,
+      "end": 126.8,
+      "duration": 4.56,
+      "text": "two both of them are equal two distinct"
+    },
+    {
+      "start": 124.8,
+      "end": 128.8,
+      "duration": 4.0,
+      "text": "elements so depending on the shape of"
+    },
+    {
+      "start": 126.8,
+      "end": 129.92,
+      "duration": 3.12,
+      "text": "the island that you're forming depending"
+    },
+    {
+      "start": 128.8,
+      "end": 132.88,
+      "duration": 4.08,
+      "text": "on the shape of the island that you're"
+    },
+    {
+      "start": 129.92,
+      "end": 136.24,
+      "duration": 6.32,
+      "text": "forming you count the number of distinct"
+    },
+    {
+      "start": 132.88,
+      "end": 139.36,
+      "duration": 6.48,
+      "text": "islands so how do you solve this problem"
+    },
+    {
+      "start": 136.24,
+      "end": 140.88,
+      "duration": 4.64,
+      "text": "it's a big thing right how do you solve"
+    },
+    {
+      "start": 139.36,
+      "end": 143.28,
+      "duration": 3.92,
+      "text": "this problem"
+    },
+    {
+      "start": 140.88,
+      "end": 146.64,
+      "duration": 5.76,
+      "text": "now one of the things you can say is"
+    },
+    {
+      "start": 143.28,
+      "end": 150.0,
+      "duration": 6.72,
+      "text": "you can store this uh shape yes you can"
+    },
+    {
+      "start": 146.64,
+      "end": 153.52,
+      "duration": 6.88,
+      "text": "store this shape the shape"
+    },
+    {
+      "start": 150.0,
+      "end": 157.28,
+      "duration": 7.28,
+      "text": "the shape the shape in some set data"
+    },
+    {
+      "start": 153.52,
+      "end": 159.84,
+      "duration": 6.32,
+      "text": "structure and then set will say how many"
+    },
+    {
+      "start": 157.28,
+      "end": 162.4,
+      "duration": 5.12,
+      "text": "unique are there how many"
+    },
+    {
+      "start": 159.84,
+      "end": 165.04,
+      "duration": 5.2,
+      "text": "unique are there because that does that"
+    },
+    {
+      "start": 162.4,
+      "end": 166.8,
+      "duration": 4.4,
+      "text": "for you but how do i"
+    },
+    {
+      "start": 165.04,
+      "end": 169.84,
+      "duration": 4.8,
+      "text": "store this"
+    },
+    {
+      "start": 166.8,
+      "end": 171.84,
+      "duration": 5.04,
+      "text": "shape is my question if i can figure out"
+    },
+    {
+      "start": 169.84,
+      "end": 173.92,
+      "duration": 4.08,
+      "text": "a way to store this"
+    },
+    {
+      "start": 171.84,
+      "end": 175.76,
+      "duration": 3.92,
+      "text": "shape i think i should be able to solve"
+    },
+    {
+      "start": 173.92,
+      "end": 178.24,
+      "duration": 4.32,
+      "text": "this problem so at first let me write"
+    },
+    {
+      "start": 175.76,
+      "end": 179.6,
+      "duration": 3.84,
+      "text": "down the row numbers to make a bit more"
+    },
+    {
+      "start": 178.24,
+      "end": 183.36,
+      "duration": 5.12,
+      "text": "clarity so i've written down the row"
+    },
+    {
+      "start": 179.6,
+      "end": 187.04,
+      "duration": 7.44,
+      "text": "numbers okay so if i try to write these"
+    },
+    {
+      "start": 183.36,
+      "end": 189.44,
+      "duration": 6.08,
+      "text": "ones down it's like 1 1 1 and this is"
+    },
+    {
+      "start": 187.04,
+      "end": 192.0,
+      "duration": 4.96,
+      "text": "nothing but 0 comma 0 this is nothing"
+    },
+    {
+      "start": 189.44,
+      "end": 194.8,
+      "duration": 5.36,
+      "text": "but 0 comma 1 and this is nothing but 1"
+    },
+    {
+      "start": 192.0,
+      "end": 195.84,
+      "duration": 3.84,
+      "text": "comma 0 that is something i definitely"
+    },
+    {
+      "start": 194.8,
+      "end": 198.4,
+      "duration": 3.6,
+      "text": "know"
+    },
+    {
+      "start": 195.84,
+      "end": 201.6,
+      "duration": 5.76,
+      "text": "now if i try to write this down let's"
+    },
+    {
+      "start": 198.4,
+      "end": 204.56,
+      "duration": 6.16,
+      "text": "write 1 1 1 and this is nothing but 2"
+    },
+    {
+      "start": 201.6,
+      "end": 207.2,
+      "duration": 5.6,
+      "text": "comma 3 this is nothing but 2 comma 4"
+    },
+    {
+      "start": 204.56,
+      "end": 209.92,
+      "duration": 5.36,
+      "text": "this is nothing but 3 comma 3."
+    },
+    {
+      "start": 207.2,
+      "end": 212.16,
+      "duration": 4.96,
+      "text": "now how do i make sure i store them how"
+    },
+    {
+      "start": 209.92,
+      "end": 214.4,
+      "duration": 4.48,
+      "text": "do i make sure i store them in a set"
+    },
+    {
+      "start": 212.16,
+      "end": 216.48,
+      "duration": 4.32,
+      "text": "such that these two"
+    },
+    {
+      "start": 214.4,
+      "end": 218.08,
+      "duration": 3.68,
+      "text": "come out to be identical somewhere down"
+    },
+    {
+      "start": 216.48,
+      "end": 220.08,
+      "duration": 3.6,
+      "text": "the line i have to make sure that this"
+    },
+    {
+      "start": 218.08,
+      "end": 223.2,
+      "duration": 5.12,
+      "text": "particular thing and this particular"
+    },
+    {
+      "start": 220.08,
+      "end": 225.2,
+      "duration": 5.12,
+      "text": "thing are stored in a set data structure"
+    },
+    {
+      "start": 223.2,
+      "end": 228.16,
+      "duration": 4.96,
+      "text": "such that these two"
+    },
+    {
+      "start": 225.2,
+      "end": 231.76,
+      "duration": 6.56,
+      "text": "uh seem to be identical so maybe what i"
+    },
+    {
+      "start": 228.16,
+      "end": 233.12,
+      "duration": 4.96,
+      "text": "can do is i can say okay zero comma zero"
+    },
+    {
+      "start": 231.76,
+      "end": 234.48,
+      "duration": 2.72,
+      "text": "zero comma one"
+    },
+    {
+      "start": 233.12,
+      "end": 236.64,
+      "duration": 3.52,
+      "text": "one comma zero"
+    },
+    {
+      "start": 234.48,
+      "end": 237.76,
+      "duration": 3.28,
+      "text": "something in this direction first this"
+    },
+    {
+      "start": 236.64,
+      "end": 239.76,
+      "duration": 3.12,
+      "text": "then this"
+    },
+    {
+      "start": 237.76,
+      "end": 240.72,
+      "duration": 2.96,
+      "text": "something in this direction i've stored"
+    },
+    {
+      "start": 239.76,
+      "end": 242.96,
+      "duration": 3.2,
+      "text": "a"
+    },
+    {
+      "start": 240.72,
+      "end": 245.2,
+      "duration": 4.48,
+      "text": "list"
+    },
+    {
+      "start": 242.96,
+      "end": 246.16,
+      "duration": 3.2,
+      "text": "stored a vector or a list"
+    },
+    {
+      "start": 245.2,
+      "end": 247.12,
+      "duration": 1.92,
+      "text": "i can"
+    },
+    {
+      "start": 246.16,
+      "end": 249.28,
+      "duration": 3.12,
+      "text": "but then"
+    },
+    {
+      "start": 247.12,
+      "end": 250.72,
+      "duration": 3.6,
+      "text": "if i store this guy which is like 2"
+    },
+    {
+      "start": 249.28,
+      "end": 252.8,
+      "duration": 3.52,
+      "text": "comma 3"
+    },
+    {
+      "start": 250.72,
+      "end": 255.2,
+      "duration": 4.48,
+      "text": "2 comma 4 because in this direction and"
+    },
+    {
+      "start": 252.8,
+      "end": 257.28,
+      "duration": 4.48,
+      "text": "then in this direction three comma three"
+    },
+    {
+      "start": 255.2,
+      "end": 258.24,
+      "duration": 3.04,
+      "text": "so they will not match they will not"
+    },
+    {
+      "start": 257.28,
+      "end": 260.48,
+      "duration": 3.2,
+      "text": "match"
+    },
+    {
+      "start": 258.24,
+      "end": 262.88,
+      "duration": 4.64,
+      "text": "i have to make sure they match"
+    },
+    {
+      "start": 260.48,
+      "end": 264.96,
+      "duration": 4.48,
+      "text": "can i say i started from here then i"
+    },
+    {
+      "start": 262.88,
+      "end": 266.32,
+      "duration": 3.44,
+      "text": "went here then i started from here then"
+    },
+    {
+      "start": 264.96,
+      "end": 268.96,
+      "duration": 4.0,
+      "text": "i went here"
+    },
+    {
+      "start": 266.32,
+      "end": 271.52,
+      "duration": 5.2,
+      "text": "can i say this to be the base i can can"
+    },
+    {
+      "start": 268.96,
+      "end": 273.92,
+      "duration": 4.96,
+      "text": "i say this to be the base i can"
+    },
+    {
+      "start": 271.52,
+      "end": 275.76,
+      "duration": 4.24,
+      "text": "can i say from here i started from here"
+    },
+    {
+      "start": 273.92,
+      "end": 278.88,
+      "duration": 4.96,
+      "text": "from here i started from here can i say"
+    },
+    {
+      "start": 275.76,
+      "end": 280.48,
+      "duration": 4.72,
+      "text": "this to be the base i can so whatever is"
+    },
+    {
+      "start": 278.88,
+      "end": 283.52,
+      "duration": 4.64,
+      "text": "the base"
+    },
+    {
+      "start": 280.48,
+      "end": 286.64,
+      "duration": 6.16,
+      "text": "2 comma three minus two comma three"
+    },
+    {
+      "start": 283.52,
+      "end": 289.12,
+      "duration": 5.6,
+      "text": "so that's zero comma zero"
+    },
+    {
+      "start": 286.64,
+      "end": 290.88,
+      "duration": 4.24,
+      "text": "two comma four minus the base"
+    },
+    {
+      "start": 289.12,
+      "end": 292.56,
+      "duration": 3.44,
+      "text": "remember this is this is what i'm"
+    },
+    {
+      "start": 290.88,
+      "end": 294.88,
+      "duration": 4.0,
+      "text": "calling to be the base"
+    },
+    {
+      "start": 292.56,
+      "end": 297.44,
+      "duration": 4.88,
+      "text": "this is the starting point the two minus"
+    },
+    {
+      "start": 294.88,
+      "end": 298.8,
+      "duration": 3.92,
+      "text": "four comma the base"
+    },
+    {
+      "start": 297.44,
+      "end": 301.52,
+      "duration": 4.08,
+      "text": "zero comma one"
+    },
+    {
+      "start": 298.8,
+      "end": 304.0,
+      "duration": 5.2,
+      "text": "then this one three comma three minus"
+    },
+    {
+      "start": 301.52,
+      "end": 304.0,
+      "duration": 2.48,
+      "text": "the base"
+    },
+    {
+      "start": 304.24,
+      "end": 307.12,
+      "duration": 2.88,
+      "text": "one comma zero"
+    },
+    {
+      "start": 307.44,
+      "end": 310.96,
+      "duration": 3.52,
+      "text": "and now"
+    },
+    {
+      "start": 308.96,
+      "end": 312.56,
+      "duration": 3.6,
+      "text": "can i say if i write them"
+    },
+    {
+      "start": 310.96,
+      "end": 314.88,
+      "duration": 3.92,
+      "text": "in a list"
+    },
+    {
+      "start": 312.56,
+      "end": 316.4,
+      "duration": 3.84,
+      "text": "will they come out to be the same as the"
+    },
+    {
+      "start": 314.88,
+      "end": 317.76,
+      "duration": 2.88,
+      "text": "previous one"
+    },
+    {
+      "start": 316.4,
+      "end": 320.8,
+      "duration": 4.4,
+      "text": "they will"
+    },
+    {
+      "start": 317.76,
+      "end": 323.2,
+      "duration": 5.44,
+      "text": "this list and this list are identical"
+    },
+    {
+      "start": 320.8,
+      "end": 325.76,
+      "duration": 4.96,
+      "text": "now over here the base was 0"
+    },
+    {
+      "start": 323.2,
+      "end": 327.36,
+      "duration": 4.16,
+      "text": "so zero comma zero minus zero comma zero"
+    },
+    {
+      "start": 325.76,
+      "end": 329.44,
+      "duration": 3.68,
+      "text": "was zero comma zero"
+    },
+    {
+      "start": 327.36,
+      "end": 332.16,
+      "duration": 4.8,
+      "text": "zero comma one minus zero comma zero was"
+    },
+    {
+      "start": 329.44,
+      "end": 334.64,
+      "duration": 5.2,
+      "text": "zero comma one one comma zero minus zero"
+    },
+    {
+      "start": 332.16,
+      "end": 337.04,
+      "duration": 4.88,
+      "text": "comma zero was"
+    },
+    {
+      "start": 334.64,
+      "end": 339.52,
+      "duration": 4.88,
+      "text": "one comma zero so thereby it stayed same"
+    },
+    {
+      "start": 337.04,
+      "end": 342.0,
+      "duration": 4.96,
+      "text": "but over here when you subtract the base"
+    },
+    {
+      "start": 339.52,
+      "end": 344.4,
+      "duration": 4.88,
+      "text": "you get these things you get these"
+    },
+    {
+      "start": 342.0,
+      "end": 346.72,
+      "duration": 4.72,
+      "text": "things let me give you one more example"
+    },
+    {
+      "start": 344.4,
+      "end": 348.72,
+      "duration": 4.32,
+      "text": "to have these things in clarity"
+    },
+    {
+      "start": 346.72,
+      "end": 350.16,
+      "duration": 3.44,
+      "text": "let's see the next"
+    },
+    {
+      "start": 348.72,
+      "end": 352.8,
+      "duration": 4.08,
+      "text": "identical set"
+    },
+    {
+      "start": 350.16,
+      "end": 354.72,
+      "duration": 4.56,
+      "text": "uh what is the next uh identical set"
+    },
+    {
+      "start": 352.8,
+      "end": 355.52,
+      "duration": 2.72,
+      "text": "this one and this one let's write them"
+    },
+    {
+      "start": 354.72,
+      "end": 359.44,
+      "duration": 4.72,
+      "text": "down"
+    },
+    {
+      "start": 355.52,
+      "end": 360.64,
+      "duration": 5.12,
+      "text": "so it says one one and the states zero"
+    },
+    {
+      "start": 359.44,
+      "end": 361.6,
+      "duration": 2.16,
+      "text": "comma three"
+    },
+    {
+      "start": 360.64,
+      "end": 363.12,
+      "duration": 2.48,
+      "text": "and"
+    },
+    {
+      "start": 361.6,
+      "end": 363.92,
+      "duration": 2.32,
+      "text": "zero comma four"
+    },
+    {
+      "start": 363.12,
+      "end": 365.76,
+      "duration": 2.64,
+      "text": "right"
+    },
+    {
+      "start": 363.92,
+      "end": 368.08,
+      "duration": 4.16,
+      "text": "and the other one is"
+    },
+    {
+      "start": 365.76,
+      "end": 370.88,
+      "duration": 5.12,
+      "text": "this and this which is one comma one"
+    },
+    {
+      "start": 368.08,
+      "end": 372.96,
+      "duration": 4.88,
+      "text": "this is three comma zero and this is"
+    },
+    {
+      "start": 370.88,
+      "end": 375.44,
+      "duration": 4.56,
+      "text": "three comma one so apparently this is"
+    },
+    {
+      "start": 372.96,
+      "end": 377.52,
+      "duration": 4.56,
+      "text": "identical and this is identical"
+    },
+    {
+      "start": 375.44,
+      "end": 380.0,
+      "duration": 4.56,
+      "text": "so how will you store it again you take"
+    },
+    {
+      "start": 377.52,
+      "end": 382.0,
+      "duration": 4.48,
+      "text": "zero comma three"
+    },
+    {
+      "start": 380.0,
+      "end": 386.32,
+      "duration": 6.32,
+      "text": "and you consider this to be the base so"
+    },
+    {
+      "start": 382.0,
+      "end": 388.48,
+      "duration": 6.48,
+      "text": "0 minus 3 is 0 comma 0 perfect"
+    },
+    {
+      "start": 386.32,
+      "end": 391.2,
+      "duration": 4.88,
+      "text": "and then again you take 0 comma 4 and"
+    },
+    {
+      "start": 388.48,
+      "end": 393.6,
+      "duration": 5.12,
+      "text": "you subtract the base which is 0 3 so"
+    },
+    {
+      "start": 391.2,
+      "end": 395.84,
+      "duration": 4.64,
+      "text": "you get 0 1 so store"
+    },
+    {
+      "start": 393.6,
+      "end": 397.68,
+      "duration": 4.08,
+      "text": "so again you store another list for this"
+    },
+    {
+      "start": 395.84,
+      "end": 399.28,
+      "duration": 3.44,
+      "text": "you have stored this particular list"
+    },
+    {
+      "start": 397.68,
+      "end": 400.88,
+      "duration": 3.2,
+      "text": "let's do it for this"
+    },
+    {
+      "start": 399.28,
+      "end": 404.96,
+      "duration": 5.68,
+      "text": "3 comma 0"
+    },
+    {
+      "start": 400.88,
+      "end": 407.68,
+      "duration": 6.8,
+      "text": "minus 3 comma 0 is 0 0 3 comma 1"
+    },
+    {
+      "start": 404.96,
+      "end": 409.04,
+      "duration": 4.08,
+      "text": "minus 3 comma 1 is"
+    },
+    {
+      "start": 407.68,
+      "end": 412.56,
+      "duration": 4.88,
+      "text": "zero comma one"
+    },
+    {
+      "start": 409.04,
+      "end": 414.96,
+      "duration": 5.92,
+      "text": "so zero comma zero zero comma one again"
+    },
+    {
+      "start": 412.56,
+      "end": 417.12,
+      "duration": 4.56,
+      "text": "the same list"
+    },
+    {
+      "start": 414.96,
+      "end": 419.2,
+      "duration": 4.24,
+      "text": "if you subtract the base so apparently"
+    },
+    {
+      "start": 417.12,
+      "end": 421.92,
+      "duration": 4.8,
+      "text": "if you store this into a set data"
+    },
+    {
+      "start": 419.2,
+      "end": 423.52,
+      "duration": 4.32,
+      "text": "structure only one of this and only one"
+    },
+    {
+      "start": 421.92,
+      "end": 425.68,
+      "duration": 3.76,
+      "text": "of this will be stored which will give"
+    },
+    {
+      "start": 423.52,
+      "end": 429.12,
+      "duration": 5.6,
+      "text": "you the size to be two"
+    },
+    {
+      "start": 425.68,
+      "end": 431.2,
+      "duration": 5.52,
+      "text": "supers but there's a catch"
+    },
+    {
+      "start": 429.12,
+      "end": 434.24,
+      "duration": 5.12,
+      "text": "what if uh like the island or something"
+    },
+    {
+      "start": 431.2,
+      "end": 437.04,
+      "duration": 5.84,
+      "text": "or this something else then just to make"
+    },
+    {
+      "start": 434.24,
+      "end": 439.04,
+      "duration": 4.8,
+      "text": "sure you follow an order if you're first"
+    },
+    {
+      "start": 437.04,
+      "end": 442.64,
+      "duration": 5.6,
+      "text": "going right"
+    },
+    {
+      "start": 439.04,
+      "end": 444.88,
+      "duration": 5.84,
+      "text": "then down then left then up please"
+    },
+    {
+      "start": 442.64,
+      "end": 446.72,
+      "duration": 4.08,
+      "text": "follow that order for everyone if you're"
+    },
+    {
+      "start": 444.88,
+      "end": 449.36,
+      "duration": 4.48,
+      "text": "going right and if you're following a"
+    },
+    {
+      "start": 446.72,
+      "end": 450.56,
+      "duration": 3.84,
+      "text": "particular traversal bfs follow it"
+    },
+    {
+      "start": 449.36,
+      "end": 452.88,
+      "duration": 3.52,
+      "text": "throughout if you are following a"
+    },
+    {
+      "start": 450.56,
+      "end": 454.24,
+      "duration": 3.68,
+      "text": "particular traversal dfs follow it"
+    },
+    {
+      "start": 452.88,
+      "end": 456.88,
+      "duration": 4.0,
+      "text": "throughout so that"
+    },
+    {
+      "start": 454.24,
+      "end": 460.56,
+      "duration": 6.32,
+      "text": "the list ordering stays the same for"
+    },
+    {
+      "start": 456.88,
+      "end": 462.48,
+      "duration": 5.6,
+      "text": "everyone like for here if i do a dfs so"
+    },
+    {
+      "start": 460.56,
+      "end": 464.56,
+      "duration": 4.0,
+      "text": "from here to here i will go from here to"
+    },
+    {
+      "start": 462.48,
+      "end": 466.56,
+      "duration": 4.08,
+      "text": "here i'll go from here to here i'll go"
+    },
+    {
+      "start": 464.56,
+      "end": 468.88,
+      "duration": 4.32,
+      "text": "then i'll come back here since it is"
+    },
+    {
+      "start": 466.56,
+      "end": 470.72,
+      "duration": 4.16,
+      "text": "down i'll go here"
+    },
+    {
+      "start": 468.88,
+      "end": 472.72,
+      "duration": 3.84,
+      "text": "then i'll try to go here but nothing"
+    },
+    {
+      "start": 470.72,
+      "end": 475.2,
+      "duration": 4.48,
+      "text": "nothing then i'll go right left then"
+    },
+    {
+      "start": 472.72,
+      "end": 477.28,
+      "duration": 4.56,
+      "text": "i'll go left then i'll go here"
+    },
+    {
+      "start": 475.2,
+      "end": 478.64,
+      "duration": 3.44,
+      "text": "then i'll go here the dfs will be like"
+    },
+    {
+      "start": 477.28,
+      "end": 480.4,
+      "duration": 3.12,
+      "text": "this"
+    },
+    {
+      "start": 478.64,
+      "end": 482.24,
+      "duration": 3.6,
+      "text": "so you have to make sure"
+    },
+    {
+      "start": 480.4,
+      "end": 484.64,
+      "duration": 4.24,
+      "text": "you follow the same pattern and the same"
+    },
+    {
+      "start": 482.24,
+      "end": 486.48,
+      "duration": 4.24,
+      "text": "traversal if you'd have done a bfs it"
+    },
+    {
+      "start": 484.64,
+      "end": 487.52,
+      "duration": 2.88,
+      "text": "would have been this"
+    },
+    {
+      "start": 486.48,
+      "end": 490.4,
+      "duration": 3.92,
+      "text": "this this"
+    },
+    {
+      "start": 487.52,
+      "end": 492.08,
+      "duration": 4.56,
+      "text": "then this this this then this"
+    },
+    {
+      "start": 490.4,
+      "end": 494.48,
+      "duration": 4.08,
+      "text": "first like this like this then like this"
+    },
+    {
+      "start": 492.08,
+      "end": 496.32,
+      "duration": 4.24,
+      "text": "then like this you could have done vfs"
+    },
+    {
+      "start": 494.48,
+      "end": 497.92,
+      "duration": 3.44,
+      "text": "so if you follow the same pattern if"
+    },
+    {
+      "start": 496.32,
+      "end": 499.6,
+      "duration": 3.28,
+      "text": "you're going first they"
+    },
+    {
+      "start": 497.92,
+      "end": 501.92,
+      "duration": 4.0,
+      "text": "follow the same pattern of traversal so"
+    },
+    {
+      "start": 499.6,
+      "end": 503.6,
+      "duration": 4.0,
+      "text": "that you traverse in the same manner"
+    },
+    {
+      "start": 501.92,
+      "end": 505.6,
+      "duration": 3.68,
+      "text": "can be any part of the can be any part"
+    },
+    {
+      "start": 503.6,
+      "end": 506.56,
+      "duration": 2.96,
+      "text": "of the matrix you travel in the same"
+    },
+    {
+      "start": 505.6,
+      "end": 507.6,
+      "duration": 2.0,
+      "text": "manner"
+    },
+    {
+      "start": 506.56,
+      "end": 509.04,
+      "duration": 2.48,
+      "text": "and you"
+    },
+    {
+      "start": 507.6,
+      "end": 510.4,
+      "duration": 2.8,
+      "text": "subtract the base"
+    },
+    {
+      "start": 509.04,
+      "end": 512.72,
+      "duration": 3.68,
+      "text": "to store the"
+    },
+    {
+      "start": 510.4,
+      "end": 515.84,
+      "duration": 5.44,
+      "text": "coordinates you subtract the base to"
+    },
+    {
+      "start": 512.72,
+      "end": 517.28,
+      "duration": 4.56,
+      "text": "store the coordinates super simple so"
+    },
+    {
+      "start": 515.84,
+      "end": 518.88,
+      "duration": 3.04,
+      "text": "you've got the intuition"
+    },
+    {
+      "start": 517.28,
+      "end": 520.64,
+      "duration": 3.36,
+      "text": "how to make sure"
+    },
+    {
+      "start": 518.88,
+      "end": 523.2,
+      "duration": 4.32,
+      "text": "that everything is stored"
+    },
+    {
+      "start": 520.64,
+      "end": 524.32,
+      "duration": 3.68,
+      "text": "so one of the things we have figured out"
+    },
+    {
+      "start": 523.2,
+      "end": 526.64,
+      "duration": 3.44,
+      "text": "how to"
+    },
+    {
+      "start": 524.32,
+      "end": 528.16,
+      "duration": 3.84,
+      "text": "get the distinct islands"
+    },
+    {
+      "start": 526.64,
+      "end": 530.56,
+      "duration": 3.92,
+      "text": "we just need to store the islands and"
+    },
+    {
+      "start": 528.16,
+      "end": 532.24,
+      "duration": 4.08,
+      "text": "it's very simple let's do a traversal"
+    },
+    {
+      "start": 530.56,
+      "end": 534.4,
+      "duration": 3.84,
+      "text": "and we've already done this in the"
+    },
+    {
+      "start": 532.24,
+      "end": 535.92,
+      "duration": 3.68,
+      "text": "number of islands problem"
+    },
+    {
+      "start": 534.4,
+      "end": 538.24,
+      "duration": 3.84,
+      "text": "remember the number of islands problem"
+    },
+    {
+      "start": 535.92,
+      "end": 540.0,
+      "duration": 4.08,
+      "text": "if you do not pause and go back and"
+    },
+    {
+      "start": 538.24,
+      "end": 541.84,
+      "duration": 3.6,
+      "text": "watch it so what you do is you start a"
+    },
+    {
+      "start": 540.0,
+      "end": 543.68,
+      "duration": 3.68,
+      "text": "traversal from here once you've started"
+    },
+    {
+      "start": 541.84,
+      "end": 545.36,
+      "duration": 3.52,
+      "text": "from here visit all the"
+    },
+    {
+      "start": 543.68,
+      "end": 547.68,
+      "duration": 4.0,
+      "text": "guys connected to it so it'll go and"
+    },
+    {
+      "start": 545.36,
+      "end": 549.92,
+      "duration": 4.56,
+      "text": "visit this and this this can be stored"
+    },
+    {
+      "start": 547.68,
+      "end": 552.96,
+      "duration": 5.28,
+      "text": "in a set in a list"
+    },
+    {
+      "start": 549.92,
+      "end": 555.2,
+      "duration": 5.28,
+      "text": "subtracting base then you go across"
+    },
+    {
+      "start": 552.96,
+      "end": 556.8,
+      "duration": 3.84,
+      "text": "visited not visited"
+    },
+    {
+      "start": 555.2,
+      "end": 558.72,
+      "duration": 3.52,
+      "text": "one and not visited so again you start"
+    },
+    {
+      "start": 556.8,
+      "end": 561.12,
+      "duration": 4.32,
+      "text": "from here and then you go over here and"
+    },
+    {
+      "start": 558.72,
+      "end": 563.12,
+      "duration": 4.4,
+      "text": "visit this so you store this in a set"
+    },
+    {
+      "start": 561.12,
+      "end": 564.96,
+      "duration": 3.84,
+      "text": "then you go here visited something like"
+    },
+    {
+      "start": 563.12,
+      "end": 567.04,
+      "duration": 3.92,
+      "text": "this and the first thing you get this"
+    },
+    {
+      "start": 564.96,
+      "end": 568.96,
+      "duration": 4.0,
+      "text": "again you get this and store in the set"
+    },
+    {
+      "start": 567.04,
+      "end": 570.8,
+      "duration": 3.76,
+      "text": "and you go here then you get this so"
+    },
+    {
+      "start": 568.96,
+      "end": 572.48,
+      "duration": 3.52,
+      "text": "it's an expansion of the number of"
+    },
+    {
+      "start": 570.8,
+      "end": 574.24,
+      "duration": 3.44,
+      "text": "islands problem if you haven't seen the"
+    },
+    {
+      "start": 572.48,
+      "end": 576.32,
+      "duration": 3.84,
+      "text": "number of islands problem i'll highly"
+    },
+    {
+      "start": 574.24,
+      "end": 577.76,
+      "duration": 3.52,
+      "text": "recommend you to pause this video go"
+    },
+    {
+      "start": 576.32,
+      "end": 579.92,
+      "duration": 3.6,
+      "text": "back and watch the number of islands"
+    },
+    {
+      "start": 577.76,
+      "end": 581.84,
+      "duration": 4.08,
+      "text": "problem and then come back over here"
+    },
+    {
+      "start": 579.92,
+      "end": 583.52,
+      "duration": 3.6,
+      "text": "okay so"
+    },
+    {
+      "start": 581.84,
+      "end": 584.88,
+      "duration": 3.04,
+      "text": "let's quickly do a dry run and then we"
+    },
+    {
+      "start": 583.52,
+      "end": 586.96,
+      "duration": 3.44,
+      "text": "will write the code"
+    },
+    {
+      "start": 584.88,
+      "end": 588.8,
+      "duration": 3.92,
+      "text": "so how will the code work the code at"
+    },
+    {
+      "start": 586.96,
+      "end": 590.48,
+      "duration": 3.52,
+      "text": "first will go over here"
+    },
+    {
+      "start": 588.8,
+      "end": 592.8,
+      "duration": 4.0,
+      "text": "and see if it is unvisited it will"
+    },
+    {
+      "start": 590.48,
+      "end": 595.12,
+      "duration": 4.64,
+      "text": "definitely be unvisited to start this"
+    },
+    {
+      "start": 592.8,
+      "end": 597.92,
+      "duration": 5.12,
+      "text": "traversal from here which is you can do"
+    },
+    {
+      "start": 595.12,
+      "end": 601.6,
+      "duration": 6.48,
+      "text": "a dfs or a bfs i'll do a dfs over here"
+    },
+    {
+      "start": 597.92,
+      "end": 603.6,
+      "duration": 5.68,
+      "text": "dfs of zero zero and it will store this"
+    },
+    {
+      "start": 601.6,
+      "end": 605.76,
+      "duration": 4.16,
+      "text": "in a vector something like zero comma"
+    },
+    {
+      "start": 603.6,
+      "end": 607.76,
+      "duration": 4.16,
+      "text": "zero or a list then it will do a dfs"
+    },
+    {
+      "start": 605.76,
+      "end": 610.4,
+      "duration": 4.64,
+      "text": "traversal till here and so like zero"
+    },
+    {
+      "start": 607.76,
+      "end": 612.56,
+      "duration": 4.8,
+      "text": "comma one which is like dfs of zero"
+    },
+    {
+      "start": 610.4,
+      "end": 614.24,
+      "duration": 3.84,
+      "text": "comma one then it'll come back and go"
+    },
+    {
+      "start": 612.56,
+      "end": 616.96,
+      "duration": 4.4,
+      "text": "here which is"
+    },
+    {
+      "start": 614.24,
+      "end": 618.88,
+      "duration": 4.64,
+      "text": "come back and go here which is dfs of"
+    },
+    {
+      "start": 616.96,
+      "end": 620.96,
+      "duration": 4.0,
+      "text": "one comma zero so now it'll store one"
+    },
+    {
+      "start": 618.88,
+      "end": 623.6,
+      "duration": 4.72,
+      "text": "comma zero so there's a first list that"
+    },
+    {
+      "start": 620.96,
+      "end": 625.76,
+      "duration": 4.8,
+      "text": "it will create and then the traversal"
+    },
+    {
+      "start": 623.6,
+      "end": 628.0,
+      "duration": 4.4,
+      "text": "will be complete so in the set data"
+    },
+    {
+      "start": 625.76,
+      "end": 630.4,
+      "duration": 4.64,
+      "text": "structure you'll store this particular"
+    },
+    {
+      "start": 628.0,
+      "end": 632.56,
+      "duration": 4.56,
+      "text": "list the next time"
+    },
+    {
+      "start": 630.4,
+      "end": 633.92,
+      "duration": 3.52,
+      "text": "you go here visit it go here go here"
+    },
+    {
+      "start": 632.56,
+      "end": 635.68,
+      "duration": 3.12,
+      "text": "then you get this"
+    },
+    {
+      "start": 633.92,
+      "end": 638.0,
+      "duration": 4.08,
+      "text": "so you know start from here"
+    },
+    {
+      "start": 635.68,
+      "end": 640.08,
+      "duration": 4.4,
+      "text": "so what will the dfs now starting from"
+    },
+    {
+      "start": 638.0,
+      "end": 643.68,
+      "duration": 5.68,
+      "text": "zero comma three which is this and we'll"
+    },
+    {
+      "start": 640.08,
+      "end": 645.04,
+      "duration": 4.96,
+      "text": "go till dfs of zero comma four so again"
+    },
+    {
+      "start": 643.68,
+      "end": 647.6,
+      "duration": 3.92,
+      "text": "this time the list will be created like"
+    },
+    {
+      "start": 645.04,
+      "end": 649.12,
+      "duration": 4.08,
+      "text": "zero comma zero and zero comma one so"
+    },
+    {
+      "start": 647.6,
+      "end": 651.04,
+      "duration": 3.44,
+      "text": "this list will again be stored in the"
+    },
+    {
+      "start": 649.12,
+      "end": 654.08,
+      "duration": 4.96,
+      "text": "set in similar order you can do the"
+    },
+    {
+      "start": 651.04,
+      "end": 655.44,
+      "duration": 4.4,
+      "text": "entire dfs traversal right i hope you've"
+    },
+    {
+      "start": 654.08,
+      "end": 656.96,
+      "duration": 2.88,
+      "text": "understood the entire intuition and the"
+    },
+    {
+      "start": 655.44,
+      "end": 659.6,
+      "duration": 4.16,
+      "text": "thought process it is very very"
+    },
+    {
+      "start": 656.96,
+      "end": 661.52,
+      "duration": 4.56,
+      "text": "important so let's get back to the code"
+    },
+    {
+      "start": 659.6,
+      "end": 663.68,
+      "duration": 4.08,
+      "text": "as usual the c plus plus code is on the"
+    },
+    {
+      "start": 661.52,
+      "end": 664.64,
+      "duration": 3.12,
+      "text": "right and the java code will be on the"
+    },
+    {
+      "start": 663.68,
+      "end": 665.84,
+      "duration": 2.16,
+      "text": "left"
+    },
+    {
+      "start": 664.64,
+      "end": 668.24,
+      "duration": 3.6,
+      "text": "so"
+    },
+    {
+      "start": 665.84,
+      "end": 669.04,
+      "duration": 3.2,
+      "text": "count distinct islands and we are given"
+    },
+    {
+      "start": 668.24,
+      "end": 670.64,
+      "duration": 2.4,
+      "text": "the"
+    },
+    {
+      "start": 669.04,
+      "end": 672.84,
+      "duration": 3.8,
+      "text": "grid so"
+    },
+    {
+      "start": 670.64,
+      "end": 676.64,
+      "duration": 6.0,
+      "text": "as usual just get the grid"
+    },
+    {
+      "start": 672.84,
+      "end": 676.64,
+      "duration": 3.8,
+      "text": "size and then get the"
+    },
+    {
+      "start": 678.32,
+      "end": 682.72,
+      "duration": 4.4,
+      "text": "m once this is done what is the next"
+    },
+    {
+      "start": 680.72,
+      "end": 684.72,
+      "duration": 4.0,
+      "text": "thing we need to visit it to make sure"
+    },
+    {
+      "start": 682.72,
+      "end": 686.88,
+      "duration": 4.16,
+      "text": "that nothing is visited so really we can"
+    },
+    {
+      "start": 684.72,
+      "end": 690.24,
+      "duration": 5.52,
+      "text": "just create something like this yeah"
+    },
+    {
+      "start": 686.88,
+      "end": 692.96,
+      "duration": 6.08,
+      "text": "okay so visited is created"
+    },
+    {
+      "start": 690.24,
+      "end": 694.4,
+      "duration": 4.16,
+      "text": "what after this"
+    },
+    {
+      "start": 692.96,
+      "end": 696.96,
+      "duration": 4.0,
+      "text": "right after this the first thing that"
+    },
+    {
+      "start": 694.4,
+      "end": 698.64,
+      "duration": 4.24,
+      "text": "you will do is you will start"
+    },
+    {
+      "start": 696.96,
+      "end": 701.68,
+      "duration": 4.72,
+      "text": "going from"
+    },
+    {
+      "start": 698.64,
+      "end": 703.04,
+      "duration": 4.4,
+      "text": "everyone right please make sure"
+    },
+    {
+      "start": 701.68,
+      "end": 705.52,
+      "duration": 3.84,
+      "text": "so that"
+    },
+    {
+      "start": 703.04,
+      "end": 708.16,
+      "duration": 5.12,
+      "text": "the entire matrix has been"
+    },
+    {
+      "start": 705.52,
+      "end": 710.48,
+      "duration": 4.96,
+      "text": "now you will say if this guy has not"
+    },
+    {
+      "start": 708.16,
+      "end": 711.52,
+      "duration": 3.36,
+      "text": "been visited yet"
+    },
+    {
+      "start": 710.48,
+      "end": 712.64,
+      "duration": 2.16,
+      "text": "then"
+    },
+    {
+      "start": 711.52,
+      "end": 715.28,
+      "duration": 3.76,
+      "text": "and then"
+    },
+    {
+      "start": 712.64,
+      "end": 717.84,
+      "duration": 5.2,
+      "text": "this guy is one like an island as well"
+    },
+    {
+      "start": 715.28,
+      "end": 719.28,
+      "duration": 4.0,
+      "text": "and island then please go and do the dfs"
+    },
+    {
+      "start": 717.84,
+      "end": 720.72,
+      "duration": 2.88,
+      "text": "for this guy"
+    },
+    {
+      "start": 719.28,
+      "end": 722.72,
+      "duration": 3.44,
+      "text": "okay"
+    },
+    {
+      "start": 720.72,
+      "end": 725.12,
+      "duration": 4.4,
+      "text": "with the grid and with the visited uh"
+    },
+    {
+      "start": 722.72,
+      "end": 727.6,
+      "duration": 4.88,
+      "text": "what else do you require i can say i"
+    },
+    {
+      "start": 725.12,
+      "end": 729.36,
+      "duration": 4.24,
+      "text": "require something which is"
+    },
+    {
+      "start": 727.6,
+      "end": 731.52,
+      "duration": 3.92,
+      "text": "a vector"
+    },
+    {
+      "start": 729.36,
+      "end": 732.88,
+      "duration": 3.52,
+      "text": "which stores all these"
+    },
+    {
+      "start": 731.52,
+      "end": 735.28,
+      "duration": 3.76,
+      "text": "things"
+    },
+    {
+      "start": 732.88,
+      "end": 737.28,
+      "duration": 4.4,
+      "text": "a list basically"
+    },
+    {
+      "start": 735.28,
+      "end": 740.56,
+      "duration": 5.28,
+      "text": "it shows all these things sorry i can"
+    },
+    {
+      "start": 737.28,
+      "end": 743.36,
+      "duration": 6.08,
+      "text": "pass this list vector i'll require uh"
+    },
+    {
+      "start": 740.56,
+      "end": 745.04,
+      "duration": 4.48,
+      "text": "and once this bfs is over"
+    },
+    {
+      "start": 743.36,
+      "end": 747.76,
+      "duration": 4.4,
+      "text": "i can set"
+    },
+    {
+      "start": 745.04,
+      "end": 749.2,
+      "duration": 4.16,
+      "text": "can you store this vector perfect and do"
+    },
+    {
+      "start": 747.76,
+      "end": 752.08,
+      "duration": 4.32,
+      "text": "i need to create a set yes i need to"
+    },
+    {
+      "start": 749.2,
+      "end": 754.0,
+      "duration": 4.8,
+      "text": "create a set and the set will be of this"
+    },
+    {
+      "start": 752.08,
+      "end": 756.48,
+      "duration": 4.4,
+      "text": "because it is storing"
+    },
+    {
+      "start": 754.0,
+      "end": 759.52,
+      "duration": 5.52,
+      "text": "vectors perfect at the end of the day i"
+    },
+    {
+      "start": 756.48,
+      "end": 762.32,
+      "duration": 5.84,
+      "text": "can say return set dot size now i just"
+    },
+    {
+      "start": 759.52,
+      "end": 764.56,
+      "duration": 5.04,
+      "text": "need to write the dfs code so the dfs"
+    },
+    {
+      "start": 762.32,
+      "end": 766.16,
+      "duration": 3.84,
+      "text": "also make sure okay not to make sure"
+    },
+    {
+      "start": 764.56,
+      "end": 769.6,
+      "duration": 5.04,
+      "text": "okay let's come back here"
+    },
+    {
+      "start": 766.16,
+      "end": 771.92,
+      "duration": 5.76,
+      "text": "so it's like private"
+    },
+    {
+      "start": 769.6,
+      "end": 773.84,
+      "duration": 4.24,
+      "text": "let's write the void defects void dfs"
+    },
+    {
+      "start": 771.92,
+      "end": 775.44,
+      "duration": 3.52,
+      "text": "and you have the ind node"
+    },
+    {
+      "start": 773.84,
+      "end": 776.72,
+      "duration": 2.88,
+      "text": "sorry andy row"
+    },
+    {
+      "start": 775.44,
+      "end": 778.48,
+      "duration": 3.04,
+      "text": "id column"
+    },
+    {
+      "start": 776.72,
+      "end": 781.84,
+      "duration": 5.12,
+      "text": "ind visitor"
+    },
+    {
+      "start": 778.48,
+      "end": 784.08,
+      "duration": 5.6,
+      "text": "whether it's a 2d mary so please just"
+    },
+    {
+      "start": 781.84,
+      "end": 787.08,
+      "duration": 5.24,
+      "text": "create a 2d one that will be a better"
+    },
+    {
+      "start": 784.08,
+      "end": 787.08,
+      "duration": 3.0,
+      "text": "choice"
+    },
+    {
+      "start": 790.16,
+      "end": 794.0,
+      "duration": 3.84,
+      "text": "so go across"
+    },
+    {
+      "start": 791.76,
+      "end": 797.52,
+      "duration": 5.76,
+      "text": "and create a vector of end"
+    },
+    {
+      "start": 794.0,
+      "end": 802.16,
+      "duration": 8.16,
+      "text": "and m comma zero perfect done uh let's"
+    },
+    {
+      "start": 797.52,
+      "end": 802.96,
+      "duration": 5.44,
+      "text": "carry this on a vector of vector"
+    },
+    {
+      "start": 802.16,
+      "end": 806.4,
+      "duration": 4.24,
+      "text": "in"
+    },
+    {
+      "start": 802.96,
+      "end": 808.8,
+      "duration": 5.84,
+      "text": "visited done next carry the grid so just"
+    },
+    {
+      "start": 806.4,
+      "end": 810.72,
+      "duration": 4.32,
+      "text": "go ahead and carry the grid"
+    },
+    {
+      "start": 808.8,
+      "end": 812.72,
+      "duration": 3.92,
+      "text": "super simple once you have carried the"
+    },
+    {
+      "start": 810.72,
+      "end": 814.96,
+      "duration": 4.24,
+      "text": "grid what will you carry you need to"
+    },
+    {
+      "start": 812.72,
+      "end": 816.88,
+      "duration": 4.16,
+      "text": "carry something else which is the vector"
+    },
+    {
+      "start": 814.96,
+      "end": 820.0,
+      "duration": 5.04,
+      "text": "which will be the"
+    },
+    {
+      "start": 816.88,
+      "end": 820.0,
+      "duration": 3.12,
+      "text": "storing the pairs"
+    },
+    {
+      "start": 821.2,
+      "end": 824.0,
+      "duration": 2.8,
+      "text": "and also"
+    },
+    {
+      "start": 822.32,
+      "end": 825.36,
+      "duration": 3.04,
+      "text": "done what's the first thing that you'll"
+    },
+    {
+      "start": 824.0,
+      "end": 826.8,
+      "duration": 2.8,
+      "text": "do"
+    },
+    {
+      "start": 825.36,
+      "end": 828.96,
+      "duration": 3.6,
+      "text": "very simple"
+    },
+    {
+      "start": 826.8,
+      "end": 830.96,
+      "duration": 4.16,
+      "text": "we'll go to the row you'll get to the go"
+    },
+    {
+      "start": 828.96,
+      "end": 832.72,
+      "duration": 3.76,
+      "text": "to the column and you'll mark it as one"
+    },
+    {
+      "start": 830.96,
+      "end": 834.64,
+      "duration": 3.68,
+      "text": "perfect done the next thing that you"
+    },
+    {
+      "start": 832.72,
+      "end": 836.48,
+      "duration": 3.76,
+      "text": "will do is you will you need the base"
+    },
+    {
+      "start": 834.64,
+      "end": 838.56,
+      "duration": 3.92,
+      "text": "coordinates you need the base"
+    },
+    {
+      "start": 836.48,
+      "end": 839.84,
+      "duration": 3.36,
+      "text": "coordinates to make sure that they are"
+    },
+    {
+      "start": 838.56,
+      "end": 841.6,
+      "duration": 3.04,
+      "text": "stored"
+    },
+    {
+      "start": 839.84,
+      "end": 844.0,
+      "duration": 4.16,
+      "text": "something like rho minus the base"
+    },
+    {
+      "start": 841.6,
+      "end": 846.0,
+      "duration": 4.4,
+      "text": "coordinates row column minus the base"
+    },
+    {
+      "start": 844.0,
+      "end": 848.64,
+      "duration": 4.64,
+      "text": "coordinates so you always need these"
+    },
+    {
+      "start": 846.0,
+      "end": 851.84,
+      "duration": 5.84,
+      "text": "base coordinates so please carry these"
+    },
+    {
+      "start": 848.64,
+      "end": 854.96,
+      "duration": 6.32,
+      "text": "base coordinates always with you so can"
+    },
+    {
+      "start": 851.84,
+      "end": 856.64,
+      "duration": 4.8,
+      "text": "i say the rho 0 to b i and j i can"
+    },
+    {
+      "start": 854.96,
+      "end": 858.96,
+      "duration": 4.0,
+      "text": "because those are the base coordinates"
+    },
+    {
+      "start": 856.64,
+      "end": 861.04,
+      "duration": 4.4,
+      "text": "and you store them once you have done"
+    },
+    {
+      "start": 858.96,
+      "end": 862.56,
+      "duration": 3.6,
+      "text": "this you have to travel in the upwards"
+    },
+    {
+      "start": 861.04,
+      "end": 864.56,
+      "duration": 3.52,
+      "text": "the right words the left words so you"
+    },
+    {
+      "start": 862.56,
+      "end": 866.88,
+      "duration": 4.32,
+      "text": "need this del row kind of thing so you"
+    },
+    {
+      "start": 864.56,
+      "end": 868.88,
+      "duration": 4.32,
+      "text": "can again you can declare this here or"
+    },
+    {
+      "start": 866.88,
+      "end": 870.64,
+      "duration": 3.76,
+      "text": "you can do it wherever you wish to i'm"
+    },
+    {
+      "start": 868.88,
+      "end": 873.04,
+      "duration": 4.16,
+      "text": "not going to explain this from where did"
+    },
+    {
+      "start": 870.64,
+      "end": 874.72,
+      "duration": 4.08,
+      "text": "this come because i've already done this"
+    },
+    {
+      "start": 873.04,
+      "end": 876.56,
+      "duration": 3.52,
+      "text": "a lot of times in the graph series if"
+    },
+    {
+      "start": 874.72,
+      "end": 877.92,
+      "duration": 3.2,
+      "text": "you're watching this craft series"
+    },
+    {
+      "start": 876.56,
+      "end": 880.0,
+      "duration": 3.44,
+      "text": "for the first time"
+    },
+    {
+      "start": 877.92,
+      "end": 881.12,
+      "duration": 3.2,
+      "text": "your bad you should go back and watch it"
+    },
+    {
+      "start": 880.0,
+      "end": 883.28,
+      "duration": 3.28,
+      "text": "so"
+    },
+    {
+      "start": 881.12,
+      "end": 885.68,
+      "duration": 4.56,
+      "text": "now go to all the neighbors which is"
+    },
+    {
+      "start": 883.28,
+      "end": 887.84,
+      "duration": 4.56,
+      "text": "something like ant is 0 i lesser than 4"
+    },
+    {
+      "start": 885.68,
+      "end": 890.0,
+      "duration": 4.32,
+      "text": "i plus plus"
+    },
+    {
+      "start": 887.84,
+      "end": 892.64,
+      "duration": 4.8,
+      "text": "get the neighboring row which is"
+    },
+    {
+      "start": 890.0,
+      "end": 895.92,
+      "duration": 5.92,
+      "text": "something like rho plus"
+    },
+    {
+      "start": 892.64,
+      "end": 897.6,
+      "duration": 4.96,
+      "text": "del row of i"
+    },
+    {
+      "start": 895.92,
+      "end": 900.8,
+      "duration": 4.88,
+      "text": "get the neighboring column which is"
+    },
+    {
+      "start": 897.6,
+      "end": 902.48,
+      "duration": 4.88,
+      "text": "column plus del column of i now what's"
+    },
+    {
+      "start": 900.8,
+      "end": 904.72,
+      "duration": 3.92,
+      "text": "the first thing that they'll do n row"
+    },
+    {
+      "start": 902.48,
+      "end": 906.0,
+      "duration": 3.52,
+      "text": "should be greater than zero n row should"
+    },
+    {
+      "start": 904.72,
+      "end": 908.0,
+      "duration": 3.28,
+      "text": "be lesser than n"
+    },
+    {
+      "start": 906.0,
+      "end": 912.0,
+      "duration": 6.0,
+      "text": "n column should be greater than equal to"
+    },
+    {
+      "start": 908.0,
+      "end": 914.0,
+      "duration": 6.0,
+      "text": "zero n column"
+    },
+    {
+      "start": 912.0,
+      "end": 916.24,
+      "duration": 4.24,
+      "text": "should be lesser than m perfect next"
+    },
+    {
+      "start": 914.0,
+      "end": 919.84,
+      "duration": 5.84,
+      "text": "thing not visited is very very important"
+    },
+    {
+      "start": 916.24,
+      "end": 919.84,
+      "duration": 3.6,
+      "text": "so just go to the next line and write"
+    },
+    {
+      "start": 920.16,
+      "end": 923.12,
+      "duration": 2.96,
+      "text": "not visited of n"
+    },
+    {
+      "start": 922.24,
+      "end": 924.8,
+      "duration": 2.56,
+      "text": "row"
+    },
+    {
+      "start": 923.12,
+      "end": 926.96,
+      "duration": 3.84,
+      "text": "should not be visited i was the next"
+    },
+    {
+      "start": 924.8,
+      "end": 930.96,
+      "duration": 6.16,
+      "text": "thing that you check should be a land"
+    },
+    {
+      "start": 926.96,
+      "end": 930.96,
+      "duration": 4.0,
+      "text": "yes should be a land n row"
+    },
+    {
+      "start": 932.56,
+      "end": 937.6,
+      "duration": 5.04,
+      "text": "and n column should be a line done"
+    },
+    {
+      "start": 935.44,
+      "end": 939.6,
+      "duration": 4.16,
+      "text": "and if it is if it is then you call the"
+    },
+    {
+      "start": 937.6,
+      "end": 941.04,
+      "duration": 3.44,
+      "text": "dfs for n row"
+    },
+    {
+      "start": 939.6,
+      "end": 943.36,
+      "duration": 3.76,
+      "text": "and n column"
+    },
+    {
+      "start": 941.04,
+      "end": 946.16,
+      "duration": 5.12,
+      "text": "n column not column and then you pass"
+    },
+    {
+      "start": 943.36,
+      "end": 948.08,
+      "duration": 4.72,
+      "text": "the visited yes you pass the grid"
+    },
+    {
+      "start": 946.16,
+      "end": 950.08,
+      "duration": 3.92,
+      "text": "you pass the vector you pass the row"
+    },
+    {
+      "start": 948.08,
+      "end": 951.84,
+      "duration": 3.76,
+      "text": "zero you pass the column zero"
+    },
+    {
+      "start": 950.08,
+      "end": 953.68,
+      "duration": 3.6,
+      "text": "once you've done this"
+    },
+    {
+      "start": 951.84,
+      "end": 956.64,
+      "duration": 4.8,
+      "text": "i think we're pretty much done let's"
+    },
+    {
+      "start": 953.68,
+      "end": 956.64,
+      "duration": 2.96,
+      "text": "quickly compile and see"
+    },
+    {
+      "start": 959.28,
+      "end": 963.2,
+      "duration": 3.92,
+      "text": "okay let's see if it is working fine"
+    },
+    {
+      "start": 960.56,
+      "end": 965.2,
+      "duration": 4.64,
+      "text": "it's giving some compilation error and"
+    },
+    {
+      "start": 963.2,
+      "end": 968.4,
+      "duration": 5.2,
+      "text": "looks like n was not declared so again"
+    },
+    {
+      "start": 965.2,
+      "end": 970.4,
+      "duration": 5.2,
+      "text": "do the same thing just copy paste"
+    },
+    {
+      "start": 968.4,
+      "end": 972.0,
+      "duration": 3.6,
+      "text": "so if we compile this we are getting the"
+    },
+    {
+      "start": 970.4,
+      "end": 973.52,
+      "duration": 3.12,
+      "text": "correct answer let's quickly submit this"
+    },
+    {
+      "start": 972.0,
+      "end": 976.08,
+      "duration": 4.08,
+      "text": "and check"
+    },
+    {
+      "start": 973.52,
+      "end": 978.72,
+      "duration": 5.2,
+      "text": "it does run so let's discuss these uh"
+    },
+    {
+      "start": 976.08,
+      "end": 980.64,
+      "duration": 4.56,
+      "text": "space complexity using a vector visited"
+    },
+    {
+      "start": 978.72,
+      "end": 982.72,
+      "duration": 4.0,
+      "text": "and a set so"
+    },
+    {
+      "start": 980.64,
+      "end": 984.64,
+      "duration": 4.0,
+      "text": "it's going to be like the visited one is"
+    },
+    {
+      "start": 982.72,
+      "end": 986.64,
+      "duration": 3.92,
+      "text": "n cross m and if we store all the"
+    },
+    {
+      "start": 984.64,
+      "end": 989.6,
+      "duration": 4.96,
+      "text": "coordinates it's going to be n cross m"
+    },
+    {
+      "start": 986.64,
+      "end": 991.84,
+      "duration": 5.2,
+      "text": "for the set as well so n cross and near"
+    },
+    {
+      "start": 989.6,
+      "end": 992.8,
+      "duration": 3.2,
+      "text": "about for the space complexity what are"
+    },
+    {
+      "start": 991.84,
+      "end": 995.2,
+      "duration": 3.36,
+      "text": "the time"
+    },
+    {
+      "start": 992.8,
+      "end": 998.72,
+      "duration": 5.92,
+      "text": "so what are the time complexity n cross"
+    },
+    {
+      "start": 995.2,
+      "end": 999.84,
+      "duration": 4.64,
+      "text": "m over here and overall this dfs overall"
+    },
+    {
+      "start": 998.72,
+      "end": 1002.8,
+      "duration": 4.08,
+      "text": "will be"
+    },
+    {
+      "start": 999.84,
+      "end": 1004.4,
+      "duration": 4.56,
+      "text": "n cross m cross 4 because overall if you"
+    },
+    {
+      "start": 1002.8,
+      "end": 1007.04,
+      "duration": 4.24,
+      "text": "take all the cells it's going to be n"
+    },
+    {
+      "start": 1004.4,
+      "end": 1008.24,
+      "duration": 3.84,
+      "text": "cross m cross 4 so this dfs is going to"
+    },
+    {
+      "start": 1007.04,
+      "end": 1010.96,
+      "duration": 3.92,
+      "text": "be like"
+    },
+    {
+      "start": 1008.24,
+      "end": 1012.56,
+      "duration": 4.32,
+      "text": "n cross m cross"
+    },
+    {
+      "start": 1010.96,
+      "end": 1014.64,
+      "duration": 3.68,
+      "text": "4"
+    },
+    {
+      "start": 1012.56,
+      "end": 1016.56,
+      "duration": 4.0,
+      "text": "and then this is n cross m"
+    },
+    {
+      "start": 1014.64,
+      "end": 1019.36,
+      "duration": 4.72,
+      "text": "so n cross m"
+    },
+    {
+      "start": 1016.56,
+      "end": 1023.44,
+      "duration": 6.88,
+      "text": "i can say something like n cross m for"
+    },
+    {
+      "start": 1019.36,
+      "end": 1026.24,
+      "duration": 6.88,
+      "text": "the loop and then n cross m cross"
+    },
+    {
+      "start": 1023.44,
+      "end": 1028.48,
+      "duration": 5.04,
+      "text": "4 overall for this entire dfs call and"
+    },
+    {
+      "start": 1026.24,
+      "end": 1031.52,
+      "duration": 5.28,
+      "text": "then you can attach a"
+    },
+    {
+      "start": 1028.48,
+      "end": 1034.0,
+      "duration": 5.52,
+      "text": "logarithmic term to it into"
+    },
+    {
+      "start": 1031.52,
+      "end": 1037.44,
+      "duration": 5.92,
+      "text": "logarithmic of set length"
+    },
+    {
+      "start": 1034.0,
+      "end": 1040.32,
+      "duration": 6.32,
+      "text": "which is this the set at max will store"
+    },
+    {
+      "start": 1037.44,
+      "end": 1041.2,
+      "duration": 3.76,
+      "text": "all of these guys so you can say n cross"
+    },
+    {
+      "start": 1040.32,
+      "end": 1043.2,
+      "duration": 2.88,
+      "text": "m"
+    },
+    {
+      "start": 1041.2,
+      "end": 1045.28,
+      "duration": 4.08,
+      "text": "logarithmic of set length is"
+    },
+    {
+      "start": 1043.2,
+      "end": 1047.76,
+      "duration": 4.56,
+      "text": "n cross m because at max it is going to"
+    },
+    {
+      "start": 1045.28,
+      "end": 1050.36,
+      "duration": 5.08,
+      "text": "store all these guys so overall this is"
+    },
+    {
+      "start": 1047.76,
+      "end": 1053.36,
+      "duration": 5.6,
+      "text": "the for loop and this is the dfs time"
+    },
+    {
+      "start": 1050.36,
+      "end": 1054.96,
+      "duration": 4.6,
+      "text": "complexity so guys i hope i was able so"
+    },
+    {
+      "start": 1053.36,
+      "end": 1057.2,
+      "duration": 3.84,
+      "text": "guys i hope i was able to explain you"
+    },
+    {
+      "start": 1054.96,
+      "end": 1059.6,
+      "duration": 4.64,
+      "text": "this uh complex question so just in case"
+    },
+    {
+      "start": 1057.2,
+      "end": 1061.2,
+      "duration": 4.0,
+      "text": "i was please hit that like button and if"
+    },
+    {
+      "start": 1059.6,
+      "end": 1063.04,
+      "duration": 3.44,
+      "text": "you're new to our channel what are you"
+    },
+    {
+      "start": 1061.2,
+      "end": 1064.32,
+      "duration": 3.12,
+      "text": "waiting for please hit that subscribe"
+    },
+    {
+      "start": 1063.04,
+      "end": 1066.72,
+      "duration": 3.68,
+      "text": "button and if you haven't checked out"
+    },
+    {
+      "start": 1064.32,
+      "end": 1068.96,
+      "duration": 4.64,
+      "text": "our dp series hd sheet and all the other"
+    },
+    {
+      "start": 1066.72,
+      "end": 1070.32,
+      "duration": 3.6,
+      "text": "series the links are in the description"
+    },
+    {
+      "start": 1068.96,
+      "end": 1071.92,
+      "duration": 2.96,
+      "text": "with this i'll be wrapping up this video"
+    },
+    {
+      "start": 1070.32,
+      "end": 1075.17,
+      "duration": 4.85,
+      "text": "let's meet in the next video till then"
+    },
+    {
+      "start": 1071.92,
+      "end": 1079.52,
+      "duration": 7.6,
+      "text": "bye bye take care whenever your heart is"
+    },
+    {
+      "start": 1075.17,
+      "end": 1077.72,
+      "duration": 2.55,
+      "text": "[Music]"
+    },
+    {
+      "start": 1079.52,
+      "end": 1079.52,
+      "duration": 0.0,
+      "text": "i broken"
+    }
+  ]
+}

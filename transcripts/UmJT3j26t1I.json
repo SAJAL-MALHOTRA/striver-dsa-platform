@@ -1,0 +1,2468 @@
+{
+  "video_id": "UmJT3j26t1I",
+  "title": "L48. Construct a BST from a preorder traversal | 3 Methods",
+  "duration_sec": 992,
+  "num_segments": 410,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.04,
+      "duration": 3.04,
+      "text": "Everyone, welcome back to the channel. I"
+    },
+    {
+      "start": 1.36,
+      "end": 5.04,
+      "duration": 3.68,
+      "text": "hope you guys are doing extremely well."
+    },
+    {
+      "start": 3.04,
+      "end": 8.24,
+      "duration": 5.2,
+      "text": "So today we will be solving the problem"
+    },
+    {
+      "start": 5.04,
+      "end": 10.64,
+      "duration": 5.6,
+      "text": "construct a binary search tree from a"
+    },
+    {
+      "start": 8.24,
+      "end": 12.88,
+      "duration": 4.64,
+      "text": "given pre-order traversal. Now what's a"
+    },
+    {
+      "start": 10.64,
+      "end": 15.44,
+      "duration": 4.8,
+      "text": "binary search tree? It's basically if"
+    },
+    {
+      "start": 12.88,
+      "end": 17.84,
+      "duration": 4.96,
+      "text": "you have a node then everything to the"
+    },
+    {
+      "start": 15.44,
+      "end": 20.08,
+      "duration": 4.64,
+      "text": "left of that node will be smaller than"
+    },
+    {
+      "start": 17.84,
+      "end": 23.28,
+      "duration": 5.44,
+      "text": "this node's value and everything to the"
+    },
+    {
+      "start": 20.08,
+      "end": 25.28,
+      "duration": 5.2,
+      "text": "right of uh this node will be greater"
+    },
+    {
+      "start": 23.28,
+      "end": 27.36,
+      "duration": 4.08,
+      "text": "than this node's value. That is the"
+    },
+    {
+      "start": 25.28,
+      "end": 29.28,
+      "duration": 4.0,
+      "text": "unique thing about binary search tree."
+    },
+    {
+      "start": 27.36,
+      "end": 31.84,
+      "duration": 4.48,
+      "text": "If you want to know more in detail, you"
+    },
+    {
+      "start": 29.28,
+      "end": 33.76,
+      "duration": 4.48,
+      "text": "can check out my entire playlist. Now,"
+    },
+    {
+      "start": 31.84,
+      "end": 36.72,
+      "duration": 4.88,
+      "text": "what is the question? So, you will be"
+    },
+    {
+      "start": 33.76,
+      "end": 39.84,
+      "duration": 6.08,
+      "text": "basically given a pre-order. Yes, a"
+    },
+    {
+      "start": 36.72,
+      "end": 41.84,
+      "duration": 5.12,
+      "text": "pre-order like 8 5 1 7 10 12. If I take"
+    },
+    {
+      "start": 39.84,
+      "end": 44.08,
+      "duration": 4.24,
+      "text": "this example and you have to draw the"
+    },
+    {
+      "start": 41.84,
+      "end": 46.08,
+      "duration": 4.24,
+      "text": "corresponding binary search tree for"
+    },
+    {
+      "start": 44.08,
+      "end": 48.08,
+      "duration": 4.0,
+      "text": "this given pre-order and once you have"
+    },
+    {
+      "start": 46.08,
+      "end": 50.16,
+      "duration": 4.08,
+      "text": "created this uh corresponding binary"
+    },
+    {
+      "start": 48.08,
+      "end": 52.8,
+      "duration": 4.72,
+      "text": "search tree, you have to just return the"
+    },
+    {
+      "start": 50.16,
+      "end": 55.28,
+      "duration": 5.12,
+      "text": "root of that binary search tree. Yes,"
+    },
+    {
+      "start": 52.8,
+      "end": 57.04,
+      "duration": 4.24,
+      "text": "that is what you have to do. So, how"
+    },
+    {
+      "start": 55.28,
+      "end": 58.8,
+      "duration": 3.52,
+      "text": "will you solve this problem? What's the"
+    },
+    {
+      "start": 57.04,
+      "end": 61.04,
+      "duration": 4.0,
+      "text": "brute way to solve this problem? The"
+    },
+    {
+      "start": 58.8,
+      "end": 63.84,
+      "duration": 5.04,
+      "text": "brute way to solve this problem is to"
+    },
+    {
+      "start": 61.04,
+      "end": 65.68,
+      "duration": 4.64,
+      "text": "manually like naively create the binary"
+    },
+    {
+      "start": 63.84,
+      "end": 67.84,
+      "duration": 4.0,
+      "text": "tree. Now when I say naively, what does"
+    },
+    {
+      "start": 65.68,
+      "end": 70.16,
+      "duration": 4.48,
+      "text": "that signify? Let's check that out. So"
+    },
+    {
+      "start": 67.84,
+      "end": 72.4,
+      "duration": 4.56,
+      "text": "initially you have eight. Now you know"
+    },
+    {
+      "start": 70.16,
+      "end": 76.32,
+      "duration": 6.16,
+      "text": "what is pre-order. Pre-order is"
+    },
+    {
+      "start": 72.4,
+      "end": 79.2,
+      "duration": 6.8,
+      "text": "basically root or node left, right? That"
+    },
+    {
+      "start": 76.32,
+      "end": 81.44,
+      "duration": 5.12,
+      "text": "is what we call as pre-order traversal."
+    },
+    {
+      "start": 79.2,
+      "end": 83.36,
+      "duration": 4.16,
+      "text": "So we definitely know that this is the"
+    },
+    {
+      "start": 81.44,
+      "end": 85.04,
+      "duration": 3.6,
+      "text": "root of the binary search tree, right?"
+    },
+    {
+      "start": 83.36,
+      "end": 87.12,
+      "duration": 3.76,
+      "text": "So we can say that this is the root of"
+    },
+    {
+      "start": 85.04,
+      "end": 89.36,
+      "duration": 4.32,
+      "text": "the binary search tree. Next we come"
+    },
+    {
+      "start": 87.12,
+      "end": 91.6,
+      "duration": 4.48,
+      "text": "across to five. Now whenever we come"
+    },
+    {
+      "start": 89.36,
+      "end": 93.92,
+      "duration": 4.56,
+      "text": "across to five, we know everything to"
+    },
+    {
+      "start": 91.6,
+      "end": 97.12,
+      "duration": 5.52,
+      "text": "the left of eight should be smaller than"
+    },
+    {
+      "start": 93.92,
+      "end": 99.52,
+      "duration": 5.6,
+      "text": "8. So five can be inserted over here. So"
+    },
+    {
+      "start": 97.12,
+      "end": 102.08,
+      "duration": 4.96,
+      "text": "five is also inserted. Next time we come"
+    },
+    {
+      "start": 99.52,
+      "end": 104.0,
+      "duration": 4.48,
+      "text": "across to one. Now when we come across"
+    },
+    {
+      "start": 102.08,
+      "end": 106.24,
+      "duration": 4.16,
+      "text": "to one, we know everything to the left"
+    },
+    {
+      "start": 104.0,
+      "end": 108.08,
+      "duration": 4.08,
+      "text": "of 8 is smaller than 8. We know"
+    },
+    {
+      "start": 106.24,
+      "end": 110.8,
+      "duration": 4.56,
+      "text": "everything to the left of five is"
+    },
+    {
+      "start": 108.08,
+      "end": 113.2,
+      "duration": 5.12,
+      "text": "smaller than five. So one gets inserted"
+    },
+    {
+      "start": 110.8,
+      "end": 116.0,
+      "duration": 5.2,
+      "text": "over here. Now when we come across to"
+    },
+    {
+      "start": 113.2,
+      "end": 118.96,
+      "duration": 5.76,
+      "text": "seven everything to the left of 8 is"
+    },
+    {
+      "start": 116.0,
+      "end": 121.12,
+      "duration": 5.12,
+      "text": "smaller than 8. So we come over here as"
+    },
+    {
+      "start": 118.96,
+      "end": 123.76,
+      "duration": 4.8,
+      "text": "over here and then everything to the"
+    },
+    {
+      "start": 121.12,
+      "end": 126.24,
+      "duration": 5.12,
+      "text": "right of five is greater than five. So 7"
+    },
+    {
+      "start": 123.76,
+      "end": 130.08,
+      "duration": 6.32,
+      "text": "is greater than five that gets inserted"
+    },
+    {
+      "start": 126.24,
+      "end": 132.32,
+      "duration": 6.08,
+      "text": "over here. Next we come across 10. Now"
+    },
+    {
+      "start": 130.08,
+      "end": 136.08,
+      "duration": 6.0,
+      "text": "10 is greater than 8. So it goes over"
+    },
+    {
+      "start": 132.32,
+      "end": 139.2,
+      "duration": 6.88,
+      "text": "here. Next we come across 12. 12 is also"
+    },
+    {
+      "start": 136.08,
+      "end": 142.08,
+      "duration": 6.0,
+      "text": "greater than your 8. So we just come"
+    },
+    {
+      "start": 139.2,
+      "end": 145.12,
+      "duration": 5.92,
+      "text": "over here and it's like tapping. So this"
+    },
+    {
+      "start": 142.08,
+      "end": 146.8,
+      "duration": 4.72,
+      "text": "is how you can naively uh create the"
+    },
+    {
+      "start": 145.12,
+      "end": 148.96,
+      "duration": 3.84,
+      "text": "binary search tree from the given"
+    },
+    {
+      "start": 146.8,
+      "end": 151.52,
+      "duration": 4.72,
+      "text": "pre-order traversal. What's the time"
+    },
+    {
+      "start": 148.96,
+      "end": 153.84,
+      "duration": 4.88,
+      "text": "complexity? Now there are big go of n"
+    },
+    {
+      "start": 151.52,
+      "end": 156.08,
+      "duration": 4.56,
+      "text": "like there are nodes and for every notes"
+    },
+    {
+      "start": 153.84,
+      "end": 158.0,
+      "duration": 4.16,
+      "text": "we are determining left, right, left,"
+    },
+    {
+      "start": 156.08,
+      "end": 159.92,
+      "duration": 3.84,
+      "text": "right. Where do we need to insert it?"
+    },
+    {
+      "start": 158.0,
+      "end": 162.8,
+      "duration": 4.8,
+      "text": "You're always determining that right? So"
+    },
+    {
+      "start": 159.92,
+      "end": 165.04,
+      "duration": 5.12,
+      "text": "I can say you will be taking a big of n"
+    },
+    {
+      "start": 162.8,
+      "end": 167.92,
+      "duration": 5.12,
+      "text": "time. If it's a skew tree like if you're"
+    },
+    {
+      "start": 165.04,
+      "end": 171.12,
+      "duration": 6.08,
+      "text": "given a tree like this then you'll end"
+    },
+    {
+      "start": 167.92,
+      "end": 173.2,
+      "duration": 5.28,
+      "text": "up taking an entire lot of time to"
+    },
+    {
+      "start": 171.12,
+      "end": 176.08,
+      "duration": 4.96,
+      "text": "insert every particular node. So at the"
+    },
+    {
+      "start": 173.2,
+      "end": 177.68,
+      "duration": 4.48,
+      "text": "worst case that can be b of n into n and"
+    },
+    {
+      "start": 176.08,
+      "end": 179.84,
+      "duration": 3.76,
+      "text": "there is no external space that you're"
+    },
+    {
+      "start": 177.68,
+      "end": 182.48,
+      "duration": 4.8,
+      "text": "using apart from the one that you're"
+    },
+    {
+      "start": 179.84,
+      "end": 185.04,
+      "duration": 5.2,
+      "text": "using to create this tree which is which"
+    },
+    {
+      "start": 182.48,
+      "end": 187.04,
+      "duration": 4.56,
+      "text": "is needed. So we do not consider that."
+    },
+    {
+      "start": 185.04,
+      "end": 188.88,
+      "duration": 3.84,
+      "text": "So this will be the absolute brute"
+    },
+    {
+      "start": 187.04,
+      "end": 190.64,
+      "duration": 3.6,
+      "text": "method. Now what can be a better method?"
+    },
+    {
+      "start": 188.88,
+      "end": 193.04,
+      "duration": 4.16,
+      "text": "Let's check that out. Now a better"
+    },
+    {
+      "start": 190.64,
+      "end": 195.92,
+      "duration": 5.28,
+      "text": "method will be we know that if you have"
+    },
+    {
+      "start": 193.04,
+      "end": 197.52,
+      "duration": 4.48,
+      "text": "seen my previous video a binary search"
+    },
+    {
+      "start": 195.92,
+      "end": 200.32,
+      "duration": 4.4,
+      "text": "trees"
+    },
+    {
+      "start": 197.52,
+      "end": 202.08,
+      "duration": 4.56,
+      "text": "in order traversal you remember that"
+    },
+    {
+      "start": 200.32,
+      "end": 206.0,
+      "duration": 5.68,
+      "text": "property the in order traversal will"
+    },
+    {
+      "start": 202.08,
+      "end": 208.96,
+      "duration": 6.88,
+      "text": "always be sorted so can I say if the"
+    },
+    {
+      "start": 206.0,
+      "end": 211.52,
+      "duration": 5.52,
+      "text": "given pre-order traversal consists of"
+    },
+    {
+      "start": 208.96,
+      "end": 214.0,
+      "duration": 5.04,
+      "text": "all the notes of BST if it consists of"
+    },
+    {
+      "start": 211.52,
+      "end": 215.68,
+      "duration": 4.16,
+      "text": "all the notes of BST so if I sort them"
+    },
+    {
+      "start": 214.0,
+      "end": 218.64,
+      "duration": 4.64,
+      "text": "will I get the in order I think"
+    },
+    {
+      "start": 215.68,
+      "end": 221.36,
+      "duration": 5.68,
+      "text": "logically yes so why don't I sort them"
+    },
+    {
+      "start": 218.64,
+      "end": 228.08,
+      "duration": 9.44,
+      "text": "so I will sort them then the in order"
+    },
+    {
+      "start": 221.36,
+      "end": 230.32,
+      "duration": 8.96,
+      "text": "will be 1 I think 1 5 7 8 10 12 that is"
+    },
+    {
+      "start": 228.08,
+      "end": 232.32,
+      "duration": 4.24,
+      "text": "what the in order will be now if you"
+    },
+    {
+      "start": 230.32,
+      "end": 234.4,
+      "duration": 4.08,
+      "text": "remember my one of my previous videos in"
+    },
+    {
+      "start": 232.32,
+      "end": 236.48,
+      "duration": 4.16,
+      "text": "this particular playlist whenever you"
+    },
+    {
+      "start": 234.4,
+      "end": 238.72,
+      "duration": 4.32,
+      "text": "have the pre-order whenever you have the"
+    },
+    {
+      "start": 236.48,
+      "end": 242.08,
+      "duration": 5.6,
+      "text": "in order I think you can create a binary"
+    },
+    {
+      "start": 238.72,
+      "end": 245.92,
+      "duration": 7.2,
+      "text": "tree you can so you have a pre-order and"
+    },
+    {
+      "start": 242.08,
+      "end": 247.92,
+      "duration": 5.84,
+      "text": "in order so yeah so a unique binary tree"
+    },
+    {
+      "start": 245.92,
+      "end": 253.04,
+      "duration": 7.12,
+      "text": "can be created which will come out to be"
+    },
+    {
+      "start": 247.92,
+      "end": 254.64,
+      "duration": 6.72,
+      "text": "BST So I think we are good to go. So in"
+    },
+    {
+      "start": 253.04,
+      "end": 257.12,
+      "duration": 4.08,
+      "text": "case you want to know how to create a"
+    },
+    {
+      "start": 254.64,
+      "end": 259.92,
+      "duration": 5.28,
+      "text": "binary if you're given pre-order as well"
+    },
+    {
+      "start": 257.12,
+      "end": 262.8,
+      "duration": 5.68,
+      "text": "as in order you can check my video out"
+    },
+    {
+      "start": 259.92,
+      "end": 266.08,
+      "duration": 6.16,
+      "text": "in this particular playlist only. Okay."
+    },
+    {
+      "start": 262.8,
+      "end": 269.36,
+      "duration": 6.56,
+      "text": "So I can say that the time complexity"
+    },
+    {
+      "start": 266.08,
+      "end": 271.36,
+      "duration": 5.28,
+      "text": "will be okay I will have to sort the"
+    },
+    {
+      "start": 269.36,
+      "end": 273.68,
+      "duration": 4.32,
+      "text": "pre-order in order to get the in order."
+    },
+    {
+      "start": 271.36,
+      "end": 275.92,
+      "duration": 4.56,
+      "text": "So that will take n login and then I"
+    },
+    {
+      "start": 273.68,
+      "end": 278.32,
+      "duration": 4.64,
+      "text": "will take another b of n in order to"
+    },
+    {
+      "start": 275.92,
+      "end": 280.16,
+      "duration": 4.24,
+      "text": "create the bst from the pre-order as"
+    },
+    {
+      "start": 278.32,
+      "end": 282.8,
+      "duration": 4.48,
+      "text": "well as the in order and the space"
+    },
+    {
+      "start": 280.16,
+      "end": 285.68,
+      "duration": 5.52,
+      "text": "complexity apart from the tree I'll be"
+    },
+    {
+      "start": 282.8,
+      "end": 288.16,
+      "duration": 5.36,
+      "text": "requiring is b of n in order to store"
+    },
+    {
+      "start": 285.68,
+      "end": 289.84,
+      "duration": 4.16,
+      "text": "the in order in some container or a"
+    },
+    {
+      "start": 288.16,
+      "end": 292.08,
+      "duration": 3.92,
+      "text": "vector or a list or an array whatever"
+    },
+    {
+      "start": 289.84,
+      "end": 294.72,
+      "duration": 4.88,
+      "text": "you wish to take. So that is what the"
+    },
+    {
+      "start": 292.08,
+      "end": 298.0,
+      "duration": 5.92,
+      "text": "time complexity will be. What's the"
+    },
+    {
+      "start": 294.72,
+      "end": 300.0,
+      "duration": 5.28,
+      "text": "extra stuff that you're using a login"
+    },
+    {
+      "start": 298.0,
+      "end": 301.76,
+      "duration": 3.76,
+      "text": "now? I don't want that. So that is where"
+    },
+    {
+      "start": 300.0,
+      "end": 303.44,
+      "duration": 3.44,
+      "text": "the efficient method will come in. So"
+    },
+    {
+      "start": 301.76,
+      "end": 306.08,
+      "duration": 4.32,
+      "text": "it's now time to check out the efficient"
+    },
+    {
+      "start": 303.44,
+      "end": 307.68,
+      "duration": 4.24,
+      "text": "method where we do it in a b of end"
+    },
+    {
+      "start": 306.08,
+      "end": 310.24,
+      "duration": 4.16,
+      "text": "time. So let's check that out. Now we"
+    },
+    {
+      "start": 307.68,
+      "end": 314.96,
+      "duration": 7.28,
+      "text": "know one thing. Now if you have seen my"
+    },
+    {
+      "start": 310.24,
+      "end": 317.36,
+      "duration": 7.12,
+      "text": "previous video that is check if a bt is"
+    },
+    {
+      "start": 314.96,
+      "end": 319.2,
+      "duration": 4.24,
+      "text": "a binary search tree. I am assuming you"
+    },
+    {
+      "start": 317.36,
+      "end": 321.52,
+      "duration": 4.16,
+      "text": "have seen that. Okay. So if you have"
+    },
+    {
+      "start": 319.2,
+      "end": 323.76,
+      "duration": 4.56,
+      "text": "seen that now you know one thing you"
+    },
+    {
+      "start": 321.52,
+      "end": 326.08,
+      "duration": 4.56,
+      "text": "know one thing if there's a node there"
+    },
+    {
+      "start": 323.76,
+      "end": 328.56,
+      "duration": 4.8,
+      "text": "will it will always belong to a range"
+    },
+    {
+      "start": 326.08,
+      "end": 331.36,
+      "duration": 5.28,
+      "text": "that is the starting node will always"
+    },
+    {
+      "start": 328.56,
+      "end": 335.28,
+      "duration": 6.72,
+      "text": "belong to minus int mean like that is"
+    },
+    {
+      "start": 331.36,
+      "end": 338.8,
+      "duration": 7.44,
+      "text": "int mean to int max and the left one"
+    },
+    {
+      "start": 335.28,
+      "end": 341.2,
+      "duration": 5.92,
+      "text": "will always be lesser than this guy. So"
+    },
+    {
+      "start": 338.8,
+      "end": 344.4,
+      "duration": 5.6,
+      "text": "it will belong to minus int mean comma"
+    },
+    {
+      "start": 341.2,
+      "end": 347.12,
+      "duration": 5.92,
+      "text": "the upper node value and the right one"
+    },
+    {
+      "start": 344.4,
+      "end": 350.08,
+      "duration": 5.68,
+      "text": "will be from the node like it will be"
+    },
+    {
+      "start": 347.12,
+      "end": 352.24,
+      "duration": 5.12,
+      "text": "greater greater to int max. So if you"
+    },
+    {
+      "start": 350.08,
+      "end": 354.8,
+      "duration": 4.72,
+      "text": "remember this I think you remember this."
+    },
+    {
+      "start": 352.24,
+      "end": 357.2,
+      "duration": 4.96,
+      "text": "So this is the logic that we will be"
+    },
+    {
+      "start": 354.8,
+      "end": 359.6,
+      "duration": 4.8,
+      "text": "using in order to create the binary"
+    },
+    {
+      "start": 357.2,
+      "end": 362.32,
+      "duration": 5.12,
+      "text": "search tree right. So let's see how can"
+    },
+    {
+      "start": 359.6,
+      "end": 364.4,
+      "duration": 4.8,
+      "text": "we use that. Now do we require to carry"
+    },
+    {
+      "start": 362.32,
+      "end": 367.12,
+      "duration": 4.8,
+      "text": "both the ranges? Assume this to be l and"
+    },
+    {
+      "start": 364.4,
+      "end": 368.72,
+      "duration": 4.32,
+      "text": "r. Do we require do we need both the"
+    },
+    {
+      "start": 367.12,
+      "end": 370.64,
+      "duration": 3.52,
+      "text": "ranges like the lower bound and the"
+    },
+    {
+      "start": 368.72,
+      "end": 373.44,
+      "duration": 4.72,
+      "text": "upper bound? The answer to that will be"
+    },
+    {
+      "start": 370.64,
+      "end": 376.48,
+      "duration": 5.84,
+      "text": "no. If we just carry the upper bound"
+    },
+    {
+      "start": 373.44,
+      "end": 378.08,
+      "duration": 4.64,
+      "text": "then I think it will work. Why the lower"
+    },
+    {
+      "start": 376.48,
+      "end": 380.72,
+      "duration": 4.24,
+      "text": "bound is not required? I'll tell you"
+    },
+    {
+      "start": 378.08,
+      "end": 382.48,
+      "duration": 4.4,
+      "text": "that while I give you the algorithm take"
+    },
+    {
+      "start": 380.72,
+      "end": 385.04,
+      "duration": 4.32,
+      "text": "I'll tell you the intuition. So as of"
+    },
+    {
+      "start": 382.48,
+      "end": 387.12,
+      "duration": 4.64,
+      "text": "now assume whenever you start off yes"
+    },
+    {
+      "start": 385.04,
+      "end": 389.84,
+      "duration": 4.8,
+      "text": "whenever you start off you say that the"
+    },
+    {
+      "start": 387.12,
+      "end": 391.92,
+      "duration": 4.8,
+      "text": "upper bound is int max. That's when you"
+    },
+    {
+      "start": 389.84,
+      "end": 394.08,
+      "duration": 4.24,
+      "text": "start off you say upper bound is int"
+    },
+    {
+      "start": 391.92,
+      "end": 396.0,
+      "duration": 4.08,
+      "text": "max. That's the maximum number possible."
+    },
+    {
+      "start": 394.08,
+      "end": 398.08,
+      "duration": 4.0,
+      "text": "So initially you will come across to"
+    },
+    {
+      "start": 396.0,
+      "end": 399.6,
+      "duration": 3.6,
+      "text": "this particular number that's eight."
+    },
+    {
+      "start": 398.08,
+      "end": 401.6,
+      "duration": 3.52,
+      "text": "Yes, initially you'll come across to the"
+    },
+    {
+      "start": 399.6,
+      "end": 404.96,
+      "duration": 5.36,
+      "text": "number eight. Now you say okay the upper"
+    },
+    {
+      "start": 401.6,
+      "end": 407.84,
+      "duration": 6.24,
+      "text": "bound is int max is 8 inside that upper"
+    },
+    {
+      "start": 404.96,
+      "end": 410.4,
+      "duration": 5.44,
+      "text": "bound. You'll be like yes indeed it is."
+    },
+    {
+      "start": 407.84,
+      "end": 413.44,
+      "duration": 5.6,
+      "text": "So let's put that in. So I put that"
+    },
+    {
+      "start": 410.4,
+      "end": 416.16,
+      "duration": 5.76,
+      "text": "eight inside that int like inside that"
+    },
+    {
+      "start": 413.44,
+      "end": 419.12,
+      "duration": 5.68,
+      "text": "node. Now I have a note. I need its"
+    },
+    {
+      "start": 416.16,
+      "end": 422.88,
+      "duration": 6.72,
+      "text": "left. I need its right. Now I know one"
+    },
+    {
+      "start": 419.12,
+      "end": 426.32,
+      "duration": 7.2,
+      "text": "thing pre-order is root and then comes"
+    },
+    {
+      "start": 422.88,
+      "end": 428.8,
+      "duration": 5.92,
+      "text": "left and then comes right. So there"
+    },
+    {
+      "start": 426.32,
+      "end": 430.32,
+      "duration": 4.0,
+      "text": "might be a left to the root there might"
+    },
+    {
+      "start": 428.8,
+      "end": 431.44,
+      "duration": 2.64,
+      "text": "be. Now there might might be a binary"
+    },
+    {
+      "start": 430.32,
+      "end": 434.24,
+      "duration": 3.92,
+      "text": "search tree which is something like"
+    },
+    {
+      "start": 431.44,
+      "end": 436.88,
+      "duration": 5.44,
+      "text": "this. No like no left. There might be no"
+    },
+    {
+      "start": 434.24,
+      "end": 439.6,
+      "duration": 5.36,
+      "text": "left. So there might be a left or there"
+    },
+    {
+      "start": 436.88,
+      "end": 441.52,
+      "duration": 4.64,
+      "text": "might not be. And if there is a left"
+    },
+    {
+      "start": 439.6,
+      "end": 443.68,
+      "duration": 4.08,
+      "text": "like this is the left in this case but"
+    },
+    {
+      "start": 441.52,
+      "end": 444.96,
+      "duration": 3.44,
+      "text": "you're not sure how much how many"
+    },
+    {
+      "start": 443.68,
+      "end": 448.48,
+      "duration": 4.8,
+      "text": "elements are in the left. You're not"
+    },
+    {
+      "start": 444.96,
+      "end": 451.6,
+      "duration": 6.64,
+      "text": "sure. So can we use the property that I"
+    },
+    {
+      "start": 448.48,
+      "end": 454.16,
+      "duration": 5.68,
+      "text": "know one thing for sure that everything"
+    },
+    {
+      "start": 451.6,
+      "end": 456.16,
+      "duration": 4.56,
+      "text": "to the left everything to the left will"
+    },
+    {
+      "start": 454.16,
+      "end": 458.64,
+      "duration": 4.48,
+      "text": "be smaller than 8. Can I use that"
+    },
+    {
+      "start": 456.16,
+      "end": 460.72,
+      "duration": 4.56,
+      "text": "property? I think I can. And if I use"
+    },
+    {
+      "start": 458.64,
+      "end": 462.88,
+      "duration": 4.24,
+      "text": "this property like if you look at a"
+    },
+    {
+      "start": 460.72,
+      "end": 465.44,
+      "duration": 4.72,
+      "text": "distance all these elements are lesser"
+    },
+    {
+      "start": 462.88,
+      "end": 468.08,
+      "duration": 5.2,
+      "text": "than 8. Thereby you can easily determine"
+    },
+    {
+      "start": 465.44,
+      "end": 470.56,
+      "duration": 5.12,
+      "text": "okay these guys are part of your left."
+    },
+    {
+      "start": 468.08,
+      "end": 473.28,
+      "duration": 5.2,
+      "text": "Make sense? Indeed. So what I'll say is"
+    },
+    {
+      "start": 470.56,
+      "end": 474.96,
+      "duration": 4.4,
+      "text": "okay I'll go left and I'll say hey I'll"
+    },
+    {
+      "start": 473.28,
+      "end": 477.68,
+      "duration": 4.4,
+      "text": "give you the upper bound as eight not"
+    },
+    {
+      "start": 474.96,
+      "end": 480.56,
+      "duration": 5.6,
+      "text": "more than that because you cannot exceed"
+    },
+    {
+      "start": 477.68,
+      "end": 483.04,
+      "duration": 5.36,
+      "text": "eight like you cannot even touch eight I"
+    },
+    {
+      "start": 480.56,
+      "end": 485.04,
+      "duration": 4.48,
+      "text": "I'm like okay makes sense so currently"
+    },
+    {
+      "start": 483.04,
+      "end": 487.2,
+      "duration": 4.16,
+      "text": "my pointer will be at five because eight"
+    },
+    {
+      "start": 485.04,
+      "end": 489.92,
+      "duration": 4.88,
+      "text": "has been taken so if I'm standing at"
+    },
+    {
+      "start": 487.2,
+      "end": 493.6,
+      "duration": 6.4,
+      "text": "five yes if I am standing at five what"
+    },
+    {
+      "start": 489.92,
+      "end": 496.4,
+      "duration": 6.48,
+      "text": "will I do I'll be like can this be a"
+    },
+    {
+      "start": 493.6,
+      "end": 498.64,
+      "duration": 5.04,
+      "text": "note I'll be like yes because it is"
+    },
+    {
+      "start": 496.4,
+      "end": 502.96,
+      "duration": 6.56,
+      "text": "still lesser than my upper bound"
+    },
+    {
+      "start": 498.64,
+      "end": 504.96,
+      "duration": 6.32,
+      "text": "Perfect. So this guy is a root now. Now"
+    },
+    {
+      "start": 502.96,
+      "end": 507.44,
+      "duration": 4.48,
+      "text": "you know again some part will be left"
+    },
+    {
+      "start": 504.96,
+      "end": 509.92,
+      "duration": 4.96,
+      "text": "some part or might not be or might not"
+    },
+    {
+      "start": 507.44,
+      "end": 512.4,
+      "duration": 4.96,
+      "text": "be. So how to determine that? Again I'll"
+    },
+    {
+      "start": 509.92,
+      "end": 514.88,
+      "duration": 4.96,
+      "text": "go left and I'll say hey I know one"
+    },
+    {
+      "start": 512.4,
+      "end": 517.2,
+      "duration": 4.8,
+      "text": "thing for sure. U will be lesser than"
+    },
+    {
+      "start": 514.88,
+      "end": 519.92,
+      "duration": 5.04,
+      "text": "five. I'll be like yes that is something"
+    },
+    {
+      "start": 517.2,
+      "end": 521.92,
+      "duration": 4.72,
+      "text": "which is definite. So this time I'll be"
+    },
+    {
+      "start": 519.92,
+      "end": 524.16,
+      "duration": 4.24,
+      "text": "over here. Can one be a part of the"
+    },
+    {
+      "start": 521.92,
+      "end": 526.96,
+      "duration": 5.04,
+      "text": "left? I'll be like yes because that's"
+    },
+    {
+      "start": 524.16,
+      "end": 530.32,
+      "duration": 6.16,
+      "text": "still lesser than five. So this time"
+    },
+    {
+      "start": 526.96,
+      "end": 532.16,
+      "duration": 5.2,
+      "text": "this guy becomes my root. Perfect. So I"
+    },
+    {
+      "start": 530.32,
+      "end": 534.88,
+      "duration": 4.56,
+      "text": "have a root. I need the left. So I go to"
+    },
+    {
+      "start": 532.16,
+      "end": 537.52,
+      "duration": 5.36,
+      "text": "the left. I say left. Hey listen listen"
+    },
+    {
+      "start": 534.88,
+      "end": 540.4,
+      "duration": 5.52,
+      "text": "your upper bound will be one because you"
+    },
+    {
+      "start": 537.52,
+      "end": 544.24,
+      "duration": 6.72,
+      "text": "cannot exceed one. This time whenever"
+    },
+    {
+      "start": 540.4,
+      "end": 547.2,
+      "duration": 6.8,
+      "text": "you are at seven. Seven says no dude I"
+    },
+    {
+      "start": 544.24,
+      "end": 550.32,
+      "duration": 6.08,
+      "text": "cannot be on the left. So I say okay"
+    },
+    {
+      "start": 547.2,
+      "end": 553.52,
+      "duration": 6.32,
+      "text": "let's return a null. So this guy gets a"
+    },
+    {
+      "start": 550.32,
+      "end": 555.52,
+      "duration": 5.2,
+      "text": "null. So it assigns it a null. So he"
+    },
+    {
+      "start": 553.52,
+      "end": 558.08,
+      "duration": 4.56,
+      "text": "says okay I cannot be on the left but"
+    },
+    {
+      "start": 555.52,
+      "end": 560.32,
+      "duration": 4.8,
+      "text": "can I be on the right can I be I think I"
+    },
+    {
+      "start": 558.08,
+      "end": 562.8,
+      "duration": 4.72,
+      "text": "can so I will go to the right and I'll"
+    },
+    {
+      "start": 560.32,
+      "end": 565.68,
+      "duration": 5.36,
+      "text": "say okay go to the right but hey listen"
+    },
+    {
+      "start": 562.8,
+      "end": 567.36,
+      "duration": 4.56,
+      "text": "your upper bound will be five this time"
+    },
+    {
+      "start": 565.68,
+      "end": 570.16,
+      "duration": 4.48,
+      "text": "not one because you're going to the"
+    },
+    {
+      "start": 567.36,
+      "end": 572.24,
+      "duration": 4.88,
+      "text": "right you're going to the right so you"
+    },
+    {
+      "start": 570.16,
+      "end": 574.0,
+      "duration": 3.84,
+      "text": "know one thing that this five is there"
+    },
+    {
+      "start": 572.24,
+      "end": 576.4,
+      "duration": 4.16,
+      "text": "so everything to the left of this will"
+    },
+    {
+      "start": 574.0,
+      "end": 578.24,
+      "duration": 4.24,
+      "text": "be lesser than five so you pass on the"
+    },
+    {
+      "start": 576.4,
+      "end": 580.32,
+      "duration": 3.92,
+      "text": "same upper bound you pass on the same"
+    },
+    {
+      "start": 578.24,
+      "end": 582.0,
+      "duration": 3.76,
+      "text": "upper bound saying okay whenever you go"
+    },
+    {
+      "start": 580.32,
+      "end": 583.28,
+      "duration": 2.96,
+      "text": "to the right you take the same upper"
+    },
+    {
+      "start": 582.0,
+      "end": 586.08,
+      "duration": 4.08,
+      "text": "bound and"
+    },
+    {
+      "start": 583.28,
+      "end": 588.8,
+      "duration": 5.52,
+      "text": "Perfect. Now you're at seven. Can seven"
+    },
+    {
+      "start": 586.08,
+      "end": 591.28,
+      "duration": 5.2,
+      "text": "be a part of this? Uh, I don't think. I"
+    },
+    {
+      "start": 588.8,
+      "end": 594.8,
+      "duration": 6.0,
+      "text": "don't think because that's not possible."
+    },
+    {
+      "start": 591.28,
+      "end": 597.84,
+      "duration": 6.56,
+      "text": "So I hope you have understood why did I"
+    },
+    {
+      "start": 594.8,
+      "end": 600.72,
+      "duration": 5.92,
+      "text": "not require a lower bound? Why did I not"
+    },
+    {
+      "start": 597.84,
+      "end": 603.68,
+      "duration": 5.84,
+      "text": "require a lower range? The reason was"
+    },
+    {
+      "start": 600.72,
+      "end": 606.24,
+      "duration": 5.52,
+      "text": "very simple. If seven cannot be planted"
+    },
+    {
+      "start": 603.68,
+      "end": 608.48,
+      "duration": 4.8,
+      "text": "here, which means seven is greater than"
+    },
+    {
+      "start": 606.24,
+      "end": 610.0,
+      "duration": 3.76,
+      "text": "one. So this is automatically checking"
+    },
+    {
+      "start": 608.48,
+      "end": 612.16,
+      "duration": 3.68,
+      "text": "like working for the lower bound."
+    },
+    {
+      "start": 610.0,
+      "end": 614.24,
+      "duration": 4.24,
+      "text": "Correct? So seven can also not be"
+    },
+    {
+      "start": 612.16,
+      "end": 615.6,
+      "duration": 3.44,
+      "text": "planted here. So I come back to here and"
+    },
+    {
+      "start": 614.24,
+      "end": 617.28,
+      "duration": 3.04,
+      "text": "when I come back to here this has a"
+    },
+    {
+      "start": 615.6,
+      "end": 619.36,
+      "duration": 3.76,
+      "text": "right to go. So this time it will go to"
+    },
+    {
+      "start": 617.28,
+      "end": 621.6,
+      "duration": 4.32,
+      "text": "the right and I'll say okay I'll pass on"
+    },
+    {
+      "start": 619.36,
+      "end": 623.84,
+      "duration": 4.48,
+      "text": "the upper bound to be eight because five"
+    },
+    {
+      "start": 621.6,
+      "end": 625.84,
+      "duration": 4.24,
+      "text": "is here. So this upper like everything"
+    },
+    {
+      "start": 623.84,
+      "end": 627.2,
+      "duration": 3.36,
+      "text": "to the left of the eight is lesser than"
+    },
+    {
+      "start": 625.84,
+      "end": 630.64,
+      "duration": 4.8,
+      "text": "eight. So the upper bound of eight is"
+    },
+    {
+      "start": 627.2,
+      "end": 633.44,
+      "duration": 6.24,
+      "text": "passed. Now I say okay can seven be a"
+    },
+    {
+      "start": 630.64,
+      "end": 636.32,
+      "duration": 5.68,
+      "text": "part. He says yes I can be a part."
+    },
+    {
+      "start": 633.44,
+      "end": 637.92,
+      "duration": 4.48,
+      "text": "Amazing. Now you'll go to the left and"
+    },
+    {
+      "start": 636.32,
+      "end": 640.64,
+      "duration": 4.32,
+      "text": "you'll pass the upper bound to be seven"
+    },
+    {
+      "start": 637.92,
+      "end": 642.56,
+      "duration": 4.64,
+      "text": "because you you have to have everything"
+    },
+    {
+      "start": 640.64,
+      "end": 645.44,
+      "duration": 4.8,
+      "text": "lesser than seven. Now whenever you add"
+    },
+    {
+      "start": 642.56,
+      "end": 648.24,
+      "duration": 5.68,
+      "text": "10, 10 cannot be a part. So it makes it"
+    },
+    {
+      "start": 645.44,
+      "end": 650.08,
+      "duration": 4.64,
+      "text": "a null and goes back to seven. Seven"
+    },
+    {
+      "start": 648.24,
+      "end": 651.92,
+      "duration": 3.68,
+      "text": "goes to the right and says hey my upper"
+    },
+    {
+      "start": 650.08,
+      "end": 654.16,
+      "duration": 4.08,
+      "text": "bound will be eight this time because"
+    },
+    {
+      "start": 651.92,
+      "end": 657.76,
+      "duration": 5.84,
+      "text": "I'm going to the right. Can 10 be a"
+    },
+    {
+      "start": 654.16,
+      "end": 660.8,
+      "duration": 6.64,
+      "text": "part? No. So it again has a null and"
+    },
+    {
+      "start": 657.76,
+      "end": 663.52,
+      "duration": 5.76,
+      "text": "goes back. So ultimately from here you"
+    },
+    {
+      "start": 660.8,
+      "end": 666.32,
+      "duration": 5.52,
+      "text": "come here. Seven has no left no right."
+    },
+    {
+      "start": 663.52,
+      "end": 668.08,
+      "duration": 4.56,
+      "text": "So null and null comes back. This guy"
+    },
+    {
+      "start": 666.32,
+      "end": 671.44,
+      "duration": 5.12,
+      "text": "has the left, has the right. So goes"
+    },
+    {
+      "start": 668.08,
+      "end": 673.44,
+      "duration": 5.36,
+      "text": "back. Now you're at 8. 8 says, \"Okay,"
+    },
+    {
+      "start": 671.44,
+      "end": 676.08,
+      "duration": 4.64,
+      "text": "I'm at 12 as of now.\" As of now, I'm at"
+    },
+    {
+      "start": 673.44,
+      "end": 678.32,
+      "duration": 4.88,
+      "text": "12. I need to place 12. So my left"
+    },
+    {
+      "start": 676.08,
+      "end": 680.0,
+      "duration": 3.92,
+      "text": "portion is done. I need to go to the"
+    },
+    {
+      "start": 678.32,
+      "end": 681.28,
+      "duration": 2.96,
+      "text": "right. So let's go to the right. The"
+    },
+    {
+      "start": 680.0,
+      "end": 683.92,
+      "duration": 3.92,
+      "text": "moment you go to the right, you say,"
+    },
+    {
+      "start": 681.28,
+      "end": 685.76,
+      "duration": 4.48,
+      "text": "\"Okay, the upper bound will be in max"
+    },
+    {
+      "start": 683.92,
+      "end": 687.92,
+      "duration": 4.0,
+      "text": "because this was the upper bound that"
+    },
+    {
+      "start": 685.76,
+      "end": 691.68,
+      "duration": 5.92,
+      "text": "I'll carry off because I'm going to the"
+    },
+    {
+      "start": 687.92,
+      "end": 693.6,
+      "duration": 5.68,
+      "text": "right. Now at this portion, can I have"
+    },
+    {
+      "start": 691.68,
+      "end": 695.84,
+      "duration": 4.16,
+      "text": "10 placed?\" Yeah, sorry. I was at 12. I"
+    },
+    {
+      "start": 693.6,
+      "end": 698.08,
+      "duration": 4.48,
+      "text": "I was at 10. Absolutely. Sorry. Not at"
+    },
+    {
+      "start": 695.84,
+      "end": 700.8,
+      "duration": 4.96,
+      "text": "Not at 12. I was at 10. Can I please?"
+    },
+    {
+      "start": 698.08,
+      "end": 703.84,
+      "duration": 5.76,
+      "text": "I'll be like, yes, I can. Now the"
+    },
+    {
+      "start": 700.8,
+      "end": 706.08,
+      "duration": 5.28,
+      "text": "question arises, can you go left? If you"
+    },
+    {
+      "start": 703.84,
+      "end": 709.52,
+      "duration": 5.68,
+      "text": "go left, the upper bound is 10. And then"
+    },
+    {
+      "start": 706.08,
+      "end": 711.6,
+      "duration": 5.52,
+      "text": "12 and then 12 is not possible. So you"
+    },
+    {
+      "start": 709.52,
+      "end": 713.36,
+      "duration": 3.84,
+      "text": "will be like not possible. Let's go"
+    },
+    {
+      "start": 711.6,
+      "end": 716.64,
+      "duration": 5.04,
+      "text": "back. Now you go right and you say the"
+    },
+    {
+      "start": 713.36,
+      "end": 719.12,
+      "duration": 5.76,
+      "text": "upper bound is max. So 12 is possible"
+    },
+    {
+      "start": 716.64,
+      "end": 721.6,
+      "duration": 4.96,
+      "text": "here. You place it and then you go back"
+    },
+    {
+      "start": 719.12,
+      "end": 724.48,
+      "duration": 5.36,
+      "text": "because there are no remaining elements."
+    },
+    {
+      "start": 721.6,
+      "end": 727.84,
+      "duration": 6.24,
+      "text": "So ultimately you end up forming this"
+    },
+    {
+      "start": 724.48,
+      "end": 730.64,
+      "duration": 6.16,
+      "text": "entire BST. So you just had to carry"
+    },
+    {
+      "start": 727.84,
+      "end": 732.88,
+      "duration": 5.04,
+      "text": "this upper bound whenever you call left."
+    },
+    {
+      "start": 730.64,
+      "end": 735.68,
+      "duration": 5.04,
+      "text": "Now something critical to observe if"
+    },
+    {
+      "start": 732.88,
+      "end": 738.0,
+      "duration": 5.12,
+      "text": "you're calling left then this guy the"
+    },
+    {
+      "start": 735.68,
+      "end": 740.48,
+      "duration": 4.8,
+      "text": "node val will become the bound the upper"
+    },
+    {
+      "start": 738.0,
+      "end": 743.68,
+      "duration": 5.68,
+      "text": "bound if you're calling left and if"
+    },
+    {
+      "start": 740.48,
+      "end": 746.0,
+      "duration": 5.52,
+      "text": "you're calling right then the previous"
+    },
+    {
+      "start": 743.68,
+      "end": 747.52,
+      "duration": 3.84,
+      "text": "like whatever it was eight will be"
+    },
+    {
+      "start": 746.0,
+      "end": 750.4,
+      "duration": 4.4,
+      "text": "transferred. If it was intmax"
+    },
+    {
+      "start": 747.52,
+      "end": 752.32,
+      "duration": 4.8,
+      "text": "transferred if it was five transferred."
+    },
+    {
+      "start": 750.4,
+      "end": 754.88,
+      "duration": 4.48,
+      "text": "So you're basically transferring the"
+    },
+    {
+      "start": 752.32,
+      "end": 756.08,
+      "duration": 3.76,
+      "text": "bound if you're going route right if"
+    },
+    {
+      "start": 754.88,
+      "end": 757.84,
+      "duration": 2.96,
+      "text": "you're going right you're transferring"
+    },
+    {
+      "start": 756.08,
+      "end": 761.28,
+      "duration": 5.2,
+      "text": "the bound if you're going left you're"
+    },
+    {
+      "start": 757.84,
+      "end": 763.6,
+      "duration": 5.76,
+      "text": "taking note doval remember and this is a"
+    },
+    {
+      "start": 761.28,
+      "end": 765.68,
+      "duration": 4.4,
+      "text": "very global pointer that you have to"
+    },
+    {
+      "start": 763.6,
+      "end": 768.32,
+      "duration": 4.72,
+      "text": "maintain so that you know at which"
+    },
+    {
+      "start": 765.68,
+      "end": 770.8,
+      "duration": 5.12,
+      "text": "element you are at at every junction"
+    },
+    {
+      "start": 768.32,
+      "end": 773.6,
+      "duration": 5.28,
+      "text": "correct and once you run out of elements"
+    },
+    {
+      "start": 770.8,
+      "end": 775.6,
+      "duration": 4.8,
+      "text": "it's over or if you reach a point where"
+    },
+    {
+      "start": 773.6,
+      "end": 777.44,
+      "duration": 3.84,
+      "text": "you cannot place then also you can"
+    },
+    {
+      "start": 775.6,
+      "end": 780.0,
+      "duration": 4.4,
+      "text": "return a null so that are the two cases"
+    },
+    {
+      "start": 777.44,
+      "end": 782.8,
+      "duration": 5.36,
+      "text": "that you need to be uh careful of so if"
+    },
+    {
+      "start": 780.0,
+      "end": 785.04,
+      "duration": 5.04,
+      "text": "If I if I talk about the time complexity"
+    },
+    {
+      "start": 782.8,
+      "end": 787.28,
+      "duration": 4.48,
+      "text": "guys what will be it I'm just requiring"
+    },
+    {
+      "start": 785.04,
+      "end": 790.0,
+      "duration": 4.96,
+      "text": "how many traversals am I doing for a"
+    },
+    {
+      "start": 787.28,
+      "end": 793.84,
+      "duration": 6.56,
+      "text": "single node first time I'm coming to"
+    },
+    {
+      "start": 790.0,
+      "end": 795.76,
+      "duration": 5.76,
+      "text": "five single traversal on a node going to"
+    },
+    {
+      "start": 793.84,
+      "end": 798.72,
+      "duration": 4.88,
+      "text": "the left doesn't matter again coming"
+    },
+    {
+      "start": 795.76,
+      "end": 800.88,
+      "duration": 5.12,
+      "text": "back to five two traversals going to the"
+    },
+    {
+      "start": 798.72,
+      "end": 804.56,
+      "duration": 5.84,
+      "text": "right again coming back to the five so"
+    },
+    {
+      "start": 800.88,
+      "end": 807.44,
+      "duration": 6.56,
+      "text": "five is like from up once goes to the"
+    },
+    {
+      "start": 804.56,
+      "end": 809.04,
+      "duration": 4.48,
+      "text": "left comes back right comes back three"
+    },
+    {
+      "start": 807.44,
+      "end": 810.0,
+      "duration": 2.56,
+      "text": "times you're visiting a single node at"
+    },
+    {
+      "start": 809.04,
+      "end": 811.92,
+      "duration": 2.88,
+      "text": "the worst"
+    },
+    {
+      "start": 810.0,
+      "end": 814.48,
+      "duration": 4.48,
+      "text": "If you're visiting three times, can I"
+    },
+    {
+      "start": 811.92,
+      "end": 817.2,
+      "duration": 5.28,
+      "text": "say it's a 3 N"
+    },
+    {
+      "start": 814.48,
+      "end": 819.2,
+      "duration": 4.72,
+      "text": "which is as good as B go of N because"
+    },
+    {
+      "start": 817.2,
+      "end": 821.12,
+      "duration": 3.92,
+      "text": "you won't be visiting 3N always. So"
+    },
+    {
+      "start": 819.2,
+      "end": 822.88,
+      "duration": 3.68,
+      "text": "that's as good as B go of N and the"
+    },
+    {
+      "start": 821.12,
+      "end": 825.68,
+      "duration": 4.56,
+      "text": "space complexity. Yeah, recussion is"
+    },
+    {
+      "start": 822.88,
+      "end": 827.6,
+      "duration": 4.72,
+      "text": "using a stack space but yeah like not"
+    },
+    {
+      "start": 825.68,
+      "end": 829.68,
+      "duration": 4.0,
+      "text": "any external containers. So that will be"
+    },
+    {
+      "start": 827.6,
+      "end": 832.16,
+      "duration": 4.56,
+      "text": "the time complexity and the space"
+    },
+    {
+      "start": 829.68,
+      "end": 834.24,
+      "duration": 4.56,
+      "text": "complexity for this particular approach"
+    },
+    {
+      "start": 832.16,
+      "end": 836.24,
+      "duration": 4.08,
+      "text": "and this is the best that we can do. So"
+    },
+    {
+      "start": 834.24,
+      "end": 838.48,
+      "duration": 4.24,
+      "text": "it's now time to check out the C++ as"
+    },
+    {
+      "start": 836.24,
+      "end": 840.24,
+      "duration": 4.0,
+      "text": "well as the Java code. So as usual the"
+    },
+    {
+      "start": 838.48,
+      "end": 842.56,
+      "duration": 4.08,
+      "text": "C++ code is on the left and the Java"
+    },
+    {
+      "start": 840.24,
+      "end": 846.8,
+      "duration": 6.56,
+      "text": "code is on the right. So as you can see"
+    },
+    {
+      "start": 842.56,
+      "end": 849.76,
+      "duration": 7.2,
+      "text": "that we will be having a vector in C++"
+    },
+    {
+      "start": 846.8,
+      "end": 852.64,
+      "duration": 5.84,
+      "text": "and in Java it will be integer. So"
+    },
+    {
+      "start": 849.76,
+      "end": 854.16,
+      "duration": 4.4,
+      "text": "initially we have kept the pointer. What"
+    },
+    {
+      "start": 852.64,
+      "end": 856.24,
+      "duration": 3.6,
+      "text": "is the pointer? Now if you remember we"
+    },
+    {
+      "start": 854.16,
+      "end": 857.92,
+      "duration": 3.76,
+      "text": "had a pre-order right? So initially we"
+    },
+    {
+      "start": 856.24,
+      "end": 859.44,
+      "duration": 3.2,
+      "text": "had a pointer like the first element"
+    },
+    {
+      "start": 857.92,
+      "end": 861.2,
+      "duration": 3.28,
+      "text": "then we compared with bound then we had"
+    },
+    {
+      "start": 859.44,
+      "end": 862.72,
+      "duration": 3.28,
+      "text": "the next element then we had the next."
+    },
+    {
+      "start": 861.2,
+      "end": 865.44,
+      "duration": 4.24,
+      "text": "So we need a pointer right to move"
+    },
+    {
+      "start": 862.72,
+      "end": 868.48,
+      "duration": 5.76,
+      "text": "across. So we have a pointer as I and we"
+    },
+    {
+      "start": 865.44,
+      "end": 870.32,
+      "duration": 4.88,
+      "text": "say build. we have passed on the vector"
+    },
+    {
+      "start": 868.48,
+      "end": 872.08,
+      "duration": 3.6,
+      "text": "the I as well as the upper bound."
+    },
+    {
+      "start": 870.32,
+      "end": 874.8,
+      "duration": 4.48,
+      "text": "Initially when you start off at the root"
+    },
+    {
+      "start": 872.08,
+      "end": 877.2,
+      "duration": 5.12,
+      "text": "the upper bound is in max. So whenever"
+    },
+    {
+      "start": 874.8,
+      "end": 879.28,
+      "duration": 4.48,
+      "text": "we reach and we see that okay hey listen"
+    },
+    {
+      "start": 877.2,
+      "end": 880.8,
+      "duration": 3.6,
+      "text": "if we run ran out of elements like there"
+    },
+    {
+      "start": 879.28,
+      "end": 884.08,
+      "duration": 4.8,
+      "text": "are no more elements that has to be"
+    },
+    {
+      "start": 880.8,
+      "end": 887.28,
+      "duration": 6.48,
+      "text": "inserted into the BST. So at that case"
+    },
+    {
+      "start": 884.08,
+      "end": 888.96,
+      "duration": 4.88,
+      "text": "that's over or if it is out of bound we"
+    },
+    {
+      "start": 887.28,
+      "end": 891.28,
+      "duration": 4.0,
+      "text": "will say okay this is not possible over"
+    },
+    {
+      "start": 888.96,
+      "end": 894.8,
+      "duration": 5.84,
+      "text": "here you can go back. So return a null"
+    },
+    {
+      "start": 891.28,
+      "end": 896.88,
+      "duration": 5.6,
+      "text": "in both the cases and normally what you"
+    },
+    {
+      "start": 894.8,
+      "end": 899.28,
+      "duration": 4.48,
+      "text": "can say is if this is not the case that"
+    },
+    {
+      "start": 896.88,
+      "end": 901.28,
+      "duration": 4.4,
+      "text": "means it is okay. So you'll take that"
+    },
+    {
+      "start": 899.28,
+      "end": 904.24,
+      "duration": 4.96,
+      "text": "guy at the ayat index and you will say"
+    },
+    {
+      "start": 901.28,
+      "end": 907.04,
+      "duration": 5.76,
+      "text": "that hey listen this will be a part of"
+    },
+    {
+      "start": 904.24,
+      "end": 909.6,
+      "duration": 5.36,
+      "text": "my current node like I'll form a root"
+    },
+    {
+      "start": 907.04,
+      "end": 912.72,
+      "duration": 5.68,
+      "text": "with that and once I form that I know"
+    },
+    {
+      "start": 909.6,
+      "end": 915.36,
+      "duration": 5.76,
+      "text": "that roots left will go with root.val"
+    },
+    {
+      "start": 912.72,
+      "end": 917.28,
+      "duration": 4.56,
+      "text": "val as the upper bound. But if it comes"
+    },
+    {
+      "start": 915.36,
+      "end": 918.96,
+      "duration": 3.6,
+      "text": "back, if it comes back, then it has to"
+    },
+    {
+      "start": 917.28,
+      "end": 920.64,
+      "duration": 3.36,
+      "text": "go to the right. And for the right, the"
+    },
+    {
+      "start": 918.96,
+      "end": 922.56,
+      "duration": 3.6,
+      "text": "bound will remain the same. Only"
+    },
+    {
+      "start": 920.64,
+      "end": 925.44,
+      "duration": 4.8,
+      "text": "whenever it goes to the left, the bound"
+    },
+    {
+      "start": 922.56,
+      "end": 926.96,
+      "duration": 4.4,
+      "text": "has to be has to be self adjusted"
+    },
+    {
+      "start": 925.44,
+      "end": 928.72,
+      "duration": 3.28,
+      "text": "because whenever it goes to the right,"
+    },
+    {
+      "start": 926.96,
+      "end": 930.64,
+      "duration": 3.68,
+      "text": "if you remember the example, the moment"
+    },
+    {
+      "start": 928.72,
+      "end": 932.96,
+      "duration": 4.24,
+      "text": "it went to the right, intax remained as"
+    },
+    {
+      "start": 930.64,
+      "end": 934.72,
+      "duration": 4.08,
+      "text": "in max. Correct? Whereas five, it"
+    },
+    {
+      "start": 932.96,
+      "end": 936.64,
+      "duration": 3.68,
+      "text": "remained as five. So over here, the"
+    },
+    {
+      "start": 934.72,
+      "end": 938.56,
+      "duration": 3.84,
+      "text": "similar stuff we will do, we will attach"
+    },
+    {
+      "start": 936.64,
+      "end": 941.04,
+      "duration": 4.4,
+      "text": "the left and we'll attach the right."
+    },
+    {
+      "start": 938.56,
+      "end": 943.68,
+      "duration": 5.12,
+      "text": "Once they have formed, I can return the"
+    },
+    {
+      "start": 941.04,
+      "end": 946.8,
+      "duration": 5.76,
+      "text": "root easily. Now over here int i will be"
+    },
+    {
+      "start": 943.68,
+      "end": 948.32,
+      "duration": 4.64,
+      "text": "passed by reference because the i will"
+    },
+    {
+      "start": 946.8,
+      "end": 950.8,
+      "duration": 4.0,
+      "text": "be changed like the pointer will be"
+    },
+    {
+      "start": 948.32,
+      "end": 954.0,
+      "duration": 5.68,
+      "text": "moving across throughout the process."
+    },
+    {
+      "start": 950.8,
+      "end": 955.68,
+      "duration": 4.88,
+      "text": "Correct? Now in Java you cannot pass a"
+    },
+    {
+      "start": 954.0,
+      "end": 958.64,
+      "duration": 4.64,
+      "text": "reference to a variable. So what I've"
+    },
+    {
+      "start": 955.68,
+      "end": 961.28,
+      "duration": 5.6,
+      "text": "done is I've created a array of one"
+    },
+    {
+      "start": 958.64,
+      "end": 963.36,
+      "duration": 4.72,
+      "text": "size. Yes, an array of size one. And"
+    },
+    {
+      "start": 961.28,
+      "end": 965.6,
+      "duration": 4.32,
+      "text": "since array can be passed by reference"
+    },
+    {
+      "start": 963.36,
+      "end": 967.44,
+      "duration": 4.08,
+      "text": "and I've used that array in order like"
+    },
+    {
+      "start": 965.6,
+      "end": 969.84,
+      "duration": 4.24,
+      "text": "arrays first element as a like the"
+    },
+    {
+      "start": 967.44,
+      "end": 972.72,
+      "duration": 5.28,
+      "text": "array's first index or the zeroth index"
+    },
+    {
+      "start": 969.84,
+      "end": 973.44,
+      "duration": 3.6,
+      "text": "as a variable because variables cannot"
+    },
+    {
+      "start": 972.72,
+      "end": 974.72,
+      "duration": 2.0,
+      "text": "be passed."
+    },
+    {
+      "start": 973.44,
+      "end": 976.48,
+      "duration": 3.04,
+      "text": "So guys I hope you have understood all"
+    },
+    {
+      "start": 974.72,
+      "end": 978.64,
+      "duration": 3.92,
+      "text": "the three explanations as well as the"
+    },
+    {
+      "start": 976.48,
+      "end": 980.24,
+      "duration": 3.76,
+      "text": "code just in case you did please please"
+    },
+    {
+      "start": 978.64,
+      "end": 981.68,
+      "duration": 3.04,
+      "text": "please make sure you like this video and"
+    },
+    {
+      "start": 980.24,
+      "end": 983.44,
+      "duration": 3.2,
+      "text": "if you're new to this channel please do"
+    },
+    {
+      "start": 981.68,
+      "end": 985.36,
+      "duration": 3.68,
+      "text": "consider subscribing because that is the"
+    },
+    {
+      "start": 983.44,
+      "end": 987.6,
+      "duration": 4.16,
+      "text": "only thing that keeps me motivated to"
+    },
+    {
+      "start": 985.36,
+      "end": 989.28,
+      "duration": 3.92,
+      "text": "make these kind of videos and yeah with"
+    },
+    {
+      "start": 987.6,
+      "end": 993.12,
+      "duration": 5.52,
+      "text": "this I'll be wrapping up this video. So,"
+    },
+    {
+      "start": 989.28,
+      "end": 993.12,
+      "duration": 3.84,
+      "text": "let's meet in some other video. Bye-bye."
+    }
+  ]
+}

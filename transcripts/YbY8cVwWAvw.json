@@ -1,0 +1,4148 @@
+{
+  "video_id": "YbY8cVwWAvw",
+  "title": "G-42. Floyd Warshall Algorithm",
+  "duration_sec": 1813,
+  "num_segments": 690,
+  "segments": [
+    {
+      "start": 3.0,
+      "end": 6.18,
+      "duration": 3.18,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.56,
+      "end": 9.42,
+      "duration": 4.86,
+      "text": "I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.18,
+      "end": 11.34,
+      "duration": 5.16,
+      "text": "so today we will be learning one more"
+    },
+    {
+      "start": 9.42,
+      "end": 13.92,
+      "duration": 4.5,
+      "text": "shortest path algorithm which is the"
+    },
+    {
+      "start": 11.34,
+      "end": 16.56,
+      "duration": 5.22,
+      "text": "Floyd virtual shortest path algorithm"
+    },
+    {
+      "start": 13.92,
+      "end": 18.6,
+      "duration": 4.68,
+      "text": "now this is very very different from the"
+    },
+    {
+      "start": 16.56,
+      "end": 21.78,
+      "duration": 5.22,
+      "text": "dixtra or the Bellman 4 that you learn"
+    },
+    {
+      "start": 18.6,
+      "end": 25.02,
+      "duration": 6.42,
+      "text": "because dixtra and Bellman Ford were a"
+    },
+    {
+      "start": 21.78,
+      "end": 27.06,
+      "duration": 5.28,
+      "text": "single Source shortest path algorithm"
+    },
+    {
+      "start": 25.02,
+      "end": 29.34,
+      "duration": 4.32,
+      "text": "where you are given a source and you"
+    },
+    {
+      "start": 27.06,
+      "end": 32.64,
+      "duration": 5.58,
+      "text": "have to find out till all the other"
+    },
+    {
+      "start": 29.34,
+      "end": 34.92,
+      "duration": 5.58,
+      "text": "nodes the shortest path there was only a"
+    },
+    {
+      "start": 32.64,
+      "end": 37.8,
+      "duration": 5.16,
+      "text": "single Source but when you talk about"
+    },
+    {
+      "start": 34.92,
+      "end": 41.94,
+      "duration": 7.02,
+      "text": "Floyd ocean it is different over here"
+    },
+    {
+      "start": 37.8,
+      "end": 46.56,
+      "duration": 8.76,
+      "text": "there are five notes so from every node"
+    },
+    {
+      "start": 41.94,
+      "end": 48.48,
+      "duration": 6.54,
+      "text": "be it from 0 1 2 3 4 from every node you"
+    },
+    {
+      "start": 46.56,
+      "end": 52.5,
+      "duration": 5.94,
+      "text": "have to tell me the shortest path to"
+    },
+    {
+      "start": 48.48,
+      "end": 55.44,
+      "duration": 6.96,
+      "text": "every other node over here if I'm asking"
+    },
+    {
+      "start": 52.5,
+      "end": 57.78,
+      "duration": 5.28,
+      "text": "you from 4 to 1 you should be knowing if"
+    },
+    {
+      "start": 55.44,
+      "end": 60.74,
+      "duration": 5.3,
+      "text": "I'm asking you from one to three you"
+    },
+    {
+      "start": 57.78,
+      "end": 64.26,
+      "duration": 6.48,
+      "text": "should be knowing so there are multiple"
+    },
+    {
+      "start": 60.74,
+      "end": 66.86,
+      "duration": 6.12,
+      "text": "multiple source so this is why this is"
+    },
+    {
+      "start": 64.26,
+      "end": 71.22,
+      "duration": 6.96,
+      "text": "known as a"
+    },
+    {
+      "start": 66.86,
+      "end": 73.8,
+      "duration": 6.94,
+      "text": "multi-source shortest path algorithm"
+    },
+    {
+      "start": 71.22,
+      "end": 77.24,
+      "duration": 6.02,
+      "text": "remember this it helps you detect"
+    },
+    {
+      "start": 73.8,
+      "end": 81.18,
+      "duration": 7.38,
+      "text": "negative Cycles as well helps you detect"
+    },
+    {
+      "start": 77.24,
+      "end": 83.1,
+      "duration": 5.86,
+      "text": "negative Cycles as well"
+    },
+    {
+      "start": 81.18,
+      "end": 85.8,
+      "duration": 4.62,
+      "text": "so I hope pretty much you have"
+    },
+    {
+      "start": 83.1,
+      "end": 88.32,
+      "duration": 5.22,
+      "text": "understood uh what you need to find now"
+    },
+    {
+      "start": 85.8,
+      "end": 91.02,
+      "duration": 5.22,
+      "text": "what is the shortest path very simple if"
+    },
+    {
+      "start": 88.32,
+      "end": 93.48,
+      "duration": 5.16,
+      "text": "I'm asking you from zero to one and I"
+    },
+    {
+      "start": 91.02,
+      "end": 96.12,
+      "duration": 5.1,
+      "text": "ask you what is the shortest path in"
+    },
+    {
+      "start": 93.48,
+      "end": 97.92,
+      "duration": 4.44,
+      "text": "order to reach from zero to one so you"
+    },
+    {
+      "start": 96.12,
+      "end": 100.02,
+      "duration": 3.9,
+      "text": "can take multiple paths one of the paths"
+    },
+    {
+      "start": 97.92,
+      "end": 102.36,
+      "duration": 4.44,
+      "text": "will take you six you can take this path"
+    },
+    {
+      "start": 100.02,
+      "end": 104.4,
+      "duration": 4.38,
+      "text": "which is gonna take you five you can"
+    },
+    {
+      "start": 102.36,
+      "end": 106.62,
+      "duration": 4.26,
+      "text": "take probably this path which is again"
+    },
+    {
+      "start": 104.4,
+      "end": 109.14,
+      "duration": 4.74,
+      "text": "going to take you five or you can take"
+    },
+    {
+      "start": 106.62,
+      "end": 112.14,
+      "duration": 5.52,
+      "text": "the shortest one which is go here go"
+    },
+    {
+      "start": 109.14,
+      "end": 117.06,
+      "duration": 7.92,
+      "text": "here go here it's gonna take two one one"
+    },
+    {
+      "start": 112.14,
+      "end": 119.4,
+      "duration": 7.26,
+      "text": "which is an addition of I think Fourier"
+    },
+    {
+      "start": 117.06,
+      "end": 123.3,
+      "duration": 6.24,
+      "text": "that's the shortest path so the shortest"
+    },
+    {
+      "start": 119.4,
+      "end": 126.0,
+      "duration": 6.6,
+      "text": "path from zero to one is zero to two two"
+    },
+    {
+      "start": 123.3,
+      "end": 127.56,
+      "duration": 4.26,
+      "text": "to four four to one this is the shortest"
+    },
+    {
+      "start": 126.0,
+      "end": 129.6,
+      "duration": 3.6,
+      "text": "part if I'm asking you that's the"
+    },
+    {
+      "start": 127.56,
+      "end": 132.18,
+      "duration": 4.62,
+      "text": "definition of shortest path any path"
+    },
+    {
+      "start": 129.6,
+      "end": 135.06,
+      "duration": 5.46,
+      "text": "that takes the least amount of edge"
+    },
+    {
+      "start": 132.18,
+      "end": 136.86,
+      "duration": 4.68,
+      "text": "weights is known as the shortest path so"
+    },
+    {
+      "start": 135.06,
+      "end": 139.26,
+      "duration": 4.2,
+      "text": "what is the"
+    },
+    {
+      "start": 136.86,
+      "end": 142.44,
+      "duration": 5.58,
+      "text": "thought process behind the blood virtual"
+    },
+    {
+      "start": 139.26,
+      "end": 147.0,
+      "duration": 7.74,
+      "text": "algorithm now it's very simple it states"
+    },
+    {
+      "start": 142.44,
+      "end": 147.96,
+      "duration": 5.52,
+      "text": "go via every Edge go via every node"
+    },
+    {
+      "start": 147.0,
+      "end": 151.14,
+      "duration": 4.14,
+      "text": "rather"
+    },
+    {
+      "start": 147.96,
+      "end": 153.84,
+      "duration": 5.88,
+      "text": "or go via every Vertex or node whatever"
+    },
+    {
+      "start": 151.14,
+      "end": 157.08,
+      "duration": 5.94,
+      "text": "you wish to write so it's very simple it"
+    },
+    {
+      "start": 153.84,
+      "end": 160.5,
+      "duration": 6.66,
+      "text": "states go via every vertex and not go go"
+    },
+    {
+      "start": 157.08,
+      "end": 163.14,
+      "duration": 6.06,
+      "text": "and try try try and get the shortest one"
+    },
+    {
+      "start": 160.5,
+      "end": 166.08,
+      "duration": 5.58,
+      "text": "so for an example for an example let's"
+    },
+    {
+      "start": 163.14,
+      "end": 168.36,
+      "duration": 5.22,
+      "text": "take uh we want to find from 0 to 1"
+    },
+    {
+      "start": 166.08,
+      "end": 170.22,
+      "duration": 4.14,
+      "text": "right so if you're trying to find from 0"
+    },
+    {
+      "start": 168.36,
+      "end": 174.0,
+      "duration": 5.64,
+      "text": "to 1 assume the distance you're trying"
+    },
+    {
+      "start": 170.22,
+      "end": 175.92,
+      "duration": 5.7,
+      "text": "to find is from 0 to 1 okay so what are"
+    },
+    {
+      "start": 174.0,
+      "end": 178.44,
+      "duration": 4.44,
+      "text": "the possible ways that you can go you"
+    },
+    {
+      "start": 175.92,
+      "end": 180.42,
+      "duration": 4.5,
+      "text": "can be like swivel I can go from zero to"
+    },
+    {
+      "start": 178.44,
+      "end": 182.34,
+      "duration": 3.9,
+      "text": "one directly I'd be like yeah that does"
+    },
+    {
+      "start": 180.42,
+      "end": 184.5,
+      "duration": 4.08,
+      "text": "make sense right because that's the"
+    },
+    {
+      "start": 182.34,
+      "end": 186.24,
+      "duration": 3.9,
+      "text": "straight away path zero to one if there"
+    },
+    {
+      "start": 184.5,
+      "end": 189.18,
+      "duration": 4.68,
+      "text": "is an edge I go via that that's one of"
+    },
+    {
+      "start": 186.24,
+      "end": 191.88,
+      "duration": 5.64,
+      "text": "the ways but if I ask you go via every"
+    },
+    {
+      "start": 189.18,
+      "end": 195.48,
+      "duration": 6.3,
+      "text": "vertex then you can be like okay"
+    },
+    {
+      "start": 191.88,
+      "end": 198.78,
+      "duration": 6.9,
+      "text": "I can probably go back to so which will"
+    },
+    {
+      "start": 195.48,
+      "end": 200.28,
+      "duration": 4.8,
+      "text": "mean I will go to two and then from 2"
+    },
+    {
+      "start": 198.78,
+      "end": 203.04,
+      "duration": 4.26,
+      "text": "I'll go to one"
+    },
+    {
+      "start": 200.28,
+      "end": 204.72,
+      "duration": 4.44,
+      "text": "does that make sense yes and if I go"
+    },
+    {
+      "start": 203.04,
+      "end": 206.4,
+      "duration": 3.36,
+      "text": "from zero to two it's gonna cost me two"
+    },
+    {
+      "start": 204.72,
+      "end": 208.32,
+      "duration": 3.6,
+      "text": "and from two to one it's gonna cost me"
+    },
+    {
+      "start": 206.4,
+      "end": 210.6,
+      "duration": 4.2,
+      "text": "three which will give me a total cost of"
+    },
+    {
+      "start": 208.32,
+      "end": 213.24,
+      "duration": 4.92,
+      "text": "five which is nothing but this"
+    },
+    {
+      "start": 210.6,
+      "end": 216.84,
+      "duration": 6.24,
+      "text": "particular path that is if I go via 2"
+    },
+    {
+      "start": 213.24,
+      "end": 219.0,
+      "duration": 5.76,
+      "text": "that is if I go via 2 can I go via 3 I"
+    },
+    {
+      "start": 216.84,
+      "end": 221.28,
+      "duration": 4.44,
+      "text": "can so that will be something like I'll"
+    },
+    {
+      "start": 219.0,
+      "end": 223.74,
+      "duration": 4.74,
+      "text": "go from 0 to 3"
+    },
+    {
+      "start": 221.28,
+      "end": 226.44,
+      "duration": 5.16,
+      "text": "and then I'll go from three to one"
+    },
+    {
+      "start": 223.74,
+      "end": 227.82,
+      "duration": 4.08,
+      "text": "correct so if I go from 0 to 3 that's"
+    },
+    {
+      "start": 226.44,
+      "end": 229.86,
+      "duration": 3.42,
+      "text": "going to cost me"
+    },
+    {
+      "start": 227.82,
+      "end": 232.92,
+      "duration": 5.1,
+      "text": "four from three to one that's gonna cost"
+    },
+    {
+      "start": 229.86,
+      "end": 237.02,
+      "duration": 7.16,
+      "text": "me one which will be a total cost of 5"
+    },
+    {
+      "start": 232.92,
+      "end": 240.42,
+      "duration": 7.5,
+      "text": "again can I go via 4. I can go via fold"
+    },
+    {
+      "start": 237.02,
+      "end": 243.0,
+      "duration": 5.98,
+      "text": "so if I go via 4 let's let me write that"
+    },
+    {
+      "start": 240.42,
+      "end": 247.56,
+      "duration": 7.14,
+      "text": "and right if I go y4 it'll be zero to"
+    },
+    {
+      "start": 243.0,
+      "end": 250.26,
+      "duration": 7.26,
+      "text": "four and four to one right but 0 to 4 if"
+    },
+    {
+      "start": 247.56,
+      "end": 252.3,
+      "duration": 4.74,
+      "text": "you see it's not direct path it's a path"
+    },
+    {
+      "start": 250.26,
+      "end": 254.88,
+      "duration": 4.62,
+      "text": "wire too probably someone would have"
+    },
+    {
+      "start": 252.3,
+      "end": 257.4,
+      "duration": 5.1,
+      "text": "computed assume as of now someone has"
+    },
+    {
+      "start": 254.88,
+      "end": 259.74,
+      "duration": 4.86,
+      "text": "computed that and given you from 0 to 4"
+    },
+    {
+      "start": 257.4,
+      "end": 262.62,
+      "duration": 5.22,
+      "text": "it's a three okay so I'll be like okay"
+    },
+    {
+      "start": 259.74,
+      "end": 265.92,
+      "duration": 6.18,
+      "text": "three and four to one it's a one so a"
+    },
+    {
+      "start": 262.62,
+      "end": 269.94,
+      "duration": 7.32,
+      "text": "total of four so apparently we notice"
+    },
+    {
+      "start": 265.92,
+      "end": 273.66,
+      "duration": 7.74,
+      "text": "that from 0 to 4 and 4 to 1 it's taking"
+    },
+    {
+      "start": 269.94,
+      "end": 276.3,
+      "duration": 6.36,
+      "text": "me a cost of 4 which is indeed the"
+    },
+    {
+      "start": 273.66,
+      "end": 279.24,
+      "duration": 5.58,
+      "text": "shortest one so what I did was in order"
+    },
+    {
+      "start": 276.3,
+      "end": 281.88,
+      "duration": 5.58,
+      "text": "to go from zero to one I tried out every"
+    },
+    {
+      "start": 279.24,
+      "end": 285.3,
+      "duration": 6.06,
+      "text": "different vertex can be two can be three"
+    },
+    {
+      "start": 281.88,
+      "end": 288.6,
+      "duration": 6.72,
+      "text": "can be four and apparently I took the"
+    },
+    {
+      "start": 285.3,
+      "end": 291.78,
+      "duration": 6.48,
+      "text": "minimal path and this is what it is so"
+    },
+    {
+      "start": 288.6,
+      "end": 294.24,
+      "duration": 5.64,
+      "text": "the logic is very simple assume all the"
+    },
+    {
+      "start": 291.78,
+      "end": 296.52,
+      "duration": 4.74,
+      "text": "vertex are from like the vertexes are"
+    },
+    {
+      "start": 294.24,
+      "end": 298.92,
+      "duration": 4.68,
+      "text": "definitely from 0 to n minus one so I"
+    },
+    {
+      "start": 296.52,
+      "end": 301.86,
+      "duration": 5.34,
+      "text": "can say all the vertex so if I'm trying"
+    },
+    {
+      "start": 298.92,
+      "end": 306.0,
+      "duration": 7.08,
+      "text": "to look can I say if some submit on the"
+    },
+    {
+      "start": 301.86,
+      "end": 307.8,
+      "duration": 5.94,
+      "text": "line if this is I and this is J and can"
+    },
+    {
+      "start": 306.0,
+      "end": 309.72,
+      "duration": 3.72,
+      "text": "I say this is nothing but I go from"
+    },
+    {
+      "start": 307.8,
+      "end": 312.54,
+      "duration": 4.74,
+      "text": "straight I to J"
+    },
+    {
+      "start": 309.72,
+      "end": 316.04,
+      "duration": 6.32,
+      "text": "which is nothing but the edge itself and"
+    },
+    {
+      "start": 312.54,
+      "end": 320.28,
+      "duration": 7.74,
+      "text": "can I say this this this"
+    },
+    {
+      "start": 316.04,
+      "end": 323.64,
+      "duration": 7.6,
+      "text": "to be K assume so can I write the path"
+    },
+    {
+      "start": 320.28,
+      "end": 326.94,
+      "duration": 6.66,
+      "text": "to be minimum of if you try out all the"
+    },
+    {
+      "start": 323.64,
+      "end": 331.14,
+      "duration": 7.5,
+      "text": "keys it'll be from I to K very obvious"
+    },
+    {
+      "start": 326.94,
+      "end": 334.26,
+      "duration": 7.32,
+      "text": "because you go from 0 to 2 and then from"
+    },
+    {
+      "start": 331.14,
+      "end": 339.48,
+      "duration": 8.34,
+      "text": "2 to this which is nothing but the J"
+    },
+    {
+      "start": 334.26,
+      "end": 340.8,
+      "duration": 6.54,
+      "text": "correct so can I write this plus J of K"
+    },
+    {
+      "start": 339.48,
+      "end": 343.38,
+      "duration": 3.9,
+      "text": "I can"
+    },
+    {
+      "start": 340.8,
+      "end": 346.14,
+      "duration": 5.34,
+      "text": "that's what the path is from I to K I'll"
+    },
+    {
+      "start": 343.38,
+      "end": 348.18,
+      "duration": 4.8,
+      "text": "go and from G to K is what I have to go"
+    },
+    {
+      "start": 346.14,
+      "end": 351.84,
+      "duration": 5.7,
+      "text": "and if I take minimum of all of them"
+    },
+    {
+      "start": 348.18,
+      "end": 354.06,
+      "duration": 5.88,
+      "text": "five five four minimum of all of the go"
+    },
+    {
+      "start": 351.84,
+      "end": 356.04,
+      "duration": 4.2,
+      "text": "through vertex then answer"
+    },
+    {
+      "start": 354.06,
+      "end": 358.2,
+      "duration": 4.14,
+      "text": "I'll have the answer so somewhere down"
+    },
+    {
+      "start": 356.04,
+      "end": 360.72,
+      "duration": 4.68,
+      "text": "the lineup undisturbed but I need to"
+    },
+    {
+      "start": 358.2,
+      "end": 362.76,
+      "duration": 4.56,
+      "text": "implement this on a wider scale what do"
+    },
+    {
+      "start": 360.72,
+      "end": 365.34,
+      "duration": 4.62,
+      "text": "I mean by a wider scale because over"
+    },
+    {
+      "start": 362.76,
+      "end": 367.98,
+      "duration": 5.22,
+      "text": "here 0 to 4 was not a direct Edge"
+    },
+    {
+      "start": 365.34,
+      "end": 371.4,
+      "duration": 6.06,
+      "text": "because 0 to 4 meant it went"
+    },
+    {
+      "start": 367.98,
+      "end": 373.56,
+      "duration": 5.58,
+      "text": "wire two so it was going wire too so"
+    },
+    {
+      "start": 371.4,
+      "end": 376.44,
+      "duration": 5.04,
+      "text": "somewhere down the line in the past"
+    },
+    {
+      "start": 373.56,
+      "end": 380.46,
+      "duration": 6.9,
+      "text": "someone would have also computed 0 to 4"
+    },
+    {
+      "start": 376.44,
+      "end": 383.28,
+      "duration": 6.84,
+      "text": "and they would have implemented wire two"
+    },
+    {
+      "start": 380.46,
+      "end": 384.42,
+      "duration": 3.96,
+      "text": "wire to understand so 0 to 4 would have"
+    },
+    {
+      "start": 383.28,
+      "end": 386.46,
+      "duration": 3.18,
+      "text": "been"
+    },
+    {
+      "start": 384.42,
+      "end": 388.02,
+      "duration": 3.6,
+      "text": "computer and stored so this is where you"
+    },
+    {
+      "start": 386.46,
+      "end": 389.94,
+      "duration": 3.48,
+      "text": "get an idea okay something like a"
+    },
+    {
+      "start": 388.02,
+      "end": 391.74,
+      "duration": 3.72,
+      "text": "dynamic programming because we're using"
+    },
+    {
+      "start": 389.94,
+      "end": 394.08,
+      "duration": 4.14,
+      "text": "something which has already been"
+    },
+    {
+      "start": 391.74,
+      "end": 397.2,
+      "duration": 5.46,
+      "text": "computed so you get an idea that okay"
+    },
+    {
+      "start": 394.08,
+      "end": 398.88,
+      "duration": 4.8,
+      "text": "this is a dynamic programming solution"
+    },
+    {
+      "start": 397.2,
+      "end": 400.44,
+      "duration": 3.24,
+      "text": "it's not necessary that you know dynamic"
+    },
+    {
+      "start": 398.88,
+      "end": 402.54,
+      "duration": 3.66,
+      "text": "programming I'm just saying try to"
+    },
+    {
+      "start": 400.44,
+      "end": 405.0,
+      "duration": 4.56,
+      "text": "relate we are using something which is"
+    },
+    {
+      "start": 402.54,
+      "end": 407.0,
+      "duration": 4.46,
+      "text": "pre-computed if I write it properly I"
+    },
+    {
+      "start": 405.0,
+      "end": 410.76,
+      "duration": 5.76,
+      "text": "can write something which is"
+    },
+    {
+      "start": 407.0,
+      "end": 414.54,
+      "duration": 7.54,
+      "text": "pre-computed which was in this case this"
+    },
+    {
+      "start": 410.76,
+      "end": 416.46,
+      "duration": 5.7,
+      "text": "one because 0 to 4 was pre-computed you"
+    },
+    {
+      "start": 414.54,
+      "end": 418.56,
+      "duration": 4.02,
+      "text": "did not compute at the point someone"
+    },
+    {
+      "start": 416.46,
+      "end": 421.8,
+      "duration": 5.34,
+      "text": "already knew what was the value to go"
+    },
+    {
+      "start": 418.56,
+      "end": 424.26,
+      "duration": 5.7,
+      "text": "from 0 to 4 that is what you need as a"
+    },
+    {
+      "start": 421.8,
+      "end": 426.54,
+      "duration": 4.74,
+      "text": "precompetation so you pretty much got"
+    },
+    {
+      "start": 424.26,
+      "end": 430.02,
+      "duration": 5.76,
+      "text": "the formula now what I'll do is I'll try"
+    },
+    {
+      "start": 426.54,
+      "end": 432.24,
+      "duration": 5.7,
+      "text": "to give you a sense of the graph and"
+    },
+    {
+      "start": 430.02,
+      "end": 434.34,
+      "duration": 4.32,
+      "text": "then slowly and slowly step by step"
+    },
+    {
+      "start": 432.24,
+      "end": 435.96,
+      "duration": 3.72,
+      "text": "implement this algorithm so that you"
+    },
+    {
+      "start": 434.34,
+      "end": 438.66,
+      "duration": 4.32,
+      "text": "understand how is this algorithm"
+    },
+    {
+      "start": 435.96,
+      "end": 441.24,
+      "duration": 5.28,
+      "text": "implemented till now in all the problems"
+    },
+    {
+      "start": 438.66,
+      "end": 443.1,
+      "duration": 4.44,
+      "text": "we have been using the adjacency list in"
+    },
+    {
+      "start": 441.24,
+      "end": 444.54,
+      "duration": 3.3,
+      "text": "order to store the graph but in the"
+    },
+    {
+      "start": 443.1,
+      "end": 446.16,
+      "duration": 3.06,
+      "text": "lecture too I've also taught you one"
+    },
+    {
+      "start": 444.54,
+      "end": 448.62,
+      "duration": 4.08,
+      "text": "more method which is the adjacency"
+    },
+    {
+      "start": 446.16,
+      "end": 450.84,
+      "duration": 4.68,
+      "text": "Matrix method so I'm going to use the"
+    },
+    {
+      "start": 448.62,
+      "end": 453.12,
+      "duration": 4.5,
+      "text": "adjacency Matrix method in order to"
+    },
+    {
+      "start": 450.84,
+      "end": 455.16,
+      "duration": 4.32,
+      "text": "store this particular graph okay it's"
+    },
+    {
+      "start": 453.12,
+      "end": 456.9,
+      "duration": 3.78,
+      "text": "very simple in case you haven't seen the"
+    },
+    {
+      "start": 455.16,
+      "end": 459.54,
+      "duration": 4.38,
+      "text": "lecture too it's very very simple so"
+    },
+    {
+      "start": 456.9,
+      "end": 462.54,
+      "duration": 5.64,
+      "text": "something we know for sure is if 0 is"
+    },
+    {
+      "start": 459.54,
+      "end": 465.06,
+      "duration": 5.52,
+      "text": "the node and I want to go to 0 itself"
+    },
+    {
+      "start": 462.54,
+      "end": 467.04,
+      "duration": 4.5,
+      "text": "the cost will be zero"
+    },
+    {
+      "start": 465.06,
+      "end": 470.4,
+      "duration": 5.34,
+      "text": "if I want to go from 1 to 1 the cost"
+    },
+    {
+      "start": 467.04,
+      "end": 474.0,
+      "duration": 6.96,
+      "text": "will be still zero so From Any Given"
+    },
+    {
+      "start": 470.4,
+      "end": 475.92,
+      "duration": 5.52,
+      "text": "node to the node itself the cost is"
+    },
+    {
+      "start": 474.0,
+      "end": 477.72,
+      "duration": 3.72,
+      "text": "going to be 0 no matter what you do"
+    },
+    {
+      "start": 475.92,
+      "end": 480.84,
+      "duration": 4.92,
+      "text": "because you're already standing in the"
+    },
+    {
+      "start": 477.72,
+      "end": 483.6,
+      "duration": 5.88,
+      "text": "note something I know 0 0 so this"
+    },
+    {
+      "start": 480.84,
+      "end": 487.26,
+      "duration": 6.42,
+      "text": "portion will be storing the cost so I"
+    },
+    {
+      "start": 483.6,
+      "end": 490.14,
+      "duration": 6.54,
+      "text": "can call this as a cost Matrix so 0 to 0"
+    },
+    {
+      "start": 487.26,
+      "end": 492.12,
+      "duration": 4.86,
+      "text": "will be 0 1 to 1 will be zero two to two"
+    },
+    {
+      "start": 490.14,
+      "end": 494.7,
+      "duration": 4.56,
+      "text": "will be 0 3 to 3 will be zero so"
+    },
+    {
+      "start": 492.12,
+      "end": 498.36,
+      "duration": 6.24,
+      "text": "basically I am saying this is 0 0"
+    },
+    {
+      "start": 494.7,
+      "end": 501.9,
+      "duration": 7.2,
+      "text": "0 this is one one zero this is 2 2 0"
+    },
+    {
+      "start": 498.36,
+      "end": 504.12,
+      "duration": 5.76,
+      "text": "this is 3 3 which is again 0 pretty much"
+    },
+    {
+      "start": 501.9,
+      "end": 508.56,
+      "duration": 6.66,
+      "text": "understood right now what are the other"
+    },
+    {
+      "start": 504.12,
+      "end": 510.96,
+      "duration": 6.84,
+      "text": "it says 0 to 1 is 2. so go to 0 to 1 and"
+    },
+    {
+      "start": 508.56,
+      "end": 514.02,
+      "duration": 5.46,
+      "text": "store two go to zero go to one and store"
+    },
+    {
+      "start": 510.96,
+      "end": 515.76,
+      "duration": 4.8,
+      "text": "two it says one two zero is one so you"
+    },
+    {
+      "start": 514.02,
+      "end": 519.6,
+      "duration": 5.58,
+      "text": "go to one you go to zero and you store"
+    },
+    {
+      "start": 515.76,
+      "end": 521.76,
+      "duration": 6.0,
+      "text": "one okay it says three to zero is three"
+    },
+    {
+      "start": 519.6,
+      "end": 524.34,
+      "duration": 4.74,
+      "text": "so go to three go to zero and store"
+    },
+    {
+      "start": 521.76,
+      "end": 526.8,
+      "duration": 5.04,
+      "text": "three do not store the opposite vertex"
+    },
+    {
+      "start": 524.34,
+      "end": 529.14,
+      "duration": 4.8,
+      "text": "because it's a directed graph it is a"
+    },
+    {
+      "start": 526.8,
+      "end": 531.12,
+      "duration": 4.32,
+      "text": "directed graph if it's an undirected"
+    },
+    {
+      "start": 529.14,
+      "end": 533.64,
+      "duration": 4.5,
+      "text": "graph for an example if it's an"
+    },
+    {
+      "start": 531.12,
+      "end": 537.24,
+      "duration": 6.12,
+      "text": "undirected graph and you wanna imply and"
+    },
+    {
+      "start": 533.64,
+      "end": 540.72,
+      "duration": 7.08,
+      "text": "you wanna uh apply this fluid motion"
+    },
+    {
+      "start": 537.24,
+      "end": 545.22,
+      "duration": 7.98,
+      "text": "just split this into something like this"
+    },
+    {
+      "start": 540.72,
+      "end": 547.74,
+      "duration": 7.02,
+      "text": "five five as you see our dual Direction"
+    },
+    {
+      "start": 545.22,
+      "end": 549.3,
+      "duration": 4.08,
+      "text": "Edge but with different values in"
+    },
+    {
+      "start": 547.74,
+      "end": 551.64,
+      "duration": 3.9,
+      "text": "undirected just make sure you assign"
+    },
+    {
+      "start": 549.3,
+      "end": 553.98,
+      "duration": 4.68,
+      "text": "them same values now remember you just"
+    },
+    {
+      "start": 551.64,
+      "end": 558.24,
+      "duration": 6.6,
+      "text": "store three zero S3 because there is no"
+    },
+    {
+      "start": 553.98,
+      "end": 560.88,
+      "duration": 6.9,
+      "text": "zero three okay nice next is three one"
+    },
+    {
+      "start": 558.24,
+      "end": 565.44,
+      "duration": 7.2,
+      "text": "as five so go to three and one and"
+    },
+    {
+      "start": 560.88,
+      "end": 567.84,
+      "duration": 6.96,
+      "text": "assign five next is one two as three go"
+    },
+    {
+      "start": 565.44,
+      "end": 570.96,
+      "duration": 5.52,
+      "text": "to one and two and assign as three"
+    },
+    {
+      "start": 567.84,
+      "end": 572.88,
+      "duration": 5.04,
+      "text": "perfect one two one two assigned as"
+    },
+    {
+      "start": 570.96,
+      "end": 575.28,
+      "duration": 4.32,
+      "text": "three do you have any other thing one"
+    },
+    {
+      "start": 572.88,
+      "end": 577.02,
+      "duration": 4.14,
+      "text": "two three four five one two three four"
+    },
+    {
+      "start": 575.28,
+      "end": 579.72,
+      "duration": 4.44,
+      "text": "five okay we have three to two as four"
+    },
+    {
+      "start": 577.02,
+      "end": 582.54,
+      "duration": 5.52,
+      "text": "three two two as four done so what I've"
+    },
+    {
+      "start": 579.72,
+      "end": 586.16,
+      "duration": 6.44,
+      "text": "done is I've assigned the cost make sure"
+    },
+    {
+      "start": 582.54,
+      "end": 588.98,
+      "duration": 6.44,
+      "text": "everyone else is infinity which means"
+    },
+    {
+      "start": 586.16,
+      "end": 591.42,
+      "duration": 5.26,
+      "text": "unreachable as of now which means"
+    },
+    {
+      "start": 588.98,
+      "end": 593.88,
+      "duration": 4.9,
+      "text": "unreachable as of now so this is the"
+    },
+    {
+      "start": 591.42,
+      "end": 597.0,
+      "duration": 5.58,
+      "text": "initial cost Matrix which you can always"
+    },
+    {
+      "start": 593.88,
+      "end": 600.3,
+      "duration": 6.42,
+      "text": "derive from the given graph now you must"
+    },
+    {
+      "start": 597.0,
+      "end": 603.06,
+      "duration": 6.06,
+      "text": "be thinking but striver this is a DG a"
+    },
+    {
+      "start": 600.3,
+      "end": 605.04,
+      "duration": 4.74,
+      "text": "directed graph what if it's a ug how"
+    },
+    {
+      "start": 603.06,
+      "end": 605.88,
+      "duration": 2.82,
+      "text": "will we implement the Floyd ocean very"
+    },
+    {
+      "start": 605.04,
+      "end": 608.4,
+      "duration": 3.36,
+      "text": "simple"
+    },
+    {
+      "start": 605.88,
+      "end": 612.3,
+      "duration": 6.42,
+      "text": "if there is an edge like this it has a"
+    },
+    {
+      "start": 608.4,
+      "end": 614.28,
+      "duration": 5.88,
+      "text": "cost of 5 you say okay five this way"
+    },
+    {
+      "start": 612.3,
+      "end": 615.42,
+      "duration": 3.12,
+      "text": "right this way so this is how you"
+    },
+    {
+      "start": 614.28,
+      "end": 618.84,
+      "duration": 4.56,
+      "text": "convert a"
+    },
+    {
+      "start": 615.42,
+      "end": 620.94,
+      "duration": 5.52,
+      "text": "ug to a DG make dual Direction Edge"
+    },
+    {
+      "start": 618.84,
+      "end": 622.92,
+      "duration": 4.08,
+      "text": "similar to something like this if you"
+    },
+    {
+      "start": 620.94,
+      "end": 627.54,
+      "duration": 6.6,
+      "text": "see over here there's a dual Direction"
+    },
+    {
+      "start": 622.92,
+      "end": 629.7,
+      "duration": 6.78,
+      "text": "Edge but with different weights okay so"
+    },
+    {
+      "start": 627.54,
+      "end": 632.52,
+      "duration": 4.98,
+      "text": "if we have to apply flood version in an"
+    },
+    {
+      "start": 629.7,
+      "end": 637.02,
+      "duration": 7.32,
+      "text": "undirected graph just split that edge"
+    },
+    {
+      "start": 632.52,
+      "end": 640.32,
+      "duration": 7.8,
+      "text": "into two edges of same weights that's"
+    },
+    {
+      "start": 637.02,
+      "end": 642.84,
+      "duration": 5.82,
+      "text": "how you can easily convert a ug to a"
+    },
+    {
+      "start": 640.32,
+      "end": 646.52,
+      "duration": 6.2,
+      "text": "directed graph so this is the initial"
+    },
+    {
+      "start": 642.84,
+      "end": 651.86,
+      "duration": 9.02,
+      "text": "cost now what did I say let's as of now"
+    },
+    {
+      "start": 646.52,
+      "end": 655.56,
+      "duration": 9.04,
+      "text": "assume that I'm gonna move via vertex"
+    },
+    {
+      "start": 651.86,
+      "end": 659.1,
+      "duration": 7.24,
+      "text": "zero that's my first thing I'll move via"
+    },
+    {
+      "start": 655.56,
+      "end": 660.72,
+      "duration": 5.16,
+      "text": "vertex 0. so if I move my vertex 0 I"
+    },
+    {
+      "start": 659.1,
+      "end": 663.06,
+      "duration": 3.96,
+      "text": "will have some upgraded distance"
+    },
+    {
+      "start": 660.72,
+      "end": 665.22,
+      "duration": 4.5,
+      "text": "something for sure so let's start off"
+    },
+    {
+      "start": 663.06,
+      "end": 668.58,
+      "duration": 5.52,
+      "text": "with vertex 0 and see what will be the"
+    },
+    {
+      "start": 665.22,
+      "end": 670.56,
+      "duration": 5.34,
+      "text": "resultant Matrix that we will get now"
+    },
+    {
+      "start": 668.58,
+      "end": 674.88,
+      "duration": 6.3,
+      "text": "what I'm saying you have to move via the"
+    },
+    {
+      "start": 670.56,
+      "end": 680.34,
+      "duration": 9.78,
+      "text": "root zero so can I say at first this is"
+    },
+    {
+      "start": 674.88,
+      "end": 682.92,
+      "duration": 8.04,
+      "text": "0 to 0 stored as 0 next is 0 to 1 so"
+    },
+    {
+      "start": 680.34,
+      "end": 687.9,
+      "duration": 7.56,
+      "text": "which means you're moving via root zero"
+    },
+    {
+      "start": 682.92,
+      "end": 690.78,
+      "duration": 7.86,
+      "text": "which is 0 to 0 plus 0 to 1 can I say"
+    },
+    {
+      "start": 687.9,
+      "end": 693.84,
+      "duration": 5.94,
+      "text": "it's similar to saying 0 to 1 because 0"
+    },
+    {
+      "start": 690.78,
+      "end": 695.64,
+      "duration": 4.86,
+      "text": "to 0 will always be 0 and 0 to 1 is what"
+    },
+    {
+      "start": 693.84,
+      "end": 700.2,
+      "duration": 6.36,
+      "text": "we have already stored two so you can"
+    },
+    {
+      "start": 695.64,
+      "end": 703.14,
+      "duration": 7.5,
+      "text": "just copy paste two next is 0 to 2 can I"
+    },
+    {
+      "start": 700.2,
+      "end": 706.5,
+      "duration": 6.3,
+      "text": "say it's similar 0 to 2 is nothing but"
+    },
+    {
+      "start": 703.14,
+      "end": 709.32,
+      "duration": 6.18,
+      "text": "saying 0 to Via Zero by the way why is"
+    },
+    {
+      "start": 706.5,
+      "end": 713.76,
+      "duration": 7.26,
+      "text": "remains 0 to 0 which is again 0 plus 0"
+    },
+    {
+      "start": 709.32,
+      "end": 715.8,
+      "duration": 6.48,
+      "text": "to 2 which is nothing but Infinity so"
+    },
+    {
+      "start": 713.76,
+      "end": 720.06,
+      "duration": 6.3,
+      "text": "similarly this will also be Infinity by"
+    },
+    {
+      "start": 715.8,
+      "end": 722.34,
+      "duration": 6.54,
+      "text": "0 to 3 will mean 0 to 0 and 0 to 3."
+    },
+    {
+      "start": 720.06,
+      "end": 724.74,
+      "duration": 4.68,
+      "text": "similarly this will mean 1 to 0 what"
+    },
+    {
+      "start": 722.34,
+      "end": 727.8,
+      "duration": 5.46,
+      "text": "does 1 to 0 mean"
+    },
+    {
+      "start": 724.74,
+      "end": 730.5,
+      "duration": 5.76,
+      "text": "1 to 0 means why are zero means 1 to 0"
+    },
+    {
+      "start": 727.8,
+      "end": 733.02,
+      "duration": 5.22,
+      "text": "itself and then 0 to 0."
+    },
+    {
+      "start": 730.5,
+      "end": 735.6,
+      "duration": 5.1,
+      "text": "y 0 means that only right Pi zero means"
+    },
+    {
+      "start": 733.02,
+      "end": 738.48,
+      "duration": 5.46,
+      "text": "that because this is I this is J you're"
+    },
+    {
+      "start": 735.6,
+      "end": 740.46,
+      "duration": 4.86,
+      "text": "moving via zero so can I say this one"
+    },
+    {
+      "start": 738.48,
+      "end": 743.28,
+      "duration": 4.8,
+      "text": "this one this one will just copy paste"
+    },
+    {
+      "start": 740.46,
+      "end": 746.82,
+      "duration": 6.36,
+      "text": "these values just go across copy paste"
+    },
+    {
+      "start": 743.28,
+      "end": 748.74,
+      "duration": 5.46,
+      "text": "these values why because very simple if"
+    },
+    {
+      "start": 746.82,
+      "end": 750.6,
+      "duration": 3.78,
+      "text": "your destination is 0 you can't move via"
+    },
+    {
+      "start": 748.74,
+      "end": 752.58,
+      "duration": 3.84,
+      "text": "zero so whatever you're taking in order"
+    },
+    {
+      "start": 750.6,
+      "end": 755.04,
+      "duration": 4.44,
+      "text": "to reach 0 that is what you copy paste"
+    },
+    {
+      "start": 752.58,
+      "end": 757.86,
+      "duration": 5.28,
+      "text": "what about these places let's fill them"
+    },
+    {
+      "start": 755.04,
+      "end": 761.46,
+      "duration": 6.42,
+      "text": "up so I'm saying this place is one to"
+    },
+    {
+      "start": 757.86,
+      "end": 765.9,
+      "duration": 8.04,
+      "text": "two so I'm saying one to two via zero"
+    },
+    {
+      "start": 761.46,
+      "end": 768.42,
+      "duration": 6.96,
+      "text": "which means one two zero plus zero to"
+    },
+    {
+      "start": 765.9,
+      "end": 771.84,
+      "duration": 5.94,
+      "text": "two let's see the value of one to zero"
+    },
+    {
+      "start": 768.42,
+      "end": 777.12,
+      "duration": 8.7,
+      "text": "one to zero is one so I'll just write 1"
+    },
+    {
+      "start": 771.84,
+      "end": 779.28,
+      "duration": 7.44,
+      "text": "plus 0 to 2 plus 0 to 2 is infinity so"
+    },
+    {
+      "start": 777.12,
+      "end": 781.56,
+      "duration": 4.44,
+      "text": "that means it's an Infinity which I do"
+    },
+    {
+      "start": 779.28,
+      "end": 783.36,
+      "duration": 4.08,
+      "text": "not need to write so what I'll do is I"
+    },
+    {
+      "start": 781.56,
+      "end": 784.32,
+      "duration": 2.76,
+      "text": "will keep it as of now and whatever is"
+    },
+    {
+      "start": 783.36,
+      "end": 786.72,
+      "duration": 3.36,
+      "text": "the value"
+    },
+    {
+      "start": 784.32,
+      "end": 788.94,
+      "duration": 4.62,
+      "text": "because I know in order to reach one to"
+    },
+    {
+      "start": 786.72,
+      "end": 791.22,
+      "duration": 4.5,
+      "text": "two I'm taking three and if I go via"
+    },
+    {
+      "start": 788.94,
+      "end": 793.32,
+      "duration": 4.38,
+      "text": "zero I'm taking Infinity so 3 is a"
+    },
+    {
+      "start": 791.22,
+      "end": 795.66,
+      "duration": 4.44,
+      "text": "better option so let's keep three"
+    },
+    {
+      "start": 793.32,
+      "end": 798.54,
+      "duration": 5.22,
+      "text": "no offense let's keep three next one I"
+    },
+    {
+      "start": 795.66,
+      "end": 801.36,
+      "duration": 5.7,
+      "text": "see is one two three you see next one is"
+    },
+    {
+      "start": 798.54,
+      "end": 805.02,
+      "duration": 6.48,
+      "text": "one two three okay so for one two three"
+    },
+    {
+      "start": 801.36,
+      "end": 806.7,
+      "duration": 5.34,
+      "text": "it will be I'll go from one sorry I'll"
+    },
+    {
+      "start": 805.02,
+      "end": 811.56,
+      "duration": 6.54,
+      "text": "go from one"
+    },
+    {
+      "start": 806.7,
+      "end": 813.78,
+      "duration": 7.08,
+      "text": "to zero plus zero to three now what is"
+    },
+    {
+      "start": 811.56,
+      "end": 817.38,
+      "duration": 5.82,
+      "text": "one to zero that's one let's see if what"
+    },
+    {
+      "start": 813.78,
+      "end": 819.78,
+      "duration": 6.0,
+      "text": "is 0 to 3 so 0 to 3 is again Infinity"
+    },
+    {
+      "start": 817.38,
+      "end": 822.42,
+      "duration": 5.04,
+      "text": "so if you go via zero you'll again get"
+    },
+    {
+      "start": 819.78,
+      "end": 824.16,
+      "duration": 4.38,
+      "text": "infinity and for one two three are we"
+    },
+    {
+      "start": 822.42,
+      "end": 826.2,
+      "duration": 3.78,
+      "text": "reachable in one two three no infinitely"
+    },
+    {
+      "start": 824.16,
+      "end": 828.06,
+      "duration": 3.9,
+      "text": "so let's copy paste Infinity so"
+    },
+    {
+      "start": 826.2,
+      "end": 829.62,
+      "duration": 3.42,
+      "text": "similarly I can say this is done"
+    },
+    {
+      "start": 828.06,
+      "end": 831.06,
+      "duration": 3.0,
+      "text": "similarly what I'll do is I'll figure"
+    },
+    {
+      "start": 829.62,
+      "end": 833.16,
+      "duration": 3.54,
+      "text": "out the next guys"
+    },
+    {
+      "start": 831.06,
+      "end": 834.6,
+      "duration": 3.54,
+      "text": "which is this which is nothing but two"
+    },
+    {
+      "start": 833.16,
+      "end": 836.94,
+      "duration": 3.78,
+      "text": "to one"
+    },
+    {
+      "start": 834.6,
+      "end": 839.76,
+      "duration": 5.16,
+      "text": "now two to one wires you let's see I'll"
+    },
+    {
+      "start": 836.94,
+      "end": 843.36,
+      "duration": 6.42,
+      "text": "go from 2 to 0 how much is it two to"
+    },
+    {
+      "start": 839.76,
+      "end": 846.3,
+      "duration": 6.54,
+      "text": "zero is infinity so the path will not be"
+    },
+    {
+      "start": 843.36,
+      "end": 850.08,
+      "duration": 6.72,
+      "text": "considered next I'll do two to two"
+    },
+    {
+      "start": 846.3,
+      "end": 852.06,
+      "duration": 5.76,
+      "text": "so if I go again to do 0 it is again"
+    },
+    {
+      "start": 850.08,
+      "end": 855.36,
+      "duration": 5.28,
+      "text": "Infinity not to be considered next I'll"
+    },
+    {
+      "start": 852.06,
+      "end": 857.52,
+      "duration": 5.46,
+      "text": "go 2 to 3 which will be y as 0 which is"
+    },
+    {
+      "start": 855.36,
+      "end": 860.04,
+      "duration": 4.68,
+      "text": "again Infinity not to be considered so"
+    },
+    {
+      "start": 857.52,
+      "end": 862.44,
+      "duration": 4.92,
+      "text": "apparently everyone else is infinity in"
+    },
+    {
+      "start": 860.04,
+      "end": 863.7,
+      "duration": 3.66,
+      "text": "this case because it is previously"
+    },
+    {
+      "start": 862.44,
+      "end": 866.82,
+      "duration": 4.38,
+      "text": "Infinity now also I'm getting Infinity"
+    },
+    {
+      "start": 863.7,
+      "end": 869.64,
+      "duration": 5.94,
+      "text": "so infinity infinity prop next let's see"
+    },
+    {
+      "start": 866.82,
+      "end": 871.92,
+      "duration": 5.1,
+      "text": "the next part which is somewhere this"
+    },
+    {
+      "start": 869.64,
+      "end": 873.78,
+      "duration": 4.14,
+      "text": "one this one and this one okay so three"
+    },
+    {
+      "start": 871.92,
+      "end": 877.14,
+      "duration": 5.22,
+      "text": "to one let's see if we can get something"
+    },
+    {
+      "start": 873.78,
+      "end": 879.72,
+      "duration": 5.94,
+      "text": "better three two one what am I saying by"
+    },
+    {
+      "start": 877.14,
+      "end": 882.24,
+      "duration": 5.1,
+      "text": "a zero why are zero let's see if I go"
+    },
+    {
+      "start": 879.72,
+      "end": 884.28,
+      "duration": 4.56,
+      "text": "via zero which is three zero three zero"
+    },
+    {
+      "start": 882.24,
+      "end": 887.4,
+      "duration": 5.16,
+      "text": "is three okay perfect"
+    },
+    {
+      "start": 884.28,
+      "end": 891.0,
+      "duration": 6.72,
+      "text": "plus 0 to"
+    },
+    {
+      "start": 887.4,
+      "end": 892.5,
+      "duration": 5.1,
+      "text": "1 because I have to reach 1 so 0 to 1 0"
+    },
+    {
+      "start": 891.0,
+      "end": 895.2,
+      "duration": 4.2,
+      "text": "to 1 is 2."
+    },
+    {
+      "start": 892.5,
+      "end": 897.66,
+      "duration": 5.16,
+      "text": "so that gives me a total of five which"
+    },
+    {
+      "start": 895.2,
+      "end": 899.34,
+      "duration": 4.14,
+      "text": "is already what I'm taking so nothing"
+    },
+    {
+      "start": 897.66,
+      "end": 900.9,
+      "duration": 3.24,
+      "text": "better which is copy paste the values"
+    },
+    {
+      "start": 899.34,
+      "end": 902.58,
+      "duration": 3.24,
+      "text": "you just copy paste the value so three"
+    },
+    {
+      "start": 900.9,
+      "end": 905.88,
+      "duration": 4.98,
+      "text": "to one is done let's get the next guy"
+    },
+    {
+      "start": 902.58,
+      "end": 909.3,
+      "duration": 6.72,
+      "text": "what is the next guy I'm saying three"
+    },
+    {
+      "start": 905.88,
+      "end": 913.68,
+      "duration": 7.8,
+      "text": "to 2 which means I'll go via 0 which is"
+    },
+    {
+      "start": 909.3,
+      "end": 917.04,
+      "duration": 7.74,
+      "text": "3 0 right plus 0"
+    },
+    {
+      "start": 913.68,
+      "end": 920.28,
+      "duration": 6.6,
+      "text": "2 let's see what's the value of 3 0 3 0"
+    },
+    {
+      "start": 917.04,
+      "end": 922.44,
+      "duration": 5.4,
+      "text": "is 3 what's the value of 0 to 0 2 is"
+    },
+    {
+      "start": 920.28,
+      "end": 925.38,
+      "duration": 5.1,
+      "text": "infinity nothing better so you're"
+    },
+    {
+      "start": 922.44,
+      "end": 928.56,
+      "duration": 6.12,
+      "text": "already reaching 3 2 at 4 till keep 4"
+    },
+    {
+      "start": 925.38,
+      "end": 932.7,
+      "duration": 7.32,
+      "text": "perfect so this is what happens if I try"
+    },
+    {
+      "start": 928.56,
+      "end": 934.5,
+      "duration": 5.94,
+      "text": "to go via zero so Y is 0 by 0 I build"
+    },
+    {
+      "start": 932.7,
+      "end": 937.2,
+      "duration": 4.5,
+      "text": "all the paths all the parts have been"
+    },
+    {
+      "start": 934.5,
+      "end": 939.78,
+      "duration": 5.28,
+      "text": "built let's move to the next one so next"
+    },
+    {
+      "start": 937.2,
+      "end": 944.88,
+      "duration": 7.68,
+      "text": "one I'll see via one"
+    },
+    {
+      "start": 939.78,
+      "end": 947.82,
+      "duration": 8.04,
+      "text": "let's go via one and see what is the new"
+    },
+    {
+      "start": 944.88,
+      "end": 949.92,
+      "duration": 5.04,
+      "text": "because remember wire zero path has been"
+    },
+    {
+      "start": 947.82,
+      "end": 952.02,
+      "duration": 4.2,
+      "text": "built here bar 0 path has been built"
+    },
+    {
+      "start": 949.92,
+      "end": 954.18,
+      "duration": 4.26,
+      "text": "here and I'll figure out the Via One"
+    },
+    {
+      "start": 952.02,
+      "end": 955.98,
+      "duration": 3.96,
+      "text": "path now once I figured out the wire one"
+    },
+    {
+      "start": 954.18,
+      "end": 959.16,
+      "duration": 4.98,
+      "text": "I'll figure it out wire two wire three"
+    },
+    {
+      "start": 955.98,
+      "end": 962.52,
+      "duration": 6.54,
+      "text": "and so on we will get all the answers"
+    },
+    {
+      "start": 959.16,
+      "end": 965.16,
+      "duration": 6.0,
+      "text": "so again we know if even if I go via one"
+    },
+    {
+      "start": 962.52,
+      "end": 969.24,
+      "duration": 6.72,
+      "text": "something I know for sure is these guys"
+    },
+    {
+      "start": 965.16,
+      "end": 971.64,
+      "duration": 6.48,
+      "text": "will be zero node to node and anyone who"
+    },
+    {
+      "start": 969.24,
+      "end": 974.82,
+      "duration": 5.58,
+      "text": "goes one like if the source is one"
+    },
+    {
+      "start": 971.64,
+      "end": 977.16,
+      "duration": 5.52,
+      "text": "like for this guy this entire portion"
+    },
+    {
+      "start": 974.82,
+      "end": 979.44,
+      "duration": 4.62,
+      "text": "will be nothing but this why because if"
+    },
+    {
+      "start": 977.16,
+      "end": 981.3,
+      "duration": 4.14,
+      "text": "you're trying to reach one zero"
+    },
+    {
+      "start": 979.44,
+      "end": 985.14,
+      "duration": 5.7,
+      "text": "it actually means"
+    },
+    {
+      "start": 981.3,
+      "end": 987.36,
+      "duration": 6.06,
+      "text": "one two wire one means one to one plus"
+    },
+    {
+      "start": 985.14,
+      "end": 989.88,
+      "duration": 4.74,
+      "text": "one to zero so you're actually going to"
+    },
+    {
+      "start": 987.36,
+      "end": 993.0,
+      "duration": 5.64,
+      "text": "himself only if you're saying starting"
+    },
+    {
+      "start": 989.88,
+      "end": 994.62,
+      "duration": 4.74,
+      "text": "from one going via one it doesn't make"
+    },
+    {
+      "start": 993.0,
+      "end": 997.56,
+      "duration": 4.56,
+      "text": "sense so you just copy paste whatever is"
+    },
+    {
+      "start": 994.62,
+      "end": 1001.52,
+      "duration": 6.9,
+      "text": "there this is copy paste one zero three"
+    },
+    {
+      "start": 997.56,
+      "end": 1003.86,
+      "duration": 6.3,
+      "text": "and infinity similarly can I say"
+    },
+    {
+      "start": 1001.52,
+      "end": 1006.26,
+      "duration": 4.74,
+      "text": "if this is one the destination"
+    },
+    {
+      "start": 1003.86,
+      "end": 1008.3,
+      "duration": 4.44,
+      "text": "it still doesn't make sense via going"
+    },
+    {
+      "start": 1006.26,
+      "end": 1009.98,
+      "duration": 3.72,
+      "text": "via one and reaching one well that makes"
+    },
+    {
+      "start": 1008.3,
+      "end": 1011.84,
+      "duration": 3.54,
+      "text": "sense going via one and reaching one"
+    },
+    {
+      "start": 1009.98,
+      "end": 1013.4,
+      "duration": 3.42,
+      "text": "well that makes sense no you copy paste"
+    },
+    {
+      "start": 1011.84,
+      "end": 1019.04,
+      "duration": 7.2,
+      "text": "this row as well"
+    },
+    {
+      "start": 1013.4,
+      "end": 1021.2,
+      "duration": 7.8,
+      "text": "2-0 Infinity 5. done copy paste it so"
+    },
+    {
+      "start": 1019.04,
+      "end": 1023.36,
+      "duration": 4.32,
+      "text": "now let's compute this this this this"
+    },
+    {
+      "start": 1021.2,
+      "end": 1025.16,
+      "duration": 3.96,
+      "text": "this and this this five values left out"
+    },
+    {
+      "start": 1023.36,
+      "end": 1027.2,
+      "duration": 3.84,
+      "text": "to be computed let's do it so first one"
+    },
+    {
+      "start": 1025.16,
+      "end": 1030.14,
+      "duration": 4.98,
+      "text": "is zero two"
+    },
+    {
+      "start": 1027.2,
+      "end": 1033.62,
+      "duration": 6.42,
+      "text": "wire one means zero one"
+    },
+    {
+      "start": 1030.14,
+      "end": 1037.28,
+      "duration": 7.14,
+      "text": "plus one two let's compute this so 0 1"
+    },
+    {
+      "start": 1033.62,
+      "end": 1040.64,
+      "duration": 7.02,
+      "text": "means zero sorry we will take this 0 and"
+    },
+    {
+      "start": 1037.28,
+      "end": 1044.54,
+      "duration": 7.26,
+      "text": "this one which is 2 so 0 1 means two"
+    },
+    {
+      "start": 1040.64,
+      "end": 1047.12,
+      "duration": 6.48,
+      "text": "plus one two one two means three you get"
+    },
+    {
+      "start": 1044.54,
+      "end": 1050.06,
+      "duration": 5.52,
+      "text": "a three which makes it five what is the"
+    },
+    {
+      "start": 1047.12,
+      "end": 1052.28,
+      "duration": 5.16,
+      "text": "value already stored Infinity you are"
+    },
+    {
+      "start": 1050.06,
+      "end": 1054.26,
+      "duration": 4.2,
+      "text": "reaching at a better position five okay"
+    },
+    {
+      "start": 1052.28,
+      "end": 1055.88,
+      "duration": 3.6,
+      "text": "wire one you're reaching at five much"
+    },
+    {
+      "start": 1054.26,
+      "end": 1062.9,
+      "duration": 8.64,
+      "text": "better much better"
+    },
+    {
+      "start": 1055.88,
+      "end": 1065.06,
+      "duration": 9.18,
+      "text": "next 0 3 wire 1 means 0 1 is 2 plus 1 3"
+    },
+    {
+      "start": 1062.9,
+      "end": 1067.46,
+      "duration": 4.56,
+      "text": "Let's see the value of 1 3. so if I take"
+    },
+    {
+      "start": 1065.06,
+      "end": 1069.14,
+      "duration": 4.08,
+      "text": "the value of 1 and 3 that's Infinity not"
+    },
+    {
+      "start": 1067.46,
+      "end": 1071.3,
+      "duration": 3.84,
+      "text": "to be considered so whatever is the"
+    },
+    {
+      "start": 1069.14,
+      "end": 1074.3,
+      "duration": 5.16,
+      "text": "value we'll just copy text perfect let's"
+    },
+    {
+      "start": 1071.3,
+      "end": 1076.94,
+      "duration": 5.64,
+      "text": "copy paste the value amazing next let's"
+    },
+    {
+      "start": 1074.3,
+      "end": 1078.62,
+      "duration": 4.32,
+      "text": "erase this let's go to the next row"
+    },
+    {
+      "start": 1076.94,
+      "end": 1081.08,
+      "duration": 4.14,
+      "text": "so if I go to the next row or the next"
+    },
+    {
+      "start": 1078.62,
+      "end": 1083.06,
+      "duration": 4.44,
+      "text": "row it's this one and this one two zero"
+    },
+    {
+      "start": 1081.08,
+      "end": 1085.46,
+      "duration": 4.38,
+      "text": "so if I go over 2 0"
+    },
+    {
+      "start": 1083.06,
+      "end": 1087.5,
+      "duration": 4.44,
+      "text": "that's going via one"
+    },
+    {
+      "start": 1085.46,
+      "end": 1089.9,
+      "duration": 4.44,
+      "text": "which is 2 1 and then going from one to"
+    },
+    {
+      "start": 1087.5,
+      "end": 1093.08,
+      "duration": 5.58,
+      "text": "zero let's see the values of two one"
+    },
+    {
+      "start": 1089.9,
+      "end": 1094.88,
+      "duration": 4.98,
+      "text": "so I go to 1 infinity not to be"
+    },
+    {
+      "start": 1093.08,
+      "end": 1096.92,
+      "duration": 3.84,
+      "text": "considered so whatever is the value just"
+    },
+    {
+      "start": 1094.88,
+      "end": 1099.74,
+      "duration": 4.86,
+      "text": "copy paste still we have went figured"
+    },
+    {
+      "start": 1096.92,
+      "end": 1102.86,
+      "duration": 5.94,
+      "text": "out next is this one which is 2 3. so if"
+    },
+    {
+      "start": 1099.74,
+      "end": 1108.92,
+      "duration": 9.18,
+      "text": "I go y r 2 3 which will be 2"
+    },
+    {
+      "start": 1102.86,
+      "end": 1111.62,
+      "duration": 8.76,
+      "text": "1 plus S Plus nothing but one three what"
+    },
+    {
+      "start": 1108.92,
+      "end": 1114.5,
+      "duration": 5.58,
+      "text": "is 2 1 let's see two one Infinity again"
+    },
+    {
+      "start": 1111.62,
+      "end": 1117.02,
+      "duration": 5.4,
+      "text": "not to be considered next"
+    },
+    {
+      "start": 1114.5,
+      "end": 1120.56,
+      "duration": 6.06,
+      "text": "this is the next one three zero so if we"
+    },
+    {
+      "start": 1117.02,
+      "end": 1125.06,
+      "duration": 8.04,
+      "text": "take three zero that's nothing but three"
+    },
+    {
+      "start": 1120.56,
+      "end": 1126.5,
+      "duration": 5.94,
+      "text": "one plus one zero correct so what's the"
+    },
+    {
+      "start": 1125.06,
+      "end": 1128.24,
+      "duration": 3.18,
+      "text": "value of three one what's the value of"
+    },
+    {
+      "start": 1126.5,
+      "end": 1131.0,
+      "duration": 4.5,
+      "text": "three one guys three one's value is very"
+    },
+    {
+      "start": 1128.24,
+      "end": 1132.5,
+      "duration": 4.26,
+      "text": "simple it's five so let's write five"
+    },
+    {
+      "start": 1131.0,
+      "end": 1135.8,
+      "duration": 4.8,
+      "text": "plus one zero What's the value of one"
+    },
+    {
+      "start": 1132.5,
+      "end": 1137.24,
+      "duration": 4.74,
+      "text": "zero guys one zero is one so plus one"
+    },
+    {
+      "start": 1135.8,
+      "end": 1140.0,
+      "duration": 4.2,
+      "text": "which is six"
+    },
+    {
+      "start": 1137.24,
+      "end": 1143.54,
+      "duration": 6.3,
+      "text": "so as of now what is the value of three"
+    },
+    {
+      "start": 1140.0,
+      "end": 1146.78,
+      "duration": 6.78,
+      "text": "zero it is three I'm already reaching"
+    },
+    {
+      "start": 1143.54,
+      "end": 1150.08,
+      "duration": 6.54,
+      "text": "3 0 out of value three so why will I"
+    },
+    {
+      "start": 1146.78,
+      "end": 1152.24,
+      "duration": 5.46,
+      "text": "take six so I'll keep teaching directly"
+    },
+    {
+      "start": 1150.08,
+      "end": 1153.74,
+      "duration": 3.66,
+      "text": "reaching previously whatever previous"
+    },
+    {
+      "start": 1152.24,
+      "end": 1155.54,
+      "duration": 3.3,
+      "text": "ways I've taken to reach 3 that's better"
+    },
+    {
+      "start": 1153.74,
+      "end": 1157.82,
+      "duration": 4.08,
+      "text": "I need to take the new upgraded version"
+    },
+    {
+      "start": 1155.54,
+      "end": 1160.16,
+      "duration": 4.62,
+      "text": "X is three two let's compute three two"
+    },
+    {
+      "start": 1157.82,
+      "end": 1162.74,
+      "duration": 4.92,
+      "text": "so if I try to compute three two it'll"
+    },
+    {
+      "start": 1160.16,
+      "end": 1166.0,
+      "duration": 5.84,
+      "text": "be three one again which will be 5 right"
+    },
+    {
+      "start": 1162.74,
+      "end": 1168.56,
+      "duration": 5.82,
+      "text": "plus one"
+    },
+    {
+      "start": 1166.0,
+      "end": 1171.2,
+      "duration": 5.2,
+      "text": "2 which is nothing but 3 this time"
+    },
+    {
+      "start": 1168.56,
+      "end": 1173.48,
+      "duration": 4.92,
+      "text": "that's 8. so if you see it's already"
+    },
+    {
+      "start": 1171.2,
+      "end": 1177.86,
+      "duration": 6.66,
+      "text": "reaching at four so why will I take the"
+    },
+    {
+      "start": 1173.48,
+      "end": 1180.14,
+      "duration": 6.66,
+      "text": "eight one so y1 I have computed it"
+    },
+    {
+      "start": 1177.86,
+      "end": 1184.36,
+      "duration": 6.5,
+      "text": "I've computed The Matrix via one as well"
+    },
+    {
+      "start": 1180.14,
+      "end": 1184.36,
+      "duration": 4.22,
+      "text": "similarly what you'll do is you will go"
+    },
+    {
+      "start": 1187.7,
+      "end": 1191.96,
+      "duration": 4.26,
+      "text": "we will do a wire 3 and you will get"
+    },
+    {
+      "start": 1189.98,
+      "end": 1195.32,
+      "duration": 5.34,
+      "text": "ultimate Matrix and whenever you get"
+    },
+    {
+      "start": 1191.96,
+      "end": 1198.38,
+      "duration": 6.42,
+      "text": "this ultimate Matrix this will be your"
+    },
+    {
+      "start": 1195.32,
+      "end": 1200.9,
+      "duration": 5.58,
+      "text": "shortest path between everyone between"
+    },
+    {
+      "start": 1198.38,
+      "end": 1202.58,
+      "duration": 4.2,
+      "text": "everyone so if someone tomorrow comes up"
+    },
+    {
+      "start": 1200.9,
+      "end": 1205.46,
+      "duration": 4.56,
+      "text": "and says you hey give me the shortest"
+    },
+    {
+      "start": 1202.58,
+      "end": 1207.98,
+      "duration": 5.4,
+      "text": "path between 3 and 0. so you go three"
+    },
+    {
+      "start": 1205.46,
+      "end": 1210.02,
+      "duration": 4.56,
+      "text": "you go zero and you say whatever is"
+    },
+    {
+      "start": 1207.98,
+      "end": 1213.92,
+      "duration": 5.94,
+      "text": "stored here that's the shortest path so"
+    },
+    {
+      "start": 1210.02,
+      "end": 1217.52,
+      "duration": 7.5,
+      "text": "you can figure out from every Node 1 to"
+    },
+    {
+      "start": 1213.92,
+      "end": 1220.28,
+      "duration": 6.36,
+      "text": "every node to the shortest path from"
+    },
+    {
+      "start": 1217.52,
+      "end": 1223.16,
+      "duration": 5.64,
+      "text": "this ultimate Matrix that has been"
+    },
+    {
+      "start": 1220.28,
+      "end": 1225.62,
+      "duration": 5.34,
+      "text": "generated so what are we doing exactly"
+    },
+    {
+      "start": 1223.16,
+      "end": 1228.8,
+      "duration": 5.64,
+      "text": "at first we are going via zero then wire"
+    },
+    {
+      "start": 1225.62,
+      "end": 1231.32,
+      "duration": 5.7,
+      "text": "one then wire two then wire three so can"
+    },
+    {
+      "start": 1228.8,
+      "end": 1233.06,
+      "duration": 4.26,
+      "text": "I say I'm going with everyone and"
+    },
+    {
+      "start": 1231.32,
+      "end": 1234.86,
+      "duration": 3.54,
+      "text": "whenever I am going via zero I'm"
+    },
+    {
+      "start": 1233.06,
+      "end": 1236.96,
+      "duration": 3.9,
+      "text": "basically taking this then I'm taking"
+    },
+    {
+      "start": 1234.86,
+      "end": 1239.0,
+      "duration": 4.14,
+      "text": "this and I'm taking this then I'm taking"
+    },
+    {
+      "start": 1236.96,
+      "end": 1241.52,
+      "duration": 4.56,
+      "text": "this then I'm taking this so it's"
+    },
+    {
+      "start": 1239.0,
+      "end": 1243.56,
+      "duration": 4.56,
+      "text": "basically for this taking this for this"
+    },
+    {
+      "start": 1241.52,
+      "end": 1245.24,
+      "duration": 3.72,
+      "text": "taking this for this I'm taking this for"
+    },
+    {
+      "start": 1243.56,
+      "end": 1247.76,
+      "duration": 4.2,
+      "text": "this I'm taking this so in every"
+    },
+    {
+      "start": 1245.24,
+      "end": 1250.7,
+      "duration": 5.46,
+      "text": "iteration can I say what I'm doing is"
+    },
+    {
+      "start": 1247.76,
+      "end": 1252.92,
+      "duration": 5.16,
+      "text": "very straightforward and very simple"
+    },
+    {
+      "start": 1250.7,
+      "end": 1254.42,
+      "duration": 3.72,
+      "text": "and that's nothing but I'm going from I"
+    },
+    {
+      "start": 1252.92,
+      "end": 1257.0,
+      "duration": 4.08,
+      "text": "equal to 0."
+    },
+    {
+      "start": 1254.42,
+      "end": 1260.12,
+      "duration": 5.7,
+      "text": "to the last note"
+    },
+    {
+      "start": 1257.0,
+      "end": 1262.52,
+      "duration": 5.52,
+      "text": "and this is what I'm doing because I"
+    },
+    {
+      "start": 1260.12,
+      "end": 1266.08,
+      "duration": 5.96,
+      "text": "want to go from I to J so this is what"
+    },
+    {
+      "start": 1262.52,
+      "end": 1266.08,
+      "duration": 3.56,
+      "text": "I'm doing at every node can I see this"
+    },
+    {
+      "start": 1266.18,
+      "end": 1272.0,
+      "duration": 5.82,
+      "text": "yes or no I can and what am I doing I'm"
+    },
+    {
+      "start": 1269.48,
+      "end": 1276.14,
+      "duration": 6.66,
+      "text": "trying to go for example cost of i j"
+    },
+    {
+      "start": 1272.0,
+      "end": 1279.74,
+      "duration": 7.74,
+      "text": "I'll take the cost as minimum of minimum"
+    },
+    {
+      "start": 1276.14,
+      "end": 1281.78,
+      "duration": 5.64,
+      "text": "of either what I have taken to reach it"
+    },
+    {
+      "start": 1279.74,
+      "end": 1284.0,
+      "duration": 4.26,
+      "text": "that is currently what I'm taking"
+    },
+    {
+      "start": 1281.78,
+      "end": 1285.62,
+      "duration": 3.84,
+      "text": "currently if I'm taking five I'll"
+    },
+    {
+      "start": 1284.0,
+      "end": 1287.54,
+      "duration": 3.54,
+      "text": "consider that five and I'll consider the"
+    },
+    {
+      "start": 1285.62,
+      "end": 1290.36,
+      "duration": 4.74,
+      "text": "new one via one"
+    },
+    {
+      "start": 1287.54,
+      "end": 1292.22,
+      "duration": 4.68,
+      "text": "so the new and Via will be nothing but"
+    },
+    {
+      "start": 1290.36,
+      "end": 1294.8,
+      "duration": 4.44,
+      "text": "cost of I"
+    },
+    {
+      "start": 1292.22,
+      "end": 1298.94,
+      "duration": 6.72,
+      "text": "via whatever you're going via"
+    },
+    {
+      "start": 1294.8,
+      "end": 1301.1,
+      "duration": 6.3,
+      "text": "Plus cost of that wire of J can I say"
+    },
+    {
+      "start": 1298.94,
+      "end": 1303.14,
+      "duration": 4.2,
+      "text": "this I can"
+    },
+    {
+      "start": 1301.1,
+      "end": 1305.78,
+      "duration": 4.68,
+      "text": "and this is what I'm doing at every"
+    },
+    {
+      "start": 1303.14,
+      "end": 1309.8,
+      "duration": 6.66,
+      "text": "iteration every iteration first wire 0"
+    },
+    {
+      "start": 1305.78,
+      "end": 1312.26,
+      "duration": 6.48,
+      "text": "wire will be 0 here next via one so via"
+    },
+    {
+      "start": 1309.8,
+      "end": 1314.6,
+      "duration": 4.8,
+      "text": "will be 1 here next wire 2 it will get"
+    },
+    {
+      "start": 1312.26,
+      "end": 1317.36,
+      "duration": 5.1,
+      "text": "two I'm trying out everyone trying out"
+    },
+    {
+      "start": 1314.6,
+      "end": 1318.68,
+      "duration": 4.08,
+      "text": "this this this everyone and"
+    },
+    {
+      "start": 1317.36,
+      "end": 1320.3,
+      "duration": 2.94,
+      "text": "automatically these will be zeros"
+    },
+    {
+      "start": 1318.68,
+      "end": 1322.22,
+      "duration": 3.54,
+      "text": "because you have initially you would"
+    },
+    {
+      "start": 1320.3,
+      "end": 1324.32,
+      "duration": 4.02,
+      "text": "have assigned 0 so this will take care"
+    },
+    {
+      "start": 1322.22,
+      "end": 1326.66,
+      "duration": 4.44,
+      "text": "that it will always be zeros when you do"
+    },
+    {
+      "start": 1324.32,
+      "end": 1328.34,
+      "duration": 4.02,
+      "text": "comparisons so what is this wire first"
+    },
+    {
+      "start": 1326.66,
+      "end": 1332.54,
+      "duration": 5.88,
+      "text": "it is zero then it is one then it is two"
+    },
+    {
+      "start": 1328.34,
+      "end": 1335.18,
+      "duration": 6.84,
+      "text": "then it is three so can I say for y i"
+    },
+    {
+      "start": 1332.54,
+      "end": 1339.2,
+      "duration": 6.66,
+      "text": "equal to zero via lesser than n because"
+    },
+    {
+      "start": 1335.18,
+      "end": 1342.44,
+      "duration": 7.26,
+      "text": "0 1 to 3 every node till via plus plus"
+    },
+    {
+      "start": 1339.2,
+      "end": 1345.5,
+      "duration": 6.3,
+      "text": "is what this will be and once you have"
+    },
+    {
+      "start": 1342.44,
+      "end": 1347.5,
+      "duration": 5.06,
+      "text": "done this n Cube loop operation at the"
+    },
+    {
+      "start": 1345.5,
+      "end": 1350.36,
+      "duration": 4.86,
+      "text": "end of the day you will have your"
+    },
+    {
+      "start": 1347.5,
+      "end": 1352.1,
+      "duration": 4.6,
+      "text": "resultant Matrix which will be your"
+    },
+    {
+      "start": 1350.36,
+      "end": 1354.86,
+      "duration": 4.5,
+      "text": "answer so if you see we are pretty much"
+    },
+    {
+      "start": 1352.1,
+      "end": 1356.72,
+      "duration": 4.62,
+      "text": "derived this one for every iteration and"
+    },
+    {
+      "start": 1354.86,
+      "end": 1358.82,
+      "duration": 3.96,
+      "text": "then we have wrapped it under a wire"
+    },
+    {
+      "start": 1356.72,
+      "end": 1361.04,
+      "duration": 4.32,
+      "text": "because wire will always change let's"
+    },
+    {
+      "start": 1358.82,
+      "end": 1364.16,
+      "duration": 5.34,
+      "text": "get the wire 0 wire 1 wire 2 and"
+    },
+    {
+      "start": 1361.04,
+      "end": 1366.74,
+      "duration": 5.7,
+      "text": "ultimately the cost of IJ will be"
+    },
+    {
+      "start": 1364.16,
+      "end": 1369.38,
+      "duration": 5.22,
+      "text": "storing your ultimate shortest distance"
+    },
+    {
+      "start": 1366.74,
+      "end": 1372.62,
+      "duration": 5.88,
+      "text": "now couple of questions first question"
+    },
+    {
+      "start": 1369.38,
+      "end": 1375.08,
+      "duration": 5.7,
+      "text": "is how to detect a negative cycle what"
+    },
+    {
+      "start": 1372.62,
+      "end": 1377.12,
+      "duration": 4.5,
+      "text": "if the graph has a negative cycle"
+    },
+    {
+      "start": 1375.08,
+      "end": 1379.94,
+      "duration": 4.86,
+      "text": "because we know"
+    },
+    {
+      "start": 1377.12,
+      "end": 1383.36,
+      "duration": 6.24,
+      "text": "for a negative cycle imagine a cycle"
+    },
+    {
+      "start": 1379.94,
+      "end": 1386.78,
+      "duration": 6.84,
+      "text": "like this where we say okay"
+    },
+    {
+      "start": 1383.36,
+      "end": 1389.6,
+      "duration": 6.24,
+      "text": "it is minus 2 minus 3 plus 2 so the"
+    },
+    {
+      "start": 1386.78,
+      "end": 1392.18,
+      "duration": 5.4,
+      "text": "total costing is minus 2 plus 2 minus 3"
+    },
+    {
+      "start": 1389.6,
+      "end": 1395.18,
+      "duration": 5.58,
+      "text": "minus two plus two guys go so total"
+    },
+    {
+      "start": 1392.18,
+      "end": 1398.36,
+      "duration": 6.18,
+      "text": "costing is minus three so what will"
+    },
+    {
+      "start": 1395.18,
+      "end": 1401.9,
+      "duration": 6.72,
+      "text": "happen is the cloud version will work"
+    },
+    {
+      "start": 1398.36,
+      "end": 1406.1,
+      "duration": 7.74,
+      "text": "properly and it will figure out a path"
+    },
+    {
+      "start": 1401.9,
+      "end": 1410.66,
+      "duration": 8.76,
+      "text": "via one two to reach 0 so the costing of"
+    },
+    {
+      "start": 1406.1,
+      "end": 1414.38,
+      "duration": 8.28,
+      "text": "0 and 0 will be minus 3 and apparently"
+    },
+    {
+      "start": 1410.66,
+      "end": 1417.8,
+      "duration": 7.14,
+      "text": "the costing of Any Given node to itself"
+    },
+    {
+      "start": 1414.38,
+      "end": 1420.02,
+      "duration": 5.64,
+      "text": "should be zero because this node to node"
+    },
+    {
+      "start": 1417.8,
+      "end": 1422.96,
+      "duration": 5.16,
+      "text": "should always be zero and if it is"
+    },
+    {
+      "start": 1420.02,
+      "end": 1425.78,
+      "duration": 5.76,
+      "text": "anything lesser to zero if the costing"
+    },
+    {
+      "start": 1422.96,
+      "end": 1430.4,
+      "duration": 7.44,
+      "text": "of any node can I say this if the"
+    },
+    {
+      "start": 1425.78,
+      "end": 1433.58,
+      "duration": 7.8,
+      "text": "costing of any node from 0 to n"
+    },
+    {
+      "start": 1430.4,
+      "end": 1436.64,
+      "duration": 6.24,
+      "text": "it's very simple if the costing of I and"
+    },
+    {
+      "start": 1433.58,
+      "end": 1439.36,
+      "duration": 5.78,
+      "text": "I which is the node to node itself is"
+    },
+    {
+      "start": 1436.64,
+      "end": 1442.54,
+      "duration": 5.9,
+      "text": "lesser than zero I can always say"
+    },
+    {
+      "start": 1439.36,
+      "end": 1446.36,
+      "duration": 7.0,
+      "text": "negative cycle exist I can always see"
+    },
+    {
+      "start": 1442.54,
+      "end": 1449.6,
+      "duration": 7.06,
+      "text": "negative cycle exist very simple if we"
+    },
+    {
+      "start": 1446.36,
+      "end": 1451.88,
+      "duration": 5.52,
+      "text": "are going from uh all the notes and node"
+    },
+    {
+      "start": 1449.6,
+      "end": 1454.28,
+      "duration": 4.68,
+      "text": "to node is less than zero means third"
+    },
+    {
+      "start": 1451.88,
+      "end": 1456.44,
+      "duration": 4.56,
+      "text": "version has gone via this and has"
+    },
+    {
+      "start": 1454.28,
+      "end": 1459.38,
+      "duration": 5.1,
+      "text": "reduced the cost from zero to something"
+    },
+    {
+      "start": 1456.44,
+      "end": 1461.24,
+      "duration": 4.8,
+      "text": "lesser because of a negative cycle and"
+    },
+    {
+      "start": 1459.38,
+      "end": 1462.68,
+      "duration": 3.3,
+      "text": "you know if it has a negative cycle it"
+    },
+    {
+      "start": 1461.24,
+      "end": 1465.74,
+      "duration": 4.5,
+      "text": "doesn't make sense to find the shortest"
+    },
+    {
+      "start": 1462.68,
+      "end": 1467.78,
+      "duration": 5.1,
+      "text": "path because someone will do"
+    },
+    {
+      "start": 1465.74,
+      "end": 1470.72,
+      "duration": 4.98,
+      "text": "unlimited turns and you'll just reduce"
+    },
+    {
+      "start": 1467.78,
+      "end": 1473.84,
+      "duration": 6.06,
+      "text": "its cost every now and then so thereby"
+    },
+    {
+      "start": 1470.72,
+      "end": 1475.34,
+      "duration": 4.62,
+      "text": "it's not possible for a negative cycle"
+    },
+    {
+      "start": 1473.84,
+      "end": 1476.9,
+      "duration": 3.06,
+      "text": "so I hope you've understood the entire"
+    },
+    {
+      "start": 1475.34,
+      "end": 1478.82,
+      "duration": 3.48,
+      "text": "explanation it's time to code it up so"
+    },
+    {
+      "start": 1476.9,
+      "end": 1480.32,
+      "duration": 3.42,
+      "text": "as usual the C plus plus solution is on"
+    },
+    {
+      "start": 1478.82,
+      "end": 1482.96,
+      "duration": 4.14,
+      "text": "the right and the exact similar Java"
+    },
+    {
+      "start": 1480.32,
+      "end": 1484.64,
+      "duration": 4.32,
+      "text": "code is on the left so you have to find"
+    },
+    {
+      "start": 1482.96,
+      "end": 1486.44,
+      "duration": 3.48,
+      "text": "the shortest distance between every pair"
+    },
+    {
+      "start": 1484.64,
+      "end": 1488.84,
+      "duration": 4.2,
+      "text": "of vertices in a given Edge weight"
+    },
+    {
+      "start": 1486.44,
+      "end": 1491.48,
+      "duration": 5.04,
+      "text": "directed graph the graph is represented"
+    },
+    {
+      "start": 1488.84,
+      "end": 1493.1,
+      "duration": 4.26,
+      "text": "by an adjacent Matrix and the Matrix"
+    },
+    {
+      "start": 1491.48,
+      "end": 1496.34,
+      "duration": 4.86,
+      "text": "denotes the weight of the edges if it"
+    },
+    {
+      "start": 1493.1,
+      "end": 1499.82,
+      "duration": 6.72,
+      "text": "exits else minus one remember they are"
+    },
+    {
+      "start": 1496.34,
+      "end": 1501.8,
+      "duration": 5.46,
+      "text": "stating minus one not as Infinity if"
+    },
+    {
+      "start": 1499.82,
+      "end": 1503.96,
+      "duration": 4.14,
+      "text": "there is an edge they're stating it as"
+    },
+    {
+      "start": 1501.8,
+      "end": 1507.38,
+      "duration": 5.58,
+      "text": "minus one so you have to probably do a"
+    },
+    {
+      "start": 1503.96,
+      "end": 1510.08,
+      "duration": 6.12,
+      "text": "bit of a thing before doing it so do it"
+    },
+    {
+      "start": 1507.38,
+      "end": 1513.08,
+      "duration": 5.7,
+      "text": "in place you have to do it in place is"
+    },
+    {
+      "start": 1510.08,
+      "end": 1515.18,
+      "duration": 5.1,
+      "text": "what you have to do and I'm assuming"
+    },
+    {
+      "start": 1513.08,
+      "end": 1516.56,
+      "duration": 3.48,
+      "text": "that there the graph does not contains"
+    },
+    {
+      "start": 1515.18,
+      "end": 1518.96,
+      "duration": 3.78,
+      "text": "negative Cycles otherwise they would"
+    },
+    {
+      "start": 1516.56,
+      "end": 1520.76,
+      "duration": 4.2,
+      "text": "have stated it so we have to do it in"
+    },
+    {
+      "start": 1518.96,
+      "end": 1522.74,
+      "duration": 3.78,
+      "text": "place that means whatever the Matrix is"
+    },
+    {
+      "start": 1520.76,
+      "end": 1526.1,
+      "duration": 5.34,
+      "text": "given you have to update it with the"
+    },
+    {
+      "start": 1522.74,
+      "end": 1528.92,
+      "duration": 6.18,
+      "text": "shortest path instead of action actually"
+    },
+    {
+      "start": 1526.1,
+      "end": 1529.82,
+      "duration": 3.72,
+      "text": "doing a cost Matrix and returning it so"
+    },
+    {
+      "start": 1528.92,
+      "end": 1532.76,
+      "duration": 3.84,
+      "text": "remember"
+    },
+    {
+      "start": 1529.82,
+      "end": 1534.74,
+      "duration": 4.92,
+      "text": "else minus one so I'll get the N at"
+    },
+    {
+      "start": 1532.76,
+      "end": 1536.36,
+      "duration": 3.6,
+      "text": "first"
+    },
+    {
+      "start": 1534.74,
+      "end": 1538.46,
+      "duration": 3.72,
+      "text": "now in in order to ease out"
+    },
+    {
+      "start": 1536.36,
+      "end": 1542.84,
+      "duration": 6.48,
+      "text": "understanding what I'll do is I will"
+    },
+    {
+      "start": 1538.46,
+      "end": 1545.3,
+      "duration": 6.84,
+      "text": "just go across the entire Matrix once"
+    },
+    {
+      "start": 1542.84,
+      "end": 1549.26,
+      "duration": 6.42,
+      "text": "just in order to ease out understanding"
+    },
+    {
+      "start": 1545.3,
+      "end": 1553.16,
+      "duration": 7.86,
+      "text": "you can avoid this step as well so you"
+    },
+    {
+      "start": 1549.26,
+      "end": 1556.72,
+      "duration": 7.46,
+      "text": "can say if if if Matrix of i j is equal"
+    },
+    {
+      "start": 1553.16,
+      "end": 1559.82,
+      "duration": 6.66,
+      "text": "to minus 1 which actually means that"
+    },
+    {
+      "start": 1556.72,
+      "end": 1563.18,
+      "duration": 6.46,
+      "text": "it's not possible to reach it so I can"
+    },
+    {
+      "start": 1559.82,
+      "end": 1565.16,
+      "duration": 5.34,
+      "text": "say 189 I'll just give it a very big"
+    },
+    {
+      "start": 1563.18,
+      "end": 1567.38,
+      "duration": 4.2,
+      "text": "value and while I return I'll just"
+    },
+    {
+      "start": 1565.16,
+      "end": 1569.54,
+      "duration": 4.38,
+      "text": "change it to -1 and one other condition"
+    },
+    {
+      "start": 1567.38,
+      "end": 1571.58,
+      "duration": 4.2,
+      "text": "I'll always keep if I is equal to equal"
+    },
+    {
+      "start": 1569.54,
+      "end": 1573.74,
+      "duration": 4.2,
+      "text": "to J which is the diagonal I know the"
+    },
+    {
+      "start": 1571.58,
+      "end": 1575.24,
+      "duration": 3.66,
+      "text": "reaching place is always zero so that's"
+    },
+    {
+      "start": 1573.74,
+      "end": 1578.06,
+      "duration": 4.32,
+      "text": "what I'll initialize and before"
+    },
+    {
+      "start": 1575.24,
+      "end": 1579.38,
+      "duration": 4.14,
+      "text": "returning just make sure you do the same"
+    },
+    {
+      "start": 1578.06,
+      "end": 1581.36,
+      "duration": 3.3,
+      "text": "thing yes"
+    },
+    {
+      "start": 1579.38,
+      "end": 1584.12,
+      "duration": 4.74,
+      "text": "before returning just make sure you do"
+    },
+    {
+      "start": 1581.36,
+      "end": 1587.24,
+      "duration": 5.88,
+      "text": "the opposite of it okay so before"
+    },
+    {
+      "start": 1584.12,
+      "end": 1588.98,
+      "duration": 4.86,
+      "text": "returning if it's 1e9 still which means"
+    },
+    {
+      "start": 1587.24,
+      "end": 1590.66,
+      "duration": 3.42,
+      "text": "it's not reachable and if it's not"
+    },
+    {
+      "start": 1588.98,
+      "end": 1592.64,
+      "duration": 3.66,
+      "text": "reachable do it a minus one before"
+    },
+    {
+      "start": 1590.66,
+      "end": 1594.56,
+      "duration": 3.9,
+      "text": "returning you do this okay now let's"
+    },
+    {
+      "start": 1592.64,
+      "end": 1597.08,
+      "duration": 4.44,
+      "text": "perform our algorithm it's very simple"
+    },
+    {
+      "start": 1594.56,
+      "end": 1599.72,
+      "duration": 5.16,
+      "text": "we know K will be 0 and K will go till"
+    },
+    {
+      "start": 1597.08,
+      "end": 1603.26,
+      "duration": 6.18,
+      "text": "less this and after that we know I will"
+    },
+    {
+      "start": 1599.72,
+      "end": 1605.36,
+      "duration": 5.64,
+      "text": "be 0 and I will also go till this and we"
+    },
+    {
+      "start": 1603.26,
+      "end": 1608.9,
+      "duration": 5.64,
+      "text": "know the other thing will be J equal to"
+    },
+    {
+      "start": 1605.36,
+      "end": 1611.3,
+      "duration": 5.94,
+      "text": "0 and J will go lesser than this and the"
+    },
+    {
+      "start": 1608.9,
+      "end": 1615.64,
+      "duration": 6.74,
+      "text": "uh other thing we know is Matrix of i j"
+    },
+    {
+      "start": 1611.3,
+      "end": 1620.36,
+      "duration": 9.06,
+      "text": "will be minimum of Matrix of i j comma"
+    },
+    {
+      "start": 1615.64,
+      "end": 1623.3,
+      "duration": 7.66,
+      "text": "Matrix of I wire key so this and Matrix"
+    },
+    {
+      "start": 1620.36,
+      "end": 1625.82,
+      "duration": 5.46,
+      "text": "of k2j perfect and I think this should"
+    },
+    {
+      "start": 1623.3,
+      "end": 1628.04,
+      "duration": 4.74,
+      "text": "be more or less it about the algorithm"
+    },
+    {
+      "start": 1625.82,
+      "end": 1629.36,
+      "duration": 3.54,
+      "text": "it's a pretty uh straightforward one so"
+    },
+    {
+      "start": 1628.04,
+      "end": 1631.22,
+      "duration": 3.18,
+      "text": "if you see on compilation it is giving"
+    },
+    {
+      "start": 1629.36,
+      "end": 1633.08,
+      "duration": 3.72,
+      "text": "the correct output so I'll submit it and"
+    },
+    {
+      "start": 1631.22,
+      "end": 1635.0,
+      "duration": 3.78,
+      "text": "yeah it does pass"
+    },
+    {
+      "start": 1633.08,
+      "end": 1637.1,
+      "duration": 4.02,
+      "text": "so one more thing to add before I wrap"
+    },
+    {
+      "start": 1635.0,
+      "end": 1639.26,
+      "duration": 4.26,
+      "text": "it up if in an interview someone does"
+    },
+    {
+      "start": 1637.1,
+      "end": 1641.0,
+      "duration": 3.9,
+      "text": "ask you what if there is a negative"
+    },
+    {
+      "start": 1639.26,
+      "end": 1642.68,
+      "duration": 3.42,
+      "text": "cycle so you'll say hey I'll just"
+    },
+    {
+      "start": 1641.0,
+      "end": 1644.96,
+      "duration": 3.96,
+      "text": "probably write something like this over"
+    },
+    {
+      "start": 1642.68,
+      "end": 1648.38,
+      "duration": 5.7,
+      "text": "here if it's a negative cycle I'd be"
+    },
+    {
+      "start": 1644.96,
+      "end": 1650.06,
+      "duration": 5.1,
+      "text": "like if the Matrix contains I I lesser"
+    },
+    {
+      "start": 1648.38,
+      "end": 1652.52,
+      "duration": 4.14,
+      "text": "than zero"
+    },
+    {
+      "start": 1650.06,
+      "end": 1654.2,
+      "duration": 4.14,
+      "text": "before assigning this lesser than 0 then"
+    },
+    {
+      "start": 1652.52,
+      "end": 1655.64,
+      "duration": 3.12,
+      "text": "I can probably print something or"
+    },
+    {
+      "start": 1654.2,
+      "end": 1656.6,
+      "duration": 2.4,
+      "text": "something like this I can do it over"
+    },
+    {
+      "start": 1655.64,
+      "end": 1658.22,
+      "duration": 2.58,
+      "text": "here"
+    },
+    {
+      "start": 1656.6,
+      "end": 1660.26,
+      "duration": 3.66,
+      "text": "so let's discuss the time and space"
+    },
+    {
+      "start": 1658.22,
+      "end": 1662.48,
+      "duration": 4.26,
+      "text": "complexity the time complexity of the"
+    },
+    {
+      "start": 1660.26,
+      "end": 1665.54,
+      "duration": 5.28,
+      "text": "algorithm major time complexity is n"
+    },
+    {
+      "start": 1662.48,
+      "end": 1667.46,
+      "duration": 4.98,
+      "text": "Cube definitely now a lot of you will be"
+    },
+    {
+      "start": 1665.54,
+      "end": 1669.02,
+      "duration": 3.48,
+      "text": "thinking the space complexity is bigger"
+    },
+    {
+      "start": 1667.46,
+      "end": 1671.36,
+      "duration": 3.9,
+      "text": "of 1 because you're using the given"
+    },
+    {
+      "start": 1669.02,
+      "end": 1673.88,
+      "duration": 4.86,
+      "text": "Matrix no whenever we talk about space"
+    },
+    {
+      "start": 1671.36,
+      "end": 1676.58,
+      "duration": 5.22,
+      "text": "complexity it's generically the space"
+    },
+    {
+      "start": 1673.88,
+      "end": 1678.08,
+      "duration": 4.2,
+      "text": "that I'm using to solve that problem in"
+    },
+    {
+      "start": 1676.58,
+      "end": 1680.78,
+      "duration": 4.2,
+      "text": "order to solve this problem I'm using"
+    },
+    {
+      "start": 1678.08,
+      "end": 1682.82,
+      "duration": 4.74,
+      "text": "Matrix so that is the space that I am"
+    },
+    {
+      "start": 1680.78,
+      "end": 1684.32,
+      "duration": 3.54,
+      "text": "using if I would have not been using"
+    },
+    {
+      "start": 1682.82,
+      "end": 1687.02,
+      "duration": 4.2,
+      "text": "this then I can avoid it but if I'm"
+    },
+    {
+      "start": 1684.32,
+      "end": 1689.12,
+      "duration": 4.8,
+      "text": "using that goes inside my space that"
+    },
+    {
+      "start": 1687.02,
+      "end": 1691.34,
+      "duration": 4.32,
+      "text": "I've been using I'll say the N square is"
+    },
+    {
+      "start": 1689.12,
+      "end": 1693.08,
+      "duration": 3.96,
+      "text": "the space so using a cost Matrix the"
+    },
+    {
+      "start": 1691.34,
+      "end": 1694.82,
+      "duration": 3.48,
+      "text": "cost Matrix will be your space which is"
+    },
+    {
+      "start": 1693.08,
+      "end": 1697.46,
+      "duration": 4.38,
+      "text": "n Square you can't see if someone is"
+    },
+    {
+      "start": 1694.82,
+      "end": 1699.5,
+      "duration": 4.68,
+      "text": "giving you something it does contain a"
+    },
+    {
+      "start": 1697.46,
+      "end": 1701.78,
+      "duration": 4.32,
+      "text": "space we're taking it unique please to"
+    },
+    {
+      "start": 1699.5,
+      "end": 1705.5,
+      "duration": 6.0,
+      "text": "store it right so you are using some"
+    },
+    {
+      "start": 1701.78,
+      "end": 1707.78,
+      "duration": 6.0,
+      "text": "space which is n Square over here so I"
+    },
+    {
+      "start": 1705.5,
+      "end": 1709.64,
+      "duration": 4.14,
+      "text": "hope uh it is clear I might be thinking"
+    },
+    {
+      "start": 1707.78,
+      "end": 1712.88,
+      "duration": 5.1,
+      "text": "whatsoever what if you would have"
+    },
+    {
+      "start": 1709.64,
+      "end": 1714.62,
+      "duration": 4.98,
+      "text": "implemented diagram so let's go back and"
+    },
+    {
+      "start": 1712.88,
+      "end": 1716.26,
+      "duration": 3.38,
+      "text": "analyze that as well so if you remember"
+    },
+    {
+      "start": 1714.62,
+      "end": 1720.14,
+      "duration": 5.52,
+      "text": "dixtra"
+    },
+    {
+      "start": 1716.26,
+      "end": 1723.14,
+      "duration": 6.88,
+      "text": "does not yes does not works for negative"
+    },
+    {
+      "start": 1720.14,
+      "end": 1726.44,
+      "duration": 6.3,
+      "text": "Cycles it will fall under"
+    },
+    {
+      "start": 1723.14,
+      "end": 1728.18,
+      "duration": 5.04,
+      "text": "yes a tle loop so that's why dijkstra"
+    },
+    {
+      "start": 1726.44,
+      "end": 1729.92,
+      "duration": 3.48,
+      "text": "cannot be implemented but if the graph"
+    },
+    {
+      "start": 1728.18,
+      "end": 1731.54,
+      "duration": 3.36,
+      "text": "does not have negative Cycles or"
+    },
+    {
+      "start": 1729.92,
+      "end": 1734.6,
+      "duration": 4.68,
+      "text": "something you can actually apply"
+    },
+    {
+      "start": 1731.54,
+      "end": 1738.02,
+      "duration": 6.48,
+      "text": "dijkstra for all the notes because"
+    },
+    {
+      "start": 1734.6,
+      "end": 1740.18,
+      "duration": 5.58,
+      "text": "dijkstra in itself takes e log V"
+    },
+    {
+      "start": 1738.02,
+      "end": 1742.46,
+      "duration": 4.44,
+      "text": "so what you can do is apply dijkstra on"
+    },
+    {
+      "start": 1740.18,
+      "end": 1743.68,
+      "duration": 3.5,
+      "text": "every individual node to find out the"
+    },
+    {
+      "start": 1742.46,
+      "end": 1746.06,
+      "duration": 3.6,
+      "text": "answer"
+    },
+    {
+      "start": 1743.68,
+      "end": 1749.48,
+      "duration": 5.8,
+      "text": "every individual node and there will"
+    },
+    {
+      "start": 1746.06,
+      "end": 1752.66,
+      "duration": 6.6,
+      "text": "still be n cross e log V so it'll still"
+    },
+    {
+      "start": 1749.48,
+      "end": 1754.7,
+      "duration": 5.22,
+      "text": "be less like V cross e log V it won't go"
+    },
+    {
+      "start": 1752.66,
+      "end": 1755.48,
+      "duration": 2.82,
+      "text": "till n Cube which the flood ocean is"
+    },
+    {
+      "start": 1754.7,
+      "end": 1758.12,
+      "duration": 3.42,
+      "text": "taking"
+    },
+    {
+      "start": 1755.48,
+      "end": 1760.64,
+      "duration": 5.16,
+      "text": "apply individual Dexter on every node to"
+    },
+    {
+      "start": 1758.12,
+      "end": 1763.4,
+      "duration": 5.28,
+      "text": "get every pair distance you can do that"
+    },
+    {
+      "start": 1760.64,
+      "end": 1764.84,
+      "duration": 4.2,
+      "text": "but it doesn't works for negative so now"
+    },
+    {
+      "start": 1763.4,
+      "end": 1766.64,
+      "duration": 3.24,
+      "text": "if in an interview someone does ask you"
+    },
+    {
+      "start": 1764.84,
+      "end": 1768.38,
+      "duration": 3.54,
+      "text": "about flood washing do not just tell the"
+    },
+    {
+      "start": 1766.64,
+      "end": 1770.18,
+      "duration": 3.54,
+      "text": "algorithm tell about these extra things"
+    },
+    {
+      "start": 1768.38,
+      "end": 1772.88,
+      "duration": 4.5,
+      "text": "like why does something like a dixtra"
+    },
+    {
+      "start": 1770.18,
+      "end": 1774.98,
+      "duration": 4.8,
+      "text": "will not work where how can you detect a"
+    },
+    {
+      "start": 1772.88,
+      "end": 1777.5,
+      "duration": 4.62,
+      "text": "negative cycle if you add up these extra"
+    },
+    {
+      "start": 1774.98,
+      "end": 1779.72,
+      "duration": 4.74,
+      "text": "points in an interview it's always a"
+    },
+    {
+      "start": 1777.5,
+      "end": 1781.64,
+      "duration": 4.14,
+      "text": "cherry on the cake so make sure you add"
+    },
+    {
+      "start": 1779.72,
+      "end": 1783.68,
+      "duration": 3.96,
+      "text": "these extra points if the interviewer"
+    },
+    {
+      "start": 1781.64,
+      "end": 1785.84,
+      "duration": 4.2,
+      "text": "does ask you about the Floyd dual shell"
+    },
+    {
+      "start": 1783.68,
+      "end": 1787.4,
+      "duration": 3.72,
+      "text": "algorithm so guys I hope I was able to"
+    },
+    {
+      "start": 1785.84,
+      "end": 1789.02,
+      "duration": 3.18,
+      "text": "explain you the fluid virtual algorithm"
+    },
+    {
+      "start": 1787.4,
+      "end": 1790.4,
+      "duration": 3.0,
+      "text": "and you've understood everything just in"
+    },
+    {
+      "start": 1789.02,
+      "end": 1791.72,
+      "duration": 2.7,
+      "text": "case you did please please please make"
+    },
+    {
+      "start": 1790.4,
+      "end": 1793.1,
+      "duration": 2.7,
+      "text": "sure you like this video and if you're"
+    },
+    {
+      "start": 1791.72,
+      "end": 1794.6,
+      "duration": 2.88,
+      "text": "new to our Channel what are you waiting"
+    },
+    {
+      "start": 1793.1,
+      "end": 1795.8,
+      "duration": 2.7,
+      "text": "for I think it's time that you hit that"
+    },
+    {
+      "start": 1794.6,
+      "end": 1797.42,
+      "duration": 2.82,
+      "text": "subscribe button and if you haven't"
+    },
+    {
+      "start": 1795.8,
+      "end": 1798.86,
+      "duration": 3.06,
+      "text": "checked out our DP series and the HDC"
+    },
+    {
+      "start": 1797.42,
+      "end": 1800.54,
+      "duration": 3.12,
+      "text": "the links will be in the description"
+    },
+    {
+      "start": 1798.86,
+      "end": 1801.56,
+      "duration": 2.7,
+      "text": "please make sure you check them out but"
+    },
+    {
+      "start": 1800.54,
+      "end": 1803.24,
+      "duration": 2.7,
+      "text": "this will be wrapping up this video"
+    },
+    {
+      "start": 1801.56,
+      "end": 1804.56,
+      "duration": 3.0,
+      "text": "let's read in some other video till then"
+    },
+    {
+      "start": 1803.24,
+      "end": 1808.64,
+      "duration": 5.4,
+      "text": "bye take care"
+    },
+    {
+      "start": 1804.56,
+      "end": 1812.98,
+      "duration": 8.42,
+      "text": "whenever your heart is broken don't ever"
+    },
+    {
+      "start": 1808.64,
+      "end": 1812.98,
+      "duration": 4.34,
+      "text": "forget your golden I"
+    }
+  ]
+}

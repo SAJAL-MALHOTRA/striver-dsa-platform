@@ -1,0 +1,3247 @@
+{
+  "video_id": "TXAuxeYBTdg",
+  "title": "BS-13. Minimum days to make M bouquets | Binary Search",
+  "duration_sec": 1561,
+  "segments": [
+    {
+      "start": 3.0,
+      "end": 6.0,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.5,
+      "end": 7.92,
+      "text": "I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.0,
+      "end": 9.36,
+      "text": "so we will be continuing with our binary"
+    },
+    {
+      "start": 7.92,
+      "end": 12.06,
+      "text": "search playlist which is the part of the"
+    },
+    {
+      "start": 9.36,
+      "end": 13.5,
+      "text": "Strivers A to Z DSA course in case you"
+    },
+    {
+      "start": 12.06,
+      "end": 15.12,
+      "text": "haven't checked it out here there's a"
+    },
+    {
+      "start": 13.5,
+      "end": 16.56,
+      "text": "link in the description please do make"
+    },
+    {
+      "start": 15.12,
+      "end": 17.64,
+      "text": "sure that you check it out so the"
+    },
+    {
+      "start": 16.56,
+      "end": 19.74,
+      "text": "problem that you're going to solve today"
+    },
+    {
+      "start": 17.64,
+      "end": 23.34,
+      "text": "will be finding out the minimum number"
+    },
+    {
+      "start": 19.74,
+      "end": 25.02,
+      "text": "of days to make M number of bookies now"
+    },
+    {
+      "start": 23.34,
+      "end": 27.36,
+      "text": "what does the problem State you'll be"
+    },
+    {
+      "start": 25.02,
+      "end": 31.02,
+      "text": "given an array Bloom day which will be"
+    },
+    {
+      "start": 27.36,
+      "end": 34.2,
+      "text": "consisting of the blooming days for n"
+    },
+    {
+      "start": 31.02,
+      "end": 36.84,
+      "text": "flowers what does it mean so the zeroth"
+    },
+    {
+      "start": 34.2,
+      "end": 39.0,
+      "text": "flower like the zeroth index flower will"
+    },
+    {
+      "start": 36.84,
+      "end": 41.76,
+      "text": "be blooming on the seventh day before"
+    },
+    {
+      "start": 39.0,
+      "end": 44.0,
+      "text": "that it hasn't bloomed this particular"
+    },
+    {
+      "start": 41.76,
+      "end": 47.1,
+      "text": "flower will be blooming on the 13th day"
+    },
+    {
+      "start": 44.0,
+      "end": 50.22,
+      "text": "this flower will be blooming on the 12th"
+    },
+    {
+      "start": 47.1,
+      "end": 52.1,
+      "text": "day now your task is to tell me what is"
+    },
+    {
+      "start": 50.22,
+      "end": 56.66,
+      "text": "the minimum number of days you require"
+    },
+    {
+      "start": 52.1,
+      "end": 61.14,
+      "text": "such that you have ample amount of"
+    },
+    {
+      "start": 56.66,
+      "end": 64.14,
+      "text": "blooming flowers to make M bouquets"
+    },
+    {
+      "start": 61.14,
+      "end": 64.92,
+      "text": "two bouquets in this case and you should"
+    },
+    {
+      "start": 64.14,
+      "end": 68.76,
+      "text": "have"
+    },
+    {
+      "start": 64.92,
+      "end": 70.62,
+      "text": "taken three adjacent flowers to have one"
+    },
+    {
+      "start": 68.76,
+      "end": 73.4,
+      "text": "bouquet let's understand the problem"
+    },
+    {
+      "start": 70.62,
+      "end": 76.32,
+      "text": "statement in depth now imagine imagine"
+    },
+    {
+      "start": 73.4,
+      "end": 79.02,
+      "text": "all the flowers are bloomed"
+    },
+    {
+      "start": 76.32,
+      "end": 81.6,
+      "text": "all the flowers are bloomed and that"
+    },
+    {
+      "start": 79.02,
+      "end": 85.02,
+      "text": "will that will only be possible if you"
+    },
+    {
+      "start": 81.6,
+      "end": 87.9,
+      "text": "are on the 13th day if you are on the 13"
+    },
+    {
+      "start": 85.02,
+      "end": 89.76,
+      "text": "day this would have already bloomed on"
+    },
+    {
+      "start": 87.9,
+      "end": 91.86,
+      "text": "the seventh this one this one this one"
+    },
+    {
+      "start": 89.76,
+      "end": 95.4,
+      "text": "this one will be blooming on the 13th"
+    },
+    {
+      "start": 91.86,
+      "end": 98.1,
+      "text": "this would have already already so all"
+    },
+    {
+      "start": 95.4,
+      "end": 100.68,
+      "text": "of these flowers will be bloomed on the"
+    },
+    {
+      "start": 98.1,
+      "end": 102.6,
+      "text": "13th day what do you need to make you"
+    },
+    {
+      "start": 100.68,
+      "end": 104.64,
+      "text": "need to make two bouquets of three"
+    },
+    {
+      "start": 102.6,
+      "end": 106.92,
+      "text": "flowers so if you take three flowers"
+    },
+    {
+      "start": 104.64,
+      "end": 108.48,
+      "text": "that will make one and if to again take"
+    },
+    {
+      "start": 106.92,
+      "end": 110.4,
+      "text": "three flowers that will make another"
+    },
+    {
+      "start": 108.48,
+      "end": 112.68,
+      "text": "bouquet so I have to make two bouquets"
+    },
+    {
+      "start": 110.4,
+      "end": 115.56,
+      "text": "okay so what I can do is I can probably"
+    },
+    {
+      "start": 112.68,
+      "end": 117.48,
+      "text": "take these three adjacent flowers and I"
+    },
+    {
+      "start": 115.56,
+      "end": 119.76,
+      "text": "can have one bouquet or maybe I can take"
+    },
+    {
+      "start": 117.48,
+      "end": 121.98,
+      "text": "this three adjacent flowers and I can"
+    },
+    {
+      "start": 119.76,
+      "end": 124.02,
+      "text": "have one bouquet you can take this as"
+    },
+    {
+      "start": 121.98,
+      "end": 126.84,
+      "text": "well you can take this as well doesn't"
+    },
+    {
+      "start": 124.02,
+      "end": 128.76,
+      "text": "matter as long as you're taking three"
+    },
+    {
+      "start": 126.84,
+      "end": 131.1,
+      "text": "adjacent flowers and you're making one"
+    },
+    {
+      "start": 128.76,
+      "end": 134.64,
+      "text": "bouquet that is what matters so I have"
+    },
+    {
+      "start": 131.1,
+      "end": 137.34,
+      "text": "formed two bouquets so I can say that if"
+    },
+    {
+      "start": 134.64,
+      "end": 141.06,
+      "text": "I take the 13 day if I take 13th day"
+    },
+    {
+      "start": 137.34,
+      "end": 143.52,
+      "text": "I'll be able to make two bouquets by"
+    },
+    {
+      "start": 141.06,
+      "end": 146.4,
+      "text": "picking up three adjacent flowers each"
+    },
+    {
+      "start": 143.52,
+      "end": 149.04,
+      "text": "so thereby 13 day is a possible answer"
+    },
+    {
+      "start": 146.4,
+      "end": 152.16,
+      "text": "but the question States you to find out"
+    },
+    {
+      "start": 149.04,
+      "end": 155.16,
+      "text": "what is the minimum possibility so what"
+    },
+    {
+      "start": 152.16,
+      "end": 158.7,
+      "text": "if I have I would have taken seventh day"
+    },
+    {
+      "start": 155.16,
+      "end": 161.22,
+      "text": "let's take this seventh day if I take"
+    },
+    {
+      "start": 158.7,
+      "end": 163.14,
+      "text": "this would have bloomed this would have"
+    },
+    {
+      "start": 161.22,
+      "end": 165.24,
+      "text": "this would have this would not have this"
+    },
+    {
+      "start": 163.14,
+      "end": 167.52,
+      "text": "would not have this would not have and"
+    },
+    {
+      "start": 165.24,
+      "end": 168.66,
+      "text": "this would have so I would have been"
+    },
+    {
+      "start": 167.52,
+      "end": 172.14,
+      "text": "able to make"
+    },
+    {
+      "start": 168.66,
+      "end": 174.06,
+      "text": "one bouquet over here and I cannot make"
+    },
+    {
+      "start": 172.14,
+      "end": 176.16,
+      "text": "any other bouquet why because they are"
+    },
+    {
+      "start": 174.06,
+      "end": 178.44,
+      "text": "not adjacent they are not adjacent so I"
+    },
+    {
+      "start": 176.16,
+      "end": 180.84,
+      "text": "cannot make any further bouquets it's"
+    },
+    {
+      "start": 178.44,
+      "end": 182.7,
+      "text": "very critical that three of them should"
+    },
+    {
+      "start": 180.84,
+      "end": 185.22,
+      "text": "be adjacent okay"
+    },
+    {
+      "start": 182.7,
+      "end": 187.38,
+      "text": "so this is not possible can I do it on"
+    },
+    {
+      "start": 185.22,
+      "end": 188.88,
+      "text": "the 12th day let's see if I take the"
+    },
+    {
+      "start": 187.38,
+      "end": 191.58,
+      "text": "12th day"
+    },
+    {
+      "start": 188.88,
+      "end": 194.1,
+      "text": "and I say okay this will be bloomed"
+    },
+    {
+      "start": 191.58,
+      "end": 197.22,
+      "text": "bloomed not bloomed bloom bloom bloom"
+    },
+    {
+      "start": 194.1,
+      "end": 199.8,
+      "text": "why because this is this needs 13th day"
+    },
+    {
+      "start": 197.22,
+      "end": 201.12,
+      "text": "to bloom can I make two bouquets let's"
+    },
+    {
+      "start": 199.8,
+      "end": 203.52,
+      "text": "see"
+    },
+    {
+      "start": 201.12,
+      "end": 205.8,
+      "text": "I can take this as one and I can take"
+    },
+    {
+      "start": 203.52,
+      "end": 209.22,
+      "text": "this as one so I can actually make two"
+    },
+    {
+      "start": 205.8,
+      "end": 212.1,
+      "text": "bouquets if I'm taking the 12th day"
+    },
+    {
+      "start": 209.22,
+      "end": 215.04,
+      "text": "can I get anything better than this"
+    },
+    {
+      "start": 212.1,
+      "end": 217.32,
+      "text": "let's try it let's take 11th so if I"
+    },
+    {
+      "start": 215.04,
+      "end": 219.12,
+      "text": "take 11th bloomed"
+    },
+    {
+      "start": 217.32,
+      "end": 221.76,
+      "text": "this one will be Bloom this one will not"
+    },
+    {
+      "start": 219.12,
+      "end": 223.32,
+      "text": "be bloomed this one will not be bloomed"
+    },
+    {
+      "start": 221.76,
+      "end": 225.72,
+      "text": "sorry this one will be bloomed actually"
+    },
+    {
+      "start": 223.32,
+      "end": 228.12,
+      "text": "and this one will uh will not be and"
+    },
+    {
+      "start": 225.72,
+      "end": 229.14,
+      "text": "this one will be can I make two bookcase"
+    },
+    {
+      "start": 228.12,
+      "end": 231.6,
+      "text": "let's see"
+    },
+    {
+      "start": 229.14,
+      "end": 234.36,
+      "text": "one I can surely make can I make make"
+    },
+    {
+      "start": 231.6,
+      "end": 237.24,
+      "text": "another one no I have three separate"
+    },
+    {
+      "start": 234.36,
+      "end": 239.22,
+      "text": "flowers but the point over here is you"
+    },
+    {
+      "start": 237.24,
+      "end": 242.46,
+      "text": "need adjacent three different flowers so"
+    },
+    {
+      "start": 239.22,
+      "end": 246.36,
+      "text": "not possibly so apparently it is not"
+    },
+    {
+      "start": 242.46,
+      "end": 248.6,
+      "text": "possible to make on the 11th day and if"
+    },
+    {
+      "start": 246.36,
+      "end": 251.58,
+      "text": "you carefully observe 12th was possible"
+    },
+    {
+      "start": 248.6,
+      "end": 254.46,
+      "text": "13th was possible eleventh is not"
+    },
+    {
+      "start": 251.58,
+      "end": 256.26,
+      "text": "possible so if 11th is not possible 10th"
+    },
+    {
+      "start": 254.46,
+      "end": 257.7,
+      "text": "will not be possible ninth will not be"
+    },
+    {
+      "start": 256.26,
+      "end": 261.24,
+      "text": "possible eight will not be possible"
+    },
+    {
+      "start": 257.7,
+      "end": 264.0,
+      "text": "anything under 11 will not be possible"
+    },
+    {
+      "start": 261.24,
+      "end": 268.02,
+      "text": "so can I say from 1 to 11 nothing is"
+    },
+    {
+      "start": 264.0,
+      "end": 270.36,
+      "text": "possible 12 and 13 both are possible and"
+    },
+    {
+      "start": 268.02,
+      "end": 273.72,
+      "text": "what do we need the minimum number of"
+    },
+    {
+      "start": 270.36,
+      "end": 277.08,
+      "text": "days so thereby can I say if I wait for"
+    },
+    {
+      "start": 273.72,
+      "end": 280.8,
+      "text": "12 days I'll be able to manage these"
+    },
+    {
+      "start": 277.08,
+      "end": 282.9,
+      "text": "amount of bookcase right so 12 is the"
+    },
+    {
+      "start": 280.8,
+      "end": 283.8,
+      "text": "answer for this one let's take one more"
+    },
+    {
+      "start": 282.9,
+      "end": 286.74,
+      "text": "example"
+    },
+    {
+      "start": 283.8,
+      "end": 289.92,
+      "text": "what about this now in this we're asking"
+    },
+    {
+      "start": 286.74,
+      "end": 293.7,
+      "text": "you to make three bouquets with two"
+    },
+    {
+      "start": 289.92,
+      "end": 295.86,
+      "text": "flowers each with two flowers each"
+    },
+    {
+      "start": 293.7,
+      "end": 297.84,
+      "text": "but if you carefully observe even if you"
+    },
+    {
+      "start": 295.86,
+      "end": 298.8,
+      "text": "take the 10th day even if you take the"
+    },
+    {
+      "start": 297.84,
+      "end": 301.2,
+      "text": "tenth day"
+    },
+    {
+      "start": 298.8,
+      "end": 304.62,
+      "text": "all the flowers would have already"
+    },
+    {
+      "start": 301.2,
+      "end": 308.34,
+      "text": "bloomed and I can at Max make"
+    },
+    {
+      "start": 304.62,
+      "end": 310.14,
+      "text": "to yeah duplicates that is what I can"
+    },
+    {
+      "start": 308.34,
+      "end": 313.5,
+      "text": "make and the problem is demanding you to"
+    },
+    {
+      "start": 310.14,
+      "end": 315.9,
+      "text": "make three bouquets so in such cases you"
+    },
+    {
+      "start": 313.5,
+      "end": 318.0,
+      "text": "have to return me minus one that is the"
+    },
+    {
+      "start": 315.9,
+      "end": 320.64,
+      "text": "problem if it is possible"
+    },
+    {
+      "start": 318.0,
+      "end": 322.56,
+      "text": "tell me the minimum number of days if it"
+    },
+    {
+      "start": 320.64,
+      "end": 323.82,
+      "text": "is not possible straight away return"
+    },
+    {
+      "start": 322.56,
+      "end": 325.86,
+      "text": "minus one that is what the question"
+    },
+    {
+      "start": 323.82,
+      "end": 328.14,
+      "text": "States so how do you approach this"
+    },
+    {
+      "start": 325.86,
+      "end": 329.64,
+      "text": "problem always remember whenever you are"
+    },
+    {
+      "start": 328.14,
+      "end": 332.16,
+      "text": "solving a problem the first approach"
+    },
+    {
+      "start": 329.64,
+      "end": 333.48,
+      "text": "should be how can I solve this in some"
+    },
+    {
+      "start": 332.16,
+      "end": 335.46,
+      "text": "way and then we can think of"
+    },
+    {
+      "start": 333.48,
+      "end": 337.62,
+      "text": "optimizations so the first thing that I"
+    },
+    {
+      "start": 335.46,
+      "end": 339.54,
+      "text": "should think of is how do I deal with"
+    },
+    {
+      "start": 337.62,
+      "end": 342.18,
+      "text": "the impossible case where I have to"
+    },
+    {
+      "start": 339.54,
+      "end": 344.88,
+      "text": "return something as minus one so we know"
+    },
+    {
+      "start": 342.18,
+      "end": 347.22,
+      "text": "one thing for sure if we take the the"
+    },
+    {
+      "start": 344.88,
+      "end": 350.22,
+      "text": "maximum Bloom day in the array which is"
+    },
+    {
+      "start": 347.22,
+      "end": 354.48,
+      "text": "10 all the flowers would have"
+    },
+    {
+      "start": 350.22,
+      "end": 357.0,
+      "text": "bloomed right and in such case the total"
+    },
+    {
+      "start": 354.48,
+      "end": 358.74,
+      "text": "number of flowers will be n which over"
+    },
+    {
+      "start": 357.0,
+      "end": 362.52,
+      "text": "here is five"
+    },
+    {
+      "start": 358.74,
+      "end": 366.72,
+      "text": "they want three bouquets of two flowers"
+    },
+    {
+      "start": 362.52,
+      "end": 370.44,
+      "text": "each which is a total of six so can I"
+    },
+    {
+      "start": 366.72,
+      "end": 372.12,
+      "text": "say if at any moment M into K or"
+    },
+    {
+      "start": 370.44,
+      "end": 375.48,
+      "text": "whatever is the number of bouquets into"
+    },
+    {
+      "start": 372.12,
+      "end": 378.3,
+      "text": "the number of adjacent exceeds"
+    },
+    {
+      "start": 375.48,
+      "end": 380.52,
+      "text": "the N this is not possible and this is"
+    },
+    {
+      "start": 378.3,
+      "end": 382.38,
+      "text": "the case of minus one because"
+    },
+    {
+      "start": 380.52,
+      "end": 384.66,
+      "text": "I have already bloomed all the flowers"
+    },
+    {
+      "start": 382.38,
+      "end": 386.52,
+      "text": "and I can always pick up adjacent I can"
+    },
+    {
+      "start": 384.66,
+      "end": 388.5,
+      "text": "always pick up adjacent because all the"
+    },
+    {
+      "start": 386.52,
+      "end": 391.56,
+      "text": "flowers will be picked and if I cannot"
+    },
+    {
+      "start": 388.5,
+      "end": 393.66,
+      "text": "make this total and that's greater than"
+    },
+    {
+      "start": 391.56,
+      "end": 395.88,
+      "text": "n then I just straight away return minus"
+    },
+    {
+      "start": 393.66,
+      "end": 398.34,
+      "text": "one so this is the only impossible case"
+    },
+    {
+      "start": 395.88,
+      "end": 401.16,
+      "text": "apart from it all the cases are possible"
+    },
+    {
+      "start": 398.34,
+      "end": 402.96,
+      "text": "because it is possible to bloom all the"
+    },
+    {
+      "start": 401.16,
+      "end": 405.42,
+      "text": "flowers so you'll be able to pick up"
+    },
+    {
+      "start": 402.96,
+      "end": 407.52,
+      "text": "adjacents for any given thing which is"
+    },
+    {
+      "start": 405.42,
+      "end": 408.96,
+      "text": "lesser than equal to n thereby it is"
+    },
+    {
+      "start": 407.52,
+      "end": 411.36,
+      "text": "possible so we have figured out the"
+    },
+    {
+      "start": 408.96,
+      "end": 412.86,
+      "text": "impossible case now let's come back and"
+    },
+    {
+      "start": 411.36,
+      "end": 415.8,
+      "text": "try to solve the case where it is"
+    },
+    {
+      "start": 412.86,
+      "end": 418.68,
+      "text": "possible so ask a very simple question"
+    },
+    {
+      "start": 415.8,
+      "end": 421.5,
+      "text": "what is the maximum answer like what's"
+    },
+    {
+      "start": 418.68,
+      "end": 423.96,
+      "text": "up what's the short short answer can I"
+    },
+    {
+      "start": 421.5,
+      "end": 426.72,
+      "text": "say if I look at the array"
+    },
+    {
+      "start": 423.96,
+      "end": 429.42,
+      "text": "and if I take the day 13"
+    },
+    {
+      "start": 426.72,
+      "end": 431.52,
+      "text": "everything will be bloomed"
+    },
+    {
+      "start": 429.42,
+      "end": 434.34,
+      "text": "I can surely say that if I take the day"
+    },
+    {
+      "start": 431.52,
+      "end": 435.96,
+      "text": "13 everything will be bloomed and if"
+    },
+    {
+      "start": 434.34,
+      "end": 437.88,
+      "text": "everything is bloomed"
+    },
+    {
+      "start": 435.96,
+      "end": 441.06,
+      "text": "I need two bookcase I'll just pick up"
+    },
+    {
+      "start": 437.88,
+      "end": 442.86,
+      "text": "the first two uh three adjacents and"
+    },
+    {
+      "start": 441.06,
+      "end": 444.54,
+      "text": "that is possible so one thing I know for"
+    },
+    {
+      "start": 442.86,
+      "end": 447.6,
+      "text": "sure is"
+    },
+    {
+      "start": 444.54,
+      "end": 450.3,
+      "text": "13 like whatever is the maximum value in"
+    },
+    {
+      "start": 447.6,
+      "end": 452.94,
+      "text": "the array that is for sure going to be"
+    },
+    {
+      "start": 450.3,
+      "end": 454.44,
+      "text": "my like that's that's definitely going"
+    },
+    {
+      "start": 452.94,
+      "end": 457.02,
+      "text": "to be one of my answers but the problem"
+    },
+    {
+      "start": 454.44,
+      "end": 458.94,
+      "text": "is I need the minimum so I need to"
+    },
+    {
+      "start": 457.02,
+      "end": 461.16,
+      "text": "figure out a smaller value that then"
+    },
+    {
+      "start": 458.94,
+      "end": 462.96,
+      "text": "that maximum possible answer the"
+    },
+    {
+      "start": 461.16,
+      "end": 465.96,
+      "text": "question is what is the minimum possible"
+    },
+    {
+      "start": 462.96,
+      "end": 468.42,
+      "text": "answer now you can probably say one day"
+    },
+    {
+      "start": 465.96,
+      "end": 470.28,
+      "text": "and check it out and then you can say"
+    },
+    {
+      "start": 468.42,
+      "end": 472.26,
+      "text": "two check it out you can say three check"
+    },
+    {
+      "start": 470.28,
+      "end": 474.24,
+      "text": "it out you can say four check it out but"
+    },
+    {
+      "start": 472.26,
+      "end": 476.46,
+      "text": "ideally what can you do you'll be like"
+    },
+    {
+      "start": 474.24,
+      "end": 477.54,
+      "text": "maybe take the minimal possibility"
+    },
+    {
+      "start": 476.46,
+      "end": 479.82,
+      "text": "because"
+    },
+    {
+      "start": 477.54,
+      "end": 482.04,
+      "text": "in order to groom at least one flower"
+    },
+    {
+      "start": 479.82,
+      "end": 483.42,
+      "text": "you need the day seven then only will"
+    },
+    {
+      "start": 482.04,
+      "end": 485.7,
+      "text": "Bloom something if you take day six"
+    },
+    {
+      "start": 483.42,
+      "end": 488.64,
+      "text": "nothing will be bloomed and you cannot"
+    },
+    {
+      "start": 485.7,
+      "end": 491.04,
+      "text": "even form one bouquet so in order to at"
+    },
+    {
+      "start": 488.64,
+      "end": 493.8,
+      "text": "least Bloom one flower you eat the"
+    },
+    {
+      "start": 491.04,
+      "end": 495.72,
+      "text": "minimum day which is seven so I know one"
+    },
+    {
+      "start": 493.8,
+      "end": 498.72,
+      "text": "thing for sure that my answer will"
+    },
+    {
+      "start": 495.72,
+      "end": 500.76,
+      "text": "always lie between 7 and 13 again very"
+    },
+    {
+      "start": 498.72,
+      "end": 502.8,
+      "text": "very easy thing to observe you just need"
+    },
+    {
+      "start": 500.76,
+      "end": 503.94,
+      "text": "to observe these things remember in"
+    },
+    {
+      "start": 502.8,
+      "end": 505.92,
+      "text": "order to approach these kind of"
+    },
+    {
+      "start": 503.94,
+      "end": 508.2,
+      "text": "questions the first thing is figuring"
+    },
+    {
+      "start": 505.92,
+      "end": 510.66,
+      "text": "out the range again you can"
+    },
+    {
+      "start": 508.2,
+      "end": 512.22,
+      "text": "you can even take this as one and you"
+    },
+    {
+      "start": 510.66,
+      "end": 515.28,
+      "text": "can take this as some big integer as"
+    },
+    {
+      "start": 512.22,
+      "end": 517.5,
+      "text": "well that will also work but the goal is"
+    },
+    {
+      "start": 515.28,
+      "end": 519.36,
+      "text": "to minimize the range as much as"
+    },
+    {
+      "start": 517.5,
+      "end": 521.16,
+      "text": "possible so what I've done is I've taken"
+    },
+    {
+      "start": 519.36,
+      "end": 524.4,
+      "text": "7 and 13."
+    },
+    {
+      "start": 521.16,
+      "end": 526.86,
+      "text": "for this one I know that from 7 and 13"
+    },
+    {
+      "start": 524.4,
+      "end": 529.08,
+      "text": "like between 7 and 13 there will be"
+    },
+    {
+      "start": 526.86,
+      "end": 532.02,
+      "text": "someone who will be my answer so what I"
+    },
+    {
+      "start": 529.08,
+      "end": 536.24,
+      "text": "will do now is I'll take the D7 and I'll"
+    },
+    {
+      "start": 532.02,
+      "end": 536.24,
+      "text": "try to see which flowers are glued"
+    },
+    {
+      "start": 537.56,
+      "end": 543.36,
+      "text": "and blue now what I'll do is I'll start"
+    },
+    {
+      "start": 541.14,
+      "end": 545.28,
+      "text": "iterating once I know what I have what"
+    },
+    {
+      "start": 543.36,
+      "end": 549.48,
+      "text": "has bloomed and what has not I'll start"
+    },
+    {
+      "start": 545.28,
+      "end": 554.76,
+      "text": "itating I'll be like okay counter one"
+    },
+    {
+      "start": 549.48,
+      "end": 557.52,
+      "text": "counter to counter three counter four"
+    },
+    {
+      "start": 554.76,
+      "end": 560.22,
+      "text": "and the moment I reach here I see it"
+    },
+    {
+      "start": 557.52,
+      "end": 563.7,
+      "text": "hasn't bloomed thereby the counter is"
+    },
+    {
+      "start": 560.22,
+      "end": 565.92,
+      "text": "four how many like before turning this"
+    },
+    {
+      "start": 563.7,
+      "end": 567.96,
+      "text": "because you have got a unbloomed flower"
+    },
+    {
+      "start": 565.92,
+      "end": 570.84,
+      "text": "so the counter will go back to zero so"
+    },
+    {
+      "start": 567.96,
+      "end": 574.14,
+      "text": "as of now you have a consecutive"
+    },
+    {
+      "start": 570.84,
+      "end": 576.18,
+      "text": "four bloomed flowers if I ask you how"
+    },
+    {
+      "start": 574.14,
+      "end": 578.46,
+      "text": "many bouquets can you form how many"
+    },
+    {
+      "start": 576.18,
+      "end": 580.56,
+      "text": "bouquets can you form you need three"
+    },
+    {
+      "start": 578.46,
+      "end": 583.2,
+      "text": "adjacent can I say the number of"
+    },
+    {
+      "start": 580.56,
+      "end": 586.38,
+      "text": "bouquets that you will form out of four"
+    },
+    {
+      "start": 583.2,
+      "end": 588.24,
+      "text": "consecutive will be one so you just have"
+    },
+    {
+      "start": 586.38,
+      "end": 590.58,
+      "text": "one as of now so you trim down the"
+    },
+    {
+      "start": 588.24,
+      "end": 592.26,
+      "text": "counter to zero and then you move you"
+    },
+    {
+      "start": 590.58,
+      "end": 593.88,
+      "text": "move and then you move and the counter"
+    },
+    {
+      "start": 592.26,
+      "end": 596.76,
+      "text": "is one again so at the end of the day"
+    },
+    {
+      "start": 593.88,
+      "end": 598.98,
+      "text": "the counter is one remember at the end"
+    },
+    {
+      "start": 596.76,
+      "end": 600.42,
+      "text": "of the day the counter is one so when"
+    },
+    {
+      "start": 598.98,
+      "end": 602.58,
+      "text": "you have ended everything again you"
+    },
+    {
+      "start": 600.42,
+      "end": 604.92,
+      "text": "check you have one how many bookcase can"
+    },
+    {
+      "start": 602.58,
+      "end": 606.54,
+      "text": "you form zero so what is the overall"
+    },
+    {
+      "start": 604.92,
+      "end": 610.5,
+      "text": "number of bookies that you could form"
+    },
+    {
+      "start": 606.54,
+      "end": 613.98,
+      "text": "one and how much did you require two so"
+    },
+    {
+      "start": 610.5,
+      "end": 616.5,
+      "text": "this day is not possible that is how you"
+    },
+    {
+      "start": 613.98,
+      "end": 618.66,
+      "text": "figure out okay perfect"
+    },
+    {
+      "start": 616.5,
+      "end": 621.96,
+      "text": "so day seven is not possible what you do"
+    },
+    {
+      "start": 618.66,
+      "end": 623.4,
+      "text": "is you take day eight and again you do"
+    },
+    {
+      "start": 621.96,
+      "end": 625.8,
+      "text": "the same thing and you will see that you"
+    },
+    {
+      "start": 623.4,
+      "end": 627.48,
+      "text": "can only form one bouquet next you'll"
+    },
+    {
+      "start": 625.8,
+      "end": 629.94,
+      "text": "take day nine and again you'll see the"
+    },
+    {
+      "start": 627.48,
+      "end": 631.38,
+      "text": "same pattern next you'll again take d10"
+    },
+    {
+      "start": 629.94,
+      "end": 633.36,
+      "text": "and again you'll see the same pattern"
+    },
+    {
+      "start": 631.38,
+      "end": 635.58,
+      "text": "next you'll take day 11 and the moment"
+    },
+    {
+      "start": 633.36,
+      "end": 640.08,
+      "text": "you take day 11 let's try it out and see"
+    },
+    {
+      "start": 635.58,
+      "end": 641.64,
+      "text": "so yes yes yes and this will be no this"
+    },
+    {
+      "start": 640.08,
+      "end": 643.74,
+      "text": "will be yes this will be no and this"
+    },
+    {
+      "start": 641.64,
+      "end": 645.78,
+      "text": "will be yes let's again try to do the"
+    },
+    {
+      "start": 643.74,
+      "end": 648.42,
+      "text": "same thing counter"
+    },
+    {
+      "start": 645.78,
+      "end": 650.64,
+      "text": "equal to 1 when you are here goes ahead"
+    },
+    {
+      "start": 648.42,
+      "end": 653.76,
+      "text": "counter two goes ahead counter three"
+    },
+    {
+      "start": 650.64,
+      "end": 655.16,
+      "text": "goes ahead counter four goes ahead and"
+    },
+    {
+      "start": 653.76,
+      "end": 657.48,
+      "text": "it finds a"
+    },
+    {
+      "start": 655.16,
+      "end": 659.82,
+      "text": "non-bloomed flower so here's a count of"
+    },
+    {
+      "start": 657.48,
+      "end": 662.88,
+      "text": "four how many will like how many"
+    },
+    {
+      "start": 659.82,
+      "end": 665.28,
+      "text": "bouquets will he get one perfect counter"
+    },
+    {
+      "start": 662.88,
+      "end": 668.76,
+      "text": "turns down to zero again starts from one"
+    },
+    {
+      "start": 665.28,
+      "end": 671.04,
+      "text": "again goes to somewhere which is not"
+    },
+    {
+      "start": 668.76,
+      "end": 675.0,
+      "text": "bloomed so how many bouquets will he"
+    },
+    {
+      "start": 671.04,
+      "end": 678.12,
+      "text": "make Zero Turns to zero again goes which"
+    },
+    {
+      "start": 675.0,
+      "end": 680.1,
+      "text": "makes the count of one and it ends at"
+    },
+    {
+      "start": 678.12,
+      "end": 682.44,
+      "text": "the end of the day whatever is the value"
+    },
+    {
+      "start": 680.1,
+      "end": 684.06,
+      "text": "you again check it and you get zero so"
+    },
+    {
+      "start": 682.44,
+      "end": 686.82,
+      "text": "the total number of bookish that you can"
+    },
+    {
+      "start": 684.06,
+      "end": 688.32,
+      "text": "form is one so day 11 is also not"
+    },
+    {
+      "start": 686.82,
+      "end": 690.54,
+      "text": "possible"
+    },
+    {
+      "start": 688.32,
+      "end": 693.3,
+      "text": "okay we have understood this what's the"
+    },
+    {
+      "start": 690.54,
+      "end": 695.58,
+      "text": "next job take day 12. if you're taking"
+    },
+    {
+      "start": 693.3,
+      "end": 698.1,
+      "text": "day 12 let's again do the same thing"
+    },
+    {
+      "start": 695.58,
+      "end": 700.26,
+      "text": "possible possible possible not possible"
+    },
+    {
+      "start": 698.1,
+      "end": 703.32,
+      "text": "possible possible possible let's do the"
+    },
+    {
+      "start": 700.26,
+      "end": 705.54,
+      "text": "same thing again counter equal to 1 when"
+    },
+    {
+      "start": 703.32,
+      "end": 707.04,
+      "text": "it is here moves ahead counter becomes"
+    },
+    {
+      "start": 705.54,
+      "end": 709.32,
+      "text": "two moves ahead counter becomes three"
+    },
+    {
+      "start": 707.04,
+      "end": 711.78,
+      "text": "moves ahead counter becomes four moves"
+    },
+    {
+      "start": 709.32,
+      "end": 714.6,
+      "text": "to a unbloomed flower moves to unknown"
+    },
+    {
+      "start": 711.78,
+      "end": 715.98,
+      "text": "flower so again you go back to counting"
+    },
+    {
+      "start": 714.6,
+      "end": 718.62,
+      "text": "the number of bouquets that you can form"
+    },
+    {
+      "start": 715.98,
+      "end": 720.96,
+      "text": "from that consecutive numbers that's one"
+    },
+    {
+      "start": 718.62,
+      "end": 722.82,
+      "text": "the moment you uh sorry the moment you"
+    },
+    {
+      "start": 720.96,
+      "end": 724.62,
+      "text": "come to unbloomed you make it zero and"
+    },
+    {
+      "start": 722.82,
+      "end": 726.84,
+      "text": "then you move back counter becomes one"
+    },
+    {
+      "start": 724.62,
+      "end": 729.6,
+      "text": "counter becomes two counter becomes"
+    },
+    {
+      "start": 726.84,
+      "end": 732.0,
+      "text": "three and it is over at the end of the"
+    },
+    {
+      "start": 729.6,
+      "end": 734.88,
+      "text": "day I emphasize at the end of the day it"
+    },
+    {
+      "start": 732.0,
+      "end": 736.32,
+      "text": "is very very important to whatever you"
+    },
+    {
+      "start": 734.88,
+      "end": 738.72,
+      "text": "have you just do a three by three and"
+    },
+    {
+      "start": 736.32,
+      "end": 741.3,
+      "text": "say one so the total number is two which"
+    },
+    {
+      "start": 738.72,
+      "end": 742.86,
+      "text": "is the required bookcase say it started"
+    },
+    {
+      "start": 741.3,
+      "end": 745.44,
+      "text": "from seven if you remember the range was"
+    },
+    {
+      "start": 742.86,
+      "end": 748.38,
+      "text": "seven you went eight nine ten eleven and"
+    },
+    {
+      "start": 745.44,
+      "end": 751.26,
+      "text": "then you are at 12. at 12 you see that"
+    },
+    {
+      "start": 748.38,
+      "end": 754.86,
+      "text": "you're able to form two bouquets thereby"
+    },
+    {
+      "start": 751.26,
+      "end": 758.28,
+      "text": "possible possible hence your answer is"
+    },
+    {
+      "start": 754.86,
+      "end": 760.38,
+      "text": "well you can try with 13 as well but the"
+    },
+    {
+      "start": 758.28,
+      "end": 763.5,
+      "text": "question states to find the minimum"
+    },
+    {
+      "start": 760.38,
+      "end": 765.3,
+      "text": "number of days got it so first I'll try"
+    },
+    {
+      "start": 763.5,
+      "end": 767.28,
+      "text": "to write the function which kind of"
+    },
+    {
+      "start": 765.3,
+      "end": 769.8,
+      "text": "takes the day number and tells me if it"
+    },
+    {
+      "start": 767.28,
+      "end": 771.78,
+      "text": "is possible or not okay so let's try to"
+    },
+    {
+      "start": 769.8,
+      "end": 774.42,
+      "text": "write down that function and then we can"
+    },
+    {
+      "start": 771.78,
+      "end": 777.48,
+      "text": "go ahead and probably write down the"
+    },
+    {
+      "start": 774.42,
+      "end": 779.04,
+      "text": "uh normal Brute Force thing let's first"
+    },
+    {
+      "start": 777.48,
+      "end": 781.74,
+      "text": "try to write down the function which"
+    },
+    {
+      "start": 779.04,
+      "end": 784.92,
+      "text": "tells me possible or not"
+    },
+    {
+      "start": 781.74,
+      "end": 787.2,
+      "text": "so I'm basically taking this uh array"
+    },
+    {
+      "start": 784.92,
+      "end": 790.2,
+      "text": "which has all the bloom days and I'm"
+    },
+    {
+      "start": 787.2,
+      "end": 792.18,
+      "text": "passing him a very simple value"
+    },
+    {
+      "start": 790.2,
+      "end": 792.9,
+      "text": "so what is this value or I can say the"
+    },
+    {
+      "start": 792.18,
+      "end": 794.78,
+      "text": "day"
+    },
+    {
+      "start": 792.9,
+      "end": 797.28,
+      "text": "or I can say d"
+    },
+    {
+      "start": 794.78,
+      "end": 799.2,
+      "text": "okay I'll say d"
+    },
+    {
+      "start": 797.28,
+      "end": 801.54,
+      "text": "and this is where I start writing the"
+    },
+    {
+      "start": 799.2,
+      "end": 803.82,
+      "text": "code so what I'm saying is okay if I'm"
+    },
+    {
+      "start": 801.54,
+      "end": 807.96,
+      "text": "giving you this day and I'm also giving"
+    },
+    {
+      "start": 803.82,
+      "end": 811.08,
+      "text": "you maybe let's say the"
+    },
+    {
+      "start": 807.96,
+      "end": 813.18,
+      "text": "what is there M and K so these are the"
+    },
+    {
+      "start": 811.08,
+      "end": 815.22,
+      "text": "number of bouquets I need and uh"
+    },
+    {
+      "start": 813.18,
+      "end": 816.18,
+      "text": "this is the adjacent that you can have"
+    },
+    {
+      "start": 815.22,
+      "end": 818.58,
+      "text": "perfect"
+    },
+    {
+      "start": 816.18,
+      "end": 820.62,
+      "text": "let's start writing code"
+    },
+    {
+      "start": 818.58,
+      "end": 824.94,
+      "text": "so let's take initially the counter to"
+    },
+    {
+      "start": 820.62,
+      "end": 827.34,
+      "text": "b0 and let's start from Indi equal to 0"
+    },
+    {
+      "start": 824.94,
+      "end": 829.38,
+      "text": "and I can go on till n minus 1 which is"
+    },
+    {
+      "start": 827.34,
+      "end": 831.36,
+      "text": "basically the size of the array"
+    },
+    {
+      "start": 829.38,
+      "end": 832.56,
+      "text": "I know one thing"
+    },
+    {
+      "start": 831.36,
+      "end": 834.12,
+      "text": "if"
+    },
+    {
+      "start": 832.56,
+      "end": 836.94,
+      "text": "array of"
+    },
+    {
+      "start": 834.12,
+      "end": 838.5,
+      "text": "I is lesser than the bloom day like"
+    },
+    {
+      "start": 836.94,
+      "end": 839.82,
+      "text": "whatever day you are considering if you"
+    },
+    {
+      "start": 838.5,
+      "end": 841.86,
+      "text": "are considering eighth if you are"
+    },
+    {
+      "start": 839.82,
+      "end": 843.66,
+      "text": "considering ninth that means the"
+    },
+    {
+      "start": 841.86,
+      "end": 845.76,
+      "text": "blooming is possible that means the"
+    },
+    {
+      "start": 843.66,
+      "end": 848.4,
+      "text": "blooming is possible if it is possible"
+    },
+    {
+      "start": 845.76,
+      "end": 850.08,
+      "text": "you simply do a counter plus plus you do"
+    },
+    {
+      "start": 848.4,
+      "end": 853.38,
+      "text": "not do anything you simply do a counter"
+    },
+    {
+      "start": 850.08,
+      "end": 856.26,
+      "text": "plus plus if it is not possible that"
+    },
+    {
+      "start": 853.38,
+      "end": 859.2,
+      "text": "means you are in an ungloomy like you"
+    },
+    {
+      "start": 856.26,
+      "end": 860.76,
+      "text": "are in this phase where it is not"
+    },
+    {
+      "start": 859.2,
+      "end": 862.8,
+      "text": "possible where it is not possible when"
+    },
+    {
+      "start": 860.76,
+      "end": 864.54,
+      "text": "you turn it to zero but before turning"
+    },
+    {
+      "start": 862.8,
+      "end": 866.34,
+      "text": "it to zero what did you do you took"
+    },
+    {
+      "start": 864.54,
+      "end": 868.68,
+      "text": "whatever it was and you divided it by"
+    },
+    {
+      "start": 866.34,
+      "end": 870.96,
+      "text": "this so maybe"
+    },
+    {
+      "start": 868.68,
+      "end": 873.06,
+      "text": "what you can do is like number of"
+    },
+    {
+      "start": 870.96,
+      "end": 875.16,
+      "text": "bouquets that you can form"
+    },
+    {
+      "start": 873.06,
+      "end": 876.9,
+      "text": "will be zero you can say number of"
+    },
+    {
+      "start": 875.16,
+      "end": 879.74,
+      "text": "bookies that I can form will be plus"
+    },
+    {
+      "start": 876.9,
+      "end": 882.86,
+      "text": "equal to whatever consecutive I had"
+    },
+    {
+      "start": 879.74,
+      "end": 885.36,
+      "text": "divided by the adjacents that I require"
+    },
+    {
+      "start": 882.86,
+      "end": 887.34,
+      "text": "divided by adjacents that I require that"
+    },
+    {
+      "start": 885.36,
+      "end": 888.9,
+      "text": "is what we did four by three and you"
+    },
+    {
+      "start": 887.34,
+      "end": 891.18,
+      "text": "basically take that and you add it into"
+    },
+    {
+      "start": 888.9,
+      "end": 893.16,
+      "text": "your number of bookies and you turn back"
+    },
+    {
+      "start": 891.18,
+      "end": 895.14,
+      "text": "the count to zero because you again"
+    },
+    {
+      "start": 893.16,
+      "end": 897.96,
+      "text": "start counting consecutive and that's"
+    },
+    {
+      "start": 895.14,
+      "end": 899.94,
+      "text": "over again I emphasize at the end of the"
+    },
+    {
+      "start": 897.96,
+      "end": 903.3,
+      "text": "day at the end of the day please make"
+    },
+    {
+      "start": 899.94,
+      "end": 905.34,
+      "text": "sure whatever you have the count as you"
+    },
+    {
+      "start": 903.3,
+      "end": 907.98,
+      "text": "again divided by K because"
+    },
+    {
+      "start": 905.34,
+      "end": 910.14,
+      "text": "remember the case when you had this this"
+    },
+    {
+      "start": 907.98,
+      "end": 911.76,
+      "text": "at the end of the day you had three you"
+    },
+    {
+      "start": 910.14,
+      "end": 913.68,
+      "text": "have to make sure you count it as well"
+    },
+    {
+      "start": 911.76,
+      "end": 916.92,
+      "text": "so at the end of the day please make"
+    },
+    {
+      "start": 913.68,
+      "end": 921.84,
+      "text": "sure you count it is it possible"
+    },
+    {
+      "start": 916.92,
+      "end": 925.68,
+      "text": "if number of bouquets is lesser sorry is"
+    },
+    {
+      "start": 921.84,
+      "end": 930.84,
+      "text": "greater than equal to the required it is"
+    },
+    {
+      "start": 925.68,
+      "end": 932.34,
+      "text": "possible or else it is not possible"
+    },
+    {
+      "start": 930.84,
+      "end": 935.52,
+      "text": "so I have written down the function"
+    },
+    {
+      "start": 932.34,
+      "end": 937.86,
+      "text": "which takes a array which is the bloom"
+    },
+    {
+      "start": 935.52,
+      "end": 940.74,
+      "text": "day takes the day that I'm looking for"
+    },
+    {
+      "start": 937.86,
+      "end": 943.02,
+      "text": "takes the number of book is required and"
+    },
+    {
+      "start": 940.74,
+      "end": 945.48,
+      "text": "takes the adjacent and tells me if it is"
+    },
+    {
+      "start": 943.02,
+      "end": 947.88,
+      "text": "possible or not so this is ready this is"
+    },
+    {
+      "start": 945.48,
+      "end": 951.84,
+      "text": "ready I'm trying out with the Brute"
+    },
+    {
+      "start": 947.88,
+      "end": 954.18,
+      "text": "Force so I know what will be my range"
+    },
+    {
+      "start": 951.84,
+      "end": 955.8,
+      "text": "so I will start off with what the"
+    },
+    {
+      "start": 954.18,
+      "end": 958.5,
+      "text": "minimum possible element"
+    },
+    {
+      "start": 955.8,
+      "end": 961.14,
+      "text": "and the maximum is where the answer will"
+    },
+    {
+      "start": 958.5,
+      "end": 963.12,
+      "text": "be so I'll just go over there what will"
+    },
+    {
+      "start": 961.14,
+      "end": 965.46,
+      "text": "I say if"
+    },
+    {
+      "start": 963.12,
+      "end": 967.98,
+      "text": "possible"
+    },
+    {
+      "start": 965.46,
+      "end": 971.64,
+      "text": "give him the array give him this day"
+    },
+    {
+      "start": 967.98,
+      "end": 974.82,
+      "text": "give him the M give him the K if this is"
+    },
+    {
+      "start": 971.64,
+      "end": 977.88,
+      "text": "possible then return this answer then"
+    },
+    {
+      "start": 974.82,
+      "end": 980.46,
+      "text": "return this answer or else"
+    },
+    {
+      "start": 977.88,
+      "end": 982.68,
+      "text": "so or else you can just go ahead and"
+    },
+    {
+      "start": 980.46,
+      "end": 985.74,
+      "text": "increase the value of I and check for"
+    },
+    {
+      "start": 982.68,
+      "end": 988.74,
+      "text": "the next day so this is going to be the"
+    },
+    {
+      "start": 985.74,
+      "end": 990.66,
+      "text": "Brute Force solution and and if we have"
+    },
+    {
+      "start": 988.74,
+      "end": 991.92,
+      "text": "tried out everything and at the end of"
+    },
+    {
+      "start": 990.66,
+      "end": 993.78,
+      "text": "the day you don't get your answer you"
+    },
+    {
+      "start": 991.92,
+      "end": 997.28,
+      "text": "can return minus one again at the start"
+    },
+    {
+      "start": 993.78,
+      "end": 1001.28,
+      "text": "you could have straight away checked if"
+    },
+    {
+      "start": 997.28,
+      "end": 1003.8,
+      "text": "n what is that yeah sorry if n is lesser"
+    },
+    {
+      "start": 1001.28,
+      "end": 1005.42,
+      "text": "than M into k then also you can return a"
+    },
+    {
+      "start": 1003.8,
+      "end": 1008.54,
+      "text": "minus 1 because that is the impossible"
+    },
+    {
+      "start": 1005.42,
+      "end": 1010.88,
+      "text": "case when you exceed so I've written the"
+    },
+    {
+      "start": 1008.54,
+      "end": 1012.74,
+      "text": "Brute Force what is the time complexity"
+    },
+    {
+      "start": 1010.88,
+      "end": 1013.94,
+      "text": "it's very important to understand the"
+    },
+    {
+      "start": 1012.74,
+      "end": 1015.5,
+      "text": "Brute Force because the moment you"
+    },
+    {
+      "start": 1013.94,
+      "end": 1017.42,
+      "text": "understand the Brute Force it's super"
+    },
+    {
+      "start": 1015.5,
+      "end": 1020.12,
+      "text": "simple to optimize it what is the time"
+    },
+    {
+      "start": 1017.42,
+      "end": 1023.48,
+      "text": "complexity this Loop can I say is"
+    },
+    {
+      "start": 1020.12,
+      "end": 1024.92,
+      "text": "running for Max C minus Mini"
+    },
+    {
+      "start": 1023.48,
+      "end": 1026.78,
+      "text": "times"
+    },
+    {
+      "start": 1024.92,
+      "end": 1029.48,
+      "text": "because that is what it is running for"
+    },
+    {
+      "start": 1026.78,
+      "end": 1031.04,
+      "text": "Maxi minus many times perfect"
+    },
+    {
+      "start": 1029.48,
+      "end": 1033.08,
+      "text": "plus 1 actually"
+    },
+    {
+      "start": 1031.04,
+      "end": 1035.0,
+      "text": "if I take the exact number it'll be plus"
+    },
+    {
+      "start": 1033.08,
+      "end": 1037.7,
+      "text": "one yeah these many times it is running"
+    },
+    {
+      "start": 1035.0,
+      "end": 1040.28,
+      "text": "into you're checking for a possibility"
+    },
+    {
+      "start": 1037.7,
+      "end": 1041.48,
+      "text": "you are checking for a possibility and"
+    },
+    {
+      "start": 1040.28,
+      "end": 1043.46,
+      "text": "in order to check what are you doing"
+    },
+    {
+      "start": 1041.48,
+      "end": 1047.18,
+      "text": "you're going through the entire array so"
+    },
+    {
+      "start": 1043.46,
+      "end": 1050.18,
+      "text": "it's a O(N) it's a O(N) that"
+    },
+    {
+      "start": 1047.18,
+      "end": 1052.28,
+      "text": "will be my time complexity"
+    },
+    {
+      "start": 1050.18,
+      "end": 1055.58,
+      "text": "yes that will be the time complexity of"
+    },
+    {
+      "start": 1052.28,
+      "end": 1057.74,
+      "text": "the Brute Force now the question arises"
+    },
+    {
+      "start": 1055.58,
+      "end": 1061.76,
+      "text": "can I optimize this"
+    },
+    {
+      "start": 1057.74,
+      "end": 1064.82,
+      "text": "can I probably I can why can I let's go"
+    },
+    {
+      "start": 1061.76,
+      "end": 1066.5,
+      "text": "back in order to write this we had 7 8"
+    },
+    {
+      "start": 1064.82,
+      "end": 1068.6,
+      "text": "because that was the range in which the"
+    },
+    {
+      "start": 1066.5,
+      "end": 1071.96,
+      "text": "answer was possible"
+    },
+    {
+      "start": 1068.6,
+      "end": 1073.82,
+      "text": "we had the range something like this and"
+    },
+    {
+      "start": 1071.96,
+      "end": 1075.68,
+      "text": "we knew this was not possible this was"
+    },
+    {
+      "start": 1073.82,
+      "end": 1077.24,
+      "text": "not possible this was not possible this"
+    },
+    {
+      "start": 1075.68,
+      "end": 1079.22,
+      "text": "was not possible this was possible and"
+    },
+    {
+      "start": 1077.24,
+      "end": 1082.52,
+      "text": "this was possible so we know the range"
+    },
+    {
+      "start": 1079.22,
+      "end": 1085.76,
+      "text": "and we know in which area it is not"
+    },
+    {
+      "start": 1082.52,
+      "end": 1087.08,
+      "text": "possible in which area it is possible so"
+    },
+    {
+      "start": 1085.76,
+      "end": 1089.12,
+      "text": "if I know this"
+    },
+    {
+      "start": 1087.08,
+      "end": 1092.6,
+      "text": "the problem becomes super simple isn't"
+    },
+    {
+      "start": 1089.12,
+      "end": 1095.0,
+      "text": "it yes binary search we straight away"
+    },
+    {
+      "start": 1092.6,
+      "end": 1097.88,
+      "text": "apply binary search by saying this is my"
+    },
+    {
+      "start": 1095.0,
+      "end": 1099.32,
+      "text": "low this is my high I know where it is"
+    },
+    {
+      "start": 1097.88,
+      "end": 1101.06,
+      "text": "possible where it is not possible I"
+    },
+    {
+      "start": 1099.32,
+      "end": 1103.16,
+      "text": "straight up apply band research so you"
+    },
+    {
+      "start": 1101.06,
+      "end": 1104.66,
+      "text": "can pause the video right away and you"
+    },
+    {
+      "start": 1103.16,
+      "end": 1106.88,
+      "text": "can try out the binary search solution"
+    },
+    {
+      "start": 1104.66,
+      "end": 1108.68,
+      "text": "in case you are having problems or in"
+    },
+    {
+      "start": 1106.88,
+      "end": 1110.72,
+      "text": "case you want to verify you can come"
+    },
+    {
+      "start": 1108.68,
+      "end": 1112.88,
+      "text": "back and watch it from here again by"
+    },
+    {
+      "start": 1110.72,
+      "end": 1115.46,
+      "text": "doing a fast forward okay so time for"
+    },
+    {
+      "start": 1112.88,
+      "end": 1117.44,
+      "text": "binary search was the first component in"
+    },
+    {
+      "start": 1115.46,
+      "end": 1119.12,
+      "text": "binary search to figure out the range we"
+    },
+    {
+      "start": 1117.44,
+      "end": 1121.7,
+      "text": "have already done that we know the"
+    },
+    {
+      "start": 1119.12,
+      "end": 1123.5,
+      "text": "answer will be from 7 to 13 that's the"
+    },
+    {
+      "start": 1121.7,
+      "end": 1125.66,
+      "text": "minimum element and that's the maximum"
+    },
+    {
+      "start": 1123.5,
+      "end": 1128.48,
+      "text": "element what we do is we keep the low as"
+    },
+    {
+      "start": 1125.66,
+      "end": 1130.76,
+      "text": "this and we keep the high at this and"
+    },
+    {
+      "start": 1128.48,
+      "end": 1133.64,
+      "text": "I'll quickly write down the numbers so"
+    },
+    {
+      "start": 1130.76,
+      "end": 1135.92,
+      "text": "that we can start with the binary search"
+    },
+    {
+      "start": 1133.64,
+      "end": 1139.34,
+      "text": "where will the middle be the middle will"
+    },
+    {
+      "start": 1135.92,
+      "end": 1143.0,
+      "text": "be 13 plus 7 by 2 which is 10 to start"
+    },
+    {
+      "start": 1139.34,
+      "end": 1145.4,
+      "text": "off with so the middle will be at 10."
+    },
+    {
+      "start": 1143.0,
+      "end": 1147.08,
+      "text": "so what you do is you take the 10th day"
+    },
+    {
+      "start": 1145.4,
+      "end": 1149.72,
+      "text": "and see if it is possible or not so if"
+    },
+    {
+      "start": 1147.08,
+      "end": 1152.72,
+      "text": "you remember on the 10th day it was not"
+    },
+    {
+      "start": 1149.72,
+      "end": 1155.36,
+      "text": "possible so what you can say is hey on"
+    },
+    {
+      "start": 1152.72,
+      "end": 1157.76,
+      "text": "the 10th day it is not possible so if it"
+    },
+    {
+      "start": 1155.36,
+      "end": 1159.98,
+      "text": "is not possible on the 10th day can I"
+    },
+    {
+      "start": 1157.76,
+      "end": 1162.5,
+      "text": "surely say one thing that"
+    },
+    {
+      "start": 1159.98,
+      "end": 1164.96,
+      "text": "from the 10th day it is not possible"
+    },
+    {
+      "start": 1162.5,
+      "end": 1166.94,
+      "text": "on the 9th it will not be because lesser"
+    },
+    {
+      "start": 1164.96,
+      "end": 1169.1,
+      "text": "number of flowers will Bloom on Ninth"
+    },
+    {
+      "start": 1166.94,
+      "end": 1170.78,
+      "text": "lesser on Eighth and lesser on Seventh"
+    },
+    {
+      "start": 1169.1,
+      "end": 1173.72,
+      "text": "so what I can say is"
+    },
+    {
+      "start": 1170.78,
+      "end": 1177.08,
+      "text": "none of the days before 10 will also be"
+    },
+    {
+      "start": 1173.72,
+      "end": 1179.06,
+      "text": "possible thereby I can take this yes I"
+    },
+    {
+      "start": 1177.08,
+      "end": 1180.74,
+      "text": "can take this and I can move it to this"
+    },
+    {
+      "start": 1179.06,
+      "end": 1182.72,
+      "text": "portion"
+    },
+    {
+      "start": 1180.74,
+      "end": 1184.88,
+      "text": "so we have a new Range where we can find"
+    },
+    {
+      "start": 1182.72,
+      "end": 1187.58,
+      "text": "the answer what really what will we do"
+    },
+    {
+      "start": 1184.88,
+      "end": 1190.4,
+      "text": "we will take a mid again the mid will"
+    },
+    {
+      "start": 1187.58,
+      "end": 1192.8,
+      "text": "this time be 12 I can't explain how to"
+    },
+    {
+      "start": 1190.4,
+      "end": 1194.06,
+      "text": "find when now is 12 possible"
+    },
+    {
+      "start": 1192.8,
+      "end": 1196.46,
+      "text": "you see"
+    },
+    {
+      "start": 1194.06,
+      "end": 1199.58,
+      "text": "12 is possible maybe you can keep an"
+    },
+    {
+      "start": 1196.46,
+      "end": 1201.5,
+      "text": "answer variable as we did just so that"
+    },
+    {
+      "start": 1199.58,
+      "end": 1203.96,
+      "text": "in case you are facing problem with low"
+    },
+    {
+      "start": 1201.5,
+      "end": 1205.82,
+      "text": "and high and you can store answer as 12."
+    },
+    {
+      "start": 1203.96,
+      "end": 1208.76,
+      "text": "so today what are you saying 12 is"
+    },
+    {
+      "start": 1205.82,
+      "end": 1209.72,
+      "text": "possible so I'm saying okay 12 is"
+    },
+    {
+      "start": 1208.76,
+      "end": 1212.54,
+      "text": "possible"
+    },
+    {
+      "start": 1209.72,
+      "end": 1214.82,
+      "text": "what do I require I require minimum"
+    },
+    {
+      "start": 1212.54,
+      "end": 1216.86,
+      "text": "number of days if I require minimum will"
+    },
+    {
+      "start": 1214.82,
+      "end": 1218.0,
+      "text": "I go ahead and check for 13 because I"
+    },
+    {
+      "start": 1216.86,
+      "end": 1219.82,
+      "text": "need small"
+    },
+    {
+      "start": 1218.0,
+      "end": 1222.86,
+      "text": "hence I'll say if 12 is possible"
+    },
+    {
+      "start": 1219.82,
+      "end": 1226.58,
+      "text": "eliminate the right look for small look"
+    },
+    {
+      "start": 1222.86,
+      "end": 1229.52,
+      "text": "for small and thereby move the high to a"
+    },
+    {
+      "start": 1226.58,
+      "end": 1231.2,
+      "text": "point before mid because you eliminate"
+    },
+    {
+      "start": 1229.52,
+      "end": 1234.14,
+      "text": "the right part binary search is all"
+    },
+    {
+      "start": 1231.2,
+      "end": 1236.18,
+      "text": "about eliminating ranges done where's"
+    },
+    {
+      "start": 1234.14,
+      "end": 1239.24,
+      "text": "the midpointing the mid is pointing to"
+    },
+    {
+      "start": 1236.18,
+      "end": 1241.22,
+      "text": "11. what do we see 11 is it possible you"
+    },
+    {
+      "start": 1239.24,
+      "end": 1243.8,
+      "text": "can again do the algorithm and you will"
+    },
+    {
+      "start": 1241.22,
+      "end": 1244.82,
+      "text": "see that 11 is not possible if 11 is not"
+    },
+    {
+      "start": 1243.8,
+      "end": 1246.98,
+      "text": "possible"
+    },
+    {
+      "start": 1244.82,
+      "end": 1249.02,
+      "text": "anything before 11 will not be possible"
+    },
+    {
+      "start": 1246.98,
+      "end": 1251.24,
+      "text": "the left part will be eliminated and the"
+    },
+    {
+      "start": 1249.02,
+      "end": 1253.16,
+      "text": "left part is eliminated what will go to"
+    },
+    {
+      "start": 1251.24,
+      "end": 1254.54,
+      "text": "the right yes the low will go to the"
+    },
+    {
+      "start": 1253.16,
+      "end": 1257.06,
+      "text": "right because the left part is"
+    },
+    {
+      "start": 1254.54,
+      "end": 1259.52,
+      "text": "eliminated so thereby at the end when"
+    },
+    {
+      "start": 1257.06,
+      "end": 1260.84,
+      "text": "you eliminate left the high will be"
+    },
+    {
+      "start": 1259.52,
+      "end": 1263.3,
+      "text": "pointing here and the low will be"
+    },
+    {
+      "start": 1260.84,
+      "end": 1265.94,
+      "text": "pointing there we're done understood"
+    },
+    {
+      "start": 1263.3,
+      "end": 1266.78,
+      "text": "again carefully observe where is your"
+    },
+    {
+      "start": 1265.94,
+      "end": 1270.08,
+      "text": "answer"
+    },
+    {
+      "start": 1266.78,
+      "end": 1273.62,
+      "text": "your answer is somewhere on the low"
+    },
+    {
+      "start": 1270.08,
+      "end": 1275.66,
+      "text": "your answer is somewhere pointing to uh"
+    },
+    {
+      "start": 1273.62,
+      "end": 1278.24,
+      "text": "let's analyze do we need the answer"
+    },
+    {
+      "start": 1275.66,
+      "end": 1281.3,
+      "text": "variable we don't why because the answer"
+    },
+    {
+      "start": 1278.24,
+      "end": 1283.7,
+      "text": "is already pointed like pointed by low"
+    },
+    {
+      "start": 1281.3,
+      "end": 1286.88,
+      "text": "why did that happen again opposite"
+    },
+    {
+      "start": 1283.7,
+      "end": 1290.06,
+      "text": "polarity I told you that concept"
+    },
+    {
+      "start": 1286.88,
+      "end": 1291.74,
+      "text": "if you have a low here which is assuming"
+    },
+    {
+      "start": 1290.06,
+      "end": 1294.02,
+      "text": "not possible"
+    },
+    {
+      "start": 1291.74,
+      "end": 1295.76,
+      "text": "you have a high which is assuming"
+    },
+    {
+      "start": 1294.02,
+      "end": 1298.28,
+      "text": "possible assuming again"
+    },
+    {
+      "start": 1295.76,
+      "end": 1301.88,
+      "text": "low will end up at a point where it is"
+    },
+    {
+      "start": 1298.28,
+      "end": 1303.14,
+      "text": "of the opposite polarity right and the"
+    },
+    {
+      "start": 1301.88,
+      "end": 1305.9,
+      "text": "high will end up at the opposite"
+    },
+    {
+      "start": 1303.14,
+      "end": 1307.94,
+      "text": "polarity perfect you see high coming"
+    },
+    {
+      "start": 1305.9,
+      "end": 1310.88,
+      "text": "from a possible to not possible low"
+    },
+    {
+      "start": 1307.94,
+      "end": 1313.3,
+      "text": "going from a not possible to a simple as"
+    },
+    {
+      "start": 1310.88,
+      "end": 1315.44,
+      "text": "that so once you have done this"
+    },
+    {
+      "start": 1313.3,
+      "end": 1318.2,
+      "text": "thereby the low will be answered because"
+    },
+    {
+      "start": 1315.44,
+      "end": 1320.0,
+      "text": "you are looking for possible possible"
+    },
+    {
+      "start": 1318.2,
+      "end": 1321.92,
+      "text": "correct so that thereby the answer will"
+    },
+    {
+      "start": 1320.0,
+      "end": 1323.0,
+      "text": "be at low so if I have to write the"
+    },
+    {
+      "start": 1321.92,
+      "end": 1324.56,
+      "text": "binary search"
+    },
+    {
+      "start": 1323.0,
+      "end": 1326.48,
+      "text": "how will the binary search code look"
+    },
+    {
+      "start": 1324.56,
+      "end": 1328.46,
+      "text": "like remember we have already written"
+    },
+    {
+      "start": 1326.48,
+      "end": 1330.56,
+      "text": "the possible code so we just need to"
+    },
+    {
+      "start": 1328.46,
+      "end": 1332.0,
+      "text": "write the binary search can I say the"
+    },
+    {
+      "start": 1330.56,
+      "end": 1335.78,
+      "text": "binary search will be taking the array"
+    },
+    {
+      "start": 1332.0,
+      "end": 1338.24,
+      "text": "and the m and the K was the first job"
+    },
+    {
+      "start": 1335.78,
+      "end": 1339.92,
+      "text": "low will be the minimum element in the"
+    },
+    {
+      "start": 1338.24,
+      "end": 1342.08,
+      "text": "array we can write a function to find it"
+    },
+    {
+      "start": 1339.92,
+      "end": 1343.28,
+      "text": "out high will be the maximum element in"
+    },
+    {
+      "start": 1342.08,
+      "end": 1345.98,
+      "text": "the array again you can write a function"
+    },
+    {
+      "start": 1343.28,
+      "end": 1348.74,
+      "text": "to find it out and you can straight away"
+    },
+    {
+      "start": 1345.98,
+      "end": 1349.84,
+      "text": "go from my bad why am I writing the"
+    },
+    {
+      "start": 1348.74,
+      "end": 1353.36,
+      "text": "linear search"
+    },
+    {
+      "start": 1349.84,
+      "end": 1355.7,
+      "text": "you can see it away uh start the normal"
+    },
+    {
+      "start": 1353.36,
+      "end": 1357.2,
+      "text": "binary search that's from low to high if"
+    },
+    {
+      "start": 1355.7,
+      "end": 1358.9,
+      "text": "you want you can keep an answer just in"
+    },
+    {
+      "start": 1357.2,
+      "end": 1361.4,
+      "text": "case you want and"
+    },
+    {
+      "start": 1358.9,
+      "end": 1363.92,
+      "text": "a you you're sure that the answer will"
+    },
+    {
+      "start": 1361.4,
+      "end": 1367.04,
+      "text": "be at High and yeah do not forget to"
+    },
+    {
+      "start": 1363.92,
+      "end": 1370.58,
+      "text": "implement the impossible case which is"
+    },
+    {
+      "start": 1367.04,
+      "end": 1373.82,
+      "text": "uh if n is sorry if n is lesser than M"
+    },
+    {
+      "start": 1370.58,
+      "end": 1375.44,
+      "text": "into K which is impossible return minus"
+    },
+    {
+      "start": 1373.82,
+      "end": 1377.66,
+      "text": "one that's the impossible case that you"
+    },
+    {
+      "start": 1375.44,
+      "end": 1382.1,
+      "text": "can write and over here you can start"
+    },
+    {
+      "start": 1377.66,
+      "end": 1385.22,
+      "text": "the binary search with low plus High by"
+    },
+    {
+      "start": 1382.1,
+      "end": 1387.32,
+      "text": "2 right and then you can be like Hey"
+    },
+    {
+      "start": 1385.22,
+      "end": 1389.42,
+      "text": "listen is it possible"
+    },
+    {
+      "start": 1387.32,
+      "end": 1395.3,
+      "text": "is it possible with this particular"
+    },
+    {
+      "start": 1389.42,
+      "end": 1398.48,
+      "text": "array with this day number with M and K"
+    },
+    {
+      "start": 1395.3,
+      "end": 1402.38,
+      "text": "adjacent if it is possible this is"
+    },
+    {
+      "start": 1398.48,
+      "end": 1405.98,
+      "text": "possible this can be my answer"
+    },
+    {
+      "start": 1402.38,
+      "end": 1408.62,
+      "text": "and I need minimum so I will eliminate"
+    },
+    {
+      "start": 1405.98,
+      "end": 1410.48,
+      "text": "the right half I will eliminate the"
+    },
+    {
+      "start": 1408.62,
+      "end": 1413.78,
+      "text": "right half so eliminate the right half"
+    },
+    {
+      "start": 1410.48,
+      "end": 1417.62,
+      "text": "or else if it is not possible it's too"
+    },
+    {
+      "start": 1413.78,
+      "end": 1420.68,
+      "text": "small a number increase increase and you"
+    },
+    {
+      "start": 1417.62,
+      "end": 1422.84,
+      "text": "go ahead and increase at the end you can"
+    },
+    {
+      "start": 1420.68,
+      "end": 1425.06,
+      "text": "straight away return what will you"
+    },
+    {
+      "start": 1422.84,
+      "end": 1428.42,
+      "text": "return low or"
+    },
+    {
+      "start": 1425.06,
+      "end": 1430.76,
+      "text": "answer whatever you feel like you can"
+    },
+    {
+      "start": 1428.42,
+      "end": 1433.22,
+      "text": "you can play with answer like you can"
+    },
+    {
+      "start": 1430.76,
+      "end": 1434.78,
+      "text": "just take answer or you can also figure"
+    },
+    {
+      "start": 1433.22,
+      "end": 1436.52,
+      "text": "out low or high which will be your"
+    },
+    {
+      "start": 1434.78,
+      "end": 1438.38,
+      "text": "answer and in this case lowest second"
+    },
+    {
+      "start": 1436.52,
+      "end": 1441.1,
+      "text": "straight away return this what is the"
+    },
+    {
+      "start": 1438.38,
+      "end": 1441.1,
+      "text": "time complexity"
+    },
+    {
+      "start": 1441.32,
+      "end": 1446.24,
+      "text": "so something is for sure the end and"
+    },
+    {
+      "start": 1444.2,
+      "end": 1447.62,
+      "text": "this is for the possibility check this"
+    },
+    {
+      "start": 1446.24,
+      "end": 1450.2,
+      "text": "is for the possibility check that you're"
+    },
+    {
+      "start": 1447.62,
+      "end": 1451.88,
+      "text": "doing you cannot eliminate that so n is"
+    },
+    {
+      "start": 1450.2,
+      "end": 1453.98,
+      "text": "for sure there"
+    },
+    {
+      "start": 1451.88,
+      "end": 1456.44,
+      "text": "multiplied with what you're doing a"
+    },
+    {
+      "start": 1453.98,
+      "end": 1459.2,
+      "text": "binary search and binary search takes a"
+    },
+    {
+      "start": 1456.44,
+      "end": 1462.62,
+      "text": "logarithmic of the search space what is"
+    },
+    {
+      "start": 1459.2,
+      "end": 1466.04,
+      "text": "the space from 7 to 13 or from Min to"
+    },
+    {
+      "start": 1462.62,
+      "end": 1468.26,
+      "text": "Max such like the space length is Max"
+    },
+    {
+      "start": 1466.04,
+      "end": 1470.3,
+      "text": "minus pin plus one that is the space"
+    },
+    {
+      "start": 1468.26,
+      "end": 1472.28,
+      "text": "length thereby the logarithmic base two"
+    },
+    {
+      "start": 1470.3,
+      "end": 1474.74,
+      "text": "this will be the time complexity am I"
+    },
+    {
+      "start": 1472.28,
+      "end": 1477.62,
+      "text": "using any extra space no I'm not using"
+    },
+    {
+      "start": 1474.74,
+      "end": 1479.3,
+      "text": "because we're just making sure it is"
+    },
+    {
+      "start": 1477.62,
+      "end": 1481.28,
+      "text": "possible or Not by checking with the day"
+    },
+    {
+      "start": 1479.3,
+      "end": 1483.32,
+      "text": "and not converting it into a possible or"
+    },
+    {
+      "start": 1481.28,
+      "end": 1486.26,
+      "text": "not just simply checking anyway so no"
+    },
+    {
+      "start": 1483.32,
+      "end": 1488.18,
+      "text": "extra space required thereby the overall"
+    },
+    {
+      "start": 1486.26,
+      "end": 1491.78,
+      "text": "time complexity will be this and the"
+    },
+    {
+      "start": 1488.18,
+      "end": 1493.4,
+      "text": "space complexity will be a Pico of 1. so"
+    },
+    {
+      "start": 1491.78,
+      "end": 1494.48,
+      "text": "let's quickly go back to the code editor"
+    },
+    {
+      "start": 1493.4,
+      "end": 1496.34,
+      "text": "by the way you can find out the problem"
+    },
+    {
+      "start": 1494.48,
+      "end": 1497.66,
+      "text": "Link in the description and you'll get"
+    },
+    {
+      "start": 1496.34,
+      "end": 1499.88,
+      "text": "the C plus plus Java Python and"
+    },
+    {
+      "start": 1497.66,
+      "end": 1501.74,
+      "text": "JavaScript codes in the notes below as"
+    },
+    {
+      "start": 1499.88,
+      "end": 1502.88,
+      "text": "well you can check it out from there in"
+    },
+    {
+      "start": 1501.74,
+      "end": 1505.46,
+      "text": "case your code in some different"
+    },
+    {
+      "start": 1502.88,
+      "end": 1507.2,
+      "text": "language so I've written the same code"
+    },
+    {
+      "start": 1505.46,
+      "end": 1510.14,
+      "text": "and instead of writing if else I'll just"
+    },
+    {
+      "start": 1507.2,
+      "end": 1512.72,
+      "text": "straight away written this and something"
+    },
+    {
+      "start": 1510.14,
+      "end": 1515.42,
+      "text": "that you have to be careful full about"
+    },
+    {
+      "start": 1512.72,
+      "end": 1517.88,
+      "text": "is this one because you're multiplying"
+    },
+    {
+      "start": 1515.42,
+      "end": 1520.22,
+      "text": "two integers it might overflow so first"
+    },
+    {
+      "start": 1517.88,
+      "end": 1521.84,
+      "text": "convert this into a long long convert"
+    },
+    {
+      "start": 1520.22,
+      "end": 1524.9,
+      "text": "this into a long long and then multiply"
+    },
+    {
+      "start": 1521.84,
+      "end": 1526.28,
+      "text": "both so that they do not overflow and"
+    },
+    {
+      "start": 1524.9,
+      "end": 1528.68,
+      "text": "apart from that yeah I figured out the"
+    },
+    {
+      "start": 1526.28,
+      "end": 1531.08,
+      "text": "minimum and maximum and we're at a"
+    },
+    {
+      "start": 1528.68,
+      "end": 1532.82,
+      "text": "simple binary search so if you're"
+    },
+    {
+      "start": 1531.08,
+      "end": 1534.86,
+      "text": "watching till here I hope you have"
+    },
+    {
+      "start": 1532.82,
+      "end": 1536.42,
+      "text": "understood everything and in case you"
+    },
+    {
+      "start": 1534.86,
+      "end": 1538.58,
+      "text": "have understood everything please please"
+    },
+    {
+      "start": 1536.42,
+      "end": 1540.14,
+      "text": "do consider giving us a like and if"
+    },
+    {
+      "start": 1538.58,
+      "end": 1541.94,
+      "text": "you're new to our Channel what are you"
+    },
+    {
+      "start": 1540.14,
+      "end": 1544.1,
+      "text": "waiting for I think you should"
+    },
+    {
+      "start": 1541.94,
+      "end": 1545.18,
+      "text": "definitely subscribe to us and if you"
+    },
+    {
+      "start": 1544.1,
+      "end": 1547.22,
+      "text": "haven't followed me on Instagram"
+    },
+    {
+      "start": 1545.18,
+      "end": 1548.9,
+      "text": "LinkedIn and Twitter all the profile"
+    },
+    {
+      "start": 1547.22,
+      "end": 1550.04,
+      "text": "links will be in the description with"
+    },
+    {
+      "start": 1548.9,
+      "end": 1551.18,
+      "text": "this I'll be wrapping up this video"
+    },
+    {
+      "start": 1550.04,
+      "end": 1552.3,
+      "text": "let's read in some of the video till"
+    },
+    {
+      "start": 1551.18,
+      "end": 1558.48,
+      "text": "then bye take care"
+    },
+    {
+      "start": 1552.3,
+      "end": 1558.48,
+      "text": "[Music]"
+    },
+    {
+      "start": 1558.86,
+      "end": 1562.18,
+      "text": "I will find the light"
+    }
+  ]
+}

@@ -1,0 +1,3542 @@
+{
+  "video_id": "z9bJUPxzFOw",
+  "title": "L18. Implement LRU Cache",
+  "duration_sec": 1496,
+  "num_segments": 589,
+  "segments": [
+    {
+      "start": 3.28,
+      "end": 6.72,
+      "duration": 3.44,
+      "text": "So let's continue with our playlist"
+    },
+    {
+      "start": 4.96,
+      "end": 8.08,
+      "duration": 3.12,
+      "text": "today for starting off. Avery, welcome"
+    },
+    {
+      "start": 6.72,
+      "end": 10.32,
+      "duration": 3.6,
+      "text": "back to the channel. I hope you guys are"
+    },
+    {
+      "start": 8.08,
+      "end": 13.84,
+      "duration": 5.76,
+      "text": "doing extremely well. So the problem"
+    },
+    {
+      "start": 10.32,
+      "end": 16.8,
+      "duration": 6.48,
+      "text": "that I will be solving today is LRU"
+    },
+    {
+      "start": 13.84,
+      "end": 19.12,
+      "duration": 5.28,
+      "text": "cache. So what is the problem statement?"
+    },
+    {
+      "start": 16.8,
+      "end": 22.08,
+      "duration": 5.28,
+      "text": "You'll have to design a data structure"
+    },
+    {
+      "start": 19.12,
+      "end": 25.76,
+      "duration": 6.64,
+      "text": "that follows the constraints of a least"
+    },
+    {
+      "start": 22.08,
+      "end": 28.24,
+      "duration": 6.16,
+      "text": "recently used cache. So what you have to"
+    },
+    {
+      "start": 25.76,
+      "end": 31.36,
+      "duration": 5.6,
+      "text": "do is you'll have to implement LRU cache"
+    },
+    {
+      "start": 28.24,
+      "end": 34.0,
+      "duration": 5.76,
+      "text": "class that implements the constructor"
+    },
+    {
+      "start": 31.36,
+      "end": 36.72,
+      "duration": 5.36,
+      "text": "where it is taking the capacity and"
+    },
+    {
+      "start": 34.0,
+      "end": 39.12,
+      "duration": 5.12,
+      "text": "initializing the LRU cache to that"
+    },
+    {
+      "start": 36.72,
+      "end": 41.44,
+      "duration": 4.72,
+      "text": "capacity. That means it cannot store"
+    },
+    {
+      "start": 39.12,
+      "end": 43.6,
+      "duration": 4.48,
+      "text": "more values than the particular"
+    },
+    {
+      "start": 41.44,
+      "end": 46.16,
+      "duration": 4.72,
+      "text": "capacity. After that you'll have to"
+    },
+    {
+      "start": 43.6,
+      "end": 48.16,
+      "duration": 4.56,
+      "text": "implement a get functionality which is"
+    },
+    {
+      "start": 46.16,
+      "end": 50.0,
+      "duration": 3.84,
+      "text": "taking the key and you'll have to return"
+    },
+    {
+      "start": 48.16,
+      "end": 52.32,
+      "duration": 4.16,
+      "text": "the value of the key which is stored in"
+    },
+    {
+      "start": 50.0,
+      "end": 55.04,
+      "duration": 5.04,
+      "text": "the cache and if it is not stored you"
+    },
+    {
+      "start": 52.32,
+      "end": 57.2,
+      "duration": 4.88,
+      "text": "end up returning minus one. After that"
+    },
+    {
+      "start": 55.04,
+      "end": 59.2,
+      "duration": 4.16,
+      "text": "you'll have to implement the void put"
+    },
+    {
+      "start": 57.2,
+      "end": 61.52,
+      "duration": 4.32,
+      "text": "functionality where you'll be given a"
+    },
+    {
+      "start": 59.2,
+      "end": 63.84,
+      "duration": 4.64,
+      "text": "key you'll be given a value. So imagine"
+    },
+    {
+      "start": 61.52,
+      "end": 66.88,
+      "duration": 5.36,
+      "text": "if your cache already has the key you"
+    },
+    {
+      "start": 63.84,
+      "end": 68.96,
+      "duration": 5.12,
+      "text": "just update the value to that key done."
+    },
+    {
+      "start": 66.88,
+      "end": 71.04,
+      "duration": 4.16,
+      "text": "What if it doesn't have in that case"
+    },
+    {
+      "start": 68.96,
+      "end": 74.08,
+      "duration": 5.12,
+      "text": "you'll have to add the key value pair to"
+    },
+    {
+      "start": 71.04,
+      "end": 76.72,
+      "duration": 5.68,
+      "text": "the cache. What if the capacity is full"
+    },
+    {
+      "start": 74.08,
+      "end": 79.36,
+      "duration": 5.28,
+      "text": "and you cannot add it? In that case, you"
+    },
+    {
+      "start": 76.72,
+      "end": 81.52,
+      "duration": 4.8,
+      "text": "delete the least recently used key and"
+    },
+    {
+      "start": 79.36,
+      "end": 84.08,
+      "duration": 4.72,
+      "text": "then you add this particular key and"
+    },
+    {
+      "start": 81.52,
+      "end": 85.92,
+      "duration": 4.4,
+      "text": "value given to you."
+    },
+    {
+      "start": 84.08,
+      "end": 89.6,
+      "duration": 5.52,
+      "text": "Everything like the get and put"
+    },
+    {
+      "start": 85.92,
+      "end": 92.72,
+      "duration": 6.8,
+      "text": "functionality has to run in a b of one"
+    },
+    {
+      "start": 89.6,
+      "end": 95.12,
+      "duration": 5.52,
+      "text": "average time complexity throughout."
+    },
+    {
+      "start": 92.72,
+      "end": 97.52,
+      "duration": 4.8,
+      "text": "Okay, let's understand this with an"
+    },
+    {
+      "start": 95.12,
+      "end": 101.68,
+      "duration": 6.56,
+      "text": "example. So the first thing is you have"
+    },
+    {
+      "start": 97.52,
+      "end": 104.08,
+      "duration": 6.56,
+      "text": "a cache of a size four as to put 2A 6."
+    },
+    {
+      "start": 101.68,
+      "end": 106.56,
+      "duration": 4.88,
+      "text": "So the cache is empty. You could end up"
+    },
+    {
+      "start": 104.08,
+      "end": 109.36,
+      "duration": 5.28,
+      "text": "adding 2A 6 where 2 is the key, six is"
+    },
+    {
+      "start": 106.56,
+      "end": 111.68,
+      "duration": 5.12,
+      "text": "the value. As to put 4A 7, you can again"
+    },
+    {
+      "start": 109.36,
+      "end": 117.2,
+      "duration": 7.84,
+      "text": "do it because the cache is still having"
+    },
+    {
+      "start": 111.68,
+      "end": 121.28,
+      "duration": 9.6,
+      "text": "a size. 8A 11 you can still add it. 7A"
+    },
+    {
+      "start": 117.2,
+      "end": 123.44,
+      "duration": 6.24,
+      "text": "10 you can still add it. Remember"
+    },
+    {
+      "start": 121.28,
+      "end": 127.6,
+      "duration": 6.32,
+      "text": "you need to keep a track of the least"
+    },
+    {
+      "start": 123.44,
+      "end": 129.52,
+      "duration": 6.08,
+      "text": "recently used and I'm keeping a track by"
+    },
+    {
+      "start": 127.6,
+      "end": 132.8,
+      "duration": 5.2,
+      "text": "maintaining this particular order. The"
+    },
+    {
+      "start": 129.52,
+      "end": 135.36,
+      "duration": 5.84,
+      "text": "last one that was used was 2a 6. The the"
+    },
+    {
+      "start": 132.8,
+      "end": 139.2,
+      "duration": 6.4,
+      "text": "recent one was this one 7 10 because I"
+    },
+    {
+      "start": 135.36,
+      "end": 142.08,
+      "duration": 6.72,
+      "text": "just entered it. Okay. After that get"
+    },
+    {
+      "start": 139.2,
+      "end": 144.32,
+      "duration": 5.12,
+      "text": "two. So the value is six. You can you"
+    },
+    {
+      "start": 142.08,
+      "end": 146.4,
+      "duration": 4.32,
+      "text": "could easily figure out from here. But"
+    },
+    {
+      "start": 144.32,
+      "end": 148.4,
+      "duration": 4.08,
+      "text": "this one is used. So what you'll do is"
+    },
+    {
+      "start": 146.4,
+      "end": 152.08,
+      "duration": 5.68,
+      "text": "you'll take it and place it at the front"
+    },
+    {
+      "start": 148.4,
+      "end": 155.68,
+      "duration": 7.28,
+      "text": "because this is now used recently. Okay,"
+    },
+    {
+      "start": 152.08,
+      "end": 158.48,
+      "duration": 6.4,
+      "text": "get eight. So the value of 8 is 11. So"
+    },
+    {
+      "start": 155.68,
+      "end": 161.36,
+      "duration": 5.68,
+      "text": "you could return 11 and at the same time"
+    },
+    {
+      "start": 158.48,
+      "end": 162.88,
+      "duration": 4.4,
+      "text": "what you could do is you could take 8 11"
+    },
+    {
+      "start": 161.36,
+      "end": 166.64,
+      "duration": 5.28,
+      "text": "and you could place it at the front"
+    },
+    {
+      "start": 162.88,
+      "end": 170.88,
+      "duration": 8.0,
+      "text": "because this is least recently used."
+    },
+    {
+      "start": 166.64,
+      "end": 173.52,
+      "duration": 6.88,
+      "text": "Done. After that you have a put of 5a 6."
+    },
+    {
+      "start": 170.88,
+      "end": 176.32,
+      "duration": 5.44,
+      "text": "Put of 5a 6. Can you put it into the"
+    },
+    {
+      "start": 173.52,
+      "end": 178.48,
+      "duration": 4.96,
+      "text": "cache? First of all, five is not there."
+    },
+    {
+      "start": 176.32,
+      "end": 180.4,
+      "duration": 4.08,
+      "text": "So you cannot replace the value. Can you"
+    },
+    {
+      "start": 178.48,
+      "end": 182.4,
+      "duration": 3.92,
+      "text": "put it into the cache? No, you cannot"
+    },
+    {
+      "start": 180.4,
+      "end": 184.08,
+      "duration": 3.68,
+      "text": "because the cache already has four"
+    },
+    {
+      "start": 182.4,
+      "end": 186.48,
+      "duration": 4.08,
+      "text": "elements and that is the maximum"
+    },
+    {
+      "start": 184.08,
+      "end": 187.68,
+      "duration": 3.6,
+      "text": "capacity it can hold. So what you will"
+    },
+    {
+      "start": 186.48,
+      "end": 190.4,
+      "duration": 3.92,
+      "text": "be doing is you'll be like okay I need"
+    },
+    {
+      "start": 187.68,
+      "end": 194.16,
+      "duration": 6.48,
+      "text": "to delete. So you always delete the last"
+    },
+    {
+      "start": 190.4,
+      "end": 197.12,
+      "duration": 6.72,
+      "text": "one that is 4a 7 goes off"
+    },
+    {
+      "start": 194.16,
+      "end": 201.36,
+      "duration": 7.2,
+      "text": "just goes off. So you've deleted it."
+    },
+    {
+      "start": 197.12,
+      "end": 202.88,
+      "duration": 5.76,
+      "text": "What next? You take 5a 6 and you put it"
+    },
+    {
+      "start": 201.36,
+      "end": 206.0,
+      "duration": 4.64,
+      "text": "over here."
+    },
+    {
+      "start": 202.88,
+      "end": 208.72,
+      "duration": 5.84,
+      "text": "So this is my"
+    },
+    {
+      "start": 206.0,
+      "end": 211.2,
+      "duration": 5.2,
+      "text": "cache as of now. So I'm done with this."
+    },
+    {
+      "start": 208.72,
+      "end": 213.36,
+      "duration": 4.64,
+      "text": "After that I'm asked to get seven. So"
+    },
+    {
+      "start": 211.2,
+      "end": 216.64,
+      "duration": 5.44,
+      "text": "what's the value of seven? 10. So can I"
+    },
+    {
+      "start": 213.36,
+      "end": 218.56,
+      "duration": 5.2,
+      "text": "say that this is somewhere here and it"
+    },
+    {
+      "start": 216.64,
+      "end": 222.16,
+      "duration": 5.52,
+      "text": "will go over here because this is least"
+    },
+    {
+      "start": 218.56,
+      "end": 225.12,
+      "duration": 6.56,
+      "text": "recently used. After that I will put 5a"
+    },
+    {
+      "start": 222.16,
+      "end": 227.92,
+      "duration": 5.76,
+      "text": "7. Do I have a five in the cache? I do"
+    },
+    {
+      "start": 225.12,
+      "end": 230.8,
+      "duration": 5.68,
+      "text": "have. I do have. So what I'll do is"
+    },
+    {
+      "start": 227.92,
+      "end": 234.08,
+      "duration": 6.16,
+      "text": "first of all I'll take this five put it"
+    },
+    {
+      "start": 230.8,
+      "end": 235.84,
+      "duration": 5.04,
+      "text": "first and then I'll take off the six"
+    },
+    {
+      "start": 234.08,
+      "end": 238.8,
+      "duration": 4.72,
+      "text": "I'll say what's the new value seven"
+    },
+    {
+      "start": 235.84,
+      "end": 240.96,
+      "duration": 5.12,
+      "text": "replace it and done so this will"
+    },
+    {
+      "start": 238.8,
+      "end": 244.96,
+      "duration": 6.16,
+      "text": "maintain the order of least recently"
+    },
+    {
+      "start": 240.96,
+      "end": 248.32,
+      "duration": 7.36,
+      "text": "used but I'm done dusted so this is what"
+    },
+    {
+      "start": 244.96,
+      "end": 251.04,
+      "duration": 6.08,
+      "text": "we need to implement it's not something"
+    },
+    {
+      "start": 248.32,
+      "end": 254.8,
+      "duration": 6.48,
+      "text": "that you'll have to solve you'll have to"
+    },
+    {
+      "start": 251.04,
+      "end": 257.84,
+      "duration": 6.8,
+      "text": "have knowledge of doubly link list and"
+    },
+    {
+      "start": 254.8,
+      "end": 260.72,
+      "duration": 5.92,
+      "text": "map data structure So typically linkless"
+    },
+    {
+      "start": 257.84,
+      "end": 262.88,
+      "duration": 5.04,
+      "text": "and hashing is all you need to know. In"
+    },
+    {
+      "start": 260.72,
+      "end": 264.72,
+      "duration": 4.0,
+      "text": "case you don't know it, please stop the"
+    },
+    {
+      "start": 262.88,
+      "end": 266.8,
+      "duration": 3.92,
+      "text": "video as of now. Go back and watch my"
+    },
+    {
+      "start": 264.72,
+      "end": 269.04,
+      "duration": 4.32,
+      "text": "link list. Go back and watch my hashing"
+    },
+    {
+      "start": 266.8,
+      "end": 271.44,
+      "duration": 4.64,
+      "text": "playlist. You'll understand what a map"
+    },
+    {
+      "start": 269.04,
+      "end": 273.04,
+      "duration": 4.0,
+      "text": "does and how double link list like how"
+    },
+    {
+      "start": 271.44,
+      "end": 275.2,
+      "duration": 3.76,
+      "text": "addition in dlink list works, how"
+    },
+    {
+      "start": 273.04,
+      "end": 276.8,
+      "duration": 3.76,
+      "text": "deletion in dlink list works. All of"
+    },
+    {
+      "start": 275.2,
+      "end": 278.56,
+      "duration": 3.36,
+      "text": "these things are very very important"
+    },
+    {
+      "start": 276.8,
+      "end": 281.36,
+      "duration": 4.56,
+      "text": "because this is a extremely"
+    },
+    {
+      "start": 278.56,
+      "end": 283.28,
+      "duration": 4.72,
+      "text": "implementationheavy problem. So in order"
+    },
+    {
+      "start": 281.36,
+      "end": 286.96,
+      "duration": 5.6,
+      "text": "to solve this particular problem, I'll"
+    },
+    {
+      "start": 283.28,
+      "end": 289.6,
+      "duration": 6.32,
+      "text": "be using a doubly link list where every"
+    },
+    {
+      "start": 286.96,
+      "end": 292.64,
+      "duration": 5.68,
+      "text": "node will be storing the key and value."
+    },
+    {
+      "start": 289.6,
+      "end": 294.64,
+      "duration": 5.04,
+      "text": "So key and value and the next pointer"
+    },
+    {
+      "start": 292.64,
+      "end": 297.44,
+      "duration": 4.8,
+      "text": "and the previous pointer. Again, I'm"
+    },
+    {
+      "start": 294.64,
+      "end": 299.92,
+      "duration": 5.28,
+      "text": "assuming you know what is a doubling."
+    },
+    {
+      "start": 297.44,
+      "end": 301.6,
+      "duration": 4.16,
+      "text": "Under that assumption,"
+    },
+    {
+      "start": 299.92,
+      "end": 304.0,
+      "duration": 4.08,
+      "text": "I will be solving this particular"
+    },
+    {
+      "start": 301.6,
+      "end": 307.52,
+      "duration": 5.92,
+      "text": "problem. Along with this what I will be"
+    },
+    {
+      "start": 304.0,
+      "end": 310.32,
+      "duration": 6.32,
+      "text": "doing is I'll be typically defining a"
+    },
+    {
+      "start": 307.52,
+      "end": 312.0,
+      "duration": 4.48,
+      "text": "map data structure."
+    },
+    {
+      "start": 310.32,
+      "end": 315.2,
+      "duration": 4.88,
+      "text": "Now this map data structure will be"
+    },
+    {
+      "start": 312.0,
+      "end": 318.56,
+      "duration": 6.56,
+      "text": "storing the key and the node position."
+    },
+    {
+      "start": 315.2,
+      "end": 321.68,
+      "duration": 6.48,
+      "text": "Remember the node address. Why? You'll"
+    },
+    {
+      "start": 318.56,
+      "end": 324.0,
+      "duration": 5.44,
+      "text": "understand as we go across. So to start"
+    },
+    {
+      "start": 321.68,
+      "end": 326.8,
+      "duration": 5.12,
+      "text": "off what you will be doing is we'll be"
+    },
+    {
+      "start": 324.0,
+      "end": 329.76,
+      "duration": 5.76,
+      "text": "straight away taking a head. So this"
+    },
+    {
+      "start": 326.8,
+      "end": 332.16,
+      "duration": 5.36,
+      "text": "will be a dummy head. It stores minus1"
+    },
+    {
+      "start": 329.76,
+      "end": 334.8,
+      "duration": 5.04,
+      "text": "minus one. So this is my dummy head."
+    },
+    {
+      "start": 332.16,
+      "end": 336.64,
+      "duration": 4.48,
+      "text": "You'll be taking a dummy tail as well."
+    },
+    {
+      "start": 334.8,
+      "end": 339.44,
+      "duration": 4.64,
+      "text": "It is also storing a minus one minus"
+    },
+    {
+      "start": 336.64,
+      "end": 341.36,
+      "duration": 4.72,
+      "text": "one. And the dummy head's previous is"
+    },
+    {
+      "start": 339.44,
+      "end": 343.28,
+      "duration": 3.84,
+      "text": "pointing to null. But the next is"
+    },
+    {
+      "start": 341.36,
+      "end": 345.68,
+      "duration": 4.32,
+      "text": "pointing to tail. Remember this the"
+    },
+    {
+      "start": 343.28,
+      "end": 348.64,
+      "duration": 5.36,
+      "text": "dummy tail. So the dummy tail's previous"
+    },
+    {
+      "start": 345.68,
+      "end": 350.72,
+      "duration": 5.04,
+      "text": "is pointing to head and the next is"
+    },
+    {
+      "start": 348.64,
+      "end": 352.48,
+      "duration": 3.84,
+      "text": "pointing to null. So this is how"
+    },
+    {
+      "start": 350.72,
+      "end": 355.84,
+      "duration": 5.12,
+      "text": "initially my configuration will look"
+    },
+    {
+      "start": 352.48,
+      "end": 357.52,
+      "duration": 5.04,
+      "text": "like with an empty map data structure."
+    },
+    {
+      "start": 355.84,
+      "end": 360.0,
+      "duration": 4.16,
+      "text": "So we start off with the first thing"
+    },
+    {
+      "start": 357.52,
+      "end": 363.04,
+      "duration": 5.52,
+      "text": "which is the capacity for. So maybe I"
+    },
+    {
+      "start": 360.0,
+      "end": 365.92,
+      "duration": 5.92,
+      "text": "can just store the capacity to be four."
+    },
+    {
+      "start": 363.04,
+      "end": 369.84,
+      "duration": 6.8,
+      "text": "Done. After that the first functionality"
+    },
+    {
+      "start": 365.92,
+      "end": 371.84,
+      "duration": 5.92,
+      "text": "like the first operation is put of 2, 6."
+    },
+    {
+      "start": 369.84,
+      "end": 374.8,
+      "duration": 4.96,
+      "text": "First thing you'll do is you'll be like"
+    },
+    {
+      "start": 371.84,
+      "end": 377.6,
+      "duration": 5.76,
+      "text": "okay can I put it across? Yeah I do. I"
+    },
+    {
+      "start": 374.8,
+      "end": 379.44,
+      "duration": 4.64,
+      "text": "can because the capacity is four. So I"
+    },
+    {
+      "start": 377.6,
+      "end": 382.08,
+      "duration": 4.48,
+      "text": "can definitely put it across. Does it"
+    },
+    {
+      "start": 379.44,
+      "end": 384.96,
+      "duration": 5.52,
+      "text": "have it already? Because if it has"
+    },
+    {
+      "start": 382.08,
+      "end": 387.04,
+      "duration": 4.96,
+      "text": "already do I have to replace it but it"
+    },
+    {
+      "start": 384.96,
+      "end": 388.8,
+      "duration": 3.84,
+      "text": "is not there. How do I know it? I can"
+    },
+    {
+      "start": 387.04,
+      "end": 390.96,
+      "duration": 3.92,
+      "text": "have a hashing kind of a thing which"
+    },
+    {
+      "start": 388.8,
+      "end": 392.72,
+      "duration": 3.92,
+      "text": "tells me if two is there or not. It"
+    },
+    {
+      "start": 390.96,
+      "end": 394.16,
+      "duration": 3.2,
+      "text": "tells me if two is there or not. So I"
+    },
+    {
+      "start": 392.72,
+      "end": 395.84,
+      "duration": 3.12,
+      "text": "definitely know two is not there. So I"
+    },
+    {
+      "start": 394.16,
+      "end": 398.72,
+      "duration": 4.56,
+      "text": "just need to put it across. So what"
+    },
+    {
+      "start": 395.84,
+      "end": 400.8,
+      "duration": 4.96,
+      "text": "you'll do is you'll say hey insert it."
+    },
+    {
+      "start": 398.72,
+      "end": 402.96,
+      "duration": 4.24,
+      "text": "Insert it. So you'll go ahead and say"
+    },
+    {
+      "start": 400.8,
+      "end": 404.24,
+      "duration": 3.44,
+      "text": "insert it. So you'll be inserting right"
+    },
+    {
+      "start": 402.96,
+      "end": 407.2,
+      "duration": 4.24,
+      "text": "after head. Remember this. You'll be"
+    },
+    {
+      "start": 404.24,
+      "end": 409.28,
+      "duration": 5.04,
+      "text": "inserting right after head. So you will"
+    },
+    {
+      "start": 407.2,
+      "end": 413.04,
+      "duration": 5.84,
+      "text": "make something like this. What I'll do"
+    },
+    {
+      "start": 409.28,
+      "end": 415.28,
+      "duration": 6.0,
+      "text": "is just to you know ease out"
+    },
+    {
+      "start": 413.04,
+      "end": 418.96,
+      "duration": 5.92,
+      "text": "going forward. I'll just insert it right"
+    },
+    {
+      "start": 415.28,
+      "end": 421.2,
+      "duration": 5.92,
+      "text": "after head over here. So, insert 2, 6"
+    },
+    {
+      "start": 418.96,
+      "end": 423.76,
+      "duration": 4.8,
+      "text": "over here. And I'll make sure because"
+    },
+    {
+      "start": 421.2,
+      "end": 426.96,
+      "duration": 5.76,
+      "text": "this is a doubly linked list. I'm asking"
+    },
+    {
+      "start": 423.76,
+      "end": 428.8,
+      "duration": 5.04,
+      "text": "it to be inserted right after head. So,"
+    },
+    {
+      "start": 426.96,
+      "end": 431.68,
+      "duration": 4.72,
+      "text": "I make sure that the next is pointing to"
+    },
+    {
+      "start": 428.8,
+      "end": 433.52,
+      "duration": 4.72,
+      "text": "tail and this continues. So, basically"
+    },
+    {
+      "start": 431.68,
+      "end": 435.6,
+      "duration": 3.92,
+      "text": "what happened is heads next is now"
+    },
+    {
+      "start": 433.52,
+      "end": 438.32,
+      "duration": 4.8,
+      "text": "pointing to this. I inserted it in"
+    },
+    {
+      "start": 435.6,
+      "end": 440.88,
+      "duration": 5.28,
+      "text": "between and imagine this is at some"
+    },
+    {
+      "start": 438.32,
+      "end": 442.96,
+      "duration": 4.64,
+      "text": "random address. So, I'll be storing two"
+    },
+    {
+      "start": 440.88,
+      "end": 446.96,
+      "duration": 6.08,
+      "text": "comma the address of it. the address of"
+    },
+    {
+      "start": 442.96,
+      "end": 449.76,
+      "duration": 6.8,
+      "text": "it the address is a reference to where"
+    },
+    {
+      "start": 446.96,
+      "end": 453.12,
+      "duration": 6.16,
+      "text": "this particular value is perfect after"
+    },
+    {
+      "start": 449.76,
+      "end": 455.12,
+      "duration": 5.36,
+      "text": "that when as to insert 4A 6 I'll again"
+    },
+    {
+      "start": 453.12,
+      "end": 459.44,
+      "duration": 6.32,
+      "text": "do the same thing I'll say okay can I go"
+    },
+    {
+      "start": 455.12,
+      "end": 461.6,
+      "duration": 6.48,
+      "text": "ahead and insert 4A 6 so I'll take 4 6"
+    },
+    {
+      "start": 459.44,
+      "end": 462.8,
+      "duration": 3.36,
+      "text": "and I'll insert it so the next will be"
+    },
+    {
+      "start": 461.6,
+      "end": 465.12,
+      "duration": 3.52,
+      "text": "pointing here the previous will be"
+    },
+    {
+      "start": 462.8,
+      "end": 466.96,
+      "duration": 4.16,
+      "text": "pointing here the next and the previous"
+    },
+    {
+      "start": 465.12,
+      "end": 470.96,
+      "duration": 5.84,
+      "text": "again done and please make sure you"
+    },
+    {
+      "start": 466.96,
+      "end": 474.08,
+      "duration": 7.12,
+      "text": "insert 4 6 4 comma the node location"
+    },
+    {
+      "start": 470.96,
+      "end": 476.56,
+      "duration": 5.6,
+      "text": "after that 8 comma 11 again 8 is not"
+    },
+    {
+      "start": 474.08,
+      "end": 478.96,
+      "duration": 4.88,
+      "text": "there that means I'll have to insert it"
+    },
+    {
+      "start": 476.56,
+      "end": 482.24,
+      "duration": 5.68,
+      "text": "so I go ahead and say 8 is not there can"
+    },
+    {
+      "start": 478.96,
+      "end": 485.92,
+      "duration": 6.96,
+      "text": "you please insert it so the value is 8A"
+    },
+    {
+      "start": 482.24,
+      "end": 487.84,
+      "duration": 5.6,
+      "text": "11 so I take 8 11 and I insert it and"
+    },
+    {
+      "start": 485.92,
+      "end": 490.08,
+      "duration": 4.16,
+      "text": "the previous is here this is there this"
+    },
+    {
+      "start": 487.84,
+      "end": 492.56,
+      "duration": 4.72,
+      "text": "is there perfect after that there's a 7A"
+    },
+    {
+      "start": 490.08,
+      "end": 495.12,
+      "duration": 5.04,
+      "text": "10 but for this please make sure 8 comma"
+    },
+    {
+      "start": 492.56,
+      "end": 498.32,
+      "duration": 5.76,
+      "text": "address is going into your hashing"
+    },
+    {
+      "start": 495.12,
+      "end": 500.72,
+      "duration": 5.6,
+      "text": "hashmap after that there is 7A 10 so"
+    },
+    {
+      "start": 498.32,
+      "end": 502.16,
+      "duration": 3.84,
+      "text": "what I will be doing is I'll be again"
+    },
+    {
+      "start": 500.72,
+      "end": 504.24,
+      "duration": 3.52,
+      "text": "checking in the hash dash up it's not"
+    },
+    {
+      "start": 502.16,
+      "end": 508.56,
+      "duration": 6.4,
+      "text": "there so I'll be inserting it. So I take"
+    },
+    {
+      "start": 504.24,
+      "end": 513.04,
+      "duration": 8.8,
+      "text": "that value and I say hey 7a 10 and the"
+    },
+    {
+      "start": 508.56,
+      "end": 516.24,
+      "duration": 7.68,
+      "text": "next this and this 7 comma address."
+    },
+    {
+      "start": 513.04,
+      "end": 519.76,
+      "duration": 6.72,
+      "text": "Okay. After that I've been asked to get"
+    },
+    {
+      "start": 516.24,
+      "end": 521.6,
+      "duration": 5.36,
+      "text": "to I've been asked to get to. So when"
+    },
+    {
+      "start": 519.76,
+      "end": 523.68,
+      "duration": 3.92,
+      "text": "I've been asked to get to what I will do"
+    },
+    {
+      "start": 521.6,
+      "end": 526.16,
+      "duration": 4.56,
+      "text": "first of all is I'll go into the map and"
+    },
+    {
+      "start": 523.68,
+      "end": 529.04,
+      "duration": 5.36,
+      "text": "I'll say okay two where are you? He says"
+    },
+    {
+      "start": 526.16,
+      "end": 531.2,
+      "duration": 5.04,
+      "text": "hey I'm here. I'm like give me a value."
+    },
+    {
+      "start": 529.04,
+      "end": 533.84,
+      "duration": 4.8,
+      "text": "So I have the node. So I could just do a"
+    },
+    {
+      "start": 531.2,
+      "end": 536.4,
+      "duration": 5.2,
+      "text": "node dot value. it'll give me the value."
+    },
+    {
+      "start": 533.84,
+      "end": 539.2,
+      "duration": 5.36,
+      "text": "So the value is six. I'll easily get the"
+    },
+    {
+      "start": 536.4,
+      "end": 542.32,
+      "duration": 5.92,
+      "text": "value. But we need to keep a track of"
+    },
+    {
+      "start": 539.2,
+      "end": 544.8,
+      "duration": 5.6,
+      "text": "least recently used. So all I need to do"
+    },
+    {
+      "start": 542.32,
+      "end": 547.12,
+      "duration": 4.8,
+      "text": "is all I need to do is first of all I"
+    },
+    {
+      "start": 544.8,
+      "end": 549.12,
+      "duration": 4.32,
+      "text": "need to delete it. Keep it in mind."
+    },
+    {
+      "start": 547.12,
+      "end": 551.28,
+      "duration": 4.16,
+      "text": "Delete. Delete. You know how to delete"
+    },
+    {
+      "start": 549.12,
+      "end": 553.36,
+      "duration": 4.24,
+      "text": "in a double link list to delete the"
+    },
+    {
+      "start": 551.28,
+      "end": 555.76,
+      "duration": 4.48,
+      "text": "given node. So I've deleted the given"
+    },
+    {
+      "start": 553.36,
+      "end": 557.36,
+      "duration": 4.0,
+      "text": "node. I'll have to insert it at the"
+    },
+    {
+      "start": 555.76,
+      "end": 560.24,
+      "duration": 4.48,
+      "text": "front. I'll have to insert it at the"
+    },
+    {
+      "start": 557.36,
+      "end": 562.16,
+      "duration": 4.8,
+      "text": "front. So what I can do is quickly just"
+    },
+    {
+      "start": 560.24,
+      "end": 564.64,
+      "duration": 4.4,
+      "text": "take it across"
+    },
+    {
+      "start": 562.16,
+      "end": 568.88,
+      "duration": 6.72,
+      "text": "just move it back and I could take the"
+    },
+    {
+      "start": 564.64,
+      "end": 571.6,
+      "duration": 6.96,
+      "text": "new one which is 2a 6 and I'll put it"
+    },
+    {
+      "start": 568.88,
+      "end": 573.6,
+      "duration": 4.72,
+      "text": "over here. So it's a deletion and an"
+    },
+    {
+      "start": 571.6,
+      "end": 576.72,
+      "duration": 5.12,
+      "text": "insertion. It's a deletion and an"
+    },
+    {
+      "start": 573.6,
+      "end": 578.8,
+      "duration": 5.2,
+      "text": "insertion at the front. Done. After that"
+    },
+    {
+      "start": 576.72,
+      "end": 580.8,
+      "duration": 4.08,
+      "text": "I've been asked to get eight. I'll again"
+    },
+    {
+      "start": 578.8,
+      "end": 583.12,
+      "duration": 4.32,
+      "text": "go and check if eight is there. It says"
+    },
+    {
+      "start": 580.8,
+      "end": 586.96,
+      "duration": 6.16,
+      "text": "yes 8 is there. It points me where it"
+    },
+    {
+      "start": 583.12,
+      "end": 590.08,
+      "duration": 6.96,
+      "text": "is. So I get the value which is 8a 11."
+    },
+    {
+      "start": 586.96,
+      "end": 593.28,
+      "duration": 6.32,
+      "text": "So 8a 11 I get the value 11. So once"
+    },
+    {
+      "start": 590.08,
+      "end": 595.52,
+      "duration": 5.44,
+      "text": "I've got the value what do I do? I"
+    },
+    {
+      "start": 593.28,
+      "end": 598.56,
+      "duration": 5.28,
+      "text": "basically do one thing which is I say"
+    },
+    {
+      "start": 595.52,
+      "end": 602.72,
+      "duration": 7.2,
+      "text": "hey listen this is no more here. There's"
+    },
+    {
+      "start": 598.56,
+      "end": 604.56,
+      "duration": 6.0,
+      "text": "no more here. Can you basically go ahead"
+    },
+    {
+      "start": 602.72,
+      "end": 607.44,
+      "duration": 4.72,
+      "text": "and put it at the front? I'm like why"
+    },
+    {
+      "start": 604.56,
+      "end": 611.04,
+      "duration": 6.48,
+      "text": "not? I'll put it at the front which is 8"
+    },
+    {
+      "start": 607.44,
+      "end": 614.0,
+      "duration": 6.56,
+      "text": "11. So I put it at the front. Please"
+    },
+    {
+      "start": 611.04,
+      "end": 615.76,
+      "duration": 4.72,
+      "text": "make sure that you reuse the nodes."
+    },
+    {
+      "start": 614.0,
+      "end": 618.16,
+      "duration": 4.16,
+      "text": "Don't create new nodes because if you"
+    },
+    {
+      "start": 615.76,
+      "end": 620.48,
+      "duration": 4.72,
+      "text": "create new nodes you'll have to update"
+    },
+    {
+      "start": 618.16,
+      "end": 623.2,
+      "duration": 5.04,
+      "text": "the map and that will add to extra time"
+    },
+    {
+      "start": 620.48,
+      "end": 626.4,
+      "duration": 5.92,
+      "text": "complexity. Try to reuse the nodes."
+    },
+    {
+      "start": 623.2,
+      "end": 628.64,
+      "duration": 5.44,
+      "text": "Right? Perfect. So okay again done."
+    },
+    {
+      "start": 626.4,
+      "end": 630.64,
+      "duration": 4.24,
+      "text": "After that I've been asked to put five,"
+    },
+    {
+      "start": 628.64,
+      "end": 632.8,
+      "duration": 4.16,
+      "text": "six. So I go ahead and check on the map."
+    },
+    {
+      "start": 630.64,
+      "end": 635.12,
+      "duration": 4.48,
+      "text": "Do I have a five? I don't have a five. I"
+    },
+    {
+      "start": 632.8,
+      "end": 637.28,
+      "duration": 4.48,
+      "text": "don't have a five and I see that the map"
+    },
+    {
+      "start": 635.12,
+      "end": 639.44,
+      "duration": 4.32,
+      "text": "has four elements which is equal to the"
+    },
+    {
+      "start": 637.28,
+      "end": 641.28,
+      "duration": 4.0,
+      "text": "capacity. So I already have four"
+    },
+    {
+      "start": 639.44,
+      "end": 643.28,
+      "duration": 3.84,
+      "text": "elements. I need to take off the last"
+    },
+    {
+      "start": 641.28,
+      "end": 644.96,
+      "duration": 3.68,
+      "text": "one. I need to take off the last one."
+    },
+    {
+      "start": 643.28,
+      "end": 647.68,
+      "duration": 4.4,
+      "text": "Can I take off the last one? Super"
+    },
+    {
+      "start": 644.96,
+      "end": 649.6,
+      "duration": 4.64,
+      "text": "simple. I get the last node. How do you"
+    },
+    {
+      "start": 647.68,
+      "end": 651.04,
+      "duration": 3.36,
+      "text": "get the last node? You have a tail. You"
+    },
+    {
+      "start": 649.6,
+      "end": 653.44,
+      "duration": 3.84,
+      "text": "have a tail. So you say, \"Hey, who's"
+    },
+    {
+      "start": 651.04,
+      "end": 656.4,
+      "duration": 5.36,
+      "text": "your last?\" So I say tail dot previous"
+    },
+    {
+      "start": 653.44,
+      "end": 658.16,
+      "duration": 4.72,
+      "text": "is the node that I need to delete. Tail."
+    },
+    {
+      "start": 656.4,
+      "end": 660.24,
+      "duration": 3.84,
+      "text": "Is the node that I need to delete. Okay,"
+    },
+    {
+      "start": 658.16,
+      "end": 663.68,
+      "duration": 5.52,
+      "text": "please delete it. So first you delete"
+    },
+    {
+      "start": 660.24,
+      "end": 665.52,
+      "duration": 5.28,
+      "text": "from here. So the value is four. So go"
+    },
+    {
+      "start": 663.68,
+      "end": 667.68,
+      "duration": 4.0,
+      "text": "in the map and say where's four? So"
+    },
+    {
+      "start": 665.52,
+      "end": 669.52,
+      "duration": 4.0,
+      "text": "delete four as well. So I've deleted"
+    },
+    {
+      "start": 667.68,
+      "end": 671.68,
+      "duration": 4.0,
+      "text": "this."
+    },
+    {
+      "start": 669.52,
+      "end": 674.64,
+      "duration": 5.12,
+      "text": "So now the double link list looks like"
+    },
+    {
+      "start": 671.68,
+      "end": 677.52,
+      "duration": 5.84,
+      "text": "this. Correct. So maybe I could just,"
+    },
+    {
+      "start": 674.64,
+      "end": 679.52,
+      "duration": 4.88,
+      "text": "you know, move it across"
+    },
+    {
+      "start": 677.52,
+      "end": 681.92,
+      "duration": 4.4,
+      "text": "just to make it easy. So I've moved it"
+    },
+    {
+      "start": 679.52,
+      "end": 684.0,
+      "duration": 4.48,
+      "text": "across. Now what do I need to do? I need"
+    },
+    {
+      "start": 681.92,
+      "end": 686.64,
+      "duration": 4.72,
+      "text": "to take the five, create a new node. So"
+    },
+    {
+      "start": 684.0,
+      "end": 688.64,
+      "duration": 4.64,
+      "text": "I've created a new node 5, 6. And make"
+    },
+    {
+      "start": 686.64,
+      "end": 692.32,
+      "duration": 5.68,
+      "text": "sure the next is pointing to the next"
+    },
+    {
+      "start": 688.64,
+      "end": 694.08,
+      "duration": 5.44,
+      "text": "one. And this is this. And this is as it"
+    },
+    {
+      "start": 692.32,
+      "end": 696.16,
+      "duration": 3.84,
+      "text": "is. So I have a five. And please make"
+    },
+    {
+      "start": 694.08,
+      "end": 698.56,
+      "duration": 4.48,
+      "text": "sure to store the reference to this"
+    },
+    {
+      "start": 696.16,
+      "end": 700.88,
+      "duration": 4.72,
+      "text": "five. No. Done. After that, I've been"
+    },
+    {
+      "start": 698.56,
+      "end": 702.32,
+      "duration": 3.76,
+      "text": "asked to, you know, get seven. Do I have"
+    },
+    {
+      "start": 700.88,
+      "end": 704.4,
+      "duration": 3.52,
+      "text": "a seven? Yeah, I do have a seven. Where"
+    },
+    {
+      "start": 702.32,
+      "end": 707.68,
+      "duration": 5.36,
+      "text": "is the seven here? I get the value at"
+    },
+    {
+      "start": 704.4,
+      "end": 710.32,
+      "duration": 5.92,
+      "text": "first which is 10. After that, what I do"
+    },
+    {
+      "start": 707.68,
+      "end": 712.24,
+      "duration": 4.56,
+      "text": "is I take this particular node itself. I"
+    },
+    {
+      "start": 710.32,
+      "end": 715.68,
+      "duration": 5.36,
+      "text": "take this particular node itself. I take"
+    },
+    {
+      "start": 712.24,
+      "end": 719.52,
+      "duration": 7.28,
+      "text": "it off. My bad. So 7, 10. So I'll take"
+    },
+    {
+      "start": 715.68,
+      "end": 722.8,
+      "duration": 7.12,
+      "text": "7A 10. So if I take it off, uh this"
+    },
+    {
+      "start": 719.52,
+      "end": 726.08,
+      "duration": 6.56,
+      "text": "thing will go back"
+    },
+    {
+      "start": 722.8,
+      "end": 728.88,
+      "duration": 6.08,
+      "text": "and 7A 10 will come across here. 7A 10"
+    },
+    {
+      "start": 726.08,
+      "end": 730.88,
+      "duration": 4.8,
+      "text": "and the next and the previous. I'm just"
+    },
+    {
+      "start": 728.88,
+      "end": 733.28,
+      "duration": 4.4,
+      "text": "taking it out and putting it at front."
+    },
+    {
+      "start": 730.88,
+      "end": 736.0,
+      "duration": 5.12,
+      "text": "Okay, done. After that, there's a"
+    },
+    {
+      "start": 733.28,
+      "end": 737.76,
+      "duration": 4.48,
+      "text": "question of putting five, 7. So, what I"
+    },
+    {
+      "start": 736.0,
+      "end": 739.84,
+      "duration": 3.84,
+      "text": "do is I go ahead and check. Hey, is"
+    },
+    {
+      "start": 737.76,
+      "end": 741.84,
+      "duration": 4.08,
+      "text": "there a five? He says, yeah, yes, there"
+    },
+    {
+      "start": 739.84,
+      "end": 743.6,
+      "duration": 3.76,
+      "text": "is a five. Yes, there is a five. Like,"
+    },
+    {
+      "start": 741.84,
+      "end": 745.2,
+      "duration": 3.36,
+      "text": "okay, I just need to replace it. So, I"
+    },
+    {
+      "start": 743.6,
+      "end": 746.88,
+      "duration": 3.28,
+      "text": "get the reference. So, I just pick pick"
+    },
+    {
+      "start": 745.2,
+      "end": 748.48,
+      "duration": 3.28,
+      "text": "out the node. Please make sure you pick"
+    },
+    {
+      "start": 746.88,
+      "end": 751.84,
+      "duration": 4.96,
+      "text": "out the node. So, I'll just pick out uh"
+    },
+    {
+      "start": 748.48,
+      "end": 753.44,
+      "duration": 4.96,
+      "text": "her. I will just pick out the 5, 7 node."
+    },
+    {
+      "start": 751.84,
+      "end": 754.88,
+      "duration": 3.04,
+      "text": "Make sure it's the same node. Make sure"
+    },
+    {
+      "start": 753.44,
+      "end": 757.36,
+      "duration": 3.92,
+      "text": "it is the same node. So, you pick out"
+    },
+    {
+      "start": 754.88,
+      "end": 760.32,
+      "duration": 5.44,
+      "text": "the 5, 7. So, once you've picked it out,"
+    },
+    {
+      "start": 757.36,
+      "end": 762.4,
+      "duration": 5.04,
+      "text": "it will look something like this."
+    },
+    {
+      "start": 760.32,
+      "end": 764.48,
+      "duration": 4.16,
+      "text": "insert the same node. Take the same node"
+    },
+    {
+      "start": 762.4,
+      "end": 766.72,
+      "duration": 4.32,
+      "text": "and insert it over here. So the"
+    },
+    {
+      "start": 764.48,
+      "end": 769.12,
+      "duration": 4.64,
+      "text": "reference doesn't changes. You just"
+    },
+    {
+      "start": 766.72,
+      "end": 772.56,
+      "duration": 5.84,
+      "text": "change pointers. You just change"
+    },
+    {
+      "start": 769.12,
+      "end": 775.12,
+      "duration": 6.0,
+      "text": "pointers. Get the node, delete it. Get"
+    },
+    {
+      "start": 772.56,
+      "end": 779.12,
+      "duration": 6.56,
+      "text": "the node, delete it. And after that,"
+    },
+    {
+      "start": 775.12,
+      "end": 780.96,
+      "duration": 5.84,
+      "text": "insert. Insert. Done. Perfect. So time"
+    },
+    {
+      "start": 779.12,
+      "end": 783.12,
+      "duration": 4.0,
+      "text": "to write down the pseudo code. So"
+    },
+    {
+      "start": 780.96,
+      "end": 785.76,
+      "duration": 4.8,
+      "text": "please, please make sure you should be"
+    },
+    {
+      "start": 783.12,
+      "end": 788.32,
+      "duration": 5.2,
+      "text": "knowing what a doubly link list is. So"
+    },
+    {
+      "start": 785.76,
+      "end": 790.64,
+      "duration": 4.88,
+      "text": "if I get back to the dry run, what all"
+    },
+    {
+      "start": 788.32,
+      "end": 792.88,
+      "duration": 4.56,
+      "text": "do we need? We definitely need a map"
+    },
+    {
+      "start": 790.64,
+      "end": 795.12,
+      "duration": 4.48,
+      "text": "data structure so that we can have the"
+    },
+    {
+      "start": 792.88,
+      "end": 798.4,
+      "duration": 5.52,
+      "text": "key and the direct reference to the"
+    },
+    {
+      "start": 795.12,
+      "end": 801.44,
+      "duration": 6.32,
+      "text": "node. So if you observed you did observe"
+    },
+    {
+      "start": 798.4,
+      "end": 804.16,
+      "duration": 5.76,
+      "text": "one thing we were deleting nodes like we"
+    },
+    {
+      "start": 801.44,
+      "end": 805.92,
+      "duration": 4.48,
+      "text": "had a reference we deleted and what did"
+    },
+    {
+      "start": 804.16,
+      "end": 808.48,
+      "duration": 4.32,
+      "text": "deletion mean over here? We were just"
+    },
+    {
+      "start": 805.92,
+      "end": 811.92,
+      "duration": 6.0,
+      "text": "changing links we were just changing"
+    },
+    {
+      "start": 808.48,
+      "end": 813.52,
+      "duration": 5.04,
+      "text": "links but the node was as it is because"
+    },
+    {
+      "start": 811.92,
+      "end": 815.84,
+      "duration": 3.92,
+      "text": "we're reusing that node. We're not"
+    },
+    {
+      "start": 813.52,
+      "end": 817.92,
+      "duration": 4.4,
+      "text": "creating new nodes. Okay we could delete"
+    },
+    {
+      "start": 815.84,
+      "end": 820.0,
+      "duration": 4.16,
+      "text": "from here as well. So that is typically"
+    },
+    {
+      "start": 817.92,
+      "end": 822.48,
+      "duration": 4.56,
+      "text": "something like this. So deletion of a"
+    },
+    {
+      "start": 820.0,
+      "end": 825.44,
+      "duration": 5.44,
+      "text": "node is what we need. So what I could do"
+    },
+    {
+      "start": 822.48,
+      "end": 827.84,
+      "duration": 5.36,
+      "text": "is I could write a function deletion of"
+    },
+    {
+      "start": 825.44,
+      "end": 831.12,
+      "duration": 5.68,
+      "text": "a node"
+    },
+    {
+      "start": 827.84,
+      "end": 835.6,
+      "duration": 7.76,
+      "text": "of a given node a deletion"
+    },
+    {
+      "start": 831.12,
+      "end": 837.68,
+      "duration": 6.56,
+      "text": "of a node where you take a node and you"
+    },
+    {
+      "start": 835.6,
+      "end": 840.24,
+      "duration": 4.64,
+      "text": "end up deleting it. So you're given a"
+    },
+    {
+      "start": 837.68,
+      "end": 842.08,
+      "duration": 4.4,
+      "text": "node and you end up deleting it. That"
+    },
+    {
+      "start": 840.24,
+      "end": 844.48,
+      "duration": 4.24,
+      "text": "node can be anywhere. It can be here. It"
+    },
+    {
+      "start": 842.08,
+      "end": 846.0,
+      "duration": 3.92,
+      "text": "can be at the end. Can be anywhere."
+    },
+    {
+      "start": 844.48,
+      "end": 848.64,
+      "duration": 4.16,
+      "text": "Okay. So that is something I definitely"
+    },
+    {
+      "start": 846.0,
+      "end": 850.88,
+      "duration": 4.88,
+      "text": "need from doubly link list. So assume we"
+    },
+    {
+      "start": 848.64,
+      "end": 853.12,
+      "duration": 4.48,
+      "text": "know it because I've already done this"
+    },
+    {
+      "start": 850.88,
+      "end": 854.48,
+      "duration": 3.6,
+      "text": "thing in the doubly link list lectures."
+    },
+    {
+      "start": 853.12,
+      "end": 857.36,
+      "duration": 4.24,
+      "text": "Please go back and watch it. How to"
+    },
+    {
+      "start": 854.48,
+      "end": 860.16,
+      "duration": 5.68,
+      "text": "delete a node whenever the reference is"
+    },
+    {
+      "start": 857.36,
+      "end": 862.72,
+      "duration": 5.36,
+      "text": "given. What else do we need? Whenever we"
+    },
+    {
+      "start": 860.16,
+      "end": 864.72,
+      "duration": 4.56,
+      "text": "are deleting we're kind of using it and"
+    },
+    {
+      "start": 862.72,
+      "end": 867.76,
+      "duration": 5.04,
+      "text": "in order to mark it as the least"
+    },
+    {
+      "start": 864.72,
+      "end": 870.72,
+      "duration": 6.0,
+      "text": "recently used what we are doing is we"
+    },
+    {
+      "start": 867.76,
+      "end": 874.4,
+      "duration": 6.64,
+      "text": "putting it right after head right after"
+    },
+    {
+      "start": 870.72,
+      "end": 877.4,
+      "duration": 6.68,
+      "text": "head. So what I can do is I can say"
+    },
+    {
+      "start": 874.4,
+      "end": 877.4,
+      "duration": 3.0,
+      "text": "insert"
+    },
+    {
+      "start": 877.84,
+      "end": 882.32,
+      "duration": 4.48,
+      "text": "after head"
+    },
+    {
+      "start": 880.72,
+      "end": 885.04,
+      "duration": 4.32,
+      "text": "and again you'll be given a node. Again"
+    },
+    {
+      "start": 882.32,
+      "end": 887.28,
+      "duration": 4.96,
+      "text": "you'll be given a node. So you just have"
+    },
+    {
+      "start": 885.04,
+      "end": 889.12,
+      "duration": 4.08,
+      "text": "to insert after head. Now if if you're"
+    },
+    {
+      "start": 887.28,
+      "end": 890.88,
+      "duration": 3.6,
+      "text": "able to write these two functions I"
+    },
+    {
+      "start": 889.12,
+      "end": 894.16,
+      "duration": 5.04,
+      "text": "think my job is done. My job is done."
+    },
+    {
+      "start": 890.88,
+      "end": 896.16,
+      "duration": 5.28,
+      "text": "And please make sure the doubly uh link"
+    },
+    {
+      "start": 894.16,
+      "end": 899.28,
+      "duration": 5.12,
+      "text": "list that you define it should be"
+    },
+    {
+      "start": 896.16,
+      "end": 902.24,
+      "duration": 6.08,
+      "text": "storing a key a value a next pointer and"
+    },
+    {
+      "start": 899.28,
+      "end": 904.96,
+      "duration": 5.68,
+      "text": "a previous pointer."
+    },
+    {
+      "start": 902.24,
+      "end": 906.8,
+      "duration": 4.56,
+      "text": "So the code is given below like you can"
+    },
+    {
+      "start": 904.96,
+      "end": 908.56,
+      "duration": 3.6,
+      "text": "find the code in any given language."
+    },
+    {
+      "start": 906.8,
+      "end": 910.48,
+      "duration": 3.68,
+      "text": "It's it's given below. What I'll"
+    },
+    {
+      "start": 908.56,
+      "end": 912.32,
+      "duration": 3.76,
+      "text": "recommend you to do is open it on some"
+    },
+    {
+      "start": 910.48,
+      "end": 914.88,
+      "duration": 4.4,
+      "text": "other tab so that you could follow"
+    },
+    {
+      "start": 912.32,
+      "end": 916.32,
+      "duration": 4.0,
+      "text": "across whatever I am doing. So as of now"
+    },
+    {
+      "start": 914.88,
+      "end": 919.2,
+      "duration": 4.32,
+      "text": "just remember you have a function"
+    },
+    {
+      "start": 916.32,
+      "end": 921.12,
+      "duration": 4.8,
+      "text": "deletion of a node insert after head and"
+    },
+    {
+      "start": 919.2,
+      "end": 923.92,
+      "duration": 4.72,
+      "text": "the node is containing a key a value a"
+    },
+    {
+      "start": 921.12,
+      "end": 925.44,
+      "duration": 4.32,
+      "text": "next and a previous right. So let's get"
+    },
+    {
+      "start": 923.92,
+      "end": 929.44,
+      "duration": 5.52,
+      "text": "on to the code. I'll be writing down the"
+    },
+    {
+      "start": 925.44,
+      "end": 932.8,
+      "duration": 7.36,
+      "text": "pseudo code. So we have a class which is"
+    },
+    {
+      "start": 929.44,
+      "end": 935.6,
+      "duration": 6.16,
+      "text": "L ru cache."
+    },
+    {
+      "start": 932.8,
+      "end": 938.08,
+      "duration": 5.28,
+      "text": "What all do we need? We definitely need"
+    },
+    {
+      "start": 935.6,
+      "end": 942.16,
+      "duration": 6.56,
+      "text": "a map data structure. So a map which is"
+    },
+    {
+      "start": 938.08,
+      "end": 944.16,
+      "duration": 6.08,
+      "text": "storing a integer and the node reference"
+    },
+    {
+      "start": 942.16,
+      "end": 946.72,
+      "duration": 4.56,
+      "text": "star for C++. For Java people you don't"
+    },
+    {
+      "start": 944.16,
+      "end": 949.04,
+      "duration": 4.88,
+      "text": "have to give a star and a map. We also"
+    },
+    {
+      "start": 946.72,
+      "end": 951.6,
+      "duration": 4.88,
+      "text": "need the capacity where we know how many"
+    },
+    {
+      "start": 949.04,
+      "end": 955.12,
+      "duration": 6.08,
+      "text": "like what's the size of the cache. Along"
+    },
+    {
+      "start": 951.6,
+      "end": 958.32,
+      "duration": 6.72,
+      "text": "with this we definitely need a head"
+    },
+    {
+      "start": 955.12,
+      "end": 960.16,
+      "duration": 5.04,
+      "text": "and a tail. Why do we need it? As I"
+    },
+    {
+      "start": 958.32,
+      "end": 962.8,
+      "duration": 4.48,
+      "text": "implement, you'll understand. So, we'll"
+    },
+    {
+      "start": 960.16,
+      "end": 965.84,
+      "duration": 5.68,
+      "text": "definitely need this head and the state,"
+    },
+    {
+      "start": 962.8,
+      "end": 968.8,
+      "duration": 6.0,
+      "text": "right? Okay. After this, we'll have to"
+    },
+    {
+      "start": 965.84,
+      "end": 973.04,
+      "duration": 7.2,
+      "text": "uh write across the"
+    },
+    {
+      "start": 968.8,
+      "end": 974.8,
+      "duration": 6.0,
+      "text": "constructor which is taking a capacity."
+    },
+    {
+      "start": 973.04,
+      "end": 977.6,
+      "duration": 4.56,
+      "text": "So, what I can do is I can say the"
+    },
+    {
+      "start": 974.8,
+      "end": 980.08,
+      "duration": 5.28,
+      "text": "capacity"
+    },
+    {
+      "start": 977.6,
+      "end": 982.24,
+      "duration": 4.64,
+      "text": "this is underscore equal to capacity"
+    },
+    {
+      "start": 980.08,
+      "end": 984.32,
+      "duration": 4.24,
+      "text": "underscore."
+    },
+    {
+      "start": 982.24,
+      "end": 986.48,
+      "duration": 4.24,
+      "text": "That is done. I could always say"
+    },
+    {
+      "start": 984.32,
+      "end": 988.32,
+      "duration": 4.0,
+      "text": "initially the map will have no elements."
+    },
+    {
+      "start": 986.48,
+      "end": 990.96,
+      "duration": 4.48,
+      "text": "So you could just clear it across and I"
+    },
+    {
+      "start": 988.32,
+      "end": 994.64,
+      "duration": 6.32,
+      "text": "can always say initially the heads next"
+    },
+    {
+      "start": 990.96,
+      "end": 997.92,
+      "duration": 6.96,
+      "text": "will be pointing to tail and the tails"
+    },
+    {
+      "start": 994.64,
+      "end": 999.52,
+      "duration": 4.88,
+      "text": "previous will be pointing to head. So we"
+    },
+    {
+      "start": 997.92,
+      "end": 1002.64,
+      "duration": 4.72,
+      "text": "have a small link list to start off"
+    },
+    {
+      "start": 999.52,
+      "end": 1004.64,
+      "duration": 5.12,
+      "text": "with. Perfect. This is how my LRU cache"
+    },
+    {
+      "start": 1002.64,
+      "end": 1006.16,
+      "duration": 3.52,
+      "text": "will look like. That was the next"
+    },
+    {
+      "start": 1004.64,
+      "end": 1008.48,
+      "duration": 3.84,
+      "text": "function that I'll have to write. That's"
+    },
+    {
+      "start": 1006.16,
+      "end": 1010.88,
+      "duration": 4.72,
+      "text": "the get function. So let's write it. So"
+    },
+    {
+      "start": 1008.48,
+      "end": 1013.68,
+      "duration": 5.2,
+      "text": "I have to write in get where I've been"
+    },
+    {
+      "start": 1010.88,
+      "end": 1016.64,
+      "duration": 5.76,
+      "text": "given a key and and I need to find the"
+    },
+    {
+      "start": 1013.68,
+      "end": 1019.04,
+      "duration": 5.36,
+      "text": "value if it does exist. So first of all"
+    },
+    {
+      "start": 1016.64,
+      "end": 1022.16,
+      "duration": 5.52,
+      "text": "if it doesn't exist which means if the"
+    },
+    {
+      "start": 1019.04,
+      "end": 1024.0,
+      "duration": 4.96,
+      "text": "map doesn't have it the map doesn't have"
+    },
+    {
+      "start": 1022.16,
+      "end": 1025.68,
+      "duration": 3.52,
+      "text": "it. So can I say if the map doesn't have"
+    },
+    {
+      "start": 1024.0,
+      "end": 1028.0,
+      "duration": 4.0,
+      "text": "it and depending on your language you"
+    },
+    {
+      "start": 1025.68,
+      "end": 1030.16,
+      "duration": 4.48,
+      "text": "can write it. If the map doesn't have it"
+    },
+    {
+      "start": 1028.0,
+      "end": 1033.04,
+      "duration": 5.04,
+      "text": "in that scenario I know the answer will"
+    },
+    {
+      "start": 1030.16,
+      "end": 1035.36,
+      "duration": 5.2,
+      "text": "be returned minus one because it's not"
+    },
+    {
+      "start": 1033.04,
+      "end": 1037.28,
+      "duration": 4.24,
+      "text": "there. But if it does have it I"
+    },
+    {
+      "start": 1035.36,
+      "end": 1040.4,
+      "duration": 5.04,
+      "text": "definitely have a value. So what I could"
+    },
+    {
+      "start": 1037.28,
+      "end": 1043.44,
+      "duration": 6.16,
+      "text": "do is I could do a node star and a node"
+    },
+    {
+      "start": 1040.4,
+      "end": 1046.48,
+      "duration": 6.08,
+      "text": "and I could go to the map. Hey map can"
+    },
+    {
+      "start": 1043.44,
+      "end": 1049.12,
+      "duration": 5.68,
+      "text": "you give me the value for the given key."
+    },
+    {
+      "start": 1046.48,
+      "end": 1050.72,
+      "duration": 4.24,
+      "text": "So what this map will give is the map is"
+    },
+    {
+      "start": 1049.12,
+      "end": 1052.16,
+      "duration": 3.04,
+      "text": "storing if you remember reference it'll"
+    },
+    {
+      "start": 1050.72,
+      "end": 1054.08,
+      "duration": 3.36,
+      "text": "give you the entire node. It'll give you"
+    },
+    {
+      "start": 1052.16,
+      "end": 1056.0,
+      "duration": 3.84,
+      "text": "the entire node. So you have the node"
+    },
+    {
+      "start": 1054.08,
+      "end": 1060.16,
+      "duration": 6.08,
+      "text": "you definitely have the node. So at the"
+    },
+    {
+      "start": 1056.0,
+      "end": 1062.24,
+      "duration": 6.24,
+      "text": "end of the day you could return the node"
+    },
+    {
+      "start": 1060.16,
+      "end": 1064.16,
+      "duration": 4.0,
+      "text": "value"
+    },
+    {
+      "start": 1062.24,
+      "end": 1066.32,
+      "duration": 4.08,
+      "text": "because you have the reference node. We"
+    },
+    {
+      "start": 1064.16,
+      "end": 1068.88,
+      "duration": 4.72,
+      "text": "could straight away extract the value."
+    },
+    {
+      "start": 1066.32,
+      "end": 1071.12,
+      "duration": 4.8,
+      "text": "But are we done? No, we're not done."
+    },
+    {
+      "start": 1068.88,
+      "end": 1073.76,
+      "duration": 4.88,
+      "text": "We've touched someone. We've touched"
+    },
+    {
+      "start": 1071.12,
+      "end": 1076.56,
+      "duration": 5.44,
+      "text": "someone. Now we need to put it at front"
+    },
+    {
+      "start": 1073.76,
+      "end": 1079.04,
+      "duration": 5.28,
+      "text": "because this is least recently used. So"
+    },
+    {
+      "start": 1076.56,
+      "end": 1082.0,
+      "duration": 5.44,
+      "text": "what I'll do is first of all I'll say"
+    },
+    {
+      "start": 1079.04,
+      "end": 1084.88,
+      "duration": 5.84,
+      "text": "delete the node"
+    },
+    {
+      "start": 1082.0,
+      "end": 1087.44,
+      "duration": 5.44,
+      "text": "and I'll pass on the node. Remember the"
+    },
+    {
+      "start": 1084.88,
+      "end": 1088.96,
+      "duration": 4.08,
+      "text": "function that we wrote like we said that"
+    },
+    {
+      "start": 1087.44,
+      "end": 1091.52,
+      "duration": 4.08,
+      "text": "there's a hypothetical function that"
+    },
+    {
+      "start": 1088.96,
+      "end": 1096.16,
+      "duration": 7.2,
+      "text": "deletes the node. Okay. Once it is"
+    },
+    {
+      "start": 1091.52,
+      "end": 1097.84,
+      "duration": 6.32,
+      "text": "deleted, can I say insert after head?"
+    },
+    {
+      "start": 1096.16,
+      "end": 1101.44,
+      "duration": 5.28,
+      "text": "Remember it's a dummy head. It's a dummy"
+    },
+    {
+      "start": 1097.84,
+      "end": 1103.44,
+      "duration": 5.6,
+      "text": "head and we use the same node. Don't"
+    },
+    {
+      "start": 1101.44,
+      "end": 1105.2,
+      "duration": 3.76,
+      "text": "create one more node because it will be"
+    },
+    {
+      "start": 1103.44,
+      "end": 1107.36,
+      "duration": 3.92,
+      "text": "space complexity like you'll add up"
+    },
+    {
+      "start": 1105.2,
+      "end": 1109.36,
+      "duration": 4.16,
+      "text": "additional space complexity. Reuse the"
+    },
+    {
+      "start": 1107.36,
+      "end": 1111.36,
+      "duration": 4.0,
+      "text": "given node itself. So I've inserted it"
+    },
+    {
+      "start": 1109.36,
+      "end": 1113.84,
+      "duration": 4.48,
+      "text": "after head. I need to do anything else."
+    },
+    {
+      "start": 1111.36,
+      "end": 1115.84,
+      "duration": 4.48,
+      "text": "Now we're done here. I just deleted it."
+    },
+    {
+      "start": 1113.84,
+      "end": 1118.64,
+      "duration": 4.8,
+      "text": "Put it across to keep a track of the"
+    },
+    {
+      "start": 1115.84,
+      "end": 1121.28,
+      "duration": 5.44,
+      "text": "least recently used. Perfect. What's the"
+    },
+    {
+      "start": 1118.64,
+      "end": 1123.52,
+      "duration": 4.88,
+      "text": "next one? I need to write the put"
+    },
+    {
+      "start": 1121.28,
+      "end": 1126.32,
+      "duration": 5.04,
+      "text": "function as well. The put function will"
+    },
+    {
+      "start": 1123.52,
+      "end": 1129.44,
+      "duration": 5.92,
+      "text": "be I'll be given a key and I'll be given"
+    },
+    {
+      "start": 1126.32,
+      "end": 1132.0,
+      "duration": 5.68,
+      "text": "a value. Okay,"
+    },
+    {
+      "start": 1129.44,
+      "end": 1134.32,
+      "duration": 4.88,
+      "text": "what are the cases? I know one thing for"
+    },
+    {
+      "start": 1132.0,
+      "end": 1136.56,
+      "duration": 4.56,
+      "text": "sure. If it is already existing, I just"
+    },
+    {
+      "start": 1134.32,
+      "end": 1139.04,
+      "duration": 4.72,
+      "text": "need to change it. So I'll be like, hey,"
+    },
+    {
+      "start": 1136.56,
+      "end": 1141.68,
+      "duration": 5.12,
+      "text": "does the map has it?"
+    },
+    {
+      "start": 1139.04,
+      "end": 1143.52,
+      "duration": 4.48,
+      "text": "If the map has the value key, again,"
+    },
+    {
+      "start": 1141.68,
+      "end": 1146.72,
+      "duration": 5.04,
+      "text": "depending on the language, the syntax"
+    },
+    {
+      "start": 1143.52,
+      "end": 1148.88,
+      "duration": 5.36,
+      "text": "will vary. If the map has this value"
+    },
+    {
+      "start": 1146.72,
+      "end": 1151.44,
+      "duration": 4.72,
+      "text": "key, what will I be doing? I'll be like"
+    },
+    {
+      "start": 1148.88,
+      "end": 1154.16,
+      "duration": 5.28,
+      "text": "okay maybe I can get the node"
+    },
+    {
+      "start": 1151.44,
+      "end": 1156.32,
+      "duration": 4.88,
+      "text": "nodes node and you could always say map"
+    },
+    {
+      "start": 1154.16,
+      "end": 1158.08,
+      "duration": 3.92,
+      "text": "hey map can you give me the value and"
+    },
+    {
+      "start": 1156.32,
+      "end": 1160.16,
+      "duration": 3.84,
+      "text": "the map will give you the reference to"
+    },
+    {
+      "start": 1158.08,
+      "end": 1162.16,
+      "duration": 4.08,
+      "text": "that node wherever you stored element"
+    },
+    {
+      "start": 1160.16,
+      "end": 1165.52,
+      "duration": 5.36,
+      "text": "perfect and you could straight away say"
+    },
+    {
+      "start": 1162.16,
+      "end": 1167.92,
+      "duration": 5.76,
+      "text": "node dot value can you just replace your"
+    },
+    {
+      "start": 1165.52,
+      "end": 1170.08,
+      "duration": 4.56,
+      "text": "value by the value given to us the new"
+    },
+    {
+      "start": 1167.92,
+      "end": 1172.88,
+      "duration": 4.96,
+      "text": "value perfect so we used it I've"
+    },
+    {
+      "start": 1170.08,
+      "end": 1175.28,
+      "duration": 5.2,
+      "text": "recently used it so what I do is delete"
+    },
+    {
+      "start": 1172.88,
+      "end": 1177.44,
+      "duration": 4.56,
+      "text": "node"
+    },
+    {
+      "start": 1175.28,
+      "end": 1179.84,
+      "duration": 4.56,
+      "text": "and this node would be deleted since I"
+    },
+    {
+      "start": 1177.44,
+      "end": 1182.08,
+      "duration": 4.64,
+      "text": "recently used it. I say insert after"
+    },
+    {
+      "start": 1179.84,
+      "end": 1185.76,
+      "duration": 5.92,
+      "text": "head or whatever is the function name"
+    },
+    {
+      "start": 1182.08,
+      "end": 1187.28,
+      "duration": 5.2,
+      "text": "and I insert it and we are done. Yeah,"
+    },
+    {
+      "start": 1185.76,
+      "end": 1189.12,
+      "duration": 3.36,
+      "text": "we're done. No need to change anything"
+    },
+    {
+      "start": 1187.28,
+      "end": 1192.08,
+      "duration": 4.8,
+      "text": "in the map because the map is storing a"
+    },
+    {
+      "start": 1189.12,
+      "end": 1195.44,
+      "duration": 6.32,
+      "text": "reference to the node. Pretty cool. What"
+    },
+    {
+      "start": 1192.08,
+      "end": 1197.2,
+      "duration": 5.12,
+      "text": "if it is not in the map? If it is not in"
+    },
+    {
+      "start": 1195.44,
+      "end": 1199.52,
+      "duration": 4.08,
+      "text": "the map, then there can be multiple"
+    },
+    {
+      "start": 1197.2,
+      "end": 1203.76,
+      "duration": 6.56,
+      "text": "conditions. What if my cache is already"
+    },
+    {
+      "start": 1199.52,
+      "end": 1207.92,
+      "duration": 8.4,
+      "text": "filled up? Okay, so it means if the"
+    },
+    {
+      "start": 1203.76,
+      "end": 1209.6,
+      "duration": 5.84,
+      "text": "number of elements that I store MP dot"
+    },
+    {
+      "start": 1207.92,
+      "end": 1213.68,
+      "duration": 5.76,
+      "text": "uh"
+    },
+    {
+      "start": 1209.6,
+      "end": 1216.72,
+      "duration": 7.12,
+      "text": "size equal to capacity."
+    },
+    {
+      "start": 1213.68,
+      "end": 1218.48,
+      "duration": 4.8,
+      "text": "If this is the case, what I'll do is I"
+    },
+    {
+      "start": 1216.72,
+      "end": 1221.84,
+      "duration": 5.12,
+      "text": "have to delete. I'll have to get rid of"
+    },
+    {
+      "start": 1218.48,
+      "end": 1223.92,
+      "duration": 5.44,
+      "text": "this guy. Which guy? The least recently"
+    },
+    {
+      "start": 1221.84,
+      "end": 1226.32,
+      "duration": 4.48,
+      "text": "used. How do you figure that out? Go"
+    },
+    {
+      "start": 1223.92,
+      "end": 1228.48,
+      "duration": 4.56,
+      "text": "back to the dry. This is your dummy tail"
+    },
+    {
+      "start": 1226.32,
+      "end": 1230.4,
+      "duration": 4.08,
+      "text": "that you initially defined. The least"
+    },
+    {
+      "start": 1228.48,
+      "end": 1231.92,
+      "duration": 3.44,
+      "text": "recently element is this one, which is"
+    },
+    {
+      "start": 1230.4,
+      "end": 1234.24,
+      "duration": 3.84,
+      "text": "the previous of the dummy tail, which is"
+    },
+    {
+      "start": 1231.92,
+      "end": 1238.48,
+      "duration": 6.56,
+      "text": "the previous of the dummy tail. So what"
+    },
+    {
+      "start": 1234.24,
+      "end": 1241.04,
+      "duration": 6.8,
+      "text": "I do is I simply go over and I say hey I"
+    },
+    {
+      "start": 1238.48,
+      "end": 1244.56,
+      "duration": 6.08,
+      "text": "know the node and the node is nothing"
+    },
+    {
+      "start": 1241.04,
+      "end": 1247.36,
+      "duration": 6.32,
+      "text": "but the tails previous. So I can easily"
+    },
+    {
+      "start": 1244.56,
+      "end": 1250.16,
+      "duration": 5.6,
+      "text": "get the node. Okay, if I have the node I"
+    },
+    {
+      "start": 1247.36,
+      "end": 1251.84,
+      "duration": 4.48,
+      "text": "can also easily get the MP like from the"
+    },
+    {
+      "start": 1250.16,
+      "end": 1253.36,
+      "duration": 3.2,
+      "text": "map I could easily erase it. I could say"
+    },
+    {
+      "start": 1251.84,
+      "end": 1255.36,
+      "duration": 3.52,
+      "text": "MP"
+    },
+    {
+      "start": 1253.36,
+      "end": 1257.76,
+      "duration": 4.4,
+      "text": "do delete or erase whatever you have"
+    },
+    {
+      "start": 1255.36,
+      "end": 1259.36,
+      "duration": 4.0,
+      "text": "from the map. I could always say node"
+    },
+    {
+      "start": 1257.76,
+      "end": 1261.36,
+      "duration": 3.6,
+      "text": "key because I if I have the node"
+    },
+    {
+      "start": 1259.36,
+      "end": 1263.28,
+      "duration": 3.92,
+      "text": "reference I have the key. I could delete"
+    },
+    {
+      "start": 1261.36,
+      "end": 1265.28,
+      "duration": 3.92,
+      "text": "it out of the map. Okay, it's gone from"
+    },
+    {
+      "start": 1263.28,
+      "end": 1268.8,
+      "duration": 5.52,
+      "text": "the map. I need to take it out from the"
+    },
+    {
+      "start": 1265.28,
+      "end": 1270.48,
+      "duration": 5.2,
+      "text": "cache as well. So I say delete node."
+    },
+    {
+      "start": 1268.8,
+      "end": 1272.48,
+      "duration": 3.68,
+      "text": "Delete the node. And since I have the"
+    },
+    {
+      "start": 1270.48,
+      "end": 1275.68,
+      "duration": 5.2,
+      "text": "node, I'll delete it. So what I've done"
+    },
+    {
+      "start": 1272.48,
+      "end": 1279.12,
+      "duration": 6.64,
+      "text": "is even if the size was full, I ended up"
+    },
+    {
+      "start": 1275.68,
+      "end": 1281.28,
+      "duration": 5.6,
+      "text": "deleting one element from it. Perfect."
+    },
+    {
+      "start": 1279.12,
+      "end": 1283.52,
+      "duration": 4.4,
+      "text": "Done. What after this? If it is deleted,"
+    },
+    {
+      "start": 1281.28,
+      "end": 1287.2,
+      "duration": 5.92,
+      "text": "I have someone new. Okay. If I have"
+    },
+    {
+      "start": 1283.52,
+      "end": 1290.0,
+      "duration": 6.48,
+      "text": "someone new, I'll say node star node new"
+    },
+    {
+      "start": 1287.2,
+      "end": 1292.56,
+      "duration": 5.36,
+      "text": "node or whatever is whatever you write"
+    },
+    {
+      "start": 1290.0,
+      "end": 1294.8,
+      "duration": 4.8,
+      "text": "key value. So I'll I'll create a new"
+    },
+    {
+      "start": 1292.56,
+      "end": 1298.4,
+      "duration": 5.84,
+      "text": "node. Okay, this is created. And I'll"
+    },
+    {
+      "start": 1294.8,
+      "end": 1300.64,
+      "duration": 5.84,
+      "text": "say MP of key. Can you store this new"
+    },
+    {
+      "start": 1298.4,
+      "end": 1304.24,
+      "duration": 5.84,
+      "text": "nodes reference? Done. And after that"
+    },
+    {
+      "start": 1300.64,
+      "end": 1307.92,
+      "duration": 7.28,
+      "text": "I'll say insert after head. Insert after"
+    },
+    {
+      "start": 1304.24,
+      "end": 1310.08,
+      "duration": 5.84,
+      "text": "head. And I'll pass on this node which"
+    },
+    {
+      "start": 1307.92,
+      "end": 1312.08,
+      "duration": 4.16,
+      "text": "can be inserted."
+    },
+    {
+      "start": 1310.08,
+      "end": 1314.96,
+      "duration": 4.88,
+      "text": "And we are done. We're done here as"
+    },
+    {
+      "start": 1312.08,
+      "end": 1316.64,
+      "duration": 4.56,
+      "text": "well. Okay."
+    },
+    {
+      "start": 1314.96,
+      "end": 1319.36,
+      "duration": 4.4,
+      "text": "What is the time complexity? Let's"
+    },
+    {
+      "start": 1316.64,
+      "end": 1323.52,
+      "duration": 6.88,
+      "text": "analyze. This is definitely p of fun."
+    },
+    {
+      "start": 1319.36,
+      "end": 1325.6,
+      "duration": 6.24,
+      "text": "Okay. This is also B of one. Assuming"
+    },
+    {
+      "start": 1323.52,
+      "end": 1328.08,
+      "duration": 4.56,
+      "text": "the delete works in B of one, which it"
+    },
+    {
+      "start": 1325.6,
+      "end": 1330.16,
+      "duration": 4.56,
+      "text": "will because it's just a link change."
+    },
+    {
+      "start": 1328.08,
+      "end": 1333.12,
+      "duration": 5.04,
+      "text": "Insert after head, it is also a link"
+    },
+    {
+      "start": 1330.16,
+      "end": 1335.68,
+      "duration": 5.52,
+      "text": "change. It will also work in B of one."
+    },
+    {
+      "start": 1333.12,
+      "end": 1338.32,
+      "duration": 5.2,
+      "text": "This one is something that might take B"
+    },
+    {
+      "start": 1335.68,
+      "end": 1340.16,
+      "duration": 4.48,
+      "text": "of login depending on the language that"
+    },
+    {
+      "start": 1338.32,
+      "end": 1342.56,
+      "duration": 4.24,
+      "text": "we're using, the map that you're using."
+    },
+    {
+      "start": 1340.16,
+      "end": 1344.56,
+      "duration": 4.4,
+      "text": "So I'll just leave it to you. The put am"
+    },
+    {
+      "start": 1342.56,
+      "end": 1346.8,
+      "duration": 4.24,
+      "text": "I doing something extra wagon? Am I"
+    },
+    {
+      "start": 1344.56,
+      "end": 1349.04,
+      "duration": 4.48,
+      "text": "running a loop? No. This is also big of"
+    },
+    {
+      "start": 1346.8,
+      "end": 1350.88,
+      "duration": 4.08,
+      "text": "one assuming that the map is taking B of"
+    },
+    {
+      "start": 1349.04,
+      "end": 1352.72,
+      "duration": 3.68,
+      "text": "one. We're using a map that takes login."
+    },
+    {
+      "start": 1350.88,
+      "end": 1355.6,
+      "duration": 4.72,
+      "text": "This will end up being login depending"
+    },
+    {
+      "start": 1352.72,
+      "end": 1358.96,
+      "duration": 6.24,
+      "text": "on the language, the map, etc. You can"
+    },
+    {
+      "start": 1355.6,
+      "end": 1362.72,
+      "duration": 7.12,
+      "text": "say BO of one or PO of login. So I was"
+    },
+    {
+      "start": 1358.96,
+      "end": 1364.96,
+      "duration": 6.0,
+      "text": "able to design it but then you should be"
+    },
+    {
+      "start": 1362.72,
+      "end": 1366.8,
+      "duration": 4.08,
+      "text": "able to delete the node. It's very"
+    },
+    {
+      "start": 1364.96,
+      "end": 1368.8,
+      "duration": 3.84,
+      "text": "simple. If you're given a node and if"
+    },
+    {
+      "start": 1366.8,
+      "end": 1372.24,
+      "duration": 5.44,
+      "text": "you want to delete it. So what you do is"
+    },
+    {
+      "start": 1368.8,
+      "end": 1374.8,
+      "duration": 6.0,
+      "text": "you get the previous node at first which"
+    },
+    {
+      "start": 1372.24,
+      "end": 1376.96,
+      "duration": 4.72,
+      "text": "is node.re because it is a doubly linked"
+    },
+    {
+      "start": 1374.8,
+      "end": 1381.12,
+      "duration": 6.32,
+      "text": "list. you get the after node the node"
+    },
+    {
+      "start": 1376.96,
+      "end": 1383.52,
+      "duration": 6.56,
+      "text": "after it which is node next. So once"
+    },
+    {
+      "start": 1381.12,
+      "end": 1386.56,
+      "duration": 5.44,
+      "text": "you've got it all you need to do is the"
+    },
+    {
+      "start": 1383.52,
+      "end": 1390.16,
+      "duration": 6.64,
+      "text": "previous nodes next"
+    },
+    {
+      "start": 1386.56,
+      "end": 1393.92,
+      "duration": 7.36,
+      "text": "should point to after node"
+    },
+    {
+      "start": 1390.16,
+      "end": 1397.76,
+      "duration": 7.6,
+      "text": "and the after nodes previous"
+    },
+    {
+      "start": 1393.92,
+      "end": 1401.28,
+      "duration": 7.36,
+      "text": "basic link list should point to the"
+    },
+    {
+      "start": 1397.76,
+      "end": 1403.68,
+      "duration": 5.92,
+      "text": "previous done. This is how you easily"
+    },
+    {
+      "start": 1401.28,
+      "end": 1405.52,
+      "duration": 4.24,
+      "text": "delete a node by cutting off links."
+    },
+    {
+      "start": 1403.68,
+      "end": 1406.88,
+      "duration": 3.2,
+      "text": "Okay, insert after head. You have the"
+    },
+    {
+      "start": 1405.52,
+      "end": 1409.12,
+      "duration": 3.6,
+      "text": "dummy head with you, right? You have the"
+    },
+    {
+      "start": 1406.88,
+      "end": 1413.52,
+      "duration": 6.64,
+      "text": "dummy head. So all you need to do is"
+    },
+    {
+      "start": 1409.12,
+      "end": 1415.6,
+      "duration": 6.48,
+      "text": "okay, you need to figure out as of now"
+    },
+    {
+      "start": 1413.52,
+      "end": 1418.72,
+      "duration": 5.2,
+      "text": "what is head connected to? What is head"
+    },
+    {
+      "start": 1415.6,
+      "end": 1420.16,
+      "duration": 4.56,
+      "text": "connected to? So current after head."
+    },
+    {
+      "start": 1418.72,
+      "end": 1423.04,
+      "duration": 4.32,
+      "text": "Current after head. So maybe you could"
+    },
+    {
+      "start": 1420.16,
+      "end": 1426.64,
+      "duration": 6.48,
+      "text": "write current after head. Now this is"
+    },
+    {
+      "start": 1423.04,
+      "end": 1428.64,
+      "duration": 5.6,
+      "text": "nothing but head.ext. So you have it."
+    },
+    {
+      "start": 1426.64,
+      "end": 1432.96,
+      "duration": 6.32,
+      "text": "There's the current after head. All you"
+    },
+    {
+      "start": 1428.64,
+      "end": 1434.88,
+      "duration": 6.24,
+      "text": "need to do is head. Next"
+    },
+    {
+      "start": 1432.96,
+      "end": 1437.04,
+      "duration": 4.08,
+      "text": "could easily be written as node because"
+    },
+    {
+      "start": 1434.88,
+      "end": 1439.52,
+      "duration": 4.64,
+      "text": "this is the new node. So head would be"
+    },
+    {
+      "start": 1437.04,
+      "end": 1441.92,
+      "duration": 4.88,
+      "text": "pointing to it. Okay."
+    },
+    {
+      "start": 1439.52,
+      "end": 1444.64,
+      "duration": 5.12,
+      "text": "Nodes next will always be pointing to"
+    },
+    {
+      "start": 1441.92,
+      "end": 1446.56,
+      "duration": 4.64,
+      "text": "the cur after head like the previous one"
+    },
+    {
+      "start": 1444.64,
+      "end": 1448.72,
+      "duration": 4.08,
+      "text": "that you had."
+    },
+    {
+      "start": 1446.56,
+      "end": 1450.0,
+      "duration": 3.44,
+      "text": "So basically if you insert something it"
+    },
+    {
+      "start": 1448.72,
+      "end": 1452.0,
+      "duration": 3.28,
+      "text": "will be pointing to this and the"
+    },
+    {
+      "start": 1450.0,
+      "end": 1453.76,
+      "duration": 3.76,
+      "text": "previous will be pointing to this. So I"
+    },
+    {
+      "start": 1452.0,
+      "end": 1456.0,
+      "duration": 4.0,
+      "text": "made sure that the next is pointing to"
+    },
+    {
+      "start": 1453.76,
+      "end": 1457.76,
+      "duration": 4.0,
+      "text": "this and please make sure that the nodes"
+    },
+    {
+      "start": 1456.0,
+      "end": 1461.28,
+      "duration": 5.28,
+      "text": "previous"
+    },
+    {
+      "start": 1457.76,
+      "end": 1463.92,
+      "duration": 6.16,
+      "text": "is pointing to the head. done simple"
+    },
+    {
+      "start": 1461.28,
+      "end": 1465.92,
+      "duration": 4.64,
+      "text": "link changes and I'm good to go. You can"
+    },
+    {
+      "start": 1463.92,
+      "end": 1468.08,
+      "duration": 4.16,
+      "text": "find the entire code given below. This"
+    },
+    {
+      "start": 1465.92,
+      "end": 1469.84,
+      "duration": 3.92,
+      "text": "was more like a pseudo code but if you"
+    },
+    {
+      "start": 1468.08,
+      "end": 1471.6,
+      "duration": 3.52,
+      "text": "followed the entire pseudo code then"
+    },
+    {
+      "start": 1469.84,
+      "end": 1474.4,
+      "duration": 4.56,
+      "text": "going through the code that I've given"
+    },
+    {
+      "start": 1471.6,
+      "end": 1476.48,
+      "duration": 4.88,
+      "text": "below should be a cakewalk. So yeah that"
+    },
+    {
+      "start": 1474.4,
+      "end": 1477.92,
+      "duration": 3.52,
+      "text": "will be it for this one. I hope you have"
+    },
+    {
+      "start": 1476.48,
+      "end": 1479.68,
+      "duration": 3.2,
+      "text": "understood it and if you're still now"
+    },
+    {
+      "start": 1477.92,
+      "end": 1480.88,
+      "duration": 2.96,
+      "text": "watching please please do consider"
+    },
+    {
+      "start": 1479.68,
+      "end": 1482.96,
+      "duration": 3.28,
+      "text": "giving us a like and if you're new to"
+    },
+    {
+      "start": 1480.88,
+      "end": 1484.72,
+      "duration": 3.84,
+      "text": "our channel do consider subscribing to"
+    },
+    {
+      "start": 1482.96,
+      "end": 1486.0,
+      "duration": 3.04,
+      "text": "us as well. With this I'll be wrapping"
+    },
+    {
+      "start": 1484.72,
+      "end": 1488.0,
+      "duration": 3.28,
+      "text": "up this video. Let's meet in some other"
+    },
+    {
+      "start": 1486.0,
+      "end": 1490.64,
+      "duration": 4.64,
+      "text": "video. Till then take care. Whenever"
+    },
+    {
+      "start": 1488.0,
+      "end": 1495.32,
+      "duration": 7.32,
+      "text": "your heart is broken,"
+    },
+    {
+      "start": 1490.64,
+      "end": 1495.32,
+      "duration": 4.68,
+      "text": "don't ever forget you're golden."
+    }
+  ]
+}

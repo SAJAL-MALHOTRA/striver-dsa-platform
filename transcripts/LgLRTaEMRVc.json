@@ -1,0 +1,3266 @@
+{
+  "video_id": "LgLRTaEMRVc",
+  "title": "L35. Construct the Binary Tree from Postorder and Inorder Traversal | C++ | Java",
+  "duration_sec": 1186,
+  "num_segments": 543,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.36,
+      "duration": 3.36,
+      "text": "so before starting this video i'd love"
+    },
+    {
+      "start": 1.52,
+      "end": 5.6,
+      "duration": 4.08,
+      "text": "to thank relevel for sponsoring this"
+    },
+    {
+      "start": 3.36,
+      "end": 7.76,
+      "duration": 4.4,
+      "text": "entire video a hiring platform with no"
+    },
+    {
+      "start": 5.6,
+      "end": 9.68,
+      "duration": 4.08,
+      "text": "degree required no experience required"
+    },
+    {
+      "start": 7.76,
+      "end": 11.84,
+      "duration": 4.08,
+      "text": "mentoring sessions available feels like"
+    },
+    {
+      "start": 9.68,
+      "end": 13.76,
+      "duration": 4.08,
+      "text": "a dream isn't it what if i say all of"
+    },
+    {
+      "start": 11.84,
+      "end": 15.36,
+      "duration": 3.52,
+      "text": "this is for free well reliable by an"
+    },
+    {
+      "start": 13.76,
+      "end": 17.12,
+      "duration": 3.36,
+      "text": "academy is here to make your dream come"
+    },
+    {
+      "start": 15.36,
+      "end": 18.64,
+      "duration": 3.28,
+      "text": "true but job opportunities in front and"
+    },
+    {
+      "start": 17.12,
+      "end": 20.56,
+      "duration": 3.44,
+      "text": "back end and business development from"
+    },
+    {
+      "start": 18.64,
+      "end": 22.56,
+      "duration": 3.92,
+      "text": "india's top companies for freshers and"
+    },
+    {
+      "start": 20.56,
+      "end": 24.72,
+      "duration": 4.16,
+      "text": "people in the early career reliable is"
+    },
+    {
+      "start": 22.56,
+      "end": 26.8,
+      "duration": 4.24,
+      "text": "here to make the entire hiring process"
+    },
+    {
+      "start": 24.72,
+      "end": 28.72,
+      "duration": 4.0,
+      "text": "super simple and super quick all you"
+    },
+    {
+      "start": 26.8,
+      "end": 30.4,
+      "duration": 3.6,
+      "text": "have to do is to give the relevant test"
+    },
+    {
+      "start": 28.72,
+      "end": 32.24,
+      "duration": 3.52,
+      "text": "and based on your score interviews will"
+    },
+    {
+      "start": 30.4,
+      "end": 33.52,
+      "duration": 3.12,
+      "text": "be scheduled and you will be hard so"
+    },
+    {
+      "start": 32.24,
+      "end": 34.56,
+      "duration": 2.32,
+      "text": "what are you waiting for make sure you"
+    },
+    {
+      "start": 33.52,
+      "end": 36.24,
+      "duration": 2.72,
+      "text": "check out all the links in the"
+    },
+    {
+      "start": 34.56,
+      "end": 39.68,
+      "duration": 5.12,
+      "text": "description and apply for the relevant"
+    },
+    {
+      "start": 36.24,
+      "end": 39.68,
+      "duration": 3.44,
+      "text": "tests as soon as possible"
+    },
+    {
+      "start": 42.96,
+      "end": 46.32,
+      "duration": 3.36,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 44.56,
+      "end": 48.56,
+      "duration": 4.0,
+      "text": "i hope you guys are doing extremely well"
+    },
+    {
+      "start": 46.32,
+      "end": 51.52,
+      "duration": 5.2,
+      "text": "so today we will be solving the problem"
+    },
+    {
+      "start": 48.56,
+      "end": 54.4,
+      "duration": 5.84,
+      "text": "construct a unique binary tree from a"
+    },
+    {
+      "start": 51.52,
+      "end": 56.72,
+      "duration": 5.2,
+      "text": "given post order and then in order so"
+    },
+    {
+      "start": 54.4,
+      "end": 58.96,
+      "duration": 4.56,
+      "text": "why did i say unique because if you're"
+    },
+    {
+      "start": 56.72,
+      "end": 61.28,
+      "duration": 4.56,
+      "text": "given a in order and if you're given a"
+    },
+    {
+      "start": 58.96,
+      "end": 64.16,
+      "duration": 5.2,
+      "text": "pre-order or post order then you can"
+    },
+    {
+      "start": 61.28,
+      "end": 65.76,
+      "duration": 4.48,
+      "text": "only create a unique binary tree i've"
+    },
+    {
+      "start": 64.16,
+      "end": 67.68,
+      "duration": 3.52,
+      "text": "discussed about this in detail in the"
+    },
+    {
+      "start": 65.76,
+      "end": 69.36,
+      "duration": 3.6,
+      "text": "previous video so you can watch that"
+    },
+    {
+      "start": 67.68,
+      "end": 71.68,
+      "duration": 4.0,
+      "text": "video and after that you can start this"
+    },
+    {
+      "start": 69.36,
+      "end": 74.32,
+      "duration": 4.96,
+      "text": "video like you'll have a clear idea why"
+    },
+    {
+      "start": 71.68,
+      "end": 76.32,
+      "duration": 4.64,
+      "text": "do we need in order and why do we need a"
+    },
+    {
+      "start": 74.32,
+      "end": 79.12,
+      "duration": 4.8,
+      "text": "pre-order or a post order in order to"
+    },
+    {
+      "start": 76.32,
+      "end": 80.8,
+      "duration": 4.48,
+      "text": "create a binary tree that is unique"
+    },
+    {
+      "start": 79.12,
+      "end": 83.04,
+      "duration": 3.92,
+      "text": "now you can create a lot of binary trees"
+    },
+    {
+      "start": 80.8,
+      "end": 84.56,
+      "duration": 3.76,
+      "text": "if post order pre-orders are given so"
+    },
+    {
+      "start": 83.04,
+      "end": 87.12,
+      "duration": 4.08,
+      "text": "just uh make sure you check out that"
+    },
+    {
+      "start": 84.56,
+      "end": 88.88,
+      "duration": 4.32,
+      "text": "video in order to get a much detailed"
+    },
+    {
+      "start": 87.12,
+      "end": 91.28,
+      "duration": 4.16,
+      "text": "knowledge so"
+    },
+    {
+      "start": 88.88,
+      "end": 93.12,
+      "duration": 4.24,
+      "text": "over here the inorder is given to you"
+    },
+    {
+      "start": 91.28,
+      "end": 95.36,
+      "duration": 4.08,
+      "text": "and the post order is given to you and"
+    },
+    {
+      "start": 93.12,
+      "end": 97.76,
+      "duration": 4.64,
+      "text": "the task is to create the binary tree"
+    },
+    {
+      "start": 95.36,
+      "end": 100.32,
+      "duration": 4.96,
+      "text": "whose in order is this given one and"
+    },
+    {
+      "start": 97.76,
+      "end": 102.16,
+      "duration": 4.4,
+      "text": "whose poster is this given one so if i"
+    },
+    {
+      "start": 100.32,
+      "end": 106.16,
+      "duration": 5.84,
+      "text": "try to create like the binary tree that"
+    },
+    {
+      "start": 102.16,
+      "end": 108.88,
+      "duration": 6.72,
+      "text": "uh will is the answer is this 10 20 30"
+    },
+    {
+      "start": 106.16,
+      "end": 111.36,
+      "duration": 5.2,
+      "text": "and over here there's a 40 there's a 50"
+    },
+    {
+      "start": 108.88,
+      "end": 113.52,
+      "duration": 4.64,
+      "text": "and there's a 60 like if you write down"
+    },
+    {
+      "start": 111.36,
+      "end": 115.2,
+      "duration": 3.84,
+      "text": "the pre uh right on the in order you'll"
+    },
+    {
+      "start": 113.52,
+      "end": 117.84,
+      "duration": 4.32,
+      "text": "get this if you write down the post"
+    },
+    {
+      "start": 115.2,
+      "end": 119.44,
+      "duration": 4.24,
+      "text": "order you'll definitely get this so that"
+    },
+    {
+      "start": 117.84,
+      "end": 121.28,
+      "duration": 3.44,
+      "text": "is what you have to do you have to"
+    },
+    {
+      "start": 119.44,
+      "end": 123.04,
+      "duration": 3.6,
+      "text": "return the root"
+    },
+    {
+      "start": 121.28,
+      "end": 125.28,
+      "duration": 4.0,
+      "text": "of this constructed like you have to"
+    },
+    {
+      "start": 123.04,
+      "end": 127.6,
+      "duration": 4.56,
+      "text": "construct this binary tree and to return"
+    },
+    {
+      "start": 125.28,
+      "end": 129.52,
+      "duration": 4.24,
+      "text": "the root of this binary that is what the"
+    },
+    {
+      "start": 127.6,
+      "end": 131.04,
+      "duration": 3.44,
+      "text": "question is all about"
+    },
+    {
+      "start": 129.52,
+      "end": 133.68,
+      "duration": 4.16,
+      "text": "so how do you solve this problem that's"
+    },
+    {
+      "start": 131.04,
+      "end": 137.04,
+      "duration": 6.0,
+      "text": "very easy now what do you know what is a"
+    },
+    {
+      "start": 133.68,
+      "end": 138.32,
+      "duration": 4.64,
+      "text": "post order it's nothing but left"
+    },
+    {
+      "start": 137.04,
+      "end": 139.12,
+      "duration": 2.08,
+      "text": "right"
+    },
+    {
+      "start": 138.32,
+      "end": 141.68,
+      "duration": 3.36,
+      "text": "and"
+    },
+    {
+      "start": 139.12,
+      "end": 145.44,
+      "duration": 6.32,
+      "text": "root hey that that is what a post order"
+    },
+    {
+      "start": 141.68,
+      "end": 146.32,
+      "duration": 4.64,
+      "text": "is what's in order in order is left"
+    },
+    {
+      "start": 145.44,
+      "end": 148.56,
+      "duration": 3.12,
+      "text": "root"
+    },
+    {
+      "start": 146.32,
+      "end": 152.24,
+      "duration": 5.92,
+      "text": "right that is what i can call as the"
+    },
+    {
+      "start": 148.56,
+      "end": 153.44,
+      "duration": 4.88,
+      "text": "inorder so can i say can i say that this"
+    },
+    {
+      "start": 152.24,
+      "end": 154.88,
+      "duration": 2.64,
+      "text": "last guy"
+    },
+    {
+      "start": 153.44,
+      "end": 156.96,
+      "duration": 3.52,
+      "text": "this last guy"
+    },
+    {
+      "start": 154.88,
+      "end": 160.24,
+      "duration": 5.36,
+      "text": "is indeed your"
+    },
+    {
+      "start": 156.96,
+      "end": 162.88,
+      "duration": 5.92,
+      "text": "root of the entire tree if like yes you"
+    },
+    {
+      "start": 160.24,
+      "end": 166.08,
+      "duration": 5.84,
+      "text": "can say that that this last guy is"
+    },
+    {
+      "start": 162.88,
+      "end": 167.52,
+      "duration": 4.64,
+      "text": "indeed the root of the entire tree now"
+    },
+    {
+      "start": 166.08,
+      "end": 169.12,
+      "duration": 3.04,
+      "text": "if you've got the root of the entire"
+    },
+    {
+      "start": 167.52,
+      "end": 171.6,
+      "duration": 4.08,
+      "text": "tree how do you figure out what is the"
+    },
+    {
+      "start": 169.12,
+      "end": 173.12,
+      "duration": 4.0,
+      "text": "left portion what is the right portion"
+    },
+    {
+      "start": 171.6,
+      "end": 176.56,
+      "duration": 4.96,
+      "text": "so can i say"
+    },
+    {
+      "start": 173.12,
+      "end": 178.48,
+      "duration": 5.36,
+      "text": "since the inorder says left root right"
+    },
+    {
+      "start": 176.56,
+      "end": 179.2,
+      "duration": 2.64,
+      "text": "and this is where the root of the tree"
+    },
+    {
+      "start": 178.48,
+      "end": 181.44,
+      "duration": 2.96,
+      "text": "is"
+    },
+    {
+      "start": 179.2,
+      "end": 182.72,
+      "duration": 3.52,
+      "text": "so can i say all these elements all"
+    },
+    {
+      "start": 181.44,
+      "end": 185.68,
+      "duration": 4.24,
+      "text": "these elements"
+    },
+    {
+      "start": 182.72,
+      "end": 187.36,
+      "duration": 4.64,
+      "text": "will be the part of your left subtree"
+    },
+    {
+      "start": 185.68,
+      "end": 190.08,
+      "duration": 4.4,
+      "text": "and all these elements"
+    },
+    {
+      "start": 187.36,
+      "end": 192.32,
+      "duration": 4.96,
+      "text": "will be the part of your right subtree"
+    },
+    {
+      "start": 190.08,
+      "end": 194.96,
+      "duration": 4.88,
+      "text": "so what you can say is"
+    },
+    {
+      "start": 192.32,
+      "end": 197.04,
+      "duration": 4.72,
+      "text": "on the left on the left i again have to"
+    },
+    {
+      "start": 194.96,
+      "end": 198.64,
+      "duration": 3.68,
+      "text": "create a tree who's"
+    },
+    {
+      "start": 197.04,
+      "end": 203.2,
+      "duration": 6.16,
+      "text": "in order is"
+    },
+    {
+      "start": 198.64,
+      "end": 205.12,
+      "duration": 6.48,
+      "text": "40 20 50 because i know this left is"
+    },
+    {
+      "start": 203.2,
+      "end": 206.56,
+      "duration": 3.36,
+      "text": "itself the in order like if i just"
+    },
+    {
+      "start": 205.12,
+      "end": 209.36,
+      "duration": 4.24,
+      "text": "consider this this is going to be the"
+    },
+    {
+      "start": 206.56,
+      "end": 211.6,
+      "duration": 5.04,
+      "text": "order common sense because left root"
+    },
+    {
+      "start": 209.36,
+      "end": 213.92,
+      "duration": 4.56,
+      "text": "right that is the sequence that the tree"
+    },
+    {
+      "start": 211.6,
+      "end": 216.64,
+      "duration": 5.04,
+      "text": "follows so whatever is on the left is"
+    },
+    {
+      "start": 213.92,
+      "end": 219.2,
+      "duration": 5.28,
+      "text": "the part of the left subtree and this is"
+    },
+    {
+      "start": 216.64,
+      "end": 221.92,
+      "duration": 5.28,
+      "text": "the in order of that subtree so i can"
+    },
+    {
+      "start": 219.2,
+      "end": 224.16,
+      "duration": 4.96,
+      "text": "say the uh in order is this of the left"
+    },
+    {
+      "start": 221.92,
+      "end": 226.48,
+      "duration": 4.56,
+      "text": "subtree similarly i can say"
+    },
+    {
+      "start": 224.16,
+      "end": 229.36,
+      "duration": 5.2,
+      "text": "60 and 30"
+    },
+    {
+      "start": 226.48,
+      "end": 231.68,
+      "duration": 5.2,
+      "text": "is the in order of the right subtree so"
+    },
+    {
+      "start": 229.36,
+      "end": 233.92,
+      "duration": 4.56,
+      "text": "if i know the inorder and if i can again"
+    },
+    {
+      "start": 231.68,
+      "end": 235.76,
+      "duration": 4.08,
+      "text": "predict like if i can just get the post"
+    },
+    {
+      "start": 233.92,
+      "end": 238.08,
+      "duration": 4.16,
+      "text": "order i think my job should be done what"
+    },
+    {
+      "start": 235.76,
+      "end": 240.72,
+      "duration": 4.96,
+      "text": "is the post order of the right so i can"
+    },
+    {
+      "start": 238.08,
+      "end": 242.08,
+      "duration": 4.0,
+      "text": "say that if this is 10 and i know first"
+    },
+    {
+      "start": 240.72,
+      "end": 244.16,
+      "duration": 3.44,
+      "text": "i have the left"
+    },
+    {
+      "start": 242.08,
+      "end": 246.32,
+      "duration": 4.24,
+      "text": "so i have three elements on the inorder"
+    },
+    {
+      "start": 244.16,
+      "end": 248.4,
+      "duration": 4.24,
+      "text": "like on the left subtree so can i say"
+    },
+    {
+      "start": 246.32,
+      "end": 250.0,
+      "duration": 3.68,
+      "text": "the first three elements first three"
+    },
+    {
+      "start": 248.4,
+      "end": 252.64,
+      "duration": 4.24,
+      "text": "elements are these"
+    },
+    {
+      "start": 250.0,
+      "end": 256.56,
+      "duration": 6.56,
+      "text": "the first three elements will be the"
+    },
+    {
+      "start": 252.64,
+      "end": 259.04,
+      "duration": 6.4,
+      "text": "post order traversal of the left subtree"
+    },
+    {
+      "start": 256.56,
+      "end": 260.64,
+      "duration": 4.08,
+      "text": "indeed and can i say the remaining"
+    },
+    {
+      "start": 259.04,
+      "end": 263.44,
+      "duration": 4.4,
+      "text": "elements i repeat can i say the"
+    },
+    {
+      "start": 260.64,
+      "end": 264.56,
+      "duration": 3.92,
+      "text": "remaining elements will be"
+    },
+    {
+      "start": 263.44,
+      "end": 265.6,
+      "duration": 2.16,
+      "text": "nothing but"
+    },
+    {
+      "start": 264.56,
+      "end": 268.48,
+      "duration": 3.92,
+      "text": "the"
+    },
+    {
+      "start": 265.6,
+      "end": 269.44,
+      "duration": 3.84,
+      "text": "post order of the right subtree i can"
+    },
+    {
+      "start": 268.48,
+      "end": 271.76,
+      "duration": 3.28,
+      "text": "so"
+    },
+    {
+      "start": 269.44,
+      "end": 273.52,
+      "duration": 4.08,
+      "text": "does the question boil down to similar"
+    },
+    {
+      "start": 271.76,
+      "end": 275.2,
+      "duration": 3.44,
+      "text": "question again like the question was"
+    },
+    {
+      "start": 273.52,
+      "end": 277.36,
+      "duration": 3.84,
+      "text": "given constructed a binary tree when a"
+    },
+    {
+      "start": 275.2,
+      "end": 278.96,
+      "duration": 3.76,
+      "text": "post order in order is given"
+    },
+    {
+      "start": 277.36,
+      "end": 281.44,
+      "duration": 4.08,
+      "text": "does the question again bring you back"
+    },
+    {
+      "start": 278.96,
+      "end": 282.72,
+      "duration": 3.76,
+      "text": "to that state where uh in order is given"
+    },
+    {
+      "start": 281.44,
+      "end": 285.2,
+      "duration": 3.76,
+      "text": "to you"
+    },
+    {
+      "start": 282.72,
+      "end": 288.0,
+      "duration": 5.28,
+      "text": "and a post order is given to you"
+    },
+    {
+      "start": 285.2,
+      "end": 289.04,
+      "duration": 3.84,
+      "text": "and you need to again construct a tree"
+    },
+    {
+      "start": 288.0,
+      "end": 291.28,
+      "duration": 3.28,
+      "text": "so"
+    },
+    {
+      "start": 289.04,
+      "end": 293.2,
+      "duration": 4.16,
+      "text": "if i can think of this like what is this"
+    },
+    {
+      "start": 291.28,
+      "end": 295.84,
+      "duration": 4.56,
+      "text": "this is kind of a recursive solution"
+    },
+    {
+      "start": 293.2,
+      "end": 298.0,
+      "duration": 4.8,
+      "text": "right whenever like yeah you're breaking"
+    },
+    {
+      "start": 295.84,
+      "end": 300.32,
+      "duration": 4.48,
+      "text": "the problem into sub problems"
+    },
+    {
+      "start": 298.0,
+      "end": 302.4,
+      "duration": 4.4,
+      "text": "the first time the post order was so big"
+    },
+    {
+      "start": 300.32,
+      "end": 304.0,
+      "duration": 3.68,
+      "text": "the inaudible was a big one you just"
+    },
+    {
+      "start": 302.4,
+      "end": 306.4,
+      "duration": 4.0,
+      "text": "broke it down into left and right and"
+    },
+    {
+      "start": 304.0,
+      "end": 308.56,
+      "duration": 4.56,
+      "text": "you created a small sample of it so it's"
+    },
+    {
+      "start": 306.4,
+      "end": 310.96,
+      "duration": 4.56,
+      "text": "kind of creating subtree subtree sub"
+    },
+    {
+      "start": 308.56,
+      "end": 313.2,
+      "duration": 4.64,
+      "text": "trees by taking in order post orders"
+    },
+    {
+      "start": 310.96,
+      "end": 315.28,
+      "duration": 4.32,
+      "text": "every time so that's that's the whole"
+    },
+    {
+      "start": 313.2,
+      "end": 317.52,
+      "duration": 4.32,
+      "text": "idea about this problem we figure out"
+    },
+    {
+      "start": 315.28,
+      "end": 319.44,
+      "duration": 4.16,
+      "text": "the left sub tree that is this we figure"
+    },
+    {
+      "start": 317.52,
+      "end": 321.36,
+      "duration": 3.84,
+      "text": "out the right sub tree and then we again"
+    },
+    {
+      "start": 319.44,
+      "end": 323.28,
+      "duration": 3.84,
+      "text": "create a tree on that left sub tree and"
+    },
+    {
+      "start": 321.36,
+      "end": 326.0,
+      "duration": 4.64,
+      "text": "the right subtree that's how we are"
+    },
+    {
+      "start": 323.28,
+      "end": 328.64,
+      "duration": 5.36,
+      "text": "going to solve this problem so we have"
+    },
+    {
+      "start": 326.0,
+      "end": 331.36,
+      "duration": 5.36,
+      "text": "solved uh 10 okay i've got the root now"
+    },
+    {
+      "start": 328.64,
+      "end": 333.12,
+      "duration": 4.48,
+      "text": "we will solve taking this in order and"
+    },
+    {
+      "start": 331.36,
+      "end": 335.2,
+      "duration": 3.84,
+      "text": "the preorder for the left sub tree i"
+    },
+    {
+      "start": 333.12,
+      "end": 337.92,
+      "duration": 4.8,
+      "text": "will construct that subtree and we will"
+    },
+    {
+      "start": 335.2,
+      "end": 339.6,
+      "duration": 4.4,
+      "text": "attach that to the left of n okay let's"
+    },
+    {
+      "start": 337.92,
+      "end": 341.2,
+      "duration": 3.28,
+      "text": "construct this uh tree that will be"
+    },
+    {
+      "start": 339.6,
+      "end": 344.88,
+      "duration": 5.28,
+      "text": "formed using this"
+    },
+    {
+      "start": 341.2,
+      "end": 346.48,
+      "duration": 5.28,
+      "text": "in order and using this post order"
+    },
+    {
+      "start": 344.88,
+      "end": 350.08,
+      "duration": 5.2,
+      "text": "so what i can say is"
+    },
+    {
+      "start": 346.48,
+      "end": 353.04,
+      "duration": 6.56,
+      "text": "i currently have uh these are these guys"
+    },
+    {
+      "start": 350.08,
+      "end": 356.16,
+      "duration": 6.08,
+      "text": "as the inorder and i can say that i have"
+    },
+    {
+      "start": 353.04,
+      "end": 358.4,
+      "duration": 5.36,
+      "text": "currently this guy as the post order now"
+    },
+    {
+      "start": 356.16,
+      "end": 360.4,
+      "duration": 4.24,
+      "text": "i can keep these guys uh for the later"
+    },
+    {
+      "start": 358.4,
+      "end": 361.6,
+      "duration": 3.2,
+      "text": "use but as of now let's understand that"
+    },
+    {
+      "start": 360.4,
+      "end": 362.32,
+      "duration": 1.92,
+      "text": "we have this"
+    },
+    {
+      "start": 361.6,
+      "end": 363.6,
+      "duration": 2.0,
+      "text": "so"
+    },
+    {
+      "start": 362.32,
+      "end": 366.0,
+      "duration": 3.68,
+      "text": "can i say that"
+    },
+    {
+      "start": 363.6,
+      "end": 368.0,
+      "duration": 4.4,
+      "text": "again since the post order and then the"
+    },
+    {
+      "start": 366.0,
+      "end": 369.12,
+      "duration": 3.12,
+      "text": "post order is left"
+    },
+    {
+      "start": 368.0,
+      "end": 372.64,
+      "duration": 4.64,
+      "text": "right"
+    },
+    {
+      "start": 369.12,
+      "end": 374.64,
+      "duration": 5.52,
+      "text": "root so can i surely say whatever is at"
+    },
+    {
+      "start": 372.64,
+      "end": 376.64,
+      "duration": 4.0,
+      "text": "the last will be my root of the tree for"
+    },
+    {
+      "start": 374.64,
+      "end": 379.28,
+      "duration": 4.64,
+      "text": "the new tree remember for the new tree"
+    },
+    {
+      "start": 376.64,
+      "end": 383.04,
+      "duration": 6.4,
+      "text": "i'm creating a new tree again i can"
+    },
+    {
+      "start": 379.28,
+      "end": 386.0,
+      "duration": 6.72,
+      "text": "again if i figure out 20 is right at"
+    },
+    {
+      "start": 383.04,
+      "end": 388.72,
+      "duration": 5.68,
+      "text": "over here so the left the left in order"
+    },
+    {
+      "start": 386.0,
+      "end": 390.96,
+      "duration": 4.96,
+      "text": "the left in order so the left guy will"
+    },
+    {
+      "start": 388.72,
+      "end": 393.2,
+      "duration": 4.48,
+      "text": "be having an inorder 40"
+    },
+    {
+      "start": 390.96,
+      "end": 396.24,
+      "duration": 5.28,
+      "text": "right and the right guy will be having"
+    },
+    {
+      "start": 393.2,
+      "end": 398.48,
+      "duration": 5.28,
+      "text": "it in order 50 so i figured out the left"
+    },
+    {
+      "start": 396.24,
+      "end": 400.56,
+      "duration": 4.32,
+      "text": "sub tree and the right sub tree again"
+    },
+    {
+      "start": 398.48,
+      "end": 401.36,
+      "duration": 2.88,
+      "text": "again i've broken down into sub problems"
+    },
+    {
+      "start": 400.56,
+      "end": 402.16,
+      "duration": 1.6,
+      "text": "again"
+    },
+    {
+      "start": 401.36,
+      "end": 405.84,
+      "duration": 4.48,
+      "text": "now"
+    },
+    {
+      "start": 402.16,
+      "end": 408.4,
+      "duration": 6.24,
+      "text": "can i say since it is left so if on the"
+    },
+    {
+      "start": 405.84,
+      "end": 410.08,
+      "duration": 4.24,
+      "text": "left subtree i have one element on the"
+    },
+    {
+      "start": 408.4,
+      "end": 411.12,
+      "duration": 2.72,
+      "text": "right side tree i have one element so"
+    },
+    {
+      "start": 410.08,
+      "end": 413.36,
+      "duration": 3.28,
+      "text": "can i say"
+    },
+    {
+      "start": 411.12,
+      "end": 416.48,
+      "duration": 5.36,
+      "text": "since it's a left right so the from the"
+    },
+    {
+      "start": 413.36,
+      "end": 420.16,
+      "duration": 6.8,
+      "text": "left the first to one element that's 40"
+    },
+    {
+      "start": 416.48,
+      "end": 421.84,
+      "duration": 5.36,
+      "text": "that's 40. so that's the post order"
+    },
+    {
+      "start": 420.16,
+      "end": 423.68,
+      "duration": 3.52,
+      "text": "and right after that the next one"
+    },
+    {
+      "start": 421.84,
+      "end": 426.0,
+      "duration": 4.16,
+      "text": "element is the post order of the right"
+    },
+    {
+      "start": 423.68,
+      "end": 428.32,
+      "duration": 4.64,
+      "text": "subtree so i figured out again i've"
+    },
+    {
+      "start": 426.0,
+      "end": 430.64,
+      "duration": 4.64,
+      "text": "broken down the problem into smaller sub"
+    },
+    {
+      "start": 428.32,
+      "end": 432.96,
+      "duration": 4.64,
+      "text": "problem where i have an inorder"
+    },
+    {
+      "start": 430.64,
+      "end": 435.12,
+      "duration": 4.48,
+      "text": "i have a post order for the left i have"
+    },
+    {
+      "start": 432.96,
+      "end": 437.2,
+      "duration": 4.24,
+      "text": "in order and i have a post order for the"
+    },
+    {
+      "start": 435.12,
+      "end": 439.12,
+      "duration": 4.0,
+      "text": "right so i can again create this up"
+    },
+    {
+      "start": 437.2,
+      "end": 440.8,
+      "duration": 3.6,
+      "text": "create the tree and i can attach it to"
+    },
+    {
+      "start": 439.12,
+      "end": 442.64,
+      "duration": 3.52,
+      "text": "the left and similarly i can create the"
+    },
+    {
+      "start": 440.8,
+      "end": 444.96,
+      "duration": 4.16,
+      "text": "tree from the right and i can attach it"
+    },
+    {
+      "start": 442.64,
+      "end": 447.36,
+      "duration": 4.72,
+      "text": "to the right simple enough"
+    },
+    {
+      "start": 444.96,
+      "end": 449.92,
+      "duration": 4.96,
+      "text": "let's try to create the uh tree from the"
+    },
+    {
+      "start": 447.36,
+      "end": 451.2,
+      "duration": 3.84,
+      "text": "uh this 40 as in order and this 40 as"
+    },
+    {
+      "start": 449.92,
+      "end": 454.32,
+      "duration": 4.4,
+      "text": "the post order"
+    },
+    {
+      "start": 451.2,
+      "end": 456.96,
+      "duration": 5.76,
+      "text": "cool uh so as of now we have uh in order"
+    },
+    {
+      "start": 454.32,
+      "end": 458.8,
+      "duration": 4.48,
+      "text": "as 40 a post order is 40 so as you know"
+    },
+    {
+      "start": 456.96,
+      "end": 462.56,
+      "duration": 5.6,
+      "text": "post order is nothing but"
+    },
+    {
+      "start": 458.8,
+      "end": 464.4,
+      "duration": 5.6,
+      "text": "left right root so can i say can i say"
+    },
+    {
+      "start": 462.56,
+      "end": 467.52,
+      "duration": 4.96,
+      "text": "the root will be 40 itself"
+    },
+    {
+      "start": 464.4,
+      "end": 468.4,
+      "duration": 4.0,
+      "text": "so i'll create a node with 40"
+    },
+    {
+      "start": 467.52,
+      "end": 470.48,
+      "duration": 2.96,
+      "text": "and"
+    },
+    {
+      "start": 468.4,
+      "end": 472.32,
+      "duration": 3.92,
+      "text": "the moment i see 40 is here on the"
+    },
+    {
+      "start": 470.48,
+      "end": 474.48,
+      "duration": 4.0,
+      "text": "inorder i try to figure out what's on"
+    },
+    {
+      "start": 472.32,
+      "end": 477.44,
+      "duration": 5.12,
+      "text": "the left i see there is nothing so when"
+    },
+    {
+      "start": 474.48,
+      "end": 480.64,
+      "duration": 6.16,
+      "text": "i call i do not get anything so i will"
+    },
+    {
+      "start": 477.44,
+      "end": 482.24,
+      "duration": 4.8,
+      "text": "say it's a null so i'll mark it to null"
+    },
+    {
+      "start": 480.64,
+      "end": 484.0,
+      "duration": 3.36,
+      "text": "and on the right i also do not have"
+    },
+    {
+      "start": 482.24,
+      "end": 486.56,
+      "duration": 4.32,
+      "text": "anything so i'll mark it to null"
+    },
+    {
+      "start": 484.0,
+      "end": 488.56,
+      "duration": 4.56,
+      "text": "so the last stage of recursion will be a"
+    },
+    {
+      "start": 486.56,
+      "end": 490.32,
+      "duration": 3.76,
+      "text": "node itself and if i create a node i'll"
+    },
+    {
+      "start": 488.56,
+      "end": 492.48,
+      "duration": 3.92,
+      "text": "return that and that will be attached to"
+    },
+    {
+      "start": 490.32,
+      "end": 494.32,
+      "duration": 4.0,
+      "text": "the left so the left call is done"
+    },
+    {
+      "start": 492.48,
+      "end": 496.24,
+      "duration": 3.76,
+      "text": "similarly for 50 if you again do the"
+    },
+    {
+      "start": 494.32,
+      "end": 500.32,
+      "duration": 6.0,
+      "text": "same thing you'll just create a node of"
+    },
+    {
+      "start": 496.24,
+      "end": 502.8,
+      "duration": 6.56,
+      "text": "50 right because 50 will be the in order"
+    },
+    {
+      "start": 500.32,
+      "end": 504.96,
+      "duration": 4.64,
+      "text": "and 50 will be the post order so as you"
+    },
+    {
+      "start": 502.8,
+      "end": 506.72,
+      "duration": 3.92,
+      "text": "know the last guy is the root so 50"
+    },
+    {
+      "start": 504.96,
+      "end": 508.16,
+      "duration": 3.2,
+      "text": "comes out to be the root"
+    },
+    {
+      "start": 506.72,
+      "end": 510.64,
+      "duration": 3.92,
+      "text": "so what you can do is you can create a"
+    },
+    {
+      "start": 508.16,
+      "end": 513.04,
+      "duration": 4.88,
+      "text": "50 and again the left will be null and"
+    },
+    {
+      "start": 510.64,
+      "end": 515.44,
+      "duration": 4.8,
+      "text": "the right will be null correct so that's"
+    },
+    {
+      "start": 513.04,
+      "end": 518.4,
+      "duration": 5.36,
+      "text": "how you create 50 and you can just"
+    },
+    {
+      "start": 515.44,
+      "end": 521.12,
+      "duration": 5.68,
+      "text": "return it and attach it to 20s right so"
+    },
+    {
+      "start": 518.4,
+      "end": 523.52,
+      "duration": 5.12,
+      "text": "i can say 20 has got its left and got"
+    },
+    {
+      "start": 521.12,
+      "end": 526.08,
+      "duration": 4.96,
+      "text": "its right so 20 will return and that"
+    },
+    {
+      "start": 523.52,
+      "end": 528.64,
+      "duration": 5.12,
+      "text": "will be attached to tents left as simple"
+    },
+    {
+      "start": 526.08,
+      "end": 531.04,
+      "duration": 4.96,
+      "text": "as that so i recursively created the"
+    },
+    {
+      "start": 528.64,
+      "end": 532.88,
+      "duration": 4.24,
+      "text": "trees and while coming back i attached"
+    },
+    {
+      "start": 531.04,
+      "end": 535.92,
+      "duration": 4.88,
+      "text": "it to its left counterpart and right"
+    },
+    {
+      "start": 532.88,
+      "end": 539.2,
+      "duration": 6.32,
+      "text": "counterpart now if you remember this was"
+    },
+    {
+      "start": 535.92,
+      "end": 541.52,
+      "duration": 5.6,
+      "text": "remaining 60 30 as the inorder 60 30 as"
+    },
+    {
+      "start": 539.2,
+      "end": 542.72,
+      "duration": 3.52,
+      "text": "the post order so let's let's do for"
+    },
+    {
+      "start": 541.52,
+      "end": 543.44,
+      "duration": 1.92,
+      "text": "this"
+    },
+    {
+      "start": 542.72,
+      "end": 546.16,
+      "duration": 3.44,
+      "text": "so"
+    },
+    {
+      "start": 543.44,
+      "end": 547.92,
+      "duration": 4.48,
+      "text": "this is the in order for the right and"
+    },
+    {
+      "start": 546.16,
+      "end": 550.08,
+      "duration": 3.92,
+      "text": "this is the post order for the right"
+    },
+    {
+      "start": 547.92,
+      "end": 553.12,
+      "duration": 5.2,
+      "text": "subtree so again uh you can call the"
+    },
+    {
+      "start": 550.08,
+      "end": 555.68,
+      "duration": 5.6,
+      "text": "right and let's create so i can say this"
+    },
+    {
+      "start": 553.12,
+      "end": 558.88,
+      "duration": 5.76,
+      "text": "last guy is definitely my yes i can say"
+    },
+    {
+      "start": 555.68,
+      "end": 560.56,
+      "duration": 4.88,
+      "text": "this last guy is definitely my root of"
+    },
+    {
+      "start": 558.88,
+      "end": 562.32,
+      "duration": 3.44,
+      "text": "the tree so i can figure out that this"
+    },
+    {
+      "start": 560.56,
+      "end": 563.84,
+      "duration": 3.28,
+      "text": "is the root of the tree and if this is"
+    },
+    {
+      "start": 562.32,
+      "end": 566.56,
+      "duration": 4.24,
+      "text": "the root of the tree and if this is the"
+    },
+    {
+      "start": 563.84,
+      "end": 569.44,
+      "duration": 5.6,
+      "text": "root of the tree the left guy will lie"
+    },
+    {
+      "start": 566.56,
+      "end": 571.2,
+      "duration": 4.64,
+      "text": "on the left with an in order of 60 and i"
+    },
+    {
+      "start": 569.44,
+      "end": 573.76,
+      "duration": 4.32,
+      "text": "can take one element from uh the"
+    },
+    {
+      "start": 571.2,
+      "end": 576.24,
+      "duration": 5.04,
+      "text": "starting of post and that's definitely"
+    },
+    {
+      "start": 573.76,
+      "end": 578.16,
+      "duration": 4.4,
+      "text": "going to be my post order so the left"
+    },
+    {
+      "start": 576.24,
+      "end": 580.08,
+      "duration": 3.84,
+      "text": "guy will have it in order and a post"
+    },
+    {
+      "start": 578.16,
+      "end": 581.44,
+      "duration": 3.28,
+      "text": "order as something like this and the"
+    },
+    {
+      "start": 580.08,
+      "end": 582.8,
+      "duration": 2.72,
+      "text": "right guy will say i do not have"
+    },
+    {
+      "start": 581.44,
+      "end": 585.12,
+      "duration": 3.68,
+      "text": "anything because it doesn't have"
+    },
+    {
+      "start": 582.8,
+      "end": 588.24,
+      "duration": 5.44,
+      "text": "anything i will point to null so it"
+    },
+    {
+      "start": 585.12,
+      "end": 590.0,
+      "duration": 4.88,
+      "text": "points to null correct"
+    },
+    {
+      "start": 588.24,
+      "end": 593.44,
+      "duration": 5.2,
+      "text": "so when i move to the left i'll have the"
+    },
+    {
+      "start": 590.0,
+      "end": 595.2,
+      "duration": 5.2,
+      "text": "in order as 60 and the post order as 60."
+    },
+    {
+      "start": 593.44,
+      "end": 596.96,
+      "duration": 3.52,
+      "text": "so i can again just create the node or"
+    },
+    {
+      "start": 595.2,
+      "end": 599.28,
+      "duration": 4.08,
+      "text": "60 and"
+    },
+    {
+      "start": 596.96,
+      "end": 600.96,
+      "duration": 4.0,
+      "text": "this is the node that i'll create and on"
+    },
+    {
+      "start": 599.28,
+      "end": 602.8,
+      "duration": 3.52,
+      "text": "this left i'll find nothing on the right"
+    },
+    {
+      "start": 600.96,
+      "end": 605.28,
+      "duration": 4.32,
+      "text": "i'll find nothing so i'll point to null"
+    },
+    {
+      "start": 602.8,
+      "end": 608.0,
+      "duration": 5.2,
+      "text": "it'll point to null and once this this"
+    },
+    {
+      "start": 605.28,
+      "end": 609.92,
+      "duration": 4.64,
+      "text": "recursion is over i'll return it and 30"
+    },
+    {
+      "start": 608.0,
+      "end": 612.08,
+      "duration": 4.08,
+      "text": "is left will be pointing to 60 that is"
+    },
+    {
+      "start": 609.92,
+      "end": 614.08,
+      "duration": 4.16,
+      "text": "right it will be pointing to null so 30"
+    },
+    {
+      "start": 612.08,
+      "end": 615.92,
+      "duration": 3.84,
+      "text": "is complete so 30 will be returned and"
+    },
+    {
+      "start": 614.08,
+      "end": 618.8,
+      "duration": 4.72,
+      "text": "10th right will be pointing to 30. so"
+    },
+    {
+      "start": 615.92,
+      "end": 620.24,
+      "duration": 4.32,
+      "text": "this is how this is how you can create"
+    },
+    {
+      "start": 618.8,
+      "end": 621.68,
+      "duration": 2.88,
+      "text": "the unique"
+    },
+    {
+      "start": 620.24,
+      "end": 625.6,
+      "duration": 5.36,
+      "text": "binary tree"
+    },
+    {
+      "start": 621.68,
+      "end": 626.56,
+      "duration": 4.88,
+      "text": "from any given post order or in order"
+    },
+    {
+      "start": 625.6,
+      "end": 629.12,
+      "duration": 3.52,
+      "text": "right"
+    },
+    {
+      "start": 626.56,
+      "end": 630.72,
+      "duration": 4.16,
+      "text": "so if i discuss like how will the code"
+    },
+    {
+      "start": 629.12,
+      "end": 632.88,
+      "duration": 3.76,
+      "text": "look like like i will give you a brief"
+    },
+    {
+      "start": 630.72,
+      "end": 634.08,
+      "duration": 3.36,
+      "text": "idea and then you can probably code it"
+    },
+    {
+      "start": 632.88,
+      "end": 635.92,
+      "duration": 3.04,
+      "text": "and if you cannot you can definitely"
+    },
+    {
+      "start": 634.08,
+      "end": 636.72,
+      "duration": 2.64,
+      "text": "check out my coding explanation after"
+    },
+    {
+      "start": 635.92,
+      "end": 638.4,
+      "duration": 2.48,
+      "text": "this"
+    },
+    {
+      "start": 636.72,
+      "end": 640.64,
+      "duration": 3.92,
+      "text": "how will the code look like"
+    },
+    {
+      "start": 638.4,
+      "end": 643.52,
+      "duration": 5.12,
+      "text": "first step that i'm always doing is like"
+    },
+    {
+      "start": 640.64,
+      "end": 645.76,
+      "duration": 5.12,
+      "text": "whatever post order is given to me"
+    },
+    {
+      "start": 643.52,
+      "end": 648.32,
+      "duration": 4.8,
+      "text": "whatever post order is given to me i'll"
+    },
+    {
+      "start": 645.76,
+      "end": 650.24,
+      "duration": 4.48,
+      "text": "take the last element and i'll say that"
+    },
+    {
+      "start": 648.32,
+      "end": 652.72,
+      "duration": 4.4,
+      "text": "this is going to be my"
+    },
+    {
+      "start": 650.24,
+      "end": 654.88,
+      "duration": 4.64,
+      "text": "node okay this is going to be my"
+    },
+    {
+      "start": 652.72,
+      "end": 658.32,
+      "duration": 5.6,
+      "text": "node correct and after that what i'm"
+    },
+    {
+      "start": 654.88,
+      "end": 661.6,
+      "duration": 6.72,
+      "text": "saying is nodes left will be a left"
+    },
+    {
+      "start": 658.32,
+      "end": 664.0,
+      "duration": 5.68,
+      "text": "counterpart like if this is 12"
+    },
+    {
+      "start": 661.6,
+      "end": 666.24,
+      "duration": 4.64,
+      "text": "and if i have been given an inorder"
+    },
+    {
+      "start": 664.0,
+      "end": 668.56,
+      "duration": 4.56,
+      "text": "where 12 exists somewhere here so i'll"
+    },
+    {
+      "start": 666.24,
+      "end": 669.76,
+      "duration": 3.52,
+      "text": "figure out where does 12 exist and i"
+    },
+    {
+      "start": 668.56,
+      "end": 671.2,
+      "duration": 2.64,
+      "text": "will say that"
+    },
+    {
+      "start": 669.76,
+      "end": 673.36,
+      "duration": 3.6,
+      "text": "this left guy"
+    },
+    {
+      "start": 671.2,
+      "end": 674.56,
+      "duration": 3.36,
+      "text": "this left guy will be on the left"
+    },
+    {
+      "start": 673.36,
+      "end": 675.68,
+      "duration": 2.32,
+      "text": "subtree"
+    },
+    {
+      "start": 674.56,
+      "end": 678.24,
+      "duration": 3.68,
+      "text": "in order"
+    },
+    {
+      "start": 675.68,
+      "end": 681.44,
+      "duration": 5.76,
+      "text": "and these right guy will be"
+    },
+    {
+      "start": 678.24,
+      "end": 683.04,
+      "duration": 4.8,
+      "text": "right subtrica in order"
+    },
+    {
+      "start": 681.44,
+      "end": 685.36,
+      "duration": 3.92,
+      "text": "and how to figure out where does 12"
+    },
+    {
+      "start": 683.04,
+      "end": 688.08,
+      "duration": 5.04,
+      "text": "exist it's a very simple thing whatever"
+    },
+    {
+      "start": 685.36,
+      "end": 690.16,
+      "duration": 4.8,
+      "text": "elements are there on the in order just"
+    },
+    {
+      "start": 688.08,
+      "end": 692.8,
+      "duration": 4.72,
+      "text": "put them into some map data structure so"
+    },
+    {
+      "start": 690.16,
+      "end": 695.92,
+      "duration": 5.76,
+      "text": "that you can easily understand where"
+    },
+    {
+      "start": 692.8,
+      "end": 697.68,
+      "duration": 4.88,
+      "text": "does 12 exist in in order like in in a"
+    },
+    {
+      "start": 695.92,
+      "end": 700.88,
+      "duration": 4.96,
+      "text": "bigger funnel log and you can easily"
+    },
+    {
+      "start": 697.68,
+      "end": 703.28,
+      "duration": 5.6,
+      "text": "understand where does 12 exist in your"
+    },
+    {
+      "start": 700.88,
+      "end": 705.68,
+      "duration": 4.8,
+      "text": "in order so what you'll do is you will"
+    },
+    {
+      "start": 703.28,
+      "end": 707.68,
+      "duration": 4.4,
+      "text": "easily get 12 and you can easily figure"
+    },
+    {
+      "start": 705.68,
+      "end": 709.76,
+      "duration": 4.08,
+      "text": "out how many elements are on the left"
+    },
+    {
+      "start": 707.68,
+      "end": 711.52,
+      "duration": 3.84,
+      "text": "like if this is a starting point and"
+    },
+    {
+      "start": 709.76,
+      "end": 713.2,
+      "duration": 3.44,
+      "text": "this is the point you can easily figure"
+    },
+    {
+      "start": 711.52,
+      "end": 714.64,
+      "duration": 3.12,
+      "text": "out how many elements are on the left"
+    },
+    {
+      "start": 713.2,
+      "end": 716.8,
+      "duration": 3.6,
+      "text": "and how many elements are on the right"
+    },
+    {
+      "start": 714.64,
+      "end": 718.64,
+      "duration": 4.0,
+      "text": "by easily subtracting so once you figure"
+    },
+    {
+      "start": 716.8,
+      "end": 720.96,
+      "duration": 4.16,
+      "text": "out the number of elements on the left"
+    },
+    {
+      "start": 718.64,
+      "end": 723.12,
+      "duration": 4.48,
+      "text": "from post order the first though like"
+    },
+    {
+      "start": 720.96,
+      "end": 726.16,
+      "duration": 5.2,
+      "text": "assume there are x elements on the left"
+    },
+    {
+      "start": 723.12,
+      "end": 728.96,
+      "duration": 5.84,
+      "text": "first x elements will be the post order"
+    },
+    {
+      "start": 726.16,
+      "end": 730.72,
+      "duration": 4.56,
+      "text": "of the left subtree and right after that"
+    },
+    {
+      "start": 728.96,
+      "end": 734.16,
+      "duration": 5.2,
+      "text": "the remaining elements the remaining"
+    },
+    {
+      "start": 730.72,
+      "end": 736.64,
+      "duration": 5.92,
+      "text": "elements will be the post order of the"
+    },
+    {
+      "start": 734.16,
+      "end": 738.8,
+      "duration": 4.64,
+      "text": "right subtree and again you can start"
+    },
+    {
+      "start": 736.64,
+      "end": 740.8,
+      "duration": 4.16,
+      "text": "recursively building this that's what"
+    },
+    {
+      "start": 738.8,
+      "end": 742.88,
+      "duration": 4.08,
+      "text": "the recursive idea will be it'll be"
+    },
+    {
+      "start": 740.8,
+      "end": 744.88,
+      "duration": 4.08,
+      "text": "given an in order it'll be given a post"
+    },
+    {
+      "start": 742.88,
+      "end": 747.28,
+      "duration": 4.4,
+      "text": "order figure out the route build the"
+    },
+    {
+      "start": 744.88,
+      "end": 749.76,
+      "duration": 4.88,
+      "text": "node and call the left call the right"
+    },
+    {
+      "start": 747.28,
+      "end": 752.08,
+      "duration": 4.8,
+      "text": "with the next in orders and uh post"
+    },
+    {
+      "start": 749.76,
+      "end": 754.08,
+      "duration": 4.32,
+      "text": "orders and at the end whenever you are"
+    },
+    {
+      "start": 752.08,
+      "end": 755.84,
+      "duration": 3.76,
+      "text": "your in order and post order do not have"
+    },
+    {
+      "start": 754.08,
+      "end": 758.16,
+      "duration": 4.08,
+      "text": "elements that is when you can say that"
+    },
+    {
+      "start": 755.84,
+      "end": 759.84,
+      "duration": 4.0,
+      "text": "it's empty and just point them to null"
+    },
+    {
+      "start": 758.16,
+      "end": 762.56,
+      "duration": 4.4,
+      "text": "so that's that's how you can think of a"
+    },
+    {
+      "start": 759.84,
+      "end": 763.68,
+      "duration": 3.84,
+      "text": "code so i will try to uh i'll highly"
+    },
+    {
+      "start": 762.56,
+      "end": 765.2,
+      "duration": 2.64,
+      "text": "recommend that you should definitely"
+    },
+    {
+      "start": 763.68,
+      "end": 766.24,
+      "duration": 2.56,
+      "text": "implement this by yourself and if you"
+    },
+    {
+      "start": 765.2,
+      "end": 769.12,
+      "duration": 3.92,
+      "text": "cannot"
+    },
+    {
+      "start": 766.24,
+      "end": 772.32,
+      "duration": 6.08,
+      "text": "the next part is the coding explanation"
+    },
+    {
+      "start": 769.12,
+      "end": 773.84,
+      "duration": 4.72,
+      "text": "so guys as usual the left part is the c"
+    },
+    {
+      "start": 772.32,
+      "end": 775.6,
+      "duration": 3.28,
+      "text": "solution and the right part is the java"
+    },
+    {
+      "start": 773.84,
+      "end": 778.32,
+      "duration": 4.48,
+      "text": "solution so basically you're given the"
+    },
+    {
+      "start": 775.6,
+      "end": 780.32,
+      "duration": 4.72,
+      "text": "inorder and the post order so what's the"
+    },
+    {
+      "start": 778.32,
+      "end": 782.8,
+      "duration": 4.48,
+      "text": "first thing uh just in case uh they do"
+    },
+    {
+      "start": 780.32,
+      "end": 784.56,
+      "duration": 4.24,
+      "text": "not match in size or any anything is"
+    },
+    {
+      "start": 782.8,
+      "end": 786.0,
+      "duration": 3.2,
+      "text": "given as null or something just make"
+    },
+    {
+      "start": 784.56,
+      "end": 787.6,
+      "duration": 3.04,
+      "text": "sure you return a null okay just make"
+    },
+    {
+      "start": 786.0,
+      "end": 789.44,
+      "duration": 3.44,
+      "text": "sure you written a null saying that"
+    },
+    {
+      "start": 787.6,
+      "end": 791.2,
+      "duration": 3.6,
+      "text": "there cannot be a tree like this is this"
+    },
+    {
+      "start": 789.44,
+      "end": 793.28,
+      "duration": 3.84,
+      "text": "is kind of a wrong solution"
+    },
+    {
+      "start": 791.2,
+      "end": 795.68,
+      "duration": 4.48,
+      "text": "after that you create a map and this map"
+    },
+    {
+      "start": 793.28,
+      "end": 798.48,
+      "duration": 5.2,
+      "text": "if you remember like whatever in order"
+    },
+    {
+      "start": 795.68,
+      "end": 802.32,
+      "duration": 6.64,
+      "text": "is given to you yes whatever in order is"
+    },
+    {
+      "start": 798.48,
+      "end": 805.36,
+      "duration": 6.88,
+      "text": "given to you like assume 10 12 11 10"
+    },
+    {
+      "start": 802.32,
+      "end": 808.24,
+      "duration": 5.92,
+      "text": "just make sure 10 is at the zeroth index"
+    },
+    {
+      "start": 805.36,
+      "end": 810.56,
+      "duration": 5.2,
+      "text": "12 is at the first index 11 is at the"
+    },
+    {
+      "start": 808.24,
+      "end": 812.64,
+      "duration": 4.4,
+      "text": "second index 10 is at the third index"
+    },
+    {
+      "start": 810.56,
+      "end": 814.56,
+      "duration": 4.0,
+      "text": "for that create a map so that whenever"
+    },
+    {
+      "start": 812.64,
+      "end": 817.28,
+      "duration": 4.64,
+      "text": "you do a post order yes whenever you do"
+    },
+    {
+      "start": 814.56,
+      "end": 819.12,
+      "duration": 4.56,
+      "text": "a post order whatever element is at the"
+    },
+    {
+      "start": 817.28,
+      "end": 820.88,
+      "duration": 3.6,
+      "text": "last that's going to be a root so you"
+    },
+    {
+      "start": 819.12,
+      "end": 823.2,
+      "duration": 4.08,
+      "text": "can easily figure out where does 12"
+    },
+    {
+      "start": 820.88,
+      "end": 825.36,
+      "duration": 4.48,
+      "text": "exist so 12 can be easily figured out to"
+    },
+    {
+      "start": 823.2,
+      "end": 827.44,
+      "duration": 4.24,
+      "text": "be existing at the first index using"
+    },
+    {
+      "start": 825.36,
+      "end": 829.12,
+      "duration": 3.76,
+      "text": "this map data structure that's why i"
+    },
+    {
+      "start": 827.44,
+      "end": 830.48,
+      "duration": 3.04,
+      "text": "just make sure whatever in order you"
+    },
+    {
+      "start": 829.12,
+      "end": 832.24,
+      "duration": 3.12,
+      "text": "have you"
+    },
+    {
+      "start": 830.48,
+      "end": 834.88,
+      "duration": 4.4,
+      "text": "have a hash map"
+    },
+    {
+      "start": 832.24,
+      "end": 836.16,
+      "duration": 3.92,
+      "text": "after that you call this uh function"
+    },
+    {
+      "start": 834.88,
+      "end": 838.56,
+      "duration": 3.68,
+      "text": "bill tree"
+    },
+    {
+      "start": 836.16,
+      "end": 841.6,
+      "duration": 5.44,
+      "text": "with in order with the starting pointer"
+    },
+    {
+      "start": 838.56,
+      "end": 843.6,
+      "duration": 5.04,
+      "text": "of 0 with the ending pointer of in order"
+    },
+    {
+      "start": 841.6,
+      "end": 845.52,
+      "duration": 3.92,
+      "text": "size minus one"
+    },
+    {
+      "start": 843.6,
+      "end": 848.96,
+      "duration": 5.36,
+      "text": "uh with the post order the starting"
+    },
+    {
+      "start": 845.52,
+      "end": 851.04,
+      "duration": 5.52,
+      "text": "point is zero and the last size is like"
+    },
+    {
+      "start": 848.96,
+      "end": 853.36,
+      "duration": 4.4,
+      "text": "the start ending point over here and"
+    },
+    {
+      "start": 851.04,
+      "end": 854.64,
+      "duration": 3.6,
+      "text": "with the hash map if i check out the uh"
+    },
+    {
+      "start": 853.36,
+      "end": 858.4,
+      "duration": 5.04,
+      "text": "so basically"
+    },
+    {
+      "start": 854.64,
+      "end": 860.64,
+      "duration": 6.0,
+      "text": "the is the starting point of in order ie"
+    },
+    {
+      "start": 858.4,
+      "end": 861.92,
+      "duration": 3.52,
+      "text": "is the ending point of the inorder and"
+    },
+    {
+      "start": 860.64,
+      "end": 864.48,
+      "duration": 3.84,
+      "text": "ps is the"
+    },
+    {
+      "start": 861.92,
+      "end": 866.64,
+      "duration": 4.72,
+      "text": "post uh starting point and p is the post"
+    },
+    {
+      "start": 864.48,
+      "end": 868.88,
+      "duration": 4.4,
+      "text": "ending point that's what i've taken okay"
+    },
+    {
+      "start": 866.64,
+      "end": 871.36,
+      "duration": 4.72,
+      "text": "now just in case you run out like you"
+    },
+    {
+      "start": 868.88,
+      "end": 873.68,
+      "duration": 4.8,
+      "text": "run out of the in order and post order"
+    },
+    {
+      "start": 871.36,
+      "end": 875.36,
+      "duration": 4.0,
+      "text": "just in case the this pointer like what"
+    },
+    {
+      "start": 873.68,
+      "end": 877.36,
+      "duration": 3.68,
+      "text": "i'll do is if i'm taking this much"
+    },
+    {
+      "start": 875.36,
+      "end": 879.52,
+      "duration": 4.16,
+      "text": "errand for the left"
+    },
+    {
+      "start": 877.36,
+      "end": 882.0,
+      "duration": 4.64,
+      "text": "left subtree and i'm saying this is my"
+    },
+    {
+      "start": 879.52,
+      "end": 883.52,
+      "duration": 4.0,
+      "text": "post order instead of reducing the array"
+    },
+    {
+      "start": 882.0,
+      "end": 884.4,
+      "duration": 2.4,
+      "text": "i'll take pointers like i'll say that"
+    },
+    {
+      "start": 883.52,
+      "end": 886.4,
+      "duration": 2.88,
+      "text": "this is"
+    },
+    {
+      "start": 884.4,
+      "end": 888.88,
+      "duration": 4.48,
+      "text": "we'll start this is post end like i'll"
+    },
+    {
+      "start": 886.4,
+      "end": 892.0,
+      "duration": 5.6,
+      "text": "take pointers in order to make sure that"
+    },
+    {
+      "start": 888.88,
+      "end": 894.56,
+      "duration": 5.68,
+      "text": "this is uh the new array for the post"
+    },
+    {
+      "start": 892.0,
+      "end": 895.92,
+      "duration": 3.92,
+      "text": "order of left or right okay so if if"
+    },
+    {
+      "start": 894.56,
+      "end": 897.84,
+      "duration": 3.28,
+      "text": "they"
+    },
+    {
+      "start": 895.92,
+      "end": 899.76,
+      "duration": 3.84,
+      "text": "they are like over like we do not have a"
+    },
+    {
+      "start": 897.84,
+      "end": 901.76,
+      "duration": 3.92,
+      "text": "post order or in order"
+    },
+    {
+      "start": 899.76,
+      "end": 903.92,
+      "duration": 4.16,
+      "text": "the size is zero i can second return a"
+    },
+    {
+      "start": 901.76,
+      "end": 905.6,
+      "duration": 3.84,
+      "text": "null okay if the size is zero there will"
+    },
+    {
+      "start": 903.92,
+      "end": 907.52,
+      "duration": 3.6,
+      "text": "be no left subtree there'll be no right"
+    },
+    {
+      "start": 905.6,
+      "end": 910.64,
+      "duration": 5.04,
+      "text": "subtree so that is what i'll return okay"
+    },
+    {
+      "start": 907.52,
+      "end": 912.32,
+      "duration": 4.8,
+      "text": "and after that what i do is"
+    },
+    {
+      "start": 910.64,
+      "end": 914.72,
+      "duration": 4.08,
+      "text": "whatever is at the end like over here"
+    },
+    {
+      "start": 912.32,
+      "end": 917.84,
+      "duration": 5.52,
+      "text": "the end is 10 so i'll say 10 will be my"
+    },
+    {
+      "start": 914.72,
+      "end": 919.92,
+      "duration": 5.2,
+      "text": "uh node n will be by root or node of the"
+    },
+    {
+      "start": 917.84,
+      "end": 922.0,
+      "duration": 4.16,
+      "text": "tree that i'm creating okay and right"
+    },
+    {
+      "start": 919.92,
+      "end": 924.88,
+      "duration": 4.96,
+      "text": "after that i figure out where is this"
+    },
+    {
+      "start": 922.0,
+      "end": 927.76,
+      "duration": 5.76,
+      "text": "like where is this 10 and this is where"
+    },
+    {
+      "start": 924.88,
+      "end": 930.24,
+      "duration": 5.36,
+      "text": "i'll get the in root in root variable"
+    },
+    {
+      "start": 927.76,
+      "end": 932.64,
+      "duration": 4.88,
+      "text": "like it will directly tell me where is"
+    },
+    {
+      "start": 930.24,
+      "end": 934.88,
+      "duration": 4.64,
+      "text": "this 10 in the hash map okay directly"
+    },
+    {
+      "start": 932.64,
+      "end": 938.32,
+      "duration": 5.68,
+      "text": "tells me that this is at this index and"
+    },
+    {
+      "start": 934.88,
+      "end": 938.32,
+      "duration": 3.44,
+      "text": "if i write down the indexing"
+    },
+    {
+      "start": 938.96,
+      "end": 943.04,
+      "duration": 4.08,
+      "text": "it's at the third index okay it's at the"
+    },
+    {
+      "start": 941.84,
+      "end": 945.84,
+      "duration": 4.0,
+      "text": "third index"
+    },
+    {
+      "start": 943.04,
+      "end": 947.6,
+      "duration": 4.56,
+      "text": "so if i ask you how many elements is how"
+    },
+    {
+      "start": 945.84,
+      "end": 949.36,
+      "duration": 3.52,
+      "text": "many elements are on the left how many"
+    },
+    {
+      "start": 947.6,
+      "end": 951.28,
+      "duration": 3.68,
+      "text": "elements are on the left your answer"
+    },
+    {
+      "start": 949.36,
+      "end": 953.68,
+      "duration": 4.32,
+      "text": "might be 3 but that is that is not"
+    },
+    {
+      "start": 951.28,
+      "end": 955.84,
+      "duration": 4.56,
+      "text": "correct you'll be like 3 minus the"
+    },
+    {
+      "start": 953.68,
+      "end": 957.52,
+      "duration": 3.84,
+      "text": "starting point because as i said in the"
+    },
+    {
+      "start": 955.84,
+      "end": 959.76,
+      "duration": 3.92,
+      "text": "next step might happen in the next step"
+    },
+    {
+      "start": 957.52,
+      "end": 962.0,
+      "duration": 4.48,
+      "text": "might happen this is the inorder this is"
+    },
+    {
+      "start": 959.76,
+      "end": 963.36,
+      "duration": 3.6,
+      "text": "the in order and whenever you find 30"
+    },
+    {
+      "start": 962.0,
+      "end": 966.24,
+      "duration": 4.24,
+      "text": "you cannot say on the left you have one"
+    },
+    {
+      "start": 963.36,
+      "end": 968.56,
+      "duration": 5.2,
+      "text": "element right it is a 5 minus 4 is the"
+    },
+    {
+      "start": 966.24,
+      "end": 970.8,
+      "duration": 4.56,
+      "text": "number of elements on the left right so"
+    },
+    {
+      "start": 968.56,
+      "end": 972.88,
+      "duration": 4.32,
+      "text": "that's why what you'll always say is the"
+    },
+    {
+      "start": 970.8,
+      "end": 974.48,
+      "duration": 3.68,
+      "text": "starting point of the inorder array the"
+    },
+    {
+      "start": 972.88,
+      "end": 976.16,
+      "duration": 3.28,
+      "text": "starting part of the inorder array and"
+    },
+    {
+      "start": 974.48,
+      "end": 978.48,
+      "duration": 4.0,
+      "text": "the in root like wherever i am currently"
+    },
+    {
+      "start": 976.16,
+      "end": 980.08,
+      "duration": 3.92,
+      "text": "at three minus the starting point will"
+    },
+    {
+      "start": 978.48,
+      "end": 982.56,
+      "duration": 4.08,
+      "text": "be the number of elements on the left"
+    },
+    {
+      "start": 980.08,
+      "end": 984.4,
+      "duration": 4.32,
+      "text": "like as of now we have three elements"
+    },
+    {
+      "start": 982.56,
+      "end": 985.44,
+      "duration": 2.88,
+      "text": "so after that"
+    },
+    {
+      "start": 984.4,
+      "end": 987.28,
+      "duration": 2.88,
+      "text": "once you figure out the number of"
+    },
+    {
+      "start": 985.44,
+      "end": 989.2,
+      "duration": 3.76,
+      "text": "elements of the left is three"
+    },
+    {
+      "start": 987.28,
+      "end": 990.96,
+      "duration": 3.68,
+      "text": "you call the left guy like you'll call"
+    },
+    {
+      "start": 989.2,
+      "end": 993.68,
+      "duration": 4.48,
+      "text": "the left guy with the same in order"
+    },
+    {
+      "start": 990.96,
+      "end": 994.56,
+      "duration": 3.6,
+      "text": "where you'll say that this is my new in"
+    },
+    {
+      "start": 993.68,
+      "end": 997.44,
+      "duration": 3.76,
+      "text": "is"
+    },
+    {
+      "start": 994.56,
+      "end": 998.32,
+      "duration": 3.76,
+      "text": "in order starting this is my new in"
+    },
+    {
+      "start": 997.44,
+      "end": 999.52,
+      "duration": 2.08,
+      "text": "order"
+    },
+    {
+      "start": 998.32,
+      "end": 1001.76,
+      "duration": 3.44,
+      "text": "ending like"
+    },
+    {
+      "start": 999.52,
+      "end": 1004.24,
+      "duration": 4.72,
+      "text": "in root minus one okay this is the new"
+    },
+    {
+      "start": 1001.76,
+      "end": 1007.76,
+      "duration": 6.0,
+      "text": "in order starting and in order ending"
+    },
+    {
+      "start": 1004.24,
+      "end": 1009.76,
+      "duration": 5.52,
+      "text": "for the next function call correct and"
+    },
+    {
+      "start": 1007.76,
+      "end": 1012.24,
+      "duration": 4.48,
+      "text": "what about post order let is of a post"
+    },
+    {
+      "start": 1009.76,
+      "end": 1014.72,
+      "duration": 4.96,
+      "text": "order for post order for the left sub"
+    },
+    {
+      "start": 1012.24,
+      "end": 1016.72,
+      "duration": 4.48,
+      "text": "tree it's very simple you start from uh"
+    },
+    {
+      "start": 1014.72,
+      "end": 1018.56,
+      "duration": 3.84,
+      "text": "the post order starting"
+    },
+    {
+      "start": 1016.72,
+      "end": 1021.2,
+      "duration": 4.48,
+      "text": "right that is where you start from and"
+    },
+    {
+      "start": 1018.56,
+      "end": 1024.16,
+      "duration": 5.6,
+      "text": "you end up taking three numbers that's"
+    },
+    {
+      "start": 1021.2,
+      "end": 1026.56,
+      "duration": 5.36,
+      "text": "uh tell index two is where you take up"
+    },
+    {
+      "start": 1024.16,
+      "end": 1028.24,
+      "duration": 4.08,
+      "text": "so post order starting plus three"
+    },
+    {
+      "start": 1026.56,
+      "end": 1029.84,
+      "duration": 3.28,
+      "text": "numbers minus one because if there are"
+    },
+    {
+      "start": 1028.24,
+      "end": 1031.44,
+      "duration": 3.2,
+      "text": "three numbers you take till index two"
+    },
+    {
+      "start": 1029.84,
+      "end": 1033.52,
+      "duration": 3.68,
+      "text": "that makes three numbers that's why"
+    },
+    {
+      "start": 1031.44,
+      "end": 1035.52,
+      "duration": 4.08,
+      "text": "minus one that is about the left subtree"
+    },
+    {
+      "start": 1033.52,
+      "end": 1038.72,
+      "duration": 5.2,
+      "text": "or the right subtree can i say the right"
+    },
+    {
+      "start": 1035.52,
+      "end": 1041.12,
+      "duration": 5.6,
+      "text": "sub trees uh in order will start from"
+    },
+    {
+      "start": 1038.72,
+      "end": 1043.44,
+      "duration": 4.72,
+      "text": "in root this is in root in root plus one"
+    },
+    {
+      "start": 1041.12,
+      "end": 1046.4,
+      "duration": 5.28,
+      "text": "in root plus one is where it starts from"
+    },
+    {
+      "start": 1043.44,
+      "end": 1049.36,
+      "duration": 5.92,
+      "text": "i will go until in root end like"
+    },
+    {
+      "start": 1046.4,
+      "end": 1051.12,
+      "duration": 4.72,
+      "text": "in order n what about what about uh the"
+    },
+    {
+      "start": 1049.36,
+      "end": 1053.6,
+      "duration": 4.24,
+      "text": "post order and i said the post order"
+    },
+    {
+      "start": 1051.12,
+      "end": 1056.72,
+      "duration": 5.6,
+      "text": "will be post order plus three that's"
+    },
+    {
+      "start": 1053.6,
+      "end": 1059.52,
+      "duration": 5.92,
+      "text": "post order plus plus nums left till till"
+    },
+    {
+      "start": 1056.72,
+      "end": 1062.32,
+      "duration": 5.6,
+      "text": "what post order end minus one this post"
+    },
+    {
+      "start": 1059.52,
+      "end": 1064.8,
+      "duration": 5.28,
+      "text": "order n minus one so post order n minus"
+    },
+    {
+      "start": 1062.32,
+      "end": 1066.56,
+      "duration": 4.24,
+      "text": "one so i have easily figured out from"
+    },
+    {
+      "start": 1064.8,
+      "end": 1069.84,
+      "duration": 5.04,
+      "text": "where like i've easily figured out ps"
+    },
+    {
+      "start": 1066.56,
+      "end": 1072.08,
+      "duration": 5.52,
+      "text": "plus nums left plus p minus 1 is where"
+    },
+    {
+      "start": 1069.84,
+      "end": 1074.32,
+      "duration": 4.48,
+      "text": "the next like this is the next post"
+    },
+    {
+      "start": 1072.08,
+      "end": 1076.0,
+      "duration": 3.92,
+      "text": "order for right this is the next in"
+    },
+    {
+      "start": 1074.32,
+      "end": 1078.0,
+      "duration": 3.68,
+      "text": "order for the right and similarly this"
+    },
+    {
+      "start": 1076.0,
+      "end": 1080.56,
+      "duration": 4.56,
+      "text": "is the next in order for the left and"
+    },
+    {
+      "start": 1078.0,
+      "end": 1081.84,
+      "duration": 3.84,
+      "text": "this is the next post order for the left"
+    },
+    {
+      "start": 1080.56,
+      "end": 1084.4,
+      "duration": 3.84,
+      "text": "that's how you"
+    },
+    {
+      "start": 1081.84,
+      "end": 1086.08,
+      "duration": 4.24,
+      "text": "send it across and whenever this returns"
+    },
+    {
+      "start": 1084.4,
+      "end": 1087.76,
+      "duration": 3.36,
+      "text": "like this will definitely return a root"
+    },
+    {
+      "start": 1086.08,
+      "end": 1090.0,
+      "duration": 3.92,
+      "text": "right it will definitely return a root"
+    },
+    {
+      "start": 1087.76,
+      "end": 1091.76,
+      "duration": 4.0,
+      "text": "or a null whatever it returns you will"
+    },
+    {
+      "start": 1090.0,
+      "end": 1093.92,
+      "duration": 3.92,
+      "text": "make the route it'll make this guy point"
+    },
+    {
+      "start": 1091.76,
+      "end": 1096.64,
+      "duration": 4.88,
+      "text": "to whatever the left returns and after"
+    },
+    {
+      "start": 1093.92,
+      "end": 1099.04,
+      "duration": 5.12,
+      "text": "that make the right make the right point"
+    },
+    {
+      "start": 1096.64,
+      "end": 1100.64,
+      "duration": 4.0,
+      "text": "to whatever it returns that's very"
+    },
+    {
+      "start": 1099.04,
+      "end": 1102.56,
+      "duration": 3.52,
+      "text": "simple and keep on doing it keep on"
+    },
+    {
+      "start": 1100.64,
+      "end": 1103.92,
+      "duration": 3.28,
+      "text": "doing it on backtracking it will"
+    },
+    {
+      "start": 1102.56,
+      "end": 1106.0,
+      "duration": 3.44,
+      "text": "automatically make sure it points to the"
+    },
+    {
+      "start": 1103.92,
+      "end": 1107.12,
+      "duration": 3.2,
+      "text": "left and right and at the end you return"
+    },
+    {
+      "start": 1106.0,
+      "end": 1108.4,
+      "duration": 2.4,
+      "text": "this 10"
+    },
+    {
+      "start": 1107.12,
+      "end": 1110.56,
+      "duration": 3.44,
+      "text": "which will be your"
+    },
+    {
+      "start": 1108.4,
+      "end": 1112.96,
+      "duration": 4.56,
+      "text": "root of the tree and that is what is"
+    },
+    {
+      "start": 1110.56,
+      "end": 1114.56,
+      "duration": 4.0,
+      "text": "returned return this this guy returned"
+    },
+    {
+      "start": 1112.96,
+      "end": 1117.2,
+      "duration": 4.24,
+      "text": "and this guy will automatically return"
+    },
+    {
+      "start": 1114.56,
+      "end": 1119.2,
+      "duration": 4.64,
+      "text": "the root time complexity you're doing a"
+    },
+    {
+      "start": 1117.2,
+      "end": 1121.36,
+      "duration": 4.16,
+      "text": "simple traversal of the tree that's a"
+    },
+    {
+      "start": 1119.2,
+      "end": 1123.04,
+      "duration": 3.84,
+      "text": "big of n traversal"
+    },
+    {
+      "start": 1121.36,
+      "end": 1125.12,
+      "duration": 3.76,
+      "text": "and uh are you"
+    },
+    {
+      "start": 1123.04,
+      "end": 1126.72,
+      "duration": 3.68,
+      "text": "i can say login i can say login if"
+    },
+    {
+      "start": 1125.12,
+      "end": 1128.32,
+      "duration": 3.2,
+      "text": "you're considering a hashmap to take"
+    },
+    {
+      "start": 1126.72,
+      "end": 1130.4,
+      "duration": 3.68,
+      "text": "login you can say login if you're"
+    },
+    {
+      "start": 1128.32,
+      "end": 1132.08,
+      "duration": 3.76,
+      "text": "considering hashmap to take big off one"
+    },
+    {
+      "start": 1130.4,
+      "end": 1134.0,
+      "duration": 3.6,
+      "text": "you can take a"
+    },
+    {
+      "start": 1132.08,
+      "end": 1136.48,
+      "duration": 4.4,
+      "text": "big off n into one and what about the"
+    },
+    {
+      "start": 1134.0,
+      "end": 1138.88,
+      "duration": 4.88,
+      "text": "space complexity the space complexity is"
+    },
+    {
+      "start": 1136.48,
+      "end": 1141.12,
+      "duration": 4.64,
+      "text": "definitely going to be b go off"
+    },
+    {
+      "start": 1138.88,
+      "end": 1142.8,
+      "duration": 3.92,
+      "text": "n for the hash map and a b of n for the"
+    },
+    {
+      "start": 1141.12,
+      "end": 1145.12,
+      "duration": 4.0,
+      "text": "auxiliary stack space of recursion but"
+    },
+    {
+      "start": 1142.8,
+      "end": 1147.6,
+      "duration": 4.8,
+      "text": "yes okay if i can summarize that to n"
+    },
+    {
+      "start": 1145.12,
+      "end": 1149.28,
+      "duration": 4.16,
+      "text": "log n or n again n log n or n depending"
+    },
+    {
+      "start": 1147.6,
+      "end": 1150.88,
+      "duration": 3.28,
+      "text": "on what time is your hash map taking and"
+    },
+    {
+      "start": 1149.28,
+      "end": 1153.28,
+      "duration": 4.0,
+      "text": "that's the space complexity of this"
+    },
+    {
+      "start": 1150.88,
+      "end": 1154.64,
+      "duration": 3.76,
+      "text": "particular solution so i hope you've"
+    },
+    {
+      "start": 1153.28,
+      "end": 1156.64,
+      "duration": 3.36,
+      "text": "understood the entire explanation as"
+    },
+    {
+      "start": 1154.64,
+      "end": 1158.08,
+      "duration": 3.44,
+      "text": "well as the code just in case you did"
+    },
+    {
+      "start": 1156.64,
+      "end": 1159.52,
+      "duration": 2.88,
+      "text": "please please please make sure you like"
+    },
+    {
+      "start": 1158.08,
+      "end": 1162.32,
+      "duration": 4.24,
+      "text": "this video because it took a lot of"
+    },
+    {
+      "start": 1159.52,
+      "end": 1164.08,
+      "duration": 4.56,
+      "text": "efforts to make this entire tree series"
+    },
+    {
+      "start": 1162.32,
+      "end": 1165.84,
+      "duration": 3.52,
+      "text": "also if you wish you can definitely drop"
+    },
+    {
+      "start": 1164.08,
+      "end": 1168.64,
+      "duration": 4.56,
+      "text": "in a comment that will keep motivating"
+    },
+    {
+      "start": 1165.84,
+      "end": 1169.76,
+      "duration": 3.92,
+      "text": "me to make such further series also if"
+    },
+    {
+      "start": 1168.64,
+      "end": 1171.12,
+      "duration": 2.48,
+      "text": "you're new to the channel please do"
+    },
+    {
+      "start": 1169.76,
+      "end": 1172.72,
+      "duration": 2.96,
+      "text": "consider subscribing because i'm going"
+    },
+    {
+      "start": 1171.12,
+      "end": 1174.8,
+      "duration": 3.68,
+      "text": "to bring in such more series in the"
+    },
+    {
+      "start": 1172.72,
+      "end": 1176.08,
+      "duration": 3.36,
+      "text": "upcoming future as well with this uh"
+    },
+    {
+      "start": 1174.8,
+      "end": 1179.27,
+      "duration": 4.47,
+      "text": "let's wrap up this video let's speed in"
+    },
+    {
+      "start": 1176.08,
+      "end": 1187.18,
+      "duration": 11.1,
+      "text": "the next lecture bye take take"
+    },
+    {
+      "start": 1179.27,
+      "end": 1187.18,
+      "duration": 7.91,
+      "text": "[Music]"
+    }
+  ]
+}

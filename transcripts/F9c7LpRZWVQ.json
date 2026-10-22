@@ -1,0 +1,4362 @@
+{
+  "video_id": "F9c7LpRZWVQ",
+  "title": "BS-21. Median of two Sorted Arrays of Different Sizes | Binary Search Approach With Intuition",
+  "duration_sec": 2100,
+  "segments": [
+    {
+      "start": 2.94,
+      "end": 5.94,
+      "text": "okay so we will be continuing with our"
+    },
+    {
+      "start": 4.62,
+      "end": 7.68,
+      "text": "binary search playlist now this is the"
+    },
+    {
+      "start": 5.94,
+      "end": 9.6,
+      "text": "part of the stripers A to Z DSA course"
+    },
+    {
+      "start": 7.68,
+      "end": 11.28,
+      "text": "in case you haven't checked it out yet"
+    },
+    {
+      "start": 9.6,
+      "end": 12.9,
+      "text": "there's a link in the description make"
+    },
+    {
+      "start": 11.28,
+      "end": 14.46,
+      "text": "sure you check it out so before starting"
+    },
+    {
+      "start": 12.9,
+      "end": 15.66,
+      "text": "every I'll come back to the channel I"
+    },
+    {
+      "start": 14.46,
+      "end": 17.22,
+      "text": "hope you guys are doing extremely well"
+    },
+    {
+      "start": 15.66,
+      "end": 19.92,
+      "text": "so the problem that you're going to"
+    },
+    {
+      "start": 17.22,
+      "end": 22.14,
+      "text": "solve today is finding out the median of"
+    },
+    {
+      "start": 19.92,
+      "end": 23.82,
+      "text": "two sorted arrays now this sword is very"
+    },
+    {
+      "start": 22.14,
+      "end": 25.74,
+      "text": "important sorted because that is what"
+    },
+    {
+      "start": 23.82,
+      "end": 27.54,
+      "text": "will help us to solve this problem now"
+    },
+    {
+      "start": 25.74,
+      "end": 30.18,
+      "text": "you can be given two arrays of equal"
+    },
+    {
+      "start": 27.54,
+      "end": 32.22,
+      "text": "size you can also be given two arrays of"
+    },
+    {
+      "start": 30.18,
+      "end": 35.4,
+      "text": "different size like in this example you"
+    },
+    {
+      "start": 32.22,
+      "end": 38.52,
+      "text": "can see this array is of size 6 and it"
+    },
+    {
+      "start": 35.4,
+      "end": 40.8,
+      "text": "is sorted this array is of size 4 and it"
+    },
+    {
+      "start": 38.52,
+      "end": 42.78,
+      "text": "is sorted now what you have to do is you"
+    },
+    {
+      "start": 40.8,
+      "end": 44.7,
+      "text": "have to find the median of these two"
+    },
+    {
+      "start": 42.78,
+      "end": 46.74,
+      "text": "sorted arrays so what you have to do is"
+    },
+    {
+      "start": 44.7,
+      "end": 48.9,
+      "text": "you have to take both of those sorted"
+    },
+    {
+      "start": 46.74,
+      "end": 52.14,
+      "text": "arrays and you have to combine them so"
+    },
+    {
+      "start": 48.9,
+      "end": 57.06,
+      "text": "if I combine them what I get is one two"
+    },
+    {
+      "start": 52.14,
+      "end": 59.04,
+      "text": "three three four six seven ten twelve"
+    },
+    {
+      "start": 57.06,
+      "end": 61.02,
+      "text": "fifteen what is the total number of"
+    },
+    {
+      "start": 59.04,
+      "end": 63.6,
+      "text": "elements the total number of elements in"
+    },
+    {
+      "start": 61.02,
+      "end": 66.12,
+      "text": "this case is 10 why because n one was"
+    },
+    {
+      "start": 63.6,
+      "end": 67.32,
+      "text": "six n two was four so the total number"
+    },
+    {
+      "start": 66.12,
+      "end": 69.9,
+      "text": "of elements is"
+    },
+    {
+      "start": 67.32,
+      "end": 71.58,
+      "text": "10 right so if I try to find out the"
+    },
+    {
+      "start": 69.9,
+      "end": 74.46,
+      "text": "median can I find a median of 10"
+    },
+    {
+      "start": 71.58,
+      "end": 77.7,
+      "text": "elements I cannot why because if I stand"
+    },
+    {
+      "start": 74.46,
+      "end": 80.46,
+      "text": "over at 4 there are four elements on the"
+    },
+    {
+      "start": 77.7,
+      "end": 83.1,
+      "text": "left there are five elements on the"
+    },
+    {
+      "start": 80.46,
+      "end": 85.74,
+      "text": "right if I stand at six there are five"
+    },
+    {
+      "start": 83.1,
+      "end": 88.02,
+      "text": "elements on the left four elements on"
+    },
+    {
+      "start": 85.74,
+      "end": 91.14,
+      "text": "the right so there is no specific median"
+    },
+    {
+      "start": 88.02,
+      "end": 93.12,
+      "text": "because median means on the left and on"
+    },
+    {
+      "start": 91.14,
+      "end": 94.92,
+      "text": "the right there must be equal number of"
+    },
+    {
+      "start": 93.12,
+      "end": 96.48,
+      "text": "elements now this is not in this case"
+    },
+    {
+      "start": 94.92,
+      "end": 99.24,
+      "text": "this is like five and four they're not"
+    },
+    {
+      "start": 96.48,
+      "end": 101.1,
+      "text": "equal so can I say the median will be"
+    },
+    {
+      "start": 99.24,
+      "end": 104.04,
+      "text": "somewhere between four and six because"
+    },
+    {
+      "start": 101.1,
+      "end": 106.02,
+      "text": "if I take somewhere between 4 and 6 on"
+    },
+    {
+      "start": 104.04,
+      "end": 108.42,
+      "text": "the left there are five on the right"
+    },
+    {
+      "start": 106.02,
+      "end": 110.82,
+      "text": "there are five which is equal so I can"
+    },
+    {
+      "start": 108.42,
+      "end": 114.18,
+      "text": "say that the median is somewhere between"
+    },
+    {
+      "start": 110.82,
+      "end": 115.98,
+      "text": "four and six so it's like the middle of"
+    },
+    {
+      "start": 114.18,
+      "end": 118.86,
+      "text": "four and six so four plus six by two"
+    },
+    {
+      "start": 115.98,
+      "end": 121.5,
+      "text": "five is the median in this case now over"
+    },
+    {
+      "start": 118.86,
+      "end": 124.38,
+      "text": "here the point to notice was the total"
+    },
+    {
+      "start": 121.5,
+      "end": 126.72,
+      "text": "number of elements was even that is why"
+    },
+    {
+      "start": 124.38,
+      "end": 129.06,
+      "text": "it did not have a specific median but"
+    },
+    {
+      "start": 126.72,
+      "end": 131.28,
+      "text": "what if I take this example there's like"
+    },
+    {
+      "start": 129.06,
+      "end": 133.2,
+      "text": "three elements there's like two elements"
+    },
+    {
+      "start": 131.28,
+      "end": 135.42,
+      "text": "so what is the total number of elements"
+    },
+    {
+      "start": 133.2,
+      "end": 138.96,
+      "text": "can I say that the total number of"
+    },
+    {
+      "start": 135.42,
+      "end": 141.24,
+      "text": "elements in this case is 5 I can so if I"
+    },
+    {
+      "start": 138.96,
+      "end": 142.86,
+      "text": "try to combine them in this time what"
+    },
+    {
+      "start": 141.24,
+      "end": 147.12,
+      "text": "will I get if I try to combine them I'll"
+    },
+    {
+      "start": 142.86,
+      "end": 149.34,
+      "text": "get one two three three four if I ask"
+    },
+    {
+      "start": 147.12,
+      "end": 151.98,
+      "text": "you what is the median can I say this is"
+    },
+    {
+      "start": 149.34,
+      "end": 154.2,
+      "text": "the median I can why because it's like"
+    },
+    {
+      "start": 151.98,
+      "end": 156.3,
+      "text": "12 minutes on the left this is like two"
+    },
+    {
+      "start": 154.2,
+      "end": 159.84,
+      "text": "elements on the right thereby the median"
+    },
+    {
+      "start": 156.3,
+      "end": 162.06,
+      "text": "is pretty simple the midpoint so in case"
+    },
+    {
+      "start": 159.84,
+      "end": 164.4,
+      "text": "of the total number of elements being"
+    },
+    {
+      "start": 162.06,
+      "end": 166.74,
+      "text": "got it's very simple in case the total"
+    },
+    {
+      "start": 164.4,
+      "end": 168.72,
+      "text": "number of elements is even I have to"
+    },
+    {
+      "start": 166.74,
+      "end": 170.94,
+      "text": "consider two elements I have to take the"
+    },
+    {
+      "start": 168.72,
+      "end": 172.14,
+      "text": "middle of it got it now this is what we"
+    },
+    {
+      "start": 170.94,
+      "end": 175.58,
+      "text": "have to find we have to find the median"
+    },
+    {
+      "start": 172.14,
+      "end": 175.58,
+      "text": "of two sorted arrays"
+    },
+    {
+      "start": 182.76,
+      "end": 187.32,
+      "text": "so both the previous Solutions were"
+    },
+    {
+      "start": 184.38,
+      "end": 189.66,
+      "text": "taking a big go of N1 plus b go of n 2"
+    },
+    {
+      "start": 187.32,
+      "end": 192.18,
+      "text": "time and yet we did get a time limit"
+    },
+    {
+      "start": 189.66,
+      "end": 194.88,
+      "text": "exceeded when we tried to submit it now"
+    },
+    {
+      "start": 192.18,
+      "end": 196.68,
+      "text": "this is a linear time complexity and if"
+    },
+    {
+      "start": 194.88,
+      "end": 198.48,
+      "text": "we have to optimize it what can be the"
+    },
+    {
+      "start": 196.68,
+      "end": 199.86,
+      "text": "optimization of it somewhere around"
+    },
+    {
+      "start": 198.48,
+      "end": 202.2,
+      "text": "square root or somewhere around"
+    },
+    {
+      "start": 199.86,
+      "end": 204.48,
+      "text": "logarithmic that is how we can optimize"
+    },
+    {
+      "start": 202.2,
+      "end": 206.7,
+      "text": "this square root I will not consider as"
+    },
+    {
+      "start": 204.48,
+      "end": 210.3,
+      "text": "of now I'll consider logarithmic why"
+    },
+    {
+      "start": 206.7,
+      "end": 212.82,
+      "text": "because of this thing sorted we know in"
+    },
+    {
+      "start": 210.3,
+      "end": 214.62,
+      "text": "sorted stuff Suite probably can apply"
+    },
+    {
+      "start": 212.82,
+      "end": 216.18,
+      "text": "binary search and binary search is an"
+    },
+    {
+      "start": 214.62,
+      "end": 217.56,
+      "text": "algorithm which works in logarithmic"
+    },
+    {
+      "start": 216.18,
+      "end": 219.3,
+      "text": "type so that is where the intuition"
+    },
+    {
+      "start": 217.56,
+      "end": 221.58,
+      "text": "comes in from because the linear did not"
+    },
+    {
+      "start": 219.3,
+      "end": 223.56,
+      "text": "work and it is given a sorted I'll start"
+    },
+    {
+      "start": 221.58,
+      "end": 224.7,
+      "text": "thinking of a manual solution if it"
+    },
+    {
+      "start": 223.56,
+      "end": 226.5,
+      "text": "doesn't work then we can think of"
+    },
+    {
+      "start": 224.7,
+      "end": 228.54,
+      "text": "something else but the first hit point"
+    },
+    {
+      "start": 226.5,
+      "end": 230.28,
+      "text": "should be binary search solution"
+    },
+    {
+      "start": 228.54,
+      "end": 232.2,
+      "text": "so what I've done is I've taken two"
+    },
+    {
+      "start": 230.28,
+      "end": 234.54,
+      "text": "arrays and if you sum up their elements"
+    },
+    {
+      "start": 232.2,
+      "end": 237.24,
+      "text": "that is 10 the total number of elements"
+    },
+    {
+      "start": 234.54,
+      "end": 239.28,
+      "text": "is 10 which is even so let's first"
+    },
+    {
+      "start": 237.24,
+      "end": 241.56,
+      "text": "understand the binary solution in terms"
+    },
+    {
+      "start": 239.28,
+      "end": 243.12,
+      "text": "of even number of elements once you have"
+    },
+    {
+      "start": 241.56,
+      "end": 245.58,
+      "text": "understood the concept then we can"
+    },
+    {
+      "start": 243.12,
+      "end": 247.2,
+      "text": "easily switch to odd once you've"
+    },
+    {
+      "start": 245.58,
+      "end": 248.58,
+      "text": "understood for even it's very easy to"
+    },
+    {
+      "start": 247.2,
+      "end": 250.5,
+      "text": "switch to what"
+    },
+    {
+      "start": 248.58,
+      "end": 252.12,
+      "text": "so as of now you might be thinking but"
+    },
+    {
+      "start": 250.5,
+      "end": 255.06,
+      "text": "how do we apply binary search because"
+    },
+    {
+      "start": 252.12,
+      "end": 258.54,
+      "text": "till now we have seen in an array we did"
+    },
+    {
+      "start": 255.06,
+      "end": 261.18,
+      "text": "a search use binary search if the search"
+    },
+    {
+      "start": 258.54,
+      "end": 263.76,
+      "text": "was on answers we did on binary search"
+    },
+    {
+      "start": 261.18,
+      "end": 266.28,
+      "text": "but over here how do we apply binary"
+    },
+    {
+      "start": 263.76,
+      "end": 268.02,
+      "text": "search first thing we have two sorted"
+    },
+    {
+      "start": 266.28,
+      "end": 270.54,
+      "text": "arrays and we're trying to merge them"
+    },
+    {
+      "start": 268.02,
+      "end": 273.42,
+      "text": "into a third sorted array and in doing"
+    },
+    {
+      "start": 270.54,
+      "end": 275.52,
+      "text": "so we're finding out the median right if"
+    },
+    {
+      "start": 273.42,
+      "end": 278.22,
+      "text": "we try to draw a symmetrical line on"
+    },
+    {
+      "start": 275.52,
+      "end": 280.68,
+      "text": "that Median on the left there are five"
+    },
+    {
+      "start": 278.22,
+      "end": 284.16,
+      "text": "elements on the right there are five"
+    },
+    {
+      "start": 280.68,
+      "end": 287.04,
+      "text": "elements notice the Symmetry okay next"
+    },
+    {
+      "start": 284.16,
+      "end": 290.34,
+      "text": "step out on these five elements how many"
+    },
+    {
+      "start": 287.04,
+      "end": 292.86,
+      "text": "are coming from array one can I say one"
+    },
+    {
+      "start": 290.34,
+      "end": 295.86,
+      "text": "three four so there are three elements"
+    },
+    {
+      "start": 292.86,
+      "end": 301.2,
+      "text": "from array one agreed and there are two"
+    },
+    {
+      "start": 295.86,
+      "end": 303.66,
+      "text": "elements from array 2 right on the right"
+    },
+    {
+      "start": 301.2,
+      "end": 306.18,
+      "text": "there are three elements the rest three"
+    },
+    {
+      "start": 303.66,
+      "end": 308.1,
+      "text": "are on the right and the rest two are on"
+    },
+    {
+      "start": 306.18,
+      "end": 310.46,
+      "text": "the right so this is where we'll start"
+    },
+    {
+      "start": 308.1,
+      "end": 314.22,
+      "text": "our binary search we will try to"
+    },
+    {
+      "start": 310.46,
+      "end": 317.16,
+      "text": "formulate the correct left half we will"
+    },
+    {
+      "start": 314.22,
+      "end": 319.92,
+      "text": "try to formulate the correct left half"
+    },
+    {
+      "start": 317.16,
+      "end": 321.84,
+      "text": "if we are able to do that we can"
+    },
+    {
+      "start": 319.92,
+      "end": 324.84,
+      "text": "actually find out the median how let's"
+    },
+    {
+      "start": 321.84,
+      "end": 325.98,
+      "text": "understand imagine a formulating the"
+    },
+    {
+      "start": 324.84,
+      "end": 328.98,
+      "text": "correct left"
+    },
+    {
+      "start": 325.98,
+      "end": 331.56,
+      "text": "and a formulate in the correct right"
+    },
+    {
+      "start": 328.98,
+      "end": 335.28,
+      "text": "half in hypothetical scenario then the"
+    },
+    {
+      "start": 331.56,
+      "end": 336.54,
+      "text": "median will be 4 plus 6 by 2"
+    },
+    {
+      "start": 335.28,
+      "end": 339.6,
+      "text": "isn't it"
+    },
+    {
+      "start": 336.54,
+      "end": 343.56,
+      "text": "right so our task will be to figure out"
+    },
+    {
+      "start": 339.6,
+      "end": 346.86,
+      "text": "okay three elements from array 1 and 2"
+    },
+    {
+      "start": 343.56,
+      "end": 350.16,
+      "text": "elements from array two will formulate"
+    },
+    {
+      "start": 346.86,
+      "end": 353.46,
+      "text": "the correct left half because one thing"
+    },
+    {
+      "start": 350.16,
+      "end": 356.4,
+      "text": "I am very sure is the left half will be"
+    },
+    {
+      "start": 353.46,
+      "end": 358.68,
+      "text": "this itself only will be this itself"
+    },
+    {
+      "start": 356.4,
+      "end": 361.38,
+      "text": "only it cannot be anything else it"
+    },
+    {
+      "start": 358.68,
+      "end": 363.06,
+      "text": "cannot be anything else right how to do"
+    },
+    {
+      "start": 361.38,
+      "end": 366.42,
+      "text": "this let's understand"
+    },
+    {
+      "start": 363.06,
+      "end": 369.9,
+      "text": "let's do the Strategic linear search and"
+    },
+    {
+      "start": 366.42,
+      "end": 372.06,
+      "text": "we will try to do it build on it so"
+    },
+    {
+      "start": 369.9,
+      "end": 373.92,
+      "text": "we're trying to build the left half and"
+    },
+    {
+      "start": 372.06,
+      "end": 376.62,
+      "text": "we're trying to build the right so"
+    },
+    {
+      "start": 373.92,
+      "end": 378.96,
+      "text": "imagine I see you from array 1 because"
+    },
+    {
+      "start": 376.62,
+      "end": 380.58,
+      "text": "we know we need five elements what's the"
+    },
+    {
+      "start": 378.96,
+      "end": 383.46,
+      "text": "linear search like where does it start"
+    },
+    {
+      "start": 380.58,
+      "end": 385.26,
+      "text": "maybe pick up zero elements from array 1"
+    },
+    {
+      "start": 383.46,
+      "end": 387.84,
+      "text": "I'll pick up no one from anyone I'll"
+    },
+    {
+      "start": 385.26,
+      "end": 390.42,
+      "text": "pick up no one from anyone if I pick up"
+    },
+    {
+      "start": 387.84,
+      "end": 391.44,
+      "text": "no one from array1 what will happen in"
+    },
+    {
+      "start": 390.42,
+      "end": 393.48,
+      "text": "that case"
+    },
+    {
+      "start": 391.44,
+      "end": 395.76,
+      "text": "I'll have to pick up"
+    },
+    {
+      "start": 393.48,
+      "end": 397.68,
+      "text": "four elements from array 2 because how"
+    },
+    {
+      "start": 395.76,
+      "end": 400.26,
+      "text": "many do we need on the left we need five"
+    },
+    {
+      "start": 397.68,
+      "end": 401.88,
+      "text": "so if I pick up no one from array one"
+    },
+    {
+      "start": 400.26,
+      "end": 403.5,
+      "text": "there are like four elements from the"
+    },
+    {
+      "start": 401.88,
+      "end": 406.08,
+      "text": "left added two I have to pick up every"
+    },
+    {
+      "start": 403.5,
+      "end": 408.0,
+      "text": "one of them even if I pick up every one"
+    },
+    {
+      "start": 406.08,
+      "end": 410.34,
+      "text": "of them I cannot get five elements"
+    },
+    {
+      "start": 408.0,
+      "end": 412.8,
+      "text": "something I know for sure is if I pick"
+    },
+    {
+      "start": 410.34,
+      "end": 414.66,
+      "text": "up zero elements from array one it's not"
+    },
+    {
+      "start": 412.8,
+      "end": 416.28,
+      "text": "possible like zero elements is not"
+    },
+    {
+      "start": 414.66,
+      "end": 417.78,
+      "text": "possible like fine"
+    },
+    {
+      "start": 416.28,
+      "end": 419.64,
+      "text": "can you pick up one element from"
+    },
+    {
+      "start": 417.78,
+      "end": 421.92,
+      "text": "everyone he says why not"
+    },
+    {
+      "start": 419.64,
+      "end": 423.6,
+      "text": "so pick up one element from array one"
+    },
+    {
+      "start": 421.92,
+      "end": 425.04,
+      "text": "which is one the first"
+    },
+    {
+      "start": 423.6,
+      "end": 427.74,
+      "text": "how many do we need to pick up from"
+    },
+    {
+      "start": 425.04,
+      "end": 429.84,
+      "text": "married to then we need to form five we"
+    },
+    {
+      "start": 427.74,
+      "end": 432.54,
+      "text": "need to pick up four more so what I'll"
+    },
+    {
+      "start": 429.84,
+      "end": 434.94,
+      "text": "do is I'll end up picking two three six"
+    },
+    {
+      "start": 432.54,
+      "end": 437.7,
+      "text": "fifteen I'll end up picking two three"
+    },
+    {
+      "start": 434.94,
+      "end": 439.8,
+      "text": "six fifty right what will be on the"
+    },
+    {
+      "start": 437.7,
+      "end": 444.9,
+      "text": "right the remaining the remaining very"
+    },
+    {
+      "start": 439.8,
+      "end": 446.64,
+      "text": "simple three four seven ten twelve so"
+    },
+    {
+      "start": 444.9,
+      "end": 448.44,
+      "text": "what I've done is I've said pick up one"
+    },
+    {
+      "start": 446.64,
+      "end": 450.36,
+      "text": "from array one I've done this and pick"
+    },
+    {
+      "start": 448.44,
+      "end": 452.46,
+      "text": "up the remaining so they were total five"
+    },
+    {
+      "start": 450.36,
+      "end": 453.42,
+      "text": "the remaining four got picked up from"
+    },
+    {
+      "start": 452.46,
+      "end": 455.4,
+      "text": "married"
+    },
+    {
+      "start": 453.42,
+      "end": 458.88,
+      "text": "now can I say this is a valid"
+    },
+    {
+      "start": 455.4,
+      "end": 460.92,
+      "text": "configuration I cannot why because if I"
+    },
+    {
+      "start": 458.88,
+      "end": 463.8,
+      "text": "try to sort them up it'll be like one"
+    },
+    {
+      "start": 460.92,
+      "end": 466.44,
+      "text": "two three six fifteen and the ride will"
+    },
+    {
+      "start": 463.8,
+      "end": 468.96,
+      "text": "be three four seven ten to it is this a"
+    },
+    {
+      "start": 466.44,
+      "end": 472.2,
+      "text": "sorted array in any means if even if you"
+    },
+    {
+      "start": 468.96,
+      "end": 474.9,
+      "text": "draw symmetry this is not why because 15"
+    },
+    {
+      "start": 472.2,
+      "end": 476.4,
+      "text": "is greater than three that's that cannot"
+    },
+    {
+      "start": 474.9,
+      "end": 478.62,
+      "text": "be a sorted array that cannot be"
+    },
+    {
+      "start": 476.4,
+      "end": 480.42,
+      "text": "exhorted array how do you recognize that"
+    },
+    {
+      "start": 478.62,
+      "end": 483.18,
+      "text": "will come to that afterwards so you come"
+    },
+    {
+      "start": 480.42,
+      "end": 486.36,
+      "text": "to that afterwards but as of now just"
+    },
+    {
+      "start": 483.18,
+      "end": 489.24,
+      "text": "this cannot be a valid similar perfect"
+    },
+    {
+      "start": 486.36,
+      "end": 491.82,
+      "text": "let's go to the next"
+    },
+    {
+      "start": 489.24,
+      "end": 493.68,
+      "text": "next is pick up two elements okay let's"
+    },
+    {
+      "start": 491.82,
+      "end": 496.44,
+      "text": "try to pick up two elements maybe like"
+    },
+    {
+      "start": 493.68,
+      "end": 498.18,
+      "text": "one three from this perfect so how many"
+    },
+    {
+      "start": 496.44,
+      "end": 500.04,
+      "text": "are remaining there were five we picked"
+    },
+    {
+      "start": 498.18,
+      "end": 502.86,
+      "text": "up two three more let's pick up the"
+    },
+    {
+      "start": 500.04,
+      "end": 505.44,
+      "text": "three more from the array two picked up"
+    },
+    {
+      "start": 502.86,
+      "end": 507.26,
+      "text": "that's the left portion what will be the"
+    },
+    {
+      "start": 505.44,
+      "end": 511.68,
+      "text": "right portion all the remaining elements"
+    },
+    {
+      "start": 507.26,
+      "end": 513.0,
+      "text": "four seven ten twelve and six oh sorry"
+    },
+    {
+      "start": 511.68,
+      "end": 514.68,
+      "text": "my bad"
+    },
+    {
+      "start": 513.0,
+      "end": 517.2,
+      "text": "fifty"
+    },
+    {
+      "start": 514.68,
+      "end": 520.14,
+      "text": "is this a valid configuration it isn't"
+    },
+    {
+      "start": 517.2,
+      "end": 521.76,
+      "text": "why one two three three six if I try to"
+    },
+    {
+      "start": 520.14,
+      "end": 525.66,
+      "text": "write them in a sorted order and this"
+    },
+    {
+      "start": 521.76,
+      "end": 528.0,
+      "text": "will be uh 4 7 10 12 15. again the six"
+    },
+    {
+      "start": 525.66,
+      "end": 530.04,
+      "text": "is greater than four this is not a valid"
+    },
+    {
+      "start": 528.0,
+      "end": 532.32,
+      "text": "symmetry this is not a valid symmetry"
+    },
+    {
+      "start": 530.04,
+      "end": 533.7,
+      "text": "why because six is on the left so 2 is"
+    },
+    {
+      "start": 532.32,
+      "end": 535.14,
+      "text": "also not possible"
+    },
+    {
+      "start": 533.7,
+      "end": 537.66,
+      "text": "perfect"
+    },
+    {
+      "start": 535.14,
+      "end": 539.88,
+      "text": "so 2 is also not possible"
+    },
+    {
+      "start": 537.66,
+      "end": 542.1,
+      "text": "what is your next job the next job is"
+    },
+    {
+      "start": 539.88,
+      "end": 544.5,
+      "text": "maybe pick up three maybe pick up three"
+    },
+    {
+      "start": 542.1,
+      "end": 546.96,
+      "text": "so if I pick up three it'll be one three"
+    },
+    {
+      "start": 544.5,
+      "end": 548.94,
+      "text": "four so I pick up three from the array"
+    },
+    {
+      "start": 546.96,
+      "end": 551.76,
+      "text": "one we pick up three from the array one"
+    },
+    {
+      "start": 548.94,
+      "end": 554.46,
+      "text": "how many from array two two more"
+    },
+    {
+      "start": 551.76,
+      "end": 556.8,
+      "text": "pick up two more that's two three how"
+    },
+    {
+      "start": 554.46,
+      "end": 560.52,
+      "text": "many will be left from array one it'll"
+    },
+    {
+      "start": 556.8,
+      "end": 563.1,
+      "text": "be like three more left so 7 10 12 and"
+    },
+    {
+      "start": 560.52,
+      "end": 565.02,
+      "text": "over here it'll be six fifty is this a"
+    },
+    {
+      "start": 563.1,
+      "end": 566.58,
+      "text": "valid symmetry let's look at this if I"
+    },
+    {
+      "start": 565.02,
+      "end": 568.92,
+      "text": "try to write down them in the sorted"
+    },
+    {
+      "start": 566.58,
+      "end": 571.38,
+      "text": "order it's like this and this is like 6"
+    },
+    {
+      "start": 568.92,
+      "end": 574.38,
+      "text": "7 10 12 50. and if you carefully notice"
+    },
+    {
+      "start": 571.38,
+      "end": 576.06,
+      "text": "this is a valid symmetry because 4 is"
+    },
+    {
+      "start": 574.38,
+      "end": 577.38,
+      "text": "lesser than 6 and all of these are in"
+    },
+    {
+      "start": 576.06,
+      "end": 580.14,
+      "text": "the sorted order"
+    },
+    {
+      "start": 577.38,
+      "end": 582.48,
+      "text": "so this is a valid symmetry so what we"
+    },
+    {
+      "start": 580.14,
+      "end": 584.94,
+      "text": "figured out was if I pick up exactly"
+    },
+    {
+      "start": 582.48,
+      "end": 587.1,
+      "text": "three elements from array one and the"
+    },
+    {
+      "start": 584.94,
+      "end": 589.2,
+      "text": "remaining from array two we get a valid"
+    },
+    {
+      "start": 587.1,
+      "end": 591.0,
+      "text": "symmetry you can try about picking four"
+    },
+    {
+      "start": 589.2,
+      "end": 592.68,
+      "text": "elements as well try picking out four"
+    },
+    {
+      "start": 591.0,
+      "end": 594.18,
+      "text": "elements so try picking out four"
+    },
+    {
+      "start": 592.68,
+      "end": 596.4,
+      "text": "elements it'll be like one three four"
+    },
+    {
+      "start": 594.18,
+      "end": 598.38,
+      "text": "seven from array one and the remaining"
+    },
+    {
+      "start": 596.4,
+      "end": 601.38,
+      "text": "will be just one more we required so"
+    },
+    {
+      "start": 598.38,
+      "end": 603.6,
+      "text": "that's two from the other two and on the"
+    },
+    {
+      "start": 601.38,
+      "end": 606.06,
+      "text": "top it will be 10 12 and the remaining"
+    },
+    {
+      "start": 603.6,
+      "end": 608.34,
+      "text": "will be 3 6 15. again if we try to write"
+    },
+    {
+      "start": 606.06,
+      "end": 612.54,
+      "text": "then write them down one two three four"
+    },
+    {
+      "start": 608.34,
+      "end": 614.34,
+      "text": "seven this will be 3 6 10 12 50. you"
+    },
+    {
+      "start": 612.54,
+      "end": 615.84,
+      "text": "carefully observe this is also not a"
+    },
+    {
+      "start": 614.34,
+      "end": 617.4,
+      "text": "valid symmetry because 7 is greater than"
+    },
+    {
+      "start": 615.84,
+      "end": 619.14,
+      "text": "three it should have been on the this"
+    },
+    {
+      "start": 617.4,
+      "end": 621.48,
+      "text": "portion this should have been here it's"
+    },
+    {
+      "start": 619.14,
+      "end": 623.04,
+      "text": "not a valid cement this is also not a"
+    },
+    {
+      "start": 621.48,
+      "end": 625.5,
+      "text": "valid Summit for like picking up four"
+    },
+    {
+      "start": 623.04,
+      "end": 627.78,
+      "text": "elements is not possible so one didn't"
+    },
+    {
+      "start": 625.5,
+      "end": 629.22,
+      "text": "we notice picking up 0 and password"
+    },
+    {
+      "start": 627.78,
+      "end": 630.36,
+      "text": "picking up one not possible picking up"
+    },
+    {
+      "start": 629.22,
+      "end": 632.52,
+      "text": "two not possible picking up three"
+    },
+    {
+      "start": 630.36,
+      "end": 634.98,
+      "text": "possible picking up four not possible"
+    },
+    {
+      "start": 632.52,
+      "end": 636.42,
+      "text": "taking of five not possible and that"
+    },
+    {
+      "start": 634.98,
+      "end": 638.88,
+      "text": "that is the max you can pick up because"
+    },
+    {
+      "start": 636.42,
+      "end": 641.16,
+      "text": "sorry there's an X6 6 is also not"
+    },
+    {
+      "start": 638.88,
+      "end": 643.98,
+      "text": "possible so the only thing that is"
+    },
+    {
+      "start": 641.16,
+      "end": 646.74,
+      "text": "possible is three something we observed"
+    },
+    {
+      "start": 643.98,
+      "end": 649.68,
+      "text": "is there will always be one valid"
+    },
+    {
+      "start": 646.74,
+      "end": 651.48,
+      "text": "symmetry where you definitely know three"
+    },
+    {
+      "start": 649.68,
+      "end": 654.0,
+      "text": "from here two from here there cannot be"
+    },
+    {
+      "start": 651.48,
+      "end": 655.5,
+      "text": "any other configurations got this is the"
+    },
+    {
+      "start": 654.0,
+      "end": 657.12,
+      "text": "first thing you have to understand how"
+    },
+    {
+      "start": 655.5,
+      "end": 658.86,
+      "text": "many to pick you have understood this"
+    },
+    {
+      "start": 657.12,
+      "end": 660.9,
+      "text": "then you'll move to the next"
+    },
+    {
+      "start": 658.86,
+      "end": 662.82,
+      "text": "so till now we know one thing that this"
+    },
+    {
+      "start": 660.9,
+      "end": 665.88,
+      "text": "problem is being solved on the basis of"
+    },
+    {
+      "start": 662.82,
+      "end": 667.56,
+      "text": "symmetry where we decide three elements"
+    },
+    {
+      "start": 665.88,
+      "end": 670.02,
+      "text": "from the array one and two elements from"
+    },
+    {
+      "start": 667.56,
+      "end": 671.52,
+      "text": "array this is what you have to get to"
+    },
+    {
+      "start": 670.02,
+      "end": 673.26,
+      "text": "after that we'll decide how to find out"
+    },
+    {
+      "start": 671.52,
+      "end": 674.46,
+      "text": "the median but that is our first step"
+    },
+    {
+      "start": 673.26,
+      "end": 677.46,
+      "text": "but"
+    },
+    {
+      "start": 674.46,
+      "end": 681.54,
+      "text": "how do we figure out that it's a valid"
+    },
+    {
+      "start": 677.46,
+      "end": 683.58,
+      "text": "symmetry or not imagine you're picking"
+    },
+    {
+      "start": 681.54,
+      "end": 684.96,
+      "text": "up four elements from the array one and"
+    },
+    {
+      "start": 683.58,
+      "end": 687.54,
+      "text": "you're picking up the remaining one from"
+    },
+    {
+      "start": 684.96,
+      "end": 689.7,
+      "text": "edit so this is the left portion this is"
+    },
+    {
+      "start": 687.54,
+      "end": 691.2,
+      "text": "the right portion this is the array one"
+    },
+    {
+      "start": 689.7,
+      "end": 694.32,
+      "text": "if you carefully notice this is the"
+    },
+    {
+      "start": 691.2,
+      "end": 696.6,
+      "text": "array one and this is the array two how"
+    },
+    {
+      "start": 694.32,
+      "end": 699.54,
+      "text": "do you determine that this is a valid"
+    },
+    {
+      "start": 696.6,
+      "end": 701.76,
+      "text": "symmetry or not it's very simple you"
+    },
+    {
+      "start": 699.54,
+      "end": 704.1,
+      "text": "know one thing for sure this is array"
+    },
+    {
+      "start": 701.76,
+      "end": 705.96,
+      "text": "one so this will be sorted this is array"
+    },
+    {
+      "start": 704.1,
+      "end": 709.56,
+      "text": "two so the second line will also be"
+    },
+    {
+      "start": 705.96,
+      "end": 713.52,
+      "text": "sorted in order for this to be a valid"
+    },
+    {
+      "start": 709.56,
+      "end": 715.56,
+      "text": "symmetry this 7 is on the left this"
+    },
+    {
+      "start": 713.52,
+      "end": 717.42,
+      "text": "should be smaller than this three the"
+    },
+    {
+      "start": 715.56,
+      "end": 720.78,
+      "text": "seven should be smaller than this 3"
+    },
+    {
+      "start": 717.42,
+      "end": 723.0,
+      "text": "which is not the case and this 2 should"
+    },
+    {
+      "start": 720.78,
+      "end": 724.86,
+      "text": "be smaller than this 10. this 2 should"
+    },
+    {
+      "start": 723.0,
+      "end": 727.62,
+      "text": "be smaller than this 10 which is not the"
+    },
+    {
+      "start": 724.86,
+      "end": 730.08,
+      "text": "case that means the 7 should ideally"
+    },
+    {
+      "start": 727.62,
+      "end": 732.24,
+      "text": "would have been here I really should"
+    },
+    {
+      "start": 730.08,
+      "end": 735.06,
+      "text": "have been here right that is why it is"
+    },
+    {
+      "start": 732.24,
+      "end": 737.22,
+      "text": "not because 7 is greater than 3 so it"
+    },
+    {
+      "start": 735.06,
+      "end": 738.78,
+      "text": "cannot be on the left we do not check"
+    },
+    {
+      "start": 737.22,
+      "end": 741.24,
+      "text": "for this we do not check for this no"
+    },
+    {
+      "start": 738.78,
+      "end": 744.72,
+      "text": "need because it's on the same array we"
+    },
+    {
+      "start": 741.24,
+      "end": 746.22,
+      "text": "just check cross we just check cross"
+    },
+    {
+      "start": 744.72,
+      "end": 748.38,
+      "text": "now this is where we pick up three"
+    },
+    {
+      "start": 746.22,
+      "end": 750.42,
+      "text": "elements from the array one and two"
+    },
+    {
+      "start": 748.38,
+      "end": 753.48,
+      "text": "elements from the array two now this is"
+    },
+    {
+      "start": 750.42,
+      "end": 756.06,
+      "text": "a valid symmetry why because this 3 is"
+    },
+    {
+      "start": 753.48,
+      "end": 758.46,
+      "text": "smaller than 7 which is a valid and the"
+    },
+    {
+      "start": 756.06,
+      "end": 761.46,
+      "text": "small is smaller than 6 which is valid"
+    },
+    {
+      "start": 758.46,
+      "end": 763.08,
+      "text": "hence all the elements on the left are"
+    },
+    {
+      "start": 761.46,
+      "end": 765.54,
+      "text": "smaller than all the elements on the"
+    },
+    {
+      "start": 763.08,
+      "end": 767.46,
+      "text": "right why because we already checked for"
+    },
+    {
+      "start": 765.54,
+      "end": 770.4,
+      "text": "like this is an array one so it is so"
+    },
+    {
+      "start": 767.46,
+      "end": 772.86,
+      "text": "this is R2 this is so just need to make"
+    },
+    {
+      "start": 770.4,
+      "end": 774.96,
+      "text": "sure that these cross guys are smaller"
+    },
+    {
+      "start": 772.86,
+      "end": 777.12,
+      "text": "if that is all the elements on the left"
+    },
+    {
+      "start": 774.96,
+      "end": 780.36,
+      "text": "are smaller than all the elements of the"
+    },
+    {
+      "start": 777.12,
+      "end": 781.68,
+      "text": "right hence symmetry hence symmetry got"
+    },
+    {
+      "start": 780.36,
+      "end": 783.3,
+      "text": "it next"
+    },
+    {
+      "start": 781.68,
+      "end": 785.1,
+      "text": "what if we pick up two elements from the"
+    },
+    {
+      "start": 783.3,
+      "end": 787.5,
+      "text": "left sorry two elements from the array"
+    },
+    {
+      "start": 785.1,
+      "end": 789.48,
+      "text": "one and three elements from the added S3"
+    },
+    {
+      "start": 787.5,
+      "end": 793.74,
+      "text": "there's 50 that's smaller perfect"
+    },
+    {
+      "start": 789.48,
+      "end": 795.78,
+      "text": "perfect but the cross 6 is not smaller"
+    },
+    {
+      "start": 793.74,
+      "end": 797.16,
+      "text": "than four six is not smaller than four"
+    },
+    {
+      "start": 795.78,
+      "end": 800.34,
+      "text": "hence"
+    },
+    {
+      "start": 797.16,
+      "end": 803.34,
+      "text": "not possible not a valid symmetry so we"
+    },
+    {
+      "start": 800.34,
+      "end": 805.74,
+      "text": "have also understood how do we figure"
+    },
+    {
+      "start": 803.34,
+      "end": 807.96,
+      "text": "out it's a valid symmetry or not a valid"
+    },
+    {
+      "start": 805.74,
+      "end": 809.88,
+      "text": "symmetry so let's quickly do a recap"
+    },
+    {
+      "start": 807.96,
+      "end": 812.1,
+      "text": "till now we have done two points the"
+    },
+    {
+      "start": 809.88,
+      "end": 814.8,
+      "text": "first one is the binary search will be"
+    },
+    {
+      "start": 812.1,
+      "end": 817.2,
+      "text": "on the basis of symmetry where we"
+    },
+    {
+      "start": 814.8,
+      "end": 819.36,
+      "text": "determine how many from array 1 will be"
+    },
+    {
+      "start": 817.2,
+      "end": 822.12,
+      "text": "on the left how many from array 2 will"
+    },
+    {
+      "start": 819.36,
+      "end": 824.58,
+      "text": "be on the right and the second one how"
+    },
+    {
+      "start": 822.12,
+      "end": 827.22,
+      "text": "do we determine if it's a valid or an"
+    },
+    {
+      "start": 824.58,
+      "end": 830.82,
+      "text": "invalid symmetry we just compare the"
+    },
+    {
+      "start": 827.22,
+      "end": 832.2,
+      "text": "cross if they are smaller if the entire"
+    },
+    {
+      "start": 830.82,
+      "end": 834.54,
+      "text": "left is smaller than the entire right"
+    },
+    {
+      "start": 832.2,
+      "end": 836.88,
+      "text": "it's a valid otherwise not but now the"
+    },
+    {
+      "start": 834.54,
+      "end": 838.56,
+      "text": "question arises but how do we figure out"
+    },
+    {
+      "start": 836.88,
+      "end": 840.6,
+      "text": "the median"
+    },
+    {
+      "start": 838.56,
+      "end": 842.7,
+      "text": "how do we figure out the mean very"
+    },
+    {
+      "start": 840.6,
+      "end": 844.74,
+      "text": "simple I'll tell you"
+    },
+    {
+      "start": 842.7,
+      "end": 846.9,
+      "text": "and this is a valid symmetry over here"
+    },
+    {
+      "start": 844.74,
+      "end": 849.24,
+      "text": "we know these many elements from array"
+    },
+    {
+      "start": 846.9,
+      "end": 851.04,
+      "text": "one these many elements from arity how"
+    },
+    {
+      "start": 849.24,
+      "end": 853.56,
+      "text": "do we figure out the median so let's"
+    },
+    {
+      "start": 851.04,
+      "end": 857.28,
+      "text": "probably call them as L1"
+    },
+    {
+      "start": 853.56,
+      "end": 860.1,
+      "text": "L2 write one right two so L1 means left"
+    },
+    {
+      "start": 857.28,
+      "end": 862.86,
+      "text": "one from array 1 L 2 means left two from"
+    },
+    {
+      "start": 860.1,
+      "end": 865.74,
+      "text": "array 2 R1 means right one from array 1"
+    },
+    {
+      "start": 862.86,
+      "end": 867.78,
+      "text": "R2 means right two from arid okay how do"
+    },
+    {
+      "start": 865.74,
+      "end": 869.94,
+      "text": "we find out the media"
+    },
+    {
+      "start": 867.78,
+      "end": 871.14,
+      "text": "let's go back to the originals sort it"
+    },
+    {
+      "start": 869.94,
+      "end": 873.6,
+      "text": "arrays"
+    },
+    {
+      "start": 871.14,
+      "end": 877.32,
+      "text": "how do you figure out the median we took"
+    },
+    {
+      "start": 873.6,
+      "end": 879.66,
+      "text": "the greatest of all on the left which is"
+    },
+    {
+      "start": 877.32,
+      "end": 882.48,
+      "text": "the greatest of all on the left and we"
+    },
+    {
+      "start": 879.66,
+      "end": 885.0,
+      "text": "take the smallest of all on the right"
+    },
+    {
+      "start": 882.48,
+      "end": 887.76,
+      "text": "and we added them and divided by 2 to"
+    },
+    {
+      "start": 885.0,
+      "end": 890.34,
+      "text": "get our median same thing we do we know"
+    },
+    {
+      "start": 887.76,
+      "end": 892.98,
+      "text": "one thing for sure this array is sorted"
+    },
+    {
+      "start": 890.34,
+      "end": 895.74,
+      "text": "so what will be like L one will be the"
+    },
+    {
+      "start": 892.98,
+      "end": 898.08,
+      "text": "greatest over here this array is also"
+    },
+    {
+      "start": 895.74,
+      "end": 900.72,
+      "text": "sorted so 3 will be the greatest it's"
+    },
+    {
+      "start": 898.08,
+      "end": 903.96,
+      "text": "already the total greatest the greatest"
+    },
+    {
+      "start": 900.72,
+      "end": 906.54,
+      "text": "on the left will be Max of L1 comma L2"
+    },
+    {
+      "start": 903.96,
+      "end": 908.16,
+      "text": "quite simple and what's the smallest on"
+    },
+    {
+      "start": 906.54,
+      "end": 910.02,
+      "text": "the right because that is what you need"
+    },
+    {
+      "start": 908.16,
+      "end": 911.88,
+      "text": "the smallest on the right the entire"
+    },
+    {
+      "start": 910.02,
+      "end": 913.8,
+      "text": "thing is sorted so other one is the"
+    },
+    {
+      "start": 911.88,
+      "end": 917.12,
+      "text": "smallest on the top and R2 is the"
+    },
+    {
+      "start": 913.8,
+      "end": 921.48,
+      "text": "smallest on the array two so plus"
+    },
+    {
+      "start": 917.12,
+      "end": 923.34,
+      "text": "minimum of R1 comma r divided by 2 this"
+    },
+    {
+      "start": 921.48,
+      "end": 925.5,
+      "text": "is how you'll get the median it'll come"
+    },
+    {
+      "start": 923.34,
+      "end": 928.44,
+      "text": "to odd afterwards but as of now please"
+    },
+    {
+      "start": 925.5,
+      "end": 930.36,
+      "text": "focus on understanding this particular"
+    },
+    {
+      "start": 928.44,
+      "end": 931.74,
+      "text": "even thing once you've done this or is"
+    },
+    {
+      "start": 930.36,
+      "end": 933.42,
+      "text": "going to be very simple"
+    },
+    {
+      "start": 931.74,
+      "end": 935.28,
+      "text": "so till now we are following the"
+    },
+    {
+      "start": 933.42,
+      "end": 938.22,
+      "text": "symmetrical pattern to solve this"
+    },
+    {
+      "start": 935.28,
+      "end": 940.62,
+      "text": "problem where we are figuring out that"
+    },
+    {
+      "start": 938.22,
+      "end": 942.6,
+      "text": "we need five elements on the left how"
+    },
+    {
+      "start": 940.62,
+      "end": 945.66,
+      "text": "many from the array one how many from"
+    },
+    {
+      "start": 942.6,
+      "end": 948.78,
+      "text": "the na2 so if we just focus on everyone"
+    },
+    {
+      "start": 945.66,
+      "end": 951.36,
+      "text": "just on everyone why because if I can"
+    },
+    {
+      "start": 948.78,
+      "end": 953.7,
+      "text": "determine how many from array 1 the"
+    },
+    {
+      "start": 951.36,
+      "end": 955.8,
+      "text": "remaining because total was five"
+    },
+    {
+      "start": 953.7,
+      "end": 958.38,
+      "text": "so if I pick up three from array one we"
+    },
+    {
+      "start": 955.8,
+      "end": 960.54,
+      "text": "just need two more from n so from early"
+    },
+    {
+      "start": 958.38,
+      "end": 962.52,
+      "text": "to we will know how much so let's focus"
+    },
+    {
+      "start": 960.54,
+      "end": 964.62,
+      "text": "on array one how many from array 1"
+    },
+    {
+      "start": 962.52,
+      "end": 967.44,
+      "text": "should be our Focus how many from array"
+    },
+    {
+      "start": 964.62,
+      "end": 969.78,
+      "text": "2 will automatically be determined how"
+    },
+    {
+      "start": 967.44,
+      "end": 972.18,
+      "text": "many from array one zero not possible"
+    },
+    {
+      "start": 969.78,
+      "end": 973.2,
+      "text": "why not possible two not possible three"
+    },
+    {
+      "start": 972.18,
+      "end": 975.66,
+      "text": "possible"
+    },
+    {
+      "start": 973.2,
+      "end": 977.76,
+      "text": "will I go and do a linear check if we do"
+    },
+    {
+      "start": 975.66,
+      "end": 979.68,
+      "text": "we fall back to the linear complexity so"
+    },
+    {
+      "start": 977.76,
+      "end": 981.66,
+      "text": "we do not but can we do a binary search"
+    },
+    {
+      "start": 979.68,
+      "end": 983.64,
+      "text": "for not possible five not possible six"
+    },
+    {
+      "start": 981.66,
+      "end": 986.28,
+      "text": "not possible because that is the maximum"
+    },
+    {
+      "start": 983.64,
+      "end": 988.2,
+      "text": "elements I can take now"
+    },
+    {
+      "start": 986.28,
+      "end": 989.88,
+      "text": "I can't see a binary search pattern"
+    },
+    {
+      "start": 988.2,
+      "end": 992.04,
+      "text": "because binary search is technically"
+    },
+    {
+      "start": 989.88,
+      "end": 994.08,
+      "text": "like not possible not possible possible"
+    },
+    {
+      "start": 992.04,
+      "end": 996.42,
+      "text": "possible possible I can't see a binary"
+    },
+    {
+      "start": 994.08,
+      "end": 998.94,
+      "text": "search pattern but I I'll tell you how"
+    },
+    {
+      "start": 996.42,
+      "end": 1001.94,
+      "text": "to apply my research I know one thing in"
+    },
+    {
+      "start": 998.94,
+      "end": 1004.58,
+      "text": "the array one I can pick up no one or I"
+    },
+    {
+      "start": 1001.94,
+      "end": 1006.86,
+      "text": "can pick all of them in the other one I"
+    },
+    {
+      "start": 1004.58,
+      "end": 1009.56,
+      "text": "can pick up no one or I can pick all of"
+    },
+    {
+      "start": 1006.86,
+      "end": 1013.16,
+      "text": "that now how will I determine when the"
+    },
+    {
+      "start": 1009.56,
+      "end": 1016.1,
+      "text": "two goal left and eliminate right"
+    },
+    {
+      "start": 1013.16,
+      "end": 1019.4,
+      "text": "eliminate right by going left or go"
+    },
+    {
+      "start": 1016.1,
+      "end": 1021.86,
+      "text": "right by eliminate"
+    },
+    {
+      "start": 1019.4,
+      "end": 1023.36,
+      "text": "thing left"
+    },
+    {
+      "start": 1021.86,
+      "end": 1025.16,
+      "text": "that is what you have to figure out"
+    },
+    {
+      "start": 1023.36,
+      "end": 1027.8,
+      "text": "basically if you are somewhere between"
+    },
+    {
+      "start": 1025.16,
+      "end": 1030.38,
+      "text": "four how do you eliminate the right half"
+    },
+    {
+      "start": 1027.8,
+      "end": 1032.72,
+      "text": "saying 4 and Beyond four is not possible"
+    },
+    {
+      "start": 1030.38,
+      "end": 1034.58,
+      "text": "go and search on the left how do you do"
+    },
+    {
+      "start": 1032.72,
+      "end": 1036.62,
+      "text": "that is what you have to focus"
+    },
+    {
+      "start": 1034.58,
+      "end": 1039.26,
+      "text": "for that I'll come back to this example"
+    },
+    {
+      "start": 1036.62,
+      "end": 1041.48,
+      "text": "this example and this example let's come"
+    },
+    {
+      "start": 1039.26,
+      "end": 1043.82,
+      "text": "back to that"
+    },
+    {
+      "start": 1041.48,
+      "end": 1045.8,
+      "text": "so I'll write oh I am picking up four"
+    },
+    {
+      "start": 1043.82,
+      "end": 1048.26,
+      "text": "elements from the left over here three"
+    },
+    {
+      "start": 1045.8,
+      "end": 1050.3,
+      "text": "over here two so I know this is a"
+    },
+    {
+      "start": 1048.26,
+      "end": 1052.82,
+      "text": "possible answer this is the left half"
+    },
+    {
+      "start": 1050.3,
+      "end": 1054.38,
+      "text": "this is the right how do we determine"
+    },
+    {
+      "start": 1052.82,
+      "end": 1057.86,
+      "text": "this is the right half"
+    },
+    {
+      "start": 1054.38,
+      "end": 1061.34,
+      "text": "let's see we're having seven and that's"
+    },
+    {
+      "start": 1057.86,
+      "end": 1063.8,
+      "text": "greater than 3. hence not possible so"
+    },
+    {
+      "start": 1061.34,
+      "end": 1068.96,
+      "text": "any case this is known as L1 if you"
+    },
+    {
+      "start": 1063.8,
+      "end": 1071.54,
+      "text": "remember L2 R1 R2 any case L1 is greater"
+    },
+    {
+      "start": 1068.96,
+      "end": 1074.72,
+      "text": "than R1 that means"
+    },
+    {
+      "start": 1071.54,
+      "end": 1076.94,
+      "text": "high will be eliminated"
+    },
+    {
+      "start": 1074.72,
+      "end": 1079.1,
+      "text": "got this high will be eliminated"
+    },
+    {
+      "start": 1076.94,
+      "end": 1080.3,
+      "text": "we cannot take the right not possible we"
+    },
+    {
+      "start": 1079.1,
+      "end": 1082.58,
+      "text": "need to"
+    },
+    {
+      "start": 1080.3,
+      "end": 1085.04,
+      "text": "reduce the value of 4 4 is not possible"
+    },
+    {
+      "start": 1082.58,
+      "end": 1087.44,
+      "text": "reduce the value of 4. this is possible"
+    },
+    {
+      "start": 1085.04,
+      "end": 1090.08,
+      "text": "this is always possible so we stop there"
+    },
+    {
+      "start": 1087.44,
+      "end": 1092.06,
+      "text": "stop there what about if it's a smaller"
+    },
+    {
+      "start": 1090.08,
+      "end": 1095.24,
+      "text": "value let's look at this in this case"
+    },
+    {
+      "start": 1092.06,
+      "end": 1099.26,
+      "text": "the 6 is more greater than this which is"
+    },
+    {
+      "start": 1095.24,
+      "end": 1103.88,
+      "text": "the L2 let me write that again L1 L2 R1"
+    },
+    {
+      "start": 1099.26,
+      "end": 1105.92,
+      "text": "R2 if L2 is greater than R1 in that case"
+    },
+    {
+      "start": 1103.88,
+      "end": 1109.9,
+      "text": "the left portion will be eliminated"
+    },
+    {
+      "start": 1105.92,
+      "end": 1113.18,
+      "text": "because if 2 is not possible"
+    },
+    {
+      "start": 1109.9,
+      "end": 1114.98,
+      "text": "so these will be the conditions for"
+    },
+    {
+      "start": 1113.18,
+      "end": 1116.9,
+      "text": "binary search this is how you determine"
+    },
+    {
+      "start": 1114.98,
+      "end": 1118.7,
+      "text": "whether to reduce 4 or whether to"
+    },
+    {
+      "start": 1116.9,
+      "end": 1121.1,
+      "text": "increase two these will be the"
+    },
+    {
+      "start": 1118.7,
+      "end": 1123.38,
+      "text": "conditions quite simple just ready"
+    },
+    {
+      "start": 1121.1,
+      "end": 1124.64,
+      "text": "observations and we're done"
+    },
+    {
+      "start": 1123.38,
+      "end": 1126.14,
+      "text": "so I've said you about the thought"
+    },
+    {
+      "start": 1124.64,
+      "end": 1128.3,
+      "text": "process now what I'll do is I'll do a"
+    },
+    {
+      "start": 1126.14,
+      "end": 1130.04,
+      "text": "dragon by taking couple of sorted arrays"
+    },
+    {
+      "start": 1128.3,
+      "end": 1131.66,
+      "text": "so that the thought process gets into"
+    },
+    {
+      "start": 1130.04,
+      "end": 1133.58,
+      "text": "your hand and after that we move on to"
+    },
+    {
+      "start": 1131.66,
+      "end": 1136.16,
+      "text": "the code so the first question that I'll"
+    },
+    {
+      "start": 1133.58,
+      "end": 1138.14,
+      "text": "ask you is in the example that we were"
+    },
+    {
+      "start": 1136.16,
+      "end": 1142.1,
+      "text": "taking till now we are doing a binary"
+    },
+    {
+      "start": 1138.14,
+      "end": 1144.56,
+      "text": "search on an array of size 6 right in"
+    },
+    {
+      "start": 1142.1,
+      "end": 1147.38,
+      "text": "order to determine how many elements"
+    },
+    {
+      "start": 1144.56,
+      "end": 1148.7,
+      "text": "will be fitting the Symmetry and we"
+    },
+    {
+      "start": 1147.38,
+      "end": 1150.44,
+      "text": "figured out that three elements were"
+    },
+    {
+      "start": 1148.7,
+      "end": 1152.42,
+      "text": "fitting the symmetry"
+    },
+    {
+      "start": 1150.44,
+      "end": 1154.46,
+      "text": "and we were doing a binary search on a"
+    },
+    {
+      "start": 1152.42,
+      "end": 1156.92,
+      "text": "sixth length array what would be the"
+    },
+    {
+      "start": 1154.46,
+      "end": 1158.78,
+      "text": "time complexity then we logarithmic of"
+    },
+    {
+      "start": 1156.92,
+      "end": 1160.4,
+      "text": "six size because we are doing a binary"
+    },
+    {
+      "start": 1158.78,
+      "end": 1163.94,
+      "text": "switch on a six cylinder"
+    },
+    {
+      "start": 1160.4,
+      "end": 1166.58,
+      "text": "so will it be better if I do a binary"
+    },
+    {
+      "start": 1163.94,
+      "end": 1169.16,
+      "text": "search on the smaller array because the"
+    },
+    {
+      "start": 1166.58,
+      "end": 1171.2,
+      "text": "third space is just four elements over"
+    },
+    {
+      "start": 1169.16,
+      "end": 1174.44,
+      "text": "here so this time complexity will be"
+    },
+    {
+      "start": 1171.2,
+      "end": 1176.9,
+      "text": "logarithmic of poor so ideally"
+    },
+    {
+      "start": 1174.44,
+      "end": 1179.42,
+      "text": "I should never do a binary search to"
+    },
+    {
+      "start": 1176.9,
+      "end": 1181.82,
+      "text": "determine how many from the longer array"
+    },
+    {
+      "start": 1179.42,
+      "end": 1184.04,
+      "text": "rather I should do a bunny search to"
+    },
+    {
+      "start": 1181.82,
+      "end": 1186.62,
+      "text": "determine how many from the shorter"
+    },
+    {
+      "start": 1184.04,
+      "end": 1188.9,
+      "text": "array if I do that time complexity will"
+    },
+    {
+      "start": 1186.62,
+      "end": 1190.76,
+      "text": "be lesser so I know one thing for sure"
+    },
+    {
+      "start": 1188.9,
+      "end": 1193.04,
+      "text": "is I need to do a binary search on the"
+    },
+    {
+      "start": 1190.76,
+      "end": 1195.2,
+      "text": "shorter version of the array now if I"
+    },
+    {
+      "start": 1193.04,
+      "end": 1197.3,
+      "text": "try to combine them we'll have one two"
+    },
+    {
+      "start": 1195.2,
+      "end": 1199.16,
+      "text": "three four which is from here and we'll"
+    },
+    {
+      "start": 1197.3,
+      "end": 1201.62,
+      "text": "have 7 that is one element from the"
+    },
+    {
+      "start": 1199.16,
+      "end": 1203.84,
+      "text": "array one and at the end seven and nine"
+    },
+    {
+      "start": 1201.62,
+      "end": 1205.28,
+      "text": "is what we will take right this is how"
+    },
+    {
+      "start": 1203.84,
+      "end": 1207.02,
+      "text": "it looks like"
+    },
+    {
+      "start": 1205.28,
+      "end": 1209.3,
+      "text": "so we know that we have to do a binary"
+    },
+    {
+      "start": 1207.02,
+      "end": 1212.36,
+      "text": "search on how many elements we need from"
+    },
+    {
+      "start": 1209.3,
+      "end": 1214.34,
+      "text": "this smaller array so in this case I can"
+    },
+    {
+      "start": 1212.36,
+      "end": 1216.5,
+      "text": "say maybe I'll not pick up anything and"
+    },
+    {
+      "start": 1214.34,
+      "end": 1219.14,
+      "text": "that will become my new and what will be"
+    },
+    {
+      "start": 1216.5,
+      "end": 1220.94,
+      "text": "the value of high can I say my I will be"
+    },
+    {
+      "start": 1219.14,
+      "end": 1223.34,
+      "text": "the maximum that I can pick up from that"
+    },
+    {
+      "start": 1220.94,
+      "end": 1225.86,
+      "text": "array 1 which is N1 in this case and"
+    },
+    {
+      "start": 1223.34,
+      "end": 1228.38,
+      "text": "that's basically 4."
+    },
+    {
+      "start": 1225.86,
+      "end": 1230.6,
+      "text": "because 4 is the maximum number of"
+    },
+    {
+      "start": 1228.38,
+      "end": 1233.42,
+      "text": "elements that I can pick up from this"
+    },
+    {
+      "start": 1230.6,
+      "end": 1235.16,
+      "text": "particular array right let's try to do a"
+    },
+    {
+      "start": 1233.42,
+      "end": 1238.04,
+      "text": "binary search first time when I try to"
+    },
+    {
+      "start": 1235.16,
+      "end": 1240.5,
+      "text": "do a binary search the mid one why am I"
+    },
+    {
+      "start": 1238.04,
+      "end": 1243.2,
+      "text": "calling it has mid one because"
+    },
+    {
+      "start": 1240.5,
+      "end": 1245.0,
+      "text": "from array 1 right so I'm saying pick up"
+    },
+    {
+      "start": 1243.2,
+      "end": 1246.5,
+      "text": "two elements from array one so I'm"
+    },
+    {
+      "start": 1245.0,
+      "end": 1249.26,
+      "text": "saying pick up two elements from array"
+    },
+    {
+      "start": 1246.5,
+      "end": 1251.3,
+      "text": "one which is basically over here mid one"
+    },
+    {
+      "start": 1249.26,
+      "end": 1253.34,
+      "text": "okay so when picking up two elements"
+    },
+    {
+      "start": 1251.3,
+      "end": 1255.7,
+      "text": "from array one how many will I pick up"
+    },
+    {
+      "start": 1253.34,
+      "end": 1259.04,
+      "text": "from the array two in total I need five"
+    },
+    {
+      "start": 1255.7,
+      "end": 1260.78,
+      "text": "five minus 2 will be 3 cell pickup 3"
+    },
+    {
+      "start": 1259.04,
+      "end": 1262.94,
+      "text": "from array one three from array to"
+    },
+    {
+      "start": 1260.78,
+      "end": 1264.8,
+      "text": "another three from array two"
+    },
+    {
+      "start": 1262.94,
+      "end": 1267.56,
+      "text": "so it'll be pointing to"
+    },
+    {
+      "start": 1264.8,
+      "end": 1270.8,
+      "text": "index three perfect so what I do"
+    },
+    {
+      "start": 1267.56,
+      "end": 1273.92,
+      "text": "segregate them can I say 2 from array 1"
+    },
+    {
+      "start": 1270.8,
+      "end": 1275.96,
+      "text": "which is basically 7 and 12 and 3 from"
+    },
+    {
+      "start": 1273.92,
+      "end": 1278.9,
+      "text": "array 2 which is basically one two three"
+    },
+    {
+      "start": 1275.96,
+      "end": 1282.62,
+      "text": "and can I say from the right it'll be 14"
+    },
+    {
+      "start": 1278.9,
+      "end": 1287.54,
+      "text": "15 point to observe is mid one index is"
+    },
+    {
+      "start": 1282.62,
+      "end": 1289.58,
+      "text": "pointing to 14 and 4 9 11 and mid to"
+    },
+    {
+      "start": 1287.54,
+      "end": 1293.72,
+      "text": "index is pointing to this and if you"
+    },
+    {
+      "start": 1289.58,
+      "end": 1297.14,
+      "text": "remember this was called as L1 L2 R1 R2"
+    },
+    {
+      "start": 1293.72,
+      "end": 1299.06,
+      "text": "is this a valid symmetry no this is not"
+    },
+    {
+      "start": 1297.14,
+      "end": 1302.9,
+      "text": "a valid symmetry how did you figure that"
+    },
+    {
+      "start": 1299.06,
+      "end": 1305.42,
+      "text": "out because L1 is greater than R2"
+    },
+    {
+      "start": 1302.9,
+      "end": 1306.86,
+      "text": "and let's quickly go and check out the"
+    },
+    {
+      "start": 1305.42,
+      "end": 1309.68,
+      "text": "condition"
+    },
+    {
+      "start": 1306.86,
+      "end": 1311.48,
+      "text": "A1 greater than R2 the high has to"
+    },
+    {
+      "start": 1309.68,
+      "end": 1313.82,
+      "text": "reduce because this is not possible this"
+    },
+    {
+      "start": 1311.48,
+      "end": 1316.52,
+      "text": "is not possible I has to reduce so what"
+    },
+    {
+      "start": 1313.82,
+      "end": 1318.92,
+      "text": "will you do you will go back and he will"
+    },
+    {
+      "start": 1316.52,
+      "end": 1321.92,
+      "text": "say this is not possible so the entire"
+    },
+    {
+      "start": 1318.92,
+      "end": 1324.2,
+      "text": "write half is not possible hence you"
+    },
+    {
+      "start": 1321.92,
+      "end": 1325.82,
+      "text": "trim off the two to Fourth section and"
+    },
+    {
+      "start": 1324.2,
+      "end": 1327.8,
+      "text": "you will be over here"
+    },
+    {
+      "start": 1325.82,
+      "end": 1330.08,
+      "text": "perfect this is what you'll do I'll"
+    },
+    {
+      "start": 1327.8,
+      "end": 1331.76,
+      "text": "quickly raise this off so that we have"
+    },
+    {
+      "start": 1330.08,
+      "end": 1334.34,
+      "text": "some better clarity"
+    },
+    {
+      "start": 1331.76,
+      "end": 1337.46,
+      "text": "perfect done so starting at 0 to 1"
+    },
+    {
+      "start": 1334.34,
+      "end": 1339.38,
+      "text": "anything from 2 to 4 is gone now what"
+    },
+    {
+      "start": 1337.46,
+      "end": 1341.72,
+      "text": "will be the mid this time the mid will"
+    },
+    {
+      "start": 1339.38,
+      "end": 1343.34,
+      "text": "be pointing to zero seven seconds not"
+    },
+    {
+      "start": 1341.72,
+      "end": 1346.16,
+      "text": "going to pick up anything the mid one is"
+    },
+    {
+      "start": 1343.34,
+      "end": 1347.96,
+      "text": "pointing to zero what did they make to"
+    },
+    {
+      "start": 1346.16,
+      "end": 1350.48,
+      "text": "Mid 2 will say I'll pick up five"
+    },
+    {
+      "start": 1347.96,
+      "end": 1351.56,
+      "text": "elements from you so point to observe"
+    },
+    {
+      "start": 1350.48,
+      "end": 1354.98,
+      "text": "again"
+    },
+    {
+      "start": 1351.56,
+      "end": 1357.14,
+      "text": "mid one is at zero and where is Mid 2"
+    },
+    {
+      "start": 1354.98,
+      "end": 1358.88,
+      "text": "over here that's five so write the"
+    },
+    {
+      "start": 1357.14,
+      "end": 1361.28,
+      "text": "segregate"
+    },
+    {
+      "start": 1358.88,
+      "end": 1363.26,
+      "text": "on the left of this there is no one"
+    },
+    {
+      "start": 1361.28,
+      "end": 1366.76,
+      "text": "there is no one remember this there is"
+    },
+    {
+      "start": 1363.26,
+      "end": 1372.14,
+      "text": "no one so there's no one from anyone and"
+    },
+    {
+      "start": 1366.76,
+      "end": 1374.74,
+      "text": "zero one two three four nine is it no"
+    },
+    {
+      "start": 1372.14,
+      "end": 1374.74,
+      "text": "sorry my bad"
+    },
+    {
+      "start": 1376.36,
+      "end": 1385.46,
+      "text": "one two three four nine from added two"
+    },
+    {
+      "start": 1379.94,
+      "end": 1387.74,
+      "text": "and on the right 7 12 14 15 and over"
+    },
+    {
+      "start": 1385.46,
+      "end": 1390.32,
+      "text": "here eleven so again if I have to write"
+    },
+    {
+      "start": 1387.74,
+      "end": 1394.7,
+      "text": "down the indexes this is mid one this is"
+    },
+    {
+      "start": 1390.32,
+      "end": 1397.88,
+      "text": "Mid 2 and this is R1 R2"
+    },
+    {
+      "start": 1394.7,
+      "end": 1399.5,
+      "text": "L2 you don't have an L one remember if"
+    },
+    {
+      "start": 1397.88,
+      "end": 1401.96,
+      "text": "you don't have an L1"
+    },
+    {
+      "start": 1399.5,
+      "end": 1403.64,
+      "text": "since this is your left portion since"
+    },
+    {
+      "start": 1401.96,
+      "end": 1405.14,
+      "text": "this is your left portion you're always"
+    },
+    {
+      "start": 1403.64,
+      "end": 1407.42,
+      "text": "trying to take a smaller values because"
+    },
+    {
+      "start": 1405.14,
+      "end": 1409.88,
+      "text": "it's not there and you want to compare"
+    },
+    {
+      "start": 1407.42,
+      "end": 1411.92,
+      "text": "you wanna compare if it is smaller so"
+    },
+    {
+      "start": 1409.88,
+      "end": 1413.54,
+      "text": "just take a smaller one you if there is"
+    },
+    {
+      "start": 1411.92,
+      "end": 1415.7,
+      "text": "no one on the left you just take a"
+    },
+    {
+      "start": 1413.54,
+      "end": 1417.62,
+      "text": "smaller one it doesn't matter just take"
+    },
+    {
+      "start": 1415.7,
+      "end": 1421.28,
+      "text": "a smaller one the absolute value so that"
+    },
+    {
+      "start": 1417.62,
+      "end": 1425.18,
+      "text": "the comparison so that the comparison is"
+    },
+    {
+      "start": 1421.28,
+      "end": 1426.68,
+      "text": "true okay a domain lesser than 11 true"
+    },
+    {
+      "start": 1425.18,
+      "end": 1430.28,
+      "text": "true true"
+    },
+    {
+      "start": 1426.68,
+      "end": 1433.04,
+      "text": "nine lesser than seven no not true not"
+    },
+    {
+      "start": 1430.28,
+      "end": 1434.78,
+      "text": "true not possible so by taking zero"
+    },
+    {
+      "start": 1433.04,
+      "end": 1437.0,
+      "text": "elements from array one it's not"
+    },
+    {
+      "start": 1434.78,
+      "end": 1440.36,
+      "text": "possible which is this case let's write"
+    },
+    {
+      "start": 1437.0,
+      "end": 1442.88,
+      "text": "down this case L2 is greater than R1 is"
+    },
+    {
+      "start": 1440.36,
+      "end": 1446.12,
+      "text": "the case let's check out L to greater"
+    },
+    {
+      "start": 1442.88,
+      "end": 1448.28,
+      "text": "than R1 so you eliminate yes you"
+    },
+    {
+      "start": 1446.12,
+      "end": 1450.62,
+      "text": "eliminate and you say 0 is not possible"
+    },
+    {
+      "start": 1448.28,
+      "end": 1453.44,
+      "text": "eliminate this off so you eliminate this"
+    },
+    {
+      "start": 1450.62,
+      "end": 1455.0,
+      "text": "and the logo now points to this please"
+    },
+    {
+      "start": 1453.44,
+      "end": 1457.04,
+      "text": "omit this again"
+    },
+    {
+      "start": 1455.0,
+      "end": 1459.02,
+      "text": "amazing perfect what's the next thing"
+    },
+    {
+      "start": 1457.04,
+      "end": 1459.8,
+      "text": "okay before that let's quickly erase"
+    },
+    {
+      "start": 1459.02,
+      "end": 1461.84,
+      "text": "this"
+    },
+    {
+      "start": 1459.8,
+      "end": 1464.06,
+      "text": "what's the next thing"
+    },
+    {
+      "start": 1461.84,
+      "end": 1466.64,
+      "text": "we need to pick up one element so the"
+    },
+    {
+      "start": 1464.06,
+      "end": 1470.0,
+      "text": "mid will also be there so your mid goes"
+    },
+    {
+      "start": 1466.64,
+      "end": 1472.58,
+      "text": "and this will be Mid 2"
+    },
+    {
+      "start": 1470.0,
+      "end": 1474.62,
+      "text": "so if it is one this will be 4 submit"
+    },
+    {
+      "start": 1472.58,
+      "end": 1476.78,
+      "text": "will be here perfect let's try to again"
+    },
+    {
+      "start": 1474.62,
+      "end": 1478.64,
+      "text": "segregate so what I'll do is I'll do a"
+    },
+    {
+      "start": 1476.78,
+      "end": 1483.68,
+      "text": "segregation where do our segregation"
+    },
+    {
+      "start": 1478.64,
+      "end": 1487.22,
+      "text": "will be 7 on the left and one two three"
+    },
+    {
+      "start": 1483.68,
+      "end": 1489.08,
+      "text": "four on the left and uh let's try the"
+    },
+    {
+      "start": 1487.22,
+      "end": 1493.04,
+      "text": "seven properly"
+    },
+    {
+      "start": 1489.08,
+      "end": 1494.96,
+      "text": "and over here it will be 12 14 15 and a"
+    },
+    {
+      "start": 1493.04,
+      "end": 1495.8,
+      "text": "9 and 11. so what you're basically doing"
+    },
+    {
+      "start": 1494.96,
+      "end": 1497.72,
+      "text": "is"
+    },
+    {
+      "start": 1495.8,
+      "end": 1499.1,
+      "text": "from mid one you're taking everyone on"
+    },
+    {
+      "start": 1497.72,
+      "end": 1501.8,
+      "text": "the right from mid to you're taking"
+    },
+    {
+      "start": 1499.1,
+      "end": 1504.92,
+      "text": "everything and on this simple"
+    },
+    {
+      "start": 1501.8,
+      "end": 1509.6,
+      "text": "so can I say this will be mid one this"
+    },
+    {
+      "start": 1504.92,
+      "end": 1512.06,
+      "text": "will be Mid 2 and this will be L1 L2 R1"
+    },
+    {
+      "start": 1509.6,
+      "end": 1514.16,
+      "text": "R2 and if you carefully observe this is"
+    },
+    {
+      "start": 1512.06,
+      "end": 1516.44,
+      "text": "smaller and this is smaller valid"
+    },
+    {
+      "start": 1514.16,
+      "end": 1518.72,
+      "text": "configuration one element that you have"
+    },
+    {
+      "start": 1516.44,
+      "end": 1520.46,
+      "text": "to take what will be your answer"
+    },
+    {
+      "start": 1518.72,
+      "end": 1522.98,
+      "text": "can I see"
+    },
+    {
+      "start": 1520.46,
+      "end": 1526.7,
+      "text": "L1 will be"
+    },
+    {
+      "start": 1522.98,
+      "end": 1531.14,
+      "text": "array 1 of mid 1 minus 1 that's what L1"
+    },
+    {
+      "start": 1526.7,
+      "end": 1534.86,
+      "text": "is L2 will be array 2 of mid 2 minus 1"
+    },
+    {
+      "start": 1531.14,
+      "end": 1539.06,
+      "text": "can I say this I can I can what be all"
+    },
+    {
+      "start": 1534.86,
+      "end": 1543.02,
+      "text": "one R1 will be array 1 of mid one"
+    },
+    {
+      "start": 1539.06,
+      "end": 1546.56,
+      "text": "and will be R2 R2 will be array 2 of"
+    },
+    {
+      "start": 1543.02,
+      "end": 1548.92,
+      "text": "mid 2. because mid 1 is finding M2 and"
+    },
+    {
+      "start": 1546.56,
+      "end": 1551.18,
+      "text": "the previous elements are there in case"
+    },
+    {
+      "start": 1548.92,
+      "end": 1554.9,
+      "text": "there doesn't exist a previous element"
+    },
+    {
+      "start": 1551.18,
+      "end": 1557.06,
+      "text": "or in case this doesn't exist you'll try"
+    },
+    {
+      "start": 1554.9,
+      "end": 1559.04,
+      "text": "to take these values as intervene"
+    },
+    {
+      "start": 1557.06,
+      "end": 1560.66,
+      "text": "because they do not exist if on the"
+    },
+    {
+      "start": 1559.04,
+      "end": 1562.88,
+      "text": "right they do not exist because you"
+    },
+    {
+      "start": 1560.66,
+      "end": 1564.74,
+      "text": "always check for smaller greater like in"
+    },
+    {
+      "start": 1562.88,
+      "end": 1566.66,
+      "text": "this in this order you always check for"
+    },
+    {
+      "start": 1564.74,
+      "end": 1569.36,
+      "text": "this order so you are always think this"
+    },
+    {
+      "start": 1566.66,
+      "end": 1571.4,
+      "text": "as into max if they do not exist if they"
+    },
+    {
+      "start": 1569.36,
+      "end": 1573.8,
+      "text": "do not exist and what will be that case"
+    },
+    {
+      "start": 1571.4,
+      "end": 1575.66,
+      "text": "when you take all the elements in that"
+    },
+    {
+      "start": 1573.8,
+      "end": 1577.28,
+      "text": "case there'll be no right that you take"
+    },
+    {
+      "start": 1575.66,
+      "end": 1579.5,
+      "text": "into X on the left if there is nothing"
+    },
+    {
+      "start": 1577.28,
+      "end": 1581.48,
+      "text": "you take into me got it"
+    },
+    {
+      "start": 1579.5,
+      "end": 1583.64,
+      "text": "so that's it I have L one l two"
+    },
+    {
+      "start": 1581.48,
+      "end": 1586.22,
+      "text": "everything you know the formula you know"
+    },
+    {
+      "start": 1583.64,
+      "end": 1587.96,
+      "text": "the formula what is the formula"
+    },
+    {
+      "start": 1586.22,
+      "end": 1591.14,
+      "text": "the formula is"
+    },
+    {
+      "start": 1587.96,
+      "end": 1595.52,
+      "text": "Max of L1 comma L2"
+    },
+    {
+      "start": 1591.14,
+      "end": 1598.16,
+      "text": "plus mean of R1 comma R2 divided by 2.0"
+    },
+    {
+      "start": 1595.52,
+      "end": 1600.38,
+      "text": "this is only valid if the total number"
+    },
+    {
+      "start": 1598.16,
+      "end": 1602.24,
+      "text": "of elements is even what if it is odd"
+    },
+    {
+      "start": 1600.38,
+      "end": 1604.04,
+      "text": "let's now jump into that"
+    },
+    {
+      "start": 1602.24,
+      "end": 1605.78,
+      "text": "I might be thinking what about odd"
+    },
+    {
+      "start": 1604.04,
+      "end": 1608.12,
+      "text": "elements what I've done is I've taken an"
+    },
+    {
+      "start": 1605.78,
+      "end": 1610.76,
+      "text": "array where we have 2 and 3 so the total"
+    },
+    {
+      "start": 1608.12,
+      "end": 1612.8,
+      "text": "number of elements is 5 which is odd now"
+    },
+    {
+      "start": 1610.76,
+      "end": 1615.08,
+      "text": "I cannot have a symmetry like this that"
+    },
+    {
+      "start": 1612.8,
+      "end": 1617.06,
+      "text": "will take away 3 from the picture so"
+    },
+    {
+      "start": 1615.08,
+      "end": 1618.98,
+      "text": "there are two ways to do it either you"
+    },
+    {
+      "start": 1617.06,
+      "end": 1621.08,
+      "text": "can form a symmetry by saying two"
+    },
+    {
+      "start": 1618.98,
+      "end": 1623.66,
+      "text": "elements from here and three elements"
+    },
+    {
+      "start": 1621.08,
+      "end": 1625.58,
+      "text": "from here that's one of the ways all you"
+    },
+    {
+      "start": 1623.66,
+      "end": 1627.5,
+      "text": "can say is I'll take a symmetry by"
+    },
+    {
+      "start": 1625.58,
+      "end": 1630.26,
+      "text": "taking three elements from the left and"
+    },
+    {
+      "start": 1627.5,
+      "end": 1632.42,
+      "text": "this and this is very simple if you want"
+    },
+    {
+      "start": 1630.26,
+      "end": 1635.24,
+      "text": "to do a symmetry like I'll go ahead and"
+    },
+    {
+      "start": 1632.42,
+      "end": 1636.08,
+      "text": "do a symmetry like this where I say I'll"
+    },
+    {
+      "start": 1635.24,
+      "end": 1638.6,
+      "text": "have"
+    },
+    {
+      "start": 1636.08,
+      "end": 1640.46,
+      "text": "a bit more elements on the left and"
+    },
+    {
+      "start": 1638.6,
+      "end": 1644.3,
+      "text": "slightly lesser so what is the total"
+    },
+    {
+      "start": 1640.46,
+      "end": 1647.9,
+      "text": "number then it's like N1 plus N2 plus 1"
+    },
+    {
+      "start": 1644.3,
+      "end": 1649.64,
+      "text": "by 2 why because 2 plus 3 plus 1 is 6 by"
+    },
+    {
+      "start": 1647.9,
+      "end": 1651.56,
+      "text": "2 that will give you 3. so I'll have"
+    },
+    {
+      "start": 1649.64,
+      "end": 1653.3,
+      "text": "three elements on the left and I'll try"
+    },
+    {
+      "start": 1651.56,
+      "end": 1655.34,
+      "text": "to make three elements I'll try to make"
+    },
+    {
+      "start": 1653.3,
+      "end": 1657.14,
+      "text": "three elements will the formula for"
+    },
+    {
+      "start": 1655.34,
+      "end": 1659.3,
+      "text": "median change yes it will obviously"
+    },
+    {
+      "start": 1657.14,
+      "end": 1661.4,
+      "text": "change let's look at this in this case"
+    },
+    {
+      "start": 1659.3,
+      "end": 1663.92,
+      "text": "you have one two three same one two"
+    },
+    {
+      "start": 1661.4,
+      "end": 1666.14,
+      "text": "three so like two and one three from the"
+    },
+    {
+      "start": 1663.92,
+      "end": 1668.6,
+      "text": "left and you have four and four from the"
+    },
+    {
+      "start": 1666.14,
+      "end": 1670.52,
+      "text": "right so what's your median the median"
+    },
+    {
+      "start": 1668.6,
+      "end": 1674.24,
+      "text": "is three the median is three in this"
+    },
+    {
+      "start": 1670.52,
+      "end": 1677.66,
+      "text": "case the formula will have median as Max"
+    },
+    {
+      "start": 1674.24,
+      "end": 1680.96,
+      "text": "of L one comma L 2 that's your median"
+    },
+    {
+      "start": 1677.66,
+      "end": 1683.6,
+      "text": "very simple you just have to decide that"
+    },
+    {
+      "start": 1680.96,
+      "end": 1685.22,
+      "text": "a symmetry will be"
+    },
+    {
+      "start": 1683.6,
+      "end": 1687.08,
+      "text": "either you can take three elements or"
+    },
+    {
+      "start": 1685.22,
+      "end": 1689.24,
+      "text": "two that's your choice if you decide to"
+    },
+    {
+      "start": 1687.08,
+      "end": 1692.06,
+      "text": "take two and three on that side then the"
+    },
+    {
+      "start": 1689.24,
+      "end": 1693.44,
+      "text": "formula will become for median Min of r"
+    },
+    {
+      "start": 1692.06,
+      "end": 1696.2,
+      "text": "1 comma two then you'll take from the"
+    },
+    {
+      "start": 1693.44,
+      "end": 1698.54,
+      "text": "right I I'll go with this why do I go"
+    },
+    {
+      "start": 1696.2,
+      "end": 1699.5,
+      "text": "with this because this formula will be"
+    },
+    {
+      "start": 1698.54,
+      "end": 1701.66,
+      "text": "valid"
+    },
+    {
+      "start": 1699.5,
+      "end": 1704.3,
+      "text": "for everyone because even if I have 10"
+    },
+    {
+      "start": 1701.66,
+      "end": 1706.28,
+      "text": "elements and I do 10 plus 1 by 2 that"
+    },
+    {
+      "start": 1704.3,
+      "end": 1708.38,
+      "text": "still saves me the Symmetry I need five"
+    },
+    {
+      "start": 1706.28,
+      "end": 1710.54,
+      "text": "even if I have five elements and I do"
+    },
+    {
+      "start": 1708.38,
+      "end": 1712.7,
+      "text": "this it still says three so the formula"
+    },
+    {
+      "start": 1710.54,
+      "end": 1715.58,
+      "text": "is valid so the formula will be how many"
+    },
+    {
+      "start": 1712.7,
+      "end": 1718.64,
+      "text": "do I like how many will be on the left n"
+    },
+    {
+      "start": 1715.58,
+      "end": 1720.62,
+      "text": "1 plus n two plus one by two minus sorry"
+    },
+    {
+      "start": 1718.64,
+      "end": 1723.02,
+      "text": "this is the number of elements I need on"
+    },
+    {
+      "start": 1720.62,
+      "end": 1726.5,
+      "text": "the left on left"
+    },
+    {
+      "start": 1723.02,
+      "end": 1729.26,
+      "text": "that's it this is all this is what uh"
+    },
+    {
+      "start": 1726.5,
+      "end": 1731.36,
+      "text": "I'll work on so even if it's still I"
+    },
+    {
+      "start": 1729.26,
+      "end": 1732.98,
+      "text": "need five elements on the red even if it"
+    },
+    {
+      "start": 1731.36,
+      "end": 1734.78,
+      "text": "is five I need three elements on the"
+    },
+    {
+      "start": 1732.98,
+      "end": 1737.66,
+      "text": "left so it works for both of them"
+    },
+    {
+      "start": 1734.78,
+      "end": 1739.64,
+      "text": "flawlessly and every every everything"
+    },
+    {
+      "start": 1737.66,
+      "end": 1740.96,
+      "text": "stays the same"
+    },
+    {
+      "start": 1739.64,
+      "end": 1742.82,
+      "text": "so I'll be writing the code in the code"
+    },
+    {
+      "start": 1740.96,
+      "end": 1744.74,
+      "text": "editor directly this time not on the"
+    },
+    {
+      "start": 1742.82,
+      "end": 1746.96,
+      "text": "iPad because it might get a lot Messier"
+    },
+    {
+      "start": 1744.74,
+      "end": 1748.82,
+      "text": "on the iPad and the code editor I'll be"
+    },
+    {
+      "start": 1746.96,
+      "end": 1750.68,
+      "text": "writing it on C plus plus from the notes"
+    },
+    {
+      "start": 1748.82,
+      "end": 1752.36,
+      "text": "you can find the Java Python and"
+    },
+    {
+      "start": 1750.68,
+      "end": 1755.24,
+      "text": "JavaScript codes as well and you can"
+    },
+    {
+      "start": 1752.36,
+      "end": 1757.28,
+      "text": "open them on the parallel and one thing"
+    },
+    {
+      "start": 1755.24,
+      "end": 1759.5,
+      "text": "I'm writing like simple while loop if"
+    },
+    {
+      "start": 1757.28,
+      "end": 1760.7,
+      "text": "else conditions so you will be able to"
+    },
+    {
+      "start": 1759.5,
+      "end": 1762.2,
+      "text": "understand even if you don't know the"
+    },
+    {
+      "start": 1760.7,
+      "end": 1763.76,
+      "text": "language so don't worry about that so"
+    },
+    {
+      "start": 1762.2,
+      "end": 1766.76,
+      "text": "the first thing that we'll do we'll take"
+    },
+    {
+      "start": 1763.76,
+      "end": 1768.98,
+      "text": "N1 that's a DOT size I'll take N2 right"
+    },
+    {
+      "start": 1766.76,
+      "end": 1770.96,
+      "text": "that's the first thing we'll do"
+    },
+    {
+      "start": 1768.98,
+      "end": 1774.38,
+      "text": "what is the next thing I need one thing"
+    },
+    {
+      "start": 1770.96,
+      "end": 1775.82,
+      "text": "for sure if N1 is greater than N2 I"
+    },
+    {
+      "start": 1774.38,
+      "end": 1778.58,
+      "text": "always want to perform the binary search"
+    },
+    {
+      "start": 1775.82,
+      "end": 1781.22,
+      "text": "in the smaller array so maybe just just"
+    },
+    {
+      "start": 1778.58,
+      "end": 1784.7,
+      "text": "again call this function so that it just"
+    },
+    {
+      "start": 1781.22,
+      "end": 1787.4,
+      "text": "swaps it because I I want to make sure"
+    },
+    {
+      "start": 1784.7,
+      "end": 1789.38,
+      "text": "that a is always the smaller array the"
+    },
+    {
+      "start": 1787.4,
+      "end": 1791.24,
+      "text": "first array is always the smaller array"
+    },
+    {
+      "start": 1789.38,
+      "end": 1794.0,
+      "text": "perfect the next thing I'll do is I'll"
+    },
+    {
+      "start": 1791.24,
+      "end": 1796.46,
+      "text": "say low to be 0 and high to be N1"
+    },
+    {
+      "start": 1794.0,
+      "end": 1799.58,
+      "text": "because that is what I'm looking for"
+    },
+    {
+      "start": 1796.46,
+      "end": 1800.84,
+      "text": "after this I'll go ahead and do the same"
+    },
+    {
+      "start": 1799.58,
+      "end": 1803.18,
+      "text": "condition that we have been doing"
+    },
+    {
+      "start": 1800.84,
+      "end": 1807.74,
+      "text": "throughout after this I'll take the mid"
+    },
+    {
+      "start": 1803.18,
+      "end": 1811.7,
+      "text": "one because the me uh the middle in the"
+    },
+    {
+      "start": 1807.74,
+      "end": 1814.04,
+      "text": "first array to be low plus High by two"
+    },
+    {
+      "start": 1811.7,
+      "end": 1815.66,
+      "text": "after this I'll figure out the mid two"
+    },
+    {
+      "start": 1814.04,
+      "end": 1817.76,
+      "text": "what do we meet to the number of"
+    },
+    {
+      "start": 1815.66,
+      "end": 1820.82,
+      "text": "elements that I require on the left how"
+    },
+    {
+      "start": 1817.76,
+      "end": 1822.5,
+      "text": "many do I require on the left"
+    },
+    {
+      "start": 1820.82,
+      "end": 1825.68,
+      "text": "you just now saw we figured out the"
+    },
+    {
+      "start": 1822.5,
+      "end": 1828.56,
+      "text": "formula N1 plus N2 plus 1 by 2."
+    },
+    {
+      "start": 1825.68,
+      "end": 1830.36,
+      "text": "that's how much we require so on the"
+    },
+    {
+      "start": 1828.56,
+      "end": 1833.96,
+      "text": "left whatever is required"
+    },
+    {
+      "start": 1830.36,
+      "end": 1836.12,
+      "text": "minus mid 1 is what it will be now I"
+    },
+    {
+      "start": 1833.96,
+      "end": 1839.36,
+      "text": "need to assign L1"
+    },
+    {
+      "start": 1836.12,
+      "end": 1840.98,
+      "text": "and L2 so maybe initially you can do is"
+    },
+    {
+      "start": 1839.36,
+      "end": 1842.48,
+      "text": "you can keep them as into being just in"
+    },
+    {
+      "start": 1840.98,
+      "end": 1844.52,
+      "text": "case they are not there"
+    },
+    {
+      "start": 1842.48,
+      "end": 1848.6,
+      "text": "and L2 as into me"
+    },
+    {
+      "start": 1844.52,
+      "end": 1850.94,
+      "text": "just in case and R2 and R1"
+    },
+    {
+      "start": 1848.6,
+      "end": 1852.38,
+      "text": "and you can keep them as index in case"
+    },
+    {
+      "start": 1850.94,
+      "end": 1855.14,
+      "text": "they are not there"
+    },
+    {
+      "start": 1852.38,
+      "end": 1857.54,
+      "text": "so we have given default values to L1 L2"
+    },
+    {
+      "start": 1855.14,
+      "end": 1859.82,
+      "text": "R1 and R2 but now we need to assign them"
+    },
+    {
+      "start": 1857.54,
+      "end": 1862.4,
+      "text": "let's come back to the iPad so mid one"
+    },
+    {
+      "start": 1859.82,
+      "end": 1863.78,
+      "text": "is something which is pointing to R1 and"
+    },
+    {
+      "start": 1862.4,
+      "end": 1866.72,
+      "text": "Mid 2 is something which is pointing to"
+    },
+    {
+      "start": 1863.78,
+      "end": 1869.3,
+      "text": "R2 and one please before mid 1 is L1 and"
+    },
+    {
+      "start": 1866.72,
+      "end": 1871.1,
+      "text": "one place before Mid 2 is L2 but you"
+    },
+    {
+      "start": 1869.3,
+      "end": 1873.86,
+      "text": "need to be sure about checking their"
+    },
+    {
+      "start": 1871.1,
+      "end": 1875.72,
+      "text": "places as well imagine you're taking"
+    },
+    {
+      "start": 1873.86,
+      "end": 1877.46,
+      "text": "this array like just in case just in"
+    },
+    {
+      "start": 1875.72,
+      "end": 1879.86,
+      "text": "case and then like you want to pick six"
+    },
+    {
+      "start": 1877.46,
+      "end": 1882.74,
+      "text": "elements from the array one so mid one"
+    },
+    {
+      "start": 1879.86,
+      "end": 1884.12,
+      "text": "is going to be 6 which is a hypothetical"
+    },
+    {
+      "start": 1882.74,
+      "end": 1885.92,
+      "text": "index in this case which is an"
+    },
+    {
+      "start": 1884.12,
+      "end": 1889.1,
+      "text": "hypothetical index in this case so that"
+    },
+    {
+      "start": 1885.92,
+      "end": 1892.52,
+      "text": "index might not exist so always make"
+    },
+    {
+      "start": 1889.1,
+      "end": 1894.8,
+      "text": "sure if mid one is lesser than N1 then"
+    },
+    {
+      "start": 1892.52,
+      "end": 1898.58,
+      "text": "only you will go ahead and say R1 will"
+    },
+    {
+      "start": 1894.8,
+      "end": 1902.36,
+      "text": "be taken from array of 1 and mid one if"
+    },
+    {
+      "start": 1898.58,
+      "end": 1904.7,
+      "text": "Mid 2 is lesser than N2 then only R2"
+    },
+    {
+      "start": 1902.36,
+      "end": 1906.92,
+      "text": "will be taken from B of mid 2 because"
+    },
+    {
+      "start": 1904.7,
+      "end": 1911.6,
+      "text": "otherwise that index doesn't exist if"
+    },
+    {
+      "start": 1906.92,
+      "end": 1914.48,
+      "text": "mid 1 minus 0 is sorry minus 1 is"
+    },
+    {
+      "start": 1911.6,
+      "end": 1916.52,
+      "text": "greater than equal to 0 then l 1 will be"
+    },
+    {
+      "start": 1914.48,
+      "end": 1920.6,
+      "text": "taken by mid 1 minus 1 otherwise they do"
+    },
+    {
+      "start": 1916.52,
+      "end": 1924.44,
+      "text": "not exist if Mid 2 minus 1 greater than"
+    },
+    {
+      "start": 1920.6,
+      "end": 1927.56,
+      "text": "0 then L2 will be taken from V of Min to"
+    },
+    {
+      "start": 1924.44,
+      "end": 1930.62,
+      "text": "minus 1 that's it once you have done"
+    },
+    {
+      "start": 1927.56,
+      "end": 1933.02,
+      "text": "this when can I say that they are"
+    },
+    {
+      "start": 1930.62,
+      "end": 1936.38,
+      "text": "they are technically a possible solution"
+    },
+    {
+      "start": 1933.02,
+      "end": 1938.06,
+      "text": "if a one is smaller than R2 and L2 is"
+    },
+    {
+      "start": 1936.38,
+      "end": 1941.18,
+      "text": "smaller than R1 that is what I'll write"
+    },
+    {
+      "start": 1938.06,
+      "end": 1944.18,
+      "text": "if L one is smaller than equal to very"
+    },
+    {
+      "start": 1941.18,
+      "end": 1947.48,
+      "text": "important R2 and and"
+    },
+    {
+      "start": 1944.18,
+      "end": 1950.48,
+      "text": "L2 is smaller than equal to again L 2"
+    },
+    {
+      "start": 1947.48,
+      "end": 1952.64,
+      "text": "smaller than equal to R1"
+    },
+    {
+      "start": 1950.48,
+      "end": 1955.1,
+      "text": "then this is possible and this is"
+    },
+    {
+      "start": 1952.64,
+      "end": 1956.96,
+      "text": "possible I just need to check if the"
+    },
+    {
+      "start": 1955.1,
+      "end": 1959.24,
+      "text": "total number so what you can do is maybe"
+    },
+    {
+      "start": 1956.96,
+      "end": 1961.7,
+      "text": "you can do this right in N equal to N1"
+    },
+    {
+      "start": 1959.24,
+      "end": 1966.32,
+      "text": "plus N2 so if"
+    },
+    {
+      "start": 1961.7,
+      "end": 1969.2,
+      "text": "n is odd in that case the answer will be"
+    },
+    {
+      "start": 1966.32,
+      "end": 1971.54,
+      "text": "Max of L1 comma L2 it's very obvious"
+    },
+    {
+      "start": 1969.2,
+      "end": 1974.3,
+      "text": "else the answer will be again you have"
+    },
+    {
+      "start": 1971.54,
+      "end": 1977.84,
+      "text": "to do a lot of typecasting"
+    },
+    {
+      "start": 1974.3,
+      "end": 1981.02,
+      "text": "Max of L one plus L 2 plus Min of R1"
+    },
+    {
+      "start": 1977.84,
+      "end": 1984.08,
+      "text": "comma R2 you type Class 8 into double"
+    },
+    {
+      "start": 1981.02,
+      "end": 1988.1,
+      "text": "and after that you do a 2.0 that's it"
+    },
+    {
+      "start": 1984.08,
+      "end": 1991.22,
+      "text": "else if what are the conditions for i l"
+    },
+    {
+      "start": 1988.1,
+      "end": 1993.98,
+      "text": "1 greater than R2 L one greater than r"
+    },
+    {
+      "start": 1991.22,
+      "end": 1997.12,
+      "text": "two in that case high will go as mid"
+    },
+    {
+      "start": 1993.98,
+      "end": 1997.12,
+      "text": "minus 1."
+    },
+    {
+      "start": 1997.16,
+      "end": 2002.14,
+      "text": "else"
+    },
+    {
+      "start": 1998.78,
+      "end": 2005.2,
+      "text": "low will go as mid Plus 1."
+    },
+    {
+      "start": 2002.14,
+      "end": 2007.48,
+      "text": "and you can just give a dummy 0 just"
+    },
+    {
+      "start": 2005.2,
+      "end": 2008.74,
+      "text": "just because it has a double written"
+    },
+    {
+      "start": 2007.48,
+      "end": 2010.84,
+      "text": "type so you have to give a dummy return"
+    },
+    {
+      "start": 2008.74,
+      "end": 2013.12,
+      "text": "over here but ideally in all the cases"
+    },
+    {
+      "start": 2010.84,
+      "end": 2014.44,
+      "text": "it will be ending over here so I'll"
+    },
+    {
+      "start": 2013.12,
+      "end": 2016.42,
+      "text": "quickly go and run this and see if it is"
+    },
+    {
+      "start": 2014.44,
+      "end": 2019.06,
+      "text": "running fine so uh so make sure that"
+    },
+    {
+      "start": 2016.42,
+      "end": 2020.56,
+      "text": "this is mid one and uh just make make"
+    },
+    {
+      "start": 2019.06,
+      "end": 2022.6,
+      "text": "sure that the typecasting is done"
+    },
+    {
+      "start": 2020.56,
+      "end": 2024.94,
+      "text": "correctly I'll go ahead and run this and"
+    },
+    {
+      "start": 2022.6,
+      "end": 2026.98,
+      "text": "see if it is running fine I hope it does"
+    },
+    {
+      "start": 2024.94,
+      "end": 2029.08,
+      "text": "it does let's quickly submit this and"
+    },
+    {
+      "start": 2026.98,
+      "end": 2031.48,
+      "text": "see if it is running it will so what"
+    },
+    {
+      "start": 2029.08,
+      "end": 2034.54,
+      "text": "will be the time complexity we are doing"
+    },
+    {
+      "start": 2031.48,
+      "end": 2037.3,
+      "text": "a binary search on somewhere"
+    },
+    {
+      "start": 2034.54,
+      "end": 2039.22,
+      "text": "a size of N1 where we are making sure"
+    },
+    {
+      "start": 2037.3,
+      "end": 2041.58,
+      "text": "that the N1 is the smaller size so"
+    },
+    {
+      "start": 2039.22,
+      "end": 2044.38,
+      "text": "according to the problem minimum of"
+    },
+    {
+      "start": 2041.58,
+      "end": 2047.38,
+      "text": "logarithmic of n on N so whatever is"
+    },
+    {
+      "start": 2044.38,
+      "end": 2050.14,
+      "text": "minimum will be our time complexity are"
+    },
+    {
+      "start": 2047.38,
+      "end": 2052.78,
+      "text": "we using any extra space no the Extra"
+    },
+    {
+      "start": 2050.14,
+      "end": 2055.3,
+      "text": "Spaces big off and we're not using any"
+    },
+    {
+      "start": 2052.78,
+      "end": 2057.34,
+      "text": "extra space and this will be the most"
+    },
+    {
+      "start": 2055.3,
+      "end": 2059.32,
+      "text": "optimal solution so I hope you have"
+    },
+    {
+      "start": 2057.34,
+      "end": 2061.54,
+      "text": "understood The Brood the better the"
+    },
+    {
+      "start": 2059.32,
+      "end": 2063.94,
+      "text": "optimal the entire thought process the"
+    },
+    {
+      "start": 2061.54,
+      "end": 2066.04,
+      "text": "intuition and everything just in case"
+    },
+    {
+      "start": 2063.94,
+      "end": 2067.54,
+      "text": "you have I have a lot of energy still"
+    },
+    {
+      "start": 2066.04,
+      "end": 2069.22,
+      "text": "now like this video took me anything"
+    },
+    {
+      "start": 2067.54,
+      "end": 2071.44,
+      "text": "around two hours because I was spending"
+    },
+    {
+      "start": 2069.22,
+      "end": 2073.72,
+      "text": "a lot of time making sure that everyone"
+    },
+    {
+      "start": 2071.44,
+      "end": 2075.22,
+      "text": "who watches this video understands"
+    },
+    {
+      "start": 2073.72,
+      "end": 2077.2,
+      "text": "everything so in case you are still"
+    },
+    {
+      "start": 2075.22,
+      "end": 2078.88,
+      "text": "watching please make sure you like this"
+    },
+    {
+      "start": 2077.2,
+      "end": 2081.16,
+      "text": "video and if you haven't checked out our"
+    },
+    {
+      "start": 2078.88,
+      "end": 2082.3,
+      "text": "Strivers A to Z a DSA course there's a"
+    },
+    {
+      "start": 2081.16,
+      "end": 2083.62,
+      "text": "link in the description make sure you"
+    },
+    {
+      "start": 2082.3,
+      "end": 2085.18,
+      "text": "check it out and if you haven't followed"
+    },
+    {
+      "start": 2083.62,
+      "end": 2086.74,
+      "text": "me on Twitter Instagram LinkedIn all the"
+    },
+    {
+      "start": 2085.18,
+      "end": 2088.06,
+      "text": "profile links will be in the description"
+    },
+    {
+      "start": 2086.74,
+      "end": 2090.82,
+      "text": "with this I'll be wrapping up this video"
+    },
+    {
+      "start": 2088.06,
+      "end": 2094.96,
+      "text": "let's read in some other videos"
+    },
+    {
+      "start": 2090.82,
+      "end": 2098.5,
+      "text": "whenever your heart is broken don't ever"
+    },
+    {
+      "start": 2094.96,
+      "end": 2100.62,
+      "text": "forget your golden I I will find the"
+    },
+    {
+      "start": 2098.5,
+      "end": 2100.62,
+      "text": "light"
+    }
+  ]
+}

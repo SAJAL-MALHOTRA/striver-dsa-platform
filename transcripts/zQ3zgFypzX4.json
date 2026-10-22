@@ -1,0 +1,3008 @@
+{
+  "video_id": "zQ3zgFypzX4",
+  "title": "G-12. Detect a Cycle in an Undirected Graph using DFS | C++ | Java",
+  "duration_sec": 1150,
+  "num_segments": 500,
+  "segments": [
+    {
+      "start": 3.32,
+      "end": 5.48,
+      "duration": 2.16,
+      "text": "Hey everyone, welcome back to the"
+    },
+    {
+      "start": 4.28,
+      "end": 7.28,
+      "duration": 3.0,
+      "text": "channel. I hope you guys are doing"
+    },
+    {
+      "start": 5.48,
+      "end": 9.48,
+      "duration": 4.0,
+      "text": "extremely well. So in this video we're"
+    },
+    {
+      "start": 7.28,
+      "end": 12.12,
+      "duration": 4.84,
+      "text": "going to solve something like cycle"
+    },
+    {
+      "start": 9.48,
+      "end": 14.36,
+      "duration": 4.88,
+      "text": "detection in an undirected graph using"
+    },
+    {
+      "start": 12.12,
+      "end": 16.6,
+      "duration": 4.48,
+      "text": "DFS. So if you have not seen the"
+    },
+    {
+      "start": 14.36,
+      "end": 20.2,
+      "duration": 5.84,
+      "text": "previous video, go back and watch it. We"
+    },
+    {
+      "start": 16.6,
+      "end": 23.08,
+      "duration": 6.48,
+      "text": "have solved how to detect a cycle using"
+    },
+    {
+      "start": 20.2,
+      "end": 26.52,
+      "duration": 6.32,
+      "text": "BFS. But over here we will be using the"
+    },
+    {
+      "start": 23.08,
+      "end": 29.48,
+      "duration": 6.4,
+      "text": "depth first search algorithm. So you"
+    },
+    {
+      "start": 26.52,
+      "end": 31.44,
+      "duration": 4.92,
+      "text": "know what is a cycle? It's very simple."
+    },
+    {
+      "start": 29.48,
+      "end": 34.92,
+      "duration": 5.44,
+      "text": "If you start from a node and you come"
+    },
+    {
+      "start": 31.44,
+      "end": 38.16,
+      "duration": 6.72,
+      "text": "back to that node via any path without"
+    },
+    {
+      "start": 34.92,
+      "end": 40.8,
+      "duration": 5.88,
+      "text": "breaking any edge, that is what you call"
+    },
+    {
+      "start": 38.16,
+      "end": 42.92,
+      "duration": 4.76,
+      "text": "as a cycle. So this graph definitely has"
+    },
+    {
+      "start": 40.8,
+      "end": 45.4,
+      "duration": 4.6,
+      "text": "a cycle. So for this graph, this will be"
+    },
+    {
+      "start": 42.92,
+      "end": 47.4,
+      "duration": 4.48,
+      "text": "the corresponding adjacency list. If you"
+    },
+    {
+      "start": 45.4,
+      "end": 49.48,
+      "duration": 4.08,
+      "text": "don't know how to draw or how to write"
+    },
+    {
+      "start": 47.4,
+      "end": 51.0,
+      "duration": 3.6,
+      "text": "an adjacency list, lecture two or"
+    },
+    {
+      "start": 49.48,
+      "end": 53.8,
+      "duration": 4.32,
+      "text": "lecture three is what you need to go"
+    },
+    {
+      "start": 51.0,
+      "end": 56.76,
+      "duration": 5.76,
+      "text": "back and watch, okay? So how do you"
+    },
+    {
+      "start": 53.8,
+      "end": 58.84,
+      "duration": 5.04,
+      "text": "detect a cycle using DFS?"
+    },
+    {
+      "start": 56.76,
+      "end": 62.0,
+      "duration": 5.24,
+      "text": "What is the concept of DFS? The concept"
+    },
+    {
+      "start": 58.84,
+      "end": 65.92,
+      "duration": 7.08,
+      "text": "of DFS is it starts from a source, then"
+    },
+    {
+      "start": 62.0,
+      "end": 68.32,
+      "duration": 6.32,
+      "text": "tries to go here, then tries to go here,"
+    },
+    {
+      "start": 65.92,
+      "end": 70.64,
+      "duration": 4.72,
+      "text": "then tries to go here, then tries to go"
+    },
+    {
+      "start": 68.32,
+      "end": 72.92,
+      "duration": 4.6,
+      "text": "here, then tries to go here, then"
+    },
+    {
+      "start": 70.64,
+      "end": 75.92,
+      "duration": 5.28,
+      "text": "probably tries to go here, then has no"
+    },
+    {
+      "start": 72.92,
+      "end": 78.48,
+      "duration": 5.56,
+      "text": "way, goes back, and tries to go one. And"
+    },
+    {
+      "start": 75.92,
+      "end": 80.76,
+      "duration": 4.84,
+      "text": "if it reaches back"
+    },
+    {
+      "start": 78.48,
+      "end": 83.72,
+      "duration": 5.24,
+      "text": "to somewhere"
+    },
+    {
+      "start": 80.76,
+      "end": 85.44,
+      "duration": 4.68,
+      "text": "which is previously visited because you"
+    },
+    {
+      "start": 83.72,
+      "end": 87.52,
+      "duration": 3.8,
+      "text": "need to understand you started from one"
+    },
+    {
+      "start": 85.44,
+      "end": 91.16,
+      "duration": 5.72,
+      "text": "in this direction. And if you're again"
+    },
+    {
+      "start": 87.52,
+      "end": 93.0,
+      "duration": 5.48,
+      "text": "coming back to one via DFS, it means you"
+    },
+    {
+      "start": 91.16,
+      "end": 95.72,
+      "duration": 4.56,
+      "text": "definitely have a cycle. That is for"
+    },
+    {
+      "start": 93.0,
+      "end": 97.52,
+      "duration": 4.52,
+      "text": "sure, right? So"
+    },
+    {
+      "start": 95.72,
+      "end": 99.2,
+      "duration": 3.48,
+      "text": "this is the algorithm. This is the"
+    },
+    {
+      "start": 97.52,
+      "end": 101.28,
+      "duration": 3.76,
+      "text": "intuition that we're going to follow. We"
+    },
+    {
+      "start": 99.2,
+      "end": 103.6,
+      "duration": 4.4,
+      "text": "start from somewhere, and if we reach"
+    },
+    {
+      "start": 101.28,
+      "end": 105.76,
+      "duration": 4.48,
+      "text": "any node that has been previously"
+    },
+    {
+      "start": 103.6,
+      "end": 109.76,
+      "duration": 6.16,
+      "text": "visited in the path, we call it as a"
+    },
+    {
+      "start": 105.76,
+      "end": 111.8,
+      "duration": 6.04,
+      "text": "cycle, okay? So let's We know how DFS"
+    },
+    {
+      "start": 109.76,
+      "end": 113.8,
+      "duration": 4.04,
+      "text": "works. We take a source node, so we can"
+    },
+    {
+      "start": 111.8,
+      "end": 115.36,
+      "duration": 3.56,
+      "text": "easily take a source node. So before"
+    },
+    {
+      "start": 113.8,
+      "end": 117.16,
+      "duration": 3.36,
+      "text": "that, please make sure you take this"
+    },
+    {
+      "start": 115.36,
+      "end": 118.48,
+      "duration": 3.12,
+      "text": "particular visited array."
+    },
+    {
+      "start": 117.16,
+      "end": 120.72,
+      "duration": 3.56,
+      "text": "So in the visited array, make sure"
+    },
+    {
+      "start": 118.48,
+      "end": 123.12,
+      "duration": 4.64,
+      "text": "everything is marked as zero apart from"
+    },
+    {
+      "start": 120.72,
+      "end": 125.44,
+      "duration": 4.72,
+      "text": "the source node or you can probably keep"
+    },
+    {
+      "start": 123.12,
+      "end": 127.92,
+      "duration": 4.8,
+      "text": "the source node as whatever like that is"
+    },
+    {
+      "start": 125.44,
+      "end": 129.2,
+      "duration": 3.76,
+      "text": "your choice. I will try to keep it as"
+    },
+    {
+      "start": 127.92,
+      "end": 131.12,
+      "duration": 3.2,
+      "text": "zero."
+    },
+    {
+      "start": 129.2,
+      "end": 132.92,
+      "duration": 3.72,
+      "text": "And in the DFS we can mark. So, the"
+    },
+    {
+      "start": 131.12,
+      "end": 135.28,
+      "duration": 4.16,
+      "text": "first for the first time the DFS is"
+    },
+    {
+      "start": 132.92,
+      "end": 136.88,
+      "duration": 3.96,
+      "text": "called something like DFS of"
+    },
+    {
+      "start": 135.28,
+      "end": 139.04,
+      "duration": 3.76,
+      "text": "one comma"
+    },
+    {
+      "start": 136.88,
+      "end": 140.6,
+      "duration": 3.72,
+      "text": "make sure you carry the parent. Make"
+    },
+    {
+      "start": 139.04,
+      "end": 142.68,
+      "duration": 3.64,
+      "text": "sure you carry the parent. It came from"
+    },
+    {
+      "start": 140.6,
+      "end": 144.2,
+      "duration": 3.6,
+      "text": "one minus one. I'll tell you why do you"
+    },
+    {
+      "start": 142.68,
+      "end": 146.8,
+      "duration": 4.12,
+      "text": "need to carry the parent. So, this is"
+    },
+    {
+      "start": 144.2,
+      "end": 148.88,
+      "duration": 4.68,
+      "text": "basically the node and this is nothing"
+    },
+    {
+      "start": 146.8,
+      "end": 151.52,
+      "duration": 4.72,
+      "text": "but the parent. Why do we need to carry"
+    },
+    {
+      "start": 148.88,
+      "end": 154.24,
+      "duration": 5.36,
+      "text": "the parent? I will tell you that. So,"
+    },
+    {
+      "start": 151.52,
+      "end": 155.68,
+      "duration": 4.16,
+      "text": "you are at one. So, one has an adjacent"
+    },
+    {
+      "start": 154.24,
+      "end": 157.76,
+      "duration": 3.52,
+      "text": "node of two"
+    },
+    {
+      "start": 155.68,
+      "end": 161.24,
+      "duration": 5.56,
+      "text": "and has an adjacent node of three."
+    },
+    {
+      "start": 157.76,
+      "end": 163.4,
+      "duration": 5.64,
+      "text": "So, first the call will be made for two"
+    },
+    {
+      "start": 161.24,
+      "end": 165.6,
+      "duration": 4.36,
+      "text": "and then it will come back. Then the"
+    },
+    {
+      "start": 163.4,
+      "end": 167.0,
+      "duration": 3.6,
+      "text": "call will be made for three and then it"
+    },
+    {
+      "start": 165.6,
+      "end": 169.6,
+      "duration": 4.0,
+      "text": "will come back."
+    },
+    {
+      "start": 167.0,
+      "end": 171.6,
+      "duration": 4.6,
+      "text": "So, let's start the algorithm by having"
+    },
+    {
+      "start": 169.6,
+      "end": 174.56,
+      "duration": 4.96,
+      "text": "the DFS as"
+    },
+    {
+      "start": 171.6,
+      "end": 177.56,
+      "duration": 5.96,
+      "text": "one and we can say it as minus one."
+    },
+    {
+      "start": 174.56,
+      "end": 180.76,
+      "duration": 6.2,
+      "text": "Remember this is the parent node and"
+    },
+    {
+      "start": 177.56,
+      "end": 183.8,
+      "duration": 6.24,
+      "text": "this is the normal node, right? So, what"
+    },
+    {
+      "start": 180.76,
+      "end": 187.52,
+      "duration": 6.76,
+      "text": "we do is we go back and see who are the"
+    },
+    {
+      "start": 183.8,
+      "end": 190.84,
+      "duration": 7.04,
+      "text": "adjacents of one. But before that"
+    },
+    {
+      "start": 187.52,
+      "end": 193.2,
+      "duration": 5.68,
+      "text": "whatever DFS is called"
+    },
+    {
+      "start": 190.84,
+      "end": 195.8,
+      "duration": 4.96,
+      "text": "mark it as visited. Mark it as visited."
+    },
+    {
+      "start": 193.2,
+      "end": 197.6,
+      "duration": 4.4,
+      "text": "Now, we go back and see for one who are"
+    },
+    {
+      "start": 195.8,
+      "end": 199.16,
+      "duration": 3.36,
+      "text": "its adjacent nodes or the neighbor"
+    },
+    {
+      "start": 197.6,
+      "end": 201.4,
+      "duration": 3.8,
+      "text": "nodes. And how do you know who are the"
+    },
+    {
+      "start": 199.16,
+      "end": 204.52,
+      "duration": 5.36,
+      "text": "neighbor nodes? Very simple. You go to"
+    },
+    {
+      "start": 201.4,
+      "end": 207.12,
+      "duration": 5.72,
+      "text": "the adjacency list and you get this list"
+    },
+    {
+      "start": 204.52,
+      "end": 208.64,
+      "duration": 4.12,
+      "text": "and we see that two is one of the"
+    },
+    {
+      "start": 207.12,
+      "end": 211.64,
+      "duration": 4.52,
+      "text": "neighbor nodes and three is one of the"
+    },
+    {
+      "start": 208.64,
+      "end": 214.32,
+      "duration": 5.68,
+      "text": "neighbor nodes. So, apparently there"
+    },
+    {
+      "start": 211.64,
+      "end": 216.16,
+      "duration": 4.52,
+      "text": "will be a call for two at first saying"
+    },
+    {
+      "start": 214.32,
+      "end": 218.36,
+      "duration": 4.04,
+      "text": "that the parent is one saying that it"
+    },
+    {
+      "start": 216.16,
+      "end": 219.92,
+      "duration": 3.76,
+      "text": "came from one. Basically, it came from"
+    },
+    {
+      "start": 218.36,
+      "end": 222.24,
+      "duration": 3.88,
+      "text": "one. That is what it what you need to"
+    },
+    {
+      "start": 219.92,
+      "end": 225.4,
+      "duration": 5.48,
+      "text": "carry. First, the call for two will be"
+    },
+    {
+      "start": 222.24,
+      "end": 227.6,
+      "duration": 5.36,
+      "text": "made. Once the DFS is done, then we will"
+    },
+    {
+      "start": 225.4,
+      "end": 229.8,
+      "duration": 4.4,
+      "text": "go for three, right? That is how the DFS"
+    },
+    {
+      "start": 227.6,
+      "end": 232.64,
+      "duration": 5.04,
+      "text": "works. So, we can keep it as dotted."
+    },
+    {
+      "start": 229.8,
+      "end": 234.88,
+      "duration": 5.08,
+      "text": "Now, But over here dotted means"
+    },
+    {
+      "start": 232.64,
+      "end": 237.96,
+      "duration": 5.32,
+      "text": "we do this call after this particular"
+    },
+    {
+      "start": 234.88,
+      "end": 240.56,
+      "duration": 5.68,
+      "text": "call is over, okay? So, we have DFS of"
+    },
+    {
+      "start": 237.96,
+      "end": 242.72,
+      "duration": 4.76,
+      "text": "two. So, if we have a DFS of two, this"
+    },
+    {
+      "start": 240.56,
+      "end": 244.68,
+      "duration": 4.12,
+      "text": "is why you'll understand the concept of"
+    },
+    {
+      "start": 242.72,
+      "end": 246.28,
+      "duration": 3.56,
+      "text": "parent. For two,"
+    },
+    {
+      "start": 244.68,
+      "end": 247.36,
+      "duration": 2.68,
+      "text": "the moment you reach two,"
+    },
+    {
+      "start": 246.28,
+      "end": 249.24,
+      "duration": 2.96,
+      "text": "obviously,"
+    },
+    {
+      "start": 247.36,
+      "end": 251.6,
+      "duration": 4.24,
+      "text": "first and foremost thing, done."
+    },
+    {
+      "start": 249.24,
+      "end": 253.56,
+      "duration": 4.32,
+      "text": "Next, neighbor nodes of two."
+    },
+    {
+      "start": 251.6,
+      "end": 257.64,
+      "duration": 6.04,
+      "text": "Who is it? One."
+    },
+    {
+      "start": 253.56,
+      "end": 260.04,
+      "duration": 6.48,
+      "text": "And you see, hey, it's already visited."
+    },
+    {
+      "start": 257.64,
+      "end": 262.12,
+      "duration": 4.48,
+      "text": "You you touched someone, but I'm like,"
+    },
+    {
+      "start": 260.04,
+      "end": 264.36,
+      "duration": 4.32,
+      "text": "hey, let's stop. Wait, wait. You came"
+    },
+    {
+      "start": 262.12,
+      "end": 266.08,
+      "duration": 3.96,
+      "text": "back. You came from one. If you came"
+    },
+    {
+      "start": 264.36,
+      "end": 267.76,
+      "duration": 3.4,
+      "text": "from one, it's not a cycle. You can't"
+    },
+    {
+      "start": 266.08,
+      "end": 270.44,
+      "duration": 4.36,
+      "text": "call something like this a cycle. This"
+    },
+    {
+      "start": 267.76,
+      "end": 272.52,
+      "duration": 4.76,
+      "text": "is not a cycle. This is not a cycle."
+    },
+    {
+      "start": 270.44,
+      "end": 274.76,
+      "duration": 4.32,
+      "text": "So, since you came from one, and it is"
+    },
+    {
+      "start": 272.52,
+      "end": 277.36,
+      "duration": 4.84,
+      "text": "visited, I will not say that you came"
+    },
+    {
+      "start": 274.76,
+      "end": 279.16,
+      "duration": 4.4,
+      "text": "back to a node who was previously in the"
+    },
+    {
+      "start": 277.36,
+      "end": 282.4,
+      "duration": 5.04,
+      "text": "path. You got it?"
+    },
+    {
+      "start": 279.16,
+      "end": 284.84,
+      "duration": 5.68,
+      "text": "Okay, I repeat. I cannot say I came back"
+    },
+    {
+      "start": 282.4,
+      "end": 286.28,
+      "duration": 3.88,
+      "text": "to a node who was previously in the"
+    },
+    {
+      "start": 284.84,
+      "end": 288.24,
+      "duration": 3.4,
+      "text": "path, because"
+    },
+    {
+      "start": 286.28,
+      "end": 290.52,
+      "duration": 4.24,
+      "text": "I just came back to the parent. That's"
+    },
+    {
+      "start": 288.24,
+      "end": 292.76,
+      "duration": 4.52,
+      "text": "why we will not make a DFS call for"
+    },
+    {
+      "start": 290.52,
+      "end": 295.16,
+      "duration": 4.64,
+      "text": "this. But we will make a DFS call for"
+    },
+    {
+      "start": 292.76,
+      "end": 295.16,
+      "duration": 2.4,
+      "text": "five."
+    },
+    {
+      "start": 295.88,
+      "end": 300.04,
+      "duration": 4.16,
+      "text": "And we will say, five, you came from"
+    },
+    {
+      "start": 297.88,
+      "end": 301.28,
+      "duration": 3.4,
+      "text": "two. And the moment it reaches five,"
+    },
+    {
+      "start": 300.04,
+      "end": 302.44,
+      "duration": 2.4,
+      "text": "five will be one."
+    },
+    {
+      "start": 301.28,
+      "end": 304.68,
+      "duration": 3.4,
+      "text": "So, for five, what are the adjacent"
+    },
+    {
+      "start": 302.44,
+      "end": 308.76,
+      "duration": 6.32,
+      "text": "nodes? Again, two. Two is marked as"
+    },
+    {
+      "start": 304.68,
+      "end": 312.84,
+      "duration": 8.16,
+      "text": "visited, but I wait, two is the parent."
+    },
+    {
+      "start": 308.76,
+      "end": 315.72,
+      "duration": 6.96,
+      "text": "Next, seven. Yes, seven is unvisited."
+    },
+    {
+      "start": 312.84,
+      "end": 318.24,
+      "duration": 5.4,
+      "text": "So, you call for seven. And what do you"
+    },
+    {
+      "start": 315.72,
+      "end": 319.56,
+      "duration": 3.84,
+      "text": "say? Hey, listen, for seven, if you're"
+    },
+    {
+      "start": 318.24,
+      "end": 320.32,
+      "duration": 2.08,
+      "text": "saying"
+    },
+    {
+      "start": 319.56,
+      "end": 322.08,
+      "duration": 2.52,
+      "text": "the"
+    },
+    {
+      "start": 320.32,
+      "end": 323.76,
+      "duration": 3.44,
+      "text": "parent is five, done."
+    },
+    {
+      "start": 322.08,
+      "end": 325.6,
+      "duration": 3.52,
+      "text": "The moment you reach seven, mark it as"
+    },
+    {
+      "start": 323.76,
+      "end": 327.52,
+      "duration": 3.76,
+      "text": "visited. Now, for seven, what are the"
+    },
+    {
+      "start": 325.6,
+      "end": 329.2,
+      "duration": 3.6,
+      "text": "adjacent nodes?"
+    },
+    {
+      "start": 327.52,
+      "end": 331.0,
+      "duration": 3.48,
+      "text": "Five."
+    },
+    {
+      "start": 329.2,
+      "end": 332.76,
+      "duration": 3.56,
+      "text": "That's the parent. That's already"
+    },
+    {
+      "start": 331.0,
+      "end": 335.8,
+      "duration": 4.8,
+      "text": "visited. No,"
+    },
+    {
+      "start": 332.76,
+      "end": 337.12,
+      "duration": 4.36,
+      "text": "we will go to six now."
+    },
+    {
+      "start": 335.8,
+      "end": 340.4,
+      "duration": 4.6,
+      "text": "DFS of"
+    },
+    {
+      "start": 337.12,
+      "end": 342.36,
+      "duration": 5.24,
+      "text": "six, and the parent is seven."
+    },
+    {
+      "start": 340.4,
+      "end": 344.24,
+      "duration": 3.84,
+      "text": "Mark it as visited now. For six, what"
+    },
+    {
+      "start": 342.36,
+      "end": 346.52,
+      "duration": 4.16,
+      "text": "are the Who are"
+    },
+    {
+      "start": 344.24,
+      "end": 348.52,
+      "duration": 4.28,
+      "text": "the neighbors? Three."
+    },
+    {
+      "start": 346.52,
+      "end": 350.28,
+      "duration": 3.76,
+      "text": "For six, there is a three, there's a"
+    },
+    {
+      "start": 348.52,
+      "end": 352.0,
+      "duration": 3.48,
+      "text": "seven. For seven, there will be no call"
+    },
+    {
+      "start": 350.28,
+      "end": 353.48,
+      "duration": 3.2,
+      "text": "because it's the parent, but for three,"
+    },
+    {
+      "start": 352.0,
+      "end": 355.84,
+      "duration": 3.84,
+      "text": "there will be a call. Do the call for"
+    },
+    {
+      "start": 353.48,
+      "end": 355.84,
+      "duration": 2.36,
+      "text": "three."
+    },
+    {
+      "start": 357.12,
+      "end": 361.36,
+      "duration": 4.24,
+      "text": "Do the call for three saying that the"
+    },
+    {
+      "start": 358.56,
+      "end": 365.52,
+      "duration": 6.96,
+      "text": "parent is six. Mark it as visited. Let's"
+    },
+    {
+      "start": 361.36,
+      "end": 367.44,
+      "duration": 6.08,
+      "text": "go to three. So, this is 146. Just in"
+    },
+    {
+      "start": 365.52,
+      "end": 370.6,
+      "duration": 5.08,
+      "text": "order to understand like ease out"
+    },
+    {
+      "start": 367.44,
+      "end": 372.88,
+      "duration": 5.44,
+      "text": "understanding, I'll do it 416."
+    },
+    {
+      "start": 370.6,
+      "end": 374.44,
+      "duration": 3.84,
+      "text": "It's okay like that adjacency list can"
+    },
+    {
+      "start": 372.88,
+      "end": 377.28,
+      "duration": 4.4,
+      "text": "be written as 146, but I'll write it as"
+    },
+    {
+      "start": 374.44,
+      "end": 379.8,
+      "duration": 5.36,
+      "text": "416 to be able to explain you in a"
+    },
+    {
+      "start": 377.28,
+      "end": 381.76,
+      "duration": 4.48,
+      "text": "better way, okay. So, as of now, we have"
+    },
+    {
+      "start": 379.8,
+      "end": 384.2,
+      "duration": 4.4,
+      "text": "DFS of 36, and three is marked as"
+    },
+    {
+      "start": 381.76,
+      "end": 386.04,
+      "duration": 4.28,
+      "text": "visited. Three says, \"One of my neighbor"
+    },
+    {
+      "start": 384.2,
+      "end": 388.04,
+      "duration": 3.84,
+      "text": "nodes is four.\" I'll be like, \"Fine."
+    },
+    {
+      "start": 386.04,
+      "end": 391.32,
+      "duration": 5.28,
+      "text": "Fine, go and call it.\""
+    },
+    {
+      "start": 388.04,
+      "end": 393.08,
+      "duration": 5.04,
+      "text": "So, we go and call the DFS for four"
+    },
+    {
+      "start": 391.32,
+      "end": 396.08,
+      "duration": 4.76,
+      "text": "where the parent is three. Four is"
+    },
+    {
+      "start": 393.08,
+      "end": 398.56,
+      "duration": 5.48,
+      "text": "marked as visited. So, four apparently"
+    },
+    {
+      "start": 396.08,
+      "end": 400.76,
+      "duration": 4.68,
+      "text": "has just one node, three, who's the"
+    },
+    {
+      "start": 398.56,
+      "end": 405.12,
+      "duration": 6.56,
+      "text": "parent, who's already visited, no one"
+    },
+    {
+      "start": 400.76,
+      "end": 406.84,
+      "duration": 6.08,
+      "text": "else. So, he says, \"I did not get uh"
+    },
+    {
+      "start": 405.12,
+      "end": 409.8,
+      "duration": 4.68,
+      "text": "So, I'll return a false. I did not get a"
+    },
+    {
+      "start": 406.84,
+      "end": 412.2,
+      "duration": 5.36,
+      "text": "cycle. If I end up"
+    },
+    {
+      "start": 409.8,
+      "end": 415.28,
+      "duration": 5.48,
+      "text": "DFS calls and I don't get a cycle, I'll"
+    },
+    {
+      "start": 412.2,
+      "end": 417.16,
+      "duration": 4.96,
+      "text": "always return false. But this three"
+    },
+    {
+      "start": 415.28,
+      "end": 419.36,
+      "duration": 4.08,
+      "text": "called for four"
+    },
+    {
+      "start": 417.16,
+      "end": 423.48,
+      "duration": 6.32,
+      "text": "it will call for one now."
+    },
+    {
+      "start": 419.36,
+      "end": 426.28,
+      "duration": 6.92,
+      "text": "This was left. The DFS of 1,3 was left."
+    },
+    {
+      "start": 423.48,
+      "end": 429.6,
+      "duration": 6.12,
+      "text": "But will it call for DFS of 1,3? Will it"
+    },
+    {
+      "start": 426.28,
+      "end": 433.12,
+      "duration": 6.84,
+      "text": "call for DFS of 1,3? No. Why? Because"
+    },
+    {
+      "start": 429.6,
+      "end": 434.04,
+      "duration": 4.44,
+      "text": "this one, if you see, is visited over"
+    },
+    {
+      "start": 433.12,
+      "end": 438.2,
+      "duration": 5.08,
+      "text": "here,"
+    },
+    {
+      "start": 434.04,
+      "end": 441.68,
+      "duration": 7.64,
+      "text": "and it's not the parent. How did it"
+    },
+    {
+      "start": 438.2,
+      "end": 444.28,
+      "duration": 6.08,
+      "text": "How did it mark itself? Because it was"
+    },
+    {
+      "start": 441.68,
+      "end": 446.56,
+      "duration": 4.88,
+      "text": "previously in the path. It was"
+    },
+    {
+      "start": 444.28,
+      "end": 449.08,
+      "duration": 4.8,
+      "text": "previously in the path here. That is why"
+    },
+    {
+      "start": 446.56,
+      "end": 452.68,
+      "duration": 6.12,
+      "text": "it was marked in the visited. So, I say,"
+    },
+    {
+      "start": 449.08,
+      "end": 455.64,
+      "duration": 6.56,
+      "text": "\"Hey, for this one, don't call it. Do"
+    },
+    {
+      "start": 452.68,
+      "end": 457.8,
+      "duration": 5.12,
+      "text": "not call it. Instead of that, since you"
+    },
+    {
+      "start": 455.64,
+      "end": 460.6,
+      "duration": 4.96,
+      "text": "got someone, return a true.\""
+    },
+    {
+      "start": 457.8,
+      "end": 462.96,
+      "duration": 5.16,
+      "text": "Now, this guy who called this function"
+    },
+    {
+      "start": 460.6,
+      "end": 464.64,
+      "duration": 4.04,
+      "text": "sees this function is returning him a"
+    },
+    {
+      "start": 462.96,
+      "end": 466.6,
+      "duration": 3.64,
+      "text": "true. He says, \"You're returning me a"
+    },
+    {
+      "start": 464.64,
+      "end": 468.56,
+      "duration": 3.92,
+      "text": "true. I'll also return a true because"
+    },
+    {
+      "start": 466.6,
+      "end": 470.68,
+      "duration": 4.08,
+      "text": "you got a cycle, so I also got a cycle.\""
+    },
+    {
+      "start": 468.56,
+      "end": 472.88,
+      "duration": 4.32,
+      "text": "This guy says, \"You're returning a true."
+    },
+    {
+      "start": 470.68,
+      "end": 474.52,
+      "duration": 3.84,
+      "text": "I'll also return a true.\" This guy says,"
+    },
+    {
+      "start": 472.88,
+      "end": 476.56,
+      "duration": 3.68,
+      "text": "\"You are returning me a true. I'll also"
+    },
+    {
+      "start": 474.52,
+      "end": 478.12,
+      "duration": 3.6,
+      "text": "return a true.\" This guy says, \"You are"
+    },
+    {
+      "start": 476.56,
+      "end": 481.92,
+      "duration": 5.36,
+      "text": "returning me a true. I'll also return a"
+    },
+    {
+      "start": 478.12,
+      "end": 483.8,
+      "duration": 5.68,
+      "text": "true.\" This guy says, \"I got a true."
+    },
+    {
+      "start": 481.92,
+      "end": 486.36,
+      "duration": 4.44,
+      "text": "Should I go and"
+    },
+    {
+      "start": 483.8,
+      "end": 488.64,
+      "duration": 4.84,
+      "text": "have my brain cell 3 1? I don't need to"
+    },
+    {
+      "start": 486.36,
+      "end": 490.28,
+      "duration": 3.92,
+      "text": "do any further calls. I got a true. If"
+    },
+    {
+      "start": 488.64,
+      "end": 493.36,
+      "duration": 4.72,
+      "text": "I'm getting a true, there's no need to"
+    },
+    {
+      "start": 490.28,
+      "end": 494.4,
+      "duration": 4.12,
+      "text": "do DFS for further calls.\" And I say,"
+    },
+    {
+      "start": 493.36,
+      "end": 497.16,
+      "duration": 3.8,
+      "text": "\"True"
+    },
+    {
+      "start": 494.4,
+      "end": 499.24,
+      "duration": 4.84,
+      "text": "for the source node starting with one. I"
+    },
+    {
+      "start": 497.16,
+      "end": 501.32,
+      "duration": 4.16,
+      "text": "got someone as"
+    },
+    {
+      "start": 499.24,
+      "end": 503.08,
+      "duration": 3.84,
+      "text": "true, which means I have a cycle. Which"
+    },
+    {
+      "start": 501.32,
+      "end": 505.44,
+      "duration": 4.12,
+      "text": "means I have a cycle. Does that make"
+    },
+    {
+      "start": 503.08,
+      "end": 508.44,
+      "duration": 5.36,
+      "text": "sense? That's it. So, if you remember"
+    },
+    {
+      "start": 505.44,
+      "end": 510.76,
+      "duration": 5.32,
+      "text": "the DFS algorithm, the DFS algorithm was"
+    },
+    {
+      "start": 508.44,
+      "end": 513.68,
+      "duration": 5.24,
+      "text": "something like node, and now you can"
+    },
+    {
+      "start": 510.76,
+      "end": 515.36,
+      "duration": 4.6,
+      "text": "carry the parent. I'm not writing uh"
+    },
+    {
+      "start": 513.68,
+      "end": 516.6,
+      "duration": 2.92,
+      "text": "visited and all. I'll show that in the"
+    },
+    {
+      "start": 515.36,
+      "end": 519.64,
+      "duration": 4.28,
+      "text": "code. I'm trying to explain you the"
+    },
+    {
+      "start": 516.6,
+      "end": 521.64,
+      "duration": 5.04,
+      "text": "pseudo code. So, the moment you enter,"
+    },
+    {
+      "start": 519.64,
+      "end": 523.56,
+      "duration": 3.92,
+      "text": "you always mark it as one."
+    },
+    {
+      "start": 521.64,
+      "end": 524.64,
+      "duration": 3.0,
+      "text": "And then you go across all its neighbor"
+    },
+    {
+      "start": 523.56,
+      "end": 527.04,
+      "duration": 3.48,
+      "text": "nodes."
+    },
+    {
+      "start": 524.64,
+      "end": 529.16,
+      "duration": 4.52,
+      "text": "Right?"
+    },
+    {
+      "start": 527.04,
+      "end": 530.2,
+      "duration": 3.16,
+      "text": "You go across all its neighbor nodes."
+    },
+    {
+      "start": 529.16,
+      "end": 533.36,
+      "duration": 4.2,
+      "text": "Now,"
+    },
+    {
+      "start": 530.2,
+      "end": 535.08,
+      "duration": 4.88,
+      "text": "under this there will be some algorithm."
+    },
+    {
+      "start": 533.36,
+      "end": 537.52,
+      "duration": 4.16,
+      "text": "What will be the algorithm? One of the"
+    },
+    {
+      "start": 535.08,
+      "end": 538.96,
+      "duration": 3.88,
+      "text": "algorithms is very sure. If it is"
+    },
+    {
+      "start": 537.52,
+      "end": 542.24,
+      "duration": 4.72,
+      "text": "unvisited,"
+    },
+    {
+      "start": 538.96,
+      "end": 545.88,
+      "duration": 6.92,
+      "text": "if the adjacent node is unvisited, we go"
+    },
+    {
+      "start": 542.24,
+      "end": 548.2,
+      "duration": 5.96,
+      "text": "and call the DFS for this adjacent node,"
+    },
+    {
+      "start": 545.88,
+      "end": 550.04,
+      "duration": 4.16,
+      "text": "and the parent will be node. Because for"
+    },
+    {
+      "start": 548.2,
+      "end": 552.08,
+      "duration": 3.88,
+      "text": "this node, this is the adjacent. It's"
+    },
+    {
+      "start": 550.04,
+      "end": 553.64,
+      "duration": 3.6,
+      "text": "something like node"
+    },
+    {
+      "start": 552.08,
+      "end": 555.44,
+      "duration": 3.36,
+      "text": "joined to IT. So, if you're calling for"
+    },
+    {
+      "start": 553.64,
+      "end": 558.72,
+      "duration": 5.08,
+      "text": "IT, this will be the parent. So, you'll"
+    },
+    {
+      "start": 555.44,
+      "end": 561.0,
+      "duration": 5.56,
+      "text": "call for it. But if you remember this,"
+    },
+    {
+      "start": 558.72,
+      "end": 562.32,
+      "duration": 3.6,
+      "text": "this call was made DFS of 4 3, and it"
+    },
+    {
+      "start": 561.0,
+      "end": 563.76,
+      "duration": 2.76,
+      "text": "returned a false."
+    },
+    {
+      "start": 562.32,
+      "end": 567.72,
+      "duration": 5.4,
+      "text": "It did not do anything."
+    },
+    {
+      "start": 563.76,
+      "end": 569.84,
+      "duration": 6.08,
+      "text": "But when you made a call for 3 6,"
+    },
+    {
+      "start": 567.72,
+      "end": 573.08,
+      "duration": 5.36,
+      "text": "when you made a call for 3 6, it found"
+    },
+    {
+      "start": 569.84,
+      "end": 575.48,
+      "duration": 5.64,
+      "text": "out one was already visited, so it"
+    },
+    {
+      "start": 573.08,
+      "end": 577.36,
+      "duration": 4.28,
+      "text": "returned a true. So, if any of the DFS"
+    },
+    {
+      "start": 575.48,
+      "end": 579.64,
+      "duration": 4.16,
+      "text": "calls is returning a true, you keep on"
+    },
+    {
+      "start": 577.36,
+      "end": 582.32,
+      "duration": 4.96,
+      "text": "returning true. So, this is a DFS call"
+    },
+    {
+      "start": 579.64,
+      "end": 584.92,
+      "duration": 5.28,
+      "text": "that you're making. So, if it by chance"
+    },
+    {
+      "start": 582.32,
+      "end": 587.16,
+      "duration": 4.84,
+      "text": "returns a true, remember this, if it by"
+    },
+    {
+      "start": 584.92,
+      "end": 589.6,
+      "duration": 4.68,
+      "text": "chance returns a true, not a false. If"
+    },
+    {
+      "start": 587.16,
+      "end": 591.92,
+      "duration": 4.76,
+      "text": "it's false, we keep on checking for"
+    },
+    {
+      "start": 589.6,
+      "end": 596.44,
+      "duration": 6.84,
+      "text": "adjacent neighbors. But if this guy"
+    },
+    {
+      "start": 591.92,
+      "end": 599.32,
+      "duration": 7.4,
+      "text": "says, \"I went to node to IT and to so"
+    },
+    {
+      "start": 596.44,
+      "end": 601.36,
+      "duration": 4.92,
+      "text": "on, so on, and somewhere I got a cycle,"
+    },
+    {
+      "start": 599.32,
+      "end": 603.84,
+      "duration": 4.52,
+      "text": "somewhere I got a cycle.\" And I return"
+    },
+    {
+      "start": 601.36,
+      "end": 605.28,
+      "duration": 3.92,
+      "text": "true, true, true. So, this IT returned a"
+    },
+    {
+      "start": 603.84,
+      "end": 608.12,
+      "duration": 4.28,
+      "text": "true. So, I'm saying this guy got a"
+    },
+    {
+      "start": 605.28,
+      "end": 611.0,
+      "duration": 5.72,
+      "text": "true. So, if you got a true, you say,"
+    },
+    {
+      "start": 608.12,
+      "end": 613.72,
+      "duration": 5.6,
+      "text": "\"Okay, in overall I got a true.\""
+    },
+    {
+      "start": 611.0,
+      "end": 616.28,
+      "duration": 5.28,
+      "text": "This is for any DFS call that gives you"
+    },
+    {
+      "start": 613.72,
+      "end": 618.52,
+      "duration": 4.8,
+      "text": "a true. But what if it's not visited?"
+    },
+    {
+      "start": 616.28,
+      "end": 621.28,
+      "duration": 5.0,
+      "text": "What if it's not visited? Again,"
+    },
+    {
+      "start": 618.52,
+      "end": 624.2,
+      "duration": 5.68,
+      "text": "interesting thing. Let's come back."
+    },
+    {
+      "start": 621.28,
+      "end": 625.88,
+      "duration": 4.6,
+      "text": "Over here, for when you started with uh"
+    },
+    {
+      "start": 624.2,
+      "end": 628.04,
+      "duration": 3.84,
+      "text": "two,"
+    },
+    {
+      "start": 625.88,
+      "end": 631.16,
+      "duration": 5.28,
+      "text": "you did not go to one because one was"
+    },
+    {
+      "start": 628.04,
+      "end": 633.04,
+      "duration": 5.0,
+      "text": "visited and one was the parent."
+    },
+    {
+      "start": 631.16,
+      "end": 635.48,
+      "duration": 4.32,
+      "text": "So, if it is parent,"
+    },
+    {
+      "start": 633.04,
+      "end": 636.56,
+      "duration": 3.52,
+      "text": "then it's not a cycle. It has"
+    },
+    {
+      "start": 635.48,
+      "end": 641.0,
+      "duration": 5.52,
+      "text": "to be"
+    },
+    {
+      "start": 636.56,
+      "end": 642.84,
+      "duration": 6.28,
+      "text": "a non-parent. It has to be non-parent."
+    },
+    {
+      "start": 641.0,
+      "end": 646.12,
+      "duration": 5.12,
+      "text": "Then only I can call it as a cycle. So,"
+    },
+    {
+      "start": 642.84,
+      "end": 648.88,
+      "duration": 6.04,
+      "text": "it'll be like, if this guy is visited,"
+    },
+    {
+      "start": 646.12,
+      "end": 652.36,
+      "duration": 6.24,
+      "text": "if it comes to else, means visited,"
+    },
+    {
+      "start": 648.88,
+      "end": 655.28,
+      "duration": 6.4,
+      "text": "and if it is not a parent, if it is not"
+    },
+    {
+      "start": 652.36,
+      "end": 657.12,
+      "duration": 4.76,
+      "text": "a parent, dude, how did it visit itself?"
+    },
+    {
+      "start": 655.28,
+      "end": 658.96,
+      "duration": 3.68,
+      "text": "That means it is a cycle. That means"
+    },
+    {
+      "start": 657.12,
+      "end": 660.12,
+      "duration": 3.0,
+      "text": "this is the point where I encounter a"
+    },
+    {
+      "start": 658.96,
+      "end": 662.12,
+      "duration": 3.16,
+      "text": "cycle."
+    },
+    {
+      "start": 660.12,
+      "end": 663.28,
+      "duration": 3.16,
+      "text": "Something like this. When I was trying"
+    },
+    {
+      "start": 662.12,
+      "end": 666.76,
+      "duration": 4.64,
+      "text": "for three,"
+    },
+    {
+      "start": 663.28,
+      "end": 668.28,
+      "duration": 5.0,
+      "text": "I got one. How did you get one?"
+    },
+    {
+      "start": 666.76,
+      "end": 670.12,
+      "duration": 3.36,
+      "text": "One was visited, but it was not a"
+    },
+    {
+      "start": 668.28,
+      "end": 672.0,
+      "duration": 3.72,
+      "text": "parent. It's a cycle. You returned a"
+    },
+    {
+      "start": 670.12,
+      "end": 675.64,
+      "duration": 5.52,
+      "text": "true. You returned a true saying it got"
+    },
+    {
+      "start": 672.0,
+      "end": 678.04,
+      "duration": 6.04,
+      "text": "a true. So, that's why that's why over"
+    },
+    {
+      "start": 675.64,
+      "end": 679.0,
+      "duration": 3.36,
+      "text": "here you return a true."
+    },
+    {
+      "start": 678.04,
+      "end": 682.08,
+      "duration": 4.04,
+      "text": "Perfect."
+    },
+    {
+      "start": 679.0,
+      "end": 684.88,
+      "duration": 5.88,
+      "text": "And this is how this will end."
+    },
+    {
+      "start": 682.08,
+      "end": 686.76,
+      "duration": 4.68,
+      "text": "And if after all the DFS calls, after"
+    },
+    {
+      "start": 684.88,
+      "end": 689.2,
+      "duration": 4.32,
+      "text": "traveling for all the adjacent nodes,"
+    },
+    {
+      "start": 686.76,
+      "end": 690.8,
+      "duration": 4.04,
+      "text": "you never got a cycle, what did you do?"
+    },
+    {
+      "start": 689.2,
+      "end": 691.84,
+      "duration": 2.64,
+      "text": "Yeah, at the end just go and return a"
+    },
+    {
+      "start": 690.8,
+      "end": 693.64,
+      "duration": 2.84,
+      "text": "false"
+    },
+    {
+      "start": 691.84,
+      "end": 696.6,
+      "duration": 4.76,
+      "text": "if you never got a cycle,"
+    },
+    {
+      "start": 693.64,
+      "end": 699.64,
+      "duration": 6.0,
+      "text": "this is how the pseudo code will look"
+    },
+    {
+      "start": 696.6,
+      "end": 701.56,
+      "duration": 4.96,
+      "text": "like for the DFS. You can pause it over"
+    },
+    {
+      "start": 699.64,
+      "end": 703.4,
+      "duration": 3.76,
+      "text": "here. You can check it out. If you're"
+    },
+    {
+      "start": 701.56,
+      "end": 705.28,
+      "duration": 3.72,
+      "text": "not understanding"
+    },
+    {
+      "start": 703.4,
+      "end": 707.64,
+      "duration": 4.24,
+      "text": "If you're not understanding it properly,"
+    },
+    {
+      "start": 705.28,
+      "end": 710.16,
+      "duration": 4.88,
+      "text": "my suggestion to you will be draw"
+    },
+    {
+      "start": 707.64,
+      "end": 713.2,
+      "duration": 5.56,
+      "text": "multiple graphs. Draw some multiple"
+    },
+    {
+      "start": 710.16,
+      "end": 715.32,
+      "duration": 5.16,
+      "text": "graphs. Do the DFS calls. Do a dry run"
+    },
+    {
+      "start": 713.2,
+      "end": 717.28,
+      "duration": 4.08,
+      "text": "of this code. Eventually, it will get"
+    },
+    {
+      "start": 715.32,
+      "end": 719.28,
+      "duration": 3.96,
+      "text": "into your head. I'm I'm sure that it"
+    },
+    {
+      "start": 717.28,
+      "end": 721.28,
+      "duration": 4.0,
+      "text": "definitely did get into your head. But"
+    },
+    {
+      "start": 719.28,
+      "end": 722.36,
+      "duration": 3.08,
+      "text": "just in case I'm saying just in case,"
+    },
+    {
+      "start": 721.28,
+      "end": 724.16,
+      "duration": 2.88,
+      "text": "okay?"
+    },
+    {
+      "start": 722.36,
+      "end": 725.76,
+      "duration": 3.4,
+      "text": "Again, your recursion should be strong."
+    },
+    {
+      "start": 724.16,
+      "end": 727.24,
+      "duration": 3.08,
+      "text": "You can watch the recursion playlist for"
+    },
+    {
+      "start": 725.76,
+      "end": 728.8,
+      "duration": 3.04,
+      "text": "that. So guys, I hope you have"
+    },
+    {
+      "start": 727.24,
+      "end": 730.6,
+      "duration": 3.36,
+      "text": "understood the algorithm. Now it's time"
+    },
+    {
+      "start": 728.8,
+      "end": 732.2,
+      "duration": 3.4,
+      "text": "to code it out. So as usual, I'll be"
+    },
+    {
+      "start": 730.6,
+      "end": 735.04,
+      "duration": 4.44,
+      "text": "writing the code on right, which is the"
+    },
+    {
+      "start": 732.2,
+      "end": 738.04,
+      "duration": 5.84,
+      "text": "C++ code. And then on left, you can"
+    },
+    {
+      "start": 735.04,
+      "end": 740.2,
+      "duration": 5.16,
+      "text": "easily find the Java code, okay? So"
+    },
+    {
+      "start": 738.04,
+      "end": 742.72,
+      "duration": 4.68,
+      "text": "private"
+    },
+    {
+      "start": 740.2,
+      "end": 744.72,
+      "duration": 4.52,
+      "text": "And I say, \"Hey, listen. I need"
+    },
+    {
+      "start": 742.72,
+      "end": 746.56,
+      "duration": 3.84,
+      "text": "something like a DFS.\" Perfect."
+    },
+    {
+      "start": 744.72,
+      "end": 749.04,
+      "duration": 4.32,
+      "text": "I need the node."
+    },
+    {
+      "start": 746.56,
+      "end": 751.28,
+      "duration": 4.72,
+      "text": "I need the parent."
+    },
+    {
+      "start": 749.04,
+      "end": 754.0,
+      "duration": 4.96,
+      "text": "And then I need the uh visited. That's"
+    },
+    {
+      "start": 751.28,
+      "end": 755.76,
+      "duration": 4.48,
+      "text": "for sure. And I need the adjacent as"
+    },
+    {
+      "start": 754.0,
+      "end": 757.76,
+      "duration": 3.76,
+      "text": "well. Do I need anything else? I don't"
+    },
+    {
+      "start": 755.76,
+      "end": 758.76,
+      "duration": 3.0,
+      "text": "think. So what do you do always? The"
+    },
+    {
+      "start": 757.76,
+      "end": 760.2,
+      "duration": 2.44,
+      "text": "moment you reach there, this is"
+    },
+    {
+      "start": 758.76,
+      "end": 762.16,
+      "duration": 3.4,
+      "text": "something that you do. Then you say"
+    },
+    {
+      "start": 760.2,
+      "end": 765.84,
+      "duration": 5.64,
+      "text": "these are the adjacent nodes,"
+    },
+    {
+      "start": 762.16,
+      "end": 765.84,
+      "duration": 3.68,
+      "text": "right? And you say, \"Okay, go on.\""
+    },
+    {
+      "start": 768.0,
+      "end": 772.48,
+      "duration": 4.48,
+      "text": "Then you're like, \"Okay, if this guy is"
+    },
+    {
+      "start": 769.8,
+      "end": 774.4,
+      "duration": 4.6,
+      "text": "not visited, which is this adjacent node"
+    },
+    {
+      "start": 772.48,
+      "end": 776.2,
+      "duration": 3.72,
+      "text": "is not visited, then you can just"
+    },
+    {
+      "start": 774.4,
+      "end": 777.72,
+      "duration": 3.32,
+      "text": "roughly go on and call the DFS for"
+    },
+    {
+      "start": 776.2,
+      "end": 779.2,
+      "duration": 3.0,
+      "text": "adjacent node. The node will be the"
+    },
+    {
+      "start": 777.72,
+      "end": 781.2,
+      "duration": 3.48,
+      "text": "parent,"
+    },
+    {
+      "start": 779.2,
+      "end": 784.12,
+      "duration": 4.92,
+      "text": "the visited, and the adjacency. But if"
+    },
+    {
+      "start": 781.2,
+      "end": 785.92,
+      "duration": 4.72,
+      "text": "by chance this returns a true, if by"
+    },
+    {
+      "start": 784.12,
+      "end": 787.52,
+      "duration": 3.4,
+      "text": "chance this returns a true, it can"
+    },
+    {
+      "start": 785.92,
+      "end": 789.72,
+      "duration": 3.8,
+      "text": "return a false, then I'll call for the"
+    },
+    {
+      "start": 787.52,
+      "end": 791.72,
+      "duration": 4.2,
+      "text": "next guys. But if this returns a true,"
+    },
+    {
+      "start": 789.72,
+      "end": 793.68,
+      "duration": 3.96,
+      "text": "you say it has a cycle.\""
+    },
+    {
+      "start": 791.72,
+      "end": 795.48,
+      "duration": 3.76,
+      "text": "Yes, you say it has a cycle."
+    },
+    {
+      "start": 793.68,
+      "end": 798.04,
+      "duration": 4.36,
+      "text": "So this is how If it returns a false,"
+    },
+    {
+      "start": 795.48,
+      "end": 799.48,
+      "duration": 4.0,
+      "text": "it's fine. Otherwise, because if it"
+    },
+    {
+      "start": 798.04,
+      "end": 802.36,
+      "duration": 4.32,
+      "text": "returns a false, you're going to do a"
+    },
+    {
+      "start": 799.48,
+      "end": 805.64,
+      "duration": 6.16,
+      "text": "DFS for all the other things, okay?"
+    },
+    {
+      "start": 802.36,
+      "end": 807.72,
+      "duration": 5.36,
+      "text": "Next, if it is unvisited, like if it has"
+    },
+    {
+      "start": 805.64,
+      "end": 811.0,
+      "duration": 5.36,
+      "text": "been previously visited, and it's not"
+    },
+    {
+      "start": 807.72,
+      "end": 813.56,
+      "duration": 5.84,
+      "text": "apparent. If it is not apparent, then"
+    },
+    {
+      "start": 811.0,
+      "end": 815.88,
+      "duration": 4.88,
+      "text": "I'll be like, how did"
+    },
+    {
+      "start": 813.56,
+      "end": 819.0,
+      "duration": 5.44,
+      "text": "it visit? That means it's a repeated"
+    },
+    {
+      "start": 815.88,
+      "end": 821.84,
+      "duration": 5.96,
+      "text": "node in the path cycle. Or else you say,"
+    },
+    {
+      "start": 819.0,
+      "end": 824.48,
+      "duration": 5.48,
+      "text": "return false. Perfect. This is how you"
+    },
+    {
+      "start": 821.84,
+      "end": 826.04,
+      "duration": 4.2,
+      "text": "can easily get this across. Now, over"
+    },
+    {
+      "start": 824.48,
+      "end": 829.8,
+      "duration": 5.32,
+      "text": "here, what will you write? Will you just"
+    },
+    {
+      "start": 826.04,
+      "end": 832.56,
+      "duration": 6.52,
+      "text": "call something like, return DFS source"
+    },
+    {
+      "start": 829.8,
+      "end": 835.88,
+      "duration": 6.08,
+      "text": "node one, minus one, visited, and"
+    },
+    {
+      "start": 832.56,
+      "end": 839.32,
+      "duration": 6.76,
+      "text": "adjacency? Will this work? This should"
+    },
+    {
+      "start": 835.88,
+      "end": 842.8,
+      "duration": 6.92,
+      "text": "have worked if the graph was something"
+    },
+    {
+      "start": 839.32,
+      "end": 844.32,
+      "duration": 5.0,
+      "text": "like, uh just a minute. Let me do this."
+    },
+    {
+      "start": 842.8,
+      "end": 846.04,
+      "duration": 3.24,
+      "text": "If It should have worked if the graph"
+    },
+    {
+      "start": 844.32,
+      "end": 846.84,
+      "duration": 2.52,
+      "text": "was something like a single component"
+    },
+    {
+      "start": 846.04,
+      "end": 848.36,
+      "duration": 2.32,
+      "text": "graph."
+    },
+    {
+      "start": 846.84,
+      "end": 851.08,
+      "duration": 4.24,
+      "text": "But over here, the graph can have"
+    },
+    {
+      "start": 848.36,
+      "end": 852.84,
+      "duration": 4.48,
+      "text": "multiple components. Yes. So, in case of"
+    },
+    {
+      "start": 851.08,
+      "end": 856.32,
+      "duration": 5.24,
+      "text": "multiple components, let's take an"
+    },
+    {
+      "start": 852.84,
+      "end": 858.12,
+      "duration": 5.28,
+      "text": "example. So, assume this is like one,"
+    },
+    {
+      "start": 856.32,
+      "end": 859.24,
+      "duration": 2.92,
+      "text": "two,"
+    },
+    {
+      "start": 858.12,
+      "end": 861.08,
+      "duration": 2.96,
+      "text": "three,"
+    },
+    {
+      "start": 859.24,
+      "end": 863.88,
+      "duration": 4.64,
+      "text": "and four. This is the first component."
+    },
+    {
+      "start": 861.08,
+      "end": 866.12,
+      "duration": 5.04,
+      "text": "Five, six, seven,"
+    },
+    {
+      "start": 863.88,
+      "end": 867.4,
+      "duration": 3.52,
+      "text": "eight, nine. By the way, components in"
+    },
+    {
+      "start": 866.12,
+      "end": 869.24,
+      "duration": 3.12,
+      "text": "the sense,"
+    },
+    {
+      "start": 867.4,
+      "end": 870.36,
+      "duration": 2.96,
+      "text": "if you don't know, lecture four."
+    },
+    {
+      "start": 869.24,
+      "end": 872.92,
+      "duration": 3.68,
+      "text": "Okay, lecture four, connected"
+    },
+    {
+      "start": 870.36,
+      "end": 875.72,
+      "duration": 5.36,
+      "text": "components. So, this is it here. So, if"
+    },
+    {
+      "start": 872.92,
+      "end": 878.52,
+      "duration": 5.6,
+      "text": "you just call for DFS of one,"
+    },
+    {
+      "start": 875.72,
+      "end": 880.72,
+      "duration": 5.0,
+      "text": "it will go and it will visit these guys,"
+    },
+    {
+      "start": 878.52,
+      "end": 882.44,
+      "duration": 3.92,
+      "text": "and it will never find a cycle. In order"
+    },
+    {
+      "start": 880.72,
+      "end": 884.8,
+      "duration": 4.08,
+      "text": "to find a cycle, you have to actually"
+    },
+    {
+      "start": 882.44,
+      "end": 887.2,
+      "duration": 4.76,
+      "text": "call DFS of seven."
+    },
+    {
+      "start": 884.8,
+      "end": 890.04,
+      "duration": 5.24,
+      "text": "Right? So, how will you do this? This is"
+    },
+    {
+      "start": 887.2,
+      "end": 892.56,
+      "duration": 5.36,
+      "text": "where what you do is, you always call"
+    },
+    {
+      "start": 890.04,
+      "end": 893.76,
+      "duration": 3.72,
+      "text": "something like, I equal to one till"
+    },
+    {
+      "start": 892.56,
+      "end": 895.52,
+      "duration": 2.96,
+      "text": "nine,"
+    },
+    {
+      "start": 893.76,
+      "end": 898.36,
+      "duration": 4.6,
+      "text": "and you say, if"
+    },
+    {
+      "start": 895.52,
+      "end": 901.4,
+      "duration": 5.88,
+      "text": "these guys are not visited, then call"
+    },
+    {
+      "start": 898.36,
+      "end": 903.64,
+      "duration": 5.28,
+      "text": "the DFS for the source."
+    },
+    {
+      "start": 901.4,
+      "end": 906.48,
+      "duration": 5.08,
+      "text": "And then if this DFS call comes out as"
+    },
+    {
+      "start": 903.64,
+      "end": 908.24,
+      "duration": 4.6,
+      "text": "true, you can say there is a cycle."
+    },
+    {
+      "start": 906.48,
+      "end": 910.76,
+      "duration": 4.28,
+      "text": "What does this mean? For the first time,"
+    },
+    {
+      "start": 908.24,
+      "end": 912.6,
+      "duration": 4.36,
+      "text": "I will be one. So, you find it not"
+    },
+    {
+      "start": 910.76,
+      "end": 914.24,
+      "duration": 3.48,
+      "text": "visited. You find it not visited, you"
+    },
+    {
+      "start": 912.6,
+      "end": 916.44,
+      "duration": 3.84,
+      "text": "call the DFS for one."
+    },
+    {
+      "start": 914.24,
+      "end": 919.56,
+      "duration": 5.32,
+      "text": "So, it goes the It goes for the call of"
+    },
+    {
+      "start": 916.44,
+      "end": 920.96,
+      "duration": 4.52,
+      "text": "one, marks all of them, and says, I did"
+    },
+    {
+      "start": 919.56,
+      "end": 923.36,
+      "duration": 3.8,
+      "text": "not find a cycle."
+    },
+    {
+      "start": 920.96,
+      "end": 926.08,
+      "duration": 5.12,
+      "text": "Next, I will become two, but will find"
+    },
+    {
+      "start": 923.36,
+      "end": 927.56,
+      "duration": 4.2,
+      "text": "two as visited. No DFS calls. Next, it"
+    },
+    {
+      "start": 926.08,
+      "end": 930.04,
+      "duration": 3.96,
+      "text": "will be three."
+    },
+    {
+      "start": 927.56,
+      "end": 932.6,
+      "duration": 5.04,
+      "text": "Again, find visited. No DFS calls. Next,"
+    },
+    {
+      "start": 930.04,
+      "end": 935.12,
+      "duration": 5.08,
+      "text": "it will be four. It will find already"
+    },
+    {
+      "start": 932.6,
+      "end": 937.96,
+      "duration": 5.36,
+      "text": "visited. No DFS calls. Next, it will be"
+    },
+    {
+      "start": 935.12,
+      "end": 940.96,
+      "duration": 5.84,
+      "text": "five. Non-visited, so it goes and calls"
+    },
+    {
+      "start": 937.96,
+      "end": 943.28,
+      "duration": 5.32,
+      "text": "the DFS of five now. So, first a DFS"
+    },
+    {
+      "start": 940.96,
+      "end": 945.12,
+      "duration": 4.16,
+      "text": "call for one was made. Next, the DFS"
+    },
+    {
+      "start": 943.28,
+      "end": 948.04,
+      "duration": 4.76,
+      "text": "call of five was made. Five will make"
+    },
+    {
+      "start": 945.12,
+      "end": 949.0,
+      "duration": 3.88,
+      "text": "sure five is visited, six is visited."
+    },
+    {
+      "start": 948.04,
+      "end": 951.08,
+      "duration": 3.04,
+      "text": "Right?"
+    },
+    {
+      "start": 949.0,
+      "end": 953.56,
+      "duration": 4.56,
+      "text": "So, now the DFS of five will be called"
+    },
+    {
+      "start": 951.08,
+      "end": 955.28,
+      "duration": 4.2,
+      "text": "and five will go and mark these guys and"
+    },
+    {
+      "start": 953.56,
+      "end": 956.76,
+      "duration": 3.2,
+      "text": "again it will not get a cycle. It will"
+    },
+    {
+      "start": 955.28,
+      "end": 959.0,
+      "duration": 3.72,
+      "text": "come back. Then, it will be six. Then,"
+    },
+    {
+      "start": 956.76,
+      "end": 962.08,
+      "duration": 5.32,
+      "text": "it will be seven. This time when DFS of"
+    },
+    {
+      "start": 959.0,
+      "end": 964.96,
+      "duration": 5.96,
+      "text": "seven is called, seven goes and finds a"
+    },
+    {
+      "start": 962.08,
+      "end": 967.12,
+      "duration": 5.04,
+      "text": "cycle. It says true. So, you get a true"
+    },
+    {
+      "start": 964.96,
+      "end": 968.84,
+      "duration": 3.88,
+      "text": "and it says true, you get a cycle."
+    },
+    {
+      "start": 967.12,
+      "end": 970.64,
+      "duration": 3.52,
+      "text": "This is the"
+    },
+    {
+      "start": 968.84,
+      "end": 972.96,
+      "duration": 4.12,
+      "text": "new addition that you have to do. But,"
+    },
+    {
+      "start": 970.64,
+      "end": 975.12,
+      "duration": 4.48,
+      "text": "make sure you declare the visited array"
+    },
+    {
+      "start": 972.96,
+      "end": 977.0,
+      "duration": 4.04,
+      "text": "so that you don't call like DFS one,"
+    },
+    {
+      "start": 975.12,
+      "end": 980.08,
+      "duration": 4.96,
+      "text": "then don't call like DFS two, then DFS"
+    },
+    {
+      "start": 977.0,
+      "end": 982.72,
+      "duration": 5.72,
+      "text": "three. No need to visit again and again."
+    },
+    {
+      "start": 980.08,
+      "end": 985.44,
+      "duration": 5.36,
+      "text": "In total, just make sure you visit like"
+    },
+    {
+      "start": 982.72,
+      "end": 987.2,
+      "duration": 4.48,
+      "text": "four nodes, six nodes, nine nodes. In"
+    },
+    {
+      "start": 985.44,
+      "end": 989.84,
+      "duration": 4.4,
+      "text": "total, you just need to make sure you"
+    },
+    {
+      "start": 987.2,
+      "end": 992.0,
+      "duration": 4.8,
+      "text": "visit nine nodes. So, what you will do"
+    },
+    {
+      "start": 989.84,
+      "end": 994.4,
+      "duration": 4.56,
+      "text": "is instead of this, you will say,"
+    },
+    {
+      "start": 992.0,
+      "end": 995.92,
+      "duration": 3.92,
+      "text": "\"Okay.\" By the way, zero-based indexing."
+    },
+    {
+      "start": 994.4,
+      "end": 997.4,
+      "duration": 3.0,
+      "text": "This is zero-based indexing to take care"
+    },
+    {
+      "start": 995.92,
+      "end": 1000.68,
+      "duration": 4.76,
+      "text": "of this."
+    },
+    {
+      "start": 997.4,
+      "end": 1003.64,
+      "duration": 6.24,
+      "text": "So, if not visited I,"
+    },
+    {
+      "start": 1000.68,
+      "end": 1005.04,
+      "duration": 4.36,
+      "text": "then I will say if DFS of"
+    },
+    {
+      "start": 1003.64,
+      "end": 1007.68,
+      "duration": 4.04,
+      "text": "I,"
+    },
+    {
+      "start": 1005.04,
+      "end": 1010.28,
+      "duration": 5.24,
+      "text": "parent will be always minus one, visited"
+    },
+    {
+      "start": 1007.68,
+      "end": 1012.28,
+      "duration": 4.6,
+      "text": "adjacent is coming out to be true, you"
+    },
+    {
+      "start": 1010.28,
+      "end": 1014.2,
+      "duration": 3.92,
+      "text": "return a true. Or else, at the end of"
+    },
+    {
+      "start": 1012.28,
+      "end": 1016.76,
+      "duration": 4.48,
+      "text": "the day, if you none of them gave a"
+    },
+    {
+      "start": 1014.2,
+      "end": 1019.44,
+      "duration": 5.24,
+      "text": "cycle, you return a false. So, you can"
+    },
+    {
+      "start": 1016.76,
+      "end": 1021.68,
+      "duration": 4.92,
+      "text": "just compile that and check it out."
+    },
+    {
+      "start": 1019.44,
+      "end": 1024.48,
+      "duration": 5.04,
+      "text": "It is running absolutely fine. So, it's"
+    },
+    {
+      "start": 1021.68,
+      "end": 1026.96,
+      "duration": 5.28,
+      "text": "time to discuss the space complexity."
+    },
+    {
+      "start": 1024.48,
+      "end": 1028.2,
+      "duration": 3.72,
+      "text": "Are we using a space complexity? We are."
+    },
+    {
+      "start": 1026.96,
+      "end": 1030.76,
+      "duration": 3.8,
+      "text": "We are using something like recursion"
+    },
+    {
+      "start": 1028.2,
+      "end": 1032.68,
+      "duration": 4.48,
+      "text": "stack space which can be big O of"
+    },
+    {
+      "start": 1030.76,
+      "end": 1034.52,
+      "duration": 3.76,
+      "text": "N at the worst case. Assume all the"
+    },
+    {
+      "start": 1032.68,
+      "end": 1036.52,
+      "duration": 3.84,
+      "text": "nodes are connected. It will be a"
+    },
+    {
+      "start": 1034.52,
+      "end": 1039.16,
+      "duration": 4.64,
+      "text": "recursion something like assume you get"
+    },
+    {
+      "start": 1036.52,
+      "end": 1040.56,
+      "duration": 4.04,
+      "text": "a graph something like this."
+    },
+    {
+      "start": 1039.16,
+      "end": 1042.96,
+      "duration": 3.8,
+      "text": "Then the recursion will go here, then"
+    },
+    {
+      "start": 1040.56,
+      "end": 1044.88,
+      "duration": 4.32,
+      "text": "here, then here, then here. So, complete"
+    },
+    {
+      "start": 1042.96,
+      "end": 1046.92,
+      "duration": 3.96,
+      "text": "recursion stack space. You're using"
+    },
+    {
+      "start": 1044.88,
+      "end": 1048.72,
+      "duration": 3.84,
+      "text": "something like a visited array."
+    },
+    {
+      "start": 1046.92,
+      "end": 1051.32,
+      "duration": 4.4,
+      "text": "So, you can just sum it up to big O of"
+    },
+    {
+      "start": 1048.72,
+      "end": 1053.36,
+      "duration": 4.64,
+      "text": "n. I'm not using like I'm not adding the"
+    },
+    {
+      "start": 1051.32,
+      "end": 1055.48,
+      "duration": 4.16,
+      "text": "adjacency list into account. What about"
+    },
+    {
+      "start": 1053.36,
+      "end": 1057.44,
+      "duration": 4.08,
+      "text": "the time complexity? You're using a DFS"
+    },
+    {
+      "start": 1055.48,
+      "end": 1060.52,
+      "duration": 5.04,
+      "text": "traversal, and we know the DFS traversal"
+    },
+    {
+      "start": 1057.44,
+      "end": 1062.76,
+      "duration": 5.32,
+      "text": "is n plus 2e. Because for every node,"
+    },
+    {
+      "start": 1060.52,
+      "end": 1064.6,
+      "duration": 4.08,
+      "text": "you visit all the degrees or all the"
+    },
+    {
+      "start": 1062.76,
+      "end": 1066.36,
+      "duration": 3.6,
+      "text": "adjacent nodes. And the summation of"
+    },
+    {
+      "start": 1064.6,
+      "end": 1068.84,
+      "duration": 4.24,
+      "text": "adjacent nodes is"
+    },
+    {
+      "start": 1066.36,
+      "end": 1071.64,
+      "duration": 5.28,
+      "text": "2e. So, n plus 2e."
+    },
+    {
+      "start": 1068.84,
+      "end": 1072.84,
+      "duration": 4.0,
+      "text": "Plus big O of n because you're running a"
+    },
+    {
+      "start": 1071.64,
+      "end": 1075.0,
+      "duration": 3.36,
+      "text": "for loop."
+    },
+    {
+      "start": 1072.84,
+      "end": 1079.32,
+      "duration": 6.48,
+      "text": "You're running a for loop, but the for"
+    },
+    {
+      "start": 1075.0,
+      "end": 1082.44,
+      "duration": 7.44,
+      "text": "loop does not calls like DFS 1 2 3 4."
+    },
+    {
+      "start": 1079.32,
+      "end": 1085.64,
+      "duration": 6.32,
+      "text": "No. In total, it will call this"
+    },
+    {
+      "start": 1082.44,
+      "end": 1087.88,
+      "duration": 5.44,
+      "text": "for like once this, which will make sure"
+    },
+    {
+      "start": 1085.64,
+      "end": 1090.32,
+      "duration": 4.68,
+      "text": "the DFS is four times, the DFS is two"
+    },
+    {
+      "start": 1087.88,
+      "end": 1092.44,
+      "duration": 4.56,
+      "text": "times, the DFS is three times. In total,"
+    },
+    {
+      "start": 1090.32,
+      "end": 1093.88,
+      "duration": 3.56,
+      "text": "it will be called three times. And that"
+    },
+    {
+      "start": 1092.44,
+      "end": 1096.76,
+      "duration": 4.32,
+      "text": "three times will make sure it visits"
+    },
+    {
+      "start": 1093.88,
+      "end": 1098.44,
+      "duration": 4.56,
+      "text": "them nine times. It won't be like"
+    },
+    {
+      "start": 1096.76,
+      "end": 1100.76,
+      "duration": 4.0,
+      "text": "every time it's getting called. So, it's"
+    },
+    {
+      "start": 1098.44,
+      "end": 1103.56,
+      "duration": 5.12,
+      "text": "not something like into."
+    },
+    {
+      "start": 1100.76,
+      "end": 1105.6,
+      "duration": 4.84,
+      "text": "Overall, it will visit all the nodes,"
+    },
+    {
+      "start": 1103.56,
+      "end": 1107.24,
+      "duration": 3.68,
+      "text": "and it will be 2e time that it will take"
+    },
+    {
+      "start": 1105.6,
+      "end": 1109.24,
+      "duration": 3.64,
+      "text": "to visit all the nodes. And there is"
+    },
+    {
+      "start": 1107.24,
+      "end": 1110.48,
+      "duration": 3.24,
+      "text": "this loop that is running, for loop."
+    },
+    {
+      "start": 1109.24,
+      "end": 1112.52,
+      "duration": 3.28,
+      "text": "This for loop."
+    },
+    {
+      "start": 1110.48,
+      "end": 1115.08,
+      "duration": 4.6,
+      "text": "Which is going to take n times. That's"
+    },
+    {
+      "start": 1112.52,
+      "end": 1117.28,
+      "duration": 4.76,
+      "text": "why this is the overall time complexity."
+    },
+    {
+      "start": 1115.08,
+      "end": 1119.4,
+      "duration": 4.32,
+      "text": "This is the overall space complex."
+    },
+    {
+      "start": 1117.28,
+      "end": 1121.0,
+      "duration": 3.72,
+      "text": "So guys, I hope I was able to explain"
+    },
+    {
+      "start": 1119.4,
+      "end": 1123.04,
+      "duration": 3.64,
+      "text": "you this particular algorithm. Just in"
+    },
+    {
+      "start": 1121.0,
+      "end": 1124.4,
+      "duration": 3.4,
+      "text": "case I was, please make sure you like"
+    },
+    {
+      "start": 1123.04,
+      "end": 1126.36,
+      "duration": 3.32,
+      "text": "this video. And if you are new to our"
+    },
+    {
+      "start": 1124.4,
+      "end": 1128.16,
+      "duration": 3.76,
+      "text": "channel, what are you waiting for? Hit"
+    },
+    {
+      "start": 1126.36,
+      "end": 1129.76,
+      "duration": 3.4,
+      "text": "that subscribe button right away. And if"
+    },
+    {
+      "start": 1128.16,
+      "end": 1132.2,
+      "duration": 4.04,
+      "text": "you haven't checked out our dynamic"
+    },
+    {
+      "start": 1129.76,
+      "end": 1134.28,
+      "duration": 4.52,
+      "text": "programming playlist and the easy sheet,"
+    },
+    {
+      "start": 1132.2,
+      "end": 1135.92,
+      "duration": 3.72,
+      "text": "you're missing out on a lot. Links are"
+    },
+    {
+      "start": 1134.28,
+      "end": 1137.0,
+      "duration": 2.72,
+      "text": "in the description. Check them out. And"
+    },
+    {
+      "start": 1135.92,
+      "end": 1138.8,
+      "duration": 2.88,
+      "text": "yeah, with this I'll be wrapping up this"
+    },
+    {
+      "start": 1137.0,
+      "end": 1141.16,
+      "duration": 4.16,
+      "text": "video. Let's meet in some other video."
+    },
+    {
+      "start": 1138.8,
+      "end": 1144.36,
+      "duration": 5.56,
+      "text": "Till then, bye-bye. Take care."
+    },
+    {
+      "start": 1141.16,
+      "end": 1147.68,
+      "duration": 6.52,
+      "text": "Whenever your heart is broken,"
+    },
+    {
+      "start": 1144.36,
+      "end": 1151.0,
+      "duration": 6.64,
+      "text": "don't ever forget you're golden."
+    },
+    {
+      "start": 1147.68,
+      "end": 1151.0,
+      "duration": 3.32,
+      "text": "I will find a light in you."
+    }
+  ]
+}

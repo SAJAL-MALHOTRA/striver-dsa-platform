@@ -1,0 +1,3077 @@
+{
+  "video_id": "AseUmwVNaoY",
+  "title": "Count Inversions in an Array | Brute and Optimal",
+  "duration_sec": 1457,
+  "segments": [
+    {
+      "start": 2.94,
+      "end": 6.3,
+      "text": "hey everyone back to the channel I hope"
+    },
+    {
+      "start": 4.68,
+      "end": 7.8,
+      "text": "you guys are doing extremely well so we"
+    },
+    {
+      "start": 6.3,
+      "end": 9.72,
+      "text": "will be continuing with the strikers a"
+    },
+    {
+      "start": 7.8,
+      "end": 10.8,
+      "text": "to Zsa course just in case you're for"
+    },
+    {
+      "start": 9.72,
+      "end": 12.96,
+      "text": "the first time here and you don't have"
+    },
+    {
+      "start": 10.8,
+      "end": 14.64,
+      "text": "an idea about what this is all about you"
+    },
+    {
+      "start": 12.96,
+      "end": 16.8,
+      "text": "can definitely check it out from the"
+    },
+    {
+      "start": 14.64,
+      "end": 18.0,
+      "text": "link in the description so till now I"
+    },
+    {
+      "start": 16.8,
+      "end": 19.44,
+      "text": "have covered up till this particular"
+    },
+    {
+      "start": 18.0,
+      "end": 21.66,
+      "text": "problem now in this video I'll be"
+    },
+    {
+      "start": 19.44,
+      "end": 23.52,
+      "text": "covering up the problem count inversions"
+    },
+    {
+      "start": 21.66,
+      "end": 27.18,
+      "text": "now before getting into this video"
+    },
+    {
+      "start": 23.52,
+      "end": 30.18,
+      "text": "please please go back and watch out uh"
+    },
+    {
+      "start": 27.18,
+      "end": 32.22,
+      "text": "the video of merge sort I've left out"
+    },
+    {
+      "start": 30.18,
+      "end": 33.9,
+      "text": "the video link in the description go"
+    },
+    {
+      "start": 32.22,
+      "end": 35.88,
+      "text": "back and watch it and then only resume"
+    },
+    {
+      "start": 33.9,
+      "end": 38.28,
+      "text": "this video because the algorithm that I"
+    },
+    {
+      "start": 35.88,
+      "end": 41.64,
+      "text": "will be using will be derived from merge"
+    },
+    {
+      "start": 38.28,
+      "end": 44.64,
+      "text": "sort so what does the problem count in"
+    },
+    {
+      "start": 41.64,
+      "end": 47.64,
+      "text": "version state it states that you will be"
+    },
+    {
+      "start": 44.64,
+      "end": 51.96,
+      "text": "given an array of integers and your task"
+    },
+    {
+      "start": 47.64,
+      "end": 55.2,
+      "text": "is to find out the number of pairs and"
+    },
+    {
+      "start": 51.96,
+      "end": 56.82,
+      "text": "how like what pairs the pairs should be"
+    },
+    {
+      "start": 55.2,
+      "end": 59.82,
+      "text": "ordered in such a way that the left"
+    },
+    {
+      "start": 56.82,
+      "end": 62.22,
+      "text": "element that the left element is greater"
+    },
+    {
+      "start": 59.82,
+      "end": 65.34,
+      "text": "than the right element that is what this"
+    },
+    {
+      "start": 62.22,
+      "end": 66.96,
+      "text": "signifies the left element should be"
+    },
+    {
+      "start": 65.34,
+      "end": 69.48,
+      "text": "greater than the right element let me"
+    },
+    {
+      "start": 66.96,
+      "end": 73.98,
+      "text": "give you some examples so I can say if I"
+    },
+    {
+      "start": 69.48,
+      "end": 76.44,
+      "text": "pick up 5 comma 3 so 5 is the left 3 is"
+    },
+    {
+      "start": 73.98,
+      "end": 79.02,
+      "text": "the right and 5 is greater than 3 so"
+    },
+    {
+      "start": 76.44,
+      "end": 82.32,
+      "text": "this can be a pair got it if I pick up 5"
+    },
+    {
+      "start": 79.02,
+      "end": 85.08,
+      "text": "and 2 that can also be a pair if I pick"
+    },
+    {
+      "start": 82.32,
+      "end": 87.18,
+      "text": "up 5 and 4 that can also be a pair if I"
+    },
+    {
+      "start": 85.08,
+      "end": 90.48,
+      "text": "pick a five and one that can also be a"
+    },
+    {
+      "start": 87.18,
+      "end": 92.7,
+      "text": "bear you cannot say one comma 5 to be a"
+    },
+    {
+      "start": 90.48,
+      "end": 95.82,
+      "text": "pair that is not possible also you"
+    },
+    {
+      "start": 92.7,
+      "end": 98.22,
+      "text": "cannot say 4 comma 2 to be a pair why"
+    },
+    {
+      "start": 95.82,
+      "end": 100.56,
+      "text": "because 4 is on the right remember the"
+    },
+    {
+      "start": 98.22,
+      "end": 102.6,
+      "text": "left element should be greater than the"
+    },
+    {
+      "start": 100.56,
+      "end": 104.94,
+      "text": "right element that is what you have to"
+    },
+    {
+      "start": 102.6,
+      "end": 107.88,
+      "text": "compute so I've got 4 over here the"
+    },
+    {
+      "start": 104.94,
+      "end": 110.4,
+      "text": "others that I can write is 3 comma 2 3"
+    },
+    {
+      "start": 107.88,
+      "end": 112.92,
+      "text": "comma 1 which is basically three this"
+    },
+    {
+      "start": 110.4,
+      "end": 115.14,
+      "text": "and three one the others that I can"
+    },
+    {
+      "start": 112.92,
+      "end": 117.66,
+      "text": "write is 2 comma 1."
+    },
+    {
+      "start": 115.14,
+      "end": 119.88,
+      "text": "and the last one will be 4 comma one so"
+    },
+    {
+      "start": 117.66,
+      "end": 122.64,
+      "text": "what is the total number of pairs one"
+    },
+    {
+      "start": 119.88,
+      "end": 125.22,
+      "text": "two three four five six seven eight so"
+    },
+    {
+      "start": 122.64,
+      "end": 127.26,
+      "text": "what you have to return me is a I do not"
+    },
+    {
+      "start": 125.22,
+      "end": 129.6,
+      "text": "need the base I need the count of pass"
+    },
+    {
+      "start": 127.26,
+      "end": 130.92,
+      "text": "so the count of pairs is eight and that"
+    },
+    {
+      "start": 129.6,
+      "end": 132.48,
+      "text": "is what you have to return"
+    },
+    {
+      "start": 130.92,
+      "end": 133.8,
+      "text": "so this problem comes up in an interview"
+    },
+    {
+      "start": 132.48,
+      "end": 135.48,
+      "text": "what are the first solution that you"
+    },
+    {
+      "start": 133.8,
+      "end": 137.52,
+      "text": "will give to the interview that is"
+    },
+    {
+      "start": 135.48,
+      "end": 139.02,
+      "text": "definitely the Brute Force solution and"
+    },
+    {
+      "start": 137.52,
+      "end": 141.0,
+      "text": "what is the extreme range solution that"
+    },
+    {
+      "start": 139.02,
+      "end": 143.28,
+      "text": "you can think of you have to count the"
+    },
+    {
+      "start": 141.0,
+      "end": 145.98,
+      "text": "number of pairs right and how can we"
+    },
+    {
+      "start": 143.28,
+      "end": 147.96,
+      "text": "generate the base for standard five we"
+    },
+    {
+      "start": 145.98,
+      "end": 149.52,
+      "text": "can go across all the right elements"
+    },
+    {
+      "start": 147.96,
+      "end": 151.98,
+      "text": "because we just need the right elements"
+    },
+    {
+      "start": 149.52,
+      "end": 153.84,
+      "text": "similarly if I stand at three I can"
+    },
+    {
+      "start": 151.98,
+      "end": 156.0,
+      "text": "again go across all the right elements"
+    },
+    {
+      "start": 153.84,
+      "end": 157.98,
+      "text": "similarly if I stand at two I can again"
+    },
+    {
+      "start": 156.0,
+      "end": 159.54,
+      "text": "go across the right elements similarly"
+    },
+    {
+      "start": 157.98,
+      "end": 161.7,
+      "text": "if I stand at four I can go across the"
+    },
+    {
+      "start": 159.54,
+      "end": 163.8,
+      "text": "right elements quite simple so what I"
+    },
+    {
+      "start": 161.7,
+      "end": 166.26,
+      "text": "will do is I'll stand at five and go"
+    },
+    {
+      "start": 163.8,
+      "end": 168.72,
+      "text": "across every right a little bit and who"
+    },
+    {
+      "start": 166.26,
+      "end": 170.88,
+      "text": "can be a bear I'll just do a counter"
+    },
+    {
+      "start": 168.72,
+      "end": 174.0,
+      "text": "plus plus so that will be my extreme"
+    },
+    {
+      "start": 170.88,
+      "end": 175.74,
+      "text": "naive solution so can I say since I have"
+    },
+    {
+      "start": 174.0,
+      "end": 178.26,
+      "text": "to basically go through every element"
+    },
+    {
+      "start": 175.74,
+      "end": 180.48,
+      "text": "which is from 0 to n minus 1 so I'll run"
+    },
+    {
+      "start": 178.26,
+      "end": 183.6,
+      "text": "a loop from 0 to n minus one I can keep"
+    },
+    {
+      "start": 180.48,
+      "end": 184.86,
+      "text": "a counter as 0 and going forward I know"
+    },
+    {
+      "start": 183.6,
+      "end": 187.2,
+      "text": "I have to just consider the right"
+    },
+    {
+      "start": 184.86,
+      "end": 188.58,
+      "text": "elements so I'll go from G equal to I"
+    },
+    {
+      "start": 187.2,
+      "end": 190.86,
+      "text": "plus 1 because that is where the right"
+    },
+    {
+      "start": 188.58,
+      "end": 193.62,
+      "text": "starts from and I'll go till the last"
+    },
+    {
+      "start": 190.86,
+      "end": 195.12,
+      "text": "and I can simply just iterate it and I"
+    },
+    {
+      "start": 193.62,
+      "end": 198.12,
+      "text": "know the condition the condition is very"
+    },
+    {
+      "start": 195.12,
+      "end": 200.7,
+      "text": "straightforward if a of I is greater"
+    },
+    {
+      "start": 198.12,
+      "end": 202.62,
+      "text": "than a of J and that's the condition I"
+    },
+    {
+      "start": 200.7,
+      "end": 205.38,
+      "text": "will do a counter plus equal to one"
+    },
+    {
+      "start": 202.62,
+      "end": 207.42,
+      "text": "that's it that will be my extreme group"
+    },
+    {
+      "start": 205.38,
+      "end": 210.36,
+      "text": "for solution this will go through all"
+    },
+    {
+      "start": 207.42,
+      "end": 212.64,
+      "text": "the pairs and whoever is satisfying the"
+    },
+    {
+      "start": 210.36,
+      "end": 214.92,
+      "text": "condition will keep a count for it so"
+    },
+    {
+      "start": 212.64,
+      "end": 216.48,
+      "text": "eventually you can get your account and"
+    },
+    {
+      "start": 214.92,
+      "end": 218.28,
+      "text": "that will be your answer so what will be"
+    },
+    {
+      "start": 216.48,
+      "end": 220.32,
+      "text": "the time complexity of this particular"
+    },
+    {
+      "start": 218.28,
+      "end": 223.74,
+      "text": "solution you can say somewhere near"
+    },
+    {
+      "start": 220.32,
+      "end": 225.96,
+      "text": "about like this is running for n this is"
+    },
+    {
+      "start": 223.74,
+      "end": 228.72,
+      "text": "not exactly n but somewhere near about"
+    },
+    {
+      "start": 225.96,
+      "end": 230.34,
+      "text": "that so can I say the time complexity is"
+    },
+    {
+      "start": 228.72,
+      "end": 232.2,
+      "text": "somewhere near above n Square not"
+    },
+    {
+      "start": 230.34,
+      "end": 234.3,
+      "text": "exactly in square what about the space"
+    },
+    {
+      "start": 232.2,
+      "end": 237.0,
+      "text": "complexity am I using any extra space"
+    },
+    {
+      "start": 234.3,
+      "end": 238.14,
+      "text": "slope so I can say constant space so"
+    },
+    {
+      "start": 237.0,
+      "end": 240.0,
+      "text": "this will be the time in the space"
+    },
+    {
+      "start": 238.14,
+      "end": 241.98,
+      "text": "complexity obviously the interviewer"
+    },
+    {
+      "start": 240.0,
+      "end": 243.66,
+      "text": "will not be happy because we're using n"
+    },
+    {
+      "start": 241.98,
+      "end": 245.52,
+      "text": "square and it'll ask you to optimize"
+    },
+    {
+      "start": 243.66,
+      "end": 247.92,
+      "text": "this this is when we will move to the"
+    },
+    {
+      "start": 245.52,
+      "end": 250.44,
+      "text": "optimal solution so we have to reduce"
+    },
+    {
+      "start": 247.92,
+      "end": 253.68,
+      "text": "this n square and if I am reducing n"
+    },
+    {
+      "start": 250.44,
+      "end": 256.08,
+      "text": "square that can definitely be n log n or"
+    },
+    {
+      "start": 253.68,
+      "end": 257.52,
+      "text": "maybe a O(N) somewhere around that"
+    },
+    {
+      "start": 256.08,
+      "end": 260.28,
+      "text": "right so let's start thinking so what"
+    },
+    {
+      "start": 257.52,
+      "end": 261.9,
+      "text": "I'll do is probably as of not not think"
+    },
+    {
+      "start": 260.28,
+      "end": 264.48,
+      "text": "about this question I'll give you"
+    },
+    {
+      "start": 261.9,
+      "end": 265.74,
+      "text": "another question let's start analyzing"
+    },
+    {
+      "start": 264.48,
+      "end": 268.86,
+      "text": "that so I'm giving you another question"
+    },
+    {
+      "start": 265.74,
+      "end": 270.12,
+      "text": "just to explain you the algorithm so I'm"
+    },
+    {
+      "start": 268.86,
+      "end": 272.34,
+      "text": "stating that I'll give you a couple of"
+    },
+    {
+      "start": 270.12,
+      "end": 275.28,
+      "text": "arrays the first one is a sorted array"
+    },
+    {
+      "start": 272.34,
+      "end": 277.92,
+      "text": "in itself and the second one is also a"
+    },
+    {
+      "start": 275.28,
+      "end": 280.5,
+      "text": "sorted array in itself so I'm giving you"
+    },
+    {
+      "start": 277.92,
+      "end": 282.54,
+      "text": "two different sorted arrays now what I'm"
+    },
+    {
+      "start": 280.5,
+      "end": 285.12,
+      "text": "telling you is if you have two sorted"
+    },
+    {
+      "start": 282.54,
+      "end": 288.06,
+      "text": "arrays can you tell me how many number"
+    },
+    {
+      "start": 285.12,
+      "end": 290.7,
+      "text": "of pairs you can form where the left"
+    },
+    {
+      "start": 288.06,
+      "end": 292.38,
+      "text": "element is from the left array and the"
+    },
+    {
+      "start": 290.7,
+      "end": 294.9,
+      "text": "right element is from the right array"
+    },
+    {
+      "start": 292.38,
+      "end": 297.66,
+      "text": "and it is greater something like I can"
+    },
+    {
+      "start": 294.9,
+      "end": 300.3,
+      "text": "pick a 5 and I can pick up two so that"
+    },
+    {
+      "start": 297.66,
+      "end": 302.58,
+      "text": "is a bit 5 comma 2 is a bear because 5"
+    },
+    {
+      "start": 300.3,
+      "end": 304.44,
+      "text": "was picked up from the left and 2 was"
+    },
+    {
+      "start": 302.58,
+      "end": 306.54,
+      "text": "picked up from the right and 5 is"
+    },
+    {
+      "start": 304.44,
+      "end": 308.64,
+      "text": "greater than 2. so how many such pairs"
+    },
+    {
+      "start": 306.54,
+      "end": 311.16,
+      "text": "can you for you can be like maybe I can"
+    },
+    {
+      "start": 308.64,
+      "end": 313.02,
+      "text": "form a pair of three comma 2 this 3 and"
+    },
+    {
+      "start": 311.16,
+      "end": 314.58,
+      "text": "this two maybe I can again form a pair"
+    },
+    {
+      "start": 313.02,
+      "end": 316.62,
+      "text": "of three comma two because this 3 and"
+    },
+    {
+      "start": 314.58,
+      "end": 319.74,
+      "text": "this two maybe I can again form a pair"
+    },
+    {
+      "start": 316.62,
+      "end": 322.38,
+      "text": "of five comma two five comma 2 again and"
+    },
+    {
+      "start": 319.74,
+      "end": 324.36,
+      "text": "5 comma four and five comma 4 because it"
+    },
+    {
+      "start": 322.38,
+      "end": 325.92,
+      "text": "can form bears with these things maybe I"
+    },
+    {
+      "start": 324.36,
+      "end": 328.68,
+      "text": "could pick up six and I can say can form"
+    },
+    {
+      "start": 325.92,
+      "end": 332.16,
+      "text": "a pair with two two four four everyone"
+    },
+    {
+      "start": 328.68,
+      "end": 335.04,
+      "text": "so I need the space so how can we do it"
+    },
+    {
+      "start": 332.16,
+      "end": 336.66,
+      "text": "one of the ways you know is you stand"
+    },
+    {
+      "start": 335.04,
+      "end": 338.76,
+      "text": "here and you go through every element"
+    },
+    {
+      "start": 336.66,
+      "end": 340.62,
+      "text": "you stand here you go through every"
+    },
+    {
+      "start": 338.76,
+      "end": 342.66,
+      "text": "element you stand here you go through"
+    },
+    {
+      "start": 340.62,
+      "end": 344.76,
+      "text": "every element you stand here and you go"
+    },
+    {
+      "start": 342.66,
+      "end": 346.44,
+      "text": "through every element that is the brute"
+    },
+    {
+      "start": 344.76,
+      "end": 348.36,
+      "text": "force in order to solve this particular"
+    },
+    {
+      "start": 346.44,
+      "end": 351.36,
+      "text": "problem but if I have to think of an"
+    },
+    {
+      "start": 348.36,
+      "end": 354.12,
+      "text": "efficient solution what will be that"
+    },
+    {
+      "start": 351.36,
+      "end": 356.58,
+      "text": "I'll send take two pointers I'll keep"
+    },
+    {
+      "start": 354.12,
+      "end": 359.1,
+      "text": "one pointer here I'll keep one pointer"
+    },
+    {
+      "start": 356.58,
+      "end": 361.8,
+      "text": "here I'll try to merged I'll try to"
+    },
+    {
+      "start": 359.1,
+      "end": 365.4,
+      "text": "merged so I'm taking the advantage of"
+    },
+    {
+      "start": 361.8,
+      "end": 366.54,
+      "text": "the fact that both the arrays are sorted"
+    },
+    {
+      "start": 365.4,
+      "end": 369.66,
+      "text": "in itself"
+    },
+    {
+      "start": 366.54,
+      "end": 371.7,
+      "text": "so if I ask you two and two remember we"
+    },
+    {
+      "start": 369.66,
+      "end": 374.88,
+      "text": "have to find left"
+    },
+    {
+      "start": 371.7,
+      "end": 377.34,
+      "text": "greater than right that is our main"
+    },
+    {
+      "start": 374.88,
+      "end": 379.74,
+      "text": "intention left greater than right so I'm"
+    },
+    {
+      "start": 377.34,
+      "end": 381.3,
+      "text": "taking 2 and 2 is the left three term"
+    },
+    {
+      "start": 379.74,
+      "end": 384.18,
+      "text": "I'm asking you a very simple question is"
+    },
+    {
+      "start": 381.3,
+      "end": 387.24,
+      "text": "it great no so just take this two"
+    },
+    {
+      "start": 384.18,
+      "end": 389.4,
+      "text": "just take this two and move"
+    },
+    {
+      "start": 387.24,
+      "end": 393.9,
+      "text": "next I have three next I have three"
+    },
+    {
+      "start": 389.4,
+      "end": 396.54,
+      "text": "another two can I say that this 3 is"
+    },
+    {
+      "start": 393.9,
+      "end": 397.38,
+      "text": "greater than this two can I say this I"
+    },
+    {
+      "start": 396.54,
+      "end": 400.56,
+      "text": "can"
+    },
+    {
+      "start": 397.38,
+      "end": 404.1,
+      "text": "so if I can see this can I see this tree"
+    },
+    {
+      "start": 400.56,
+      "end": 405.84,
+      "text": "will form a pair with this two again so"
+    },
+    {
+      "start": 404.1,
+      "end": 409.08,
+      "text": "maybe I can add a plus one to my answer"
+    },
+    {
+      "start": 405.84,
+      "end": 411.24,
+      "text": "maybe I can but is that the correct way"
+    },
+    {
+      "start": 409.08,
+      "end": 412.44,
+      "text": "no why let me tell you"
+    },
+    {
+      "start": 411.24,
+      "end": 415.92,
+      "text": "so"
+    },
+    {
+      "start": 412.44,
+      "end": 418.82,
+      "text": "if you just add with 3 and 2 you'll miss"
+    },
+    {
+      "start": 415.92,
+      "end": 423.06,
+      "text": "out on a lot of pace so let's have some"
+    },
+    {
+      "start": 418.82,
+      "end": 427.44,
+      "text": "thinking the array is sorted I am saying"
+    },
+    {
+      "start": 423.06,
+      "end": 430.56,
+      "text": "3 is greater than 2. isn't does that"
+    },
+    {
+      "start": 427.44,
+      "end": 432.9,
+      "text": "mean every element on the right of three"
+    },
+    {
+      "start": 430.56,
+      "end": 434.88,
+      "text": "will also be greater than 2 it will be"
+    },
+    {
+      "start": 432.9,
+      "end": 437.7,
+      "text": "because the array is sorted because the"
+    },
+    {
+      "start": 434.88,
+      "end": 441.12,
+      "text": "array is sorted so if 3 is greater than"
+    },
+    {
+      "start": 437.7,
+      "end": 443.82,
+      "text": "2 can I definitely say all the elements"
+    },
+    {
+      "start": 441.12,
+      "end": 447.12,
+      "text": "on the right will also be greater than 2"
+    },
+    {
+      "start": 443.82,
+      "end": 450.12,
+      "text": "and we can form pairs like 3 comma 2 5"
+    },
+    {
+      "start": 447.12,
+      "end": 454.14,
+      "text": "comma two six comma two everyone can"
+    },
+    {
+      "start": 450.12,
+      "end": 455.82,
+      "text": "form a pay thereby instead of adding 1"
+    },
+    {
+      "start": 454.14,
+      "end": 458.4,
+      "text": "I'll add three to the answer I'll add"
+    },
+    {
+      "start": 455.82,
+      "end": 460.62,
+      "text": "three to the answer and I'll take this"
+    },
+    {
+      "start": 458.4,
+      "end": 462.54,
+      "text": "particular 2 I'll take this particular 2"
+    },
+    {
+      "start": 460.62,
+      "end": 465.12,
+      "text": "and I'll move forward next time I have"
+    },
+    {
+      "start": 462.54,
+      "end": 468.06,
+      "text": "another two and I have three three is"
+    },
+    {
+      "start": 465.12,
+      "end": 470.28,
+      "text": "greater can I again say all of these"
+    },
+    {
+      "start": 468.06,
+      "end": 472.68,
+      "text": "three elements can form a pair with this"
+    },
+    {
+      "start": 470.28,
+      "end": 475.14,
+      "text": "too so I'll again add 3 to the answer"
+    },
+    {
+      "start": 472.68,
+      "end": 477.06,
+      "text": "and this time I'll again take this 2 and"
+    },
+    {
+      "start": 475.14,
+      "end": 479.34,
+      "text": "I'll move forward and this time there's"
+    },
+    {
+      "start": 477.06,
+      "end": 481.86,
+      "text": "a 4 and there's a three but can I say"
+    },
+    {
+      "start": 479.34,
+      "end": 484.44,
+      "text": "that this 3 is smaller so no need to do"
+    },
+    {
+      "start": 481.86,
+      "end": 487.68,
+      "text": "anything just move next I have a five"
+    },
+    {
+      "start": 484.44,
+      "end": 490.2,
+      "text": "I have a five I have a four so can I see"
+    },
+    {
+      "start": 487.68,
+      "end": 493.08,
+      "text": "this 5 is greater than 4 which is my"
+    },
+    {
+      "start": 490.2,
+      "end": 495.18,
+      "text": "requirement thereby can I say all the"
+    },
+    {
+      "start": 493.08,
+      "end": 497.52,
+      "text": "elements to the right of five all the"
+    },
+    {
+      "start": 495.18,
+      "end": 499.44,
+      "text": "elements of the right of five can form a"
+    },
+    {
+      "start": 497.52,
+      "end": 502.32,
+      "text": "pair with this four can form a pair with"
+    },
+    {
+      "start": 499.44,
+      "end": 504.36,
+      "text": "this four yes so thereby I'll add plus"
+    },
+    {
+      "start": 502.32,
+      "end": 506.82,
+      "text": "2y because there are two elements on the"
+    },
+    {
+      "start": 504.36,
+      "end": 508.26,
+      "text": "right and each of them can form a pair"
+    },
+    {
+      "start": 506.82,
+      "end": 509.94,
+      "text": "with this four so I'll take this code"
+    },
+    {
+      "start": 508.26,
+      "end": 513.12,
+      "text": "and I'll move"
+    },
+    {
+      "start": 509.94,
+      "end": 516.3,
+      "text": "next I have another four same thing plus"
+    },
+    {
+      "start": 513.12,
+      "end": 518.34,
+      "text": "two next I'll take this 4 and I'll move"
+    },
+    {
+      "start": 516.3,
+      "end": 521.16,
+      "text": "what do we have this name five so I'll"
+    },
+    {
+      "start": 518.34,
+      "end": 522.54,
+      "text": "take this 5 next we have the six so"
+    },
+    {
+      "start": 521.16,
+      "end": 525.42,
+      "text": "we'll take the six"
+    },
+    {
+      "start": 522.54,
+      "end": 527.7,
+      "text": "and it is exhausted I just left out with"
+    },
+    {
+      "start": 525.42,
+      "end": 530.1,
+      "text": "eight but eight cannot be compared with"
+    },
+    {
+      "start": 527.7,
+      "end": 532.68,
+      "text": "any one so a cannot form any more pairs"
+    },
+    {
+      "start": 530.1,
+      "end": 535.74,
+      "text": "so apparently I got six"
+    },
+    {
+      "start": 532.68,
+      "end": 539.16,
+      "text": "eight ten so I know the number of pairs"
+    },
+    {
+      "start": 535.74,
+      "end": 540.26,
+      "text": "are 10 how many iterations take it I"
+    },
+    {
+      "start": 539.16,
+      "end": 544.8,
+      "text": "just did"
+    },
+    {
+      "start": 540.26,
+      "end": 547.38,
+      "text": "one two three four five six seven eight"
+    },
+    {
+      "start": 544.8,
+      "end": 550.56,
+      "text": "nine I did nine iterations or I can say"
+    },
+    {
+      "start": 547.38,
+      "end": 552.42,
+      "text": "I did length of the first array plus the"
+    },
+    {
+      "start": 550.56,
+      "end": 554.7,
+      "text": "length of the second array these many"
+    },
+    {
+      "start": 552.42,
+      "end": 557.28,
+      "text": "iterations I did if"
+    },
+    {
+      "start": 554.7,
+      "end": 559.86,
+      "text": "the left side was sorted and the right"
+    },
+    {
+      "start": 557.28,
+      "end": 561.9,
+      "text": "side was sorted I just did it and I was"
+    },
+    {
+      "start": 559.86,
+      "end": 564.42,
+      "text": "able to find out the number of pairs"
+    },
+    {
+      "start": 561.9,
+      "end": 567.12,
+      "text": "that these left elements will form with"
+    },
+    {
+      "start": 564.42,
+      "end": 568.98,
+      "text": "these right Elements which is we were"
+    },
+    {
+      "start": 567.12,
+      "end": 571.32,
+      "text": "able to solve it in a linear time"
+    },
+    {
+      "start": 568.98,
+      "end": 572.76,
+      "text": "correct so"
+    },
+    {
+      "start": 571.32,
+      "end": 574.26,
+      "text": "if I ask you"
+    },
+    {
+      "start": 572.76,
+      "end": 576.12,
+      "text": "can you map"
+    },
+    {
+      "start": 574.26,
+      "end": 577.98,
+      "text": "this particular neck piece because this"
+    },
+    {
+      "start": 576.12,
+      "end": 579.9,
+      "text": "array is not sorted"
+    },
+    {
+      "start": 577.98,
+      "end": 583.74,
+      "text": "can be somehow"
+    },
+    {
+      "start": 579.9,
+      "end": 586.44,
+      "text": "map this array into some sorted form and"
+    },
+    {
+      "start": 583.74,
+      "end": 588.36,
+      "text": "get the left section as sorted and the"
+    },
+    {
+      "start": 586.44,
+      "end": 591.54,
+      "text": "right section as sorted you'll be like"
+    },
+    {
+      "start": 588.36,
+      "end": 595.14,
+      "text": "okay I can think of merge sort algorithm"
+    },
+    {
+      "start": 591.54,
+      "end": 596.94,
+      "text": "I can think of merge sort algorithm if I"
+    },
+    {
+      "start": 595.14,
+      "end": 599.16,
+      "text": "remember more short keeps on breaking"
+    },
+    {
+      "start": 596.94,
+      "end": 600.9,
+      "text": "and the left is sorted and the right is"
+    },
+    {
+      "start": 599.16,
+      "end": 603.36,
+      "text": "shorter and then merge it back then they"
+    },
+    {
+      "start": 600.9,
+      "end": 605.64,
+      "text": "merge it so at that point we can count"
+    },
+    {
+      "start": 603.36,
+      "end": 608.04,
+      "text": "at the point we can count right so keep"
+    },
+    {
+      "start": 605.64,
+      "end": 610.32,
+      "text": "this algorithm in mind and then I'll"
+    },
+    {
+      "start": 608.04,
+      "end": 612.72,
+      "text": "show you how can we implement this in"
+    },
+    {
+      "start": 610.32,
+      "end": 615.42,
+      "text": "the most shot but as of now keeping this"
+    },
+    {
+      "start": 612.72,
+      "end": 619.08,
+      "text": "algorithm in mind is very important"
+    },
+    {
+      "start": 615.42,
+      "end": 621.3,
+      "text": "3 2 was compared and 3 was find out to"
+    },
+    {
+      "start": 619.08,
+      "end": 623.22,
+      "text": "be greater than 2. thereby oquiry date"
+    },
+    {
+      "start": 621.3,
+      "end": 625.32,
+      "text": "was you counted every element because"
+    },
+    {
+      "start": 623.22,
+      "end": 627.42,
+      "text": "every element can form a pairway to"
+    },
+    {
+      "start": 625.32,
+      "end": 628.92,
+      "text": "every element can form a pivot that is"
+    },
+    {
+      "start": 627.42,
+      "end": 631.32,
+      "text": "the critical point over here so what"
+    },
+    {
+      "start": 628.92,
+      "end": 634.14,
+      "text": "I'll do is I'll now go back try to erase"
+    },
+    {
+      "start": 631.32,
+      "end": 636.42,
+      "text": "this written down the array let's try to"
+    },
+    {
+      "start": 634.14,
+      "end": 639.72,
+      "text": "implement more short and let's see if we"
+    },
+    {
+      "start": 636.42,
+      "end": 641.76,
+      "text": "can integrate this logic into more shot"
+    },
+    {
+      "start": 639.72,
+      "end": 643.44,
+      "text": "or not so I've written down the array"
+    },
+    {
+      "start": 641.76,
+      "end": 645.72,
+      "text": "and what I'll do is I'll try to break it"
+    },
+    {
+      "start": 643.44,
+      "end": 647.52,
+      "text": "down because the first step of merge"
+    },
+    {
+      "start": 645.72,
+      "end": 650.28,
+      "text": "chart if you remember is it gets"
+    },
+    {
+      "start": 647.52,
+      "end": 652.08,
+      "text": "splitted into half so it is like 5 comma"
+    },
+    {
+      "start": 650.28,
+      "end": 655.38,
+      "text": "3 comma 2."
+    },
+    {
+      "start": 652.08,
+      "end": 657.24,
+      "text": "and the left one will be 4 comma 1. and"
+    },
+    {
+      "start": 655.38,
+      "end": 661.32,
+      "text": "then the left side gets again splitted"
+    },
+    {
+      "start": 657.24,
+      "end": 664.62,
+      "text": "so the left side is 5 comma 3 and the"
+    },
+    {
+      "start": 661.32,
+      "end": 670.02,
+      "text": "right side is 2 again the left will get"
+    },
+    {
+      "start": 664.62,
+      "end": 673.62,
+      "text": "splitted it goes as 5 it goes as 3 right"
+    },
+    {
+      "start": 670.02,
+      "end": 676.56,
+      "text": "so let's wait I will write the right"
+    },
+    {
+      "start": 673.62,
+      "end": 678.66,
+      "text": "section afterwards let's first solve the"
+    },
+    {
+      "start": 676.56,
+      "end": 680.58,
+      "text": "left section because in recursion the"
+    },
+    {
+      "start": 678.66,
+      "end": 682.92,
+      "text": "left section is solved at first let's"
+    },
+    {
+      "start": 680.58,
+      "end": 685.86,
+      "text": "try to solve we have a five we have a"
+    },
+    {
+      "start": 682.92,
+      "end": 688.26,
+      "text": "three can I say this is an array in"
+    },
+    {
+      "start": 685.86,
+      "end": 691.74,
+      "text": "itself and can I say this is an array in"
+    },
+    {
+      "start": 688.26,
+      "end": 694.68,
+      "text": "itself I get I can so if I try to write"
+    },
+    {
+      "start": 691.74,
+      "end": 696.96,
+      "text": "this 5 is an array in itself 3 is an"
+    },
+    {
+      "start": 694.68,
+      "end": 699.78,
+      "text": "array in itself can I say"
+    },
+    {
+      "start": 696.96,
+      "end": 702.9,
+      "text": "I have two arrays and both of them are"
+    },
+    {
+      "start": 699.78,
+      "end": 705.3,
+      "text": "sorted I can I have two arrays and both"
+    },
+    {
+      "start": 702.9,
+      "end": 707.88,
+      "text": "of them are sorted I can so I'll keep"
+    },
+    {
+      "start": 705.3,
+      "end": 710.16,
+      "text": "two pointers"
+    },
+    {
+      "start": 707.88,
+      "end": 712.92,
+      "text": "right I have Capital point is and what"
+    },
+    {
+      "start": 710.16,
+      "end": 715.44,
+      "text": "do I see I know one thing for sure this"
+    },
+    {
+      "start": 712.92,
+      "end": 717.48,
+      "text": "three is smaller this three is smaller"
+    },
+    {
+      "start": 715.44,
+      "end": 720.18,
+      "text": "and this five can form a pair with three"
+    },
+    {
+      "start": 717.48,
+      "end": 722.34,
+      "text": "so can I say everyone on the right of"
+    },
+    {
+      "start": 720.18,
+      "end": 725.22,
+      "text": "five I know it's one element but can"
+    },
+    {
+      "start": 722.34,
+      "end": 727.38,
+      "text": "form a pair with three so I'll add plus"
+    },
+    {
+      "start": 725.22,
+      "end": 729.9,
+      "text": "one to my answer and add plus one to my"
+    },
+    {
+      "start": 727.38,
+      "end": 731.7,
+      "text": "answer and I'll take three because that"
+    },
+    {
+      "start": 729.9,
+      "end": 734.16,
+      "text": "is what we do in most shot when we merge"
+    },
+    {
+      "start": 731.7,
+      "end": 736.98,
+      "text": "both of the sorted arrays and then I'll"
+    },
+    {
+      "start": 734.16,
+      "end": 739.52,
+      "text": "move forward and since it is over we'll"
+    },
+    {
+      "start": 736.98,
+      "end": 742.08,
+      "text": "take five so I've taken five so this"
+    },
+    {
+      "start": 739.52,
+      "end": 744.42,
+      "text": "gets down to three comma five perfect"
+    },
+    {
+      "start": 742.08,
+      "end": 747.72,
+      "text": "done"
+    },
+    {
+      "start": 744.42,
+      "end": 750.24,
+      "text": "so while merging while merging found out"
+    },
+    {
+      "start": 747.72,
+      "end": 754.8,
+      "text": "one pair perfect what's the next step of"
+    },
+    {
+      "start": 750.24,
+      "end": 757.26,
+      "text": "merge three comma five and"
+    },
+    {
+      "start": 754.8,
+      "end": 760.32,
+      "text": "two so let's write it three comma five"
+    },
+    {
+      "start": 757.26,
+      "end": 763.2,
+      "text": "and two let's try to merge it remember"
+    },
+    {
+      "start": 760.32,
+      "end": 765.84,
+      "text": "one thing the three and five in"
+    },
+    {
+      "start": 763.2,
+      "end": 768.6,
+      "text": "themselves I've got one pair so they"
+    },
+    {
+      "start": 765.84,
+      "end": 770.76,
+      "text": "cannot form any further pairs within"
+    },
+    {
+      "start": 768.6,
+      "end": 773.16,
+      "text": "themselves they'll look for the writer"
+    },
+    {
+      "start": 770.76,
+      "end": 775.38,
+      "text": "partner which is two which is two and"
+    },
+    {
+      "start": 773.16,
+      "end": 777.9,
+      "text": "going ahead they look for further right"
+    },
+    {
+      "start": 775.38,
+      "end": 780.96,
+      "text": "okay so again let's try to implement the"
+    },
+    {
+      "start": 777.9,
+      "end": 783.36,
+      "text": "same algo I will be at 3 I'll be at 2"
+    },
+    {
+      "start": 780.96,
+      "end": 785.64,
+      "text": "who is the smaller who is the smaller 2"
+    },
+    {
+      "start": 783.36,
+      "end": 788.7,
+      "text": "is the smaller so can 3 from a pair with"
+    },
+    {
+      "start": 785.64,
+      "end": 791.94,
+      "text": "two yes yes yes it can so three can form"
+    },
+    {
+      "start": 788.7,
+      "end": 794.4,
+      "text": "a pair with two wow which means all the"
+    },
+    {
+      "start": 791.94,
+      "end": 796.74,
+      "text": "two elements come from thereby you go"
+    },
+    {
+      "start": 794.4,
+      "end": 799.5,
+      "text": "ahead and add a plus two to your answer"
+    },
+    {
+      "start": 796.74,
+      "end": 801.48,
+      "text": "and you'll take two and you'll move the"
+    },
+    {
+      "start": 799.5,
+      "end": 803.88,
+      "text": "pointer the moment you move the pointer"
+    },
+    {
+      "start": 801.48,
+      "end": 806.16,
+      "text": "it's over so you'll take up all the"
+    },
+    {
+      "start": 803.88,
+      "end": 809.52,
+      "text": "elements he'll take up all the elements"
+    },
+    {
+      "start": 806.16,
+      "end": 810.78,
+      "text": "and this will be your merged array so"
+    },
+    {
+      "start": 809.52,
+      "end": 813.66,
+      "text": "let's go back"
+    },
+    {
+      "start": 810.78,
+      "end": 817.26,
+      "text": "and write this merged array 2 comma 3"
+    },
+    {
+      "start": 813.66,
+      "end": 819.54,
+      "text": "comma five so let's analyze something"
+    },
+    {
+      "start": 817.26,
+      "end": 822.3,
+      "text": "all the elements within themselves have"
+    },
+    {
+      "start": 819.54,
+      "end": 825.0,
+      "text": "got the best like three got with pi over"
+    },
+    {
+      "start": 822.3,
+      "end": 827.58,
+      "text": "in this step two got with three and five"
+    },
+    {
+      "start": 825.0,
+      "end": 830.28,
+      "text": "in this particular step so everyone is"
+    },
+    {
+      "start": 827.58,
+      "end": 833.16,
+      "text": "tough perfect I'll just erase it let's"
+    },
+    {
+      "start": 830.28,
+      "end": 834.6,
+      "text": "do the next step we are at four"
+    },
+    {
+      "start": 833.16,
+      "end": 836.4,
+      "text": "I'm sorry"
+    },
+    {
+      "start": 834.6,
+      "end": 840.18,
+      "text": "we are at four"
+    },
+    {
+      "start": 836.4,
+      "end": 843.3,
+      "text": "we are at 1. so this time we again have"
+    },
+    {
+      "start": 840.18,
+      "end": 846.06,
+      "text": "two sorted arrays which is four which is"
+    },
+    {
+      "start": 843.3,
+      "end": 849.6,
+      "text": "one let's observe again we are at four"
+    },
+    {
+      "start": 846.06,
+      "end": 851.46,
+      "text": "we are at one one is smaller can I say"
+    },
+    {
+      "start": 849.6,
+      "end": 853.98,
+      "text": "everyone on the right of four although"
+    },
+    {
+      "start": 851.46,
+      "end": 855.72,
+      "text": "it's one element can form a bear so I'll"
+    },
+    {
+      "start": 853.98,
+      "end": 858.0,
+      "text": "add another one I'll add another one"
+    },
+    {
+      "start": 855.72,
+      "end": 859.92,
+      "text": "I'll take one and this goes out of the"
+    },
+    {
+      "start": 858.0,
+      "end": 862.44,
+      "text": "boundary so we will have one comma four"
+    },
+    {
+      "start": 859.92,
+      "end": 864.6,
+      "text": "as the merged we have we'll have one"
+    },
+    {
+      "start": 862.44,
+      "end": 867.3,
+      "text": "comma four as the merged so I'll go back"
+    },
+    {
+      "start": 864.6,
+      "end": 870.24,
+      "text": "and the most array will look like one"
+    },
+    {
+      "start": 867.3,
+      "end": 872.34,
+      "text": "comma four perfect silver"
+    },
+    {
+      "start": 870.24,
+      "end": 875.16,
+      "text": "what's the next step The Next Step will"
+    },
+    {
+      "start": 872.34,
+      "end": 877.5,
+      "text": "definitely be about merging this and"
+    },
+    {
+      "start": 875.16,
+      "end": 879.6,
+      "text": "what merge in this so what do we have on"
+    },
+    {
+      "start": 877.5,
+      "end": 882.24,
+      "text": "the left two comma three comma five"
+    },
+    {
+      "start": 879.6,
+      "end": 884.82,
+      "text": "which is again a sorted array on the"
+    },
+    {
+      "start": 882.24,
+      "end": 886.38,
+      "text": "right one call forward why does this"
+    },
+    {
+      "start": 884.82,
+      "end": 888.78,
+      "text": "helper work because"
+    },
+    {
+      "start": 886.38,
+      "end": 890.4,
+      "text": "everything between two three five have"
+    },
+    {
+      "start": 888.78,
+      "end": 892.5,
+      "text": "already been figured out and you got"
+    },
+    {
+      "start": 890.4,
+      "end": 894.6,
+      "text": "these pairs from them everything between"
+    },
+    {
+      "start": 892.5,
+      "end": 897.42,
+      "text": "one and four have already been figured"
+    },
+    {
+      "start": 894.6,
+      "end": 899.46,
+      "text": "out in the lower branches so as of now"
+    },
+    {
+      "start": 897.42,
+      "end": 901.44,
+      "text": "we just need to figure out this portion"
+    },
+    {
+      "start": 899.46,
+      "end": 903.72,
+      "text": "of element which is somewhere this"
+    },
+    {
+      "start": 901.44,
+      "end": 905.82,
+      "text": "portion and the right so we just need to"
+    },
+    {
+      "start": 903.72,
+      "end": 908.34,
+      "text": "figure a demo let's try to do it again"
+    },
+    {
+      "start": 905.82,
+      "end": 912.06,
+      "text": "the same algorithm I'll use I'll be at 2"
+    },
+    {
+      "start": 908.34,
+      "end": 915.06,
+      "text": "I'll be at four I'll try to erase this"
+    },
+    {
+      "start": 912.06,
+      "end": 917.7,
+      "text": "to have less distraction what will you"
+    },
+    {
+      "start": 915.06,
+      "end": 922.5,
+      "text": "take you will take one you will take one"
+    },
+    {
+      "start": 917.7,
+      "end": 925.14,
+      "text": "why because one is smaller than two can"
+    },
+    {
+      "start": 922.5,
+      "end": 927.54,
+      "text": "I say all the three elements can form a"
+    },
+    {
+      "start": 925.14,
+      "end": 930.54,
+      "text": "pair with one I can so go ahead and add"
+    },
+    {
+      "start": 927.54,
+      "end": 932.52,
+      "text": "a 3 to the ends and I'll take one and"
+    },
+    {
+      "start": 930.54,
+      "end": 935.64,
+      "text": "I'll move forward the same what do we"
+    },
+    {
+      "start": 932.52,
+      "end": 937.68,
+      "text": "have we have a four can four no it"
+    },
+    {
+      "start": 935.64,
+      "end": 940.56,
+      "text": "cannot so what I'll do is I'll take a"
+    },
+    {
+      "start": 937.68,
+      "end": 942.78,
+      "text": "two and I'll move can three and four now"
+    },
+    {
+      "start": 940.56,
+      "end": 945.6,
+      "text": "I'll take a three I'll move what do we"
+    },
+    {
+      "start": 942.78,
+      "end": 947.52,
+      "text": "have we have a five we have a four the"
+    },
+    {
+      "start": 945.6,
+      "end": 949.02,
+      "text": "stamp four is smaller so all the"
+    },
+    {
+      "start": 947.52,
+      "end": 952.02,
+      "text": "elements to the right of the five"
+    },
+    {
+      "start": 949.02,
+      "end": 955.8,
+      "text": "thereby we will add plus one and I'll"
+    },
+    {
+      "start": 952.02,
+      "end": 958.2,
+      "text": "take the four and I'll move over so just"
+    },
+    {
+      "start": 955.8,
+      "end": 960.36,
+      "text": "one limit left will take five so the"
+    },
+    {
+      "start": 958.2,
+      "end": 963.06,
+      "text": "array is sorted"
+    },
+    {
+      "start": 960.36,
+      "end": 966.42,
+      "text": "one comma two comma three comma four"
+    },
+    {
+      "start": 963.06,
+      "end": 968.64,
+      "text": "comma five the array sorted so what"
+    },
+    {
+      "start": 966.42,
+      "end": 970.98,
+      "text": "happened was"
+    },
+    {
+      "start": 968.64,
+      "end": 972.78,
+      "text": "I did perform the entire motion and"
+    },
+    {
+      "start": 970.98,
+      "end": 975.24,
+      "text": "while merging both the arrays while"
+    },
+    {
+      "start": 972.78,
+      "end": 976.74,
+      "text": "merging both the arrays I did much while"
+    },
+    {
+      "start": 975.24,
+      "end": 978.54,
+      "text": "merging both the arrays I did my job"
+    },
+    {
+      "start": 976.74,
+      "end": 980.58,
+      "text": "let's see if we got the correct answer"
+    },
+    {
+      "start": 978.54,
+      "end": 983.58,
+      "text": "if you remember the answer was"
+    },
+    {
+      "start": 980.58,
+      "end": 985.8,
+      "text": "what was the answer eight one plus two"
+    },
+    {
+      "start": 983.58,
+      "end": 986.88,
+      "text": "three plus one four plus three seven"
+    },
+    {
+      "start": 985.8,
+      "end": 989.46,
+      "text": "plus one eight"
+    },
+    {
+      "start": 986.88,
+      "end": 993.0,
+      "text": "we got our answer so apparently more"
+    },
+    {
+      "start": 989.46,
+      "end": 994.98,
+      "text": "short will be solving this and when do"
+    },
+    {
+      "start": 993.0,
+      "end": 998.4,
+      "text": "we need to apply this vertical algorithm"
+    },
+    {
+      "start": 994.98,
+      "end": 1000.8,
+      "text": "while merging it let's let's"
+    },
+    {
+      "start": 998.4,
+      "end": 1001.82,
+      "text": "see when did we merge we had two three"
+    },
+    {
+      "start": 1000.8,
+      "end": 1006.22,
+      "text": "five"
+    },
+    {
+      "start": 1001.82,
+      "end": 1008.96,
+      "text": "we had 1 comma four so this was the step"
+    },
+    {
+      "start": 1006.22,
+      "end": 1011.42,
+      "text": "I'm just taking a monster so if you"
+    },
+    {
+      "start": 1008.96,
+      "end": 1013.58,
+      "text": "remember we had a low"
+    },
+    {
+      "start": 1011.42,
+      "end": 1015.92,
+      "text": "this will be made"
+    },
+    {
+      "start": 1013.58,
+      "end": 1017.54,
+      "text": "this will be mid plus one again this is"
+    },
+    {
+      "start": 1015.92,
+      "end": 1019.76,
+      "text": "the reason I'm saying go back and watch"
+    },
+    {
+      "start": 1017.54,
+      "end": 1021.86,
+      "text": "my merge shot video go back and watch my"
+    },
+    {
+      "start": 1019.76,
+      "end": 1024.38,
+      "text": "merch short video in that the math step"
+    },
+    {
+      "start": 1021.86,
+      "end": 1027.26,
+      "text": "has the left part as low to mid"
+    },
+    {
+      "start": 1024.38,
+      "end": 1029.3,
+      "text": "and the right part as mid to high so if"
+    },
+    {
+      "start": 1027.26,
+      "end": 1030.92,
+      "text": "you do not if you haven't watched my"
+    },
+    {
+      "start": 1029.3,
+      "end": 1033.26,
+      "text": "master video you not understand the"
+    },
+    {
+      "start": 1030.92,
+      "end": 1035.54,
+      "text": "implementation so apparently what you"
+    },
+    {
+      "start": 1033.26,
+      "end": 1037.7,
+      "text": "can do is you can take the initial left"
+    },
+    {
+      "start": 1035.54,
+      "end": 1039.98,
+      "text": "pointer to be at low and initial right"
+    },
+    {
+      "start": 1037.7,
+      "end": 1041.54,
+      "text": "pointer to be at Mid plus one so over"
+    },
+    {
+      "start": 1039.98,
+      "end": 1044.42,
+      "text": "here one"
+    },
+    {
+      "start": 1041.54,
+      "end": 1045.92,
+      "text": "is smaller than this two right so what"
+    },
+    {
+      "start": 1044.42,
+      "end": 1048.14,
+      "text": "happens is since once is smaller than"
+    },
+    {
+      "start": 1045.92,
+      "end": 1051.62,
+      "text": "two you take all the numbers from here"
+    },
+    {
+      "start": 1048.14,
+      "end": 1055.16,
+      "text": "how many numbers are they three"
+    },
+    {
+      "start": 1051.62,
+      "end": 1056.84,
+      "text": "you took one you took one and you added"
+    },
+    {
+      "start": 1055.16,
+      "end": 1058.94,
+      "text": "plus three to the answer you added plus"
+    },
+    {
+      "start": 1056.84,
+      "end": 1060.86,
+      "text": "3 to the answer so how many numbers are"
+    },
+    {
+      "start": 1058.94,
+      "end": 1064.34,
+      "text": "there on the right can I say the numbers"
+    },
+    {
+      "start": 1060.86,
+      "end": 1066.44,
+      "text": "are mid minus left plus one"
+    },
+    {
+      "start": 1064.34,
+      "end": 1068.9,
+      "text": "why because the number of numbers will"
+    },
+    {
+      "start": 1066.44,
+      "end": 1072.86,
+      "text": "be if I write down the indexing 0 1 2"
+    },
+    {
+      "start": 1068.9,
+      "end": 1075.32,
+      "text": "it'll be 2 minus 0 which is 2 and then"
+    },
+    {
+      "start": 1072.86,
+      "end": 1078.2,
+      "text": "plus 1 3. simple there are three"
+    },
+    {
+      "start": 1075.32,
+      "end": 1079.82,
+      "text": "elements two three five so you just have"
+    },
+    {
+      "start": 1078.2,
+      "end": 1081.98,
+      "text": "to add this to your ends you just have"
+    },
+    {
+      "start": 1079.82,
+      "end": 1083.72,
+      "text": "to add this to your answer in the most"
+    },
+    {
+      "start": 1081.98,
+      "end": 1085.4,
+      "text": "short code let's quickly go into the"
+    },
+    {
+      "start": 1083.72,
+      "end": 1087.44,
+      "text": "code editor and code this up again"
+    },
+    {
+      "start": 1085.4,
+      "end": 1089.24,
+      "text": "please please uh derive the problem from"
+    },
+    {
+      "start": 1087.44,
+      "end": 1091.46,
+      "text": "the link in the description itself that"
+    },
+    {
+      "start": 1089.24,
+      "end": 1093.44,
+      "text": "will help me a lot so you have to count"
+    },
+    {
+      "start": 1091.46,
+      "end": 1096.08,
+      "text": "the number of inversions we know we need"
+    },
+    {
+      "start": 1093.44,
+      "end": 1098.48,
+      "text": "merge sort so I'll go to the more short"
+    },
+    {
+      "start": 1096.08,
+      "end": 1100.4,
+      "text": "article and I'll try to pick up the code"
+    },
+    {
+      "start": 1098.48,
+      "end": 1102.26,
+      "text": "so this was the code let's try to pick"
+    },
+    {
+      "start": 1100.4,
+      "end": 1104.3,
+      "text": "it up so let's try to pick it up okay"
+    },
+    {
+      "start": 1102.26,
+      "end": 1105.02,
+      "text": "cool I'll pick it up so what I've done"
+    },
+    {
+      "start": 1104.3,
+      "end": 1107.08,
+      "text": "is"
+    },
+    {
+      "start": 1105.02,
+      "end": 1110.0,
+      "text": "I've just picked up the entire militia"
+    },
+    {
+      "start": 1107.08,
+      "end": 1112.52,
+      "text": "and okay we know this will be"
+    },
+    {
+      "start": 1110.0,
+      "end": 1116.72,
+      "text": "doing all the Sorting thing so let's"
+    },
+    {
+      "start": 1112.52,
+      "end": 1119.06,
+      "text": "call this merge sort with 0 because we"
+    },
+    {
+      "start": 1116.72,
+      "end": 1120.8,
+      "text": "need the array at first we need 0 the"
+    },
+    {
+      "start": 1119.06,
+      "end": 1123.44,
+      "text": "starting index and we need n minus one"
+    },
+    {
+      "start": 1120.8,
+      "end": 1125.06,
+      "text": "so I'm calling the motion but we need"
+    },
+    {
+      "start": 1123.44,
+      "end": 1126.68,
+      "text": "the answer so let's keep a global"
+    },
+    {
+      "start": 1125.06,
+      "end": 1129.44,
+      "text": "variable as of now we are keeping local"
+    },
+    {
+      "start": 1126.68,
+      "end": 1132.26,
+      "text": "video identity count equal to zero I"
+    },
+    {
+      "start": 1129.44,
+      "end": 1133.94,
+      "text": "kept the global variable as count as 0."
+    },
+    {
+      "start": 1132.26,
+      "end": 1136.76,
+      "text": "what's the first thing if you remember"
+    },
+    {
+      "start": 1133.94,
+      "end": 1138.92,
+      "text": "let's go back to the example"
+    },
+    {
+      "start": 1136.76,
+      "end": 1140.72,
+      "text": "we are comparing two and one"
+    },
+    {
+      "start": 1138.92,
+      "end": 1142.7,
+      "text": "right we are comparing two and one so"
+    },
+    {
+      "start": 1140.72,
+      "end": 1145.28,
+      "text": "where is this comparison going"
+    },
+    {
+      "start": 1142.7,
+      "end": 1148.58,
+      "text": "so this is where we compare either the"
+    },
+    {
+      "start": 1145.28,
+      "end": 1150.2,
+      "text": "left is smaller or the right is smaller"
+    },
+    {
+      "start": 1148.58,
+      "end": 1152.42,
+      "text": "so this is the place where we say right"
+    },
+    {
+      "start": 1150.2,
+      "end": 1155.3,
+      "text": "is smaller again I've written this code"
+    },
+    {
+      "start": 1152.42,
+      "end": 1156.62,
+      "text": "in the most short video that's why I'm"
+    },
+    {
+      "start": 1155.3,
+      "end": 1158.66,
+      "text": "not explaining this"
+    },
+    {
+      "start": 1156.62,
+      "end": 1160.16,
+      "text": "do you know the right is smaller so if"
+    },
+    {
+      "start": 1158.66,
+      "end": 1162.14,
+      "text": "the right is smaller we're taking one"
+    },
+    {
+      "start": 1160.16,
+      "end": 1164.3,
+      "text": "we're taking one and what are we adding"
+    },
+    {
+      "start": 1162.14,
+      "end": 1166.7,
+      "text": "to the answer this portion all the three"
+    },
+    {
+      "start": 1164.3,
+      "end": 1169.4,
+      "text": "elements which is this so what I'll do"
+    },
+    {
+      "start": 1166.7,
+      "end": 1171.02,
+      "text": "is before doing anything we're taking it"
+    },
+    {
+      "start": 1169.4,
+      "end": 1173.42,
+      "text": "and I'll add"
+    },
+    {
+      "start": 1171.02,
+      "end": 1175.52,
+      "text": "mid minus left plus one a simple"
+    },
+    {
+      "start": 1173.42,
+      "end": 1177.26,
+      "text": "addition in the merge shortcode a simple"
+    },
+    {
+      "start": 1175.52,
+      "end": 1179.42,
+      "text": "addition and keeping count is the global"
+    },
+    {
+      "start": 1177.26,
+      "end": 1181.82,
+      "text": "variable once the merge shot is"
+    },
+    {
+      "start": 1179.42,
+      "end": 1183.44,
+      "text": "performed I had returned the count and"
+    },
+    {
+      "start": 1181.82,
+      "end": 1185.72,
+      "text": "let's quickly run this off"
+    },
+    {
+      "start": 1183.44,
+      "end": 1187.1,
+      "text": "just a one line addition let's see if"
+    },
+    {
+      "start": 1185.72,
+      "end": 1189.32,
+      "text": "this runs or not"
+    },
+    {
+      "start": 1187.1,
+      "end": 1191.3,
+      "text": "okay did not run y"
+    },
+    {
+      "start": 1189.32,
+      "end": 1192.92,
+      "text": "array was not declared in the scope my"
+    },
+    {
+      "start": 1191.3,
+      "end": 1194.6,
+      "text": "bad this was a"
+    },
+    {
+      "start": 1192.92,
+      "end": 1196.22,
+      "text": "it's going to run this off and see if it"
+    },
+    {
+      "start": 1194.6,
+      "end": 1198.56,
+      "text": "is running now"
+    },
+    {
+      "start": 1196.22,
+      "end": 1202.16,
+      "text": "it should be it does fun"
+    },
+    {
+      "start": 1198.56,
+      "end": 1204.62,
+      "text": "so a one line and it does it but in an"
+    },
+    {
+      "start": 1202.16,
+      "end": 1207.68,
+      "text": "interview do not keep Global variables"
+    },
+    {
+      "start": 1204.62,
+      "end": 1209.96,
+      "text": "it's highly discouraged let's omit this"
+    },
+    {
+      "start": 1207.68,
+      "end": 1213.98,
+      "text": "what you what you should do is"
+    },
+    {
+      "start": 1209.96,
+      "end": 1216.02,
+      "text": "just keep a simple count variable"
+    },
+    {
+      "start": 1213.98,
+      "end": 1218.06,
+      "text": "while merging let it count the answer"
+    },
+    {
+      "start": 1216.02,
+      "end": 1219.44,
+      "text": "let it count the answer like while"
+    },
+    {
+      "start": 1218.06,
+      "end": 1221.54,
+      "text": "you're merging to arrays let it count"
+    },
+    {
+      "start": 1219.44,
+      "end": 1223.64,
+      "text": "and at the end let's return"
+    },
+    {
+      "start": 1221.54,
+      "end": 1226.28,
+      "text": "whatever it counts let's convert this"
+    },
+    {
+      "start": 1223.64,
+      "end": 1229.16,
+      "text": "into integer so whenever it is merging"
+    },
+    {
+      "start": 1226.28,
+      "end": 1231.86,
+      "text": "the left and right it will tell me how"
+    },
+    {
+      "start": 1229.16,
+      "end": 1235.1,
+      "text": "many he got how many he got it will tell"
+    },
+    {
+      "start": 1231.86,
+      "end": 1237.74,
+      "text": "me right and okay I'm I'm kind of"
+    },
+    {
+      "start": 1235.1,
+      "end": 1239.66,
+      "text": "calling the merge divide divide but"
+    },
+    {
+      "start": 1237.74,
+      "end": 1240.98,
+      "text": "while I merge it it will give me"
+    },
+    {
+      "start": 1239.66,
+      "end": 1244.1,
+      "text": "something it'll give me something"
+    },
+    {
+      "start": 1240.98,
+      "end": 1247.46,
+      "text": "correct so maybe let's"
+    },
+    {
+      "start": 1244.1,
+      "end": 1250.7,
+      "text": "let's keep an INT count equal to zero"
+    },
+    {
+      "start": 1247.46,
+      "end": 1252.98,
+      "text": "let's say while I'm merging it's giving"
+    },
+    {
+      "start": 1250.7,
+      "end": 1254.84,
+      "text": "me like the number of pairs he got"
+    },
+    {
+      "start": 1252.98,
+      "end": 1257.06,
+      "text": "so let's skip that"
+    },
+    {
+      "start": 1254.84,
+      "end": 1259.4,
+      "text": "let's keep the number of pairs he got"
+    },
+    {
+      "start": 1257.06,
+      "end": 1261.8,
+      "text": "whatever pairs he got can I return it I"
+    },
+    {
+      "start": 1259.4,
+      "end": 1264.32,
+      "text": "can because while merging this is what"
+    },
+    {
+      "start": 1261.8,
+      "end": 1266.36,
+      "text": "he got this is what he got and this is"
+    },
+    {
+      "start": 1264.32,
+      "end": 1268.22,
+      "text": "the most shot let's convert this into"
+    },
+    {
+      "start": 1266.36,
+      "end": 1270.8,
+      "text": "integer so it's a return type then I've"
+    },
+    {
+      "start": 1268.22,
+      "end": 1273.2,
+      "text": "converted so this return will go as"
+    },
+    {
+      "start": 1270.8,
+      "end": 1275.72,
+      "text": "which is zero so if it is out of bound"
+    },
+    {
+      "start": 1273.2,
+      "end": 1277.04,
+      "text": "the count will be zero while merging I'm"
+    },
+    {
+      "start": 1275.72,
+      "end": 1280.28,
+      "text": "doing something and that is what I'm"
+    },
+    {
+      "start": 1277.04,
+      "end": 1282.56,
+      "text": "returning that is what I'm returning but"
+    },
+    {
+      "start": 1280.28,
+      "end": 1285.2,
+      "text": "it's also calling more short for"
+    },
+    {
+      "start": 1282.56,
+      "end": 1286.88,
+      "text": "separate functions right like if I go"
+    },
+    {
+      "start": 1285.2,
+      "end": 1288.86,
+      "text": "back to the example it's calling for"
+    },
+    {
+      "start": 1286.88,
+      "end": 1290.9,
+      "text": "this and this and it's calling for this"
+    },
+    {
+      "start": 1288.86,
+      "end": 1293.12,
+      "text": "and this so it has to compile combine"
+    },
+    {
+      "start": 1290.9,
+      "end": 1295.22,
+      "text": "all the answers like while it's going"
+    },
+    {
+      "start": 1293.12,
+      "end": 1297.08,
+      "text": "whatever answer it is getting if it"
+    },
+    {
+      "start": 1295.22,
+      "end": 1298.58,
+      "text": "getting one if it's getting two if it is"
+    },
+    {
+      "start": 1297.08,
+      "end": 1300.68,
+      "text": "getting one if it is getting three it"
+    },
+    {
+      "start": 1298.58,
+      "end": 1303.26,
+      "text": "has to add up all of them let us look at"
+    },
+    {
+      "start": 1300.68,
+      "end": 1305.12,
+      "text": "all of them while merging so every time"
+    },
+    {
+      "start": 1303.26,
+      "end": 1307.4,
+      "text": "you call a merge shot a merge will be"
+    },
+    {
+      "start": 1305.12,
+      "end": 1309.8,
+      "text": "performed so whatever this monster will"
+    },
+    {
+      "start": 1307.4,
+      "end": 1311.36,
+      "text": "give me I'll just combine whatever this"
+    },
+    {
+      "start": 1309.8,
+      "end": 1312.86,
+      "text": "moisture will give me I'll combine it"
+    },
+    {
+      "start": 1311.36,
+      "end": 1314.72,
+      "text": "and then I'll combine it with the"
+    },
+    {
+      "start": 1312.86,
+      "end": 1317.48,
+      "text": "current merge so basically what I did"
+    },
+    {
+      "start": 1314.72,
+      "end": 1320.42,
+      "text": "was whatever this gave me this two gave"
+    },
+    {
+      "start": 1317.48,
+      "end": 1322.1,
+      "text": "me I combined and got the merge array as"
+    },
+    {
+      "start": 1320.42,
+      "end": 1324.8,
+      "text": "well as the answer then whatever they"
+    },
+    {
+      "start": 1322.1,
+      "end": 1326.78,
+      "text": "got I just kept on come by and I can"
+    },
+    {
+      "start": 1324.8,
+      "end": 1328.7,
+      "text": "simply go ahead and return it again your"
+    },
+    {
+      "start": 1326.78,
+      "end": 1330.8,
+      "text": "recursion has to be strong if you don't"
+    },
+    {
+      "start": 1328.7,
+      "end": 1332.96,
+      "text": "understand this I'll highly recommend"
+    },
+    {
+      "start": 1330.8,
+      "end": 1334.58,
+      "text": "you to drop down the tree and try to do"
+    },
+    {
+      "start": 1332.96,
+      "end": 1336.62,
+      "text": "it on the tree you'll understand it's a"
+    },
+    {
+      "start": 1334.58,
+      "end": 1339.56,
+      "text": "very basic thing I'm not getting too"
+    },
+    {
+      "start": 1336.62,
+      "end": 1341.78,
+      "text": "deep this is an expert level problem in"
+    },
+    {
+      "start": 1339.56,
+      "end": 1344.12,
+      "text": "arrays so if you're understanding the"
+    },
+    {
+      "start": 1341.78,
+      "end": 1345.62,
+      "text": "problem in itself this is a very minor"
+    },
+    {
+      "start": 1344.12,
+      "end": 1347.48,
+      "text": "thing I'll expect you to understand this"
+    },
+    {
+      "start": 1345.62,
+      "end": 1349.4,
+      "text": "as well so over here what I'll do is"
+    },
+    {
+      "start": 1347.48,
+      "end": 1351.38,
+      "text": "I'll just say return short incident of"
+    },
+    {
+      "start": 1349.4,
+      "end": 1354.02,
+      "text": "the global variable and I'll go ahead"
+    },
+    {
+      "start": 1351.38,
+      "end": 1356.48,
+      "text": "and run this some omitted the global"
+    },
+    {
+      "start": 1354.02,
+      "end": 1358.52,
+      "text": "variable let's let me run this this once"
+    },
+    {
+      "start": 1356.48,
+      "end": 1361.22,
+      "text": "so I've done the problem what is the"
+    },
+    {
+      "start": 1358.52,
+      "end": 1363.14,
+      "text": "time complexity the time complexity"
+    },
+    {
+      "start": 1361.22,
+      "end": 1364.88,
+      "text": "I'm not doing any change apart from this"
+    },
+    {
+      "start": 1363.14,
+      "end": 1366.38,
+      "text": "line to the merge shot so I can say"
+    },
+    {
+      "start": 1364.88,
+      "end": 1369.2,
+      "text": "whatever the time the moisture take"
+    },
+    {
+      "start": 1366.38,
+      "end": 1371.6,
+      "text": "switches and lock it which is any login"
+    },
+    {
+      "start": 1369.2,
+      "end": 1373.76,
+      "text": "yes and what is the extra space so let"
+    },
+    {
+      "start": 1371.6,
+      "end": 1377.54,
+      "text": "me write down the time complexity so can"
+    },
+    {
+      "start": 1373.76,
+      "end": 1379.4,
+      "text": "I say n log n is the time complexity and"
+    },
+    {
+      "start": 1377.54,
+      "end": 1381.44,
+      "text": "what is the extra space we're using a"
+    },
+    {
+      "start": 1379.4,
+      "end": 1384.32,
+      "text": "temporary array every time in order to"
+    },
+    {
+      "start": 1381.44,
+      "end": 1386.84,
+      "text": "merge them so I can say it's a big go"
+    },
+    {
+      "start": 1384.32,
+      "end": 1389.42,
+      "text": "often for the 10 preview array but"
+    },
+    {
+      "start": 1386.84,
+      "end": 1392.14,
+      "text": "please explicitly mention to the"
+    },
+    {
+      "start": 1389.42,
+      "end": 1394.4,
+      "text": "interviewer that hey I am ending up"
+    },
+    {
+      "start": 1392.14,
+      "end": 1396.02,
+      "text": "distorting the array I'm changing the"
+    },
+    {
+      "start": 1394.4,
+      "end": 1398.0,
+      "text": "array in case you don't want me to"
+    },
+    {
+      "start": 1396.02,
+      "end": 1400.1,
+      "text": "change the array maybe I can create a"
+    },
+    {
+      "start": 1398.0,
+      "end": 1401.3,
+      "text": "copy of the given array so tell that why"
+    },
+    {
+      "start": 1400.1,
+      "end": 1404.18,
+      "text": "because in software engineering"
+    },
+    {
+      "start": 1401.3,
+      "end": 1406.28,
+      "text": "interviews we expected not to alter the"
+    },
+    {
+      "start": 1404.18,
+      "end": 1407.84,
+      "text": "data so it is very important that you"
+    },
+    {
+      "start": 1406.28,
+      "end": 1409.76,
+      "text": "clearly stick to the interview that I am"
+    },
+    {
+      "start": 1407.84,
+      "end": 1411.92,
+      "text": "altering the data but if you still want"
+    },
+    {
+      "start": 1409.76,
+      "end": 1413.6,
+      "text": "me to do it without the ordering maybe I"
+    },
+    {
+      "start": 1411.92,
+      "end": 1415.76,
+      "text": "can create a copy of the user written"
+    },
+    {
+      "start": 1413.6,
+      "end": 1417.68,
+      "text": "alter to it this he will not ask you to"
+    },
+    {
+      "start": 1415.76,
+      "end": 1419.54,
+      "text": "do it but if you tell that it will give"
+    },
+    {
+      "start": 1417.68,
+      "end": 1422.18,
+      "text": "a plus point to you that you are"
+    },
+    {
+      "start": 1419.54,
+      "end": 1423.32,
+      "text": "thinking about this Edge case as well so"
+    },
+    {
+      "start": 1422.18,
+      "end": 1425.3,
+      "text": "this is what you have to tell to the"
+    },
+    {
+      "start": 1423.32,
+      "end": 1428.0,
+      "text": "interviewer so going back to the sheet I"
+    },
+    {
+      "start": 1425.3,
+      "end": 1430.16,
+      "text": "can say that uh this one is done as well"
+    },
+    {
+      "start": 1428.0,
+      "end": 1431.54,
+      "text": "I hope you have understood this one just"
+    },
+    {
+      "start": 1430.16,
+      "end": 1433.76,
+      "text": "in case you did please please please"
+    },
+    {
+      "start": 1431.54,
+      "end": 1434.96,
+      "text": "consider giving us a like and if you're"
+    },
+    {
+      "start": 1433.76,
+      "end": 1437.0,
+      "text": "new to our Channel what are you waiting"
+    },
+    {
+      "start": 1434.96,
+      "end": 1438.44,
+      "text": "for hit that subscribe button because it"
+    },
+    {
+      "start": 1437.0,
+      "end": 1440.54,
+      "text": "does motivate me to make a lot of"
+    },
+    {
+      "start": 1438.44,
+      "end": 1441.62,
+      "text": "content like this and yeah if you"
+    },
+    {
+      "start": 1440.54,
+      "end": 1443.54,
+      "text": "haven't followed me on LinkedIn"
+    },
+    {
+      "start": 1441.62,
+      "end": 1444.92,
+      "text": "Instagram Twitter all the links will be"
+    },
+    {
+      "start": 1443.54,
+      "end": 1446.12,
+      "text": "in the description with this I'll be"
+    },
+    {
+      "start": 1444.92,
+      "end": 1448.54,
+      "text": "wrapping up this video let's read in"
+    },
+    {
+      "start": 1446.12,
+      "end": 1448.54,
+      "text": "some other videos"
+    },
+    {
+      "start": 1448.7,
+      "end": 1455.48,
+      "text": "well your heart is broken"
+    },
+    {
+      "start": 1451.16,
+      "end": 1458.14,
+      "text": "don't ever forget you're golden I I will"
+    },
+    {
+      "start": 1455.48,
+      "end": 1458.14,
+      "text": "find the light in"
+    }
+  ]
+}

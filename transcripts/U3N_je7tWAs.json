@@ -1,0 +1,2936 @@
+{
+  "video_id": "U3N_je7tWAs",
+  "title": "G-26. Alien Dictionary - Topological Sort",
+  "duration_sec": 1254,
+  "num_segments": 488,
+  "segments": [
+    {
+      "start": 2.88,
+      "end": 6.24,
+      "duration": 3.36,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.5,
+      "end": 8.04,
+      "duration": 3.54,
+      "text": "I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.24,
+      "end": 10.38,
+      "duration": 4.14,
+      "text": "so today we will be solving the problem"
+    },
+    {
+      "start": 8.04,
+      "end": 13.32,
+      "duration": 5.28,
+      "text": "alien dictionary what does the problem"
+    },
+    {
+      "start": 10.38,
+      "end": 15.9,
+      "duration": 5.52,
+      "text": "say it states a given a shorter"
+    },
+    {
+      "start": 13.32,
+      "end": 17.46,
+      "duration": 4.14,
+      "text": "dictionary of an alien language it is"
+    },
+    {
+      "start": 15.9,
+      "end": 20.52,
+      "duration": 4.62,
+      "text": "not the English language it's an alien"
+    },
+    {
+      "start": 17.46,
+      "end": 23.64,
+      "duration": 6.18,
+      "text": "language having n words and K starting"
+    },
+    {
+      "start": 20.52,
+      "end": 26.34,
+      "duration": 5.82,
+      "text": "alphabets of a standard dictionary find"
+    },
+    {
+      "start": 23.64,
+      "end": 28.68,
+      "duration": 5.04,
+      "text": "the order of characters in the alien"
+    },
+    {
+      "start": 26.34,
+      "end": 31.02,
+      "duration": 4.68,
+      "text": "language note many artists may be"
+    },
+    {
+      "start": 28.68,
+      "end": 33.36,
+      "duration": 4.68,
+      "text": "possible for a particular test case thus"
+    },
+    {
+      "start": 31.02,
+      "end": 35.7,
+      "duration": 4.68,
+      "text": "you may return any valid order and"
+    },
+    {
+      "start": 33.36,
+      "end": 37.62,
+      "duration": 4.26,
+      "text": "output will be one if the order of a"
+    },
+    {
+      "start": 35.7,
+      "end": 42.3,
+      "duration": 6.6,
+      "text": "string written by the function is"
+    },
+    {
+      "start": 37.62,
+      "end": 44.52,
+      "duration": 6.9,
+      "text": "correct else 0 denoting incorrect string"
+    },
+    {
+      "start": 42.3,
+      "end": 47.16,
+      "duration": 4.86,
+      "text": "return so let's analyze the problem"
+    },
+    {
+      "start": 44.52,
+      "end": 48.66,
+      "duration": 4.14,
+      "text": "statement so basically it states you'll"
+    },
+    {
+      "start": 47.16,
+      "end": 52.74,
+      "duration": 5.58,
+      "text": "be given something like b double a like"
+    },
+    {
+      "start": 48.66,
+      "end": 55.44,
+      "duration": 6.78,
+      "text": "a number of strings and strings and you"
+    },
+    {
+      "start": 52.74,
+      "end": 57.66,
+      "duration": 4.92,
+      "text": "have to give me the sequence now if I"
+    },
+    {
+      "start": 55.44,
+      "end": 58.98,
+      "duration": 3.54,
+      "text": "talk about the English dictionary you"
+    },
+    {
+      "start": 57.66,
+      "end": 63.54,
+      "duration": 5.88,
+      "text": "know the sequence is very simple the"
+    },
+    {
+      "start": 58.98,
+      "end": 65.04,
+      "duration": 6.06,
+      "text": "sequence goes like a b c d e dot dot x y"
+    },
+    {
+      "start": 63.54,
+      "end": 68.64,
+      "duration": 5.1,
+      "text": "z and if you follow the English"
+    },
+    {
+      "start": 65.04,
+      "end": 70.02,
+      "duration": 4.98,
+      "text": "dictionary these n words would have been"
+    },
+    {
+      "start": 68.64,
+      "end": 73.8,
+      "duration": 5.16,
+      "text": "something like this"
+    },
+    {
+      "start": 70.02,
+      "end": 76.38,
+      "duration": 6.36,
+      "text": "first we would have had a b c a then a b"
+    },
+    {
+      "start": 73.8,
+      "end": 80.58,
+      "duration": 6.78,
+      "text": "c d then uh definitely something like B"
+    },
+    {
+      "start": 76.38,
+      "end": 82.98,
+      "duration": 6.6,
+      "text": "Double A then uh c a b and then CAD why"
+    },
+    {
+      "start": 80.58,
+      "end": 85.74,
+      "duration": 5.16,
+      "text": "does this happen in an uh in an English"
+    },
+    {
+      "start": 82.98,
+      "end": 88.8,
+      "duration": 5.82,
+      "text": "dictionary because if we see these"
+    },
+    {
+      "start": 85.74,
+      "end": 92.16,
+      "duration": 6.42,
+      "text": "couple of words a appears before d a"
+    },
+    {
+      "start": 88.8,
+      "end": 95.64,
+      "duration": 6.84,
+      "text": "appears before D thereby ABCA appears"
+    },
+    {
+      "start": 92.16,
+      "end": 98.76,
+      "duration": 6.6,
+      "text": "before ABCD now if you go across A B C D"
+    },
+    {
+      "start": 95.64,
+      "end": 102.0,
+      "duration": 6.36,
+      "text": "and B Double A why does ABCD appear"
+    },
+    {
+      "start": 98.76,
+      "end": 105.06,
+      "duration": 6.3,
+      "text": "before B Double A because a is smaller"
+    },
+    {
+      "start": 102.0,
+      "end": 107.52,
+      "duration": 5.52,
+      "text": "than b or a appears before B now if you"
+    },
+    {
+      "start": 105.06,
+      "end": 110.88,
+      "duration": 5.82,
+      "text": "see B Double A and C A B if you"
+    },
+    {
+      "start": 107.52,
+      "end": 113.16,
+      "duration": 5.64,
+      "text": "carefully see B appears before c in the"
+    },
+    {
+      "start": 110.88,
+      "end": 117.12,
+      "duration": 6.24,
+      "text": "dictionary and if you carefully say c a"
+    },
+    {
+      "start": 113.16,
+      "end": 120.54,
+      "duration": 7.38,
+      "text": "b c d c c c this is equal so B appears"
+    },
+    {
+      "start": 117.12,
+      "end": 123.3,
+      "duration": 6.18,
+      "text": "before D thereby cab appears before CAD"
+    },
+    {
+      "start": 120.54,
+      "end": 124.74,
+      "duration": 4.2,
+      "text": "in the normal dictionary but over here"
+    },
+    {
+      "start": 123.3,
+      "end": 126.9,
+      "duration": 3.6,
+      "text": "we are not talking about any normal"
+    },
+    {
+      "start": 124.74,
+      "end": 129.54,
+      "duration": 4.8,
+      "text": "dictionary it's a dictionary of aliens"
+    },
+    {
+      "start": 126.9,
+      "end": 131.94,
+      "duration": 5.04,
+      "text": "right so it's an alien dictionary so in"
+    },
+    {
+      "start": 129.54,
+      "end": 135.24,
+      "duration": 5.7,
+      "text": "the alien missionary we are seeing b"
+    },
+    {
+      "start": 131.94,
+      "end": 138.38,
+      "duration": 6.44,
+      "text": "double e ABCD B Double A appears before"
+    },
+    {
+      "start": 135.24,
+      "end": 140.88,
+      "duration": 5.64,
+      "text": "A B C D so we do not follow the standard"
+    },
+    {
+      "start": 138.38,
+      "end": 144.48,
+      "duration": 6.1,
+      "text": "dictionary or standard alphabetical"
+    },
+    {
+      "start": 140.88,
+      "end": 147.06,
+      "duration": 6.18,
+      "text": "order of a b c d dot dot x y z we have"
+    },
+    {
+      "start": 144.48,
+      "end": 151.8,
+      "duration": 7.32,
+      "text": "to make our alien order so the question"
+    },
+    {
+      "start": 147.06,
+      "end": 153.6,
+      "duration": 6.54,
+      "text": "States find out the alien order yes the"
+    },
+    {
+      "start": 151.8,
+      "end": 156.6,
+      "duration": 4.8,
+      "text": "question is very simple"
+    },
+    {
+      "start": 153.6,
+      "end": 159.84,
+      "duration": 6.24,
+      "text": "find out the alien order and over here"
+    },
+    {
+      "start": 156.6,
+      "end": 162.12,
+      "duration": 5.52,
+      "text": "they've clearly stated that K is 4 that"
+    },
+    {
+      "start": 159.84,
+      "end": 164.4,
+      "duration": 4.56,
+      "text": "means the alien order will have first"
+    },
+    {
+      "start": 162.12,
+      "end": 168.36,
+      "duration": 6.24,
+      "text": "four alphabets from the English"
+    },
+    {
+      "start": 164.4,
+      "end": 170.28,
+      "duration": 5.88,
+      "text": "dictionary which is e b c d you just"
+    },
+    {
+      "start": 168.36,
+      "end": 172.68,
+      "duration": 4.32,
+      "text": "need to order them so if you carefully"
+    },
+    {
+      "start": 170.28,
+      "end": 175.08,
+      "duration": 4.8,
+      "text": "see this couple of guys are"
+    },
+    {
+      "start": 172.68,
+      "end": 177.54,
+      "duration": 4.86,
+      "text": "differentiated by b and a so can I say"
+    },
+    {
+      "start": 175.08,
+      "end": 180.36,
+      "duration": 5.28,
+      "text": "uh B appears before a can I say B"
+    },
+    {
+      "start": 177.54,
+      "end": 182.88,
+      "duration": 5.34,
+      "text": "appears before a in the alien order of"
+    },
+    {
+      "start": 180.36,
+      "end": 185.76,
+      "duration": 5.4,
+      "text": "dictionary that is the reason B Double A"
+    },
+    {
+      "start": 182.88,
+      "end": 187.86,
+      "duration": 4.98,
+      "text": "is before ABCD that's because B appears"
+    },
+    {
+      "start": 185.76,
+      "end": 191.7,
+      "duration": 5.94,
+      "text": "before a so thereby in the alien order"
+    },
+    {
+      "start": 187.86,
+      "end": 194.22,
+      "duration": 6.36,
+      "text": "can I say B appears before a I can"
+    },
+    {
+      "start": 191.7,
+      "end": 197.58,
+      "duration": 5.88,
+      "text": "definitely see this if I compare these"
+    },
+    {
+      "start": 194.22,
+      "end": 200.94,
+      "duration": 6.72,
+      "text": "two a b c d a b c so these three are"
+    },
+    {
+      "start": 197.58,
+      "end": 203.52,
+      "duration": 5.94,
+      "text": "equal so D appears before a can I say d"
+    },
+    {
+      "start": 200.94,
+      "end": 206.22,
+      "duration": 5.28,
+      "text": "appears before a in the alien order"
+    },
+    {
+      "start": 203.52,
+      "end": 208.32,
+      "duration": 4.8,
+      "text": "thereby this string appears before this"
+    },
+    {
+      "start": 206.22,
+      "end": 210.66,
+      "duration": 4.44,
+      "text": "so D appears before a so you can"
+    },
+    {
+      "start": 208.32,
+      "end": 213.0,
+      "duration": 4.68,
+      "text": "definitely write D over here right now"
+    },
+    {
+      "start": 210.66,
+      "end": 215.28,
+      "duration": 4.62,
+      "text": "let's compare these two things so if you"
+    },
+    {
+      "start": 213.0,
+      "end": 219.6,
+      "duration": 6.6,
+      "text": "carefully see these these two things a b"
+    },
+    {
+      "start": 215.28,
+      "end": 224.22,
+      "duration": 8.94,
+      "text": "c a c a b a appears before c a appears"
+    },
+    {
+      "start": 219.6,
+      "end": 226.68,
+      "duration": 7.08,
+      "text": "before c thereby ABCA appears for cab so"
+    },
+    {
+      "start": 224.22,
+      "end": 227.58,
+      "duration": 3.36,
+      "text": "a appears before c so I can potent C"
+    },
+    {
+      "start": 226.68,
+      "end": 231.42,
+      "duration": 4.74,
+      "text": "over here"
+    },
+    {
+      "start": 227.58,
+      "end": 235.32,
+      "duration": 7.74,
+      "text": "let's see cab and Cad and we are saying"
+    },
+    {
+      "start": 231.42,
+      "end": 238.08,
+      "duration": 6.66,
+      "text": "that c c is equal a is equal B appears"
+    },
+    {
+      "start": 235.32,
+      "end": 240.12,
+      "duration": 4.8,
+      "text": "before D then the alien order B must"
+    },
+    {
+      "start": 238.08,
+      "end": 243.78,
+      "duration": 5.7,
+      "text": "appear before D which is the case so can"
+    },
+    {
+      "start": 240.12,
+      "end": 247.2,
+      "duration": 7.08,
+      "text": "I see this is the alien order can I say"
+    },
+    {
+      "start": 243.78,
+      "end": 249.42,
+      "duration": 5.64,
+      "text": "this is the alien order I can definitely"
+    },
+    {
+      "start": 247.2,
+      "end": 251.4,
+      "duration": 4.2,
+      "text": "say that this is the alien order and"
+    },
+    {
+      "start": 249.42,
+      "end": 254.7,
+      "duration": 5.28,
+      "text": "this is what you have to return yes this"
+    },
+    {
+      "start": 251.4,
+      "end": 258.06,
+      "duration": 6.66,
+      "text": "is what you have to return now the"
+    },
+    {
+      "start": 254.7,
+      "end": 261.96,
+      "duration": 7.26,
+      "text": "question is something which says"
+    },
+    {
+      "start": 258.06,
+      "end": 263.04,
+      "duration": 4.98,
+      "text": "something before something isn't it B"
+    },
+    {
+      "start": 261.96,
+      "end": 267.0,
+      "duration": 5.04,
+      "text": "before d"
+    },
+    {
+      "start": 263.04,
+      "end": 270.3,
+      "duration": 7.26,
+      "text": "T before c a before c something before"
+    },
+    {
+      "start": 267.0,
+      "end": 272.06,
+      "duration": 5.06,
+      "text": "something which algorithm yes you said"
+    },
+    {
+      "start": 270.3,
+      "end": 275.88,
+      "duration": 5.58,
+      "text": "it correctly it's nothing but the"
+    },
+    {
+      "start": 272.06,
+      "end": 277.74,
+      "duration": 5.68,
+      "text": "topological sort algorithm we apply the"
+    },
+    {
+      "start": 275.88,
+      "end": 279.6,
+      "duration": 3.72,
+      "text": "standard topological sort and if you"
+    },
+    {
+      "start": 277.74,
+      "end": 280.5,
+      "duration": 2.76,
+      "text": "apply that we should be able to solve"
+    },
+    {
+      "start": 279.6,
+      "end": 282.66,
+      "duration": 3.06,
+      "text": "this problem"
+    },
+    {
+      "start": 280.5,
+      "end": 284.94,
+      "duration": 4.44,
+      "text": "another question boils down how do we"
+    },
+    {
+      "start": 282.66,
+      "end": 286.7,
+      "duration": 4.04,
+      "text": "apply the standard topological soil so"
+    },
+    {
+      "start": 284.94,
+      "end": 289.92,
+      "duration": 4.98,
+      "text": "we know that we have been said"
+    },
+    {
+      "start": 286.7,
+      "end": 291.66,
+      "duration": 4.96,
+      "text": "explicitly that there are poor alphabets"
+    },
+    {
+      "start": 289.92,
+      "end": 294.24,
+      "duration": 4.32,
+      "text": "the first four alphabets from the"
+    },
+    {
+      "start": 291.66,
+      "end": 296.88,
+      "duration": 5.22,
+      "text": "English dictionary being used so kind of"
+    },
+    {
+      "start": 294.24,
+      "end": 299.4,
+      "duration": 5.16,
+      "text": "something for sure that something like a"
+    },
+    {
+      "start": 296.88,
+      "end": 301.62,
+      "duration": 4.74,
+      "text": "b c d would have been used so what I"
+    },
+    {
+      "start": 299.4,
+      "end": 306.72,
+      "duration": 7.32,
+      "text": "will do over here is I will say a to be"
+    },
+    {
+      "start": 301.62,
+      "end": 309.3,
+      "duration": 7.68,
+      "text": "0 B to B1 t2b2 and D to V3 so I express"
+    },
+    {
+      "start": 306.72,
+      "end": 311.04,
+      "duration": 4.32,
+      "text": "all the alphabets in terms of number if"
+    },
+    {
+      "start": 309.3,
+      "end": 315.6,
+      "duration": 6.3,
+      "text": "there would have been till z it would"
+    },
+    {
+      "start": 311.04,
+      "end": 318.24,
+      "duration": 7.2,
+      "text": "have been 0 1 2 3 4 till 24 25. so I'll"
+    },
+    {
+      "start": 315.6,
+      "end": 321.84,
+      "duration": 6.24,
+      "text": "try to express all the alphabets in"
+    },
+    {
+      "start": 318.24,
+      "end": 324.48,
+      "duration": 6.24,
+      "text": "terms of zero based numbers a means zero"
+    },
+    {
+      "start": 321.84,
+      "end": 327.54,
+      "duration": 5.7,
+      "text": "B means one and so on now what I'll do"
+    },
+    {
+      "start": 324.48,
+      "end": 330.24,
+      "duration": 5.76,
+      "text": "is at first yes at first I'll pick up"
+    },
+    {
+      "start": 327.54,
+      "end": 333.6,
+      "duration": 6.06,
+      "text": "these couple of guys which is b double e"
+    },
+    {
+      "start": 330.24,
+      "end": 337.92,
+      "duration": 7.68,
+      "text": "and ABCD at first I'll pick up b double"
+    },
+    {
+      "start": 333.6,
+      "end": 341.88,
+      "duration": 8.28,
+      "text": "e and ABCD so I'll say Okay B Double A"
+    },
+    {
+      "start": 337.92,
+      "end": 345.12,
+      "duration": 7.2,
+      "text": "and A B C D and I'll I'll figure out Y"
+    },
+    {
+      "start": 341.88,
+      "end": 348.72,
+      "duration": 6.84,
+      "text": "is b double e I repeat I'll figure out"
+    },
+    {
+      "start": 345.12,
+      "end": 351.78,
+      "duration": 6.66,
+      "text": "why is B Double A appearing before ABCD"
+    },
+    {
+      "start": 348.72,
+      "end": 353.82,
+      "duration": 5.1,
+      "text": "and the answer to that is very simple"
+    },
+    {
+      "start": 351.78,
+      "end": 357.42,
+      "duration": 5.64,
+      "text": "because B"
+    },
+    {
+      "start": 353.82,
+      "end": 361.68,
+      "duration": 7.86,
+      "text": "the aliens are saying B is smaller than"
+    },
+    {
+      "start": 357.42,
+      "end": 363.24,
+      "duration": 5.82,
+      "text": "a thereby B Double A appears before A B"
+    },
+    {
+      "start": 361.68,
+      "end": 367.8,
+      "duration": 6.12,
+      "text": "C D that is what the aliens are saying"
+    },
+    {
+      "start": 363.24,
+      "end": 370.5,
+      "duration": 7.26,
+      "text": "so I can say B is smaller than a which I"
+    },
+    {
+      "start": 367.8,
+      "end": 372.42,
+      "duration": 4.62,
+      "text": "can correspond to a directed graph and I"
+    },
+    {
+      "start": 370.5,
+      "end": 374.28,
+      "duration": 3.78,
+      "text": "can say Hey listen"
+    },
+    {
+      "start": 372.42,
+      "end": 376.56,
+      "duration": 4.14,
+      "text": "probably I can have something like a b"
+    },
+    {
+      "start": 374.28,
+      "end": 378.48,
+      "duration": 4.2,
+      "text": "having an H to a"
+    },
+    {
+      "start": 376.56,
+      "end": 381.18,
+      "duration": 4.62,
+      "text": "we can see that so we're trying to"
+    },
+    {
+      "start": 378.48,
+      "end": 384.0,
+      "duration": 5.52,
+      "text": "create a directed graph so B is having"
+    },
+    {
+      "start": 381.18,
+      "end": 386.94,
+      "duration": 5.76,
+      "text": "an h2a perfect so we figured out why B"
+    },
+    {
+      "start": 384.0,
+      "end": 389.94,
+      "duration": 5.94,
+      "text": "Double A appears before A B C D now"
+    },
+    {
+      "start": 386.94,
+      "end": 392.22,
+      "duration": 5.28,
+      "text": "if B Double E appears before ABCD that's"
+    },
+    {
+      "start": 389.94,
+      "end": 394.2,
+      "duration": 4.26,
+      "text": "the pair that we have figured out now do"
+    },
+    {
+      "start": 392.22,
+      "end": 397.08,
+      "duration": 4.86,
+      "text": "I need to again check for why does b"
+    },
+    {
+      "start": 394.2,
+      "end": 399.06,
+      "duration": 4.86,
+      "text": "double A appear before ABCA is no need"
+    },
+    {
+      "start": 397.08,
+      "end": 400.32,
+      "duration": 3.24,
+      "text": "because if you check for b double A and"
+    },
+    {
+      "start": 399.06,
+      "end": 402.72,
+      "duration": 3.66,
+      "text": "ABCD"
+    },
+    {
+      "start": 400.32,
+      "end": 406.62,
+      "duration": 6.3,
+      "text": "we are satisfied and if we do the next"
+    },
+    {
+      "start": 402.72,
+      "end": 410.22,
+      "duration": 7.5,
+      "text": "two it will continue the flow got it so"
+    },
+    {
+      "start": 406.62,
+      "end": 412.62,
+      "duration": 6.0,
+      "text": "the next two are very simple A B C D and"
+    },
+    {
+      "start": 410.22,
+      "end": 416.4,
+      "duration": 6.18,
+      "text": "A B C A and now we will try to figure"
+    },
+    {
+      "start": 412.62,
+      "end": 419.94,
+      "duration": 7.32,
+      "text": "out why why the aliens are saying that"
+    },
+    {
+      "start": 416.4,
+      "end": 422.82,
+      "duration": 6.42,
+      "text": "ABCD should appear before ABCA in their"
+    },
+    {
+      "start": 419.94,
+      "end": 425.88,
+      "duration": 5.94,
+      "text": "dictionary and if we if we carefully"
+    },
+    {
+      "start": 422.82,
+      "end": 431.46,
+      "duration": 8.64,
+      "text": "observe a a if we carefully have an"
+    },
+    {
+      "start": 425.88,
+      "end": 433.62,
+      "duration": 7.74,
+      "text": "observation a a then BB same CC so all"
+    },
+    {
+      "start": 431.46,
+      "end": 436.5,
+      "duration": 5.04,
+      "text": "these English alphabets are same but"
+    },
+    {
+      "start": 433.62,
+      "end": 439.62,
+      "duration": 6.0,
+      "text": "where is the difference D tends to"
+    },
+    {
+      "start": 436.5,
+      "end": 442.38,
+      "duration": 5.88,
+      "text": "appear before a d tends to appear before"
+    },
+    {
+      "start": 439.62,
+      "end": 444.66,
+      "duration": 5.04,
+      "text": "a so I'll be like okay fine D is tending"
+    },
+    {
+      "start": 442.38,
+      "end": 445.92,
+      "duration": 3.54,
+      "text": "to appear before a so probably I'll say"
+    },
+    {
+      "start": 444.66,
+      "end": 448.98,
+      "duration": 4.32,
+      "text": "d"
+    },
+    {
+      "start": 445.92,
+      "end": 452.94,
+      "duration": 7.02,
+      "text": "tends to appear before a so I can have"
+    },
+    {
+      "start": 448.98,
+      "end": 454.98,
+      "duration": 6.0,
+      "text": "an H from D to a now perfect done"
+    },
+    {
+      "start": 452.94,
+      "end": 458.88,
+      "duration": 5.94,
+      "text": "what is the next two guys the next two"
+    },
+    {
+      "start": 454.98,
+      "end": 460.92,
+      "duration": 5.94,
+      "text": "guys are very simple ABC a and CA P so"
+    },
+    {
+      "start": 458.88,
+      "end": 465.12,
+      "duration": 6.24,
+      "text": "I'm saying okay in the dictionary we"
+    },
+    {
+      "start": 460.92,
+      "end": 467.28,
+      "duration": 6.36,
+      "text": "have a b c a and c a b now I need to ask"
+    },
+    {
+      "start": 465.12,
+      "end": 469.32,
+      "duration": 4.2,
+      "text": "the aliens why are they thinking ABC A"
+    },
+    {
+      "start": 467.28,
+      "end": 471.84,
+      "duration": 4.56,
+      "text": "to B before c a b they'll tell me"
+    },
+    {
+      "start": 469.32,
+      "end": 474.96,
+      "duration": 5.64,
+      "text": "because in the dictionary a appears"
+    },
+    {
+      "start": 471.84,
+      "end": 477.06,
+      "duration": 5.22,
+      "text": "before c in the dictionary a appears"
+    },
+    {
+      "start": 474.96,
+      "end": 480.12,
+      "duration": 5.16,
+      "text": "before c so can I say there is an edge"
+    },
+    {
+      "start": 477.06,
+      "end": 483.42,
+      "duration": 6.36,
+      "text": "between from A to B so I can definitely"
+    },
+    {
+      "start": 480.12,
+      "end": 487.5,
+      "duration": 7.38,
+      "text": "see that there is an edge between a to c"
+    },
+    {
+      "start": 483.42,
+      "end": 490.8,
+      "duration": 7.38,
+      "text": "rather not b c okay done let's take the"
+    },
+    {
+      "start": 487.5,
+      "end": 493.2,
+      "duration": 5.7,
+      "text": "next guys for the next guys cab CAD"
+    },
+    {
+      "start": 490.8,
+      "end": 497.1,
+      "duration": 6.3,
+      "text": "because that is what we have the last"
+    },
+    {
+      "start": 493.2,
+      "end": 498.42,
+      "duration": 5.22,
+      "text": "pairs c a b c a d so what we are saying"
+    },
+    {
+      "start": 497.1,
+      "end": 501.0,
+      "duration": 3.9,
+      "text": "is Hey listen"
+    },
+    {
+      "start": 498.42,
+      "end": 504.66,
+      "duration": 6.24,
+      "text": "cab appears before Cid in the alien"
+    },
+    {
+      "start": 501.0,
+      "end": 506.64,
+      "duration": 5.64,
+      "text": "dictionary why because B is apparently"
+    },
+    {
+      "start": 504.66,
+      "end": 509.28,
+      "duration": 4.62,
+      "text": "smaller than D according to them not"
+    },
+    {
+      "start": 506.64,
+      "end": 512.46,
+      "duration": 5.82,
+      "text": "according to me according to them B is"
+    },
+    {
+      "start": 509.28,
+      "end": 515.04,
+      "duration": 5.76,
+      "text": "smaller than D which means B is smaller"
+    },
+    {
+      "start": 512.46,
+      "end": 517.98,
+      "duration": 5.52,
+      "text": "than d means there's an edge between B"
+    },
+    {
+      "start": 515.04,
+      "end": 520.38,
+      "duration": 5.34,
+      "text": "to D there's an edge between B to D so I"
+    },
+    {
+      "start": 517.98,
+      "end": 522.72,
+      "duration": 4.74,
+      "text": "can have something like this there's an"
+    },
+    {
+      "start": 520.38,
+      "end": 524.34,
+      "duration": 3.96,
+      "text": "edge between B to D got it so once you"
+    },
+    {
+      "start": 522.72,
+      "end": 526.32,
+      "duration": 3.6,
+      "text": "have done this"
+    },
+    {
+      "start": 524.34,
+      "end": 529.5,
+      "duration": 5.16,
+      "text": "once you've done this we're pretty much"
+    },
+    {
+      "start": 526.32,
+      "end": 531.42,
+      "duration": 5.1,
+      "text": "done so we have created the directed"
+    },
+    {
+      "start": 529.5,
+      "end": 535.8,
+      "duration": 6.3,
+      "text": "graph if you carefully see we have"
+    },
+    {
+      "start": 531.42,
+      "end": 538.38,
+      "duration": 6.96,
+      "text": "created the directed graph now assume"
+    },
+    {
+      "start": 535.8,
+      "end": 541.04,
+      "duration": 5.24,
+      "text": "assume if there was something like k"
+    },
+    {
+      "start": 538.38,
+      "end": 543.42,
+      "duration": 5.04,
+      "text": "equal to 5"
+    },
+    {
+      "start": 541.04,
+      "end": 545.04,
+      "duration": 4.0,
+      "text": "then there would have been an alphabet"
+    },
+    {
+      "start": 543.42,
+      "end": 547.26,
+      "duration": 3.84,
+      "text": "as e as well"
+    },
+    {
+      "start": 545.04,
+      "end": 548.76,
+      "duration": 3.72,
+      "text": "which would have been 4 right which"
+    },
+    {
+      "start": 547.26,
+      "end": 551.04,
+      "duration": 3.78,
+      "text": "would have been four there would have"
+    },
+    {
+      "start": 548.76,
+      "end": 553.92,
+      "duration": 5.16,
+      "text": "been an alphabet as e as well which"
+    },
+    {
+      "start": 551.04,
+      "end": 556.98,
+      "duration": 5.94,
+      "text": "would have been four so what does that e"
+    },
+    {
+      "start": 553.92,
+      "end": 559.32,
+      "duration": 5.4,
+      "text": "lie in this DG because we do not have a"
+    },
+    {
+      "start": 556.98,
+      "end": 561.0,
+      "duration": 4.02,
+      "text": "mention of E but the alphabets are"
+    },
+    {
+      "start": 559.32,
+      "end": 564.0,
+      "duration": 4.68,
+      "text": "saying we have five alphabets we do not"
+    },
+    {
+      "start": 561.0,
+      "end": 565.62,
+      "duration": 4.62,
+      "text": "have a mention of e in that case we can"
+    },
+    {
+      "start": 564.0,
+      "end": 568.56,
+      "duration": 4.56,
+      "text": "consider the e"
+    },
+    {
+      "start": 565.62,
+      "end": 572.1,
+      "duration": 6.48,
+      "text": "to be a single yes we can consider the E"
+    },
+    {
+      "start": 568.56,
+      "end": 574.38,
+      "duration": 5.82,
+      "text": "to be a single node in the DG a single"
+    },
+    {
+      "start": 572.1,
+      "end": 576.54,
+      "duration": 4.44,
+      "text": "node in the DG so this can lie anywhere"
+    },
+    {
+      "start": 574.38,
+      "end": 578.58,
+      "duration": 4.2,
+      "text": "in the order because this is not related"
+    },
+    {
+      "start": 576.54,
+      "end": 580.98,
+      "duration": 4.44,
+      "text": "so there are multiple components doesn't"
+    },
+    {
+      "start": 578.58,
+      "end": 584.28,
+      "duration": 5.7,
+      "text": "matter if someone is not related doesn't"
+    },
+    {
+      "start": 580.98,
+      "end": 587.22,
+      "duration": 6.24,
+      "text": "matter you can keep them as single what"
+    },
+    {
+      "start": 584.28,
+      "end": 589.92,
+      "duration": 5.64,
+      "text": "matters is you pick up pairs you pick up"
+    },
+    {
+      "start": 587.22,
+      "end": 593.46,
+      "duration": 6.24,
+      "text": "pears you pick up pairs you pick up PS"
+    },
+    {
+      "start": 589.92,
+      "end": 597.3,
+      "duration": 7.38,
+      "text": "find who is appearing before whom and"
+    },
+    {
+      "start": 593.46,
+      "end": 599.46,
+      "duration": 6.0,
+      "text": "you make edges and you create the DG and"
+    },
+    {
+      "start": 597.3,
+      "end": 602.1,
+      "duration": 4.8,
+      "text": "the ones that are left out"
+    },
+    {
+      "start": 599.46,
+      "end": 604.68,
+      "duration": 5.22,
+      "text": "will be single nodes once the DG is"
+    },
+    {
+      "start": 602.1,
+      "end": 607.74,
+      "duration": 5.64,
+      "text": "created what do I need"
+    },
+    {
+      "start": 604.68,
+      "end": 609.9,
+      "duration": 5.22,
+      "text": "yes what do I need I need an order so"
+    },
+    {
+      "start": 607.74,
+      "end": 612.12,
+      "duration": 4.38,
+      "text": "how do I get the order"
+    },
+    {
+      "start": 609.9,
+      "end": 614.34,
+      "duration": 4.44,
+      "text": "there's only one algorithm that gives us"
+    },
+    {
+      "start": 612.12,
+      "end": 617.22,
+      "duration": 5.1,
+      "text": "the order we perform the topological"
+    },
+    {
+      "start": 614.34,
+      "end": 619.32,
+      "duration": 4.98,
+      "text": "sort the topological Wills because over"
+    },
+    {
+      "start": 617.22,
+      "end": 623.46,
+      "duration": 6.24,
+      "text": "here it clearly states a is smaller than"
+    },
+    {
+      "start": 619.32,
+      "end": 625.32,
+      "duration": 6.0,
+      "text": "C or a must appear before c in the order"
+    },
+    {
+      "start": 623.46,
+      "end": 626.82,
+      "duration": 3.36,
+      "text": "and that is where the topological sort"
+    },
+    {
+      "start": 625.32,
+      "end": 628.92,
+      "duration": 3.6,
+      "text": "comes in if you figure out the"
+    },
+    {
+      "start": 626.82,
+      "end": 631.38,
+      "duration": 4.56,
+      "text": "topological sort of this you will"
+    },
+    {
+      "start": 628.92,
+      "end": 633.66,
+      "duration": 4.74,
+      "text": "definitely get something like B at first"
+    },
+    {
+      "start": 631.38,
+      "end": 636.36,
+      "duration": 4.98,
+      "text": "that's what you'll get B then you'll get"
+    },
+    {
+      "start": 633.66,
+      "end": 638.64,
+      "duration": 4.98,
+      "text": "something like d"
+    },
+    {
+      "start": 636.36,
+      "end": 642.6,
+      "duration": 6.24,
+      "text": "then you will get something like a then"
+    },
+    {
+      "start": 638.64,
+      "end": 645.42,
+      "duration": 6.78,
+      "text": "I'll get something like c b d a c is the"
+    },
+    {
+      "start": 642.6,
+      "end": 647.7,
+      "duration": 5.1,
+      "text": "top and if you include e then you can"
+    },
+    {
+      "start": 645.42,
+      "end": 649.68,
+      "duration": 4.26,
+      "text": "add e over here or at the front wherever"
+    },
+    {
+      "start": 647.7,
+      "end": 651.44,
+      "duration": 3.74,
+      "text": "you wish to but if you perform the"
+    },
+    {
+      "start": 649.68,
+      "end": 654.78,
+      "duration": 5.1,
+      "text": "topological sort of this particular"
+    },
+    {
+      "start": 651.44,
+      "end": 657.96,
+      "duration": 6.52,
+      "text": "directed as I click graph you will get"
+    },
+    {
+      "start": 654.78,
+      "end": 660.06,
+      "duration": 5.28,
+      "text": "something like BDA c e as the"
+    },
+    {
+      "start": 657.96,
+      "end": 662.04,
+      "duration": 4.08,
+      "text": "topological sort now how do you"
+    },
+    {
+      "start": 660.06,
+      "end": 665.34,
+      "duration": 5.28,
+      "text": "implement this we have seen like we have"
+    },
+    {
+      "start": 662.04,
+      "end": 667.26,
+      "duration": 5.22,
+      "text": "taken b d a but instead of storing BDA"
+    },
+    {
+      "start": 665.34,
+      "end": 669.84,
+      "duration": 4.5,
+      "text": "we will store something like 0 1 2 3"
+    },
+    {
+      "start": 667.26,
+      "end": 672.36,
+      "duration": 5.1,
+      "text": "it's a very simple thing so the core"
+    },
+    {
+      "start": 669.84,
+      "end": 674.94,
+      "duration": 5.1,
+      "text": "concept lies if we can figure out"
+    },
+    {
+      "start": 672.36,
+      "end": 677.82,
+      "duration": 5.46,
+      "text": "between every pair if you can figure out"
+    },
+    {
+      "start": 674.94,
+      "end": 678.9,
+      "duration": 3.96,
+      "text": "between every pair who is appearing"
+    },
+    {
+      "start": 677.82,
+      "end": 681.66,
+      "duration": 3.84,
+      "text": "before room like who is the"
+    },
+    {
+      "start": 678.9,
+      "end": 683.82,
+      "duration": 4.92,
+      "text": "differentiating factor why is b double a"
+    },
+    {
+      "start": 681.66,
+      "end": 685.68,
+      "duration": 4.02,
+      "text": "before a b c d That's because B is"
+    },
+    {
+      "start": 683.82,
+      "end": 687.78,
+      "duration": 3.96,
+      "text": "lesser than a if I can figure out this"
+    },
+    {
+      "start": 685.68,
+      "end": 688.92,
+      "duration": 3.24,
+      "text": "differentiating Factor if I can create"
+    },
+    {
+      "start": 687.78,
+      "end": 691.44,
+      "duration": 3.66,
+      "text": "the DG"
+    },
+    {
+      "start": 688.92,
+      "end": 693.9,
+      "duration": 4.98,
+      "text": "then the question boils down to finding"
+    },
+    {
+      "start": 691.44,
+      "end": 696.18,
+      "duration": 4.74,
+      "text": "the top of the D key that is as simple"
+    },
+    {
+      "start": 693.9,
+      "end": 699.0,
+      "duration": 5.1,
+      "text": "as it gets"
+    },
+    {
+      "start": 696.18,
+      "end": 700.8,
+      "duration": 4.62,
+      "text": "so can I say in order to find out the"
+    },
+    {
+      "start": 699.0,
+      "end": 704.16,
+      "duration": 5.16,
+      "text": "differentiating factor between these two"
+    },
+    {
+      "start": 700.8,
+      "end": 707.52,
+      "duration": 6.72,
+      "text": "guys so first I'll be like B Double A B"
+    },
+    {
+      "start": 704.16,
+      "end": 710.22,
+      "duration": 6.06,
+      "text": "C D next I'll be like ABCD ABC next I'll"
+    },
+    {
+      "start": 707.52,
+      "end": 714.3,
+      "duration": 6.78,
+      "text": "be like ABCA cab next I'll be like cab"
+    },
+    {
+      "start": 710.22,
+      "end": 717.6,
+      "duration": 7.38,
+      "text": "CAD can I say I can run a loop yes I can"
+    },
+    {
+      "start": 714.3,
+      "end": 720.9,
+      "duration": 6.6,
+      "text": "run a loop something like I equal to 0"
+    },
+    {
+      "start": 717.6,
+      "end": 723.06,
+      "duration": 5.46,
+      "text": "till this guy which is still three and"
+    },
+    {
+      "start": 720.9,
+      "end": 725.1,
+      "duration": 4.2,
+      "text": "what I'll do is first time I will be at"
+    },
+    {
+      "start": 723.06,
+      "end": 729.6,
+      "duration": 6.54,
+      "text": "B Double A so I can say something like"
+    },
+    {
+      "start": 725.1,
+      "end": 732.18,
+      "duration": 7.08,
+      "text": "okay S1 is let's say array of I"
+    },
+    {
+      "start": 729.6,
+      "end": 734.22,
+      "duration": 4.62,
+      "text": "which means B Double A which means it"
+    },
+    {
+      "start": 732.18,
+      "end": 736.38,
+      "duration": 4.2,
+      "text": "will be B Double A so this erase it and"
+    },
+    {
+      "start": 734.22,
+      "end": 740.52,
+      "duration": 6.3,
+      "text": "explain how do you implement this and I"
+    },
+    {
+      "start": 736.38,
+      "end": 744.0,
+      "duration": 7.62,
+      "text": "can say S2 to be array of I plus 1 which"
+    },
+    {
+      "start": 740.52,
+      "end": 746.34,
+      "duration": 5.82,
+      "text": "means it will be a b c d so this is how"
+    },
+    {
+      "start": 744.0,
+      "end": 748.86,
+      "duration": 4.86,
+      "text": "for the first time when I is 0 it will"
+    },
+    {
+      "start": 746.34,
+      "end": 751.44,
+      "duration": 5.1,
+      "text": "pick up array of i b double A and RFI"
+    },
+    {
+      "start": 748.86,
+      "end": 753.6,
+      "duration": 4.74,
+      "text": "plus 1 which is a b c d and pick up now"
+    },
+    {
+      "start": 751.44,
+      "end": 757.14,
+      "duration": 5.7,
+      "text": "what you need to do is you need to take"
+    },
+    {
+      "start": 753.6,
+      "end": 759.84,
+      "duration": 6.24,
+      "text": "these two strings and compare B is equal"
+    },
+    {
+      "start": 757.14,
+      "end": 761.94,
+      "duration": 4.8,
+      "text": "to a no the moment you find a"
+    },
+    {
+      "start": 759.84,
+      "end": 764.58,
+      "duration": 4.74,
+      "text": "non-equality the moment you find a"
+    },
+    {
+      "start": 761.94,
+      "end": 767.52,
+      "duration": 5.58,
+      "text": "non-equality you say I don't need any"
+    },
+    {
+      "start": 764.58,
+      "end": 769.56,
+      "duration": 4.98,
+      "text": "further non-equalities in the future B"
+    },
+    {
+      "start": 767.52,
+      "end": 771.84,
+      "duration": 4.32,
+      "text": "is smaller than a and that is what"
+    },
+    {
+      "start": 769.56,
+      "end": 774.12,
+      "duration": 4.56,
+      "text": "determines for the dictionary to work so"
+    },
+    {
+      "start": 771.84,
+      "end": 777.0,
+      "duration": 5.16,
+      "text": "I will just go ahead and say add an edge"
+    },
+    {
+      "start": 774.12,
+      "end": 779.16,
+      "duration": 5.04,
+      "text": "between b and a and I'll stop so this is"
+    },
+    {
+      "start": 777.0,
+      "end": 781.44,
+      "duration": 4.44,
+      "text": "what happens for the first time when I"
+    },
+    {
+      "start": 779.16,
+      "end": 782.52,
+      "duration": 3.36,
+      "text": "is 0. next time when I is 1 what you"
+    },
+    {
+      "start": 781.44,
+      "end": 784.62,
+      "duration": 3.18,
+      "text": "will do is"
+    },
+    {
+      "start": 782.52,
+      "end": 786.36,
+      "duration": 3.84,
+      "text": "this will change yes this will"
+    },
+    {
+      "start": 784.62,
+      "end": 789.0,
+      "duration": 4.38,
+      "text": "definitely change and this time what"
+    },
+    {
+      "start": 786.36,
+      "end": 792.72,
+      "duration": 6.36,
+      "text": "will happen is you will get a b c d"
+    },
+    {
+      "start": 789.0,
+      "end": 794.22,
+      "duration": 5.22,
+      "text": "because I is 1 and a b c a this is what"
+    },
+    {
+      "start": 792.72,
+      "end": 797.04,
+      "duration": 4.32,
+      "text": "will happen because I is 1 so you'll get"
+    },
+    {
+      "start": 794.22,
+      "end": 798.54,
+      "duration": 4.32,
+      "text": "this and this if you start comparing you"
+    },
+    {
+      "start": 797.04,
+      "end": 801.54,
+      "duration": 4.5,
+      "text": "just have an iterator something like"
+    },
+    {
+      "start": 798.54,
+      "end": 804.18,
+      "duration": 5.64,
+      "text": "pointer so this is equal this is equal"
+    },
+    {
+      "start": 801.54,
+      "end": 807.5,
+      "duration": 5.96,
+      "text": "this is equal this is equal sorry this"
+    },
+    {
+      "start": 804.18,
+      "end": 807.5,
+      "duration": 3.32,
+      "text": "will be a not my bad"
+    },
+    {
+      "start": 807.62,
+      "end": 814.38,
+      "duration": 6.76,
+      "text": "so when I is 1 you get a b c d and uh"
+    },
+    {
+      "start": 812.1,
+      "end": 817.08,
+      "duration": 4.98,
+      "text": "for this two you'll get ABC so now what"
+    },
+    {
+      "start": 814.38,
+      "end": 819.12,
+      "duration": 4.74,
+      "text": "will happen is a equal BB equals cc"
+    },
+    {
+      "start": 817.08,
+      "end": 821.64,
+      "duration": 4.56,
+      "text": "equal so D and D are the differentiating"
+    },
+    {
+      "start": 819.12,
+      "end": 824.4,
+      "duration": 5.28,
+      "text": "factor so you'll go ahead and add the"
+    },
+    {
+      "start": 821.64,
+      "end": 826.32,
+      "duration": 4.68,
+      "text": "HDA to your graph similarly when I will"
+    },
+    {
+      "start": 824.4,
+      "end": 828.78,
+      "duration": 4.38,
+      "text": "be next time to"
+    },
+    {
+      "start": 826.32,
+      "end": 832.44,
+      "duration": 6.12,
+      "text": "what will happen it'll get the next guy"
+    },
+    {
+      "start": 828.78,
+      "end": 835.56,
+      "duration": 6.78,
+      "text": "a b c a yes A B C A I'll get something"
+    },
+    {
+      "start": 832.44,
+      "end": 837.66,
+      "duration": 5.22,
+      "text": "like c a b so you can just go on every"
+    },
+    {
+      "start": 835.56,
+      "end": 839.82,
+      "duration": 4.26,
+      "text": "pair by pair and after you have gone"
+    },
+    {
+      "start": 837.66,
+      "end": 841.32,
+      "duration": 3.66,
+      "text": "Pair by pair you just take a pointer and"
+    },
+    {
+      "start": 839.82,
+      "end": 843.54,
+      "duration": 3.72,
+      "text": "you compare you compare you compare"
+    },
+    {
+      "start": 841.32,
+      "end": 845.88,
+      "duration": 4.56,
+      "text": "first time you get a differentiation you"
+    },
+    {
+      "start": 843.54,
+      "end": 848.22,
+      "duration": 4.68,
+      "text": "say there is an edge between a and c and"
+    },
+    {
+      "start": 845.88,
+      "end": 850.44,
+      "duration": 4.56,
+      "text": "you stop because you just need one guy"
+    },
+    {
+      "start": 848.22,
+      "end": 852.42,
+      "duration": 4.2,
+      "text": "to be the differentiating factor to"
+    },
+    {
+      "start": 850.44,
+      "end": 854.4,
+      "duration": 3.96,
+      "text": "place them in a dictionary order"
+    },
+    {
+      "start": 852.42,
+      "end": 856.14,
+      "duration": 3.72,
+      "text": "so guys I hope you've understood the"
+    },
+    {
+      "start": 854.4,
+      "end": 857.88,
+      "duration": 3.48,
+      "text": "solution now it's time to code it up so"
+    },
+    {
+      "start": 856.14,
+      "end": 859.44,
+      "duration": 3.3,
+      "text": "as usual I'll be coding the C plus plus"
+    },
+    {
+      "start": 857.88,
+      "end": 861.84,
+      "duration": 3.96,
+      "text": "on the right and you can figure out the"
+    },
+    {
+      "start": 859.44,
+      "end": 864.3,
+      "duration": 4.86,
+      "text": "Java code on the left so what are we"
+    },
+    {
+      "start": 861.84,
+      "end": 866.7,
+      "duration": 4.86,
+      "text": "given given the dictionary uh the number"
+    },
+    {
+      "start": 864.3,
+      "end": 867.96,
+      "duration": 3.66,
+      "text": "of strings and the number of alphabets"
+    },
+    {
+      "start": 866.7,
+      "end": 869.88,
+      "duration": 3.18,
+      "text": "that we will take from the English"
+    },
+    {
+      "start": 867.96,
+      "end": 871.56,
+      "duration": 3.6,
+      "text": "alphabet so the first thing that I'll do"
+    },
+    {
+      "start": 869.88,
+      "end": 874.74,
+      "duration": 4.86,
+      "text": "is I'll try to create the adjacency list"
+    },
+    {
+      "start": 871.56,
+      "end": 876.42,
+      "duration": 4.86,
+      "text": "and that will be for key size next I"
+    },
+    {
+      "start": 874.74,
+      "end": 878.76,
+      "duration": 4.02,
+      "text": "know that I have to go through this"
+    },
+    {
+      "start": 876.42,
+      "end": 881.64,
+      "duration": 5.22,
+      "text": "dictionary so I'll go through this"
+    },
+    {
+      "start": 878.76,
+      "end": 884.54,
+      "duration": 5.78,
+      "text": "dictionary till n minus 1 because I need"
+    },
+    {
+      "start": 881.64,
+      "end": 888.0,
+      "duration": 6.36,
+      "text": "pairs the first string that I'll get is"
+    },
+    {
+      "start": 884.54,
+      "end": 890.16,
+      "duration": 5.62,
+      "text": "dictionary of I and the second string"
+    },
+    {
+      "start": 888.0,
+      "end": 892.98,
+      "duration": 4.98,
+      "text": "that I'll get is dictionary of I plus"
+    },
+    {
+      "start": 890.16,
+      "end": 895.38,
+      "duration": 5.22,
+      "text": "one y till n minus 1 because you need"
+    },
+    {
+      "start": 892.98,
+      "end": 898.08,
+      "duration": 5.1,
+      "text": "Pairs and if you have to take the next"
+    },
+    {
+      "start": 895.38,
+      "end": 900.12,
+      "duration": 4.74,
+      "text": "one you just go to second last not to"
+    },
+    {
+      "start": 898.08,
+      "end": 901.98,
+      "duration": 3.9,
+      "text": "the last because at last there will be"
+    },
+    {
+      "start": 900.12,
+      "end": 904.68,
+      "duration": 4.56,
+      "text": "no one else to compare right this is"
+    },
+    {
+      "start": 901.98,
+      "end": 906.84,
+      "duration": 4.86,
+      "text": "done now I need to compare"
+    },
+    {
+      "start": 904.68,
+      "end": 908.34,
+      "duration": 3.66,
+      "text": "every character first character second"
+    },
+    {
+      "start": 906.84,
+      "end": 911.7,
+      "duration": 4.86,
+      "text": "character third character fourth"
+    },
+    {
+      "start": 908.34,
+      "end": 914.88,
+      "duration": 6.54,
+      "text": "character so I can go on till the length"
+    },
+    {
+      "start": 911.7,
+      "end": 916.74,
+      "duration": 5.04,
+      "text": "of minimum of S1 dot size like whoever"
+    },
+    {
+      "start": 914.88,
+      "end": 919.32,
+      "duration": 4.44,
+      "text": "is minimal I'll I'll go on comparing"
+    },
+    {
+      "start": 916.74,
+      "end": 921.54,
+      "duration": 4.8,
+      "text": "till it so I can take it something else"
+    },
+    {
+      "start": 919.32,
+      "end": 923.22,
+      "duration": 3.9,
+      "text": "because if there is one string this"
+    },
+    {
+      "start": 921.54,
+      "end": 924.96,
+      "duration": 3.42,
+      "text": "small if there is one string this big"
+    },
+    {
+      "start": 923.22,
+      "end": 926.64,
+      "duration": 3.42,
+      "text": "then we compare"
+    },
+    {
+      "start": 924.96,
+      "end": 930.18,
+      "duration": 5.22,
+      "text": "till the length of the smaller string"
+    },
+    {
+      "start": 926.64,
+      "end": 933.24,
+      "duration": 6.6,
+      "text": "got it so for INT it becomes a PTR equal"
+    },
+    {
+      "start": 930.18,
+      "end": 935.58,
+      "duration": 5.4,
+      "text": "to zero and pointer and PDR is lesser"
+    },
+    {
+      "start": 933.24,
+      "end": 938.28,
+      "duration": 5.04,
+      "text": "than the length and PDR plus plus so"
+    },
+    {
+      "start": 935.58,
+      "end": 939.5,
+      "duration": 3.92,
+      "text": "what I will say is Hey listen if S1 of"
+    },
+    {
+      "start": 938.28,
+      "end": 941.82,
+      "duration": 3.54,
+      "text": "PDR"
+    },
+    {
+      "start": 939.5,
+      "end": 943.92,
+      "duration": 4.42,
+      "text": "is like both the characters are"
+    },
+    {
+      "start": 941.82,
+      "end": 946.38,
+      "duration": 4.56,
+      "text": "different"
+    },
+    {
+      "start": 943.92,
+      "end": 947.82,
+      "duration": 3.9,
+      "text": "which is not equal to S2 of PDR"
+    },
+    {
+      "start": 946.38,
+      "end": 951.36,
+      "duration": 4.98,
+      "text": "and both the characters are different"
+    },
+    {
+      "start": 947.82,
+      "end": 952.86,
+      "duration": 5.04,
+      "text": "what do you do is you say adjacency of"
+    },
+    {
+      "start": 951.36,
+      "end": 956.7,
+      "duration": 5.34,
+      "text": "I'm saying someone appears before"
+    },
+    {
+      "start": 952.86,
+      "end": 960.66,
+      "duration": 7.8,
+      "text": "someone so S1 of PTR appears before S1"
+    },
+    {
+      "start": 956.7,
+      "end": 962.22,
+      "duration": 5.52,
+      "text": "of PTR should be done as pushback of S2"
+    },
+    {
+      "start": 960.66,
+      "end": 963.78,
+      "duration": 3.12,
+      "text": "of PDR"
+    },
+    {
+      "start": 962.22,
+      "end": 965.64,
+      "duration": 3.42,
+      "text": "simple as that"
+    },
+    {
+      "start": 963.78,
+      "end": 969.42,
+      "duration": 5.64,
+      "text": "that's the thing you'll do"
+    },
+    {
+      "start": 965.64,
+      "end": 973.26,
+      "duration": 7.62,
+      "text": "now you're saying S1 has an edge"
+    },
+    {
+      "start": 969.42,
+      "end": 975.12,
+      "duration": 5.7,
+      "text": "directed h2s2 S1 should appear before S2"
+    },
+    {
+      "start": 973.26,
+      "end": 977.1,
+      "duration": 3.84,
+      "text": "that is valid because in dictionary it"
+    },
+    {
+      "start": 975.12,
+      "end": 980.04,
+      "duration": 4.92,
+      "text": "appears before but I need to store in"
+    },
+    {
+      "start": 977.1,
+      "end": 982.08,
+      "duration": 4.98,
+      "text": "terms of 0 1 2. so just subtract minus a"
+    },
+    {
+      "start": 980.04,
+      "end": 984.66,
+      "duration": 4.62,
+      "text": "so that it automatically gets converted"
+    },
+    {
+      "start": 982.08,
+      "end": 987.12,
+      "duration": 5.04,
+      "text": "into 0 1 2. this is how you can easily"
+    },
+    {
+      "start": 984.66,
+      "end": 989.04,
+      "duration": 4.38,
+      "text": "create the graph now once uh your graph"
+    },
+    {
+      "start": 987.12,
+      "end": 990.72,
+      "duration": 3.6,
+      "text": "is ready by performing this uh"
+    },
+    {
+      "start": 989.04,
+      "end": 993.3,
+      "duration": 4.26,
+      "text": "constructive algorithm what do you need"
+    },
+    {
+      "start": 990.72,
+      "end": 995.1,
+      "duration": 4.38,
+      "text": "you need to find its two percent of this"
+    },
+    {
+      "start": 993.3,
+      "end": 997.62,
+      "duration": 4.32,
+      "text": "directed graph because they've clearly"
+    },
+    {
+      "start": 995.1,
+      "end": 1000.56,
+      "duration": 5.46,
+      "text": "stated answer like ordering is possible"
+    },
+    {
+      "start": 997.62,
+      "end": 1001.88,
+      "duration": 4.26,
+      "text": "if they would have stated that answer is"
+    },
+    {
+      "start": 1000.56,
+      "end": 1003.98,
+      "duration": 3.42,
+      "text": "not possible we will discuss it"
+    },
+    {
+      "start": 1001.88,
+      "end": 1006.56,
+      "duration": 4.68,
+      "text": "afterwards but as of now what I'll go as"
+    },
+    {
+      "start": 1003.98,
+      "end": 1008.78,
+      "duration": 4.8,
+      "text": "I'll go ahead and pick up the function"
+    },
+    {
+      "start": 1006.56,
+      "end": 1009.86,
+      "duration": 3.3,
+      "text": "that gives me toposot okay I'll just"
+    },
+    {
+      "start": 1008.78,
+      "end": 1012.62,
+      "duration": 3.84,
+      "text": "pick up the function that gives me"
+    },
+    {
+      "start": 1009.86,
+      "end": 1014.66,
+      "duration": 4.8,
+      "text": "topusot we have already done this so in"
+    },
+    {
+      "start": 1012.62,
+      "end": 1016.58,
+      "duration": 3.96,
+      "text": "case you have not checked out the"
+    },
+    {
+      "start": 1014.66,
+      "end": 1018.86,
+      "duration": 4.2,
+      "text": "previous videos please check out for two"
+    },
+    {
+      "start": 1016.58,
+      "end": 1020.9,
+      "duration": 4.32,
+      "text": "person we have already done the top for"
+    },
+    {
+      "start": 1018.86,
+      "end": 1023.12,
+      "duration": 4.26,
+      "text": "any given directed graph with multiple"
+    },
+    {
+      "start": 1020.9,
+      "end": 1025.88,
+      "duration": 4.98,
+      "text": "components remember this works for"
+    },
+    {
+      "start": 1023.12,
+      "end": 1029.0,
+      "duration": 5.88,
+      "text": "multiple components as well for single"
+    },
+    {
+      "start": 1025.88,
+      "end": 1030.26,
+      "duration": 4.38,
+      "text": "nodes as well so we just pick up the two"
+    },
+    {
+      "start": 1029.0,
+      "end": 1032.24,
+      "duration": 3.24,
+      "text": "passwords that we have learned in the"
+    },
+    {
+      "start": 1030.26,
+      "end": 1034.34,
+      "duration": 4.08,
+      "text": "previous videos now now what I'll see is"
+    },
+    {
+      "start": 1032.24,
+      "end": 1038.72,
+      "duration": 6.48,
+      "text": "okay listen we have the graph"
+    },
+    {
+      "start": 1034.34,
+      "end": 1040.94,
+      "duration": 6.6,
+      "text": "can I ask this guy to give me the top of"
+    },
+    {
+      "start": 1038.72,
+      "end": 1043.52,
+      "duration": 4.8,
+      "text": "sword and what does he need needs the"
+    },
+    {
+      "start": 1040.94,
+      "end": 1045.2,
+      "duration": 4.26,
+      "text": "number of vertices and the graph I'll"
+    },
+    {
+      "start": 1043.52,
+      "end": 1047.66,
+      "duration": 4.14,
+      "text": "give him the number of vertices remember"
+    },
+    {
+      "start": 1045.2,
+      "end": 1049.28,
+      "duration": 4.08,
+      "text": "the number of vertices is not n n is the"
+    },
+    {
+      "start": 1047.66,
+      "end": 1053.06,
+      "duration": 5.4,
+      "text": "number of words in the dictionary the"
+    },
+    {
+      "start": 1049.28,
+      "end": 1055.28,
+      "duration": 6.0,
+      "text": "number of vertices uh is K and I give"
+    },
+    {
+      "start": 1053.06,
+      "end": 1057.44,
+      "duration": 4.38,
+      "text": "him the adjacency list once I get this"
+    },
+    {
+      "start": 1055.28,
+      "end": 1059.12,
+      "duration": 3.84,
+      "text": "also they're asking you to return a"
+    },
+    {
+      "start": 1057.44,
+      "end": 1060.86,
+      "duration": 3.42,
+      "text": "string not a vector of n so let's"
+    },
+    {
+      "start": 1059.12,
+      "end": 1063.32,
+      "duration": 4.2,
+      "text": "convert this into a string string of"
+    },
+    {
+      "start": 1060.86,
+      "end": 1066.5,
+      "duration": 5.64,
+      "text": "answer equal to this and I'll just go"
+    },
+    {
+      "start": 1063.32,
+      "end": 1069.38,
+      "duration": 6.06,
+      "text": "across the ID of Topo and I know answer"
+    },
+    {
+      "start": 1066.5,
+      "end": 1071.66,
+      "duration": 5.16,
+      "text": "is equal to answer plus it convert this"
+    },
+    {
+      "start": 1069.38,
+      "end": 1074.42,
+      "duration": 5.04,
+      "text": "into a character so I T is the alphabet"
+    },
+    {
+      "start": 1071.66,
+      "end": 1076.76,
+      "duration": 5.1,
+      "text": "if you remember we subtracted a so again"
+    },
+    {
+      "start": 1074.42,
+      "end": 1078.44,
+      "duration": 4.02,
+      "text": "add a so that we get the character back"
+    },
+    {
+      "start": 1076.76,
+      "end": 1079.88,
+      "duration": 3.12,
+      "text": "and once you have got the character back"
+    },
+    {
+      "start": 1078.44,
+      "end": 1082.16,
+      "duration": 3.72,
+      "text": "you can go ahead and return the answer"
+    },
+    {
+      "start": 1079.88,
+      "end": 1084.26,
+      "duration": 4.38,
+      "text": "because they require a string to be"
+    },
+    {
+      "start": 1082.16,
+      "end": 1085.52,
+      "duration": 3.36,
+      "text": "returned so go and compile it so in this"
+    },
+    {
+      "start": 1084.26,
+      "end": 1087.32,
+      "duration": 3.06,
+      "text": "time you compile you see this is running"
+    },
+    {
+      "start": 1085.52,
+      "end": 1089.72,
+      "duration": 4.2,
+      "text": "absolutely fine let's quickly submit"
+    },
+    {
+      "start": 1087.32,
+      "end": 1092.42,
+      "duration": 5.1,
+      "text": "this and if you submit this you will see"
+    },
+    {
+      "start": 1089.72,
+      "end": 1094.28,
+      "duration": 4.56,
+      "text": "that all the test cases are so we have"
+    },
+    {
+      "start": 1092.42,
+      "end": 1096.02,
+      "duration": 3.6,
+      "text": "solved this particular problem now what"
+    },
+    {
+      "start": 1094.28,
+      "end": 1098.18,
+      "duration": 3.9,
+      "text": "what if the interviewer tweaks the"
+    },
+    {
+      "start": 1096.02,
+      "end": 1101.3,
+      "duration": 5.28,
+      "text": "question and says okay this was when"
+    },
+    {
+      "start": 1098.18,
+      "end": 1102.92,
+      "duration": 4.74,
+      "text": "this was always possible now when the"
+    },
+    {
+      "start": 1101.3,
+      "end": 1105.86,
+      "duration": 4.56,
+      "text": "order will not be possible"
+    },
+    {
+      "start": 1102.92,
+      "end": 1107.78,
+      "duration": 4.86,
+      "text": "what if the order is not possible what"
+    },
+    {
+      "start": 1105.86,
+      "end": 1109.58,
+      "duration": 3.72,
+      "text": "are the dictionary is wrong what if the"
+    },
+    {
+      "start": 1107.78,
+      "end": 1111.62,
+      "duration": 3.84,
+      "text": "order is not possible how will you"
+    },
+    {
+      "start": 1109.58,
+      "end": 1114.14,
+      "duration": 4.56,
+      "text": "figure that out so you'll tell him to"
+    },
+    {
+      "start": 1111.62,
+      "end": 1116.6,
+      "duration": 4.98,
+      "text": "test cases one of the test cases you can"
+    },
+    {
+      "start": 1114.14,
+      "end": 1119.06,
+      "duration": 4.92,
+      "text": "say him is if the string one is this and"
+    },
+    {
+      "start": 1116.6,
+      "end": 1121.52,
+      "duration": 4.92,
+      "text": "string two is this whenever we try to"
+    },
+    {
+      "start": 1119.06,
+      "end": 1124.58,
+      "duration": 5.52,
+      "text": "compare the strings what are we looking"
+    },
+    {
+      "start": 1121.52,
+      "end": 1126.8,
+      "duration": 5.28,
+      "text": "at we are looking at is this matching is"
+    },
+    {
+      "start": 1124.58,
+      "end": 1128.96,
+      "duration": 4.38,
+      "text": "this matching is this matching and"
+    },
+    {
+      "start": 1126.8,
+      "end": 1132.2,
+      "duration": 5.4,
+      "text": "apparently you ended up comparing like"
+    },
+    {
+      "start": 1128.96,
+      "end": 1133.82,
+      "duration": 4.86,
+      "text": "the comparison has gone is finished and"
+    },
+    {
+      "start": 1132.2,
+      "end": 1137.06,
+      "duration": 4.86,
+      "text": "you did not find a differentiating point"
+    },
+    {
+      "start": 1133.82,
+      "end": 1138.92,
+      "duration": 5.1,
+      "text": "because a b c everything is matching if"
+    },
+    {
+      "start": 1137.06,
+      "end": 1140.36,
+      "duration": 3.3,
+      "text": "everything is matching it doesn't matter"
+    },
+    {
+      "start": 1138.92,
+      "end": 1141.86,
+      "duration": 2.94,
+      "text": "if you are following the alien"
+    },
+    {
+      "start": 1140.36,
+      "end": 1144.74,
+      "duration": 4.38,
+      "text": "dictionary or if you're following the"
+    },
+    {
+      "start": 1141.86,
+      "end": 1147.62,
+      "duration": 5.76,
+      "text": "normal dictionary the shorter string ABC"
+    },
+    {
+      "start": 1144.74,
+      "end": 1150.38,
+      "duration": 5.64,
+      "text": "should have been before a b c d for sure"
+    },
+    {
+      "start": 1147.62,
+      "end": 1152.54,
+      "duration": 4.92,
+      "text": "so you can see this test case that if"
+    },
+    {
+      "start": 1150.38,
+      "end": 1154.52,
+      "duration": 4.14,
+      "text": "everything is matching and the larger"
+    },
+    {
+      "start": 1152.54,
+      "end": 1157.64,
+      "duration": 5.1,
+      "text": "string is before the shortest ring very"
+    },
+    {
+      "start": 1154.52,
+      "end": 1159.2,
+      "duration": 4.68,
+      "text": "important if ABC was before ABCD and"
+    },
+    {
+      "start": 1157.64,
+      "end": 1161.24,
+      "duration": 3.6,
+      "text": "that is fine you don't need to find an"
+    },
+    {
+      "start": 1159.2,
+      "end": 1163.04,
+      "duration": 3.84,
+      "text": "order for this but if the largest ring"
+    },
+    {
+      "start": 1161.24,
+      "end": 1166.1,
+      "duration": 4.86,
+      "text": "is before the shortest ring when"
+    },
+    {
+      "start": 1163.04,
+      "end": 1169.22,
+      "duration": 6.18,
+      "text": "everyone matches it's a no order is not"
+    },
+    {
+      "start": 1166.1,
+      "end": 1171.32,
+      "duration": 5.22,
+      "text": "possible it's a wrong dictionary got it"
+    },
+    {
+      "start": 1169.22,
+      "end": 1173.36,
+      "duration": 4.14,
+      "text": "and the other one is if you have"
+    },
+    {
+      "start": 1171.32,
+      "end": 1176.24,
+      "duration": 4.92,
+      "text": "something like which creates a cyclic"
+    },
+    {
+      "start": 1173.36,
+      "end": 1179.54,
+      "duration": 6.18,
+      "text": "dependency something like EBC something"
+    },
+    {
+      "start": 1176.24,
+      "end": 1181.58,
+      "duration": 5.34,
+      "text": "like bat and something like Ade now what"
+    },
+    {
+      "start": 1179.54,
+      "end": 1185.78,
+      "duration": 6.24,
+      "text": "we are saying over here is"
+    },
+    {
+      "start": 1181.58,
+      "end": 1188.0,
+      "duration": 6.42,
+      "text": "piercing a to be smaller than b and we"
+    },
+    {
+      "start": 1185.78,
+      "end": 1190.46,
+      "duration": 4.68,
+      "text": "are seeing B to be smaller than a it's a"
+    },
+    {
+      "start": 1188.0,
+      "end": 1193.34,
+      "duration": 5.34,
+      "text": "cyclic dependency this is not possible"
+    },
+    {
+      "start": 1190.46,
+      "end": 1195.74,
+      "duration": 5.28,
+      "text": "so these are the two test cases when a"
+    },
+    {
+      "start": 1193.34,
+      "end": 1197.78,
+      "duration": 4.44,
+      "text": "dictionary is wrong when a dictionary is"
+    },
+    {
+      "start": 1195.74,
+      "end": 1199.64,
+      "duration": 3.9,
+      "text": "wrong whenever you find two pairs having"
+    },
+    {
+      "start": 1197.78,
+      "end": 1202.6,
+      "duration": 4.82,
+      "text": "something like this or a cyclic"
+    },
+    {
+      "start": 1199.64,
+      "end": 1207.14,
+      "duration": 7.5,
+      "text": "dependency because we know for a cycle"
+    },
+    {
+      "start": 1202.6,
+      "end": 1208.88,
+      "duration": 6.28,
+      "text": "to poor sort or any sorted order is not"
+    },
+    {
+      "start": 1207.14,
+      "end": 1210.98,
+      "duration": 3.84,
+      "text": "possible that is what you'll tell the"
+    },
+    {
+      "start": 1208.88,
+      "end": 1212.78,
+      "duration": 3.9,
+      "text": "interviewer if it gives you a follow-up"
+    },
+    {
+      "start": 1210.98,
+      "end": 1215.42,
+      "duration": 4.44,
+      "text": "question that when is it not possible"
+    },
+    {
+      "start": 1212.78,
+      "end": 1216.62,
+      "duration": 3.84,
+      "text": "you tell them listen if the largest ring"
+    },
+    {
+      "start": 1215.42,
+      "end": 1218.78,
+      "duration": 3.36,
+      "text": "appears before the shutter and"
+    },
+    {
+      "start": 1216.62,
+      "end": 1220.88,
+      "duration": 4.26,
+      "text": "everything is Magic not possible if"
+    },
+    {
+      "start": 1218.78,
+      "end": 1222.74,
+      "duration": 3.96,
+      "text": "there's a cyclic dependency not possible"
+    },
+    {
+      "start": 1220.88,
+      "end": 1225.32,
+      "duration": 4.44,
+      "text": "these are the two checks you have to"
+    },
+    {
+      "start": 1222.74,
+      "end": 1228.14,
+      "duration": 5.4,
+      "text": "integrate in the given code and it will"
+    },
+    {
+      "start": 1225.32,
+      "end": 1229.7,
+      "duration": 4.38,
+      "text": "start running absolutely fine so guys I"
+    },
+    {
+      "start": 1228.14,
+      "end": 1231.74,
+      "duration": 3.6,
+      "text": "hope I was able to explain you this"
+    },
+    {
+      "start": 1229.7,
+      "end": 1233.42,
+      "duration": 3.72,
+      "text": "particular problem just in case I was"
+    },
+    {
+      "start": 1231.74,
+      "end": 1234.92,
+      "duration": 3.18,
+      "text": "please please please hit that like"
+    },
+    {
+      "start": 1233.42,
+      "end": 1237.38,
+      "duration": 3.96,
+      "text": "button and if you're new to our Channel"
+    },
+    {
+      "start": 1234.92,
+      "end": 1238.58,
+      "duration": 3.66,
+      "text": "please do consider subscribing to us and"
+    },
+    {
+      "start": 1237.38,
+      "end": 1240.26,
+      "duration": 2.88,
+      "text": "if you haven't checked out our DP series"
+    },
+    {
+      "start": 1238.58,
+      "end": 1241.76,
+      "duration": 3.18,
+      "text": "and the HD sheet the links are in the"
+    },
+    {
+      "start": 1240.26,
+      "end": 1242.96,
+      "duration": 2.7,
+      "text": "description and yeah with this I'll be"
+    },
+    {
+      "start": 1241.76,
+      "end": 1246.76,
+      "duration": 5.0,
+      "text": "wrapping up this video Let's be in some"
+    },
+    {
+      "start": 1242.96,
+      "end": 1246.76,
+      "duration": 3.8,
+      "text": "of the video till then bye take care"
+    },
+    {
+      "start": 1247.3,
+      "end": 1255.26,
+      "duration": 7.96,
+      "text": "[Music]"
+    }
+  ]
+}

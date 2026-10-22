@@ -1,0 +1,1316 @@
+{
+  "video_id": "ZGr5nX-Gi6Y",
+  "title": "G-48. Number of Provinces - Disjoint Set",
+  "duration_sec": 483,
+  "num_segments": 218,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.48,
+      "duration": 3.48,
+      "text": "Everyone, welcome back to the channel. I"
+    },
+    {
+      "start": 1.52,
+      "end": 5.92,
+      "duration": 4.4,
+      "text": "hope you guys are doing extremely well."
+    },
+    {
+      "start": 3.48,
+      "end": 8.0,
+      "duration": 4.52,
+      "text": "So, we will be solving the problem"
+    },
+    {
+      "start": 5.92,
+      "end": 10.0,
+      "duration": 4.08,
+      "text": "number of provinces. So, what does the"
+    },
+    {
+      "start": 8.0,
+      "end": 12.32,
+      "duration": 4.32,
+      "text": "question state? Given an undirected"
+    },
+    {
+      "start": 10.0,
+      "end": 14.2,
+      "duration": 4.2,
+      "text": "graph with V vertices, we say two"
+    },
+    {
+      "start": 12.32,
+      "end": 16.68,
+      "duration": 4.36,
+      "text": "vertices U and V belong to a single"
+    },
+    {
+      "start": 14.2,
+      "end": 19.76,
+      "duration": 5.56,
+      "text": "province if there is a path from U to V"
+    },
+    {
+      "start": 16.68,
+      "end": 22.24,
+      "duration": 5.56,
+      "text": "or V to U by any means. Your task is to"
+    },
+    {
+      "start": 19.76,
+      "end": 24.08,
+      "duration": 4.32,
+      "text": "find the number of provinces. So, in"
+    },
+    {
+      "start": 22.24,
+      "end": 26.8,
+      "duration": 4.56,
+      "text": "short, the question is about finding the"
+    },
+    {
+      "start": 24.08,
+      "end": 28.24,
+      "duration": 4.16,
+      "text": "number of connected components. And you"
+    },
+    {
+      "start": 26.8,
+      "end": 31.16,
+      "duration": 4.36,
+      "text": "So, you've already solved this problem"
+    },
+    {
+      "start": 28.24,
+      "end": 33.6,
+      "duration": 5.36,
+      "text": "using the traversal techniques, but over"
+    },
+    {
+      "start": 31.16,
+      "end": 36.2,
+      "duration": 5.04,
+      "text": "here, we will be solving this using the"
+    },
+    {
+      "start": 33.6,
+      "end": 37.56,
+      "duration": 3.96,
+      "text": "disjoint set data structure. Why?"
+    },
+    {
+      "start": 36.2,
+      "end": 39.4,
+      "duration": 3.2,
+      "text": "Because we are learning this data"
+    },
+    {
+      "start": 37.56,
+      "end": 41.76,
+      "duration": 4.2,
+      "text": "structure. So, to understand this data"
+    },
+    {
+      "start": 39.4,
+      "end": 43.48,
+      "duration": 4.08,
+      "text": "structure in depth so that we can always"
+    },
+    {
+      "start": 41.76,
+      "end": 45.72,
+      "duration": 3.96,
+      "text": "solve the harder problems because if you"
+    },
+    {
+      "start": 43.48,
+      "end": 48.32,
+      "duration": 4.84,
+      "text": "don't understand a data structure in"
+    },
+    {
+      "start": 45.72,
+      "end": 50.68,
+      "duration": 4.96,
+      "text": "depth and you're not conceptually clear,"
+    },
+    {
+      "start": 48.32,
+      "end": 52.4,
+      "duration": 4.08,
+      "text": "then it'll be very, very tough to solve"
+    },
+    {
+      "start": 50.68,
+      "end": 53.72,
+      "duration": 3.04,
+      "text": "harder problems. So, basically, what"
+    },
+    {
+      "start": 52.4,
+      "end": 55.8,
+      "duration": 3.4,
+      "text": "this state is, they'll be giving you a"
+    },
+    {
+      "start": 53.72,
+      "end": 59.0,
+      "duration": 5.28,
+      "text": "graph like this, and the graph will be"
+    },
+    {
+      "start": 55.8,
+      "end": 61.76,
+      "duration": 5.96,
+      "text": "uh represented by an adjacency matrix."
+    },
+    {
+      "start": 59.0,
+      "end": 63.2,
+      "duration": 4.2,
+      "text": "Okay? Now, if you see that between 1 and"
+    },
+    {
+      "start": 61.76,
+      "end": 64.8,
+      "duration": 3.04,
+      "text": "2, there is 1, which means there is an"
+    },
+    {
+      "start": 63.2,
+      "end": 66.8,
+      "duration": 3.6,
+      "text": "edge between 1 and 2"
+    },
+    {
+      "start": 64.8,
+      "end": 68.12,
+      "duration": 3.32,
+      "text": "or there is an edge between 2 and 1. If"
+    },
+    {
+      "start": 66.8,
+      "end": 70.44,
+      "duration": 3.64,
+      "text": "you see there is an edge between 2 and"
+    },
+    {
+      "start": 68.12,
+      "end": 73.12,
+      "duration": 5.0,
+      "text": "3, you'll see at 2 3, there is a 1, and"
+    },
+    {
+      "start": 70.44,
+      "end": 75.6,
+      "duration": 5.16,
+      "text": "at 3 2, there is a 1. So, basically,"
+    },
+    {
+      "start": 73.12,
+      "end": 79.24,
+      "duration": 6.12,
+      "text": "everywhere there's a 1 marked, it means"
+    },
+    {
+      "start": 75.6,
+      "end": 81.88,
+      "duration": 6.28,
+      "text": "there's an edge between those two I and"
+    },
+    {
+      "start": 79.24,
+      "end": 84.96,
+      "duration": 5.72,
+      "text": "J because this If you say this is I and"
+    },
+    {
+      "start": 81.88,
+      "end": 87.72,
+      "duration": 5.84,
+      "text": "this is J, and if this is 1, it means"
+    },
+    {
+      "start": 84.96,
+      "end": 90.12,
+      "duration": 5.16,
+      "text": "there's an edge between 7 and 6 or 6 or"
+    },
+    {
+      "start": 87.72,
+      "end": 92.12,
+      "duration": 4.4,
+      "text": "7, right? This is the meaning of the"
+    },
+    {
+      "start": 90.12,
+      "end": 94.08,
+      "duration": 3.96,
+      "text": "adjacency matrix. So, you'll be given"
+    },
+    {
+      "start": 92.12,
+      "end": 95.72,
+      "duration": 3.6,
+      "text": "the adjacency matrix, which will be"
+    },
+    {
+      "start": 94.08,
+      "end": 97.84,
+      "duration": 3.76,
+      "text": "representing a graph, and you have to"
+    },
+    {
+      "start": 95.72,
+      "end": 99.28,
+      "duration": 3.56,
+      "text": "tell me the number of connected"
+    },
+    {
+      "start": 97.84,
+      "end": 101.92,
+      "duration": 4.08,
+      "text": "components. So, if I ask you the number"
+    },
+    {
+      "start": 99.28,
+      "end": 106.68,
+      "duration": 7.4,
+      "text": "of connected components, this is 1, this"
+    },
+    {
+      "start": 101.92,
+      "end": 109.6,
+      "duration": 7.68,
+      "text": "is 2, this is 3. So, the prerequisite is"
+    },
+    {
+      "start": 106.68,
+      "end": 111.36,
+      "duration": 4.68,
+      "text": "definitely the disjoint set data"
+    },
+    {
+      "start": 109.6,
+      "end": 112.84,
+      "duration": 3.24,
+      "text": "structure. I've already taught you this"
+    },
+    {
+      "start": 111.36,
+      "end": 115.48,
+      "duration": 4.12,
+      "text": "in the previous video of this graph"
+    },
+    {
+      "start": 112.84,
+      "end": 117.28,
+      "duration": 4.44,
+      "text": "series. So, go back, watch it because if"
+    },
+    {
+      "start": 115.48,
+      "end": 119.28,
+      "duration": 3.8,
+      "text": "you do not watch it, I'll It'll be very,"
+    },
+    {
+      "start": 117.28,
+      "end": 121.16,
+      "duration": 3.88,
+      "text": "very tough for you to understand it. So,"
+    },
+    {
+      "start": 119.28,
+      "end": 124.2,
+      "duration": 4.92,
+      "text": "if you remember the disjoint set data"
+    },
+    {
+      "start": 121.16,
+      "end": 126.4,
+      "duration": 5.24,
+      "text": "structure, this component, when you"
+    },
+    {
+      "start": 124.2,
+      "end": 129.16,
+      "duration": 4.96,
+      "text": "attach everyone, it will be something"
+    },
+    {
+      "start": 126.4,
+      "end": 131.24,
+      "duration": 4.84,
+      "text": "like two will be pointing to one, three"
+    },
+    {
+      "start": 129.16,
+      "end": 132.72,
+      "duration": 3.56,
+      "text": "will also be pointing to one, and one"
+    },
+    {
+      "start": 131.24,
+      "end": 134.28,
+      "duration": 3.04,
+      "text": "will be pointing to itself. Basically,"
+    },
+    {
+      "start": 132.72,
+      "end": 137.04,
+      "duration": 4.32,
+      "text": "two's parent will be one, three's parent"
+    },
+    {
+      "start": 134.28,
+      "end": 139.72,
+      "duration": 5.44,
+      "text": "will be one, and one will be"
+    },
+    {
+      "start": 137.04,
+      "end": 141.28,
+      "duration": 4.24,
+      "text": "his parent himself. And similarly, four"
+    },
+    {
+      "start": 139.72,
+      "end": 143.08,
+      "duration": 3.36,
+      "text": "will be something like this, and five"
+    },
+    {
+      "start": 141.28,
+      "end": 145.16,
+      "duration": 3.88,
+      "text": "will be pointing to him, and four will"
+    },
+    {
+      "start": 143.08,
+      "end": 148.2,
+      "duration": 5.12,
+      "text": "be the ultimate parent. Similarly, can I"
+    },
+    {
+      "start": 145.16,
+      "end": 149.96,
+      "duration": 4.8,
+      "text": "say if I six in the disjoint set data"
+    },
+    {
+      "start": 148.2,
+      "end": 151.08,
+      "duration": 2.88,
+      "text": "structure, we will be having something"
+    },
+    {
+      "start": 149.96,
+      "end": 152.44,
+      "duration": 2.48,
+      "text": "like this."
+    },
+    {
+      "start": 151.08,
+      "end": 154.0,
+      "duration": 2.92,
+      "text": "So, if I talk about the disjoint set"
+    },
+    {
+      "start": 152.44,
+      "end": 156.4,
+      "duration": 3.96,
+      "text": "data structure, if you try to attach one"
+    },
+    {
+      "start": 154.0,
+      "end": 158.88,
+      "duration": 4.88,
+      "text": "two, then two three, then four five,"
+    },
+    {
+      "start": 156.4,
+      "end": 161.56,
+      "duration": 5.16,
+      "text": "then six seven, you will end up with"
+    },
+    {
+      "start": 158.88,
+      "end": 163.84,
+      "duration": 4.96,
+      "text": "these kind of structures, and"
+    },
+    {
+      "start": 161.56,
+      "end": 166.88,
+      "duration": 5.32,
+      "text": "what you need to do is very simple. Can"
+    },
+    {
+      "start": 163.84,
+      "end": 169.96,
+      "duration": 6.12,
+      "text": "I Can I say that"
+    },
+    {
+      "start": 166.88,
+      "end": 172.2,
+      "duration": 5.32,
+      "text": "there will be three bosses?"
+    },
+    {
+      "start": 169.96,
+      "end": 173.76,
+      "duration": 3.8,
+      "text": "Or three ultimate parents, if there are"
+    },
+    {
+      "start": 172.2,
+      "end": 175.52,
+      "duration": 3.32,
+      "text": "three components."
+    },
+    {
+      "start": 173.76,
+      "end": 178.32,
+      "duration": 4.56,
+      "text": "Because every component will have a"
+    },
+    {
+      "start": 175.52,
+      "end": 181.68,
+      "duration": 6.16,
+      "text": "boss. Every component will have a boss."
+    },
+    {
+      "start": 178.32,
+      "end": 185.24,
+      "duration": 6.92,
+      "text": "So, if I say find"
+    },
+    {
+      "start": 181.68,
+      "end": 187.96,
+      "duration": 6.28,
+      "text": "ultimate parent of one, that will be one"
+    },
+    {
+      "start": 185.24,
+      "end": 189.76,
+      "duration": 4.52,
+      "text": "itself. If I say find ultimate parent of"
+    },
+    {
+      "start": 187.96,
+      "end": 191.64,
+      "duration": 3.68,
+      "text": "two, that will be one itself. If I say"
+    },
+    {
+      "start": 189.76,
+      "end": 194.56,
+      "duration": 4.8,
+      "text": "find ultimate parent of three, that will"
+    },
+    {
+      "start": 191.64,
+      "end": 195.68,
+      "duration": 4.04,
+      "text": "be one itself. So, I get one, which"
+    },
+    {
+      "start": 194.56,
+      "end": 198.56,
+      "duration": 4.0,
+      "text": "means"
+    },
+    {
+      "start": 195.68,
+      "end": 200.72,
+      "duration": 5.04,
+      "text": "that's one of the bosses of one of the"
+    },
+    {
+      "start": 198.56,
+      "end": 202.52,
+      "duration": 3.96,
+      "text": "components. And then if I say find"
+    },
+    {
+      "start": 200.72,
+      "end": 204.72,
+      "duration": 4.0,
+      "text": "ultimate parent of four, it will be"
+    },
+    {
+      "start": 202.52,
+      "end": 207.44,
+      "duration": 4.92,
+      "text": "four. Then if I say find ultimate parent"
+    },
+    {
+      "start": 204.72,
+      "end": 209.72,
+      "duration": 5.0,
+      "text": "of five, it will be four itself. Again,"
+    },
+    {
+      "start": 207.44,
+      "end": 212.28,
+      "duration": 4.84,
+      "text": "four is a boss. Correct? Then if I say"
+    },
+    {
+      "start": 209.72,
+      "end": 214.24,
+      "duration": 4.52,
+      "text": "find ultimate parent of six, it will be"
+    },
+    {
+      "start": 212.28,
+      "end": 216.48,
+      "duration": 4.2,
+      "text": "six. Then if I say find ultimate parent"
+    },
+    {
+      "start": 214.24,
+      "end": 219.4,
+      "duration": 5.16,
+      "text": "of seven, it will be seven. Sorry, six"
+    },
+    {
+      "start": 216.48,
+      "end": 223.64,
+      "duration": 7.16,
+      "text": "rather. So, can I say if I count the"
+    },
+    {
+      "start": 219.4,
+      "end": 227.28,
+      "duration": 7.88,
+      "text": "number of unique ultimate parents, count"
+    },
+    {
+      "start": 223.64,
+      "end": 232.68,
+      "duration": 9.04,
+      "text": "the number of unique ultimate parents,"
+    },
+    {
+      "start": 227.28,
+      "end": 236.76,
+      "duration": 9.48,
+      "text": "or can I simply say if a node"
+    },
+    {
+      "start": 232.68,
+      "end": 238.48,
+      "duration": 5.8,
+      "text": "if a node is the parent of himself"
+    },
+    {
+      "start": 236.76,
+      "end": 241.0,
+      "duration": 4.24,
+      "text": "if a node is the ultimate parent of"
+    },
+    {
+      "start": 238.48,
+      "end": 243.12,
+      "duration": 4.64,
+      "text": "himself, that is the boss."
+    },
+    {
+      "start": 241.0,
+      "end": 245.28,
+      "duration": 4.28,
+      "text": "So, for one, the ultimate parent is one."
+    },
+    {
+      "start": 243.12,
+      "end": 247.16,
+      "duration": 4.04,
+      "text": "For six, the ultimate parent is six. For"
+    },
+    {
+      "start": 245.28,
+      "end": 248.56,
+      "duration": 3.28,
+      "text": "four, the ultimate parent is four. So,"
+    },
+    {
+      "start": 247.16,
+      "end": 251.44,
+      "duration": 4.28,
+      "text": "can I say"
+    },
+    {
+      "start": 248.56,
+      "end": 254.0,
+      "duration": 5.44,
+      "text": "for the guys whose ultimate parent is"
+    },
+    {
+      "start": 251.44,
+      "end": 255.68,
+      "duration": 4.24,
+      "text": "they themselves, they are the bosses."
+    },
+    {
+      "start": 254.0,
+      "end": 257.2,
+      "duration": 3.2,
+      "text": "And the number of bosses, if I can count"
+    },
+    {
+      "start": 255.68,
+      "end": 259.04,
+      "duration": 3.36,
+      "text": "that, that is what the number of"
+    },
+    {
+      "start": 257.2,
+      "end": 261.4,
+      "duration": 4.2,
+      "text": "provinces will be. So, can I say in the"
+    },
+    {
+      "start": 259.04,
+      "end": 263.16,
+      "duration": 4.12,
+      "text": "disjoint set data structure, if I can"
+    },
+    {
+      "start": 261.4,
+      "end": 266.72,
+      "duration": 5.32,
+      "text": "simply write if"
+    },
+    {
+      "start": 263.16,
+      "end": 268.4,
+      "duration": 5.24,
+      "text": "find ultimate parent of you is equal to"
+    },
+    {
+      "start": 266.72,
+      "end": 271.28,
+      "duration": 4.56,
+      "text": "equal to you, I can do a count of plus"
+    },
+    {
+      "start": 268.4,
+      "end": 273.48,
+      "duration": 5.08,
+      "text": "plus. And whereas you can go from one to"
+    },
+    {
+      "start": 271.28,
+      "end": 275.16,
+      "duration": 3.88,
+      "text": "n if it's a"
+    },
+    {
+      "start": 273.48,
+      "end": 277.36,
+      "duration": 3.88,
+      "text": "if it's a"
+    },
+    {
+      "start": 275.16,
+      "end": 279.4,
+      "duration": 4.24,
+      "text": "one-based indexing graph. Can I say"
+    },
+    {
+      "start": 277.36,
+      "end": 281.0,
+      "duration": 3.64,
+      "text": "this? I definitely can. And at the end"
+    },
+    {
+      "start": 279.4,
+      "end": 282.04,
+      "duration": 2.64,
+      "text": "of the day, count will be my answer"
+    },
+    {
+      "start": 281.0,
+      "end": 284.16,
+      "duration": 3.16,
+      "text": "because"
+    },
+    {
+      "start": 282.04,
+      "end": 286.04,
+      "duration": 4.0,
+      "text": "the bosses is what I need because the"
+    },
+    {
+      "start": 284.16,
+      "end": 288.2,
+      "duration": 4.04,
+      "text": "number of bosses will always be equal to"
+    },
+    {
+      "start": 286.04,
+      "end": 289.6,
+      "duration": 3.56,
+      "text": "the number of connected components. Got"
+    },
+    {
+      "start": 288.2,
+      "end": 290.92,
+      "duration": 2.72,
+      "text": "it?"
+    },
+    {
+      "start": 289.6,
+      "end": 292.44,
+      "duration": 2.84,
+      "text": "So, I hope you understood how to use the"
+    },
+    {
+      "start": 290.92,
+      "end": 293.76,
+      "duration": 2.84,
+      "text": "disjoint set data structure in order to"
+    },
+    {
+      "start": 292.44,
+      "end": 295.84,
+      "duration": 3.4,
+      "text": "solve this problem. So, what I'll do is"
+    },
+    {
+      "start": 293.76,
+      "end": 297.12,
+      "duration": 3.36,
+      "text": "I'll code the C++ solution on the right"
+    },
+    {
+      "start": 295.84,
+      "end": 299.44,
+      "duration": 3.6,
+      "text": "and you can figure out the exact similar"
+    },
+    {
+      "start": 297.12,
+      "end": 300.88,
+      "duration": 3.76,
+      "text": "Java solution on the left for the Java"
+    },
+    {
+      "start": 299.44,
+      "end": 302.56,
+      "duration": 3.12,
+      "text": "people. So, before starting the"
+    },
+    {
+      "start": 300.88,
+      "end": 304.6,
+      "duration": 3.72,
+      "text": "solution, let's take out template. This"
+    },
+    {
+      "start": 302.56,
+      "end": 306.8,
+      "duration": 4.24,
+      "text": "is our code snippet just in case you"
+    },
+    {
+      "start": 304.6,
+      "end": 309.88,
+      "duration": 5.28,
+      "text": "haven't seen our previous videos. We"
+    },
+    {
+      "start": 306.8,
+      "end": 311.52,
+      "duration": 4.72,
+      "text": "have a union by size, union by rank, and"
+    },
+    {
+      "start": 309.88,
+      "end": 314.64,
+      "duration": 4.76,
+      "text": "uh find your parent and everything"
+    },
+    {
+      "start": 311.52,
+      "end": 316.44,
+      "duration": 4.92,
+      "text": "initialized on the constructor. So,"
+    },
+    {
+      "start": 314.64,
+      "end": 318.64,
+      "duration": 4.0,
+      "text": "it is a"
+    },
+    {
+      "start": 316.44,
+      "end": 321.64,
+      "duration": 5.2,
+      "text": "zero-based indexing graph. So, what I'll"
+    },
+    {
+      "start": 318.64,
+      "end": 324.64,
+      "duration": 6.0,
+      "text": "do is I'll go ahead and at first uh"
+    },
+    {
+      "start": 321.64,
+      "end": 326.16,
+      "duration": 4.52,
+      "text": "definitely take this class"
+    },
+    {
+      "start": 324.64,
+      "end": 329.0,
+      "duration": 4.36,
+      "text": "and create a constructor of the same"
+    },
+    {
+      "start": 326.16,
+      "end": 330.68,
+      "duration": 4.52,
+      "text": "size so that everything is created. Now,"
+    },
+    {
+      "start": 329.0,
+      "end": 331.76,
+      "duration": 2.76,
+      "text": "I'll iterate for"
+    },
+    {
+      "start": 330.68,
+      "end": 335.88,
+      "duration": 5.2,
+      "text": "the"
+    },
+    {
+      "start": 331.76,
+      "end": 337.84,
+      "duration": 6.08,
+      "text": "adjacency matrix, which is quite simple."
+    },
+    {
+      "start": 335.88,
+      "end": 339.48,
+      "duration": 3.6,
+      "text": "And then I'll say, \"Hey, listen. If the"
+    },
+    {
+      "start": 337.84,
+      "end": 340.52,
+      "duration": 2.68,
+      "text": "adjacency of IJ is equal to equal to"
+    },
+    {
+      "start": 339.48,
+      "end": 344.56,
+      "duration": 5.08,
+      "text": "one,"
+    },
+    {
+      "start": 340.52,
+      "end": 347.68,
+      "duration": 7.16,
+      "text": "which means that there is a edge between"
+    },
+    {
+      "start": 344.56,
+      "end": 350.44,
+      "duration": 5.88,
+      "text": "I and"
+    },
+    {
+      "start": 347.68,
+      "end": 352.48,
+      "duration": 4.8,
+      "text": "J, so I'll go and say DS. I can"
+    },
+    {
+      "start": 350.44,
+      "end": 354.52,
+      "duration": 4.08,
+      "text": "definitely take union by size or union"
+    },
+    {
+      "start": 352.48,
+      "end": 357.4,
+      "duration": 4.92,
+      "text": "by rank, which whichever you wish to, I"
+    },
+    {
+      "start": 354.52,
+      "end": 359.76,
+      "duration": 5.24,
+      "text": "comma J. No need to do J comma I because"
+    },
+    {
+      "start": 357.4,
+      "end": 362.2,
+      "duration": 4.8,
+      "text": "that will be discarded in the future run"
+    },
+    {
+      "start": 359.76,
+      "end": 363.28,
+      "duration": 3.52,
+      "text": "because once they are connected, if in"
+    },
+    {
+      "start": 362.2,
+      "end": 365.4,
+      "duration": 3.2,
+      "text": "the future they are connected, it will"
+    },
+    {
+      "start": 363.28,
+      "end": 367.08,
+      "duration": 3.8,
+      "text": "just return. So, once you've done this,"
+    },
+    {
+      "start": 365.4,
+      "end": 369.0,
+      "duration": 3.6,
+      "text": "you'll have a int count equal to zero"
+    },
+    {
+      "start": 367.08,
+      "end": 372.6,
+      "duration": 5.52,
+      "text": "and you can go ahead and say, \"Okay, int"
+    },
+    {
+      "start": 369.0,
+      "end": 376.64,
+      "duration": 7.64,
+      "text": "I equal to zero, I lesser than V, I plus"
+    },
+    {
+      "start": 372.6,
+      "end": 378.92,
+      "duration": 6.32,
+      "text": "plus.\" And you can say, \"If Yes, if DS."
+    },
+    {
+      "start": 376.64,
+      "end": 381.4,
+      "duration": 4.76,
+      "text": "You can use the parent function. DS."
+    },
+    {
+      "start": 378.92,
+      "end": 383.16,
+      "duration": 4.24,
+      "text": "find ultimate parent of I is equal to"
+    },
+    {
+      "start": 381.4,
+      "end": 385.32,
+      "duration": 3.92,
+      "text": "equal to I, I can do a count of plus"
+    },
+    {
+      "start": 383.16,
+      "end": 387.16,
+      "duration": 4.0,
+      "text": "plus, then I can just return a count.\" A"
+    },
+    {
+      "start": 385.32,
+      "end": 388.92,
+      "duration": 3.6,
+      "text": "lot of people might think, \"No need to"
+    },
+    {
+      "start": 387.16,
+      "end": 391.96,
+      "duration": 4.8,
+      "text": "go to recursion to find the ultimate"
+    },
+    {
+      "start": 388.92,
+      "end": 394.48,
+      "duration": 5.56,
+      "text": "parent. We can use the parent array"
+    },
+    {
+      "start": 391.96,
+      "end": 396.72,
+      "duration": 4.76,
+      "text": "directly as well.\" Yes, you can use it."
+    },
+    {
+      "start": 394.48,
+      "end": 399.12,
+      "duration": 4.64,
+      "text": "You have to just declare these guys"
+    },
+    {
+      "start": 396.72,
+      "end": 400.08,
+      "duration": 3.36,
+      "text": "under this. And once you've done this, I"
+    },
+    {
+      "start": 399.12,
+      "end": 400.92,
+      "duration": 1.8,
+      "text": "think"
+    },
+    {
+      "start": 400.08,
+      "end": 403.48,
+      "duration": 3.4,
+      "text": "like"
+    },
+    {
+      "start": 400.92,
+      "end": 404.8,
+      "duration": 3.88,
+      "text": "you just need to make sure that DS."
+    },
+    {
+      "start": 403.48,
+      "end": 406.68,
+      "duration": 3.2,
+      "text": "parent"
+    },
+    {
+      "start": 404.8,
+      "end": 408.76,
+      "duration": 3.96,
+      "text": "That's This is This also makes sense"
+    },
+    {
+      "start": 406.68,
+      "end": 411.08,
+      "duration": 4.4,
+      "text": "because if in the parent, the ultimate"
+    },
+    {
+      "start": 408.76,
+      "end": 413.28,
+      "duration": 4.52,
+      "text": "parent is parent is himself, that will"
+    },
+    {
+      "start": 411.08,
+      "end": 415.08,
+      "duration": 4.0,
+      "text": "be stored. So, you can just go ahead and"
+    },
+    {
+      "start": 413.28,
+      "end": 417.12,
+      "duration": 3.84,
+      "text": "compile this. Need to make sure that"
+    },
+    {
+      "start": 415.08,
+      "end": 419.28,
+      "duration": 4.2,
+      "text": "this is under public, otherwise it will"
+    },
+    {
+      "start": 417.12,
+      "end": 421.08,
+      "duration": 3.96,
+      "text": "not run. Okay, it's running fine. Let's"
+    },
+    {
+      "start": 419.28,
+      "end": 422.96,
+      "duration": 3.68,
+      "text": "quickly submit this and see. Find"
+    },
+    {
+      "start": 421.08,
+      "end": 426.12,
+      "duration": 5.04,
+      "text": "ultimate parent works."
+    },
+    {
+      "start": 422.96,
+      "end": 427.88,
+      "duration": 4.92,
+      "text": "Uh using the parent also works. Anything"
+    },
+    {
+      "start": 426.12,
+      "end": 430.4,
+      "duration": 4.28,
+      "text": "works because both of them are kind of"
+    },
+    {
+      "start": 427.88,
+      "end": 432.84,
+      "duration": 4.96,
+      "text": "constant time. Find parent is for alpha."
+    },
+    {
+      "start": 430.4,
+      "end": 434.56,
+      "duration": 4.16,
+      "text": "This is why it'll be big O of one. So, I"
+    },
+    {
+      "start": 432.84,
+      "end": 436.96,
+      "duration": 4.12,
+      "text": "hope you've understood this portion of"
+    },
+    {
+      "start": 434.56,
+      "end": 440.04,
+      "duration": 5.48,
+      "text": "code. It does submit correctly. This is"
+    },
+    {
+      "start": 436.96,
+      "end": 444.44,
+      "duration": 7.48,
+      "text": "n squared and this is kind of big O of V"
+    },
+    {
+      "start": 440.04,
+      "end": 446.2,
+      "duration": 6.16,
+      "text": "and extra space is big O of n as 2n is"
+    },
+    {
+      "start": 444.44,
+      "end": 448.12,
+      "duration": 3.68,
+      "text": "what you're using. We can omit the union"
+    },
+    {
+      "start": 446.2,
+      "end": 450.44,
+      "duration": 4.24,
+      "text": "by rank. So, guys, I hope you've"
+    },
+    {
+      "start": 448.12,
+      "end": 451.76,
+      "duration": 3.64,
+      "text": "understood how to implement disjoint set"
+    },
+    {
+      "start": 450.44,
+      "end": 453.84,
+      "duration": 3.4,
+      "text": "data structure in order to solve this"
+    },
+    {
+      "start": 451.76,
+      "end": 456.12,
+      "duration": 4.36,
+      "text": "problem. So, before wrapping up this"
+    },
+    {
+      "start": 453.84,
+      "end": 457.6,
+      "duration": 3.76,
+      "text": "video, there's a quick request that I"
+    },
+    {
+      "start": 456.12,
+      "end": 460.48,
+      "duration": 4.36,
+      "text": "want to make. That's checking our"
+    },
+    {
+      "start": 457.6,
+      "end": 462.56,
+      "duration": 4.96,
+      "text": "statistics, nearly 50% of our viewers do"
+    },
+    {
+      "start": 460.48,
+      "end": 464.52,
+      "duration": 4.04,
+      "text": "do subscribe to our channel. So, please"
+    },
+    {
+      "start": 462.56,
+      "end": 466.48,
+      "duration": 3.92,
+      "text": "please do consider subscribing to us"
+    },
+    {
+      "start": 464.52,
+      "end": 468.36,
+      "duration": 3.84,
+      "text": "because that does matter to me a lot and"
+    },
+    {
+      "start": 466.48,
+      "end": 470.76,
+      "duration": 4.28,
+      "text": "it helps me like it keeps you motivated"
+    },
+    {
+      "start": 468.36,
+      "end": 472.44,
+      "duration": 4.08,
+      "text": "to make such kind of content. So, yeah,"
+    },
+    {
+      "start": 470.76,
+      "end": 473.68,
+      "duration": 2.92,
+      "text": "if you have understood everything about"
+    },
+    {
+      "start": 472.44,
+      "end": 475.32,
+      "duration": 2.88,
+      "text": "this problem, make sure you hit that"
+    },
+    {
+      "start": 473.68,
+      "end": 477.6,
+      "duration": 3.92,
+      "text": "like button. If you have not checked out"
+    },
+    {
+      "start": 475.32,
+      "end": 479.2,
+      "duration": 3.88,
+      "text": "our DPCs and the HD sheet, the links"
+    },
+    {
+      "start": 477.6,
+      "end": 480.28,
+      "duration": 2.68,
+      "text": "will be in the description. With this,"
+    },
+    {
+      "start": 479.2,
+      "end": 481.44,
+      "duration": 2.24,
+      "text": "I'll be wrapping up this video. Let's"
+    },
+    {
+      "start": 480.28,
+      "end": 484.28,
+      "duration": 4.0,
+      "text": "meet in some other video. Till then,"
+    },
+    {
+      "start": 481.44,
+      "end": 484.28,
+      "duration": 2.84,
+      "text": "bye-bye. Take care."
+    }
+  ]
+}

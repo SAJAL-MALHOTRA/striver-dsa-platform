@@ -1,0 +1,1520 @@
+{
+  "video_id": "7win3dcgo3k",
+  "title": "DP 15. Partition Equal Subset Sum | DP on Subsequences",
+  "duration_sec": 583,
+  "num_segments": 252,
+  "segments": [
+    {
+      "start": 0.16,
+      "end": 3.36,
+      "duration": 3.2,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 1.52,
+      "end": 4.88,
+      "duration": 3.36,
+      "text": "i hope you guys are doing extremely well"
+    },
+    {
+      "start": 3.36,
+      "end": 7.52,
+      "duration": 4.16,
+      "text": "so this is the 15th lecture of the"
+    },
+    {
+      "start": 4.88,
+      "end": 10.16,
+      "duration": 5.28,
+      "text": "dynamic programming playlist and we are"
+    },
+    {
+      "start": 7.52,
+      "end": 13.6,
+      "duration": 6.08,
+      "text": "continuing on the pattern dp on"
+    },
+    {
+      "start": 10.16,
+      "end": 15.92,
+      "duration": 5.76,
+      "text": "subsequences or subsets with a target"
+    },
+    {
+      "start": 13.6,
+      "end": 19.12,
+      "duration": 5.52,
+      "text": "so today we will be solving the problem"
+    },
+    {
+      "start": 15.92,
+      "end": 20.96,
+      "duration": 5.04,
+      "text": "partition equal subset sum"
+    },
+    {
+      "start": 19.12,
+      "end": 24.24,
+      "duration": 5.12,
+      "text": "so what is the problem statement you're"
+    },
+    {
+      "start": 20.96,
+      "end": 26.64,
+      "duration": 5.68,
+      "text": "given an array of n positive integers"
+    },
+    {
+      "start": 24.24,
+      "end": 29.2,
+      "duration": 4.96,
+      "text": "your task is to find if we can partition"
+    },
+    {
+      "start": 26.64,
+      "end": 31.36,
+      "duration": 4.72,
+      "text": "the given array into two subsets"
+    },
+    {
+      "start": 29.2,
+      "end": 33.36,
+      "duration": 4.16,
+      "text": "so given an array you have to partition"
+    },
+    {
+      "start": 31.36,
+      "end": 35.28,
+      "duration": 3.92,
+      "text": "them into two subsets"
+    },
+    {
+      "start": 33.36,
+      "end": 37.6,
+      "duration": 4.24,
+      "text": "such that the sum of the elements in"
+    },
+    {
+      "start": 35.28,
+      "end": 40.32,
+      "duration": 5.04,
+      "text": "both the subsets are equal"
+    },
+    {
+      "start": 37.6,
+      "end": 42.08,
+      "duration": 4.48,
+      "text": "for an example if i have been given two"
+    },
+    {
+      "start": 40.32,
+      "end": 45.52,
+      "duration": 5.2,
+      "text": "double three three four five as the"
+    },
+    {
+      "start": 42.08,
+      "end": 47.68,
+      "duration": 5.6,
+      "text": "array i can divide them into a subset"
+    },
+    {
+      "start": 45.52,
+      "end": 50.16,
+      "duration": 4.64,
+      "text": "which is two three five and the other"
+    },
+    {
+      "start": 47.68,
+      "end": 52.96,
+      "duration": 5.28,
+      "text": "subset as three three four and both of"
+    },
+    {
+      "start": 50.16,
+      "end": 55.52,
+      "duration": 5.36,
+      "text": "them will be having equal sum ten so the"
+    },
+    {
+      "start": 52.96,
+      "end": 58.4,
+      "duration": 5.44,
+      "text": "task is to tell them true or false like"
+    },
+    {
+      "start": 55.52,
+      "end": 59.84,
+      "duration": 4.32,
+      "text": "can you partition or can you"
+    },
+    {
+      "start": 58.4,
+      "end": 62.0,
+      "duration": 3.6,
+      "text": "not"
+    },
+    {
+      "start": 59.84,
+      "end": 64.4,
+      "duration": 4.56,
+      "text": "so if you carefully see uh this two this"
+    },
+    {
+      "start": 62.0,
+      "end": 66.16,
+      "duration": 4.16,
+      "text": "three and this five belongs to the"
+    },
+    {
+      "start": 64.4,
+      "end": 68.0,
+      "duration": 3.6,
+      "text": "subset"
+    },
+    {
+      "start": 66.16,
+      "end": 71.04,
+      "duration": 4.88,
+      "text": "one and you can call it as subsequence"
+    },
+    {
+      "start": 68.0,
+      "end": 74.72,
+      "duration": 6.72,
+      "text": "as well and this is the subset two which"
+    },
+    {
+      "start": 71.04,
+      "end": 77.12,
+      "duration": 6.08,
+      "text": "is 3 3 4 this is sabare but yeah you can"
+    },
+    {
+      "start": 74.72,
+      "end": 80.32,
+      "duration": 5.6,
+      "text": "also call the subset subsequence because"
+    },
+    {
+      "start": 77.12,
+      "end": 81.52,
+      "duration": 4.4,
+      "text": "every sub array is a subsequence so can"
+    },
+    {
+      "start": 80.32,
+      "end": 83.84,
+      "duration": 3.52,
+      "text": "you do this"
+    },
+    {
+      "start": 81.52,
+      "end": 85.36,
+      "duration": 3.84,
+      "text": "now the prerequisite to solve this"
+    },
+    {
+      "start": 83.84,
+      "end": 86.88,
+      "duration": 3.04,
+      "text": "problem is"
+    },
+    {
+      "start": 85.36,
+      "end": 90.16,
+      "duration": 4.8,
+      "text": "the lecture"
+    },
+    {
+      "start": 86.88,
+      "end": 92.8,
+      "duration": 5.92,
+      "text": "14 of the dp playlist so if you have not"
+    },
+    {
+      "start": 90.16,
+      "end": 94.8,
+      "duration": 4.64,
+      "text": "seen the lecture 14 of the db playlist"
+    },
+    {
+      "start": 92.8,
+      "end": 97.36,
+      "duration": 4.56,
+      "text": "right now pause this video go back and"
+    },
+    {
+      "start": 94.8,
+      "end": 98.32,
+      "duration": 3.52,
+      "text": "watch the lecture 14 then come back"
+    },
+    {
+      "start": 97.36,
+      "end": 100.96,
+      "duration": 3.6,
+      "text": "so"
+    },
+    {
+      "start": 98.32,
+      "end": 103.68,
+      "duration": 5.36,
+      "text": "in the lecture 14 we did solve a problem"
+    },
+    {
+      "start": 100.96,
+      "end": 106.08,
+      "duration": 5.12,
+      "text": "where we were given an array yes we were"
+    },
+    {
+      "start": 103.68,
+      "end": 107.04,
+      "duration": 3.36,
+      "text": "given an array and we were given a"
+    },
+    {
+      "start": 106.08,
+      "end": 109.36,
+      "duration": 3.28,
+      "text": "target"
+    },
+    {
+      "start": 107.04,
+      "end": 111.84,
+      "duration": 4.8,
+      "text": "and the question was"
+    },
+    {
+      "start": 109.36,
+      "end": 115.76,
+      "duration": 6.4,
+      "text": "can we have a subset"
+    },
+    {
+      "start": 111.84,
+      "end": 118.08,
+      "duration": 6.24,
+      "text": "with a sum which is equivalent to the"
+    },
+    {
+      "start": 115.76,
+      "end": 119.68,
+      "duration": 3.92,
+      "text": "target that was the question in the"
+    },
+    {
+      "start": 118.08,
+      "end": 122.0,
+      "duration": 3.92,
+      "text": "lecture 14."
+    },
+    {
+      "start": 119.68,
+      "end": 124.16,
+      "duration": 4.48,
+      "text": "now over here it states"
+    },
+    {
+      "start": 122.0,
+      "end": 126.32,
+      "duration": 4.32,
+      "text": "you need to take the array yes you need"
+    },
+    {
+      "start": 124.16,
+      "end": 128.32,
+      "duration": 4.16,
+      "text": "to take the array and you need to divide"
+    },
+    {
+      "start": 126.32,
+      "end": 130.64,
+      "duration": 4.32,
+      "text": "them into two subsets exactly two"
+    },
+    {
+      "start": 128.32,
+      "end": 134.72,
+      "duration": 6.4,
+      "text": "subsets this is where the catch is"
+    },
+    {
+      "start": 130.64,
+      "end": 137.36,
+      "duration": 6.72,
+      "text": "divide them into exactly two subsets"
+    },
+    {
+      "start": 134.72,
+      "end": 139.12,
+      "duration": 4.4,
+      "text": "that's where the catch is"
+    },
+    {
+      "start": 137.36,
+      "end": 141.04,
+      "duration": 3.68,
+      "text": "so if i'm saying"
+    },
+    {
+      "start": 139.12,
+      "end": 144.56,
+      "duration": 5.44,
+      "text": "can you divide them into exactly two"
+    },
+    {
+      "start": 141.04,
+      "end": 146.88,
+      "duration": 5.84,
+      "text": "subsets such that the sum one is equal"
+    },
+    {
+      "start": 144.56,
+      "end": 148.64,
+      "duration": 4.08,
+      "text": "to sum two that is what they're"
+    },
+    {
+      "start": 146.88,
+      "end": 151.28,
+      "duration": 4.4,
+      "text": "basically saying so"
+    },
+    {
+      "start": 148.64,
+      "end": 152.64,
+      "duration": 4.0,
+      "text": "can i say this can i say this"
+    },
+    {
+      "start": 151.28,
+      "end": 154.16,
+      "duration": 2.88,
+      "text": "if i'm saying"
+    },
+    {
+      "start": 152.64,
+      "end": 156.64,
+      "duration": 4.0,
+      "text": "the entire"
+    },
+    {
+      "start": 154.16,
+      "end": 158.8,
+      "duration": 4.64,
+      "text": "array sum is s"
+    },
+    {
+      "start": 156.64,
+      "end": 160.96,
+      "duration": 4.32,
+      "text": "the entire array sum is s"
+    },
+    {
+      "start": 158.8,
+      "end": 163.04,
+      "duration": 4.24,
+      "text": "and i'm dividing them into two blocks"
+    },
+    {
+      "start": 160.96,
+      "end": 164.0,
+      "duration": 3.04,
+      "text": "yes i repeat i'm dividing them into two"
+    },
+    {
+      "start": 163.04,
+      "end": 166.24,
+      "duration": 3.2,
+      "text": "blocks"
+    },
+    {
+      "start": 164.0,
+      "end": 168.96,
+      "duration": 4.96,
+      "text": "then one of the blocks like one of the"
+    },
+    {
+      "start": 166.24,
+      "end": 171.76,
+      "duration": 5.52,
+      "text": "subsets will have sum as s1 and the"
+    },
+    {
+      "start": 168.96,
+      "end": 175.84,
+      "duration": 6.88,
+      "text": "other one will have subset as subset sum"
+    },
+    {
+      "start": 171.76,
+      "end": 179.52,
+      "duration": 7.76,
+      "text": "as s2 and i know s1 is equal to s2 will"
+    },
+    {
+      "start": 175.84,
+      "end": 182.8,
+      "duration": 6.96,
+      "text": "be equal to s by 2 where s is the total"
+    },
+    {
+      "start": 179.52,
+      "end": 185.52,
+      "duration": 6.0,
+      "text": "sum do you agree or do you not agree you"
+    },
+    {
+      "start": 182.8,
+      "end": 188.0,
+      "duration": 5.2,
+      "text": "have to because if i'm dividing an"
+    },
+    {
+      "start": 185.52,
+      "end": 190.64,
+      "duration": 5.12,
+      "text": "entire array into two different subsets"
+    },
+    {
+      "start": 188.0,
+      "end": 194.8,
+      "duration": 6.8,
+      "text": "the sum of a single subset will be half"
+    },
+    {
+      "start": 190.64,
+      "end": 197.04,
+      "duration": 6.4,
+      "text": "of it right so we have figured out that"
+    },
+    {
+      "start": 194.8,
+      "end": 199.28,
+      "duration": 4.48,
+      "text": "we need to make sure that the subset has"
+    },
+    {
+      "start": 197.04,
+      "end": 201.36,
+      "duration": 4.32,
+      "text": "to have a sum of s by 2."
+    },
+    {
+      "start": 199.28,
+      "end": 204.64,
+      "duration": 5.36,
+      "text": "the first thing is very sure"
+    },
+    {
+      "start": 201.36,
+      "end": 207.52,
+      "duration": 6.16,
+      "text": "if s is odd yes if s is having an odd"
+    },
+    {
+      "start": 204.64,
+      "end": 210.0,
+      "duration": 5.36,
+      "text": "sum then the division is not possible"
+    },
+    {
+      "start": 207.52,
+      "end": 212.56,
+      "duration": 5.04,
+      "text": "because you cannot have an odd sum"
+    },
+    {
+      "start": 210.0,
+      "end": 215.92,
+      "duration": 5.92,
+      "text": "divided into two subsets with equal sum"
+    },
+    {
+      "start": 212.56,
+      "end": 218.64,
+      "duration": 6.08,
+      "text": "that is definitely not possible so if it"
+    },
+    {
+      "start": 215.92,
+      "end": 220.48,
+      "duration": 4.56,
+      "text": "is odd it's not possible now if it is"
+    },
+    {
+      "start": 218.64,
+      "end": 222.0,
+      "duration": 3.36,
+      "text": "even"
+    },
+    {
+      "start": 220.48,
+      "end": 225.28,
+      "duration": 4.8,
+      "text": "then what is the problem"
+    },
+    {
+      "start": 222.0,
+      "end": 227.12,
+      "duration": 5.12,
+      "text": "can i say i'm looking for a subset"
+    },
+    {
+      "start": 225.28,
+      "end": 230.08,
+      "duration": 4.8,
+      "text": "with a sum"
+    },
+    {
+      "start": 227.12,
+      "end": 233.92,
+      "duration": 6.8,
+      "text": "s by 2 can i say i'm looking for a"
+    },
+    {
+      "start": 230.08,
+      "end": 236.4,
+      "duration": 6.32,
+      "text": "subset with a sum s by 2 now you will be"
+    },
+    {
+      "start": 233.92,
+      "end": 238.56,
+      "duration": 4.64,
+      "text": "like striver if i'm looking for a subset"
+    },
+    {
+      "start": 236.4,
+      "end": 241.44,
+      "duration": 5.04,
+      "text": "then how will i get the second subset"
+    },
+    {
+      "start": 238.56,
+      "end": 245.2,
+      "duration": 6.64,
+      "text": "array logic logic if one subset you got"
+    },
+    {
+      "start": 241.44,
+      "end": 247.44,
+      "duration": 6.0,
+      "text": "as s by 2 for an example over here"
+    },
+    {
+      "start": 245.2,
+      "end": 248.32,
+      "duration": 3.12,
+      "text": "if you took 2 if you took 3 if you took"
+    },
+    {
+      "start": 247.44,
+      "end": 250.32,
+      "duration": 2.88,
+      "text": "5"
+    },
+    {
+      "start": 248.32,
+      "end": 252.32,
+      "duration": 4.0,
+      "text": "and you got because over here the total"
+    },
+    {
+      "start": 250.32,
+      "end": 254.16,
+      "duration": 3.84,
+      "text": "sum was 20 like you can just do the"
+    },
+    {
+      "start": 252.32,
+      "end": 256.96,
+      "duration": 4.64,
+      "text": "total summation and the total sum comes"
+    },
+    {
+      "start": 254.16,
+      "end": 258.16,
+      "duration": 4.0,
+      "text": "out to be 20. so if you are saying these"
+    },
+    {
+      "start": 256.96,
+      "end": 261.12,
+      "duration": 4.16,
+      "text": "three elements"
+    },
+    {
+      "start": 258.16,
+      "end": 262.56,
+      "duration": 4.4,
+      "text": "are giving you sum as 10"
+    },
+    {
+      "start": 261.12,
+      "end": 264.56,
+      "duration": 3.44,
+      "text": "then if"
+    },
+    {
+      "start": 262.56,
+      "end": 267.44,
+      "duration": 4.88,
+      "text": "those elements in subset one gives you"
+    },
+    {
+      "start": 264.56,
+      "end": 269.44,
+      "duration": 4.88,
+      "text": "some 10 the remaining elements"
+    },
+    {
+      "start": 267.44,
+      "end": 272.24,
+      "duration": 4.8,
+      "text": "are bound to give you"
+    },
+    {
+      "start": 269.44,
+      "end": 274.64,
+      "duration": 5.2,
+      "text": "the remaining sum which is s minus s by"
+    },
+    {
+      "start": 272.24,
+      "end": 275.68,
+      "duration": 3.44,
+      "text": "2 that's s by 2 so you get the remaining"
+    },
+    {
+      "start": 274.64,
+      "end": 277.2,
+      "duration": 2.56,
+      "text": "sum as"
+    },
+    {
+      "start": 275.68,
+      "end": 280.16,
+      "duration": 4.48,
+      "text": "10 also"
+    },
+    {
+      "start": 277.2,
+      "end": 282.72,
+      "duration": 5.52,
+      "text": "so i just need to check if i can get one"
+    },
+    {
+      "start": 280.16,
+      "end": 284.48,
+      "duration": 4.32,
+      "text": "subset because if i can get one subset"
+    },
+    {
+      "start": 282.72,
+      "end": 286.4,
+      "duration": 3.68,
+      "text": "that automatically means that i can get"
+    },
+    {
+      "start": 284.48,
+      "end": 288.32,
+      "duration": 3.84,
+      "text": "the second subset as well so the"
+    },
+    {
+      "start": 286.4,
+      "end": 291.2,
+      "duration": 4.8,
+      "text": "question boils down"
+    },
+    {
+      "start": 288.32,
+      "end": 292.24,
+      "duration": 3.92,
+      "text": "given an array yes given an array"
+    },
+    {
+      "start": 291.2,
+      "end": 295.6,
+      "duration": 4.4,
+      "text": "check"
+    },
+    {
+      "start": 292.24,
+      "end": 297.04,
+      "duration": 4.8,
+      "text": "if we can have a subset or subsequence"
+    },
+    {
+      "start": 295.6,
+      "end": 298.48,
+      "duration": 2.88,
+      "text": "with a sum"
+    },
+    {
+      "start": 297.04,
+      "end": 302.56,
+      "duration": 5.52,
+      "text": "s by 2"
+    },
+    {
+      "start": 298.48,
+      "end": 304.8,
+      "duration": 6.32,
+      "text": "where s is equal to the total sum and"
+    },
+    {
+      "start": 302.56,
+      "end": 307.44,
+      "duration": 4.88,
+      "text": "where have we done this problem"
+    },
+    {
+      "start": 304.8,
+      "end": 309.44,
+      "duration": 4.64,
+      "text": "subset sum equal to target"
+    },
+    {
+      "start": 307.44,
+      "end": 312.48,
+      "duration": 5.04,
+      "text": "this same problem was done in the"
+    },
+    {
+      "start": 309.44,
+      "end": 315.04,
+      "duration": 5.6,
+      "text": "lecture 14 where we were given a target"
+    },
+    {
+      "start": 312.48,
+      "end": 318.0,
+      "duration": 5.52,
+      "text": "we were given an array and we were asked"
+    },
+    {
+      "start": 315.04,
+      "end": 320.16,
+      "duration": 5.12,
+      "text": "can we get a subsequence with the sum"
+    },
+    {
+      "start": 318.0,
+      "end": 321.04,
+      "duration": 3.04,
+      "text": "target so that's what you just need to"
+    },
+    {
+      "start": 320.16,
+      "end": 324.24,
+      "duration": 4.08,
+      "text": "do"
+    },
+    {
+      "start": 321.04,
+      "end": 326.4,
+      "duration": 5.36,
+      "text": "so very simple you just make sure"
+    },
+    {
+      "start": 324.24,
+      "end": 328.56,
+      "duration": 4.32,
+      "text": "whatever is given to you you check for"
+    },
+    {
+      "start": 326.4,
+      "end": 330.24,
+      "duration": 3.84,
+      "text": "odd condition if it is odd then the"
+    },
+    {
+      "start": 328.56,
+      "end": 331.36,
+      "duration": 2.8,
+      "text": "answer will be false"
+    },
+    {
+      "start": 330.24,
+      "end": 334.48,
+      "duration": 4.24,
+      "text": "otherwise"
+    },
+    {
+      "start": 331.36,
+      "end": 337.2,
+      "duration": 5.84,
+      "text": "take the sum as total sum by 2"
+    },
+    {
+      "start": 334.48,
+      "end": 339.6,
+      "duration": 5.12,
+      "text": "and you can call the lecture 14 function"
+    },
+    {
+      "start": 337.2,
+      "end": 340.56,
+      "duration": 3.36,
+      "text": "call the lecture 14 function with the"
+    },
+    {
+      "start": 339.6,
+      "end": 342.96,
+      "duration": 3.36,
+      "text": "array"
+    },
+    {
+      "start": 340.56,
+      "end": 346.24,
+      "duration": 5.68,
+      "text": "and s and if this gives the true it's"
+    },
+    {
+      "start": 342.96,
+      "end": 348.24,
+      "duration": 5.28,
+      "text": "true otherwise it's going to be false"
+    },
+    {
+      "start": 346.24,
+      "end": 350.56,
+      "duration": 4.32,
+      "text": "simple as that so if you just do this"
+    },
+    {
+      "start": 348.24,
+      "end": 352.08,
+      "duration": 3.84,
+      "text": "this will solve this problem so without"
+    },
+    {
+      "start": 350.56,
+      "end": 354.08,
+      "duration": 3.52,
+      "text": "actually wasting any time let's get"
+    },
+    {
+      "start": 352.08,
+      "end": 356.4,
+      "duration": 4.32,
+      "text": "started into the coding so this was the"
+    },
+    {
+      "start": 354.08,
+      "end": 358.24,
+      "duration": 4.16,
+      "text": "lecture 14 which stated subset sum equal"
+    },
+    {
+      "start": 356.4,
+      "end": 361.04,
+      "duration": 4.64,
+      "text": "to k so what i'll do is i'll just copy"
+    },
+    {
+      "start": 358.24,
+      "end": 363.84,
+      "duration": 5.6,
+      "text": "paste uh the function and i'll bring it"
+    },
+    {
+      "start": 361.04,
+      "end": 363.84,
+      "duration": 2.8,
+      "text": "over here to"
+    },
+    {
+      "start": 364.08,
+      "end": 368.8,
+      "duration": 4.72,
+      "text": "oh yeah so we have uh brought that in"
+    },
+    {
+      "start": 367.12,
+      "end": 369.6,
+      "duration": 2.48,
+      "text": "and we are given the array we are given"
+    },
+    {
+      "start": 368.8,
+      "end": 372.8,
+      "duration": 4.0,
+      "text": "the n"
+    },
+    {
+      "start": 369.6,
+      "end": 376.0,
+      "duration": 6.4,
+      "text": "so let's have the sum as"
+    },
+    {
+      "start": 372.8,
+      "end": 378.48,
+      "duration": 5.68,
+      "text": "0 and we can definitely run across"
+    },
+    {
+      "start": 376.0,
+      "end": 380.08,
+      "duration": 4.08,
+      "text": "i equal to 0 i less than n i plus plus"
+    },
+    {
+      "start": 378.48,
+      "end": 382.88,
+      "duration": 4.4,
+      "text": "and we can say sum plus equal to array"
+    },
+    {
+      "start": 380.08,
+      "end": 385.2,
+      "duration": 5.12,
+      "text": "of i so we have made sure that the"
+    },
+    {
+      "start": 382.88,
+      "end": 387.76,
+      "duration": 4.88,
+      "text": "summation is there or we can say like to"
+    },
+    {
+      "start": 385.2,
+      "end": 389.76,
+      "duration": 4.56,
+      "text": "be very precise we can say total sum"
+    },
+    {
+      "start": 387.76,
+      "end": 391.52,
+      "duration": 3.76,
+      "text": "that will sound much better total sum"
+    },
+    {
+      "start": 389.76,
+      "end": 395.68,
+      "duration": 5.92,
+      "text": "now can i say the target that i'm"
+    },
+    {
+      "start": 391.52,
+      "end": 398.24,
+      "duration": 6.72,
+      "text": "looking for is tote sum by 2 i am but"
+    },
+    {
+      "start": 395.68,
+      "end": 399.04,
+      "duration": 3.36,
+      "text": "before that can i say if the tote sum"
+    },
+    {
+      "start": 398.24,
+      "end": 401.76,
+      "duration": 3.52,
+      "text": "is"
+    },
+    {
+      "start": 399.04,
+      "end": 404.08,
+      "duration": 5.04,
+      "text": "an odd number yes if it is an odd number"
+    },
+    {
+      "start": 401.76,
+      "end": 406.48,
+      "duration": 4.72,
+      "text": "then in that case i will have to return"
+    },
+    {
+      "start": 404.08,
+      "end": 409.92,
+      "duration": 5.84,
+      "text": "a false because the odd number cannot be"
+    },
+    {
+      "start": 406.48,
+      "end": 412.48,
+      "duration": 6.0,
+      "text": "divided into two subsets with equal sum"
+    },
+    {
+      "start": 409.92,
+      "end": 415.6,
+      "duration": 5.68,
+      "text": "so that's what we will do and over here"
+    },
+    {
+      "start": 412.48,
+      "end": 418.88,
+      "duration": 6.4,
+      "text": "can i say i will just call this function"
+    },
+    {
+      "start": 415.6,
+      "end": 421.76,
+      "duration": 6.16,
+      "text": "if subset of sum"
+    },
+    {
+      "start": 418.88,
+      "end": 424.08,
+      "duration": 5.2,
+      "text": "what is the first thing n"
+    },
+    {
+      "start": 421.76,
+      "end": 425.68,
+      "duration": 3.92,
+      "text": "so i know the size of the array is n the"
+    },
+    {
+      "start": 424.08,
+      "end": 427.2,
+      "duration": 3.12,
+      "text": "target that i'm looking for is the"
+    },
+    {
+      "start": 425.68,
+      "end": 429.28,
+      "duration": 3.6,
+      "text": "target"
+    },
+    {
+      "start": 427.2,
+      "end": 431.92,
+      "duration": 4.72,
+      "text": "and i have the array so i'll pass on"
+    },
+    {
+      "start": 429.28,
+      "end": 432.8,
+      "duration": 3.52,
+      "text": "this and if this gives me a true it's a"
+    },
+    {
+      "start": 431.92,
+      "end": 435.04,
+      "duration": 3.12,
+      "text": "true"
+    },
+    {
+      "start": 432.8,
+      "end": 436.96,
+      "duration": 4.16,
+      "text": "or else it's a false so basically"
+    },
+    {
+      "start": 435.04,
+      "end": 439.04,
+      "duration": 4.0,
+      "text": "whatever this guy gives you"
+    },
+    {
+      "start": 436.96,
+      "end": 441.52,
+      "duration": 4.56,
+      "text": "you return that yes whatever this guy"
+    },
+    {
+      "start": 439.04,
+      "end": 443.92,
+      "duration": 4.88,
+      "text": "gives you you simply return that and"
+    },
+    {
+      "start": 441.52,
+      "end": 445.68,
+      "duration": 4.16,
+      "text": "that will be your answer so if i just"
+    },
+    {
+      "start": 443.92,
+      "end": 445.98,
+      "duration": 2.06,
+      "text": "run it off let's see if it is running"
+    },
+    {
+      "start": 445.68,
+      "end": 448.24,
+      "duration": 2.56,
+      "text": "fine"
+    },
+    {
+      "start": 445.98,
+      "end": 449.2,
+      "duration": 3.22,
+      "text": "[Music]"
+    },
+    {
+      "start": 448.24,
+      "end": 451.52,
+      "duration": 3.28,
+      "text": "it is"
+    },
+    {
+      "start": 449.2,
+      "end": 454.72,
+      "duration": 5.52,
+      "text": "and if i submit this you will be seeing"
+    },
+    {
+      "start": 451.52,
+      "end": 457.04,
+      "duration": 5.52,
+      "text": "that this absolutely works fine"
+    },
+    {
+      "start": 454.72,
+      "end": 459.2,
+      "duration": 4.48,
+      "text": "you see i'm getting a score of 100. so"
+    },
+    {
+      "start": 457.04,
+      "end": 461.04,
+      "duration": 4.0,
+      "text": "something to observe here as i directly"
+    },
+    {
+      "start": 459.2,
+      "end": 463.04,
+      "duration": 3.84,
+      "text": "took the space optimization solution so"
+    },
+    {
+      "start": 461.04,
+      "end": 465.6,
+      "duration": 4.56,
+      "text": "i just copy paste it so what will be the"
+    },
+    {
+      "start": 463.04,
+      "end": 467.76,
+      "duration": 4.72,
+      "text": "uh extra time complexity and the lecture"
+    },
+    {
+      "start": 465.6,
+      "end": 471.76,
+      "duration": 6.16,
+      "text": "14 we were using a time complexity of"
+    },
+    {
+      "start": 467.76,
+      "end": 474.4,
+      "duration": 6.64,
+      "text": "big o of n into target right and over"
+    },
+    {
+      "start": 471.76,
+      "end": 476.88,
+      "duration": 5.12,
+      "text": "here we have taken an array so at max"
+    },
+    {
+      "start": 474.4,
+      "end": 479.36,
+      "duration": 4.96,
+      "text": "you're just adding a time complexity of"
+    },
+    {
+      "start": 476.88,
+      "end": 481.44,
+      "duration": 4.56,
+      "text": "summing it up so that's a big of n"
+    },
+    {
+      "start": 479.36,
+      "end": 483.44,
+      "duration": 4.08,
+      "text": "will be added to the time complexity and"
+    },
+    {
+      "start": 481.44,
+      "end": 485.68,
+      "duration": 4.24,
+      "text": "there'll be no addition to the space now"
+    },
+    {
+      "start": 483.44,
+      "end": 488.56,
+      "duration": 5.12,
+      "text": "someone uh did have a comment where he"
+    },
+    {
+      "start": 485.68,
+      "end": 489.92,
+      "duration": 4.24,
+      "text": "stated that striver if you are declaring"
+    },
+    {
+      "start": 488.56,
+      "end": 492.72,
+      "duration": 4.16,
+      "text": "the previous"
+    },
+    {
+      "start": 489.92,
+      "end": 494.4,
+      "duration": 4.48,
+      "text": "to be of size k plus one which is"
+    },
+    {
+      "start": 492.72,
+      "end": 496.64,
+      "duration": 3.92,
+      "text": "basically the target"
+    },
+    {
+      "start": 494.4,
+      "end": 498.32,
+      "duration": 3.92,
+      "text": "and you are saying array of zero"
+    },
+    {
+      "start": 496.64,
+      "end": 500.24,
+      "duration": 3.6,
+      "text": "what if"
+    },
+    {
+      "start": 498.32,
+      "end": 502.8,
+      "duration": 4.48,
+      "text": "what if the array of zero is greater"
+    },
+    {
+      "start": 500.24,
+      "end": 505.04,
+      "duration": 4.8,
+      "text": "than the target so he had a valid point"
+    },
+    {
+      "start": 502.8,
+      "end": 509.12,
+      "duration": 6.32,
+      "text": "so if that's the case just guys uh make"
+    },
+    {
+      "start": 505.04,
+      "end": 511.36,
+      "duration": 6.32,
+      "text": "sure if uh array of zero has to be"
+    },
+    {
+      "start": 509.12,
+      "end": 513.44,
+      "duration": 4.32,
+      "text": "lesser than equal to k then only this"
+    },
+    {
+      "start": 511.36,
+      "end": 515.92,
+      "duration": 4.56,
+      "text": "will be working so he had a valid point"
+    },
+    {
+      "start": 513.44,
+      "end": 517.44,
+      "duration": 4.0,
+      "text": "and uh this is the just similar slight"
+    },
+    {
+      "start": 515.92,
+      "end": 519.84,
+      "duration": 3.92,
+      "text": "change that we have to do in the lecture"
+    },
+    {
+      "start": 517.44,
+      "end": 521.52,
+      "duration": 4.08,
+      "text": "14 as well it did pass the constraints"
+    },
+    {
+      "start": 519.84,
+      "end": 523.84,
+      "duration": 4.0,
+      "text": "because the constraints were making sure"
+    },
+    {
+      "start": 521.52,
+      "end": 525.6,
+      "duration": 4.08,
+      "text": "that all the elements were kind of"
+    },
+    {
+      "start": 523.84,
+      "end": 527.84,
+      "duration": 4.0,
+      "text": "lesser than like the target was always"
+    },
+    {
+      "start": 525.6,
+      "end": 529.36,
+      "duration": 3.76,
+      "text": "greater than the other elements but just"
+    },
+    {
+      "start": 527.84,
+      "end": 531.28,
+      "duration": 3.44,
+      "text": "make sure that"
+    },
+    {
+      "start": 529.36,
+      "end": 532.8,
+      "duration": 3.44,
+      "text": "whatever array of 0 is it has to be"
+    },
+    {
+      "start": 531.28,
+      "end": 535.12,
+      "duration": 3.84,
+      "text": "lesser than equal to the target because"
+    },
+    {
+      "start": 532.8,
+      "end": 537.52,
+      "duration": 4.72,
+      "text": "we're declaring the arrays of size k"
+    },
+    {
+      "start": 535.12,
+      "end": 539.36,
+      "duration": 4.24,
+      "text": "plus one right so just make sure uh you"
+    },
+    {
+      "start": 537.52,
+      "end": 541.76,
+      "duration": 4.24,
+      "text": "just need to do this because then only"
+    },
+    {
+      "start": 539.36,
+      "end": 543.52,
+      "duration": 4.16,
+      "text": "it's possible otherwise it's not"
+    },
+    {
+      "start": 541.76,
+      "end": 545.28,
+      "duration": 3.52,
+      "text": "possible in the previous lecture 14."
+    },
+    {
+      "start": 543.52,
+      "end": 547.44,
+      "duration": 3.92,
+      "text": "that was the only mistake that i did"
+    },
+    {
+      "start": 545.28,
+      "end": 549.04,
+      "duration": 3.76,
+      "text": "thank you uh to whoever commented that i"
+    },
+    {
+      "start": 547.44,
+      "end": 551.04,
+      "duration": 3.6,
+      "text": "don't remember the name but someone did"
+    },
+    {
+      "start": 549.04,
+      "end": 553.04,
+      "duration": 4.0,
+      "text": "comment it so thank you for that"
+    },
+    {
+      "start": 551.04,
+      "end": 554.72,
+      "duration": 3.68,
+      "text": "so guys i hope you have understood the"
+    },
+    {
+      "start": 553.04,
+      "end": 556.08,
+      "duration": 3.04,
+      "text": "explanation so just in case you did"
+    },
+    {
+      "start": 554.72,
+      "end": 558.64,
+      "duration": 3.92,
+      "text": "please please please make sure you like"
+    },
+    {
+      "start": 556.08,
+      "end": 560.64,
+      "duration": 4.56,
+      "text": "this video and to continue our tradition"
+    },
+    {
+      "start": 558.64,
+      "end": 562.96,
+      "duration": 4.32,
+      "text": "make sure you comment understood under"
+    },
+    {
+      "start": 560.64,
+      "end": 564.8,
+      "duration": 4.16,
+      "text": "the video and yes if you are new to our"
+    },
+    {
+      "start": 562.96,
+      "end": 567.28,
+      "duration": 4.32,
+      "text": "channel please please please please"
+    },
+    {
+      "start": 564.8,
+      "end": 569.04,
+      "duration": 4.24,
+      "text": "please do consider subscribing to us"
+    },
+    {
+      "start": 567.28,
+      "end": 571.04,
+      "duration": 3.76,
+      "text": "because we do put a lot of ds algo"
+    },
+    {
+      "start": 569.04,
+      "end": 572.56,
+      "duration": 3.52,
+      "text": "content and yeah with this let's wrap up"
+    },
+    {
+      "start": 571.04,
+      "end": 574.64,
+      "duration": 3.6,
+      "text": "this video and meet in the next one till"
+    },
+    {
+      "start": 572.56,
+      "end": 574.64,
+      "duration": 2.08,
+      "text": "then"
+    },
+    {
+      "start": 574.96,
+      "end": 582.2,
+      "duration": 7.24,
+      "text": "your heart bye broken"
+    },
+    {
+      "start": 577.52,
+      "end": 582.2,
+      "duration": 4.68,
+      "text": "don't ever forget you're golden"
+    }
+  ]
+}

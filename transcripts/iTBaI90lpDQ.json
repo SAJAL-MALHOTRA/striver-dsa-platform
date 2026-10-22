@@ -1,0 +1,1022 @@
+{
+  "video_id": "iTBaI90lpDQ",
+  "title": "G-23. Detect a Cycle in Directed Graph | Topological Sort | Kahn's Algorithm | BFS",
+  "duration_sec": 377,
+  "num_segments": 169,
+  "segments": [
+    {
+      "start": 3.44,
+      "end": 6.52,
+      "duration": 3.08,
+      "text": "Everyone, welcome back to the channel. I"
+    },
+    {
+      "start": 4.72,
+      "end": 7.88,
+      "duration": 3.16,
+      "text": "hope you guys are doing extremely well."
+    },
+    {
+      "start": 6.52,
+      "end": 10.4,
+      "duration": 3.88,
+      "text": "So, in this video we're going to learn"
+    },
+    {
+      "start": 7.88,
+      "end": 14.76,
+      "duration": 6.88,
+      "text": "about cycle detection in a directed"
+    },
+    {
+      "start": 10.4,
+      "end": 16.24,
+      "duration": 5.84,
+      "text": "graph using the BFS algorithm. Now, in"
+    },
+    {
+      "start": 14.76,
+      "end": 18.4,
+      "duration": 3.64,
+      "text": "the previous video we have done that"
+    },
+    {
+      "start": 16.24,
+      "end": 20.4,
+      "duration": 4.16,
+      "text": "using the DFS algorithm, but how to do"
+    },
+    {
+      "start": 18.4,
+      "end": 22.4,
+      "duration": 4.0,
+      "text": "that using the BFS algorithm? So, if you"
+    },
+    {
+      "start": 20.4,
+      "end": 24.48,
+      "duration": 4.08,
+      "text": "remember in the DFS we used something"
+    },
+    {
+      "start": 22.4,
+      "end": 26.88,
+      "duration": 4.48,
+      "text": "like a visited and then we used"
+    },
+    {
+      "start": 24.48,
+      "end": 29.88,
+      "duration": 5.4,
+      "text": "something like a path visited. Now, in"
+    },
+    {
+      "start": 26.88,
+      "end": 31.72,
+      "duration": 4.84,
+      "text": "the backtracking we reset the path"
+    },
+    {
+      "start": 29.88,
+      "end": 34.44,
+      "duration": 4.56,
+      "text": "visited, but in BFS there cannot be a"
+    },
+    {
+      "start": 31.72,
+      "end": 37.44,
+      "duration": 5.72,
+      "text": "backtracking. So, how do we implement a"
+    },
+    {
+      "start": 34.44,
+      "end": 40.32,
+      "duration": 5.88,
+      "text": "similar sort of algorithm into BFS? So,"
+    },
+    {
+      "start": 37.44,
+      "end": 42.52,
+      "duration": 5.08,
+      "text": "this is where something like the"
+    },
+    {
+      "start": 40.32,
+      "end": 44.8,
+      "duration": 4.48,
+      "text": "Kahn's algorithm comes in. So, if you"
+    },
+    {
+      "start": 42.52,
+      "end": 47.52,
+      "duration": 5.0,
+      "text": "haven't checked out my video on"
+    },
+    {
+      "start": 44.8,
+      "end": 49.72,
+      "duration": 4.92,
+      "text": "topological sort using BFS, please go"
+    },
+    {
+      "start": 47.52,
+      "end": 52.24,
+      "duration": 4.72,
+      "text": "back and learn this algorithm and then"
+    },
+    {
+      "start": 49.72,
+      "end": 54.68,
+      "duration": 4.96,
+      "text": "come back and watch this. Okay, it's"
+    },
+    {
+      "start": 52.24,
+      "end": 56.52,
+      "duration": 4.28,
+      "text": "just before this video in the playlist"
+    },
+    {
+      "start": 54.68,
+      "end": 58.8,
+      "duration": 4.12,
+      "text": "that you're watching right now."
+    },
+    {
+      "start": 56.52,
+      "end": 59.6,
+      "duration": 3.08,
+      "text": "So, how do you solve this particular"
+    },
+    {
+      "start": 58.8,
+      "end": 63.0,
+      "duration": 4.2,
+      "text": "problem?"
+    },
+    {
+      "start": 59.6,
+      "end": 65.88,
+      "duration": 6.28,
+      "text": "So, what I'll do is this is a directed"
+    },
+    {
+      "start": 63.0,
+      "end": 69.6,
+      "duration": 6.6,
+      "text": "cyclic graph. Can I say this is a"
+    },
+    {
+      "start": 65.88,
+      "end": 71.32,
+      "duration": 5.44,
+      "text": "directed cyclic graph? So, if you've"
+    },
+    {
+      "start": 69.6,
+      "end": 75.8,
+      "duration": 6.2,
+      "text": "seen the previous video on topological"
+    },
+    {
+      "start": 71.32,
+      "end": 78.96,
+      "duration": 7.64,
+      "text": "sort using BFS, you know that topo sorts"
+    },
+    {
+      "start": 75.8,
+      "end": 81.56,
+      "duration": 5.76,
+      "text": "are only applicable on DAGs. You know"
+    },
+    {
+      "start": 78.96,
+      "end": 84.12,
+      "duration": 5.16,
+      "text": "this. Any of the topo sort is only"
+    },
+    {
+      "start": 81.56,
+      "end": 86.76,
+      "duration": 5.2,
+      "text": "applicable on a DAG which is directed"
+    },
+    {
+      "start": 84.12,
+      "end": 89.16,
+      "duration": 5.04,
+      "text": "acyclic graph. If it isn't a acyclic"
+    },
+    {
+      "start": 86.76,
+      "end": 92.16,
+      "duration": 5.4,
+      "text": "graph, it won't be applicable. But this"
+    },
+    {
+      "start": 89.16,
+      "end": 94.4,
+      "duration": 5.24,
+      "text": "graph has a cycle. If you carefully see,"
+    },
+    {
+      "start": 92.16,
+      "end": 96.88,
+      "duration": 4.72,
+      "text": "this graph has a cycle. And you need to"
+    },
+    {
+      "start": 94.4,
+      "end": 99.36,
+      "duration": 4.96,
+      "text": "tell me that yes, it has a cycle. So,"
+    },
+    {
+      "start": 96.88,
+      "end": 102.48,
+      "duration": 5.6,
+      "text": "how do you detect it? So, what I do is"
+    },
+    {
+      "start": 99.36,
+      "end": 105.72,
+      "duration": 6.36,
+      "text": "since I know a topo sort is not possible"
+    },
+    {
+      "start": 102.48,
+      "end": 108.52,
+      "duration": 6.04,
+      "text": "for a graph that has a cycle, I'll still"
+    },
+    {
+      "start": 105.72,
+      "end": 110.28,
+      "duration": 4.56,
+      "text": "try to apply topological sort to this."
+    },
+    {
+      "start": 108.52,
+      "end": 112.2,
+      "duration": 3.68,
+      "text": "Yes, I'll I'll"
+    },
+    {
+      "start": 110.28,
+      "end": 114.8,
+      "duration": 4.52,
+      "text": "I'll still try to find the topo sort for"
+    },
+    {
+      "start": 112.2,
+      "end": 116.2,
+      "duration": 4.0,
+      "text": "this graph. Okay, let's try out. So,"
+    },
+    {
+      "start": 114.8,
+      "end": 118.12,
+      "duration": 3.32,
+      "text": "what What the Kahn's algorithm? It's"
+    },
+    {
+      "start": 116.2,
+      "end": 120.2,
+      "duration": 4.0,
+      "text": "very simple. Initially, find the"
+    },
+    {
+      "start": 118.12,
+      "end": 121.6,
+      "duration": 3.48,
+      "text": "in-degrees of all the nodes. So, I'll"
+    },
+    {
+      "start": 120.2,
+      "end": 123.68,
+      "duration": 3.48,
+      "text": "try to write the in-degrees over here"
+    },
+    {
+      "start": 121.6,
+      "end": 126.04,
+      "duration": 4.44,
+      "text": "itself. Zero because there is no"
+    },
+    {
+      "start": 123.68,
+      "end": 128.56,
+      "duration": 4.88,
+      "text": "incoming nodes. So, zero for this. How"
+    },
+    {
+      "start": 126.04,
+      "end": 131.36,
+      "duration": 5.32,
+      "text": "many incoming are there? One and two."
+    },
+    {
+      "start": 128.56,
+      "end": 133.04,
+      "duration": 4.48,
+      "text": "So, two for this. How many incoming on"
+    },
+    {
+      "start": 131.36,
+      "end": 134.76,
+      "duration": 3.4,
+      "text": "this?"
+    },
+    {
+      "start": 133.04,
+      "end": 137.4,
+      "duration": 4.36,
+      "text": "So, I see there is only one guy"
+    },
+    {
+      "start": 134.76,
+      "end": 139.4,
+      "duration": 4.64,
+      "text": "incoming. So, one."
+    },
+    {
+      "start": 137.4,
+      "end": 141.12,
+      "duration": 3.72,
+      "text": "How many incoming on five? Can I say"
+    },
+    {
+      "start": 139.4,
+      "end": 142.72,
+      "duration": 3.32,
+      "text": "it's zero?"
+    },
+    {
+      "start": 141.12,
+      "end": 144.88,
+      "duration": 3.76,
+      "text": "Sorry, it's one again."
+    },
+    {
+      "start": 142.72,
+      "end": 146.92,
+      "duration": 4.2,
+      "text": "How many incoming on four?"
+    },
+    {
+      "start": 144.88,
+      "end": 149.0,
+      "duration": 4.12,
+      "text": "If I carefully see, uh incoming on four"
+    },
+    {
+      "start": 146.92,
+      "end": 151.36,
+      "duration": 4.44,
+      "text": "is one. So, I can just write it as one."
+    },
+    {
+      "start": 149.0,
+      "end": 154.4,
+      "duration": 5.4,
+      "text": "Perfect. So, I've written the in-degrees"
+    },
+    {
+      "start": 151.36,
+      "end": 156.4,
+      "duration": 5.04,
+      "text": "of all of these nodes. Now, what was the"
+    },
+    {
+      "start": 154.4,
+      "end": 158.6,
+      "duration": 4.2,
+      "text": "algorithm stating? The algorithm always"
+    },
+    {
+      "start": 156.4,
+      "end": 160.72,
+      "duration": 4.32,
+      "text": "stated initially start with a queue data"
+    },
+    {
+      "start": 158.6,
+      "end": 162.76,
+      "duration": 4.16,
+      "text": "structure. So, let's start off with a"
+    },
+    {
+      "start": 160.72,
+      "end": 164.6,
+      "duration": 3.88,
+      "text": "queue data structure. And in this queue"
+    },
+    {
+      "start": 162.76,
+      "end": 166.92,
+      "duration": 4.16,
+      "text": "data structure, initially keep the node"
+    },
+    {
+      "start": 164.6,
+      "end": 168.76,
+      "duration": 4.16,
+      "text": "with the in-degree zero, which is the"
+    },
+    {
+      "start": 166.92,
+      "end": 171.48,
+      "duration": 4.56,
+      "text": "one. Okay? Now, let's start the"
+    },
+    {
+      "start": 168.76,
+      "end": 173.6,
+      "duration": 4.84,
+      "text": "algorithm. The algorithm states gets the"
+    },
+    {
+      "start": 171.48,
+      "end": 176.44,
+      "duration": 4.96,
+      "text": "first node, and you can put that into"
+    },
+    {
+      "start": 173.6,
+      "end": 178.68,
+      "duration": 5.08,
+      "text": "the topo sort array. So, let's put it."
+    },
+    {
+      "start": 176.44,
+      "end": 181.44,
+      "duration": 5.0,
+      "text": "For node one, who are the adjacents? So,"
+    },
+    {
+      "start": 178.68,
+      "end": 183.8,
+      "duration": 5.12,
+      "text": "the adjacent is two. Go to two and"
+    },
+    {
+      "start": 181.44,
+      "end": 186.08,
+      "duration": 4.64,
+      "text": "reduce its in-degree by one. So, this"
+    },
+    {
+      "start": 183.8,
+      "end": 188.28,
+      "duration": 4.48,
+      "text": "will become one. So,"
+    },
+    {
+      "start": 186.08,
+      "end": 190.28,
+      "duration": 4.2,
+      "text": "we are done."
+    },
+    {
+      "start": 188.28,
+      "end": 192.48,
+      "duration": 4.2,
+      "text": "Now, what happens is the moment you"
+    },
+    {
+      "start": 190.28,
+      "end": 195.36,
+      "duration": 5.08,
+      "text": "reduce its in-degree by one, the moment"
+    },
+    {
+      "start": 192.48,
+      "end": 197.2,
+      "duration": 4.72,
+      "text": "you reduce its in-degree by one, the"
+    },
+    {
+      "start": 195.36,
+      "end": 199.92,
+      "duration": 4.56,
+      "text": "in-degree is one, and the queue is"
+    },
+    {
+      "start": 197.2,
+      "end": 202.88,
+      "duration": 5.68,
+      "text": "empty. The queue is empty, and the topo"
+    },
+    {
+      "start": 199.92,
+      "end": 206.24,
+      "duration": 6.32,
+      "text": "sort just has one guy. The topo sort"
+    },
+    {
+      "start": 202.88,
+      "end": 207.64,
+      "duration": 4.76,
+      "text": "just has one guy. Why did it not work?"
+    },
+    {
+      "start": 206.24,
+      "end": 209.84,
+      "duration": 3.6,
+      "text": "Because"
+    },
+    {
+      "start": 207.64,
+      "end": 210.92,
+      "duration": 3.28,
+      "text": "this two was supposedly connected to"
+    },
+    {
+      "start": 209.84,
+      "end": 212.8,
+      "duration": 2.96,
+      "text": "one,"
+    },
+    {
+      "start": 210.92,
+      "end": 214.48,
+      "duration": 3.56,
+      "text": "and if you remove this,"
+    },
+    {
+      "start": 212.8,
+      "end": 216.24,
+      "duration": 3.44,
+      "text": "right? If you remove this,"
+    },
+    {
+      "start": 214.48,
+      "end": 218.08,
+      "duration": 3.6,
+      "text": "there is still a dependency on this"
+    },
+    {
+      "start": 216.24,
+      "end": 219.24,
+      "duration": 3.0,
+      "text": "because it's a cyclic dependency. So,"
+    },
+    {
+      "start": 218.08,
+      "end": 222.28,
+      "duration": 4.2,
+      "text": "there are still nodes which are"
+    },
+    {
+      "start": 219.24,
+      "end": 224.12,
+      "duration": 4.88,
+      "text": "dependent. So, you you're not able to"
+    },
+    {
+      "start": 222.28,
+      "end": 226.36,
+      "duration": 4.08,
+      "text": "create a topo sort because what is a"
+    },
+    {
+      "start": 224.12,
+      "end": 230.0,
+      "duration": 5.88,
+      "text": "topo sort? It is a linear ordering of n"
+    },
+    {
+      "start": 226.36,
+      "end": 233.16,
+      "duration": 6.8,
+      "text": "vertices. n vertices. So, if you do not"
+    },
+    {
+      "start": 230.0,
+      "end": 234.92,
+      "duration": 4.92,
+      "text": "produce a topo sort of n size, the"
+    },
+    {
+      "start": 233.16,
+      "end": 236.44,
+      "duration": 3.28,
+      "text": "topological sort that you produce is of"
+    },
+    {
+      "start": 234.92,
+      "end": 239.4,
+      "duration": 4.48,
+      "text": "size one."
+    },
+    {
+      "start": 236.44,
+      "end": 241.24,
+      "duration": 4.8,
+      "text": "So, you cannot say that like you can"
+    },
+    {
+      "start": 239.4,
+      "end": 242.96,
+      "duration": 3.56,
+      "text": "definitely say there is a problem. And"
+    },
+    {
+      "start": 241.24,
+      "end": 244.04,
+      "duration": 2.8,
+      "text": "the only problem that you can have is a"
+    },
+    {
+      "start": 242.96,
+      "end": 247.28,
+      "duration": 4.32,
+      "text": "cycle."
+    },
+    {
+      "start": 244.04,
+      "end": 250.04,
+      "duration": 6.0,
+      "text": "If the topological sort comes out to be"
+    },
+    {
+      "start": 247.28,
+      "end": 252.32,
+      "duration": 5.04,
+      "text": "exactly having n elements, if the"
+    },
+    {
+      "start": 250.04,
+      "end": 254.36,
+      "duration": 4.32,
+      "text": "topological sort exactly has n elements,"
+    },
+    {
+      "start": 252.32,
+      "end": 256.56,
+      "duration": 4.24,
+      "text": "then you can say that it is a directed"
+    },
+    {
+      "start": 254.36,
+      "end": 258.96,
+      "duration": 4.6,
+      "text": "acyclic graph, does not have a cycle."
+    },
+    {
+      "start": 256.56,
+      "end": 261.08,
+      "duration": 4.52,
+      "text": "But if the topological sort has anything"
+    },
+    {
+      "start": 258.96,
+      "end": 263.8,
+      "duration": 4.84,
+      "text": "lesser than n elements, then you can say"
+    },
+    {
+      "start": 261.08,
+      "end": 265.16,
+      "duration": 4.08,
+      "text": "that it contains a cycle. Very simple."
+    },
+    {
+      "start": 263.8,
+      "end": 267.68,
+      "duration": 3.88,
+      "text": "If you're able to generate a topological"
+    },
+    {
+      "start": 265.16,
+      "end": 268.72,
+      "duration": 3.56,
+      "text": "sort, it means it does not have a cycle."
+    },
+    {
+      "start": 267.68,
+      "end": 270.56,
+      "duration": 2.88,
+      "text": "If you're not able to generate a"
+    },
+    {
+      "start": 268.72,
+      "end": 273.68,
+      "duration": 4.96,
+      "text": "topological sort, it means it does have"
+    },
+    {
+      "start": 270.56,
+      "end": 275.68,
+      "duration": 5.12,
+      "text": "a cycle, which is causing an issue."
+    },
+    {
+      "start": 273.68,
+      "end": 277.4,
+      "duration": 3.72,
+      "text": "So, in order to code, what we will go as"
+    },
+    {
+      "start": 275.68,
+      "end": 279.16,
+      "duration": 3.48,
+      "text": "we'll go to the topological sort code"
+    },
+    {
+      "start": 277.4,
+      "end": 281.4,
+      "duration": 4.0,
+      "text": "and we'll copy-paste it. Okay, let's"
+    },
+    {
+      "start": 279.16,
+      "end": 282.8,
+      "duration": 3.64,
+      "text": "copy-paste the code into the over here."
+    },
+    {
+      "start": 281.4,
+      "end": 285.72,
+      "duration": 4.32,
+      "text": "Now, at the end when the topological"
+    },
+    {
+      "start": 282.8,
+      "end": 288.16,
+      "duration": 5.36,
+      "text": "sort has been produced, we say, \"Listen,"
+    },
+    {
+      "start": 285.72,
+      "end": 289.88,
+      "duration": 4.16,
+      "text": "if the topological sort size is equal to"
+    },
+    {
+      "start": 288.16,
+      "end": 291.52,
+      "duration": 3.36,
+      "text": "equal to n, then it does not have a"
+    },
+    {
+      "start": 289.88,
+      "end": 294.56,
+      "duration": 4.68,
+      "text": "cycle. Topological sort was produced."
+    },
+    {
+      "start": 291.52,
+      "end": 296.88,
+      "duration": 5.36,
+      "text": "Otherwise, it does have a cycle.\""
+    },
+    {
+      "start": 294.56,
+      "end": 298.24,
+      "duration": 3.68,
+      "text": "Otherwise, it does have a cycle. Now, do"
+    },
+    {
+      "start": 296.88,
+      "end": 300.2,
+      "duration": 3.32,
+      "text": "we need to store the topological sort?"
+    },
+    {
+      "start": 298.24,
+      "end": 302.28,
+      "duration": 4.04,
+      "text": "No, we don't need. We can just omit"
+    },
+    {
+      "start": 300.2,
+      "end": 303.8,
+      "duration": 3.6,
+      "text": "this. We can omit this and we can"
+    },
+    {
+      "start": 302.28,
+      "end": 306.0,
+      "duration": 3.72,
+      "text": "probably keep a counter variable,"
+    },
+    {
+      "start": 303.8,
+      "end": 307.24,
+      "duration": 3.44,
+      "text": "something like this, instead of"
+    },
+    {
+      "start": 306.0,
+      "end": 309.04,
+      "duration": 3.04,
+      "text": "having the topological sort stored"
+    },
+    {
+      "start": 307.24,
+      "end": 312.64,
+      "duration": 5.4,
+      "text": "because we just are concerned about the"
+    },
+    {
+      "start": 309.04,
+      "end": 316.2,
+      "duration": 7.16,
+      "text": "count. If the count is okay, I will just"
+    },
+    {
+      "start": 312.64,
+      "end": 316.2,
+      "duration": 3.56,
+      "text": "quickly have a compilation."
+    },
+    {
+      "start": 318.44,
+      "end": 321.52,
+      "duration": 3.08,
+      "text": "Sorry, my bad."
+    },
+    {
+      "start": 321.64,
+      "end": 324.84,
+      "duration": 3.2,
+      "text": "If you run this, it is fine. Let's"
+    },
+    {
+      "start": 323.28,
+      "end": 327.52,
+      "duration": 4.24,
+      "text": "quickly submit this and see if it is"
+    },
+    {
+      "start": 324.84,
+      "end": 327.52,
+      "duration": 2.68,
+      "text": "working fine."
+    },
+    {
+      "start": 327.8,
+      "end": 332.72,
+      "duration": 4.92,
+      "text": "Wow, it does. So, guys, I hope you have"
+    },
+    {
+      "start": 330.08,
+      "end": 334.4,
+      "duration": 4.32,
+      "text": "understood this wonderful concept being"
+    },
+    {
+      "start": 332.72,
+      "end": 336.64,
+      "duration": 3.92,
+      "text": "applied on detection of cycle in"
+    },
+    {
+      "start": 334.4,
+      "end": 338.28,
+      "duration": 3.88,
+      "text": "directed graph. And what about this time"
+    },
+    {
+      "start": 336.64,
+      "end": 339.8,
+      "duration": 3.16,
+      "text": "complexity and the space complexity? It"
+    },
+    {
+      "start": 338.28,
+      "end": 341.76,
+      "duration": 3.48,
+      "text": "is similar to topological sort. We're"
+    },
+    {
+      "start": 339.8,
+      "end": 343.92,
+      "duration": 4.12,
+      "text": "using an extra space of a queue and a"
+    },
+    {
+      "start": 341.76,
+      "end": 345.48,
+      "duration": 3.72,
+      "text": "in-degree, which is big O of 2n. And"
+    },
+    {
+      "start": 343.92,
+      "end": 347.96,
+      "duration": 4.04,
+      "text": "then we are using the BFS algorithm,"
+    },
+    {
+      "start": 345.48,
+      "end": 349.52,
+      "duration": 4.04,
+      "text": "which is V plus E for directed graphs."
+    },
+    {
+      "start": 347.96,
+      "end": 351.08,
+      "duration": 3.12,
+      "text": "So, guys, I hope I was able to explain"
+    },
+    {
+      "start": 349.52,
+      "end": 353.08,
+      "duration": 3.56,
+      "text": "you this particular algorithm. So just"
+    },
+    {
+      "start": 351.08,
+      "end": 354.16,
+      "duration": 3.08,
+      "text": "in case I was, please make sure you like"
+    },
+    {
+      "start": 353.08,
+      "end": 356.08,
+      "duration": 3.0,
+      "text": "this video. And if you're new to our"
+    },
+    {
+      "start": 354.16,
+      "end": 357.56,
+      "duration": 3.4,
+      "text": "channel, what are you waiting for? I"
+    },
+    {
+      "start": 356.08,
+      "end": 359.36,
+      "duration": 3.28,
+      "text": "think it's it's high time that you hit"
+    },
+    {
+      "start": 357.56,
+      "end": 360.76,
+      "duration": 3.2,
+      "text": "that subscribe button. And if you"
+    },
+    {
+      "start": 359.36,
+      "end": 362.0,
+      "duration": 2.64,
+      "text": "haven't checked out our DP series and"
+    },
+    {
+      "start": 360.76,
+      "end": 363.2,
+      "duration": 2.44,
+      "text": "the HD sheet, the links are in the"
+    },
+    {
+      "start": 362.0,
+      "end": 364.68,
+      "duration": 2.68,
+      "text": "description. Please make sure you check"
+    },
+    {
+      "start": 363.2,
+      "end": 365.88,
+      "duration": 2.68,
+      "text": "it out. And yeah, with this I'll be"
+    },
+    {
+      "start": 364.68,
+      "end": 367.12,
+      "duration": 2.44,
+      "text": "wrapping up this video. Let's meet in"
+    },
+    {
+      "start": 365.88,
+      "end": 368.8,
+      "duration": 2.92,
+      "text": "some other video. Till then, bye-bye."
+    },
+    {
+      "start": 367.12,
+      "end": 372.0,
+      "duration": 4.88,
+      "text": "Take care."
+    },
+    {
+      "start": 368.8,
+      "end": 375.28,
+      "duration": 6.48,
+      "text": "Whenever your heart is broken,"
+    },
+    {
+      "start": 372.0,
+      "end": 377.88,
+      "duration": 5.88,
+      "text": "don't ever forget you're golden."
+    },
+    {
+      "start": 375.28,
+      "end": 377.88,
+      "duration": 2.6,
+      "text": "I will find"
+    }
+  ]
+}

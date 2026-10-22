@@ -1,0 +1,3386 @@
+{
+  "video_id": "cKVl1TFdNXg",
+  "title": "DP 47. Number of Longest Increasing Subsequences",
+  "duration_sec": 1246,
+  "num_segments": 563,
+  "segments": [
+    {
+      "start": 0.16,
+      "end": 3.44,
+      "duration": 3.28,
+      "text": "hey everyone welcome back to take you"
+    },
+    {
+      "start": 1.6,
+      "end": 5.76,
+      "duration": 4.16,
+      "text": "forward so today we will be solving the"
+    },
+    {
+      "start": 3.44,
+      "end": 10.08,
+      "duration": 6.64,
+      "text": "problem uh number of longest increasing"
+    },
+    {
+      "start": 5.76,
+      "end": 11.28,
+      "duration": 5.52,
+      "text": "subsequences and this is the dp47 the 47"
+    },
+    {
+      "start": 10.08,
+      "end": 13.76,
+      "duration": 3.68,
+      "text": "lecture of the dynamic programming"
+    },
+    {
+      "start": 11.28,
+      "end": 14.92,
+      "duration": 3.64,
+      "text": "playlist and yeah the prerequisites to"
+    },
+    {
+      "start": 13.76,
+      "end": 18.08,
+      "duration": 4.32,
+      "text": "this problem is"
+    },
+    {
+      "start": 14.92,
+      "end": 20.4,
+      "duration": 5.48,
+      "text": "dp41 and dp42 which is"
+    },
+    {
+      "start": 18.08,
+      "end": 21.92,
+      "duration": 3.84,
+      "text": "based on lis so if you don't know ls"
+    },
+    {
+      "start": 20.4,
+      "end": 23.44,
+      "duration": 3.04,
+      "text": "please go back and watch it and then you"
+    },
+    {
+      "start": 21.92,
+      "end": 26.24,
+      "duration": 4.32,
+      "text": "can just come back and watch this"
+    },
+    {
+      "start": 23.44,
+      "end": 29.12,
+      "duration": 5.68,
+      "text": "problem so number of longest increasing"
+    },
+    {
+      "start": 26.24,
+      "end": 30.48,
+      "duration": 4.24,
+      "text": "subsequence what does this mean now you"
+    },
+    {
+      "start": 29.12,
+      "end": 32.88,
+      "duration": 3.76,
+      "text": "must be knowing what is longest"
+    },
+    {
+      "start": 30.48,
+      "end": 34.64,
+      "duration": 4.16,
+      "text": "increasing subsequence till now now for"
+    },
+    {
+      "start": 32.88,
+      "end": 36.56,
+      "duration": 3.68,
+      "text": "this i can say uh the length of the"
+    },
+    {
+      "start": 34.64,
+      "end": 37.44,
+      "duration": 2.8,
+      "text": "longest is"
+    },
+    {
+      "start": 36.56,
+      "end": 39.76,
+      "duration": 3.2,
+      "text": "four"
+    },
+    {
+      "start": 37.44,
+      "end": 42.32,
+      "duration": 4.88,
+      "text": "and i can we have something like one"
+    },
+    {
+      "start": 39.76,
+      "end": 44.88,
+      "duration": 5.12,
+      "text": "three four seven as one of them or i can"
+    },
+    {
+      "start": 42.32,
+      "end": 48.56,
+      "duration": 6.24,
+      "text": "have one three five seven as another of"
+    },
+    {
+      "start": 44.88,
+      "end": 48.56,
+      "duration": 3.68,
+      "text": "them so i can say"
+    },
+    {
+      "start": 48.8,
+      "end": 54.0,
+      "duration": 5.2,
+      "text": "the longest is of length four and how"
+    },
+    {
+      "start": 51.76,
+      "end": 56.72,
+      "duration": 4.96,
+      "text": "many subsequences are there are there"
+    },
+    {
+      "start": 54.0,
+      "end": 58.96,
+      "duration": 4.96,
+      "text": "that's two subsequences"
+    },
+    {
+      "start": 56.72,
+      "end": 60.64,
+      "duration": 3.92,
+      "text": "so i'm not concerned about the length"
+    },
+    {
+      "start": 58.96,
+      "end": 62.96,
+      "duration": 4.0,
+      "text": "because i know how to find the length"
+    },
+    {
+      "start": 60.64,
+      "end": 65.6,
+      "duration": 4.96,
+      "text": "i'm more concerned about how many are"
+    },
+    {
+      "start": 62.96,
+      "end": 66.64,
+      "duration": 3.68,
+      "text": "there of length four and the answer to"
+    },
+    {
+      "start": 65.6,
+      "end": 68.56,
+      "duration": 2.96,
+      "text": "that is"
+    },
+    {
+      "start": 66.64,
+      "end": 70.08,
+      "duration": 3.44,
+      "text": "there are this is the first one and this"
+    },
+    {
+      "start": 68.56,
+      "end": 72.16,
+      "duration": 3.6,
+      "text": "is the second one there are two"
+    },
+    {
+      "start": 70.08,
+      "end": 75.12,
+      "duration": 5.04,
+      "text": "subsequences of length four so that's"
+    },
+    {
+      "start": 72.16,
+      "end": 78.0,
+      "duration": 5.84,
+      "text": "the simple question i will be giving you"
+    },
+    {
+      "start": 75.12,
+      "end": 80.24,
+      "duration": 5.12,
+      "text": "uh an array and you need to tell me"
+    },
+    {
+      "start": 78.0,
+      "end": 82.8,
+      "duration": 4.8,
+      "text": "the number of longest yes the number of"
+    },
+    {
+      "start": 80.24,
+      "end": 85.28,
+      "duration": 5.04,
+      "text": "longest increasing subsequence and over"
+    },
+    {
+      "start": 82.8,
+      "end": 87.2,
+      "duration": 4.4,
+      "text": "here it is two that's the question so"
+    },
+    {
+      "start": 85.28,
+      "end": 88.4,
+      "duration": 3.12,
+      "text": "how do you solve this particular problem"
+    },
+    {
+      "start": 87.2,
+      "end": 89.84,
+      "duration": 2.64,
+      "text": "so"
+    },
+    {
+      "start": 88.4,
+      "end": 92.08,
+      "duration": 3.68,
+      "text": "if you remember"
+    },
+    {
+      "start": 89.84,
+      "end": 95.68,
+      "duration": 5.84,
+      "text": "how did we solve this problem uh it we"
+    },
+    {
+      "start": 92.08,
+      "end": 98.4,
+      "duration": 6.32,
+      "text": "used uh in dp42 we used a simple dp"
+    },
+    {
+      "start": 95.68,
+      "end": 101.76,
+      "duration": 6.08,
+      "text": "array and we tried to fill that dp array"
+    },
+    {
+      "start": 98.4,
+      "end": 103.52,
+      "duration": 5.12,
+      "text": "using a couple of uh loops like this if"
+    },
+    {
+      "start": 101.76,
+      "end": 104.96,
+      "duration": 3.2,
+      "text": "you remember well enough i was going"
+    },
+    {
+      "start": 103.52,
+      "end": 107.44,
+      "duration": 3.92,
+      "text": "from 0 to n"
+    },
+    {
+      "start": 104.96,
+      "end": 110.32,
+      "duration": 5.36,
+      "text": "j was going from 0 to i and then you"
+    },
+    {
+      "start": 107.44,
+      "end": 111.84,
+      "duration": 4.4,
+      "text": "wrote this and then you just change this"
+    },
+    {
+      "start": 110.32,
+      "end": 114.48,
+      "duration": 4.16,
+      "text": "this dp was storing the length if you"
+    },
+    {
+      "start": 111.84,
+      "end": 115.6,
+      "duration": 3.76,
+      "text": "remember well enough but how do you have"
+    },
+    {
+      "start": 114.48,
+      "end": 118.08,
+      "duration": 3.6,
+      "text": "the count"
+    },
+    {
+      "start": 115.6,
+      "end": 121.76,
+      "duration": 6.16,
+      "text": "that's my question so let's uh take an"
+    },
+    {
+      "start": 118.08,
+      "end": 124.48,
+      "duration": 6.4,
+      "text": "example and try to see so"
+    },
+    {
+      "start": 121.76,
+      "end": 126.48,
+      "duration": 4.72,
+      "text": "let's uh keep the dp over here"
+    },
+    {
+      "start": 124.48,
+      "end": 129.04,
+      "duration": 4.56,
+      "text": "let's maintain one more array which is"
+    },
+    {
+      "start": 126.48,
+      "end": 130.32,
+      "duration": 3.84,
+      "text": "the count array okay and now i'll teach"
+    },
+    {
+      "start": 129.04,
+      "end": 131.2,
+      "duration": 2.16,
+      "text": "you how to keep the count it's very"
+    },
+    {
+      "start": 130.32,
+      "end": 134.24,
+      "duration": 3.92,
+      "text": "simple"
+    },
+    {
+      "start": 131.2,
+      "end": 135.68,
+      "duration": 4.48,
+      "text": "so initially we are at one"
+    },
+    {
+      "start": 134.24,
+      "end": 137.6,
+      "duration": 3.36,
+      "text": "okay and"
+    },
+    {
+      "start": 135.68,
+      "end": 139.76,
+      "duration": 4.08,
+      "text": "it it is itself"
+    },
+    {
+      "start": 137.6,
+      "end": 142.4,
+      "duration": 4.8,
+      "text": "the length will be one because"
+    },
+    {
+      "start": 139.76,
+      "end": 144.48,
+      "duration": 4.72,
+      "text": "it is in this array it is itself the"
+    },
+    {
+      "start": 142.4,
+      "end": 146.96,
+      "duration": 4.56,
+      "text": "longest increasing subsequence thereby"
+    },
+    {
+      "start": 144.48,
+      "end": 148.64,
+      "duration": 4.16,
+      "text": "the length is one and how many"
+    },
+    {
+      "start": 146.96,
+      "end": 150.4,
+      "duration": 3.44,
+      "text": "of length one are there"
+    },
+    {
+      "start": 148.64,
+      "end": 153.12,
+      "duration": 4.48,
+      "text": "that's very obvious it's off there's"
+    },
+    {
+      "start": 150.4,
+      "end": 155.52,
+      "duration": 5.12,
+      "text": "only one guy of length one for sure"
+    },
+    {
+      "start": 153.12,
+      "end": 158.08,
+      "duration": 4.96,
+      "text": "so initially you start with one and one"
+    },
+    {
+      "start": 155.52,
+      "end": 162.0,
+      "duration": 6.48,
+      "text": "because everyone please hear me out"
+    },
+    {
+      "start": 158.08,
+      "end": 162.8,
+      "duration": 4.72,
+      "text": "properly every one itself is an lis"
+    },
+    {
+      "start": 162.0,
+      "end": 164.24,
+      "duration": 2.24,
+      "text": "and"
+    },
+    {
+      "start": 162.8,
+      "end": 167.04,
+      "duration": 4.24,
+      "text": "so the count will be one and the length"
+    },
+    {
+      "start": 164.24,
+      "end": 169.92,
+      "duration": 5.68,
+      "text": "will be one as well perfect now let's"
+    },
+    {
+      "start": 167.04,
+      "end": 173.04,
+      "duration": 6.0,
+      "text": "move to the next guy which is five now"
+    },
+    {
+      "start": 169.92,
+      "end": 175.36,
+      "duration": 5.44,
+      "text": "when you are at five when you add five"
+    },
+    {
+      "start": 173.04,
+      "end": 177.04,
+      "duration": 4.0,
+      "text": "standing at five"
+    },
+    {
+      "start": 175.36,
+      "end": 179.92,
+      "duration": 4.56,
+      "text": "initially you say"
+    },
+    {
+      "start": 177.04,
+      "end": 182.72,
+      "duration": 5.68,
+      "text": "hey we will be one and one because five"
+    },
+    {
+      "start": 179.92,
+      "end": 185.36,
+      "duration": 5.44,
+      "text": "itself remember this five itself is of"
+    },
+    {
+      "start": 182.72,
+      "end": 187.04,
+      "duration": 4.32,
+      "text": "length 1 and it's a count of 1"
+    },
+    {
+      "start": 185.36,
+      "end": 188.64,
+      "duration": 3.28,
+      "text": "but"
+    },
+    {
+      "start": 187.04,
+      "end": 191.52,
+      "duration": 4.48,
+      "text": "for 5"
+    },
+    {
+      "start": 188.64,
+      "end": 193.12,
+      "duration": 4.48,
+      "text": "for 5 you look back who's the previous"
+    },
+    {
+      "start": 191.52,
+      "end": 195.92,
+      "duration": 4.4,
+      "text": "1 is the previous"
+    },
+    {
+      "start": 193.12,
+      "end": 197.76,
+      "duration": 4.64,
+      "text": "can this one attach to 5 and the answer"
+    },
+    {
+      "start": 195.92,
+      "end": 200.8,
+      "duration": 4.88,
+      "text": "to that is yes"
+    },
+    {
+      "start": 197.76,
+      "end": 201.76,
+      "duration": 4.0,
+      "text": "so if it can attach the length will be"
+    },
+    {
+      "start": 200.8,
+      "end": 203.92,
+      "duration": 3.12,
+      "text": "one"
+    },
+    {
+      "start": 201.76,
+      "end": 206.64,
+      "duration": 4.88,
+      "text": "plus one because five has"
+    },
+    {
+      "start": 203.92,
+      "end": 208.8,
+      "duration": 4.88,
+      "text": "attached to one so one was initially"
+    },
+    {
+      "start": 206.64,
+      "end": 210.24,
+      "duration": 3.6,
+      "text": "having the length one so that gets"
+    },
+    {
+      "start": 208.8,
+      "end": 212.4,
+      "duration": 3.6,
+      "text": "attached to five so the length will"
+    },
+    {
+      "start": 210.24,
+      "end": 213.2,
+      "duration": 2.96,
+      "text": "increase so the length will increase to"
+    },
+    {
+      "start": 212.4,
+      "end": 215.92,
+      "duration": 3.52,
+      "text": "2"
+    },
+    {
+      "start": 213.2,
+      "end": 219.52,
+      "duration": 6.32,
+      "text": "if the length increases to 2 i'm saying"
+    },
+    {
+      "start": 215.92,
+      "end": 221.84,
+      "duration": 5.92,
+      "text": "1 gets attached to 5. so how many 1 did"
+    },
+    {
+      "start": 219.52,
+      "end": 225.52,
+      "duration": 6.0,
+      "text": "we have the count was 1 so the count"
+    },
+    {
+      "start": 221.84,
+      "end": 227.04,
+      "duration": 5.2,
+      "text": "still stays as 1 because if one"
+    },
+    {
+      "start": 225.52,
+      "end": 230.0,
+      "duration": 4.48,
+      "text": "there was five"
+    },
+    {
+      "start": 227.04,
+      "end": 231.12,
+      "duration": 4.08,
+      "text": "one came in and attached with five and"
+    },
+    {
+      "start": 230.0,
+      "end": 232.64,
+      "duration": 2.64,
+      "text": "one"
+    },
+    {
+      "start": 231.12,
+      "end": 234.0,
+      "duration": 2.88,
+      "text": "how many subsequences were there of"
+    },
+    {
+      "start": 232.64,
+      "end": 235.68,
+      "duration": 3.04,
+      "text": "length one"
+    },
+    {
+      "start": 234.0,
+      "end": 237.6,
+      "duration": 3.6,
+      "text": "once thereby"
+    },
+    {
+      "start": 235.68,
+      "end": 240.88,
+      "duration": 5.2,
+      "text": "the length will increase to two but the"
+    },
+    {
+      "start": 237.6,
+      "end": 243.44,
+      "duration": 5.84,
+      "text": "count still stays as one perfect next"
+    },
+    {
+      "start": 240.88,
+      "end": 245.04,
+      "duration": 4.16,
+      "text": "you go to four this is where the"
+    },
+    {
+      "start": 243.44,
+      "end": 246.88,
+      "duration": 3.44,
+      "text": "understanding will start so you go to"
+    },
+    {
+      "start": 245.04,
+      "end": 249.44,
+      "duration": 4.4,
+      "text": "four"
+    },
+    {
+      "start": 246.88,
+      "end": 250.8,
+      "duration": 3.92,
+      "text": "the moment you go to four you say"
+    },
+    {
+      "start": 249.44,
+      "end": 252.64,
+      "duration": 3.2,
+      "text": "four itself"
+    },
+    {
+      "start": 250.8,
+      "end": 254.88,
+      "duration": 4.08,
+      "text": "is of length one"
+    },
+    {
+      "start": 252.64,
+      "end": 257.04,
+      "duration": 4.4,
+      "text": "and four is having a count one because"
+    },
+    {
+      "start": 254.88,
+      "end": 259.2,
+      "duration": 4.32,
+      "text": "four itself is of length one and the"
+    },
+    {
+      "start": 257.04,
+      "end": 260.96,
+      "duration": 3.92,
+      "text": "count is one right"
+    },
+    {
+      "start": 259.2,
+      "end": 264.16,
+      "duration": 4.96,
+      "text": "for four"
+    },
+    {
+      "start": 260.96,
+      "end": 266.64,
+      "duration": 5.68,
+      "text": "in this array who can be attached one"
+    },
+    {
+      "start": 264.16,
+      "end": 268.4,
+      "duration": 4.24,
+      "text": "can be attached to four again so the"
+    },
+    {
+      "start": 266.64,
+      "end": 270.4,
+      "duration": 3.76,
+      "text": "count will increase to two"
+    },
+    {
+      "start": 268.4,
+      "end": 272.64,
+      "duration": 4.24,
+      "text": "and one is only having a count of one so"
+    },
+    {
+      "start": 270.4,
+      "end": 274.96,
+      "duration": 4.56,
+      "text": "it stays so you increase the length to"
+    },
+    {
+      "start": 272.64,
+      "end": 275.84,
+      "duration": 3.2,
+      "text": "two and the count still stays as one"
+    },
+    {
+      "start": 274.96,
+      "end": 277.28,
+      "duration": 2.32,
+      "text": "next"
+    },
+    {
+      "start": 275.84,
+      "end": 278.96,
+      "duration": 3.12,
+      "text": "you move to three"
+    },
+    {
+      "start": 277.28,
+      "end": 280.8,
+      "duration": 3.52,
+      "text": "you move to three"
+    },
+    {
+      "start": 278.96,
+      "end": 281.76,
+      "duration": 2.8,
+      "text": "the moment you move to three what do you"
+    },
+    {
+      "start": 280.8,
+      "end": 284.72,
+      "duration": 3.92,
+      "text": "observe"
+    },
+    {
+      "start": 281.76,
+      "end": 286.32,
+      "duration": 4.56,
+      "text": "you say three is initially of length one"
+    },
+    {
+      "start": 284.72,
+      "end": 289.68,
+      "duration": 4.96,
+      "text": "and a count one"
+    },
+    {
+      "start": 286.32,
+      "end": 291.68,
+      "duration": 5.36,
+      "text": "but three can attach with one itself"
+    },
+    {
+      "start": 289.68,
+      "end": 293.52,
+      "duration": 3.84,
+      "text": "because one can attach with three five"
+    },
+    {
+      "start": 291.68,
+      "end": 295.92,
+      "duration": 4.24,
+      "text": "cannot four cannot because it's a"
+    },
+    {
+      "start": 293.52,
+      "end": 297.92,
+      "duration": 4.4,
+      "text": "longest increasing subsequence so if one"
+    },
+    {
+      "start": 295.92,
+      "end": 299.92,
+      "duration": 4.0,
+      "text": "can the length will increase to two and"
+    },
+    {
+      "start": 297.92,
+      "end": 302.8,
+      "duration": 4.88,
+      "text": "the count is one so you just increase"
+    },
+    {
+      "start": 299.92,
+      "end": 304.32,
+      "duration": 4.4,
+      "text": "the length to two so i can just uh erase"
+    },
+    {
+      "start": 302.8,
+      "end": 306.32,
+      "duration": 3.52,
+      "text": "all of these and write"
+    },
+    {
+      "start": 304.32,
+      "end": 308.88,
+      "duration": 4.56,
+      "text": "two two two and the count still stays as"
+    },
+    {
+      "start": 306.32,
+      "end": 310.72,
+      "duration": 4.4,
+      "text": "one next you move to two"
+    },
+    {
+      "start": 308.88,
+      "end": 311.6,
+      "duration": 2.72,
+      "text": "this two in itself will have a one and"
+    },
+    {
+      "start": 310.72,
+      "end": 313.04,
+      "duration": 2.32,
+      "text": "one"
+    },
+    {
+      "start": 311.6,
+      "end": 315.6,
+      "duration": 4.0,
+      "text": "now this two"
+    },
+    {
+      "start": 313.04,
+      "end": 318.32,
+      "duration": 5.28,
+      "text": "will attach one and become a longest"
+    },
+    {
+      "start": 315.6,
+      "end": 319.44,
+      "duration": 3.84,
+      "text": "increasing of length two"
+    },
+    {
+      "start": 318.32,
+      "end": 321.6,
+      "duration": 3.28,
+      "text": "of length"
+    },
+    {
+      "start": 319.44,
+      "end": 323.68,
+      "duration": 4.24,
+      "text": "two so let's make it of length two but"
+    },
+    {
+      "start": 321.6,
+      "end": 325.52,
+      "duration": 3.92,
+      "text": "the count will still stay as one because"
+    },
+    {
+      "start": 323.68,
+      "end": 326.24,
+      "duration": 2.56,
+      "text": "it is of one so the count still stays as"
+    },
+    {
+      "start": 325.52,
+      "end": 329.28,
+      "duration": 3.76,
+      "text": "one"
+    },
+    {
+      "start": 326.24,
+      "end": 332.08,
+      "duration": 5.84,
+      "text": "next you move to six"
+    },
+    {
+      "start": 329.28,
+      "end": 336.32,
+      "duration": 7.04,
+      "text": "all your focus back okay now the moment"
+    },
+    {
+      "start": 332.08,
+      "end": 337.12,
+      "duration": 5.04,
+      "text": "you move to six you ask who can attach"
+    },
+    {
+      "start": 336.32,
+      "end": 339.2,
+      "duration": 2.88,
+      "text": "it"
+    },
+    {
+      "start": 337.12,
+      "end": 341.36,
+      "duration": 4.24,
+      "text": "so six initially will have a length one"
+    },
+    {
+      "start": 339.2,
+      "end": 343.68,
+      "duration": 4.48,
+      "text": "and a count one but"
+    },
+    {
+      "start": 341.36,
+      "end": 344.88,
+      "duration": 3.52,
+      "text": "that's for six itself now you look at"
+    },
+    {
+      "start": 343.68,
+      "end": 345.92,
+      "duration": 2.24,
+      "text": "the previous this is the previous this"
+    },
+    {
+      "start": 344.88,
+      "end": 346.88,
+      "duration": 2.0,
+      "text": "is the previous this is the previous"
+    },
+    {
+      "start": 345.92,
+      "end": 349.44,
+      "duration": 3.52,
+      "text": "this is the previous this is the"
+    },
+    {
+      "start": 346.88,
+      "end": 351.84,
+      "duration": 4.96,
+      "text": "previous every one is the previous can"
+    },
+    {
+      "start": 349.44,
+      "end": 354.88,
+      "duration": 5.44,
+      "text": "one go and attach to six the answer to"
+    },
+    {
+      "start": 351.84,
+      "end": 357.52,
+      "duration": 5.68,
+      "text": "that is yes yes yes yes"
+    },
+    {
+      "start": 354.88,
+      "end": 358.72,
+      "duration": 3.84,
+      "text": "thereby you say hey listen the length"
+    },
+    {
+      "start": 357.52,
+      "end": 360.88,
+      "duration": 3.36,
+      "text": "will be two"
+    },
+    {
+      "start": 358.72,
+      "end": 362.8,
+      "duration": 4.08,
+      "text": "the length will be two and i can attach"
+    },
+    {
+      "start": 360.88,
+      "end": 365.2,
+      "duration": 4.32,
+      "text": "one with six"
+    },
+    {
+      "start": 362.8,
+      "end": 367.92,
+      "duration": 5.12,
+      "text": "and the length will be two perfect"
+    },
+    {
+      "start": 365.2,
+      "end": 369.36,
+      "duration": 4.16,
+      "text": "next for six can you attach five"
+    },
+    {
+      "start": 367.92,
+      "end": 370.64,
+      "duration": 2.72,
+      "text": "the answer to that is"
+    },
+    {
+      "start": 369.36,
+      "end": 373.12,
+      "duration": 3.76,
+      "text": "yes"
+    },
+    {
+      "start": 370.64,
+      "end": 374.16,
+      "duration": 3.52,
+      "text": "but still the length will be two but but"
+    },
+    {
+      "start": 373.12,
+      "end": 377.12,
+      "duration": 4.0,
+      "text": "but"
+    },
+    {
+      "start": 374.16,
+      "end": 379.36,
+      "duration": 5.2,
+      "text": "you got see previously this one"
+    },
+    {
+      "start": 377.12,
+      "end": 381.6,
+      "duration": 4.48,
+      "text": "went into attach with six and made a"
+    },
+    {
+      "start": 379.36,
+      "end": 384.64,
+      "duration": 5.28,
+      "text": "length of two so there was one guy of"
+    },
+    {
+      "start": 381.6,
+      "end": 387.04,
+      "duration": 5.44,
+      "text": "length two now five came in attached"
+    },
+    {
+      "start": 384.64,
+      "end": 389.44,
+      "duration": 4.8,
+      "text": "with six and is again of length two so"
+    },
+    {
+      "start": 387.04,
+      "end": 391.6,
+      "duration": 4.56,
+      "text": "can i say the count will increase to two"
+    },
+    {
+      "start": 389.44,
+      "end": 394.08,
+      "duration": 4.64,
+      "text": "the count will increase to two because"
+    },
+    {
+      "start": 391.6,
+      "end": 396.16,
+      "duration": 4.56,
+      "text": "one and six was there now five and six"
+    },
+    {
+      "start": 394.08,
+      "end": 398.32,
+      "duration": 4.24,
+      "text": "games so the count will increase if"
+    },
+    {
+      "start": 396.16,
+      "end": 400.64,
+      "duration": 4.48,
+      "text": "you're getting similar dp values"
+    },
+    {
+      "start": 398.32,
+      "end": 402.4,
+      "duration": 4.08,
+      "text": "increase the count increase the count"
+    },
+    {
+      "start": 400.64,
+      "end": 404.96,
+      "duration": 4.32,
+      "text": "correct next"
+    },
+    {
+      "start": 402.4,
+      "end": 408.8,
+      "duration": 6.4,
+      "text": "there is four and four attached with six"
+    },
+    {
+      "start": 404.96,
+      "end": 411.2,
+      "duration": 6.24,
+      "text": "yes and if four attaches with six"
+    },
+    {
+      "start": 408.8,
+      "end": 413.52,
+      "duration": 4.72,
+      "text": "the length still stays as two and again"
+    },
+    {
+      "start": 411.2,
+      "end": 415.76,
+      "duration": 4.56,
+      "text": "you've got one more count too so the"
+    },
+    {
+      "start": 413.52,
+      "end": 418.24,
+      "duration": 4.72,
+      "text": "length again is two so the count"
+    },
+    {
+      "start": 415.76,
+      "end": 420.32,
+      "duration": 4.56,
+      "text": "increases i'm getting three guys of"
+    },
+    {
+      "start": 418.24,
+      "end": 422.0,
+      "duration": 3.76,
+      "text": "length two now"
+    },
+    {
+      "start": 420.32,
+      "end": 425.12,
+      "duration": 4.8,
+      "text": "i get very obvious because one six five"
+    },
+    {
+      "start": 422.0,
+      "end": 428.56,
+      "duration": 6.56,
+      "text": "six four six all of len two got it"
+    },
+    {
+      "start": 425.12,
+      "end": 430.8,
+      "duration": 5.68,
+      "text": "next can this three be a part of six yes"
+    },
+    {
+      "start": 428.56,
+      "end": 433.2,
+      "duration": 4.64,
+      "text": "i can still attach three with six"
+    },
+    {
+      "start": 430.8,
+      "end": 434.4,
+      "duration": 3.6,
+      "text": "another length two so another count"
+    },
+    {
+      "start": 433.2,
+      "end": 435.44,
+      "duration": 2.24,
+      "text": "increase"
+    },
+    {
+      "start": 434.4,
+      "end": 438.24,
+      "duration": 3.84,
+      "text": "perfect"
+    },
+    {
+      "start": 435.44,
+      "end": 440.48,
+      "duration": 5.04,
+      "text": "can this two attach with six yes so"
+    },
+    {
+      "start": 438.24,
+      "end": 442.4,
+      "duration": 4.16,
+      "text": "three got attached with six now two can"
+    },
+    {
+      "start": 440.48,
+      "end": 444.64,
+      "duration": 4.16,
+      "text": "attach with six as well another length"
+    },
+    {
+      "start": 442.4,
+      "end": 446.4,
+      "duration": 4.0,
+      "text": "two attached so another count increase"
+    },
+    {
+      "start": 444.64,
+      "end": 450.32,
+      "duration": 5.68,
+      "text": "the count becomes"
+    },
+    {
+      "start": 446.4,
+      "end": 451.92,
+      "duration": 5.52,
+      "text": "five so i can say listen what i can say"
+    },
+    {
+      "start": 450.32,
+      "end": 453.2,
+      "duration": 2.88,
+      "text": "i can say"
+    },
+    {
+      "start": 451.92,
+      "end": 456.4,
+      "duration": 4.48,
+      "text": "at six"
+    },
+    {
+      "start": 453.2,
+      "end": 458.24,
+      "duration": 5.04,
+      "text": "there can be max of length two lis"
+    },
+    {
+      "start": 456.4,
+      "end": 460.56,
+      "duration": 4.16,
+      "text": "which can be one six five six four six"
+    },
+    {
+      "start": 458.24,
+      "end": 461.92,
+      "duration": 3.68,
+      "text": "three six two six any one so there are"
+    },
+    {
+      "start": 460.56,
+      "end": 465.28,
+      "duration": 4.72,
+      "text": "five"
+    },
+    {
+      "start": 461.92,
+      "end": 467.12,
+      "duration": 5.2,
+      "text": "lis of length two there are five"
+    },
+    {
+      "start": 465.28,
+      "end": 468.64,
+      "duration": 3.36,
+      "text": "liars of"
+    },
+    {
+      "start": 467.12,
+      "end": 472.24,
+      "duration": 5.12,
+      "text": "length two"
+    },
+    {
+      "start": 468.64,
+      "end": 475.2,
+      "duration": 6.56,
+      "text": "that ends at six"
+    },
+    {
+      "start": 472.24,
+      "end": 477.36,
+      "duration": 5.12,
+      "text": "amazing amazing let's move to the next"
+    },
+    {
+      "start": 475.2,
+      "end": 478.64,
+      "duration": 3.44,
+      "text": "so i'll just erase this and i'll try to"
+    },
+    {
+      "start": 477.36,
+      "end": 480.0,
+      "duration": 2.64,
+      "text": "move to the next"
+    },
+    {
+      "start": 478.64,
+      "end": 482.72,
+      "duration": 4.08,
+      "text": "we move to seven"
+    },
+    {
+      "start": 480.0,
+      "end": 484.08,
+      "duration": 4.08,
+      "text": "initially seven is itself"
+    },
+    {
+      "start": 482.72,
+      "end": 486.48,
+      "duration": 3.76,
+      "text": "of length one"
+    },
+    {
+      "start": 484.08,
+      "end": 489.44,
+      "duration": 5.36,
+      "text": "and count one initially seven is itself"
+    },
+    {
+      "start": 486.48,
+      "end": 491.52,
+      "duration": 5.04,
+      "text": "of length one and count one now i ask"
+    },
+    {
+      "start": 489.44,
+      "end": 494.16,
+      "duration": 4.72,
+      "text": "you a very straightforward question"
+    },
+    {
+      "start": 491.52,
+      "end": 496.64,
+      "duration": 5.12,
+      "text": "for the seven can this be a part"
+    },
+    {
+      "start": 494.16,
+      "end": 498.96,
+      "duration": 4.8,
+      "text": "yes one can attach with seven yes one"
+    },
+    {
+      "start": 496.64,
+      "end": 500.32,
+      "duration": 3.68,
+      "text": "can attach with seven so if one patches"
+    },
+    {
+      "start": 498.96,
+      "end": 502.48,
+      "duration": 3.52,
+      "text": "with seven"
+    },
+    {
+      "start": 500.32,
+      "end": 503.84,
+      "duration": 3.52,
+      "text": "i can say this becomes"
+    },
+    {
+      "start": 502.48,
+      "end": 504.8,
+      "duration": 2.32,
+      "text": "length two"
+    },
+    {
+      "start": 503.84,
+      "end": 508.16,
+      "duration": 4.32,
+      "text": "and"
+    },
+    {
+      "start": 504.8,
+      "end": 510.48,
+      "duration": 5.68,
+      "text": "there is only one so count is still one"
+    },
+    {
+      "start": 508.16,
+      "end": 511.68,
+      "duration": 3.52,
+      "text": "can five attach with seven"
+    },
+    {
+      "start": 510.48,
+      "end": 512.96,
+      "duration": 2.48,
+      "text": "yes"
+    },
+    {
+      "start": 511.68,
+      "end": 515.04,
+      "duration": 3.36,
+      "text": "yes"
+    },
+    {
+      "start": 512.96,
+      "end": 516.64,
+      "duration": 3.68,
+      "text": "if five gets attached with seven what"
+    },
+    {
+      "start": 515.04,
+      "end": 518.96,
+      "duration": 3.92,
+      "text": "will be the length"
+    },
+    {
+      "start": 516.64,
+      "end": 522.56,
+      "duration": 5.92,
+      "text": "five getting attachment length two which"
+    },
+    {
+      "start": 518.96,
+      "end": 525.52,
+      "duration": 6.56,
+      "text": "means one five and seven because length"
+    },
+    {
+      "start": 522.56,
+      "end": 527.36,
+      "duration": 4.8,
+      "text": "two means five is already having one so"
+    },
+    {
+      "start": 525.52,
+      "end": 528.24,
+      "duration": 2.72,
+      "text": "one five and seven so the length is"
+    },
+    {
+      "start": 527.36,
+      "end": 530.16,
+      "duration": 2.8,
+      "text": "three"
+    },
+    {
+      "start": 528.24,
+      "end": 532.16,
+      "duration": 3.92,
+      "text": "so the length comes out to be"
+    },
+    {
+      "start": 530.16,
+      "end": 535.52,
+      "duration": 5.36,
+      "text": "three now"
+    },
+    {
+      "start": 532.16,
+      "end": 537.52,
+      "duration": 5.36,
+      "text": "and how many does five have count one so"
+    },
+    {
+      "start": 535.52,
+      "end": 538.8,
+      "duration": 3.28,
+      "text": "one five seven goes"
+    },
+    {
+      "start": 537.52,
+      "end": 540.16,
+      "duration": 2.64,
+      "text": "next"
+    },
+    {
+      "start": 538.8,
+      "end": 541.84,
+      "duration": 3.04,
+      "text": "four"
+    },
+    {
+      "start": 540.16,
+      "end": 542.88,
+      "duration": 2.72,
+      "text": "so i can say four is again having a"
+    },
+    {
+      "start": 541.84,
+      "end": 546.08,
+      "duration": 4.24,
+      "text": "length two"
+    },
+    {
+      "start": 542.88,
+      "end": 548.24,
+      "duration": 5.36,
+      "text": "so four is four means one four that can"
+    },
+    {
+      "start": 546.08,
+      "end": 551.28,
+      "duration": 5.2,
+      "text": "attach with seven that can attach with"
+    },
+    {
+      "start": 548.24,
+      "end": 553.92,
+      "duration": 5.68,
+      "text": "seven so another length three another"
+    },
+    {
+      "start": 551.28,
+      "end": 556.8,
+      "duration": 5.52,
+      "text": "length three so this will go so i got"
+    },
+    {
+      "start": 553.92,
+      "end": 559.76,
+      "duration": 5.84,
+      "text": "one more length three prior to this"
+    },
+    {
+      "start": 556.8,
+      "end": 561.68,
+      "duration": 4.88,
+      "text": "i got one five seven now i got one four"
+    },
+    {
+      "start": 559.76,
+      "end": 563.84,
+      "duration": 4.08,
+      "text": "seven so the length so the count"
+    },
+    {
+      "start": 561.68,
+      "end": 566.4,
+      "duration": 4.72,
+      "text": "increases to two"
+    },
+    {
+      "start": 563.84,
+      "end": 569.92,
+      "duration": 6.08,
+      "text": "now i come to three can three be a part"
+    },
+    {
+      "start": 566.4,
+      "end": 572.56,
+      "duration": 6.16,
+      "text": "one three seven yes it can be a part so"
+    },
+    {
+      "start": 569.92,
+      "end": 575.44,
+      "duration": 5.52,
+      "text": "three is length two so one three seven"
+    },
+    {
+      "start": 572.56,
+      "end": 576.64,
+      "duration": 4.08,
+      "text": "is again three which means count will"
+    },
+    {
+      "start": 575.44,
+      "end": 578.08,
+      "duration": 2.64,
+      "text": "increase"
+    },
+    {
+      "start": 576.64,
+      "end": 580.96,
+      "duration": 4.32,
+      "text": "one three seven"
+    },
+    {
+      "start": 578.08,
+      "end": 580.96,
+      "duration": 2.88,
+      "text": "count will increase"
+    },
+    {
+      "start": 581.12,
+      "end": 586.48,
+      "duration": 5.36,
+      "text": "perfect next"
+    },
+    {
+      "start": 583.44,
+      "end": 587.36,
+      "duration": 3.92,
+      "text": "you have two and two be a part yes"
+    },
+    {
+      "start": 586.48,
+      "end": 588.16,
+      "duration": 1.68,
+      "text": "one"
+    },
+    {
+      "start": 587.36,
+      "end": 591.16,
+      "duration": 3.8,
+      "text": "two"
+    },
+    {
+      "start": 588.16,
+      "end": 591.16,
+      "duration": 3.0,
+      "text": "seven"
+    },
+    {
+      "start": 591.36,
+      "end": 597.84,
+      "duration": 6.48,
+      "text": "so one two means it had two so two plus"
+    },
+    {
+      "start": 594.56,
+      "end": 599.6,
+      "duration": 5.04,
+      "text": "one is three again lm3 so this increases"
+    },
+    {
+      "start": 597.84,
+      "end": 601.28,
+      "duration": 3.44,
+      "text": "to four"
+    },
+    {
+      "start": 599.6,
+      "end": 603.44,
+      "duration": 3.84,
+      "text": "so the count is increasing"
+    },
+    {
+      "start": 601.28,
+      "end": 605.6,
+      "duration": 4.32,
+      "text": "if you are getting similar dp values"
+    },
+    {
+      "start": 603.44,
+      "end": 607.6,
+      "duration": 4.16,
+      "text": "count keeps on increasing count keeps on"
+    },
+    {
+      "start": 605.6,
+      "end": 610.32,
+      "duration": 4.72,
+      "text": "increasing and what count will you"
+    },
+    {
+      "start": 607.6,
+      "end": 612.64,
+      "duration": 5.04,
+      "text": "increase you will just go on and add"
+    },
+    {
+      "start": 610.32,
+      "end": 614.88,
+      "duration": 4.56,
+      "text": "these values to this guy just keep on"
+    },
+    {
+      "start": 612.64,
+      "end": 616.72,
+      "duration": 4.08,
+      "text": "increasing the count perfect let's go on"
+    },
+    {
+      "start": 614.88,
+      "end": 618.56,
+      "duration": 3.68,
+      "text": "and see"
+    },
+    {
+      "start": 616.72,
+      "end": 620.0,
+      "duration": 3.28,
+      "text": "if i am seeing six"
+    },
+    {
+      "start": 618.56,
+      "end": 621.04,
+      "duration": 2.48,
+      "text": "i am seeing six"
+    },
+    {
+      "start": 620.0,
+      "end": 622.4,
+      "duration": 2.4,
+      "text": "okay"
+    },
+    {
+      "start": 621.04,
+      "end": 624.24,
+      "duration": 3.2,
+      "text": "so"
+    },
+    {
+      "start": 622.4,
+      "end": 626.8,
+      "duration": 4.4,
+      "text": "can i have"
+    },
+    {
+      "start": 624.24,
+      "end": 629.6,
+      "duration": 5.36,
+      "text": "now two is done can i have six seven i"
+    },
+    {
+      "start": 626.8,
+      "end": 631.84,
+      "duration": 5.04,
+      "text": "can very important point guys please"
+    },
+    {
+      "start": 629.6,
+      "end": 634.24,
+      "duration": 4.64,
+      "text": "please focus over here can i have six"
+    },
+    {
+      "start": 631.84,
+      "end": 637.04,
+      "duration": 5.2,
+      "text": "with seven i can six is saying i'm a"
+    },
+    {
+      "start": 634.24,
+      "end": 640.24,
+      "duration": 6.0,
+      "text": "flint two but there are count fives of"
+    },
+    {
+      "start": 637.04,
+      "end": 643.12,
+      "duration": 6.08,
+      "text": "length two like i can have one six seven"
+    },
+    {
+      "start": 640.24,
+      "end": 645.68,
+      "duration": 5.44,
+      "text": "i can have five six seven i can have"
+    },
+    {
+      "start": 643.12,
+      "end": 648.16,
+      "duration": 5.04,
+      "text": "four six seven i can have three six"
+    },
+    {
+      "start": 645.68,
+      "end": 651.28,
+      "duration": 5.6,
+      "text": "seven i can have two six seven so there"
+    },
+    {
+      "start": 648.16,
+      "end": 654.48,
+      "duration": 6.32,
+      "text": "are five guys that can attach with six"
+    },
+    {
+      "start": 651.28,
+      "end": 656.56,
+      "duration": 5.28,
+      "text": "and go to seven to make a length off"
+    },
+    {
+      "start": 654.48,
+      "end": 659.28,
+      "duration": 4.8,
+      "text": "i repeat to make a length of"
+    },
+    {
+      "start": 656.56,
+      "end": 662.48,
+      "duration": 5.92,
+      "text": "three to make a length of three there"
+    },
+    {
+      "start": 659.28,
+      "end": 662.48,
+      "duration": 3.2,
+      "text": "can be five guys"
+    },
+    {
+      "start": 663.04,
+      "end": 665.52,
+      "duration": 2.48,
+      "text": "so"
+    },
+    {
+      "start": 663.84,
+      "end": 667.12,
+      "duration": 3.28,
+      "text": "it can be one"
+    },
+    {
+      "start": 665.52,
+      "end": 669.36,
+      "duration": 3.84,
+      "text": "it can be five"
+    },
+    {
+      "start": 667.12,
+      "end": 672.16,
+      "duration": 5.04,
+      "text": "it can be four it can be three it can be"
+    },
+    {
+      "start": 669.36,
+      "end": 674.72,
+      "duration": 5.36,
+      "text": "two so there can be five guys"
+    },
+    {
+      "start": 672.16,
+      "end": 678.16,
+      "duration": 6.0,
+      "text": "so there are five guys that can go on to"
+    },
+    {
+      "start": 674.72,
+      "end": 680.8,
+      "duration": 6.08,
+      "text": "have a length of three so five added"
+    },
+    {
+      "start": 678.16,
+      "end": 683.2,
+      "duration": 5.04,
+      "text": "that can be now nine guys of length"
+    },
+    {
+      "start": 680.8,
+      "end": 685.52,
+      "duration": 4.72,
+      "text": "three you realize there can be nine guys"
+    },
+    {
+      "start": 683.2,
+      "end": 687.12,
+      "duration": 3.92,
+      "text": "of length three these are four and then"
+    },
+    {
+      "start": 685.52,
+      "end": 691.12,
+      "duration": 5.6,
+      "text": "there can be these five"
+    },
+    {
+      "start": 687.12,
+      "end": 692.4,
+      "duration": 5.28,
+      "text": "nine guys of length three perfect"
+    },
+    {
+      "start": 691.12,
+      "end": 694.32,
+      "duration": 3.2,
+      "text": "this becomes"
+    },
+    {
+      "start": 692.4,
+      "end": 695.84,
+      "duration": 3.44,
+      "text": "nine guys of length three"
+    },
+    {
+      "start": 694.32,
+      "end": 699.2,
+      "duration": 4.88,
+      "text": "understood guys"
+    },
+    {
+      "start": 695.84,
+      "end": 700.8,
+      "duration": 4.96,
+      "text": "very important very easy because six"
+    },
+    {
+      "start": 699.2,
+      "end": 704.24,
+      "duration": 5.04,
+      "text": "was saying i'm a length two which means"
+    },
+    {
+      "start": 700.8,
+      "end": 706.16,
+      "duration": 5.36,
+      "text": "one six five six four six three six two"
+    },
+    {
+      "start": 704.24,
+      "end": 708.4,
+      "duration": 4.16,
+      "text": "six five guys were there i have six"
+    },
+    {
+      "start": 706.16,
+      "end": 710.0,
+      "duration": 3.84,
+      "text": "attaches with seven those five guys will"
+    },
+    {
+      "start": 708.4,
+      "end": 712.16,
+      "duration": 3.76,
+      "text": "attach with seven as well so thereby"
+    },
+    {
+      "start": 710.0,
+      "end": 714.84,
+      "duration": 4.84,
+      "text": "this increases to nine perfect"
+    },
+    {
+      "start": 712.16,
+      "end": 718.32,
+      "duration": 6.16,
+      "text": "let's go to ten"
+    },
+    {
+      "start": 714.84,
+      "end": 720.08,
+      "duration": 5.24,
+      "text": "ten to whom 10 can be a part of let's"
+    },
+    {
+      "start": 718.32,
+      "end": 722.72,
+      "duration": 4.4,
+      "text": "let's ask"
+    },
+    {
+      "start": 720.08,
+      "end": 726.24,
+      "duration": 6.16,
+      "text": "can the 10 initial is 1 1 definitely"
+    },
+    {
+      "start": 722.72,
+      "end": 726.24,
+      "duration": 3.52,
+      "text": "before that let's erase this"
+    },
+    {
+      "start": 726.64,
+      "end": 731.6,
+      "duration": 4.96,
+      "text": "10 initially is 1 1"
+    },
+    {
+      "start": 728.8,
+      "end": 733.04,
+      "duration": 4.24,
+      "text": "can this be a one be a part of ten yes"
+    },
+    {
+      "start": 731.6,
+      "end": 735.52,
+      "duration": 3.92,
+      "text": "so length will be two and the count"
+    },
+    {
+      "start": 733.04,
+      "end": 736.96,
+      "duration": 3.92,
+      "text": "still stays can this five be a part of"
+    },
+    {
+      "start": 735.52,
+      "end": 740.24,
+      "duration": 4.72,
+      "text": "ten yes"
+    },
+    {
+      "start": 736.96,
+      "end": 742.16,
+      "duration": 5.2,
+      "text": "this is two so this will be three"
+    },
+    {
+      "start": 740.24,
+      "end": 743.12,
+      "duration": 2.88,
+      "text": "and the count still stays as one because"
+    },
+    {
+      "start": 742.16,
+      "end": 746.0,
+      "duration": 3.84,
+      "text": "it's one"
+    },
+    {
+      "start": 743.12,
+      "end": 746.88,
+      "duration": 3.76,
+      "text": "can this 4 be a part of 10 yes"
+    },
+    {
+      "start": 746.0,
+      "end": 749.28,
+      "duration": 3.28,
+      "text": "so"
+    },
+    {
+      "start": 746.88,
+      "end": 750.16,
+      "duration": 3.28,
+      "text": "2 3 so this increases the count will"
+    },
+    {
+      "start": 749.28,
+      "end": 752.0,
+      "duration": 2.72,
+      "text": "increase"
+    },
+    {
+      "start": 750.16,
+      "end": 754.56,
+      "duration": 4.4,
+      "text": "similarly you can go on increasing go on"
+    },
+    {
+      "start": 752.0,
+      "end": 758.08,
+      "duration": 6.08,
+      "text": "increasing and you will eventually get"
+    },
+    {
+      "start": 754.56,
+      "end": 760.0,
+      "duration": 5.44,
+      "text": "your answer so the basic stuff is very"
+    },
+    {
+      "start": 758.08,
+      "end": 762.4,
+      "duration": 4.32,
+      "text": "straightforward now if i go back to the"
+    },
+    {
+      "start": 760.0,
+      "end": 764.48,
+      "duration": 4.48,
+      "text": "code this was the code if you remember"
+    },
+    {
+      "start": 762.4,
+      "end": 767.2,
+      "duration": 4.8,
+      "text": "this was the code right so"
+    },
+    {
+      "start": 764.48,
+      "end": 768.32,
+      "duration": 3.84,
+      "text": "i'll try to say what are we specifically"
+    },
+    {
+      "start": 767.2,
+      "end": 770.0,
+      "duration": 2.8,
+      "text": "doing"
+    },
+    {
+      "start": 768.32,
+      "end": 771.12,
+      "duration": 2.8,
+      "text": "what am i doing"
+    },
+    {
+      "start": 770.0,
+      "end": 773.12,
+      "duration": 3.12,
+      "text": "ask"
+    },
+    {
+      "start": 771.12,
+      "end": 775.2,
+      "duration": 4.08,
+      "text": "the question like let's ask the question"
+    },
+    {
+      "start": 773.12,
+      "end": 775.92,
+      "duration": 2.8,
+      "text": "what what am i doing as of now i was"
+    },
+    {
+      "start": 775.2,
+      "end": 778.48,
+      "duration": 3.28,
+      "text": "just"
+    },
+    {
+      "start": 775.92,
+      "end": 780.32,
+      "duration": 4.4,
+      "text": "updating the dp right so whenever there"
+    },
+    {
+      "start": 778.48,
+      "end": 781.44,
+      "duration": 2.96,
+      "text": "is an increase whenever there is an"
+    },
+    {
+      "start": 780.32,
+      "end": 783.68,
+      "duration": 3.36,
+      "text": "increase"
+    },
+    {
+      "start": 781.44,
+      "end": 786.4,
+      "duration": 4.96,
+      "text": "i will say"
+    },
+    {
+      "start": 783.68,
+      "end": 789.2,
+      "duration": 5.52,
+      "text": "i will take the count for i"
+    },
+    {
+      "start": 786.4,
+      "end": 791.12,
+      "duration": 4.72,
+      "text": "from count of j because"
+    },
+    {
+      "start": 789.2,
+      "end": 792.96,
+      "duration": 3.76,
+      "text": "in the number of ways"
+    },
+    {
+      "start": 791.12,
+      "end": 794.72,
+      "duration": 3.6,
+      "text": "i can make j"
+    },
+    {
+      "start": 792.96,
+      "end": 797.2,
+      "duration": 4.24,
+      "text": "is the same ways in which i can make"
+    },
+    {
+      "start": 794.72,
+      "end": 799.28,
+      "duration": 4.56,
+      "text": "count i if this is greater this is"
+    },
+    {
+      "start": 797.2,
+      "end": 801.76,
+      "duration": 4.56,
+      "text": "greater so the number of ways in which i"
+    },
+    {
+      "start": 799.28,
+      "end": 805.04,
+      "duration": 5.76,
+      "text": "can make j is the number of ways because"
+    },
+    {
+      "start": 801.76,
+      "end": 807.44,
+      "duration": 5.68,
+      "text": "i just add i to it that's it but i'll"
+    },
+    {
+      "start": 805.04,
+      "end": 810.64,
+      "duration": 5.6,
+      "text": "just add one more condition to here"
+    },
+    {
+      "start": 807.44,
+      "end": 812.8,
+      "duration": 5.36,
+      "text": "else if very important else if"
+    },
+    {
+      "start": 810.64,
+      "end": 815.28,
+      "duration": 4.64,
+      "text": "if array of i"
+    },
+    {
+      "start": 812.8,
+      "end": 816.8,
+      "duration": 4.0,
+      "text": "greater than array of j"
+    },
+    {
+      "start": 815.28,
+      "end": 819.44,
+      "duration": 4.16,
+      "text": "and and"
+    },
+    {
+      "start": 816.8,
+      "end": 821.84,
+      "duration": 5.04,
+      "text": "dp of j plus 1 is equal to equal to d"
+    },
+    {
+      "start": 819.44,
+      "end": 822.64,
+      "duration": 3.2,
+      "text": "like what if it's equal then i'll say"
+    },
+    {
+      "start": 821.84,
+      "end": 824.88,
+      "duration": 3.04,
+      "text": "okay"
+    },
+    {
+      "start": 822.64,
+      "end": 827.76,
+      "duration": 5.12,
+      "text": "this will tp will still have the same"
+    },
+    {
+      "start": 824.88,
+      "end": 830.64,
+      "duration": 5.76,
+      "text": "value but it will take how many ways can"
+    },
+    {
+      "start": 827.76,
+      "end": 832.32,
+      "duration": 4.56,
+      "text": "count jb formed just take it"
+    },
+    {
+      "start": 830.64,
+      "end": 834.48,
+      "duration": 3.84,
+      "text": "just take it if you carefully see this"
+    },
+    {
+      "start": 832.32,
+      "end": 836.56,
+      "duration": 4.24,
+      "text": "was the case there's five ways you ended"
+    },
+    {
+      "start": 834.48,
+      "end": 838.8,
+      "duration": 4.32,
+      "text": "up adding it over here so in how many"
+    },
+    {
+      "start": 836.56,
+      "end": 840.48,
+      "duration": 3.92,
+      "text": "ways can it be you just take it and you"
+    },
+    {
+      "start": 838.8,
+      "end": 842.64,
+      "duration": 3.84,
+      "text": "add it over here"
+    },
+    {
+      "start": 840.48,
+      "end": 844.64,
+      "duration": 4.16,
+      "text": "and at the end of the day at the end of"
+    },
+    {
+      "start": 842.64,
+      "end": 847.36,
+      "duration": 4.72,
+      "text": "the day you can just figure out the"
+    },
+    {
+      "start": 844.64,
+      "end": 849.84,
+      "duration": 5.2,
+      "text": "maximal value of lis"
+    },
+    {
+      "start": 847.36,
+      "end": 853.52,
+      "duration": 6.16,
+      "text": "and you can just add up the count that"
+    },
+    {
+      "start": 849.84,
+      "end": 855.44,
+      "duration": 5.6,
+      "text": "will be indeed your answer so you have"
+    },
+    {
+      "start": 853.52,
+      "end": 857.04,
+      "duration": 3.52,
+      "text": "pretty much got the idea so what i'll do"
+    },
+    {
+      "start": 855.44,
+      "end": 858.56,
+      "duration": 3.12,
+      "text": "is i'll just take this smaller example"
+    },
+    {
+      "start": 857.04,
+      "end": 860.56,
+      "duration": 3.52,
+      "text": "uh to quickly"
+    },
+    {
+      "start": 858.56,
+      "end": 862.88,
+      "duration": 4.32,
+      "text": "uh show you how will you get the answer"
+    },
+    {
+      "start": 860.56,
+      "end": 866.64,
+      "duration": 6.08,
+      "text": "one three it was five"
+    },
+    {
+      "start": 862.88,
+      "end": 868.88,
+      "duration": 6.0,
+      "text": "four seven and we knew that one three"
+    },
+    {
+      "start": 866.64,
+      "end": 871.76,
+      "duration": 5.12,
+      "text": "four seven can be an answer"
+    },
+    {
+      "start": 868.88,
+      "end": 873.52,
+      "duration": 4.64,
+      "text": "as well as one three five and seven cans"
+    },
+    {
+      "start": 871.76,
+      "end": 875.28,
+      "duration": 3.52,
+      "text": "can be an answer as well so we"
+    },
+    {
+      "start": 873.52,
+      "end": 878.64,
+      "duration": 5.12,
+      "text": "definitely knew that so what i'll do is"
+    },
+    {
+      "start": 875.28,
+      "end": 878.64,
+      "duration": 3.36,
+      "text": "i will just keep the dp"
+    },
+    {
+      "start": 879.2,
+      "end": 883.6,
+      "duration": 4.4,
+      "text": "and i'll just keep the count so"
+    },
+    {
+      "start": 880.8,
+      "end": 884.48,
+      "duration": 3.68,
+      "text": "initially this is one and one now this"
+    },
+    {
+      "start": 883.6,
+      "end": 885.76,
+      "duration": 2.16,
+      "text": "uh"
+    },
+    {
+      "start": 884.48,
+      "end": 888.08,
+      "duration": 3.6,
+      "text": "everything will be initially filled with"
+    },
+    {
+      "start": 885.76,
+      "end": 889.84,
+      "duration": 4.08,
+      "text": "one and one perfect"
+    },
+    {
+      "start": 888.08,
+      "end": 892.72,
+      "duration": 4.64,
+      "text": "now let's uh come back"
+    },
+    {
+      "start": 889.84,
+      "end": 895.76,
+      "duration": 5.92,
+      "text": "so we are here that's done next we'll go"
+    },
+    {
+      "start": 892.72,
+      "end": 898.08,
+      "duration": 5.36,
+      "text": "here so three three"
+    },
+    {
+      "start": 895.76,
+      "end": 900.16,
+      "duration": 4.4,
+      "text": "we'll see this one is a potential and"
+    },
+    {
+      "start": 898.08,
+      "end": 902.32,
+      "duration": 4.24,
+      "text": "it's having a one so i'll just increase"
+    },
+    {
+      "start": 900.16,
+      "end": 904.48,
+      "duration": 4.32,
+      "text": "this to two and whatever is here i'll"
+    },
+    {
+      "start": 902.32,
+      "end": 907.28,
+      "duration": 4.96,
+      "text": "just copy paste so this is one"
+    },
+    {
+      "start": 904.48,
+      "end": 910.24,
+      "duration": 5.76,
+      "text": "perfect now i'll go to five when i go to"
+    },
+    {
+      "start": 907.28,
+      "end": 912.16,
+      "duration": 4.88,
+      "text": "five i say hey list hey listen"
+    },
+    {
+      "start": 910.24,
+      "end": 913.76,
+      "duration": 3.52,
+      "text": "this five"
+    },
+    {
+      "start": 912.16,
+      "end": 916.72,
+      "duration": 4.56,
+      "text": "is having one"
+    },
+    {
+      "start": 913.76,
+      "end": 921.28,
+      "duration": 7.52,
+      "text": "can this one be a part of this five yes"
+    },
+    {
+      "start": 916.72,
+      "end": 924.08,
+      "duration": 7.36,
+      "text": "so this one will go up and make it two"
+    },
+    {
+      "start": 921.28,
+      "end": 925.36,
+      "duration": 4.08,
+      "text": "and this one will be replicated"
+    },
+    {
+      "start": 924.08,
+      "end": 926.88,
+      "duration": 2.8,
+      "text": "perfect"
+    },
+    {
+      "start": 925.36,
+      "end": 928.16,
+      "duration": 2.8,
+      "text": "now"
+    },
+    {
+      "start": 926.88,
+      "end": 931.84,
+      "duration": 4.96,
+      "text": "this 3"
+    },
+    {
+      "start": 928.16,
+      "end": 931.84,
+      "duration": 3.68,
+      "text": "can it be a part of 5 yes"
+    },
+    {
+      "start": 932.24,
+      "end": 936.88,
+      "duration": 4.64,
+      "text": "so the length will be 2 plus 1 equal to"
+    },
+    {
+      "start": 935.04,
+      "end": 938.64,
+      "duration": 3.6,
+      "text": "3"
+    },
+    {
+      "start": 936.88,
+      "end": 940.4,
+      "duration": 3.52,
+      "text": "and this one will be replicated because"
+    },
+    {
+      "start": 938.64,
+      "end": 941.92,
+      "duration": 3.28,
+      "text": "there is only one three five"
+    },
+    {
+      "start": 940.4,
+      "end": 943.44,
+      "duration": 3.04,
+      "text": "next"
+    },
+    {
+      "start": 941.92,
+      "end": 944.4,
+      "duration": 2.48,
+      "text": "you go here"
+    },
+    {
+      "start": 943.44,
+      "end": 946.64,
+      "duration": 3.2,
+      "text": "that's"
+    },
+    {
+      "start": 944.4,
+      "end": 946.64,
+      "duration": 2.24,
+      "text": "four"
+    },
+    {
+      "start": 947.12,
+      "end": 952.96,
+      "duration": 5.84,
+      "text": "can this one be a part of four yes so"
+    },
+    {
+      "start": 949.68,
+      "end": 955.04,
+      "duration": 5.36,
+      "text": "this one replicates it to two"
+    },
+    {
+      "start": 952.96,
+      "end": 957.36,
+      "duration": 4.4,
+      "text": "and this will be copied"
+    },
+    {
+      "start": 955.04,
+      "end": 958.32,
+      "duration": 3.28,
+      "text": "can those three be a part of four"
+    },
+    {
+      "start": 957.36,
+      "end": 960.88,
+      "duration": 3.52,
+      "text": "yes"
+    },
+    {
+      "start": 958.32,
+      "end": 962.32,
+      "duration": 4.0,
+      "text": "so i'll say okay if this is two this can"
+    },
+    {
+      "start": 960.88,
+      "end": 963.6,
+      "duration": 2.72,
+      "text": "be three"
+    },
+    {
+      "start": 962.32,
+      "end": 966.0,
+      "duration": 3.68,
+      "text": "and this will be"
+    },
+    {
+      "start": 963.6,
+      "end": 968.16,
+      "duration": 4.56,
+      "text": "this will be replicated"
+    },
+    {
+      "start": 966.0,
+      "end": 969.84,
+      "duration": 3.84,
+      "text": "can those five be a part of four no"
+    },
+    {
+      "start": 968.16,
+      "end": 970.96,
+      "duration": 2.8,
+      "text": "because longest increasing does not"
+    },
+    {
+      "start": 969.84,
+      "end": 972.08,
+      "duration": 2.24,
+      "text": "allows you"
+    },
+    {
+      "start": 970.96,
+      "end": 973.04,
+      "duration": 2.08,
+      "text": "next"
+    },
+    {
+      "start": 972.08,
+      "end": 976.16,
+      "duration": 4.08,
+      "text": "go to"
+    },
+    {
+      "start": 973.04,
+      "end": 978.08,
+      "duration": 5.04,
+      "text": "seven next go to seven"
+    },
+    {
+      "start": 976.16,
+      "end": 980.56,
+      "duration": 4.4,
+      "text": "the moment you go to seven"
+    },
+    {
+      "start": 978.08,
+      "end": 982.72,
+      "duration": 4.64,
+      "text": "you have one so you see one can you be a"
+    },
+    {
+      "start": 980.56,
+      "end": 985.28,
+      "duration": 4.72,
+      "text": "part of sir he says yes"
+    },
+    {
+      "start": 982.72,
+      "end": 986.96,
+      "duration": 4.24,
+      "text": "so i'll make it 2. there's only only one"
+    },
+    {
+      "start": 985.28,
+      "end": 989.36,
+      "duration": 4.08,
+      "text": "7."
+    },
+    {
+      "start": 986.96,
+      "end": 993.28,
+      "duration": 6.32,
+      "text": "can this 3 be a part of 7 i'll say yes"
+    },
+    {
+      "start": 989.36,
+      "end": 993.28,
+      "duration": 3.92,
+      "text": "so this 2 will go and make it 3."
+    },
+    {
+      "start": 994.0,
+      "end": 997.28,
+      "duration": 3.28,
+      "text": "so this is as of now 3"
+    },
+    {
+      "start": 997.44,
+      "end": 1002.32,
+      "duration": 4.88,
+      "text": "and the 1 is copied"
+    },
+    {
+      "start": 999.28,
+      "end": 1005.68,
+      "duration": 6.4,
+      "text": "on this 5 is when you understand this is"
+    },
+    {
+      "start": 1002.32,
+      "end": 1008.88,
+      "duration": 6.56,
+      "text": "a 3 so 1 3 5 and 7 can it be yes so this"
+    },
+    {
+      "start": 1005.68,
+      "end": 1010.56,
+      "duration": 4.88,
+      "text": "3 will go and make it 4."
+    },
+    {
+      "start": 1008.88,
+      "end": 1013.28,
+      "duration": 4.4,
+      "text": "so i'll make it 4"
+    },
+    {
+      "start": 1010.56,
+      "end": 1014.48,
+      "duration": 3.92,
+      "text": "and i'll still copy paste this one"
+    },
+    {
+      "start": 1013.28,
+      "end": 1017.76,
+      "duration": 4.48,
+      "text": "now"
+    },
+    {
+      "start": 1014.48,
+      "end": 1020.16,
+      "duration": 5.68,
+      "text": "can this 4 be a part of 7 yes but this"
+    },
+    {
+      "start": 1017.76,
+      "end": 1022.88,
+      "duration": 5.12,
+      "text": "is 3 and if i add it it will still be 4."
+    },
+    {
+      "start": 1020.16,
+      "end": 1025.04,
+      "duration": 4.88,
+      "text": "so you got another 4 so take this one"
+    },
+    {
+      "start": 1022.88,
+      "end": 1026.32,
+      "duration": 3.44,
+      "text": "and you're saying another so one plus"
+    },
+    {
+      "start": 1025.04,
+      "end": 1028.16,
+      "duration": 3.12,
+      "text": "one is two"
+    },
+    {
+      "start": 1026.32,
+      "end": 1030.24,
+      "duration": 3.92,
+      "text": "so you make it two"
+    },
+    {
+      "start": 1028.16,
+      "end": 1033.44,
+      "duration": 5.28,
+      "text": "at the end of the day where is your ls"
+    },
+    {
+      "start": 1030.24,
+      "end": 1035.6,
+      "duration": 5.36,
+      "text": "located the alas is located here"
+    },
+    {
+      "start": 1033.44,
+      "end": 1037.12,
+      "duration": 3.68,
+      "text": "is there any other four there can be any"
+    },
+    {
+      "start": 1035.6,
+      "end": 1039.12,
+      "duration": 3.52,
+      "text": "other four like assume there was a four"
+    },
+    {
+      "start": 1037.12,
+      "end": 1041.68,
+      "duration": 4.56,
+      "text": "here assume there was a four here then"
+    },
+    {
+      "start": 1039.12,
+      "end": 1043.92,
+      "duration": 4.8,
+      "text": "you would have taken this plus this"
+    },
+    {
+      "start": 1041.68,
+      "end": 1045.76,
+      "duration": 4.08,
+      "text": "to say there are three subsequences but"
+    },
+    {
+      "start": 1043.92,
+      "end": 1048.72,
+      "duration": 4.8,
+      "text": "since there is only one four and it says"
+    },
+    {
+      "start": 1045.76,
+      "end": 1051.68,
+      "duration": 5.92,
+      "text": "two so you say two subsequences i hope i"
+    },
+    {
+      "start": 1048.72,
+      "end": 1054.24,
+      "duration": 5.52,
+      "text": "was able to make you understand now it's"
+    },
+    {
+      "start": 1051.68,
+      "end": 1055.04,
+      "duration": 3.36,
+      "text": "time that i go back and try to code this"
+    },
+    {
+      "start": 1054.24,
+      "end": 1056.96,
+      "duration": 2.72,
+      "text": "up"
+    },
+    {
+      "start": 1055.04,
+      "end": 1059.52,
+      "duration": 4.48,
+      "text": "so it's time to check out the code so"
+    },
+    {
+      "start": 1056.96,
+      "end": 1061.28,
+      "duration": 4.32,
+      "text": "what i'll do is i'll just go across and"
+    },
+    {
+      "start": 1059.52,
+      "end": 1063.76,
+      "duration": 4.24,
+      "text": "uh copy paste"
+    },
+    {
+      "start": 1061.28,
+      "end": 1065.68,
+      "duration": 4.4,
+      "text": "the ls code because i'm not interested"
+    },
+    {
+      "start": 1063.76,
+      "end": 1068.8,
+      "duration": 5.04,
+      "text": "to write so much"
+    },
+    {
+      "start": 1065.68,
+      "end": 1071.44,
+      "duration": 5.76,
+      "text": "let's go base the lis code and i'll also"
+    },
+    {
+      "start": 1068.8,
+      "end": 1072.8,
+      "duration": 4.0,
+      "text": "copy paste the hash include"
+    },
+    {
+      "start": 1071.44,
+      "end": 1075.36,
+      "duration": 3.92,
+      "text": "okay perfect"
+    },
+    {
+      "start": 1072.8,
+      "end": 1078.0,
+      "duration": 5.2,
+      "text": "so what do i require i require a count"
+    },
+    {
+      "start": 1075.36,
+      "end": 1080.0,
+      "duration": 4.64,
+      "text": "so you can keep a count as n comma one"
+    },
+    {
+      "start": 1078.0,
+      "end": 1082.32,
+      "duration": 4.32,
+      "text": "that is something which we will do okay"
+    },
+    {
+      "start": 1080.0,
+      "end": 1084.48,
+      "duration": 4.48,
+      "text": "so we can ignore this maxi we can also"
+    },
+    {
+      "start": 1082.32,
+      "end": 1087.04,
+      "duration": 4.72,
+      "text": "ignore this maxi okay perfect uh now"
+    },
+    {
+      "start": 1084.48,
+      "end": 1089.36,
+      "duration": 4.88,
+      "text": "what have i told you if uh this is the"
+    },
+    {
+      "start": 1087.04,
+      "end": 1090.48,
+      "duration": 3.44,
+      "text": "case it's uh like it is definitely"
+    },
+    {
+      "start": 1089.36,
+      "end": 1093.28,
+      "duration": 3.92,
+      "text": "perfect"
+    },
+    {
+      "start": 1090.48,
+      "end": 1096.08,
+      "duration": 5.6,
+      "text": "and i will say i'll just uh inherit the"
+    },
+    {
+      "start": 1093.28,
+      "end": 1097.6,
+      "duration": 4.32,
+      "text": "count which the new guy gives you but if"
+    },
+    {
+      "start": 1096.08,
+      "end": 1100.56,
+      "duration": 4.48,
+      "text": "by chance"
+    },
+    {
+      "start": 1097.6,
+      "end": 1102.32,
+      "duration": 4.72,
+      "text": "the array of previous is smaller than"
+    },
+    {
+      "start": 1100.56,
+      "end": 1103.52,
+      "duration": 2.96,
+      "text": "array of i okay"
+    },
+    {
+      "start": 1102.32,
+      "end": 1106.32,
+      "duration": 4.0,
+      "text": "and"
+    },
+    {
+      "start": 1103.52,
+      "end": 1107.84,
+      "duration": 4.32,
+      "text": "the dp comes out to be equal that is"
+    },
+    {
+      "start": 1106.32,
+      "end": 1110.0,
+      "duration": 3.68,
+      "text": "very very important that the dp has to"
+    },
+    {
+      "start": 1107.84,
+      "end": 1112.48,
+      "duration": 4.64,
+      "text": "come out to be equal like one plus dp of"
+    },
+    {
+      "start": 1110.0,
+      "end": 1114.56,
+      "duration": 4.56,
+      "text": "previous like you got another guy who"
+    },
+    {
+      "start": 1112.48,
+      "end": 1116.24,
+      "duration": 3.76,
+      "text": "still gives you the same value"
+    },
+    {
+      "start": 1114.56,
+      "end": 1118.56,
+      "duration": 4.0,
+      "text": "you got another guy who sees you that"
+    },
+    {
+      "start": 1116.24,
+      "end": 1119.76,
+      "duration": 3.52,
+      "text": "hey listen i'm also the same subsequence"
+    },
+    {
+      "start": 1118.56,
+      "end": 1121.52,
+      "duration": 2.96,
+      "text": "so you say okay fine you're the same"
+    },
+    {
+      "start": 1119.76,
+      "end": 1123.28,
+      "duration": 3.52,
+      "text": "subsequence no there's no need to update"
+    },
+    {
+      "start": 1121.52,
+      "end": 1125.6,
+      "duration": 4.08,
+      "text": "the db so what i'll do is i'll just take"
+    },
+    {
+      "start": 1123.28,
+      "end": 1129.12,
+      "duration": 5.84,
+      "text": "you i'll just take you i'll just take"
+    },
+    {
+      "start": 1125.6,
+      "end": 1130.72,
+      "duration": 5.12,
+      "text": "you into myself this is this says is new"
+    },
+    {
+      "start": 1129.12,
+      "end": 1133.12,
+      "duration": 4.0,
+      "text": "so just inherit"
+    },
+    {
+      "start": 1130.72,
+      "end": 1136.0,
+      "duration": 5.28,
+      "text": "this means inherit don't add because"
+    },
+    {
+      "start": 1133.12,
+      "end": 1138.0,
+      "duration": 4.88,
+      "text": "it's new inherit but this this means"
+    },
+    {
+      "start": 1136.0,
+      "end": 1140.08,
+      "duration": 4.08,
+      "text": "okay i got someone with the same length"
+    },
+    {
+      "start": 1138.0,
+      "end": 1142.0,
+      "duration": 4.0,
+      "text": "so increase the count so increase the"
+    },
+    {
+      "start": 1140.08,
+      "end": 1144.0,
+      "duration": 3.92,
+      "text": "count that's how you increase once"
+    },
+    {
+      "start": 1142.0,
+      "end": 1148.0,
+      "duration": 6.0,
+      "text": "you've done with this probably you can"
+    },
+    {
+      "start": 1144.0,
+      "end": 1150.32,
+      "duration": 6.32,
+      "text": "figure out the lis length so over here"
+    },
+    {
+      "start": 1148.0,
+      "end": 1152.16,
+      "duration": 4.16,
+      "text": "you can say maxi equal to max of maxi"
+    },
+    {
+      "start": 1150.32,
+      "end": 1154.16,
+      "duration": 3.84,
+      "text": "comma dp of i figure out the alliance"
+    },
+    {
+      "start": 1152.16,
+      "end": 1156.16,
+      "duration": 4.0,
+      "text": "length once you have figured out the"
+    },
+    {
+      "start": 1154.16,
+      "end": 1159.6,
+      "duration": 5.44,
+      "text": "alliance length very important so just"
+    },
+    {
+      "start": 1156.16,
+      "end": 1160.8,
+      "duration": 4.64,
+      "text": "go across the the count array that will"
+    },
+    {
+      "start": 1159.6,
+      "end": 1162.96,
+      "duration": 3.36,
+      "text": "be answer"
+    },
+    {
+      "start": 1160.8,
+      "end": 1166.96,
+      "duration": 6.16,
+      "text": "like whoever is giving you the same"
+    },
+    {
+      "start": 1162.96,
+      "end": 1169.92,
+      "duration": 6.96,
+      "text": "length of alias whoever like if dp of i"
+    },
+    {
+      "start": 1166.96,
+      "end": 1171.36,
+      "duration": 4.4,
+      "text": "is equal equal to max c you say count or"
+    },
+    {
+      "start": 1169.92,
+      "end": 1172.4,
+      "duration": 2.48,
+      "text": "this will be"
+    },
+    {
+      "start": 1171.36,
+      "end": 1174.16,
+      "duration": 2.8,
+      "text": "probably"
+    },
+    {
+      "start": 1172.4,
+      "end": 1176.48,
+      "duration": 4.08,
+      "text": "numbers"
+    },
+    {
+      "start": 1174.16,
+      "end": 1180.0,
+      "duration": 5.84,
+      "text": "numbers something like this so you say"
+    },
+    {
+      "start": 1176.48,
+      "end": 1182.64,
+      "duration": 6.16,
+      "text": "numbers of allies will be count of ice"
+    },
+    {
+      "start": 1180.0,
+      "end": 1184.64,
+      "duration": 4.64,
+      "text": "so all the alliances will be added and"
+    },
+    {
+      "start": 1182.64,
+      "end": 1187.28,
+      "duration": 4.64,
+      "text": "once you have added all the alliances"
+    },
+    {
+      "start": 1184.64,
+      "end": 1189.36,
+      "duration": 4.72,
+      "text": "you can just return the nums and that"
+    },
+    {
+      "start": 1187.28,
+      "end": 1191.68,
+      "duration": 4.4,
+      "text": "will be your answer so that's the"
+    },
+    {
+      "start": 1189.36,
+      "end": 1194.4,
+      "duration": 5.04,
+      "text": "shuttle change in the ls code if you do"
+    },
+    {
+      "start": 1191.68,
+      "end": 1197.12,
+      "duration": 5.44,
+      "text": "you should be able to solve this problem"
+    },
+    {
+      "start": 1194.4,
+      "end": 1200.08,
+      "duration": 5.68,
+      "text": "okay so n is definitely not declared so"
+    },
+    {
+      "start": 1197.12,
+      "end": 1200.08,
+      "duration": 2.96,
+      "text": "let's declare the end"
+    },
+    {
+      "start": 1200.16,
+      "end": 1204.88,
+      "duration": 4.72,
+      "text": "i should be fine apart from this"
+    },
+    {
+      "start": 1203.36,
+      "end": 1208.64,
+      "duration": 5.28,
+      "text": "uh there will be previous over here"
+    },
+    {
+      "start": 1204.88,
+      "end": 1211.2,
+      "duration": 6.32,
+      "text": "again my bad let's keep it previous"
+    },
+    {
+      "start": 1208.64,
+      "end": 1213.12,
+      "duration": 4.48,
+      "text": "perfect now should be fine"
+    },
+    {
+      "start": 1211.2,
+      "end": 1216.08,
+      "duration": 4.88,
+      "text": "so yeah folks uh with this we will be"
+    },
+    {
+      "start": 1213.12,
+      "end": 1218.24,
+      "duration": 5.12,
+      "text": "wrapping up the lis pattern and yeah in"
+    },
+    {
+      "start": 1216.08,
+      "end": 1219.68,
+      "duration": 3.6,
+      "text": "the comment section as usual tell me now"
+    },
+    {
+      "start": 1218.24,
+      "end": 1221.52,
+      "duration": 3.28,
+      "text": "if you can solve all the problems"
+    },
+    {
+      "start": 1219.68,
+      "end": 1224.08,
+      "duration": 4.4,
+      "text": "related to lis pattern and if you have"
+    },
+    {
+      "start": 1221.52,
+      "end": 1225.44,
+      "duration": 3.92,
+      "text": "understood it or not because uh it it"
+    },
+    {
+      "start": 1224.08,
+      "end": 1227.36,
+      "duration": 3.28,
+      "text": "does give me a very good feeling when"
+    },
+    {
+      "start": 1225.44,
+      "end": 1229.6,
+      "duration": 4.16,
+      "text": "you tell me that okay this pattern has"
+    },
+    {
+      "start": 1227.36,
+      "end": 1231.12,
+      "duration": 3.76,
+      "text": "been completed now i'm very comfortable"
+    },
+    {
+      "start": 1229.6,
+      "end": 1232.72,
+      "duration": 3.12,
+      "text": "on this pattern so just make sure just"
+    },
+    {
+      "start": 1231.12,
+      "end": 1234.72,
+      "duration": 3.6,
+      "text": "take out your five seconds ten seconds"
+    },
+    {
+      "start": 1232.72,
+      "end": 1236.48,
+      "duration": 3.76,
+      "text": "to drop out a comment and like this"
+    },
+    {
+      "start": 1234.72,
+      "end": 1238.48,
+      "duration": 3.76,
+      "text": "video and if you're new to this channel"
+    },
+    {
+      "start": 1236.48,
+      "end": 1239.92,
+      "duration": 3.44,
+      "text": "please do consider subscribing to us so"
+    },
+    {
+      "start": 1238.48,
+      "end": 1241.76,
+      "duration": 3.28,
+      "text": "yeah with this i'll be wrapping up this"
+    },
+    {
+      "start": 1239.92,
+      "end": 1243.92,
+      "duration": 4.0,
+      "text": "video and the next video we will be"
+    },
+    {
+      "start": 1241.76,
+      "end": 1247.68,
+      "duration": 5.92,
+      "text": "starting off with the mcm pattern till"
+    },
+    {
+      "start": 1243.92,
+      "end": 1247.68,
+      "duration": 3.76,
+      "text": "then bye bye take care good night"
+    }
+  ]
+}

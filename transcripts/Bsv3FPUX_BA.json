@@ -1,0 +1,2242 @@
+{
+  "video_id": "Bsv3FPUX_BA",
+  "title": "BS-10. Finding Sqrt of a number using Binary Search",
+  "duration_sec": 1031,
+  "segments": [
+    {
+      "start": 3.12,
+      "end": 5.24,
+      "text": "Hey everyone, welcome back to the"
+    },
+    {
+      "start": 4.2,
+      "end": 6.88,
+      "text": "channel. I hope you guys are doing"
+    },
+    {
+      "start": 5.24,
+      "end": 8.28,
+      "text": "extremely well. So, we will be"
+    },
+    {
+      "start": 6.88,
+      "end": 9.44,
+      "text": "continuing with our binary search"
+    },
+    {
+      "start": 8.28,
+      "end": 12.24,
+      "text": "playlist, which is the part of the"
+    },
+    {
+      "start": 9.44,
+      "end": 13.92,
+      "text": "Strivers A-Z DSA course. In case you"
+    },
+    {
+      "start": 12.24,
+      "end": 15.36,
+      "text": "haven't checked it out yet, there's a"
+    },
+    {
+      "start": 13.92,
+      "end": 17.12,
+      "text": "link in the description. Please make"
+    },
+    {
+      "start": 15.36,
+      "end": 18.8,
+      "text": "sure you check it out. So, we will be"
+    },
+    {
+      "start": 17.12,
+      "end": 21.64,
+      "text": "starting off with the pattern binary"
+    },
+    {
+      "start": 18.8,
+      "end": 23.68,
+      "text": "search on answers. And the first problem"
+    },
+    {
+      "start": 21.64,
+      "end": 26.16,
+      "text": "that we will be solving is find the"
+    },
+    {
+      "start": 23.68,
+      "end": 27.4,
+      "text": "square root of an integer."
+    },
+    {
+      "start": 26.16,
+      "end": 29.56,
+      "text": "And what does the problem state? The"
+    },
+    {
+      "start": 27.4,
+      "end": 31.68,
+      "text": "problem states that you're given an"
+    },
+    {
+      "start": 29.56,
+      "end": 34.32,
+      "text": "integer. So, imagine I'm giving you the"
+    },
+    {
+      "start": 31.68,
+      "end": 37.8,
+      "text": "integer as 25. So, the moment you say a"
+    },
+    {
+      "start": 34.32,
+      "end": 38.92,
+      "text": "square root of 25, the value is five. If"
+    },
+    {
+      "start": 37.8,
+      "end": 39.84,
+      "text": "I tell you"
+    },
+    {
+      "start": 38.92,
+      "end": 43.16,
+      "text": "uh"
+    },
+    {
+      "start": 39.84,
+      "end": 46.92,
+      "text": "n is 30, the square root of 30 is"
+    },
+    {
+      "start": 43.16,
+      "end": 49.32,
+      "text": "5.something. So, you will have to return"
+    },
+    {
+      "start": 46.92,
+      "end": 51.92,
+      "text": "the integer value or the floor value of"
+    },
+    {
+      "start": 49.32,
+      "end": 53.56,
+      "text": "it. If I give you the value as n equal"
+    },
+    {
+      "start": 51.92,
+      "end": 55.48,
+      "text": "to 35,"
+    },
+    {
+      "start": 53.56,
+      "end": 59.6,
+      "text": "you take square root of 35, it is again"
+    },
+    {
+      "start": 55.48,
+      "end": 62.48,
+      "text": "5.something, which is close to six, but"
+    },
+    {
+      "start": 59.6,
+      "end": 63.48,
+      "text": "I will ask the floor value. If I say n"
+    },
+    {
+      "start": 62.48,
+      "end": 66.6,
+      "text": "is"
+    },
+    {
+      "start": 63.48,
+      "end": 69.12,
+      "text": "36, then you say square root of 36 is"
+    },
+    {
+      "start": 66.6,
+      "end": 71.68,
+      "text": "six, and then you return six. So, I"
+    },
+    {
+      "start": 69.12,
+      "end": 75.04,
+      "text": "won't you to return me the floor of the"
+    },
+    {
+      "start": 71.68,
+      "end": 76.2,
+      "text": "square root of a given integer. So,"
+    },
+    {
+      "start": 75.04,
+      "end": 78.76,
+      "text": "So, how do you solve this particular"
+    },
+    {
+      "start": 76.2,
+      "end": 81.08,
+      "text": "problem? One of the easiest ways is to"
+    },
+    {
+      "start": 78.76,
+      "end": 83.84,
+      "text": "probably use the function math.sqrt in"
+    },
+    {
+      "start": 81.08,
+      "end": 85.52,
+      "text": "Java or the square root function in C++"
+    },
+    {
+      "start": 83.84,
+      "end": 87.0,
+      "text": "and that will give us the answer. But,"
+    },
+    {
+      "start": 85.52,
+      "end": 88.92,
+      "text": "we are going to learn the binary search"
+    },
+    {
+      "start": 87.0,
+      "end": 91.48,
+      "text": "method. Why? Because this is going to"
+    },
+    {
+      "start": 88.92,
+      "end": 92.32,
+      "text": "help us solve a lot of problems. So,"
+    },
+    {
+      "start": 91.48,
+      "end": 93.96,
+      "text": "what is"
+    },
+    {
+      "start": 92.32,
+      "end": 94.72,
+      "text": "the naive way? Like the linear search"
+    },
+    {
+      "start": 93.96,
+      "end": 96.24,
+      "text": "way."
+    },
+    {
+      "start": 94.72,
+      "end": 99.88,
+      "text": "The linear search way, imagine I give"
+    },
+    {
+      "start": 96.24,
+      "end": 102.72,
+      "text": "you n is 25. The linear search will be"
+    },
+    {
+      "start": 99.88,
+      "end": 104.6,
+      "text": "I'll take one, I'll do 1 into 1, that's"
+    },
+    {
+      "start": 102.72,
+      "end": 106.04,
+      "text": "one, that's not 25."
+    },
+    {
+      "start": 104.6,
+      "end": 109.12,
+      "text": "I take two,"
+    },
+    {
+      "start": 106.04,
+      "end": 113.12,
+      "text": "2 into 2, that's four, that's not 25. I"
+    },
+    {
+      "start": 109.12,
+      "end": 115.64,
+      "text": "take three, 3 into 3, that's nine."
+    },
+    {
+      "start": 113.12,
+      "end": 119.24,
+      "text": "That's not 25. I take four, 4 into 4,"
+    },
+    {
+      "start": 115.64,
+      "end": 122.2,
+      "text": "16, that's not 25. I take five, five"
+    },
+    {
+      "start": 119.24,
+      "end": 124.92,
+      "text": "into five, that's 25 and I say, yes,"
+    },
+    {
+      "start": 122.2,
+      "end": 129.0,
+      "text": "this can be a possible answer. Or what"
+    },
+    {
+      "start": 124.92,
+      "end": 130.92,
+      "text": "if it was something like, just imagine,"
+    },
+    {
+      "start": 129.0,
+      "end": 132.12,
+      "text": "instead of a"
+    },
+    {
+      "start": 130.92,
+      "end": 134.28,
+      "text": "complete value, it was something like"
+    },
+    {
+      "start": 132.12,
+      "end": 137.6,
+      "text": "28. In that case, you'd have gone with"
+    },
+    {
+      "start": 134.28,
+      "end": 140.28,
+      "text": "one, two, three, four, five. And"
+    },
+    {
+      "start": 137.6,
+      "end": 143.16,
+      "text": "whenever you had six, six into six would"
+    },
+    {
+      "start": 140.28,
+      "end": 146.48,
+      "text": "have been 36 and the value 36 would have"
+    },
+    {
+      "start": 143.16,
+      "end": 148.96,
+      "text": "exceeded 28. So, the possible answer"
+    },
+    {
+      "start": 146.48,
+      "end": 152.36,
+      "text": "would have been five. So, we can"
+    },
+    {
+      "start": 148.96,
+      "end": 154.0,
+      "text": "linearly traverse, right? So, what's the"
+    },
+    {
+      "start": 152.36,
+      "end": 157.44,
+      "text": "code for this? If I have to write the"
+    },
+    {
+      "start": 154.0,
+      "end": 160.32,
+      "text": "code, can I say the code will be for I"
+    },
+    {
+      "start": 157.44,
+      "end": 162.44,
+      "text": "equal to one, I lesser than"
+    },
+    {
+      "start": 160.32,
+      "end": 164.4,
+      "text": "Maybe we can just leave this."
+    },
+    {
+      "start": 162.44,
+      "end": 166.96,
+      "text": "What can be the like maximum answer if I"
+    },
+    {
+      "start": 164.4,
+      "end": 169.52,
+      "text": "have to ask you? For any value, what can"
+    },
+    {
+      "start": 166.96,
+      "end": 172.04,
+      "text": "be the maximum answer? For one, it's one"
+    },
+    {
+      "start": 169.52,
+      "end": 174.56,
+      "text": "itself. The number itself can be the"
+    },
+    {
+      "start": 172.04,
+      "end": 178.16,
+      "text": "maximum possible answer and it will not"
+    },
+    {
+      "start": 174.56,
+      "end": 179.08,
+      "text": "be but the maximum I can go is still"
+    },
+    {
+      "start": 178.16,
+      "end": 181.2,
+      "text": "n."
+    },
+    {
+      "start": 179.08,
+      "end": 183.6,
+      "text": "Obviously, we will stop way before that"
+    },
+    {
+      "start": 181.2,
+      "end": 185.16,
+      "text": "but we can go till here. Now,"
+    },
+    {
+      "start": 183.6,
+      "end": 186.76,
+      "text": "maybe I can keep the answer as one"
+    },
+    {
+      "start": 185.16,
+      "end": 188.76,
+      "text": "because that's the minimum possible"
+    },
+    {
+      "start": 186.76,
+      "end": 192.2,
+      "text": "answer as well. So, I'll keep the answer"
+    },
+    {
+      "start": 188.76,
+      "end": 195.84,
+      "text": "as one. And I'll say, hey, if"
+    },
+    {
+      "start": 192.2,
+      "end": 197.32,
+      "text": "I into I is lesser than equal to n,"
+    },
+    {
+      "start": 195.84,
+      "end": 199.88,
+      "text": "then"
+    },
+    {
+      "start": 197.32,
+      "end": 201.6,
+      "text": "say answer equal to I"
+    },
+    {
+      "start": 199.88,
+      "end": 203.08,
+      "text": "and continue."
+    },
+    {
+      "start": 201.6,
+      "end": 204.68,
+      "text": "Or else,"
+    },
+    {
+      "start": 203.08,
+      "end": 205.96,
+      "text": "if I'm going to the else part, what does"
+    },
+    {
+      "start": 204.68,
+      "end": 208.04,
+      "text": "it mean?"
+    },
+    {
+      "start": 205.96,
+      "end": 209.56,
+      "text": "It means it's greater than n. So, I'll"
+    },
+    {
+      "start": 208.04,
+      "end": 212.04,
+      "text": "say break."
+    },
+    {
+      "start": 209.56,
+      "end": 213.6,
+      "text": "Can I do this? I can."
+    },
+    {
+      "start": 212.04,
+      "end": 217.0,
+      "text": "So, this will be working, right? So, if"
+    },
+    {
+      "start": 213.6,
+      "end": 220.24,
+      "text": "you take this particular example, 28, it"
+    },
+    {
+      "start": 217.0,
+      "end": 222.16,
+      "text": "goes for one, two, three, four, five."
+    },
+    {
+      "start": 220.24,
+      "end": 224.6,
+      "text": "And the last value answer will be"
+    },
+    {
+      "start": 222.16,
+      "end": 227.92,
+      "text": "storing is five. And after that,"
+    },
+    {
+      "start": 224.6,
+      "end": 232.16,
+      "text": "whenever I becomes six, this condition"
+    },
+    {
+      "start": 227.92,
+      "end": 234.56,
+      "text": "is false, hence the break statement will"
+    },
+    {
+      "start": 232.16,
+      "end": 236.28,
+      "text": "be executed and it goes out of the for"
+    },
+    {
+      "start": 234.56,
+      "end": 239.04,
+      "text": "loop. So, eventually the answer will be"
+    },
+    {
+      "start": 236.28,
+      "end": 241.28,
+      "text": "stored as five and that is our answer."
+    },
+    {
+      "start": 239.04,
+      "end": 243.28,
+      "text": "So, look at the pattern. What Why didn't"
+    },
+    {
+      "start": 241.28,
+      "end": 246.56,
+      "text": "we stop at five?"
+    },
+    {
+      "start": 243.28,
+      "end": 248.6,
+      "text": "I'm saying one might might might be an"
+    },
+    {
+      "start": 246.56,
+      "end": 250.36,
+      "text": "answer. I'm not sure."
+    },
+    {
+      "start": 248.6,
+      "end": 252.48,
+      "text": "Two might be an answer. I'm not sure."
+    },
+    {
+      "start": 250.36,
+      "end": 254.64,
+      "text": "Three might be an answer. I'm not sure."
+    },
+    {
+      "start": 252.48,
+      "end": 256.84,
+      "text": "Four might be an answer. I'm not sure."
+    },
+    {
+      "start": 254.64,
+      "end": 259.2,
+      "text": "Five might be an answer. I'm not sure."
+    },
+    {
+      "start": 256.84,
+      "end": 262.04,
+      "text": "Six is not an answer. Six is definitely"
+    },
+    {
+      "start": 259.2,
+      "end": 265.12,
+      "text": "not an answer. Why? Because 6 into 6 is"
+    },
+    {
+      "start": 262.04,
+      "end": 267.32,
+      "text": "36 and the possible like the value that"
+    },
+    {
+      "start": 265.12,
+      "end": 269.08,
+      "text": "is given to us is 28. So, six is"
+    },
+    {
+      "start": 267.32,
+      "end": 271.24,
+      "text": "definitely not going to be an answer."
+    },
+    {
+      "start": 269.08,
+      "end": 274.52,
+      "text": "And I'm very much sure that anything"
+    },
+    {
+      "start": 271.24,
+      "end": 276.56,
+      "text": "greater than six, which is 7 8 9, will"
+    },
+    {
+      "start": 274.52,
+      "end": 279.08,
+      "text": "never be an answer. Will never be an"
+    },
+    {
+      "start": 276.56,
+      "end": 280.96,
+      "text": "answer because if you take six, it's"
+    },
+    {
+      "start": 279.08,
+      "end": 283.52,
+      "text": "already exceeding. If I take anything"
+    },
+    {
+      "start": 280.96,
+      "end": 285.84,
+      "text": "greater than six, that will also exceed."
+    },
+    {
+      "start": 283.52,
+      "end": 289.52,
+      "text": "Very much sure. Thereby,"
+    },
+    {
+      "start": 285.84,
+      "end": 291.32,
+      "text": "I surely know anything after six will"
+    },
+    {
+      "start": 289.52,
+      "end": 292.76,
+      "text": "never be an answer."
+    },
+    {
+      "start": 291.32,
+      "end": 295.44,
+      "text": "Whereas,"
+    },
+    {
+      "start": 292.76,
+      "end": 298.24,
+      "text": "all of these can be my answer. And I"
+    },
+    {
+      "start": 295.44,
+      "end": 300.84,
+      "text": "take always the maximum value. I take"
+    },
+    {
+      "start": 298.24,
+      "end": 303.56,
+      "text": "always the maximum value. So, whenever"
+    },
+    {
+      "start": 300.84,
+      "end": 305.68,
+      "text": "you see such cases where"
+    },
+    {
+      "start": 303.56,
+      "end": 308.36,
+      "text": "till a certain point the answers are"
+    },
+    {
+      "start": 305.68,
+      "end": 310.88,
+      "text": "possible and after a certain point the"
+    },
+    {
+      "start": 308.36,
+      "end": 314.28,
+      "text": "answer is not possible, we can always"
+    },
+    {
+      "start": 310.88,
+      "end": 317.12,
+      "text": "apply binary search on that. Remember"
+    },
+    {
+      "start": 314.28,
+      "end": 319.08,
+      "text": "this. Why? You will understand as I show"
+    },
+    {
+      "start": 317.12,
+      "end": 321.76,
+      "text": "you the example."
+    },
+    {
+      "start": 319.08,
+      "end": 325.4,
+      "text": "So, we're looking for n equal to 28's"
+    },
+    {
+      "start": 321.76,
+      "end": 327.4,
+      "text": "square root. Can I keep the low as one?"
+    },
+    {
+      "start": 325.4,
+      "end": 329.08,
+      "text": "Like just hypothetically. I'm I'm not"
+    },
+    {
+      "start": 327.4,
+      "end": 330.96,
+      "text": "doing a binary search on an array. I'm"
+    },
+    {
+      "start": 329.08,
+      "end": 333.56,
+      "text": "trying to find an answer. So, what can"
+    },
+    {
+      "start": 330.96,
+      "end": 335.88,
+      "text": "be the minimalistic answer? One. And"
+    },
+    {
+      "start": 333.56,
+      "end": 338.84,
+      "text": "what can be the highest answer? That's"
+    },
+    {
+      "start": 335.88,
+      "end": 341.44,
+      "text": "definitely 28. Nothing bigger than 28"
+    },
+    {
+      "start": 338.84,
+      "end": 342.76,
+      "text": "can be my answer. Like I'm not doing 28"
+    },
+    {
+      "start": 341.44,
+      "end": 344.92,
+      "text": "into 28. I'm just thinking out of the"
+    },
+    {
+      "start": 342.76,
+      "end": 346.8,
+      "text": "box. Nothing bigger than 28 can be my"
+    },
+    {
+      "start": 344.92,
+      "end": 349.44,
+      "text": "answer for sure. So, I'm keeping low as"
+    },
+    {
+      "start": 346.8,
+      "end": 351.16,
+      "text": "one and we are keeping high as 28."
+    },
+    {
+      "start": 349.44,
+      "end": 353.6,
+      "text": "So, if I go across and take the mid"
+    },
+    {
+      "start": 351.16,
+      "end": 359.56,
+      "text": "value, what will be the mid value? 1 +"
+    },
+    {
+      "start": 353.6,
+      "end": 363.2,
+      "text": "28, that's 29 / 2, that's 14.5, that's"
+    },
+    {
+      "start": 359.56,
+      "end": 365.32,
+      "text": "14 in integer. So, I can write 14. Now,"
+    },
+    {
+      "start": 363.2,
+      "end": 369.96,
+      "text": "if I have to check"
+    },
+    {
+      "start": 365.32,
+      "end": 373.76,
+      "text": "14 into 14 is actually greater than 28."
+    },
+    {
+      "start": 369.96,
+      "end": 377.24,
+      "text": "14 into 14 is actually greater than 28."
+    },
+    {
+      "start": 373.76,
+      "end": 380.24,
+      "text": "So, thereby can I say if 14 is"
+    },
+    {
+      "start": 377.24,
+      "end": 383.4,
+      "text": "not my answer, then I'm very much sure"
+    },
+    {
+      "start": 380.24,
+      "end": 385.56,
+      "text": "15, 16, and everything till 28 will"
+    },
+    {
+      "start": 383.4,
+      "end": 388.68,
+      "text": "never be my answer. Can I surely say"
+    },
+    {
+      "start": 385.56,
+      "end": 389.96,
+      "text": "this? I can. I can surely say this."
+    },
+    {
+      "start": 388.68,
+      "end": 392.52,
+      "text": "Thereby"
+    },
+    {
+      "start": 389.96,
+      "end": 393.8,
+      "text": "what I do is I eliminate everything on"
+    },
+    {
+      "start": 392.52,
+      "end": 394.8,
+      "text": "the right."
+    },
+    {
+      "start": 393.8,
+      "end": 396.88,
+      "text": "Why?"
+    },
+    {
+      "start": 394.8,
+      "end": 400.68,
+      "text": "Just because of this reason. If I'm"
+    },
+    {
+      "start": 396.88,
+      "end": 403.48,
+      "text": "standing at a not possible stuff,"
+    },
+    {
+      "start": 400.68,
+      "end": 405.64,
+      "text": "everything on the right will also be not"
+    },
+    {
+      "start": 403.48,
+      "end": 407.72,
+      "text": "possible. So, why do I consider the"
+    },
+    {
+      "start": 405.64,
+      "end": 409.4,
+      "text": "right portion? So, what I do is I"
+    },
+    {
+      "start": 407.72,
+      "end": 411.28,
+      "text": "eliminate the right portion. And the"
+    },
+    {
+      "start": 409.4,
+      "end": 414.68,
+      "text": "moment I eliminate"
+    },
+    {
+      "start": 411.28,
+      "end": 417.44,
+      "text": "the high will be coming across to 13."
+    },
+    {
+      "start": 414.68,
+      "end": 418.56,
+      "text": "The high will be coming across to 13."
+    },
+    {
+      "start": 417.44,
+      "end": 421.6,
+      "text": "So, we're just playing around with"
+    },
+    {
+      "start": 418.56,
+      "end": 423.92,
+      "text": "numbers. Not taking any array."
+    },
+    {
+      "start": 421.6,
+      "end": 426.32,
+      "text": "So, high is 13. Let me write that."
+    },
+    {
+      "start": 423.92,
+      "end": 428.24,
+      "text": "So, the high is 13. This time where will"
+    },
+    {
+      "start": 426.32,
+      "end": 431.28,
+      "text": "the midpoint do? Can I say the mid will"
+    },
+    {
+      "start": 428.24,
+      "end": 432.76,
+      "text": "point to 13 + 1, that is 14 / 2, 7?"
+    },
+    {
+      "start": 431.28,
+      "end": 436.08,
+      "text": "Obviously."
+    },
+    {
+      "start": 432.76,
+      "end": 438.28,
+      "text": "Will 7 be my answer? 7 into 7 is"
+    },
+    {
+      "start": 436.08,
+      "end": 440.4,
+      "text": "actually greater than 28. So, 7 also"
+    },
+    {
+      "start": 438.28,
+      "end": 441.84,
+      "text": "cannot be my answer. Again, I'm standing"
+    },
+    {
+      "start": 440.4,
+      "end": 443.28,
+      "text": "at a"
+    },
+    {
+      "start": 441.84,
+      "end": 445.24,
+      "text": "not possible."
+    },
+    {
+      "start": 443.28,
+      "end": 448.12,
+      "text": "So, can I say everything to the right of"
+    },
+    {
+      "start": 445.24,
+      "end": 451.04,
+      "text": "7 is also not possible? Obviously not."
+    },
+    {
+      "start": 448.12,
+      "end": 453.28,
+      "text": "Thereby I say everything"
+    },
+    {
+      "start": 451.04,
+      "end": 456.48,
+      "text": "can be canceled. Hence"
+    },
+    {
+      "start": 453.28,
+      "end": 459.56,
+      "text": "this high will move to six, which is one"
+    },
+    {
+      "start": 456.48,
+      "end": 462.28,
+      "text": "place before mid. Simple binary search."
+    },
+    {
+      "start": 459.56,
+      "end": 464.64,
+      "text": "Eliminating the right half."
+    },
+    {
+      "start": 462.28,
+      "end": 467.92,
+      "text": "High will be six. Perfect. What will be"
+    },
+    {
+      "start": 464.64,
+      "end": 471.16,
+      "text": "the mid this time? 1 + 6 is 7. 7 / 2 is"
+    },
+    {
+      "start": 467.92,
+      "end": 476.08,
+      "text": "3.5. So, thereby the mid will be three."
+    },
+    {
+      "start": 471.16,
+      "end": 479.68,
+      "text": "This time, 3 * 3 is not greater than 28."
+    },
+    {
+      "start": 476.08,
+      "end": 483.0,
+      "text": "So, I'm saying maybe this three is an"
+    },
+    {
+      "start": 479.68,
+      "end": 484.76,
+      "text": "answer. Why? Because 3 * 3 is lesser"
+    },
+    {
+      "start": 483.0,
+      "end": 486.28,
+      "text": "than equal to 28."
+    },
+    {
+      "start": 484.76,
+      "end": 489.04,
+      "text": "I'm not sure that this is an answer or"
+    },
+    {
+      "start": 486.28,
+      "end": 490.76,
+      "text": "not, but this might be my answer."
+    },
+    {
+      "start": 489.04,
+      "end": 493.0,
+      "text": "Like, probably I'm standing somewhere"
+    },
+    {
+      "start": 490.76,
+      "end": 496.0,
+      "text": "here. So, this I'm standing in this"
+    },
+    {
+      "start": 493.0,
+      "end": 499.4,
+      "text": "possible section. Probably three might"
+    },
+    {
+      "start": 496.0,
+      "end": 501.24,
+      "text": "be my answer. Why? Because 3 * 3 is"
+    },
+    {
+      "start": 499.4,
+      "end": 503.8,
+      "text": "lesser than 28."
+    },
+    {
+      "start": 501.24,
+      "end": 506.2,
+      "text": "So, it's not the square root, but it"
+    },
+    {
+      "start": 503.8,
+      "end": 507.36,
+      "text": "might be my answer. So, I'm saying A"
+    },
+    {
+      "start": 506.2,
+      "end": 509.56,
+      "text": "answer."
+    },
+    {
+      "start": 507.36,
+      "end": 511.76,
+      "text": "Can you store three? A answer. Can you"
+    },
+    {
+      "start": 509.56,
+      "end": 514.48,
+      "text": "store three? He says, \"Okay, let me"
+    },
+    {
+      "start": 511.76,
+      "end": 516.92,
+      "text": "store three.\" Now, tell me one thing."
+    },
+    {
+      "start": 514.48,
+      "end": 519.16,
+      "text": "If I go on the left, will that make"
+    },
+    {
+      "start": 516.92,
+      "end": 521.12,
+      "text": "sense? Or should I go on the right to"
+    },
+    {
+      "start": 519.16,
+      "end": 522.36,
+      "text": "find a bigger number? Because if I've"
+    },
+    {
+      "start": 521.12,
+      "end": 524.12,
+      "text": "got three,"
+    },
+    {
+      "start": 522.36,
+      "end": 526.2,
+      "text": "obviously two will never be my answer."
+    },
+    {
+      "start": 524.12,
+      "end": 528.2,
+      "text": "Obviously one will never be my answer."
+    },
+    {
+      "start": 526.2,
+      "end": 530.36,
+      "text": "So, can I surely say"
+    },
+    {
+      "start": 528.2,
+      "end": 531.44,
+      "text": "anything on the left will never be my"
+    },
+    {
+      "start": 530.36,
+      "end": 533.12,
+      "text": "answer."
+    },
+    {
+      "start": 531.44,
+      "end": 534.48,
+      "text": "I have taken the assumption of three"
+    },
+    {
+      "start": 533.12,
+      "end": 536.8,
+      "text": "being my answer, but anything on the"
+    },
+    {
+      "start": 534.48,
+      "end": 539.76,
+      "text": "left will never be my answer. I can"
+    },
+    {
+      "start": 536.8,
+      "end": 543.44,
+      "text": "thereby the low will go to four."
+    },
+    {
+      "start": 539.76,
+      "end": 543.44,
+      "text": "Perfect. Let's take the low to four."
+    },
+    {
+      "start": 543.64,
+      "end": 548.36,
+      "text": "So, the moment I take the low to four,"
+    },
+    {
+      "start": 545.8,
+      "end": 551.88,
+      "text": "this time the mid will be low plus I, 4"
+    },
+    {
+      "start": 548.36,
+      "end": 554.44,
+      "text": "+ 6, that's 10. 10 / 2 is five. So, I"
+    },
+    {
+      "start": 551.88,
+      "end": 556.12,
+      "text": "have five. The moment I have five, what"
+    },
+    {
+      "start": 554.44,
+      "end": 559.36,
+      "text": "do I check? I again check the same"
+    },
+    {
+      "start": 556.12,
+      "end": 562.84,
+      "text": "thing. 5 * 5 lesser than equal to 28,"
+    },
+    {
+      "start": 559.36,
+      "end": 563.92,
+      "text": "and I find yes, it is. 5 * 5 is lesser"
+    },
+    {
+      "start": 562.84,
+      "end": 566.0,
+      "text": "than 28."
+    },
+    {
+      "start": 563.92,
+      "end": 567.6,
+      "text": "I say answer, you got someone better."
+    },
+    {
+      "start": 566.0,
+      "end": 569.44,
+      "text": "Please replace yourself."
+    },
+    {
+      "start": 567.6,
+      "end": 571.24,
+      "text": "Because I'm looking for square root, and"
+    },
+    {
+      "start": 569.44,
+      "end": 573.36,
+      "text": "I'm going to the right to find the"
+    },
+    {
+      "start": 571.24,
+      "end": 576.2,
+      "text": "biggest value that is a lesser than"
+    },
+    {
+      "start": 573.36,
+      "end": 577.56,
+      "text": "equal to 28. I've got five."
+    },
+    {
+      "start": 576.2,
+      "end": 580.08,
+      "text": "So, I know one thing. Probably I'm"
+    },
+    {
+      "start": 577.56,
+      "end": 581.04,
+      "text": "standing somewhere here and I can surely"
+    },
+    {
+      "start": 580.08,
+      "end": 582.84,
+      "text": "say"
+    },
+    {
+      "start": 581.04,
+      "end": 584.6,
+      "text": "anything to the left"
+    },
+    {
+      "start": 582.84,
+      "end": 587.48,
+      "text": "I don't need it. I need the biggest"
+    },
+    {
+      "start": 584.6,
+      "end": 590.04,
+      "text": "value that is close to that value when I"
+    },
+    {
+      "start": 587.48,
+      "end": 593.04,
+      "text": "do a multiplication. Thereby, I say,"
+    },
+    {
+      "start": 590.04,
+      "end": 596.28,
+      "text": "\"Can you please eliminate and take the"
+    },
+    {
+      "start": 593.04,
+      "end": 600.2,
+      "text": "low to this portion which is one place"
+    },
+    {
+      "start": 596.28,
+      "end": 601.56,
+      "text": "ahead of mid that has a tie?\" Thereby,"
+    },
+    {
+      "start": 600.2,
+      "end": 604.48,
+      "text": "we are"
+    },
+    {
+      "start": 601.56,
+      "end": 606.72,
+      "text": "at six and the low points here"
+    },
+    {
+      "start": 604.48,
+      "end": 608.8,
+      "text": "and the high points here and the mid"
+    },
+    {
+      "start": 606.72,
+      "end": 610.64,
+      "text": "also points here."
+    },
+    {
+      "start": 608.8,
+      "end": 613.24,
+      "text": "So, currently we are standing here."
+    },
+    {
+      "start": 610.64,
+      "end": 616.12,
+      "text": "Point to note, we're standing at a"
+    },
+    {
+      "start": 613.24,
+      "end": 619.36,
+      "text": "single value and this time when I do"
+    },
+    {
+      "start": 616.12,
+      "end": 621.84,
+      "text": "6 into 6, that's greater than 28. So, 6"
+    },
+    {
+      "start": 619.36,
+      "end": 624.4,
+      "text": "cannot be my answer. 6 cannot be my"
+    },
+    {
+      "start": 621.84,
+      "end": 626.2,
+      "text": "answer and if it cannot be my answer, I"
+    },
+    {
+      "start": 624.4,
+      "end": 627.48,
+      "text": "say I'm standing under this portion,"
+    },
+    {
+      "start": 626.2,
+      "end": 629.48,
+      "text": "thereby the right portion will be"
+    },
+    {
+      "start": 627.48,
+      "end": 632.2,
+      "text": "eliminated. And if the right portion is"
+    },
+    {
+      "start": 629.48,
+      "end": 634.52,
+      "text": "eliminated, the high will always move"
+    },
+    {
+      "start": 632.2,
+      "end": 636.56,
+      "text": "one step back. If the right portion,"
+    },
+    {
+      "start": 634.52,
+      "end": 638.32,
+      "text": "remember this, if not possible, the"
+    },
+    {
+      "start": 636.56,
+      "end": 639.88,
+      "text": "right portion is eliminated. If"
+    },
+    {
+      "start": 638.32,
+      "end": 641.4,
+      "text": "possible, the left portion will be"
+    },
+    {
+      "start": 639.88,
+      "end": 645.04,
+      "text": "eliminated because I'm looking for the"
+    },
+    {
+      "start": 641.4,
+      "end": 646.84,
+      "text": "possible answers. Thereby, what happens?"
+    },
+    {
+      "start": 645.04,
+      "end": 648.48,
+      "text": "I take the high to 5 and this is where"
+    },
+    {
+      "start": 646.84,
+      "end": 649.88,
+      "text": "we end."
+    },
+    {
+      "start": 648.48,
+      "end": 650.76,
+      "text": "This is where the binary search will"
+    },
+    {
+      "start": 649.88,
+      "end": 652.04,
+      "text": "end."
+    },
+    {
+      "start": 650.76,
+      "end": 654.04,
+      "text": "So, if you remember in the initial"
+    },
+    {
+      "start": 652.04,
+      "end": 656.28,
+      "text": "lectures I told you one thing, as of now"
+    },
+    {
+      "start": 654.04,
+      "end": 658.0,
+      "text": "you can play with this answer and you"
+    },
+    {
+      "start": 656.28,
+      "end": 660.04,
+      "text": "can always store your binary search"
+    },
+    {
+      "start": 658.0,
+      "end": 662.2,
+      "text": "answer. But eventually as you go"
+    },
+    {
+      "start": 660.04,
+      "end": 664.44,
+      "text": "through, you'll understand that one of"
+    },
+    {
+      "start": 662.2,
+      "end": 666.28,
+      "text": "the high or one of the low will always"
+    },
+    {
+      "start": 664.44,
+      "end": 668.12,
+      "text": "be pointing to the answer. So, in this"
+    },
+    {
+      "start": 666.28,
+      "end": 670.24,
+      "text": "case, you can see that this variable"
+    },
+    {
+      "start": 668.12,
+      "end": 673.28,
+      "text": "high is actually pointing to your answer"
+    },
+    {
+      "start": 670.24,
+      "end": 675.04,
+      "text": "that is 5. And why did that happen? The"
+    },
+    {
+      "start": 673.28,
+      "end": 676.6,
+      "text": "sole reason is"
+    },
+    {
+      "start": 675.04,
+      "end": 678.16,
+      "text": "since you're trying to I'll just write"
+    },
+    {
+      "start": 676.6,
+      "end": 680.0,
+      "text": "it for you. Since you're trying to"
+    },
+    {
+      "start": 678.16,
+      "end": 681.48,
+      "text": "eliminate Since you're trying to"
+    },
+    {
+      "start": 680.0,
+      "end": 685.04,
+      "text": "eliminate"
+    },
+    {
+      "start": 681.48,
+      "end": 687.24,
+      "text": "and this is the not possible zone. So,"
+    },
+    {
+      "start": 685.04,
+      "end": 690.16,
+      "text": "you're trying to move on this direction"
+    },
+    {
+      "start": 687.24,
+      "end": 692.36,
+      "text": "and that's why the high will cross the"
+    },
+    {
+      "start": 690.16,
+      "end": 694.4,
+      "text": "low. And when you're trying because was"
+    },
+    {
+      "start": 692.36,
+      "end": 697.88,
+      "text": "here initially at a"
+    },
+    {
+      "start": 694.4,
+      "end": 699.88,
+      "text": "not possible place, and the low was at a"
+    },
+    {
+      "start": 697.88,
+      "end": 701.6,
+      "text": "possible place. So, since they're"
+    },
+    {
+      "start": 699.88,
+      "end": 703.6,
+      "text": "eliminating,"
+    },
+    {
+      "start": 701.6,
+      "end": 705.84,
+      "text": "thereby the low will always move towards"
+    },
+    {
+      "start": 703.6,
+      "end": 708.8,
+      "text": "right, and the high will always move"
+    },
+    {
+      "start": 705.84,
+      "end": 711.76,
+      "text": "towards left. Hence, the low ends up"
+    },
+    {
+      "start": 708.8,
+      "end": 713.4,
+      "text": "pointing the low ends up pointing at the"
+    },
+    {
+      "start": 711.76,
+      "end": 715.96,
+      "text": "first place"
+    },
+    {
+      "start": 713.4,
+      "end": 718.4,
+      "text": "at the first place where it is not"
+    },
+    {
+      "start": 715.96,
+      "end": 720.0,
+      "text": "possible, and the high"
+    },
+    {
+      "start": 718.4,
+      "end": 722.8,
+      "text": "and the high ends up pointing at the"
+    },
+    {
+      "start": 720.0,
+      "end": 725.44,
+      "text": "first place which is possible. So, to"
+    },
+    {
+      "start": 722.8,
+      "end": 727.36,
+      "text": "repeat, the low was"
+    },
+    {
+      "start": 725.44,
+      "end": 728.72,
+      "text": "at starting pointing to a place where it"
+    },
+    {
+      "start": 727.36,
+      "end": 731.04,
+      "text": "is possible."
+    },
+    {
+      "start": 728.72,
+      "end": 733.0,
+      "text": "The high was pointing to a place where"
+    },
+    {
+      "start": 731.04,
+      "end": 735.28,
+      "text": "it was not possible. Are they trying to"
+    },
+    {
+      "start": 733.0,
+      "end": 737.56,
+      "text": "move? And on moving, they'll come to a"
+    },
+    {
+      "start": 735.28,
+      "end": 738.8,
+      "text": "place where it is not possible. This"
+    },
+    {
+      "start": 737.56,
+      "end": 741.76,
+      "text": "will come to a place where it is"
+    },
+    {
+      "start": 738.8,
+      "end": 743.56,
+      "text": "possible. Hence, the high will always be"
+    },
+    {
+      "start": 741.76,
+      "end": 745.16,
+      "text": "storing your answer. So, in order to"
+    },
+    {
+      "start": 743.56,
+      "end": 746.36,
+      "text": "understand this much better, what I'll"
+    },
+    {
+      "start": 745.16,
+      "end": 748.36,
+      "text": "tell you is"
+    },
+    {
+      "start": 746.36,
+      "end": 749.84,
+      "text": "take some more examples, and take your"
+    },
+    {
+      "start": 748.36,
+      "end": 751.92,
+      "text": "pen and paper, and try to do the dry"
+    },
+    {
+      "start": 749.84,
+      "end": 753.64,
+      "text": "run, and it'll eventually understand how"
+    },
+    {
+      "start": 751.92,
+      "end": 756.2,
+      "text": "does the binary search work in this"
+    },
+    {
+      "start": 753.64,
+      "end": 757.2,
+      "text": "case. So, we have pretty much done this"
+    },
+    {
+      "start": 756.2,
+      "end": 758.4,
+      "text": "stuff."
+    },
+    {
+      "start": 757.2,
+      "end": 760.08,
+      "text": "Can I say"
+    },
+    {
+      "start": 758.4,
+      "end": 762.24,
+      "text": "that this line"
+    },
+    {
+      "start": 760.08,
+      "end": 765.16,
+      "text": "was the linear search, and because of"
+    },
+    {
+      "start": 762.24,
+      "end": 768.24,
+      "text": "this line, the complexity was near about"
+    },
+    {
+      "start": 765.16,
+      "end": 769.24,
+      "text": "O(N), near about O(N). But"
+    },
+    {
+      "start": 768.24,
+      "end": 772.16,
+      "text": "but"
+    },
+    {
+      "start": 769.24,
+      "end": 773.76,
+      "text": "this concept will now be replaced with"
+    },
+    {
+      "start": 772.16,
+      "end": 775.92,
+      "text": "binary search because I'm not going"
+    },
+    {
+      "start": 773.76,
+      "end": 777.88,
+      "text": "through the iterative stuff. Instead of"
+    },
+    {
+      "start": 775.92,
+      "end": 780.4,
+      "text": "that, what I'm doing is I'm saying,"
+    },
+    {
+      "start": 777.88,
+      "end": 782.4,
+      "text": "\"Hey, listen. You're given a number."
+    },
+    {
+      "start": 780.4,
+      "end": 784.84,
+      "text": "Thereby the low will be one."
+    },
+    {
+      "start": 782.4,
+      "end": 787.28,
+      "text": "The high will be"
+    },
+    {
+      "start": 784.84,
+      "end": 789.36,
+      "text": "n in this case, and we can keep the"
+    },
+    {
+      "start": 787.28,
+      "end": 790.68,
+      "text": "answer so that you can understand it in"
+    },
+    {
+      "start": 789.36,
+      "end": 793.36,
+      "text": "a much better way."
+    },
+    {
+      "start": 790.68,
+      "end": 795.88,
+      "text": "I can say, \"While low lesser than equal"
+    },
+    {
+      "start": 793.36,
+      "end": 798.76,
+      "text": "to high,"
+    },
+    {
+      "start": 795.88,
+      "end": 803.24,
+      "text": "and inside that I can write, mid equal"
+    },
+    {
+      "start": 798.76,
+      "end": 805.0,
+      "text": "to low plus high by two."
+    },
+    {
+      "start": 803.24,
+      "end": 809.08,
+      "text": "And after that,"
+    },
+    {
+      "start": 805.0,
+      "end": 812.28,
+      "text": "can you say if mid cross mid"
+    },
+    {
+      "start": 809.08,
+      "end": 814.44,
+      "text": "is lesser than equal to the end?"
+    },
+    {
+      "start": 812.28,
+      "end": 815.76,
+      "text": "Then your possible answer can be this"
+    },
+    {
+      "start": 814.44,
+      "end": 817.56,
+      "text": "mid."
+    },
+    {
+      "start": 815.76,
+      "end": 819.68,
+      "text": "Can be, but I'm looking for a bigger"
+    },
+    {
+      "start": 817.56,
+      "end": 822.32,
+      "text": "value every time because this might be"
+    },
+    {
+      "start": 819.68,
+      "end": 824.36,
+      "text": "it, but maybe someone else can be. So, I"
+    },
+    {
+      "start": 822.32,
+      "end": 826.48,
+      "text": "will always go and eliminate the left"
+    },
+    {
+      "start": 824.36,
+      "end": 828.72,
+      "text": "half and I'll move on the right."
+    },
+    {
+      "start": 826.48,
+      "end": 830.72,
+      "text": "Perfect. Or else, if this is not"
+    },
+    {
+      "start": 828.72,
+      "end": 832.76,
+      "text": "possible, this is not an answer, look"
+    },
+    {
+      "start": 830.72,
+      "end": 834.28,
+      "text": "for smaller values. Look for smaller"
+    },
+    {
+      "start": 832.76,
+      "end": 836.28,
+      "text": "values, that is eliminate the right"
+    },
+    {
+      "start": 834.28,
+      "end": 837.4,
+      "text": "half. Quite simple. Once you're done"
+    },
+    {
+      "start": 836.28,
+      "end": 839.2,
+      "text": "with this,"
+    },
+    {
+      "start": 837.4,
+      "end": 840.92,
+      "text": "either you can return the high or you"
+    },
+    {
+      "start": 839.2,
+      "end": 843.08,
+      "text": "can return the answer, that is your"
+    },
+    {
+      "start": 840.92,
+      "end": 845.24,
+      "text": "choice. You can return either of them"
+    },
+    {
+      "start": 843.08,
+      "end": 846.8,
+      "text": "and that will work. So, if you remember"
+    },
+    {
+      "start": 845.24,
+      "end": 848.8,
+      "text": "at the beginning of this lecture, I told"
+    },
+    {
+      "start": 846.8,
+      "end": 852.2,
+      "text": "you that we will be doing this pattern,"
+    },
+    {
+      "start": 848.8,
+      "end": 854.56,
+      "text": "binary search on answers."
+    },
+    {
+      "start": 852.2,
+      "end": 857.12,
+      "text": "So, remember one thing, whatever problem"
+    },
+    {
+      "start": 854.56,
+      "end": 859.52,
+      "text": "you will see in the future on binary"
+    },
+    {
+      "start": 857.12,
+      "end": 862.28,
+      "text": "search on answers, they will always be"
+    },
+    {
+      "start": 859.52,
+      "end": 864.6,
+      "text": "focused on this thing that you always"
+    },
+    {
+      "start": 862.28,
+      "end": 866.8,
+      "text": "know the range of answers. Like in this"
+    },
+    {
+      "start": 864.6,
+      "end": 870.08,
+      "text": "question, I was being asked to find the"
+    },
+    {
+      "start": 866.8,
+      "end": 872.92,
+      "text": "square root of n and it was being asked"
+    },
+    {
+      "start": 870.08,
+      "end": 875.52,
+      "text": "floor of that square root of n. That was"
+    },
+    {
+      "start": 872.92,
+      "end": 878.04,
+      "text": "the question. Or if I have to like"
+    },
+    {
+      "start": 875.52,
+      "end": 881.16,
+      "text": "modify the problem statement, it will be"
+    },
+    {
+      "start": 878.04,
+      "end": 884.68,
+      "text": "find the maximum integer"
+    },
+    {
+      "start": 881.16,
+      "end": 886.44,
+      "text": "find the maximum number or integer"
+    },
+    {
+      "start": 884.68,
+      "end": 889.64,
+      "text": "which"
+    },
+    {
+      "start": 886.44,
+      "end": 889.64,
+      "text": "on squaring"
+    },
+    {
+      "start": 890.08,
+      "end": 896.16,
+      "text": "is lesser than n. Can I say this?"
+    },
+    {
+      "start": 892.88,
+      "end": 898.68,
+      "text": "Because five was the maximum integer"
+    },
+    {
+      "start": 896.16,
+      "end": 901.12,
+      "text": "which on squaring was lesser than equal"
+    },
+    {
+      "start": 898.68,
+      "end": 903.44,
+      "text": "to 28 because six on squaring was"
+    },
+    {
+      "start": 901.12,
+      "end": 905.84,
+      "text": "greater than 28. Four was also a"
+    },
+    {
+      "start": 903.44,
+      "end": 909.48,
+      "text": "possible answer, but I was being asked"
+    },
+    {
+      "start": 905.84,
+      "end": 911.8,
+      "text": "to figure out the max integer. So,"
+    },
+    {
+      "start": 909.48,
+      "end": 914.64,
+      "text": "across all the questions on binary"
+    },
+    {
+      "start": 911.8,
+      "end": 918.8,
+      "text": "search on answers, you'll be asked to"
+    },
+    {
+      "start": 914.64,
+      "end": 921.68,
+      "text": "find minimum possible integer or maximum"
+    },
+    {
+      "start": 918.8,
+      "end": 923.92,
+      "text": "possible integer which can be your"
+    },
+    {
+      "start": 921.68,
+      "end": 925.76,
+      "text": "answer. Pro- So, problem statements will"
+    },
+    {
+      "start": 923.92,
+      "end": 927.96,
+      "text": "vary and we will be solving a bunch of"
+    },
+    {
+      "start": 925.76,
+      "end": 930.52,
+      "text": "those in the upcoming lectures but but"
+    },
+    {
+      "start": 927.96,
+      "end": 933.08,
+      "text": "but remember whenever you see something"
+    },
+    {
+      "start": 930.52,
+      "end": 935.16,
+      "text": "like min or max find out the minimum"
+    },
+    {
+      "start": 933.08,
+      "end": 936.88,
+      "text": "integer, find out the maximum integer"
+    },
+    {
+      "start": 935.16,
+      "end": 939.72,
+      "text": "and and"
+    },
+    {
+      "start": 936.88,
+      "end": 941.72,
+      "text": "if in a question you're sure that the"
+    },
+    {
+      "start": 939.72,
+      "end": 944.04,
+      "text": "answer like in this case the answer was"
+    },
+    {
+      "start": 941.72,
+      "end": 945.92,
+      "text": "always between 1 and n. If you're sure"
+    },
+    {
+      "start": 944.04,
+      "end": 947.28,
+      "text": "about the answer range and they're"
+    },
+    {
+      "start": 945.92,
+      "end": 950.84,
+      "text": "asking you to find the minimum and"
+    },
+    {
+      "start": 947.28,
+      "end": 952.76,
+      "text": "maximum in that answer range always"
+    },
+    {
+      "start": 950.84,
+      "end": 955.16,
+      "text": "binary search. Always and the pattern"
+    },
+    {
+      "start": 952.76,
+      "end": 956.24,
+      "text": "will be very simple. You do the binary"
+    },
+    {
+      "start": 955.16,
+      "end": 957.28,
+      "text": "search"
+    },
+    {
+      "start": 956.24,
+      "end": 959.28,
+      "text": "and this"
+    },
+    {
+      "start": 957.28,
+      "end": 961.88,
+      "text": "this one is known as the check"
+    },
+    {
+      "start": 959.28,
+      "end": 963.52,
+      "text": "box. It is the check"
+    },
+    {
+      "start": 961.88,
+      "end": 965.2,
+      "text": "because this was the question. This was"
+    },
+    {
+      "start": 963.52,
+      "end": 968.08,
+      "text": "the question check condition. The"
+    },
+    {
+      "start": 965.2,
+      "end": 969.72,
+      "text": "question was stating maximum integer"
+    },
+    {
+      "start": 968.08,
+      "end": 971.12,
+      "text": "whose squaring is less than equal to n"
+    },
+    {
+      "start": 969.72,
+      "end": 974.24,
+      "text": "and that is what I did, the check"
+    },
+    {
+      "start": 971.12,
+      "end": 976.36,
+      "text": "condition. Binary search under the check"
+    },
+    {
+      "start": 974.24,
+      "end": 977.6,
+      "text": "condition. Got it? Let's quickly jump"
+    },
+    {
+      "start": 976.36,
+      "end": 979.2,
+      "text": "into the code editor. By the way, you"
+    },
+    {
+      "start": 977.6,
+      "end": 980.84,
+      "text": "can find out the problem link in the"
+    },
+    {
+      "start": 979.2,
+      "end": 983.52,
+      "text": "description. So the first thing to"
+    },
+    {
+      "start": 980.84,
+      "end": 985.96,
+      "text": "observe is uh I'm taking long long. Why?"
+    },
+    {
+      "start": 983.52,
+      "end": 988.4,
+      "text": "Because imagine you've been given 10 to"
+    },
+    {
+      "start": 985.96,
+      "end": 990.48,
+      "text": "the power 9 as n. So the moment you do"
+    },
+    {
+      "start": 988.4,
+      "end": 992.96,
+      "text": "10 to the power 9 into 10 to the power 9"
+    },
+    {
+      "start": 990.48,
+      "end": 995.0,
+      "text": "it might overflow. So just take care of"
+    },
+    {
+      "start": 992.96,
+      "end": 996.56,
+      "text": "that and take long long. So in certain"
+    },
+    {
+      "start": 995.0,
+      "end": 998.6,
+      "text": "cases you have to keep this in mind"
+    },
+    {
+      "start": 996.56,
+      "end": 1000.04,
+      "text": "otherwise there will be overflow cases"
+    },
+    {
+      "start": 998.6,
+      "end": 1001.6,
+      "text": "and you'll get a wrong answer. So if you"
+    },
+    {
+      "start": 1000.04,
+      "end": 1003.12,
+      "text": "try to submit this this will be running"
+    },
+    {
+      "start": 1001.6,
+      "end": 1004.84,
+      "text": "absolutely fine. So I hope you have"
+    },
+    {
+      "start": 1003.12,
+      "end": 1006.76,
+      "text": "understood everything and in case you're"
+    },
+    {
+      "start": 1004.84,
+      "end": 1008.36,
+      "text": "still watching please please do consider"
+    },
+    {
+      "start": 1006.76,
+      "end": 1010.36,
+      "text": "giving us that like and if you're new to"
+    },
+    {
+      "start": 1008.36,
+      "end": 1013.04,
+      "text": "our channel please please do consider"
+    },
+    {
+      "start": 1010.36,
+      "end": 1014.2,
+      "text": "giving us that subscribe as well and"
+    },
+    {
+      "start": 1013.04,
+      "end": 1016.12,
+      "text": "yeah, if you haven't followed me on"
+    },
+    {
+      "start": 1014.2,
+      "end": 1017.68,
+      "text": "LinkedIn, Instagram and Twitter all the"
+    },
+    {
+      "start": 1016.12,
+      "end": 1018.8,
+      "text": "links will be in the description. With"
+    },
+    {
+      "start": 1017.68,
+      "end": 1019.84,
+      "text": "this I'll be wrapping up this video."
+    },
+    {
+      "start": 1018.8,
+      "end": 1021.88,
+      "text": "Let's meet in some other video till"
+    },
+    {
+      "start": 1019.84,
+      "end": 1025.08,
+      "text": "then. Bye-bye. Take care."
+    },
+    {
+      "start": 1021.88,
+      "end": 1028.36,
+      "text": "Whenever your heart is broken,"
+    },
+    {
+      "start": 1025.08,
+      "end": 1031.4,
+      "text": "don't ever forget you're golden."
+    },
+    {
+      "start": 1028.36,
+      "end": 1031.4,
+      "text": "I will find a light in"
+    }
+  ]
+}

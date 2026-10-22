@@ -1,0 +1,1196 @@
+{
+  "video_id": "9TJYWh0adfk",
+  "title": "L45. K-th Smallest/Largest Element in BST",
+  "duration_sec": 507,
+  "num_segments": 198,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.24,
+      "duration": 2.24,
+      "text": "Hey everyone, welcome back to the"
+    },
+    {
+      "start": 1.12,
+      "end": 4.16,
+      "duration": 3.04,
+      "text": "channel. I hope you guys are doing"
+    },
+    {
+      "start": 2.24,
+      "end": 7.04,
+      "duration": 4.8,
+      "text": "extremely well. So today we will be"
+    },
+    {
+      "start": 4.16,
+      "end": 10.08,
+      "duration": 5.92,
+      "text": "solving the problem k smallest element"
+    },
+    {
+      "start": 7.04,
+      "end": 11.76,
+      "duration": 4.72,
+      "text": "in a binary search tree. Now let's"
+    },
+    {
+      "start": 10.08,
+      "end": 13.92,
+      "duration": 3.84,
+      "text": "assume that you're given this particular"
+    },
+    {
+      "start": 11.76,
+      "end": 15.84,
+      "duration": 4.08,
+      "text": "binary search tree where five is the"
+    },
+    {
+      "start": 13.92,
+      "end": 18.0,
+      "duration": 4.08,
+      "text": "root and to the left there is three and"
+    },
+    {
+      "start": 15.84,
+      "end": 19.84,
+      "duration": 4.0,
+      "text": "then to the left there is one and then"
+    },
+    {
+      "start": 18.0,
+      "end": 22.0,
+      "duration": 4.0,
+      "text": "there's two and then so on. This is the"
+    },
+    {
+      "start": 19.84,
+      "end": 25.76,
+      "duration": 5.92,
+      "text": "particular binary search tree that is"
+    },
+    {
+      "start": 22.0,
+      "end": 28.16,
+      "duration": 6.16,
+      "text": "given to you and assume I say that hey k"
+    },
+    {
+      "start": 25.76,
+      "end": 29.84,
+      "duration": 4.08,
+      "text": "I will give you as three. So if you"
+    },
+    {
+      "start": 28.16,
+      "end": 31.84,
+      "duration": 3.68,
+      "text": "write down all the elements of the"
+    },
+    {
+      "start": 29.84,
+      "end": 37.92,
+      "duration": 8.08,
+      "text": "binary search tree, it will be something"
+    },
+    {
+      "start": 31.84,
+      "end": 40.4,
+      "duration": 8.56,
+      "text": "like 1 2 3 4 5 6 7 8 like if I write"
+    },
+    {
+      "start": 37.92,
+      "end": 42.0,
+      "duration": 4.08,
+      "text": "down all the elements in a proper sorted"
+    },
+    {
+      "start": 40.4,
+      "end": 44.32,
+      "duration": 3.92,
+      "text": "order. The elements will be something"
+    },
+    {
+      "start": 42.0,
+      "end": 48.24,
+      "duration": 6.24,
+      "text": "like this. Now I am asking you to figure"
+    },
+    {
+      "start": 44.32,
+      "end": 50.16,
+      "duration": 5.84,
+      "text": "out kth smallest element. Now the third"
+    },
+    {
+      "start": 48.24,
+      "end": 52.64,
+      "duration": 4.4,
+      "text": "smallest element will be definitely"
+    },
+    {
+      "start": 50.16,
+      "end": 55.76,
+      "duration": 5.6,
+      "text": "this. And this is what you need to"
+    },
+    {
+      "start": 52.64,
+      "end": 58.48,
+      "duration": 5.84,
+      "text": "return if you're given the root of the"
+    },
+    {
+      "start": 55.76,
+      "end": 61.12,
+      "duration": 5.36,
+      "text": "binary search tree. So how do you solve"
+    },
+    {
+      "start": 58.48,
+      "end": 63.84,
+      "duration": 5.36,
+      "text": "such a problem? Now one of the naive"
+    },
+    {
+      "start": 61.12,
+      "end": 66.88,
+      "duration": 5.76,
+      "text": "ways that you can do is you can do any"
+    },
+    {
+      "start": 63.84,
+      "end": 69.84,
+      "duration": 6.0,
+      "text": "of the DFS traversals be it in order,"
+    },
+    {
+      "start": 66.88,
+      "end": 72.56,
+      "duration": 5.68,
+      "text": "post order, pre-order and then you can"
+    },
+    {
+      "start": 69.84,
+      "end": 76.24,
+      "duration": 6.4,
+      "text": "just go to all the nodes and you can"
+    },
+    {
+      "start": 72.56,
+      "end": 79.12,
+      "duration": 6.56,
+      "text": "store all the nodes into some container."
+    },
+    {
+      "start": 76.24,
+      "end": 81.52,
+      "duration": 5.28,
+      "text": "If you're using C++ it can be a vector."
+    },
+    {
+      "start": 79.12,
+      "end": 83.68,
+      "duration": 4.56,
+      "text": "If you're using Java, it can be a list"
+    },
+    {
+      "start": 81.52,
+      "end": 85.6,
+      "duration": 4.08,
+      "text": "or whatever you wish to store. You can"
+    },
+    {
+      "start": 83.68,
+      "end": 87.68,
+      "duration": 4.0,
+      "text": "store all of them over there. Once you"
+    },
+    {
+      "start": 85.6,
+      "end": 91.36,
+      "duration": 5.76,
+      "text": "have stored them, you can sort that"
+    },
+    {
+      "start": 87.68,
+      "end": 94.24,
+      "duration": 6.56,
+      "text": "vector sort that container and and once"
+    },
+    {
+      "start": 91.36,
+      "end": 96.8,
+      "duration": 5.44,
+      "text": "you have sorted that entire container of"
+    },
+    {
+      "start": 94.24,
+      "end": 99.52,
+      "duration": 5.28,
+      "text": "that container, you can take the third"
+    },
+    {
+      "start": 96.8,
+      "end": 102.0,
+      "duration": 5.2,
+      "text": "smallest element or the third element"
+    },
+    {
+      "start": 99.52,
+      "end": 104.8,
+      "duration": 5.28,
+      "text": "from the front. You can do that. But the"
+    },
+    {
+      "start": 102.0,
+      "end": 107.92,
+      "duration": 5.92,
+      "text": "problem in this particular approach is"
+    },
+    {
+      "start": 104.8,
+      "end": 110.56,
+      "duration": 5.76,
+      "text": "the time complexity will be b of n for"
+    },
+    {
+      "start": 107.92,
+      "end": 114.0,
+      "duration": 6.08,
+      "text": "the traversal that you will do and"
+    },
+    {
+      "start": 110.56,
+      "end": 116.32,
+      "duration": 5.76,
+      "text": "another b of n login if you decide to"
+    },
+    {
+      "start": 114.0,
+      "end": 119.84,
+      "duration": 5.84,
+      "text": "sort that entire container and you will"
+    },
+    {
+      "start": 116.32,
+      "end": 123.12,
+      "duration": 6.8,
+      "text": "be using an extra space of b of n in"
+    },
+    {
+      "start": 119.84,
+      "end": 125.2,
+      "duration": 5.36,
+      "text": "order to store the entire binary search"
+    },
+    {
+      "start": 123.12,
+      "end": 128.08,
+      "duration": 4.96,
+      "text": "tree into a container. So there is a"
+    },
+    {
+      "start": 125.2,
+      "end": 130.8,
+      "duration": 5.6,
+      "text": "problem with the time as well as space."
+    },
+    {
+      "start": 128.08,
+      "end": 133.44,
+      "duration": 5.36,
+      "text": "I don't want this extra login right. I"
+    },
+    {
+      "start": 130.8,
+      "end": 135.92,
+      "duration": 5.12,
+      "text": "want this to be done in b of n and I"
+    },
+    {
+      "start": 133.44,
+      "end": 137.68,
+      "duration": 4.24,
+      "text": "don't want the usage of b of n. So that"
+    },
+    {
+      "start": 135.92,
+      "end": 140.56,
+      "duration": 4.64,
+      "text": "is where the efficient approach comes"
+    },
+    {
+      "start": 137.68,
+      "end": 142.8,
+      "duration": 5.12,
+      "text": "in. What is an efficient approach?"
+    },
+    {
+      "start": 140.56,
+      "end": 145.04,
+      "duration": 4.48,
+      "text": "Generally it has been seen that or it's"
+    },
+    {
+      "start": 142.8,
+      "end": 147.28,
+      "duration": 4.48,
+      "text": "a property of binary search tree that if"
+    },
+    {
+      "start": 145.04,
+      "end": 148.8,
+      "duration": 3.76,
+      "text": "you write down the in order of the"
+    },
+    {
+      "start": 147.28,
+      "end": 150.72,
+      "duration": 3.44,
+      "text": "binary search tree. Yes, if you write"
+    },
+    {
+      "start": 148.8,
+      "end": 152.64,
+      "duration": 3.84,
+      "text": "down the in order. Let's write it over"
+    },
+    {
+      "start": 150.72,
+      "end": 154.64,
+      "duration": 3.92,
+      "text": "here. So if we write down the in order"
+    },
+    {
+      "start": 152.64,
+      "end": 159.44,
+      "duration": 6.8,
+      "text": "what's in order? If you remember it's"
+    },
+    {
+      "start": 154.64,
+      "end": 162.56,
+      "duration": 7.92,
+      "text": "left node and then right basically left"
+    },
+    {
+      "start": 159.44,
+      "end": 166.96,
+      "duration": 7.52,
+      "text": "root right. So if I if I ask for this"
+    },
+    {
+      "start": 162.56,
+      "end": 169.2,
+      "duration": 6.64,
+      "text": "particular tree left left so this is the"
+    },
+    {
+      "start": 166.96,
+      "end": 172.32,
+      "duration": 5.36,
+      "text": "first left which is null node will be"
+    },
+    {
+      "start": 169.2,
+      "end": 174.88,
+      "duration": 5.68,
+      "text": "one. So I can write one then right will"
+    },
+    {
+      "start": 172.32,
+      "end": 177.6,
+      "duration": 5.28,
+      "text": "be two then again node will be three. So"
+    },
+    {
+      "start": 174.88,
+      "end": 179.92,
+      "duration": 5.04,
+      "text": "if I write down the entire in order of"
+    },
+    {
+      "start": 177.6,
+      "end": 186.16,
+      "duration": 8.56,
+      "text": "this particular binary search tree I'll"
+    },
+    {
+      "start": 179.92,
+      "end": 187.92,
+      "duration": 8.0,
+      "text": "get 1 2 3 4 5 6 7 8. This is what the in"
+    },
+    {
+      "start": 186.16,
+      "end": 190.72,
+      "duration": 4.56,
+      "text": "order will look like. Now there is a"
+    },
+    {
+      "start": 187.92,
+      "end": 194.32,
+      "duration": 6.4,
+      "text": "very interesting property. The in order"
+    },
+    {
+      "start": 190.72,
+      "end": 197.2,
+      "duration": 6.48,
+      "text": "of any given binary search tree is"
+    },
+    {
+      "start": 194.32,
+      "end": 198.56,
+      "duration": 4.24,
+      "text": "always in sorted order because binary"
+    },
+    {
+      "start": 197.2,
+      "end": 201.04,
+      "duration": 3.84,
+      "text": "search tree follows a particular"
+    },
+    {
+      "start": 198.56,
+      "end": 202.72,
+      "duration": 4.16,
+      "text": "property that everything to the left of"
+    },
+    {
+      "start": 201.04,
+      "end": 204.16,
+      "duration": 3.12,
+      "text": "particular node is smaller and"
+    },
+    {
+      "start": 202.72,
+      "end": 206.96,
+      "duration": 4.24,
+      "text": "everything to the right of a particular"
+    },
+    {
+      "start": 204.16,
+      "end": 210.96,
+      "duration": 6.8,
+      "text": "node is greater. So that's why I can say"
+    },
+    {
+      "start": 206.96,
+      "end": 213.76,
+      "duration": 6.8,
+      "text": "that the in order since it is left node"
+    },
+    {
+      "start": 210.96,
+      "end": 215.84,
+      "duration": 4.88,
+      "text": "right the in order will always be"
+    },
+    {
+      "start": 213.76,
+      "end": 219.2,
+      "duration": 5.44,
+      "text": "sorted. So I can see that the in order"
+    },
+    {
+      "start": 215.84,
+      "end": 222.08,
+      "duration": 6.24,
+      "text": "is as of now sorted. So if it is sorted"
+    },
+    {
+      "start": 219.2,
+      "end": 224.88,
+      "duration": 5.68,
+      "text": "I think uh I can easily find out the"
+    },
+    {
+      "start": 222.08,
+      "end": 227.84,
+      "duration": 5.76,
+      "text": "third smallest element and that's very"
+    },
+    {
+      "start": 224.88,
+      "end": 230.88,
+      "duration": 6.0,
+      "text": "simple. So we will be eliminating yes we"
+    },
+    {
+      "start": 227.84,
+      "end": 234.32,
+      "duration": 6.48,
+      "text": "will be eliminating the extra n login"
+    },
+    {
+      "start": 230.88,
+      "end": 237.04,
+      "duration": 6.16,
+      "text": "that was required to sort. So instead of"
+    },
+    {
+      "start": 234.32,
+      "end": 240.48,
+      "duration": 6.16,
+      "text": "doing any particular DFS traversal we"
+    },
+    {
+      "start": 237.04,
+      "end": 242.56,
+      "duration": 5.52,
+      "text": "will be doing an an in order traversal"
+    },
+    {
+      "start": 240.48,
+      "end": 244.64,
+      "duration": 4.16,
+      "text": "of the binary search tree and hence"
+    },
+    {
+      "start": 242.56,
+      "end": 247.92,
+      "duration": 5.36,
+      "text": "we'll be eliminating the extra login"
+    },
+    {
+      "start": 244.64,
+      "end": 251.04,
+      "duration": 6.4,
+      "text": "factor of sorting but still still we're"
+    },
+    {
+      "start": 247.92,
+      "end": 253.44,
+      "duration": 5.52,
+      "text": "using an extra space complexity of BO of"
+    },
+    {
+      "start": 251.04,
+      "end": 255.84,
+      "duration": 4.8,
+      "text": "N but still we're using an extra space"
+    },
+    {
+      "start": 253.44,
+      "end": 259.52,
+      "duration": 6.08,
+      "text": "complexity of BO of N in order to store"
+    },
+    {
+      "start": 255.84,
+      "end": 262.4,
+      "duration": 6.56,
+      "text": "this entire BST. So how can you how can"
+    },
+    {
+      "start": 259.52,
+      "end": 265.2,
+      "duration": 5.68,
+      "text": "you make sure that we don't use an extra"
+    },
+    {
+      "start": 262.4,
+      "end": 266.88,
+      "duration": 4.48,
+      "text": "space? So what we will do is what if I"
+    },
+    {
+      "start": 265.2,
+      "end": 270.16,
+      "duration": 4.96,
+      "text": "say that hey listen you're doing an"
+    },
+    {
+      "start": 266.88,
+      "end": 272.64,
+      "duration": 5.76,
+      "text": "inorder traversal right so why can't uh"
+    },
+    {
+      "start": 270.16,
+      "end": 275.92,
+      "duration": 5.76,
+      "text": "why can't you keep a counter zero so"
+    },
+    {
+      "start": 272.64,
+      "end": 279.76,
+      "duration": 7.12,
+      "text": "whenever you visit the node because in"
+    },
+    {
+      "start": 275.92,
+      "end": 282.0,
+      "duration": 6.08,
+      "text": "order traversal is left then the node or"
+    },
+    {
+      "start": 279.76,
+      "end": 285.2,
+      "duration": 5.44,
+      "text": "the root and then the right so you're"
+    },
+    {
+      "start": 282.0,
+      "end": 288.08,
+      "duration": 6.08,
+      "text": "going left so whenever you visit a"
+    },
+    {
+      "start": 285.2,
+      "end": 289.6,
+      "duration": 4.4,
+      "text": "particular node that means that is when"
+    },
+    {
+      "start": 288.08,
+      "end": 291.36,
+      "duration": 3.28,
+      "text": "the traversal is happening that is when"
+    },
+    {
+      "start": 289.6,
+      "end": 293.28,
+      "duration": 3.68,
+      "text": "you're visiting a particular node so"
+    },
+    {
+      "start": 291.36,
+      "end": 296.4,
+      "duration": 5.04,
+      "text": "whenever you're visiting a node"
+    },
+    {
+      "start": 293.28,
+      "end": 298.32,
+      "duration": 5.04,
+      "text": "Why can't you do a counter++? Because"
+    },
+    {
+      "start": 296.4,
+      "end": 300.8,
+      "duration": 4.4,
+      "text": "that is when you're visiting a node. So"
+    },
+    {
+      "start": 298.32,
+      "end": 303.76,
+      "duration": 5.44,
+      "text": "if you can in the traversal, yes, in the"
+    },
+    {
+      "start": 300.8,
+      "end": 307.12,
+      "duration": 6.32,
+      "text": "traversal, if you can do a counter plus"
+    },
+    {
+      "start": 303.76,
+      "end": 310.32,
+      "duration": 6.56,
+      "text": "and at the moment the counter becomes"
+    },
+    {
+      "start": 307.12,
+      "end": 312.8,
+      "duration": 5.68,
+      "text": "equal to equal to K, can I say my answer"
+    },
+    {
+      "start": 310.32,
+      "end": 315.84,
+      "duration": 5.52,
+      "text": "will be the node that you are currently"
+    },
+    {
+      "start": 312.8,
+      "end": 318.24,
+      "duration": 5.44,
+      "text": "standing at. I think in the traversal be"
+    },
+    {
+      "start": 315.84,
+      "end": 319.92,
+      "duration": 4.08,
+      "text": "it the recursive traversal be it the"
+    },
+    {
+      "start": 318.24,
+      "end": 322.4,
+      "duration": 4.16,
+      "text": "stack traversal be it the morish"
+    },
+    {
+      "start": 319.92,
+      "end": 324.88,
+      "duration": 4.96,
+      "text": "traversal in any of the traversals if"
+    },
+    {
+      "start": 322.4,
+      "end": 327.52,
+      "duration": 5.12,
+      "text": "you can insert this logic where you say"
+    },
+    {
+      "start": 324.88,
+      "end": 330.4,
+      "duration": 5.52,
+      "text": "hey listen I'm going to do a counter"
+    },
+    {
+      "start": 327.52,
+      "end": 332.8,
+      "duration": 5.28,
+      "text": "plus the moment I am at the node and if"
+    },
+    {
+      "start": 330.4,
+      "end": 335.2,
+      "duration": 4.8,
+      "text": "the counter is equivalent to the k I can"
+    },
+    {
+      "start": 332.8,
+      "end": 336.96,
+      "duration": 4.16,
+      "text": "easily say that that is my k smallest"
+    },
+    {
+      "start": 335.2,
+      "end": 339.2,
+      "duration": 4.0,
+      "text": "element I think that should definitely"
+    },
+    {
+      "start": 336.96,
+      "end": 341.52,
+      "duration": 4.56,
+      "text": "work so what kind of traversals you can"
+    },
+    {
+      "start": 339.2,
+      "end": 343.68,
+      "duration": 4.48,
+      "text": "do let's uh talk about that so if you do"
+    },
+    {
+      "start": 341.52,
+      "end": 346.08,
+      "duration": 4.56,
+      "text": "the recursive traversal"
+    },
+    {
+      "start": 343.68,
+      "end": 349.84,
+      "duration": 6.16,
+      "text": "that will take me a time complexity of"
+    },
+    {
+      "start": 346.08,
+      "end": 352.88,
+      "duration": 6.8,
+      "text": "BO of N and an extra stack space of BO"
+    },
+    {
+      "start": 349.84,
+      "end": 355.92,
+      "duration": 6.08,
+      "text": "of N. Again, if I do the iterative stack"
+    },
+    {
+      "start": 352.88,
+      "end": 358.24,
+      "duration": 5.36,
+      "text": "traversal using stack, it's going to be"
+    },
+    {
+      "start": 355.92,
+      "end": 360.8,
+      "duration": 4.88,
+      "text": "same. But the moment I do the Morus"
+    },
+    {
+      "start": 358.24,
+      "end": 363.6,
+      "duration": 5.36,
+      "text": "traversal, yes, we will be requiring a"
+    },
+    {
+      "start": 360.8,
+      "end": 366.4,
+      "duration": 5.6,
+      "text": "time complexity of BGO of N and a space"
+    },
+    {
+      "start": 363.6,
+      "end": 368.32,
+      "duration": 4.72,
+      "text": "complexity of BGO of one. And I've"
+    },
+    {
+      "start": 366.4,
+      "end": 369.92,
+      "duration": 3.52,
+      "text": "discussed all these traversals in this"
+    },
+    {
+      "start": 368.32,
+      "end": 371.2,
+      "duration": 2.88,
+      "text": "particular tree series. So you can check"
+    },
+    {
+      "start": 369.92,
+      "end": 373.44,
+      "duration": 3.52,
+      "text": "out the playlist and you'll get all"
+    },
+    {
+      "start": 371.2,
+      "end": 374.64,
+      "duration": 3.44,
+      "text": "these traversals. The only stuff that"
+    },
+    {
+      "start": 373.44,
+      "end": 377.36,
+      "duration": 3.92,
+      "text": "you have to do in all of those"
+    },
+    {
+      "start": 374.64,
+      "end": 381.2,
+      "duration": 6.56,
+      "text": "traversals is insert this particular"
+    },
+    {
+      "start": 377.36,
+      "end": 383.12,
+      "duration": 5.76,
+      "text": "line of code and I have I've attached a"
+    },
+    {
+      "start": 381.2,
+      "end": 384.56,
+      "duration": 3.36,
+      "text": "code link in the description. You can"
+    },
+    {
+      "start": 383.12,
+      "end": 387.76,
+      "duration": 4.64,
+      "text": "see that I have taken the iterative"
+    },
+    {
+      "start": 384.56,
+      "end": 391.12,
+      "duration": 6.56,
+      "text": "traversal and I've attached this piece"
+    },
+    {
+      "start": 387.76,
+      "end": 393.12,
+      "duration": 5.36,
+      "text": "of code so that you get the k smallest"
+    },
+    {
+      "start": 391.12,
+      "end": 395.76,
+      "duration": 4.64,
+      "text": "element. Now what if I change this"
+    },
+    {
+      "start": 393.12,
+      "end": 399.6,
+      "duration": 6.48,
+      "text": "question and I just say that hey I make"
+    },
+    {
+      "start": 395.76,
+      "end": 401.36,
+      "duration": 5.6,
+      "text": "this k largest element and I ask you how"
+    },
+    {
+      "start": 399.6,
+      "end": 403.76,
+      "duration": 4.16,
+      "text": "will you solve this particular problem."
+    },
+    {
+      "start": 401.36,
+      "end": 407.84,
+      "duration": 6.48,
+      "text": "Now I've just changed the question to"
+    },
+    {
+      "start": 403.76,
+      "end": 410.4,
+      "duration": 6.64,
+      "text": "saying kth largest element in BST. Now"
+    },
+    {
+      "start": 407.84,
+      "end": 412.4,
+      "duration": 4.56,
+      "text": "in this case it's the same question that"
+    },
+    {
+      "start": 410.4,
+      "end": 414.48,
+      "duration": 4.08,
+      "text": "you're solving. What you need to do is"
+    },
+    {
+      "start": 412.4,
+      "end": 417.44,
+      "duration": 5.04,
+      "text": "okay I know that I need to figure out"
+    },
+    {
+      "start": 414.48,
+      "end": 419.44,
+      "duration": 4.96,
+      "text": "kth largest. So if by doing one"
+    },
+    {
+      "start": 417.44,
+      "end": 422.64,
+      "duration": 5.2,
+      "text": "traversal yes you can do a one simple"
+    },
+    {
+      "start": 419.44,
+      "end": 424.64,
+      "duration": 5.2,
+      "text": "traversal and count the number of nodes."
+    },
+    {
+      "start": 422.64,
+      "end": 426.72,
+      "duration": 4.08,
+      "text": "So the number of notes will be n right?"
+    },
+    {
+      "start": 424.64,
+      "end": 428.96,
+      "duration": 4.32,
+      "text": "If I count the number of nodes, how many"
+    },
+    {
+      "start": 426.72,
+      "end": 432.16,
+      "duration": 5.44,
+      "text": "total notes are there? Then I can say"
+    },
+    {
+      "start": 428.96,
+      "end": 435.76,
+      "duration": 6.8,
+      "text": "that kth largest"
+    },
+    {
+      "start": 432.16,
+      "end": 437.36,
+      "duration": 5.2,
+      "text": "is equivalent to saying n minus k"
+    },
+    {
+      "start": 435.76,
+      "end": 440.16,
+      "duration": 4.4,
+      "text": "smallest."
+    },
+    {
+      "start": 437.36,
+      "end": 443.04,
+      "duration": 5.68,
+      "text": "Don't you think that ideally that is"
+    },
+    {
+      "start": 440.16,
+      "end": 446.08,
+      "duration": 5.92,
+      "text": "that is correct right? So I think that"
+    },
+    {
+      "start": 443.04,
+      "end": 447.76,
+      "duration": 4.72,
+      "text": "that makes sense because if k largest"
+    },
+    {
+      "start": 446.08,
+      "end": 450.08,
+      "duration": 4.0,
+      "text": "I'm saying that's equivalent to saying"
+    },
+    {
+      "start": 447.76,
+      "end": 452.24,
+      "duration": 4.48,
+      "text": "okay from the front what will be it n"
+    },
+    {
+      "start": 450.08,
+      "end": 454.88,
+      "duration": 4.8,
+      "text": "minus k smallest. So it will require two"
+    },
+    {
+      "start": 452.24,
+      "end": 456.8,
+      "duration": 4.56,
+      "text": "traversals. One traversal to compute the"
+    },
+    {
+      "start": 454.88,
+      "end": 458.96,
+      "duration": 4.08,
+      "text": "number of nodes if that's not given to"
+    },
+    {
+      "start": 456.8,
+      "end": 461.12,
+      "duration": 4.32,
+      "text": "you. And then in order to find kth"
+    },
+    {
+      "start": 458.96,
+      "end": 463.84,
+      "duration": 4.88,
+      "text": "largest, you just need to find n minus"
+    },
+    {
+      "start": 461.12,
+      "end": 465.36,
+      "duration": 4.24,
+      "text": "kth smallest. That's the uh that's a"
+    },
+    {
+      "start": 463.84,
+      "end": 467.52,
+      "duration": 3.68,
+      "text": "shuttle change that you have to do and"
+    },
+    {
+      "start": 465.36,
+      "end": 471.04,
+      "duration": 5.68,
+      "text": "you'll be able to easily figure out the"
+    },
+    {
+      "start": 467.52,
+      "end": 474.72,
+      "duration": 7.2,
+      "text": "n minus k smallest element on on this"
+    },
+    {
+      "start": 471.04,
+      "end": 476.96,
+      "duration": 5.92,
+      "text": "partic on a particular given bst. So I"
+    },
+    {
+      "start": 474.72,
+      "end": 479.04,
+      "duration": 4.32,
+      "text": "hope I hope guys you have understood the"
+    },
+    {
+      "start": 476.96,
+      "end": 480.72,
+      "duration": 3.76,
+      "text": "entire explanation and if you want the"
+    },
+    {
+      "start": 479.04,
+      "end": 482.8,
+      "duration": 3.76,
+      "text": "code the link will be in the"
+    },
+    {
+      "start": 480.72,
+      "end": 484.72,
+      "duration": 4.0,
+      "text": "description. So just in case you did"
+    },
+    {
+      "start": 482.8,
+      "end": 486.24,
+      "duration": 3.44,
+      "text": "understand please please please make"
+    },
+    {
+      "start": 484.72,
+      "end": 488.08,
+      "duration": 3.36,
+      "text": "sure you like this video and if you're"
+    },
+    {
+      "start": 486.24,
+      "end": 490.32,
+      "duration": 4.08,
+      "text": "new to this channel do consider"
+    },
+    {
+      "start": 488.08,
+      "end": 492.32,
+      "duration": 4.24,
+      "text": "subscribing because that is that is the"
+    },
+    {
+      "start": 490.32,
+      "end": 494.56,
+      "duration": 4.24,
+      "text": "only thing that keeps me motivated to"
+    },
+    {
+      "start": 492.32,
+      "end": 496.24,
+      "duration": 3.92,
+      "text": "make uh such kind of content. And with"
+    },
+    {
+      "start": 494.56,
+      "end": 498.48,
+      "duration": 3.92,
+      "text": "this I'll be wrapping up this video."
+    },
+    {
+      "start": 496.24,
+      "end": 500.25,
+      "duration": 4.01,
+      "text": "Let's meet in the next one. Bye-bye."
+    },
+    {
+      "start": 498.48,
+      "end": 502.8,
+      "duration": 4.32,
+      "text": "Whenever"
+    },
+    {
+      "start": 500.25,
+      "end": 505.04,
+      "duration": 4.79,
+      "text": "[Music]"
+    },
+    {
+      "start": 502.8,
+      "end": 508.04,
+      "duration": 5.24,
+      "text": "you're"
+    },
+    {
+      "start": 505.04,
+      "end": 508.04,
+      "duration": 3.0,
+      "text": "willing"
+    }
+  ]
+}

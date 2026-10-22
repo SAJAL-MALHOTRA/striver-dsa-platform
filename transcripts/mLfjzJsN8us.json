@@ -1,0 +1,2162 @@
+{
+  "video_id": "mLfjzJsN8us",
+  "title": "DP 2. Climbing Stairs | Learn How to Write 1D Recurrence Relations",
+  "duration_sec": 797,
+  "num_segments": 359,
+  "segments": [
+    {
+      "start": 0.08,
+      "end": 3.44,
+      "duration": 3.36,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 1.52,
+      "end": 5.04,
+      "duration": 3.52,
+      "text": "i hope you guys are doing extremely well"
+    },
+    {
+      "start": 3.44,
+      "end": 7.2,
+      "duration": 3.76,
+      "text": "so welcome back to the second lecture of"
+    },
+    {
+      "start": 5.04,
+      "end": 9.68,
+      "duration": 4.64,
+      "text": "the dynamic programming playlist we're"
+    },
+    {
+      "start": 7.2,
+      "end": 13.36,
+      "duration": 6.16,
+      "text": "going to solve a problem which is count"
+    },
+    {
+      "start": 9.68,
+      "end": 15.6,
+      "duration": 5.92,
+      "text": "ways to reach the nth stairs yes so what"
+    },
+    {
+      "start": 13.36,
+      "end": 18.24,
+      "duration": 4.88,
+      "text": "does the problem actually state it"
+    },
+    {
+      "start": 15.6,
+      "end": 20.24,
+      "duration": 4.64,
+      "text": "states that you'll be given a number of"
+    },
+    {
+      "start": 18.24,
+      "end": 21.68,
+      "duration": 3.44,
+      "text": "stairs so you'll be given n which is the"
+    },
+    {
+      "start": 20.24,
+      "end": 24.0,
+      "duration": 3.76,
+      "text": "number of stairs"
+    },
+    {
+      "start": 21.68,
+      "end": 25.68,
+      "duration": 4.0,
+      "text": "initially you are at the zeroth state"
+    },
+    {
+      "start": 24.0,
+      "end": 28.32,
+      "duration": 4.32,
+      "text": "that means you are at the zeroth state"
+    },
+    {
+      "start": 25.68,
+      "end": 30.48,
+      "duration": 4.8,
+      "text": "okay and you need to reach the"
+    },
+    {
+      "start": 28.32,
+      "end": 33.6,
+      "duration": 5.28,
+      "text": "nth stair like you have to reach the nth"
+    },
+    {
+      "start": 30.48,
+      "end": 36.4,
+      "duration": 5.92,
+      "text": "stair now each time you can either climb"
+    },
+    {
+      "start": 33.6,
+      "end": 39.44,
+      "duration": 5.84,
+      "text": "one step or you can either climb couple"
+    },
+    {
+      "start": 36.4,
+      "end": 42.48,
+      "duration": 6.08,
+      "text": "of steps now you're supposed to return"
+    },
+    {
+      "start": 39.44,
+      "end": 45.04,
+      "duration": 5.6,
+      "text": "the number of distinct ways in which you"
+    },
+    {
+      "start": 42.48,
+      "end": 47.84,
+      "duration": 5.36,
+      "text": "can climb from the zeroth step to the"
+    },
+    {
+      "start": 45.04,
+      "end": 51.04,
+      "duration": 6.0,
+      "text": "nth step now for an example if i'm"
+    },
+    {
+      "start": 47.84,
+      "end": 53.6,
+      "duration": 5.76,
+      "text": "giving you n uh is equal to three then i"
+    },
+    {
+      "start": 51.04,
+      "end": 55.44,
+      "duration": 4.4,
+      "text": "can say if from the zeroth step i take"
+    },
+    {
+      "start": 53.6,
+      "end": 57.36,
+      "duration": 3.76,
+      "text": "one step then i take one more step then"
+    },
+    {
+      "start": 55.44,
+      "end": 60.48,
+      "duration": 5.04,
+      "text": "if i take one more step i'm going to"
+    },
+    {
+      "start": 57.36,
+      "end": 62.56,
+      "duration": 5.2,
+      "text": "reach the third"
+    },
+    {
+      "start": 60.48,
+      "end": 64.16,
+      "duration": 3.68,
+      "text": "or from zero if i take two step and then"
+    },
+    {
+      "start": 62.56,
+      "end": 66.4,
+      "duration": 3.84,
+      "text": "i take one step i'm going to reach the"
+    },
+    {
+      "start": 64.16,
+      "end": 68.08,
+      "duration": 3.92,
+      "text": "third or from zero if i take one step"
+    },
+    {
+      "start": 66.4,
+      "end": 70.4,
+      "duration": 4.0,
+      "text": "then if i take two steps i'm going to"
+    },
+    {
+      "start": 68.08,
+      "end": 72.48,
+      "duration": 4.4,
+      "text": "reach the third so i can see these three"
+    },
+    {
+      "start": 70.4,
+      "end": 75.68,
+      "duration": 5.28,
+      "text": "are three distinct ways in which you can"
+    },
+    {
+      "start": 72.48,
+      "end": 77.76,
+      "duration": 5.28,
+      "text": "reach the third step so the problem is"
+    },
+    {
+      "start": 75.68,
+      "end": 80.88,
+      "duration": 5.2,
+      "text": "very simple uh you have to tell me the"
+    },
+    {
+      "start": 77.76,
+      "end": 83.52,
+      "duration": 5.76,
+      "text": "distinct ways in which you can reach the"
+    },
+    {
+      "start": 80.88,
+      "end": 85.68,
+      "duration": 4.8,
+      "text": "third step so the problem is very simple"
+    },
+    {
+      "start": 83.52,
+      "end": 87.76,
+      "duration": 4.24,
+      "text": "and straightforward you have to tell me"
+    },
+    {
+      "start": 85.68,
+      "end": 89.76,
+      "duration": 4.08,
+      "text": "the distinct ways in which you can reach"
+    },
+    {
+      "start": 87.76,
+      "end": 92.48,
+      "duration": 4.72,
+      "text": "the nth stair if you start from the"
+    },
+    {
+      "start": 89.76,
+      "end": 95.84,
+      "duration": 6.08,
+      "text": "zeroth stair so"
+    },
+    {
+      "start": 92.48,
+      "end": 96.96,
+      "duration": 4.48,
+      "text": "remember one thing uh in all the 1d uh"
+    },
+    {
+      "start": 95.84,
+      "end": 99.68,
+      "duration": 3.84,
+      "text": "problems"
+    },
+    {
+      "start": 96.96,
+      "end": 101.6,
+      "duration": 4.64,
+      "text": "like generally in dp in all the 1d"
+    },
+    {
+      "start": 99.68,
+      "end": 105.28,
+      "duration": 5.6,
+      "text": "problems i'll be telling you away so"
+    },
+    {
+      "start": 101.6,
+      "end": 109.84,
+      "duration": 8.24,
+      "text": "first let's understand how do you uh"
+    },
+    {
+      "start": 105.28,
+      "end": 109.84,
+      "duration": 4.56,
+      "text": "how do you understand that this is a"
+    },
+    {
+      "start": 110.0,
+      "end": 113.84,
+      "duration": 3.84,
+      "text": "dp problem like that's the first step"
+    },
+    {
+      "start": 112.08,
+      "end": 116.48,
+      "duration": 4.4,
+      "text": "before applying dp you have to"
+    },
+    {
+      "start": 113.84,
+      "end": 118.88,
+      "duration": 5.04,
+      "text": "understand that this is indeed a dp"
+    },
+    {
+      "start": 116.48,
+      "end": 120.32,
+      "duration": 3.84,
+      "text": "problem now whenever they say whenever"
+    },
+    {
+      "start": 118.88,
+      "end": 122.0,
+      "duration": 3.12,
+      "text": "the questions are like this generically"
+    },
+    {
+      "start": 120.32,
+      "end": 124.64,
+      "duration": 4.32,
+      "text": "whenever the questions are like this"
+    },
+    {
+      "start": 122.0,
+      "end": 126.72,
+      "duration": 4.72,
+      "text": "count to be the total number of ways"
+    },
+    {
+      "start": 124.64,
+      "end": 129.84,
+      "duration": 5.2,
+      "text": "so that's the first point count the"
+    },
+    {
+      "start": 126.72,
+      "end": 129.84,
+      "duration": 3.12,
+      "text": "total number of ways"
+    },
+    {
+      "start": 132.08,
+      "end": 136.56,
+      "duration": 4.48,
+      "text": "the next can be uh probably there might"
+    },
+    {
+      "start": 134.08,
+      "end": 138.72,
+      "duration": 4.64,
+      "text": "be multiple ways of doing something and"
+    },
+    {
+      "start": 136.56,
+      "end": 141.28,
+      "duration": 4.72,
+      "text": "they're asking you to figure out which"
+    },
+    {
+      "start": 138.72,
+      "end": 142.88,
+      "duration": 4.16,
+      "text": "gives you the minimum output or the max"
+    },
+    {
+      "start": 141.28,
+      "end": 144.88,
+      "duration": 3.6,
+      "text": "output so the question might be like"
+    },
+    {
+      "start": 142.88,
+      "end": 146.96,
+      "duration": 4.08,
+      "text": "there are multiple ways to do this but"
+    },
+    {
+      "start": 144.88,
+      "end": 149.12,
+      "duration": 4.24,
+      "text": "you gotta tell me uh which is giving you"
+    },
+    {
+      "start": 146.96,
+      "end": 151.28,
+      "duration": 4.32,
+      "text": "the minimal output or maximum output"
+    },
+    {
+      "start": 149.12,
+      "end": 154.16,
+      "duration": 5.04,
+      "text": "generally in these kind of questions you"
+    },
+    {
+      "start": 151.28,
+      "end": 157.6,
+      "duration": 6.32,
+      "text": "tend to apply recursion why because if"
+    },
+    {
+      "start": 154.16,
+      "end": 159.84,
+      "duration": 5.68,
+      "text": "i'm saying you count distinct ways that"
+    },
+    {
+      "start": 157.6,
+      "end": 161.44,
+      "duration": 3.84,
+      "text": "means i'm saying you that okay"
+    },
+    {
+      "start": 159.84,
+      "end": 163.2,
+      "duration": 3.36,
+      "text": "figure out how many ways are there so"
+    },
+    {
+      "start": 161.44,
+      "end": 164.24,
+      "duration": 2.8,
+      "text": "you have to try all possible ways"
+    },
+    {
+      "start": 163.2,
+      "end": 166.24,
+      "duration": 3.04,
+      "text": "remember this"
+    },
+    {
+      "start": 164.24,
+      "end": 170.8,
+      "duration": 6.56,
+      "text": "whenever the concept of"
+    },
+    {
+      "start": 166.24,
+      "end": 173.2,
+      "duration": 6.96,
+      "text": "try all possible way comes in try all"
+    },
+    {
+      "start": 170.8,
+      "end": 176.16,
+      "duration": 5.36,
+      "text": "possible ways comes in whenever it can"
+    },
+    {
+      "start": 173.2,
+      "end": 178.4,
+      "duration": 5.2,
+      "text": "be any way if the concept of try all"
+    },
+    {
+      "start": 176.16,
+      "end": 179.6,
+      "duration": 3.44,
+      "text": "possible ways comes in and if there is"
+    },
+    {
+      "start": 178.4,
+      "end": 181.44,
+      "duration": 3.04,
+      "text": "like count"
+    },
+    {
+      "start": 179.6,
+      "end": 183.28,
+      "duration": 3.68,
+      "text": "or if there is like figure out the best"
+    },
+    {
+      "start": 181.44,
+      "end": 185.04,
+      "duration": 3.6,
+      "text": "way"
+    },
+    {
+      "start": 183.28,
+      "end": 186.64,
+      "duration": 3.36,
+      "text": "if out of all the possible ways you have"
+    },
+    {
+      "start": 185.04,
+      "end": 188.32,
+      "duration": 3.28,
+      "text": "to figure out"
+    },
+    {
+      "start": 186.64,
+      "end": 189.6,
+      "duration": 2.96,
+      "text": "count like how many ways are there or"
+    },
+    {
+      "start": 188.32,
+      "end": 192.56,
+      "duration": 4.24,
+      "text": "the best way"
+    },
+    {
+      "start": 189.6,
+      "end": 194.8,
+      "duration": 5.2,
+      "text": "that's when you try to apply recursion"
+    },
+    {
+      "start": 192.56,
+      "end": 197.84,
+      "duration": 5.28,
+      "text": "what did i say that's when you try to"
+    },
+    {
+      "start": 194.8,
+      "end": 201.6,
+      "duration": 6.8,
+      "text": "apply something as recursion where you"
+    },
+    {
+      "start": 197.84,
+      "end": 201.6,
+      "duration": 3.76,
+      "text": "try all possible ways"
+    },
+    {
+      "start": 203.04,
+      "end": 206.4,
+      "duration": 3.36,
+      "text": "and if you remember"
+    },
+    {
+      "start": 204.56,
+      "end": 208.4,
+      "duration": 3.84,
+      "text": "in the lecture 7 of the recursion"
+    },
+    {
+      "start": 206.4,
+      "end": 211.12,
+      "duration": 4.72,
+      "text": "playlist in the lecture 7 of the"
+    },
+    {
+      "start": 208.4,
+      "end": 213.2,
+      "duration": 4.8,
+      "text": "recursion playlist i told you if you"
+    },
+    {
+      "start": 211.12,
+      "end": 215.44,
+      "duration": 4.32,
+      "text": "have to count all"
+    },
+    {
+      "start": 213.2,
+      "end": 217.2,
+      "duration": 4.0,
+      "text": "ways"
+    },
+    {
+      "start": 215.44,
+      "end": 219.04,
+      "duration": 3.6,
+      "text": "then you have to perform all the ways"
+    },
+    {
+      "start": 217.2,
+      "end": 220.64,
+      "duration": 3.44,
+      "text": "and then sum it up if you have to figure"
+    },
+    {
+      "start": 219.04,
+      "end": 223.04,
+      "duration": 4.0,
+      "text": "out the best way then you have to"
+    },
+    {
+      "start": 220.64,
+      "end": 225.04,
+      "duration": 4.4,
+      "text": "perform all the ways and tell which is"
+    },
+    {
+      "start": 223.04,
+      "end": 227.2,
+      "duration": 4.16,
+      "text": "the best among them so you'll understand"
+    },
+    {
+      "start": 225.04,
+      "end": 229.28,
+      "duration": 4.24,
+      "text": "these things in depth but as of now just"
+    },
+    {
+      "start": 227.2,
+      "end": 231.6,
+      "duration": 4.4,
+      "text": "understand that whenever the problems"
+    },
+    {
+      "start": 229.28,
+      "end": 234.56,
+      "duration": 5.28,
+      "text": "tells you to figure out or like try out"
+    },
+    {
+      "start": 231.6,
+      "end": 236.8,
+      "duration": 5.2,
+      "text": "all possible ways then you tend to think"
+    },
+    {
+      "start": 234.56,
+      "end": 239.2,
+      "duration": 4.64,
+      "text": "of recursion when recursion says i'm"
+    },
+    {
+      "start": 236.8,
+      "end": 240.72,
+      "duration": 3.92,
+      "text": "going to try all possible ways whether i"
+    },
+    {
+      "start": 239.2,
+      "end": 243.04,
+      "duration": 3.84,
+      "text": "can count or probably i can found the"
+    },
+    {
+      "start": 240.72,
+      "end": 244.96,
+      "duration": 4.24,
+      "text": "best that's when you think of recursion"
+    },
+    {
+      "start": 243.04,
+      "end": 246.48,
+      "duration": 3.44,
+      "text": "and once you think of recursion then you"
+    },
+    {
+      "start": 244.96,
+      "end": 249.44,
+      "duration": 4.48,
+      "text": "can think of dynamic programming but the"
+    },
+    {
+      "start": 246.48,
+      "end": 251.84,
+      "duration": 5.36,
+      "text": "first step is try to figure this out"
+    },
+    {
+      "start": 249.44,
+      "end": 254.08,
+      "duration": 4.64,
+      "text": "that this is a recursive problem that's"
+    },
+    {
+      "start": 251.84,
+      "end": 255.68,
+      "duration": 3.84,
+      "text": "the first step behind every problem like"
+    },
+    {
+      "start": 254.08,
+      "end": 257.04,
+      "duration": 2.96,
+      "text": "over here"
+    },
+    {
+      "start": 255.68,
+      "end": 258.96,
+      "duration": 3.28,
+      "text": "like over here"
+    },
+    {
+      "start": 257.04,
+      "end": 261.12,
+      "duration": 4.08,
+      "text": "it was n equal to three so you're like"
+    },
+    {
+      "start": 258.96,
+      "end": 263.12,
+      "duration": 4.16,
+      "text": "okay from zero you will take one step to"
+    },
+    {
+      "start": 261.12,
+      "end": 264.64,
+      "duration": 3.52,
+      "text": "one from one you'll take one step to one"
+    },
+    {
+      "start": 263.12,
+      "end": 266.48,
+      "duration": 3.36,
+      "text": "from two you'll take one step to one and"
+    },
+    {
+      "start": 264.64,
+      "end": 268.8,
+      "duration": 4.16,
+      "text": "you'll reach three or from zero you'll"
+    },
+    {
+      "start": 266.48,
+      "end": 271.12,
+      "duration": 4.64,
+      "text": "take two steps to two then you'll take"
+    },
+    {
+      "start": 268.8,
+      "end": 273.12,
+      "duration": 4.32,
+      "text": "one step to uh three you'll reach or"
+    },
+    {
+      "start": 271.12,
+      "end": 274.96,
+      "duration": 3.84,
+      "text": "from zero you'll take one step to one"
+    },
+    {
+      "start": 273.12,
+      "end": 277.04,
+      "duration": 3.92,
+      "text": "then you'll take two steps to three so"
+    },
+    {
+      "start": 274.96,
+      "end": 279.52,
+      "duration": 4.56,
+      "text": "these were the three possible ways in"
+    },
+    {
+      "start": 277.04,
+      "end": 282.32,
+      "duration": 5.28,
+      "text": "which you can reach so what is this"
+    },
+    {
+      "start": 279.52,
+      "end": 284.48,
+      "duration": 4.96,
+      "text": "giving you an idea try all possible ways"
+    },
+    {
+      "start": 282.32,
+      "end": 286.88,
+      "duration": 4.56,
+      "text": "yes so a lot of people say that if you"
+    },
+    {
+      "start": 284.48,
+      "end": 288.8,
+      "duration": 4.32,
+      "text": "can master recursion you can master dp"
+    },
+    {
+      "start": 286.88,
+      "end": 290.96,
+      "duration": 4.08,
+      "text": "so i'm gonna teach you a trick"
+    },
+    {
+      "start": 288.8,
+      "end": 293.12,
+      "duration": 4.32,
+      "text": "i'm gonna teach you a shortcut trick"
+    },
+    {
+      "start": 290.96,
+      "end": 295.52,
+      "duration": 4.56,
+      "text": "which will be helpful in all the"
+    },
+    {
+      "start": 293.12,
+      "end": 297.84,
+      "duration": 4.72,
+      "text": "problems in db and you will be able to"
+    },
+    {
+      "start": 295.52,
+      "end": 300.0,
+      "duration": 4.48,
+      "text": "write every recurrence relation so the"
+    },
+    {
+      "start": 297.84,
+      "end": 302.4,
+      "duration": 4.56,
+      "text": "step one of that trick is"
+    },
+    {
+      "start": 300.0,
+      "end": 304.32,
+      "duration": 4.32,
+      "text": "try to represent the problem in terms of"
+    },
+    {
+      "start": 302.4,
+      "end": 306.0,
+      "duration": 3.6,
+      "text": "index"
+    },
+    {
+      "start": 304.32,
+      "end": 308.4,
+      "duration": 4.08,
+      "text": "like if it's an array problem there will"
+    },
+    {
+      "start": 306.0,
+      "end": 310.4,
+      "duration": 4.4,
+      "text": "always be an index but if it's not an"
+    },
+    {
+      "start": 308.4,
+      "end": 313.76,
+      "duration": 5.36,
+      "text": "array problem then also try to represent"
+    },
+    {
+      "start": 310.4,
+      "end": 314.88,
+      "duration": 4.48,
+      "text": "the problem in terms of index remember"
+    },
+    {
+      "start": 313.76,
+      "end": 317.12,
+      "duration": 3.36,
+      "text": "this"
+    },
+    {
+      "start": 314.88,
+      "end": 319.76,
+      "duration": 4.88,
+      "text": "you will always do this try to represent"
+    },
+    {
+      "start": 317.12,
+      "end": 321.84,
+      "duration": 4.72,
+      "text": "the problem in terms of index"
+    },
+    {
+      "start": 319.76,
+      "end": 325.76,
+      "duration": 6.0,
+      "text": "next"
+    },
+    {
+      "start": 321.84,
+      "end": 327.52,
+      "duration": 5.68,
+      "text": "do all possible stuffs on that index"
+    },
+    {
+      "start": 325.76,
+      "end": 328.88,
+      "duration": 3.12,
+      "text": "do all possible"
+    },
+    {
+      "start": 327.52,
+      "end": 331.76,
+      "duration": 4.24,
+      "text": "stuffs"
+    },
+    {
+      "start": 328.88,
+      "end": 334.08,
+      "duration": 5.2,
+      "text": "on that index"
+    },
+    {
+      "start": 331.76,
+      "end": 338.52,
+      "duration": 6.76,
+      "text": "according to the problem statement"
+    },
+    {
+      "start": 334.08,
+      "end": 338.52,
+      "duration": 4.44,
+      "text": "according to the problem statement"
+    },
+    {
+      "start": 338.72,
+      "end": 341.44,
+      "duration": 2.72,
+      "text": "step 3"
+    },
+    {
+      "start": 341.76,
+      "end": 346.56,
+      "duration": 4.8,
+      "text": "if the question says count all the ways"
+    },
+    {
+      "start": 344.64,
+      "end": 350.24,
+      "duration": 5.6,
+      "text": "sum up all stuffs"
+    },
+    {
+      "start": 346.56,
+      "end": 354.08,
+      "duration": 7.52,
+      "text": "sum up all stuffs if the question says"
+    },
+    {
+      "start": 350.24,
+      "end": 355.04,
+      "duration": 4.8,
+      "text": "count always if the question says find"
+    },
+    {
+      "start": 354.08,
+      "end": 355.92,
+      "duration": 1.84,
+      "text": "minimum"
+    },
+    {
+      "start": 355.04,
+      "end": 359.2,
+      "duration": 4.16,
+      "text": "take"
+    },
+    {
+      "start": 355.92,
+      "end": 360.08,
+      "duration": 4.16,
+      "text": "minimum of all stuffs"
+    },
+    {
+      "start": 359.2,
+      "end": 362.48,
+      "duration": 3.28,
+      "text": "okay"
+    },
+    {
+      "start": 360.08,
+      "end": 364.56,
+      "duration": 4.48,
+      "text": "if the question say it's fine minimum"
+    },
+    {
+      "start": 362.48,
+      "end": 367.52,
+      "duration": 5.04,
+      "text": "similarly the question says find maximum"
+    },
+    {
+      "start": 364.56,
+      "end": 369.6,
+      "duration": 5.04,
+      "text": "you'll take the maximum remember this"
+    },
+    {
+      "start": 367.52,
+      "end": 372.56,
+      "duration": 5.04,
+      "text": "three points if you remember these three"
+    },
+    {
+      "start": 369.6,
+      "end": 374.4,
+      "duration": 4.8,
+      "text": "points you can solve any recurrence and"
+    },
+    {
+      "start": 372.56,
+      "end": 376.4,
+      "duration": 3.84,
+      "text": "if you are able to write the recursion"
+    },
+    {
+      "start": 374.4,
+      "end": 378.88,
+      "duration": 4.48,
+      "text": "then you can memoize it to convert it"
+    },
+    {
+      "start": 376.4,
+      "end": 381.28,
+      "duration": 4.88,
+      "text": "into dp and then you can tabalize it and"
+    },
+    {
+      "start": 378.88,
+      "end": 383.76,
+      "duration": 4.88,
+      "text": "after that you can space optimize it"
+    },
+    {
+      "start": 381.28,
+      "end": 386.08,
+      "duration": 4.8,
+      "text": "okay so over here what was the problem"
+    },
+    {
+      "start": 383.76,
+      "end": 388.4,
+      "duration": 4.64,
+      "text": "the problem was you are at zero and you"
+    },
+    {
+      "start": 386.08,
+      "end": 389.2,
+      "duration": 3.12,
+      "text": "have to reach n the person has to reach"
+    },
+    {
+      "start": 388.4,
+      "end": 390.8,
+      "duration": 2.4,
+      "text": "n"
+    },
+    {
+      "start": 389.2,
+      "end": 392.8,
+      "duration": 3.6,
+      "text": "so assume"
+    },
+    {
+      "start": 390.8,
+      "end": 395.28,
+      "duration": 4.48,
+      "text": "assume uh this is not an array this is"
+    },
+    {
+      "start": 392.8,
+      "end": 398.16,
+      "duration": 5.36,
+      "text": "like 0 to n the stairs"
+    },
+    {
+      "start": 395.28,
+      "end": 400.72,
+      "duration": 5.44,
+      "text": "assume these stairs to be indexes i call"
+    },
+    {
+      "start": 398.16,
+      "end": 403.04,
+      "duration": 4.88,
+      "text": "a 0 to be an index i call 1 to be an"
+    },
+    {
+      "start": 400.72,
+      "end": 405.04,
+      "duration": 4.32,
+      "text": "index 2 to be an index 3 to be an index"
+    },
+    {
+      "start": 403.04,
+      "end": 407.2,
+      "duration": 4.16,
+      "text": "4 to be an index 5 to be an index and"
+    },
+    {
+      "start": 405.04,
+      "end": 410.0,
+      "duration": 4.96,
+      "text": "everything assume i'm calling them as"
+    },
+    {
+      "start": 407.2,
+      "end": 412.48,
+      "duration": 5.28,
+      "text": "index treat them as an index"
+    },
+    {
+      "start": 410.0,
+      "end": 414.24,
+      "duration": 4.24,
+      "text": "okay so step one i've understood"
+    },
+    {
+      "start": 412.48,
+      "end": 415.84,
+      "duration": 3.36,
+      "text": "how will i represent this problem in"
+    },
+    {
+      "start": 414.24,
+      "end": 418.0,
+      "duration": 3.76,
+      "text": "terms of index that is something which"
+    },
+    {
+      "start": 415.84,
+      "end": 420.4,
+      "duration": 4.56,
+      "text": "i've understood now next step is to"
+    },
+    {
+      "start": 418.0,
+      "end": 422.8,
+      "duration": 4.8,
+      "text": "realize what will your recursion give so"
+    },
+    {
+      "start": 420.4,
+      "end": 424.88,
+      "duration": 4.48,
+      "text": "i can say if i write a recursion"
+    },
+    {
+      "start": 422.8,
+      "end": 426.48,
+      "duration": 3.68,
+      "text": "that recursion should tell me the number"
+    },
+    {
+      "start": 424.88,
+      "end": 429.28,
+      "duration": 4.4,
+      "text": "of ways"
+    },
+    {
+      "start": 426.48,
+      "end": 431.92,
+      "duration": 5.44,
+      "text": "in which i can reach from 0 to n if i'm"
+    },
+    {
+      "start": 429.28,
+      "end": 433.44,
+      "duration": 4.16,
+      "text": "calling a recursion as f n he should"
+    },
+    {
+      "start": 431.92,
+      "end": 435.52,
+      "duration": 3.6,
+      "text": "tell me what are the number of ways in"
+    },
+    {
+      "start": 433.44,
+      "end": 437.44,
+      "duration": 4.0,
+      "text": "which i can reach from 0 to n that"
+    },
+    {
+      "start": 435.52,
+      "end": 440.56,
+      "duration": 5.04,
+      "text": "should be the recursions job"
+    },
+    {
+      "start": 437.44,
+      "end": 443.36,
+      "duration": 5.92,
+      "text": "i am like yeah that's true so what if i"
+    },
+    {
+      "start": 440.56,
+      "end": 445.92,
+      "duration": 5.36,
+      "text": "uh write it as f of index so can i say"
+    },
+    {
+      "start": 443.36,
+      "end": 448.16,
+      "duration": 4.8,
+      "text": "the base case is very simple if if i'm"
+    },
+    {
+      "start": 445.92,
+      "end": 450.08,
+      "duration": 4.16,
+      "text": "standing at the zeroth stair there is no"
+    },
+    {
+      "start": 448.16,
+      "end": 452.48,
+      "duration": 4.32,
+      "text": "other way like there's only one way in"
+    },
+    {
+      "start": 450.08,
+      "end": 454.32,
+      "duration": 4.24,
+      "text": "which i can like if i'm standing at zero"
+    },
+    {
+      "start": 452.48,
+      "end": 456.72,
+      "duration": 4.24,
+      "text": "there's only one way right"
+    },
+    {
+      "start": 454.32,
+      "end": 458.32,
+      "duration": 4.0,
+      "text": "i cannot jump there's only one way"
+    },
+    {
+      "start": 456.72,
+      "end": 460.8,
+      "duration": 4.08,
+      "text": "next"
+    },
+    {
+      "start": 458.32,
+      "end": 463.28,
+      "duration": 4.96,
+      "text": "we have converted the problem in term of"
+    },
+    {
+      "start": 460.8,
+      "end": 464.72,
+      "duration": 3.92,
+      "text": "in terms of uh index what's the step"
+    },
+    {
+      "start": 463.28,
+      "end": 467.92,
+      "duration": 4.64,
+      "text": "number two"
+    },
+    {
+      "start": 464.72,
+      "end": 470.4,
+      "duration": 5.68,
+      "text": "do all possible stuffs on that index yes"
+    },
+    {
+      "start": 467.92,
+      "end": 472.56,
+      "duration": 4.64,
+      "text": "do all possible stuffs on that index"
+    },
+    {
+      "start": 470.4,
+      "end": 474.8,
+      "duration": 4.4,
+      "text": "what are the question stating either it"
+    },
+    {
+      "start": 472.56,
+      "end": 476.4,
+      "duration": 3.84,
+      "text": "can jump one"
+    },
+    {
+      "start": 474.8,
+      "end": 479.68,
+      "duration": 4.88,
+      "text": "either it can jump to"
+    },
+    {
+      "start": 476.4,
+      "end": 481.68,
+      "duration": 5.28,
+      "text": "so from a stair you can jump one or you"
+    },
+    {
+      "start": 479.68,
+      "end": 484.16,
+      "duration": 4.48,
+      "text": "can jump two"
+    },
+    {
+      "start": 481.68,
+      "end": 487.12,
+      "duration": 5.44,
+      "text": "so what can you do on that index"
+    },
+    {
+      "start": 484.16,
+      "end": 489.2,
+      "duration": 5.04,
+      "text": "jump one or jump two do it nah"
+    },
+    {
+      "start": 487.12,
+      "end": 490.96,
+      "duration": 3.84,
+      "text": "what are you waiting for so i can say"
+    },
+    {
+      "start": 489.2,
+      "end": 492.88,
+      "duration": 3.68,
+      "text": "one of the things that i can do is jump"
+    },
+    {
+      "start": 490.96,
+      "end": 495.6,
+      "duration": 4.64,
+      "text": "one so if you're starting like if you're"
+    },
+    {
+      "start": 492.88,
+      "end": 497.84,
+      "duration": 4.96,
+      "text": "going from top to down if you jump one"
+    },
+    {
+      "start": 495.6,
+      "end": 498.56,
+      "duration": 2.96,
+      "text": "you will go back one index if you jump"
+    },
+    {
+      "start": 497.84,
+      "end": 501.12,
+      "duration": 3.28,
+      "text": "to"
+    },
+    {
+      "start": 498.56,
+      "end": 503.52,
+      "duration": 4.96,
+      "text": "you will go to index"
+    },
+    {
+      "start": 501.12,
+      "end": 503.52,
+      "duration": 2.4,
+      "text": "simple"
+    },
+    {
+      "start": 504.16,
+      "end": 507.2,
+      "duration": 3.04,
+      "text": "correct"
+    },
+    {
+      "start": 505.44,
+      "end": 509.44,
+      "duration": 4.0,
+      "text": "now now what"
+    },
+    {
+      "start": 507.2,
+      "end": 512.08,
+      "duration": 4.88,
+      "text": "now can i see okay that's that's pretty"
+    },
+    {
+      "start": 509.44,
+      "end": 514.0,
+      "duration": 4.56,
+      "text": "pretty perfect now can i say one thing"
+    },
+    {
+      "start": 512.08,
+      "end": 515.2,
+      "duration": 3.12,
+      "text": "if i can jump one index and if i can"
+    },
+    {
+      "start": 514.0,
+      "end": 516.8,
+      "duration": 2.8,
+      "text": "jump two index there are a couple of"
+    },
+    {
+      "start": 515.2,
+      "end": 518.64,
+      "duration": 3.44,
+      "text": "ways in which i can jump so there are a"
+    },
+    {
+      "start": 516.8,
+      "end": 520.4,
+      "duration": 3.6,
+      "text": "couple of steps that i can do now if"
+    },
+    {
+      "start": 518.64,
+      "end": 522.64,
+      "duration": 4.0,
+      "text": "someone is saying me to count all"
+    },
+    {
+      "start": 520.4,
+      "end": 524.24,
+      "duration": 3.84,
+      "text": "distinct ways i know recursion will do"
+    },
+    {
+      "start": 522.64,
+      "end": 527.2,
+      "duration": 4.56,
+      "text": "its job because you'll go in depth and"
+    },
+    {
+      "start": 524.24,
+      "end": 528.88,
+      "duration": 4.64,
+      "text": "count all the ways lecture seven"
+    },
+    {
+      "start": 527.2,
+      "end": 530.72,
+      "duration": 3.52,
+      "text": "please go and watch our lecture seven"
+    },
+    {
+      "start": 528.88,
+      "end": 532.64,
+      "duration": 3.76,
+      "text": "i've talked to you about how does it"
+    },
+    {
+      "start": 530.72,
+      "end": 534.8,
+      "duration": 4.08,
+      "text": "count all the ways"
+    },
+    {
+      "start": 532.64,
+      "end": 536.48,
+      "duration": 3.84,
+      "text": "if you return one at the base case"
+    },
+    {
+      "start": 534.8,
+      "end": 538.16,
+      "duration": 3.36,
+      "text": "please go and watch our lecture seven if"
+    },
+    {
+      "start": 536.48,
+      "end": 541.68,
+      "duration": 5.2,
+      "text": "you haven't because over there i've"
+    },
+    {
+      "start": 538.16,
+      "end": 543.92,
+      "duration": 5.76,
+      "text": "taught you how do you count always"
+    },
+    {
+      "start": 541.68,
+      "end": 545.2,
+      "duration": 3.52,
+      "text": "by returning a one on the base case i've"
+    },
+    {
+      "start": 543.92,
+      "end": 546.96,
+      "duration": 3.04,
+      "text": "taught you that so please watch out"
+    },
+    {
+      "start": 545.2,
+      "end": 548.56,
+      "duration": 3.36,
+      "text": "lecture seven in the recursion pause it"
+    },
+    {
+      "start": 546.96,
+      "end": 550.88,
+      "duration": 3.92,
+      "text": "if you haven't watched it"
+    },
+    {
+      "start": 548.56,
+      "end": 553.76,
+      "duration": 5.2,
+      "text": "so you know how to count always if this"
+    },
+    {
+      "start": 550.88,
+      "end": 556.08,
+      "duration": 5.2,
+      "text": "is the left recursion"
+    },
+    {
+      "start": 553.76,
+      "end": 558.56,
+      "duration": 4.8,
+      "text": "and this is the right recursion in order"
+    },
+    {
+      "start": 556.08,
+      "end": 561.04,
+      "duration": 4.96,
+      "text": "to count all the ways i told you right"
+    },
+    {
+      "start": 558.56,
+      "end": 563.44,
+      "duration": 4.88,
+      "text": "you have to return left plus"
+    },
+    {
+      "start": 561.04,
+      "end": 565.04,
+      "duration": 4.0,
+      "text": "right that's what you need to do so if"
+    },
+    {
+      "start": 563.44,
+      "end": 567.2,
+      "duration": 3.76,
+      "text": "you write this recursion it is going to"
+    },
+    {
+      "start": 565.04,
+      "end": 569.76,
+      "duration": 4.72,
+      "text": "work but still there's an edge case yeah"
+    },
+    {
+      "start": 567.2,
+      "end": 571.36,
+      "duration": 4.16,
+      "text": "there is an edge case so can i say can i"
+    },
+    {
+      "start": 569.76,
+      "end": 574.16,
+      "duration": 4.4,
+      "text": "say that"
+    },
+    {
+      "start": 571.36,
+      "end": 576.32,
+      "duration": 4.96,
+      "text": "if you're doing index minus 2"
+    },
+    {
+      "start": 574.16,
+      "end": 577.6,
+      "duration": 3.44,
+      "text": "now think about these edge cases i did"
+    },
+    {
+      "start": 576.32,
+      "end": 579.44,
+      "duration": 3.12,
+      "text": "not tell you"
+    },
+    {
+      "start": 577.6,
+      "end": 581.76,
+      "duration": 4.16,
+      "text": "what if you are standing at 1 what if"
+    },
+    {
+      "start": 579.44,
+      "end": 582.88,
+      "duration": 3.44,
+      "text": "i'm just calling f of"
+    },
+    {
+      "start": 581.76,
+      "end": 584.32,
+      "duration": 2.56,
+      "text": "1"
+    },
+    {
+      "start": 582.88,
+      "end": 587.12,
+      "duration": 4.24,
+      "text": "then"
+    },
+    {
+      "start": 584.32,
+      "end": 589.2,
+      "duration": 4.88,
+      "text": "1 minus 2 will become minus 1 so there"
+    },
+    {
+      "start": 587.12,
+      "end": 591.28,
+      "duration": 4.16,
+      "text": "might be a problem so you can introduce"
+    },
+    {
+      "start": 589.2,
+      "end": 593.6,
+      "duration": 4.4,
+      "text": "one more h case something like this"
+    },
+    {
+      "start": 591.28,
+      "end": 593.6,
+      "duration": 2.32,
+      "text": "again"
+    },
+    {
+      "start": 593.68,
+      "end": 598.56,
+      "duration": 4.88,
+      "text": "if index is equal to equal to one"
+    },
+    {
+      "start": 596.4,
+      "end": 600.88,
+      "duration": 4.48,
+      "text": "so can i say uh if you're standing at"
+    },
+    {
+      "start": 598.56,
+      "end": 602.16,
+      "duration": 3.6,
+      "text": "one there's only one way in which you"
+    },
+    {
+      "start": 600.88,
+      "end": 605.6,
+      "duration": 4.72,
+      "text": "can go zero"
+    },
+    {
+      "start": 602.16,
+      "end": 607.44,
+      "duration": 5.28,
+      "text": "so you can return a zero"
+    },
+    {
+      "start": 605.6,
+      "end": 610.64,
+      "duration": 5.04,
+      "text": "done"
+    },
+    {
+      "start": 607.44,
+      "end": 612.08,
+      "duration": 4.64,
+      "text": "what is this uh looking like like what"
+    },
+    {
+      "start": 610.64,
+      "end": 614.24,
+      "duration": 3.6,
+      "text": "do you think"
+    },
+    {
+      "start": 612.08,
+      "end": 616.96,
+      "duration": 4.88,
+      "text": "which question is this like i'll be like"
+    },
+    {
+      "start": 614.24,
+      "end": 618.56,
+      "duration": 4.32,
+      "text": "yeah this is fibonacci yeah absolutely"
+    },
+    {
+      "start": 616.96,
+      "end": 619.28,
+      "duration": 2.32,
+      "text": "you solve this problem in the previous"
+    },
+    {
+      "start": 618.56,
+      "end": 622.32,
+      "duration": 3.76,
+      "text": "one"
+    },
+    {
+      "start": 619.28,
+      "end": 625.76,
+      "duration": 6.48,
+      "text": "so you saw this how i took a different"
+    },
+    {
+      "start": 622.32,
+      "end": 629.04,
+      "duration": 6.72,
+      "text": "problem how i analyzed it and converted"
+    },
+    {
+      "start": 625.76,
+      "end": 630.8,
+      "duration": 5.04,
+      "text": "it into fibonacci so what i can say is"
+    },
+    {
+      "start": 629.04,
+      "end": 633.68,
+      "duration": 4.64,
+      "text": "this problem is nothing but"
+    },
+    {
+      "start": 630.8,
+      "end": 635.84,
+      "duration": 5.04,
+      "text": "similar to fibonacci number if you"
+    },
+    {
+      "start": 633.68,
+      "end": 638.08,
+      "duration": 4.4,
+      "text": "carefully write the recurrence and the"
+    },
+    {
+      "start": 635.84,
+      "end": 640.32,
+      "duration": 4.48,
+      "text": "possible ways to write a recurrences"
+    },
+    {
+      "start": 638.08,
+      "end": 641.52,
+      "duration": 3.44,
+      "text": "try to represent the problem in terms of"
+    },
+    {
+      "start": 640.32,
+      "end": 644.64,
+      "duration": 4.32,
+      "text": "index"
+    },
+    {
+      "start": 641.52,
+      "end": 646.56,
+      "duration": 5.04,
+      "text": "do all possible stuffs on that index"
+    },
+    {
+      "start": 644.64,
+      "end": 649.2,
+      "duration": 4.56,
+      "text": "if it is saying if the question is"
+    },
+    {
+      "start": 646.56,
+      "end": 651.6,
+      "duration": 5.04,
+      "text": "saying count always you will sum up all"
+    },
+    {
+      "start": 649.2,
+      "end": 654.16,
+      "duration": 4.96,
+      "text": "the stuffs if the question is saying"
+    },
+    {
+      "start": 651.6,
+      "end": 656.32,
+      "duration": 4.72,
+      "text": "find minimum you will take"
+    },
+    {
+      "start": 654.16,
+      "end": 659.28,
+      "duration": 5.12,
+      "text": "minimum of all the stuffs that is how"
+    },
+    {
+      "start": 656.32,
+      "end": 661.52,
+      "duration": 5.2,
+      "text": "you should solve any given question now"
+    },
+    {
+      "start": 659.28,
+      "end": 663.92,
+      "duration": 4.64,
+      "text": "so you can easily memorize it after that"
+    },
+    {
+      "start": 661.52,
+      "end": 666.64,
+      "duration": 5.12,
+      "text": "you can convert into the tabular form"
+    },
+    {
+      "start": 663.92,
+      "end": 668.56,
+      "duration": 4.64,
+      "text": "and then after you can space optimize it"
+    },
+    {
+      "start": 666.64,
+      "end": 670.32,
+      "duration": 3.68,
+      "text": "and we have already done this in the"
+    },
+    {
+      "start": 668.56,
+      "end": 671.52,
+      "duration": 2.96,
+      "text": "lecture one so i'll not be doing that"
+    },
+    {
+      "start": 670.32,
+      "end": 673.68,
+      "duration": 3.36,
+      "text": "again"
+    },
+    {
+      "start": 671.52,
+      "end": 675.52,
+      "duration": 4.0,
+      "text": "the main reason why i picked up this"
+    },
+    {
+      "start": 673.68,
+      "end": 677.6,
+      "duration": 3.92,
+      "text": "problem was to tell you even if i did"
+    },
+    {
+      "start": 675.52,
+      "end": 679.6,
+      "duration": 4.08,
+      "text": "not know this was a fibonacci"
+    },
+    {
+      "start": 677.6,
+      "end": 680.88,
+      "duration": 3.28,
+      "text": "i told you how to write the returns and"
+    },
+    {
+      "start": 679.6,
+      "end": 682.4,
+      "duration": 2.8,
+      "text": "after that you figured out it's a"
+    },
+    {
+      "start": 680.88,
+      "end": 684.4,
+      "duration": 3.52,
+      "text": "fibonacci and even if you don't know"
+    },
+    {
+      "start": 682.4,
+      "end": 686.0,
+      "duration": 3.6,
+      "text": "fibonacci you can definitely solve this"
+    },
+    {
+      "start": 684.4,
+      "end": 687.84,
+      "duration": 3.44,
+      "text": "problem now"
+    },
+    {
+      "start": 686.0,
+      "end": 689.28,
+      "duration": 3.28,
+      "text": "in in code studio if i take you to the"
+    },
+    {
+      "start": 687.84,
+      "end": 690.72,
+      "duration": 2.88,
+      "text": "code studio"
+    },
+    {
+      "start": 689.28,
+      "end": 693.92,
+      "duration": 4.64,
+      "text": "the value of"
+    },
+    {
+      "start": 690.72,
+      "end": 696.16,
+      "duration": 5.44,
+      "text": "n is given as 10 to the power 18. so"
+    },
+    {
+      "start": 693.92,
+      "end": 697.84,
+      "duration": 3.92,
+      "text": "either in the tabular form even if you"
+    },
+    {
+      "start": 696.16,
+      "end": 701.6,
+      "duration": 5.44,
+      "text": "run a for loop you cannot run a for loop"
+    },
+    {
+      "start": 697.84,
+      "end": 703.2,
+      "duration": 5.36,
+      "text": "till 10 to the power 18. even if you uh"
+    },
+    {
+      "start": 701.6,
+      "end": 706.16,
+      "duration": 4.56,
+      "text": "the space optimization you cannot run a"
+    },
+    {
+      "start": 703.2,
+      "end": 708.48,
+      "duration": 5.28,
+      "text": "for loop till 10 to the power 18. so"
+    },
+    {
+      "start": 706.16,
+      "end": 710.72,
+      "duration": 4.56,
+      "text": "a big o of n approach will not work so"
+    },
+    {
+      "start": 708.48,
+      "end": 712.48,
+      "duration": 4.0,
+      "text": "in order to find fibonacci uh you have"
+    },
+    {
+      "start": 710.72,
+      "end": 715.52,
+      "duration": 4.8,
+      "text": "to actually"
+    },
+    {
+      "start": 712.48,
+      "end": 717.44,
+      "duration": 4.96,
+      "text": "use matrix exponentiation"
+    },
+    {
+      "start": 715.52,
+      "end": 719.6,
+      "duration": 4.08,
+      "text": "which helps you to find this in"
+    },
+    {
+      "start": 717.44,
+      "end": 721.52,
+      "duration": 4.08,
+      "text": "logarithmic of n probably i can discuss"
+    },
+    {
+      "start": 719.6,
+      "end": 723.68,
+      "duration": 4.08,
+      "text": "this in some other"
+    },
+    {
+      "start": 721.52,
+      "end": 725.84,
+      "duration": 4.32,
+      "text": "lecture but the main main focus of"
+    },
+    {
+      "start": 723.68,
+      "end": 727.52,
+      "duration": 3.84,
+      "text": "today's lecture was to tell you how to"
+    },
+    {
+      "start": 725.84,
+      "end": 729.52,
+      "duration": 3.68,
+      "text": "convert any unknown problem to a"
+    },
+    {
+      "start": 727.52,
+      "end": 731.12,
+      "duration": 3.6,
+      "text": "recurrence and then then you can easily"
+    },
+    {
+      "start": 729.52,
+      "end": 732.64,
+      "duration": 3.12,
+      "text": "write the tabular and the space"
+    },
+    {
+      "start": 731.12,
+      "end": 734.56,
+      "duration": 3.44,
+      "text": "optimized i'm not writing the tabular"
+    },
+    {
+      "start": 732.64,
+      "end": 736.24,
+      "duration": 3.6,
+      "text": "space optimized in this lecture because"
+    },
+    {
+      "start": 734.56,
+      "end": 738.8,
+      "duration": 4.24,
+      "text": "i've already done that in done that in"
+    },
+    {
+      "start": 736.24,
+      "end": 740.0,
+      "duration": 3.76,
+      "text": "the lecture one okay if i would have not"
+    },
+    {
+      "start": 738.8,
+      "end": 741.36,
+      "duration": 2.56,
+      "text": "done that in the lecture one i would"
+    },
+    {
+      "start": 740.0,
+      "end": 743.12,
+      "duration": 3.12,
+      "text": "have done it over here but i'm just"
+    },
+    {
+      "start": 741.36,
+      "end": 744.96,
+      "duration": 3.6,
+      "text": "skipping it because i've already done it"
+    },
+    {
+      "start": 743.12,
+      "end": 747.2,
+      "duration": 4.08,
+      "text": "so please remember these three points"
+    },
+    {
+      "start": 744.96,
+      "end": 749.28,
+      "duration": 4.32,
+      "text": "are important which i wanted to convey"
+    },
+    {
+      "start": 747.2,
+      "end": 751.04,
+      "duration": 3.84,
+      "text": "you in this particular lecture"
+    },
+    {
+      "start": 749.28,
+      "end": 754.48,
+      "duration": 5.2,
+      "text": "so the main intention of this lecture"
+    },
+    {
+      "start": 751.04,
+      "end": 756.32,
+      "duration": 5.28,
+      "text": "was to teach you the shortcuts the three"
+    },
+    {
+      "start": 754.48,
+      "end": 757.76,
+      "duration": 3.28,
+      "text": "points which helps you to build the"
+    },
+    {
+      "start": 756.32,
+      "end": 759.28,
+      "duration": 2.96,
+      "text": "recurrence because after that it's"
+    },
+    {
+      "start": 757.76,
+      "end": 761.2,
+      "duration": 3.44,
+      "text": "memoration then tabulation and then"
+    },
+    {
+      "start": 759.28,
+      "end": 762.72,
+      "duration": 3.44,
+      "text": "space optimization so i hope you have"
+    },
+    {
+      "start": 761.2,
+      "end": 764.24,
+      "duration": 3.04,
+      "text": "got this keep these three points in your"
+    },
+    {
+      "start": 762.72,
+      "end": 766.0,
+      "duration": 3.28,
+      "text": "brain because in the next lecture we"
+    },
+    {
+      "start": 764.24,
+      "end": 767.6,
+      "duration": 3.36,
+      "text": "will be solving a problem which will be"
+    },
+    {
+      "start": 766.0,
+      "end": 769.76,
+      "duration": 3.76,
+      "text": "much much more interesting and you can"
+    },
+    {
+      "start": 767.6,
+      "end": 773.12,
+      "duration": 5.52,
+      "text": "use these three points to solve that"
+    },
+    {
+      "start": 769.76,
+      "end": 775.12,
+      "duration": 5.36,
+      "text": "particular problem as well so with this"
+    },
+    {
+      "start": 773.12,
+      "end": 777.84,
+      "duration": 4.72,
+      "text": "let's wrap up this video and yes as a"
+    },
+    {
+      "start": 775.12,
+      "end": 779.2,
+      "duration": 4.08,
+      "text": "trend please please write understood uh"
+    },
+    {
+      "start": 777.84,
+      "end": 781.04,
+      "duration": 3.2,
+      "text": "if you have understood this particular"
+    },
+    {
+      "start": 779.2,
+      "end": 782.24,
+      "duration": 3.04,
+      "text": "lecture and the three points and make"
+    },
+    {
+      "start": 781.04,
+      "end": 783.84,
+      "duration": 2.8,
+      "text": "sure you like this video and if you're"
+    },
+    {
+      "start": 782.24,
+      "end": 785.68,
+      "duration": 3.44,
+      "text": "new to this channel please please please"
+    },
+    {
+      "start": 783.84,
+      "end": 787.12,
+      "duration": 3.28,
+      "text": "do consider subscribing to us and yeah"
+    },
+    {
+      "start": 785.68,
+      "end": 792.36,
+      "duration": 6.68,
+      "text": "with this let's wrap up this video bye"
+    },
+    {
+      "start": 787.12,
+      "end": 792.36,
+      "duration": 5.24,
+      "text": "take care whenever your heart is"
+    },
+    {
+      "start": 792.39,
+      "end": 798.02,
+      "duration": 5.63,
+      "text": "[Music]"
+    }
+  ]
+}

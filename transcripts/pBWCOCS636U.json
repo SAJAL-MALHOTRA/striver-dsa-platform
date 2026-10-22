@@ -1,0 +1,1718 @@
+{
+  "video_id": "pBWCOCS636U",
+  "title": "L2. Maximum Points You Can Obtain from Cards | 2 Pointers and Sliding Window Playlist",
+  "duration_sec": 673,
+  "num_segments": 285,
+  "segments": [
+    {
+      "start": 3.56,
+      "end": 6.92,
+      "duration": 3.36,
+      "text": "So, this time to continue with the uh"
+    },
+    {
+      "start": 5.16,
+      "end": 9.08,
+      "duration": 3.92,
+      "text": "two-pointer and sliding window playlist"
+    },
+    {
+      "start": 6.92,
+      "end": 10.84,
+      "duration": 3.92,
+      "text": "on the Strivers A-Z DSA course. Before"
+    },
+    {
+      "start": 9.08,
+      "end": 11.96,
+      "duration": 2.88,
+      "text": "starting off, hey everyone, welcome back"
+    },
+    {
+      "start": 10.84,
+      "end": 13.88,
+      "duration": 3.04,
+      "text": "to the channel. I hope you guys are"
+    },
+    {
+      "start": 11.96,
+      "end": 16.92,
+      "duration": 4.96,
+      "text": "doing extremely well. So, the problem"
+    },
+    {
+      "start": 13.88,
+      "end": 20.64,
+      "duration": 6.76,
+      "text": "that we will be solving today is maximum"
+    },
+    {
+      "start": 16.92,
+      "end": 22.44,
+      "duration": 5.52,
+      "text": "points you can obtain from N cards. So,"
+    },
+    {
+      "start": 20.64,
+      "end": 25.0,
+      "duration": 4.36,
+      "text": "what is the problem stating? It's"
+    },
+    {
+      "start": 22.44,
+      "end": 27.88,
+      "duration": 5.44,
+      "text": "stating that you'll be given an array"
+    },
+    {
+      "start": 25.0,
+      "end": 30.48,
+      "duration": 5.48,
+      "text": "which contains the point of"
+    },
+    {
+      "start": 27.88,
+      "end": 32.76,
+      "duration": 4.88,
+      "text": "N different cards."
+    },
+    {
+      "start": 30.48,
+      "end": 35.76,
+      "duration": 5.28,
+      "text": "For an example, the first card will give"
+    },
+    {
+      "start": 32.76,
+      "end": 38.68,
+      "duration": 5.92,
+      "text": "you a point six. Second card will give"
+    },
+    {
+      "start": 35.76,
+      "end": 41.36,
+      "duration": 5.6,
+      "text": "you a point two. And this card, the last"
+    },
+    {
+      "start": 38.68,
+      "end": 44.64,
+      "duration": 5.96,
+      "text": "card, will give you a point one. Now,"
+    },
+    {
+      "start": 41.36,
+      "end": 46.76,
+      "duration": 5.4,
+      "text": "you're also given an integer K. Now,"
+    },
+    {
+      "start": 44.64,
+      "end": 49.24,
+      "duration": 4.6,
+      "text": "what does K signifies?"
+    },
+    {
+      "start": 46.76,
+      "end": 51.92,
+      "duration": 5.16,
+      "text": "You have to pick like there's a task"
+    },
+    {
+      "start": 49.24,
+      "end": 53.0,
+      "duration": 3.76,
+      "text": "given to you. You have to pick up K"
+    },
+    {
+      "start": 51.92,
+      "end": 56.48,
+      "duration": 4.56,
+      "text": "cards"
+    },
+    {
+      "start": 53.0,
+      "end": 58.92,
+      "duration": 5.92,
+      "text": "from these lot of N cards. But, there is"
+    },
+    {
+      "start": 56.48,
+      "end": 60.32,
+      "duration": 3.84,
+      "text": "a slight condition that is kept. The"
+    },
+    {
+      "start": 58.92,
+      "end": 61.92,
+      "duration": 3.0,
+      "text": "condition is"
+    },
+    {
+      "start": 60.32,
+      "end": 64.32,
+      "duration": 4.0,
+      "text": "you can either pick up from the front,"
+    },
+    {
+      "start": 61.92,
+      "end": 66.12,
+      "duration": 4.2,
+      "text": "you can either pick up from the back."
+    },
+    {
+      "start": 64.32,
+      "end": 68.44,
+      "duration": 4.12,
+      "text": "You cannot go into the middle and pick"
+    },
+    {
+      "start": 66.12,
+      "end": 70.24,
+      "duration": 4.12,
+      "text": "up something. You'll have to pick up"
+    },
+    {
+      "start": 68.44,
+      "end": 72.04,
+      "duration": 3.6,
+      "text": "either from the back or either from the"
+    },
+    {
+      "start": 70.24,
+      "end": 73.44,
+      "duration": 3.2,
+      "text": "front, right?"
+    },
+    {
+      "start": 72.04,
+      "end": 75.44,
+      "duration": 3.4,
+      "text": "For an example,"
+    },
+    {
+      "start": 73.44,
+      "end": 78.68,
+      "duration": 5.24,
+      "text": "I can decide that I'm going to pick up"
+    },
+    {
+      "start": 75.44,
+      "end": 80.56,
+      "duration": 5.12,
+      "text": "four cards like six, two, three, four."
+    },
+    {
+      "start": 78.68,
+      "end": 82.28,
+      "duration": 3.6,
+      "text": "That is allowed."
+    },
+    {
+      "start": 80.56,
+      "end": 85.76,
+      "duration": 5.2,
+      "text": "Or I can decide that I'm going to pick"
+    },
+    {
+      "start": 82.28,
+      "end": 88.04,
+      "duration": 5.76,
+      "text": "up one, seven, one, two. This is also"
+    },
+    {
+      "start": 85.76,
+      "end": 89.8,
+      "duration": 4.04,
+      "text": "allowed. Or I can say I'm going to pick"
+    },
+    {
+      "start": 88.04,
+      "end": 90.92,
+      "duration": 2.88,
+      "text": "up one, I'm going to pick up six, I'm"
+    },
+    {
+      "start": 89.8,
+      "end": 94.04,
+      "duration": 4.24,
+      "text": "going to pick up two, I'm going to pick"
+    },
+    {
+      "start": 90.92,
+      "end": 96.8,
+      "duration": 5.88,
+      "text": "up three. This is also allowed. But, the"
+    },
+    {
+      "start": 94.04,
+      "end": 99.16,
+      "duration": 5.12,
+      "text": "trick is either from the front or either"
+    },
+    {
+      "start": 96.8,
+      "end": 100.64,
+      "duration": 3.84,
+      "text": "from the back and consecutively."
+    },
+    {
+      "start": 99.16,
+      "end": 104.0,
+      "duration": 4.84,
+      "text": "Consecutively, you cannot skip any"
+    },
+    {
+      "start": 100.64,
+      "end": 106.44,
+      "duration": 5.8,
+      "text": "cards. Okay. Now, you'll have to pick up"
+    },
+    {
+      "start": 104.0,
+      "end": 108.64,
+      "duration": 4.64,
+      "text": "four cards in any possible way. But, you"
+    },
+    {
+      "start": 106.44,
+      "end": 111.52,
+      "duration": 5.08,
+      "text": "have to keep the condition in mind. And"
+    },
+    {
+      "start": 108.64,
+      "end": 113.24,
+      "duration": 4.6,
+      "text": "your task is to maximize the number of"
+    },
+    {
+      "start": 111.52,
+      "end": 115.24,
+      "duration": 3.72,
+      "text": "points you can pick."
+    },
+    {
+      "start": 113.24,
+      "end": 117.72,
+      "duration": 4.48,
+      "text": "Uh one of the ways that I can pick up is"
+    },
+    {
+      "start": 115.24,
+      "end": 120.36,
+      "duration": 5.12,
+      "text": "I'll pick up these three and this one."
+    },
+    {
+      "start": 117.72,
+      "end": 123.36,
+      "duration": 5.64,
+      "text": "So, what will be the summation? I'll get"
+    },
+    {
+      "start": 120.36,
+      "end": 125.36,
+      "duration": 5.0,
+      "text": "11 from here, 6 + 2 8 + 3 yeah 11. I'll"
+    },
+    {
+      "start": 123.36,
+      "end": 127.32,
+      "duration": 3.96,
+      "text": "get one from here. So, the total sum"
+    },
+    {
+      "start": 125.36,
+      "end": 129.76,
+      "duration": 4.4,
+      "text": "will boil down to be 12."
+    },
+    {
+      "start": 127.32,
+      "end": 130.96,
+      "duration": 3.64,
+      "text": "I can try out different ways. I'll say"
+    },
+    {
+      "start": 129.76,
+      "end": 134.16,
+      "duration": 4.4,
+      "text": "I'll pick up four elements from the"
+    },
+    {
+      "start": 130.96,
+      "end": 136.28,
+      "duration": 5.32,
+      "text": "front itself. The summation will be 15,"
+    },
+    {
+      "start": 134.16,
+      "end": 137.88,
+      "duration": 3.72,
+      "text": "which is better than the previous pick."
+    },
+    {
+      "start": 136.28,
+      "end": 139.64,
+      "duration": 3.36,
+      "text": "Or I can say"
+    },
+    {
+      "start": 137.88,
+      "end": 141.72,
+      "duration": 3.84,
+      "text": "the pick of the first two elements and"
+    },
+    {
+      "start": 139.64,
+      "end": 143.92,
+      "duration": 4.28,
+      "text": "the last two elements and the summation"
+    },
+    {
+      "start": 141.72,
+      "end": 147.92,
+      "duration": 6.2,
+      "text": "will be eight and eight, which is going"
+    },
+    {
+      "start": 143.92,
+      "end": 150.84,
+      "duration": 6.92,
+      "text": "to be 16. This is the maximum amount"
+    },
+    {
+      "start": 147.92,
+      "end": 152.68,
+      "duration": 4.76,
+      "text": "that you can get. Got it? And this is"
+    },
+    {
+      "start": 150.84,
+      "end": 153.88,
+      "duration": 3.04,
+      "text": "what you'll have to return."
+    },
+    {
+      "start": 152.68,
+      "end": 155.52,
+      "duration": 2.84,
+      "text": "Now,"
+    },
+    {
+      "start": 153.88,
+      "end": 157.0,
+      "duration": 3.12,
+      "text": "the extreme naive solution that I can"
+    },
+    {
+      "start": 155.52,
+      "end": 160.84,
+      "duration": 5.32,
+      "text": "think of"
+    },
+    {
+      "start": 157.0,
+      "end": 163.32,
+      "duration": 6.32,
+      "text": "is going to be something like okay uh"
+    },
+    {
+      "start": 160.84,
+      "end": 166.92,
+      "duration": 6.08,
+      "text": "first pick up four elements,"
+    },
+    {
+      "start": 163.32,
+      "end": 169.76,
+      "duration": 6.44,
+      "text": "right? And after that, pick up three"
+    },
+    {
+      "start": 166.92,
+      "end": 173.24,
+      "duration": 6.32,
+      "text": "from here, one from here."
+    },
+    {
+      "start": 169.76,
+      "end": 176.12,
+      "duration": 6.36,
+      "text": "After that, pick up two from here,"
+    },
+    {
+      "start": 173.24,
+      "end": 178.92,
+      "duration": 5.68,
+      "text": "two from here. After that, pick up one"
+    },
+    {
+      "start": 176.12,
+      "end": 181.88,
+      "duration": 5.76,
+      "text": "from here, pick up three from here."
+    },
+    {
+      "start": 178.92,
+      "end": 183.92,
+      "duration": 5.0,
+      "text": "After that, pick up zero from the front,"
+    },
+    {
+      "start": 181.88,
+      "end": 187.32,
+      "duration": 5.44,
+      "text": "pick up all the four from the back."
+    },
+    {
+      "start": 183.92,
+      "end": 189.88,
+      "duration": 5.96,
+      "text": "And out of all these configurations,"
+    },
+    {
+      "start": 187.32,
+      "end": 191.92,
+      "duration": 4.6,
+      "text": "whichever gives you the maximum point"
+    },
+    {
+      "start": 189.88,
+      "end": 193.56,
+      "duration": 3.68,
+      "text": "will be your answer. Now, this is the"
+    },
+    {
+      "start": 191.92,
+      "end": 194.56,
+      "duration": 2.64,
+      "text": "basic thing that will come to my brain,"
+    },
+    {
+      "start": 193.56,
+      "end": 197.88,
+      "duration": 4.32,
+      "text": "right?"
+    },
+    {
+      "start": 194.56,
+      "end": 198.84,
+      "duration": 4.28,
+      "text": "So, can I convert that into logic? Maybe"
+    },
+    {
+      "start": 197.88,
+      "end": 200.96,
+      "duration": 3.08,
+      "text": "yes,"
+    },
+    {
+      "start": 198.84,
+      "end": 202.72,
+      "duration": 3.88,
+      "text": "right? We will be picking up something"
+    },
+    {
+      "start": 200.96,
+      "end": 204.6,
+      "duration": 3.64,
+      "text": "from the left. So, let's assume I keep a"
+    },
+    {
+      "start": 202.72,
+      "end": 206.12,
+      "duration": 3.4,
+      "text": "left sum. We'll be picking up something"
+    },
+    {
+      "start": 204.6,
+      "end": 207.56,
+      "duration": 2.96,
+      "text": "from the right. So, let's assume I'll"
+    },
+    {
+      "start": 206.12,
+      "end": 210.2,
+      "duration": 4.08,
+      "text": "keep it as zero."
+    },
+    {
+      "start": 207.56,
+      "end": 211.8,
+      "duration": 4.24,
+      "text": "So, the number of elements on the left"
+    },
+    {
+      "start": 210.2,
+      "end": 213.56,
+      "duration": 3.36,
+      "text": "and the number of elements on the right,"
+    },
+    {
+      "start": 211.8,
+      "end": 216.36,
+      "duration": 4.56,
+      "text": "right? And that will eventually, if you"
+    },
+    {
+      "start": 213.56,
+      "end": 217.36,
+      "duration": 3.8,
+      "text": "sum it up, will be your total summation."
+    },
+    {
+      "start": 216.36,
+      "end": 218.96,
+      "duration": 2.6,
+      "text": "Understood?"
+    },
+    {
+      "start": 217.36,
+      "end": 220.44,
+      "duration": 3.08,
+      "text": "So, what I can do is I'll say, \"Okay,"
+    },
+    {
+      "start": 218.96,
+      "end": 222.96,
+      "duration": 4.0,
+      "text": "let's start off with one thing. Let's"
+    },
+    {
+      "start": 220.44,
+      "end": 225.8,
+      "duration": 5.36,
+      "text": "pick up this window of four elements."
+    },
+    {
+      "start": 222.96,
+      "end": 227.96,
+      "duration": 5.0,
+      "text": "Pick up this K elements at first. So, if"
+    },
+    {
+      "start": 225.8,
+      "end": 229.12,
+      "duration": 3.32,
+      "text": "I pick up these K elements, the left sum"
+    },
+    {
+      "start": 227.96,
+      "end": 232.08,
+      "duration": 4.12,
+      "text": "will be"
+    },
+    {
+      "start": 229.12,
+      "end": 233.32,
+      "duration": 4.2,
+      "text": "15. The left sum will be 15."
+    },
+    {
+      "start": 232.08,
+      "end": 235.88,
+      "duration": 3.8,
+      "text": "So, I'm picking four elements on the"
+    },
+    {
+      "start": 233.32,
+      "end": 238.24,
+      "duration": 4.92,
+      "text": "left and uh zero elements on the back."
+    },
+    {
+      "start": 235.88,
+      "end": 240.6,
+      "duration": 4.72,
+      "text": "So, overall the summation will be"
+    },
+    {
+      "start": 238.24,
+      "end": 242.96,
+      "duration": 4.72,
+      "text": "15. Okay."
+    },
+    {
+      "start": 240.6,
+      "end": 244.4,
+      "duration": 3.8,
+      "text": "Let's uh What is the next thing that"
+    },
+    {
+      "start": 242.96,
+      "end": 246.4,
+      "duration": 3.44,
+      "text": "will come to your brain?"
+    },
+    {
+      "start": 244.4,
+      "end": 248.72,
+      "duration": 4.32,
+      "text": "Take out one element, dude. Just take"
+    },
+    {
+      "start": 246.4,
+      "end": 251.16,
+      "duration": 4.76,
+      "text": "out one element. I'll be like, \"Why not?"
+    },
+    {
+      "start": 248.72,
+      "end": 252.84,
+      "duration": 4.12,
+      "text": "Let's take out one element.\" So, if I"
+    },
+    {
+      "start": 251.16,
+      "end": 255.28,
+      "duration": 4.12,
+      "text": "take out one element, take out one"
+    },
+    {
+      "start": 252.84,
+      "end": 256.4,
+      "duration": 3.56,
+      "text": "element, I'll be left out with three"
+    },
+    {
+      "start": 255.28,
+      "end": 259.76,
+      "duration": 4.48,
+      "text": "elements."
+    },
+    {
+      "start": 256.4,
+      "end": 261.48,
+      "duration": 5.08,
+      "text": "And the left sum will be"
+    },
+    {
+      "start": 259.76,
+      "end": 263.72,
+      "duration": 3.96,
+      "text": "What is the logical thinking? Will you"
+    },
+    {
+      "start": 261.48,
+      "end": 265.36,
+      "duration": 3.88,
+      "text": "sum up the three elements"
+    },
+    {
+      "start": 263.72,
+      "end": 268.08,
+      "duration": 4.36,
+      "text": "or will you just remove the last"
+    },
+    {
+      "start": 265.36,
+      "end": 270.04,
+      "duration": 4.68,
+      "text": "element? Yeah? Just remove the last"
+    },
+    {
+      "start": 268.08,
+      "end": 272.4,
+      "duration": 4.32,
+      "text": "element. That is how your brain should"
+    },
+    {
+      "start": 270.04,
+      "end": 274.52,
+      "duration": 4.48,
+      "text": "work. I just remove the last element."
+    },
+    {
+      "start": 272.4,
+      "end": 276.0,
+      "duration": 3.6,
+      "text": "So, the left sum will be 11. And what"
+    },
+    {
+      "start": 274.52,
+      "end": 278.84,
+      "duration": 4.32,
+      "text": "will be the right sum?"
+    },
+    {
+      "start": 276.0,
+      "end": 280.96,
+      "duration": 4.96,
+      "text": "You'll be like, \"I'll just add up one"
+    },
+    {
+      "start": 278.84,
+      "end": 282.44,
+      "duration": 3.6,
+      "text": "element. I'll just add up one element"
+    },
+    {
+      "start": 280.96,
+      "end": 285.48,
+      "duration": 4.52,
+      "text": "from the back, okay?\""
+    },
+    {
+      "start": 282.44,
+      "end": 287.16,
+      "duration": 4.72,
+      "text": "So, can I say overall the summation of K"
+    },
+    {
+      "start": 285.48,
+      "end": 289.08,
+      "duration": 3.6,
+      "text": "elements will be 12?"
+    },
+    {
+      "start": 287.16,
+      "end": 291.2,
+      "duration": 4.04,
+      "text": "We can. We can. Now, what is the next"
+    },
+    {
+      "start": 289.08,
+      "end": 293.32,
+      "duration": 4.24,
+      "text": "step? The next step will be"
+    },
+    {
+      "start": 291.2,
+      "end": 295.2,
+      "duration": 4.0,
+      "text": "just remove the remove one element from"
+    },
+    {
+      "start": 293.32,
+      "end": 297.8,
+      "duration": 4.48,
+      "text": "the left"
+    },
+    {
+      "start": 295.2,
+      "end": 299.92,
+      "duration": 4.72,
+      "text": "and at the same time"
+    },
+    {
+      "start": 297.8,
+      "end": 302.44,
+      "duration": 4.64,
+      "text": "increase one element from the back."
+    },
+    {
+      "start": 299.92,
+      "end": 305.32,
+      "duration": 5.4,
+      "text": "So, if I do that, can I again say left"
+    },
+    {
+      "start": 302.44,
+      "end": 308.32,
+      "duration": 5.88,
+      "text": "sum? Again, will you add up the two"
+    },
+    {
+      "start": 305.32,
+      "end": 310.2,
+      "duration": 4.88,
+      "text": "elements or will you just remove three"
+    },
+    {
+      "start": 308.32,
+      "end": 312.4,
+      "duration": 4.08,
+      "text": "from the sum? I'll just remove three"
+    },
+    {
+      "start": 310.2,
+      "end": 314.76,
+      "duration": 4.56,
+      "text": "from the sum 11. So, thereby the left"
+    },
+    {
+      "start": 312.4,
+      "end": 316.0,
+      "duration": 3.6,
+      "text": "sum will be eight. And what will be the"
+    },
+    {
+      "start": 314.76,
+      "end": 318.2,
+      "duration": 3.44,
+      "text": "right sum?"
+    },
+    {
+      "start": 316.0,
+      "end": 320.16,
+      "duration": 4.16,
+      "text": "You'll add up one element that is seven."
+    },
+    {
+      "start": 318.2,
+      "end": 322.96,
+      "duration": 4.76,
+      "text": "The right sum boils down to be eight."
+    },
+    {
+      "start": 320.16,
+      "end": 325.04,
+      "duration": 4.88,
+      "text": "And the overall sum is 16, okay?"
+    },
+    {
+      "start": 322.96,
+      "end": 327.56,
+      "duration": 4.6,
+      "text": "After that, what I can do is I'll go"
+    },
+    {
+      "start": 325.04,
+      "end": 329.28,
+      "duration": 4.24,
+      "text": "ahead and say I'll remove two as well."
+    },
+    {
+      "start": 327.56,
+      "end": 332.24,
+      "duration": 4.68,
+      "text": "And what I'll do on the right is I'll"
+    },
+    {
+      "start": 329.28,
+      "end": 334.08,
+      "duration": 4.8,
+      "text": "add up one. Perfect. That is amazing."
+    },
+    {
+      "start": 332.24,
+      "end": 336.16,
+      "duration": 3.92,
+      "text": "So, if I do this"
+    },
+    {
+      "start": 334.08,
+      "end": 337.92,
+      "duration": 3.84,
+      "text": "the left sum"
+    },
+    {
+      "start": 336.16,
+      "end": 339.4,
+      "duration": 3.24,
+      "text": "will be nothing but"
+    },
+    {
+      "start": 337.92,
+      "end": 341.44,
+      "duration": 3.52,
+      "text": "six"
+    },
+    {
+      "start": 339.4,
+      "end": 343.52,
+      "duration": 4.12,
+      "text": "and the right sum will be"
+    },
+    {
+      "start": 341.44,
+      "end": 345.96,
+      "duration": 4.52,
+      "text": "you added one, so that will be nine. And"
+    },
+    {
+      "start": 343.52,
+      "end": 348.0,
+      "duration": 4.48,
+      "text": "the overall summation will be 15. Now,"
+    },
+    {
+      "start": 345.96,
+      "end": 349.48,
+      "duration": 3.52,
+      "text": "what is the next job? You'll say, I'll"
+    },
+    {
+      "start": 348.0,
+      "end": 352.0,
+      "duration": 4.0,
+      "text": "not pick up anything from the left. I'll"
+    },
+    {
+      "start": 349.48,
+      "end": 355.68,
+      "duration": 6.2,
+      "text": "remove that. So, left sum will boil down"
+    },
+    {
+      "start": 352.0,
+      "end": 357.12,
+      "duration": 5.12,
+      "text": "to be zero, and the right sum will say,"
+    },
+    {
+      "start": 355.68,
+      "end": 358.52,
+      "duration": 2.84,
+      "text": "\"I'm going to add two to it. I'm going"
+    },
+    {
+      "start": 357.12,
+      "end": 362.36,
+      "duration": 5.24,
+      "text": "to add two to it.\" So, if I add two to"
+    },
+    {
+      "start": 358.52,
+      "end": 364.88,
+      "duration": 6.36,
+      "text": "it, it'll be 11, and the overall sum"
+    },
+    {
+      "start": 362.36,
+      "end": 366.4,
+      "duration": 4.04,
+      "text": "will be 11. After this, do you need to"
+    },
+    {
+      "start": 364.88,
+      "end": 368.84,
+      "duration": 3.96,
+      "text": "do anything? No, I don't need to do"
+    },
+    {
+      "start": 366.4,
+      "end": 371.72,
+      "duration": 5.32,
+      "text": "anything. So, overall, what is the"
+    },
+    {
+      "start": 368.84,
+      "end": 374.2,
+      "duration": 5.36,
+      "text": "maximum sum that you get? That is 16."
+    },
+    {
+      "start": 371.72,
+      "end": 376.24,
+      "duration": 4.52,
+      "text": "So, you can just keep comparing and"
+    },
+    {
+      "start": 374.2,
+      "end": 379.0,
+      "duration": 4.8,
+      "text": "probably put it into some max sum"
+    },
+    {
+      "start": 376.24,
+      "end": 381.24,
+      "duration": 5.0,
+      "text": "variable, and this is what you will be"
+    },
+    {
+      "start": 379.0,
+      "end": 383.64,
+      "duration": 4.64,
+      "text": "returning as your answer. I think you"
+    },
+    {
+      "start": 381.24,
+      "end": 385.36,
+      "duration": 4.12,
+      "text": "got the logic pretty much, and it's a"
+    },
+    {
+      "start": 383.64,
+      "end": 387.52,
+      "duration": 3.88,
+      "text": "very, very simple sliding window"
+    },
+    {
+      "start": 385.36,
+      "end": 389.08,
+      "duration": 3.72,
+      "text": "problem. So, let's now quickly uh try to"
+    },
+    {
+      "start": 387.52,
+      "end": 390.84,
+      "duration": 3.32,
+      "text": "write down the code. So, again, I'll be"
+    },
+    {
+      "start": 389.08,
+      "end": 392.36,
+      "duration": 3.28,
+      "text": "writing down the pseudo code. In case"
+    },
+    {
+      "start": 390.84,
+      "end": 394.44,
+      "duration": 3.6,
+      "text": "you want your language-specific code,"
+    },
+    {
+      "start": 392.36,
+      "end": 397.68,
+      "duration": 5.32,
+      "text": "you can find them below. So, you'll be"
+    },
+    {
+      "start": 394.44,
+      "end": 401.12,
+      "duration": 6.68,
+      "text": "given a function, right? Where you'll be"
+    },
+    {
+      "start": 397.68,
+      "end": 404.0,
+      "duration": 6.32,
+      "text": "given a nums array and the integer K."
+    },
+    {
+      "start": 401.12,
+      "end": 406.36,
+      "duration": 5.24,
+      "text": "How do I write uh the code for it? First"
+    },
+    {
+      "start": 404.0,
+      "end": 408.24,
+      "duration": 4.24,
+      "text": "thing I know is uh the window is of size"
+    },
+    {
+      "start": 406.36,
+      "end": 412.0,
+      "duration": 5.64,
+      "text": "K. That is something I know for sure."
+    },
+    {
+      "start": 408.24,
+      "end": 416.36,
+      "duration": 8.12,
+      "text": "The window is of size K. So, why can't I"
+    },
+    {
+      "start": 412.0,
+      "end": 417.96,
+      "duration": 5.96,
+      "text": "say, \"Okay, left sum is"
+    },
+    {
+      "start": 416.36,
+      "end": 421.72,
+      "duration": 5.36,
+      "text": "equivalent uh"
+    },
+    {
+      "start": 417.96,
+      "end": 424.72,
+      "duration": 6.76,
+      "text": "to zero, and then I can just loop from"
+    },
+    {
+      "start": 421.72,
+      "end": 429.24,
+      "duration": 7.52,
+      "text": "zero till K minus one at the index, and"
+    },
+    {
+      "start": 424.72,
+      "end": 431.8,
+      "duration": 7.08,
+      "text": "I can say left sum is left sum plus nums"
+    },
+    {
+      "start": 429.24,
+      "end": 434.68,
+      "duration": 5.44,
+      "text": "of I.\" So, what this will do is this"
+    },
+    {
+      "start": 431.8,
+      "end": 436.88,
+      "duration": 5.08,
+      "text": "will give me the sum of first K"
+    },
+    {
+      "start": 434.68,
+      "end": 438.48,
+      "duration": 3.8,
+      "text": "elements. And at the same time, I'm not"
+    },
+    {
+      "start": 436.88,
+      "end": 440.64,
+      "duration": 3.76,
+      "text": "picking up anything from the right, so I"
+    },
+    {
+      "start": 438.48,
+      "end": 443.52,
+      "duration": 5.04,
+      "text": "can keep it as zero, and I can also keep"
+    },
+    {
+      "start": 440.64,
+      "end": 446.2,
+      "duration": 5.56,
+      "text": "a max sum as zero."
+    },
+    {
+      "start": 443.52,
+      "end": 448.8,
+      "duration": 5.28,
+      "text": "So, can you tell me what will be the"
+    },
+    {
+      "start": 446.2,
+      "end": 451.64,
+      "duration": 5.44,
+      "text": "initial maximum value? So, can I say the"
+    },
+    {
+      "start": 448.8,
+      "end": 452.76,
+      "duration": 3.96,
+      "text": "initial max sum's value can be set as"
+    },
+    {
+      "start": 451.64,
+      "end": 454.76,
+      "duration": 3.12,
+      "text": "left sum?"
+    },
+    {
+      "start": 452.76,
+      "end": 456.72,
+      "duration": 3.96,
+      "text": "Because I'm assuming I've picked up all"
+    },
+    {
+      "start": 454.76,
+      "end": 458.88,
+      "duration": 4.12,
+      "text": "the four elements. I'm assuming I've"
+    },
+    {
+      "start": 456.72,
+      "end": 460.0,
+      "duration": 3.28,
+      "text": "picked up all the four elements. Okay,"
+    },
+    {
+      "start": 458.88,
+      "end": 462.36,
+      "duration": 3.48,
+      "text": "perfect."
+    },
+    {
+      "start": 460.0,
+      "end": 464.76,
+      "duration": 4.76,
+      "text": "After this, what will happen? I know one"
+    },
+    {
+      "start": 462.36,
+      "end": 467.52,
+      "duration": 5.16,
+      "text": "thing, I have to shrink down the window,"
+    },
+    {
+      "start": 464.76,
+      "end": 471.36,
+      "duration": 6.6,
+      "text": "take out this element. And this element"
+    },
+    {
+      "start": 467.52,
+      "end": 472.96,
+      "duration": 5.44,
+      "text": "is at K minus one at index, K minus one"
+    },
+    {
+      "start": 471.36,
+      "end": 475.08,
+      "duration": 3.72,
+      "text": "at index."
+    },
+    {
+      "start": 472.96,
+      "end": 477.64,
+      "duration": 4.68,
+      "text": "After that, I'll have to take out K"
+    },
+    {
+      "start": 475.08,
+      "end": 480.04,
+      "duration": 4.96,
+      "text": "minus two at index. After that, I'll"
+    },
+    {
+      "start": 477.64,
+      "end": 482.2,
+      "duration": 4.56,
+      "text": "have to take out K minus three at index."
+    },
+    {
+      "start": 480.04,
+      "end": 483.76,
+      "duration": 3.72,
+      "text": "And after that, K minus four at index,"
+    },
+    {
+      "start": 482.2,
+      "end": 485.32,
+      "duration": 3.12,
+      "text": "which is technically zero, which is"
+    },
+    {
+      "start": 483.76,
+      "end": 487.48,
+      "duration": 3.72,
+      "text": "technically zero."
+    },
+    {
+      "start": 485.32,
+      "end": 489.68,
+      "duration": 4.36,
+      "text": "So, I know one thing, I'll have to go on"
+    },
+    {
+      "start": 487.48,
+      "end": 491.28,
+      "duration": 3.8,
+      "text": "from K minus zero till the zero at"
+    },
+    {
+      "start": 489.68,
+      "end": 493.04,
+      "duration": 3.36,
+      "text": "index, and every time I take out one"
+    },
+    {
+      "start": 491.28,
+      "end": 494.2,
+      "duration": 2.92,
+      "text": "element. That is something I know for"
+    },
+    {
+      "start": 493.04,
+      "end": 496.24,
+      "duration": 3.2,
+      "text": "sure."
+    },
+    {
+      "start": 494.2,
+      "end": 499.96,
+      "duration": 5.76,
+      "text": "Let's try to write down that stuff. So,"
+    },
+    {
+      "start": 496.24,
+      "end": 503.68,
+      "duration": 7.44,
+      "text": "I'll be like, okay, I equal to K minus"
+    },
+    {
+      "start": 499.96,
+      "end": 507.64,
+      "duration": 7.68,
+      "text": "one, I greater than equal to zero, I"
+    },
+    {
+      "start": 503.68,
+      "end": 513.12,
+      "duration": 9.44,
+      "text": "minus minus. So, every time what I do is"
+    },
+    {
+      "start": 507.64,
+      "end": 517.32,
+      "duration": 9.68,
+      "text": "left sum equal to left sum minus nums of"
+    },
+    {
+      "start": 513.12,
+      "end": 520.28,
+      "duration": 7.16,
+      "text": "I. So, what this does is every time"
+    },
+    {
+      "start": 517.32,
+      "end": 522.64,
+      "duration": 5.32,
+      "text": "takes out four, takes out three, takes"
+    },
+    {
+      "start": 520.28,
+      "end": 523.6,
+      "duration": 3.32,
+      "text": "out two, and then takes out six."
+    },
+    {
+      "start": 522.64,
+      "end": 525.76,
+      "duration": 3.12,
+      "text": "Perfect."
+    },
+    {
+      "start": 523.6,
+      "end": 527.2,
+      "duration": 3.6,
+      "text": "But, when you're taking out something,"
+    },
+    {
+      "start": 525.76,
+      "end": 529.52,
+      "duration": 3.76,
+      "text": "at the same moment, if you're taking out"
+    },
+    {
+      "start": 527.2,
+      "end": 532.16,
+      "duration": 4.96,
+      "text": "four for the first time, you'll have to"
+    },
+    {
+      "start": 529.52,
+      "end": 535.44,
+      "duration": 5.92,
+      "text": "add something from the back. So, what I"
+    },
+    {
+      "start": 532.16,
+      "end": 538.44,
+      "duration": 6.28,
+      "text": "will do is I'll keep a right index, and"
+    },
+    {
+      "start": 535.44,
+      "end": 540.28,
+      "duration": 4.84,
+      "text": "I can call it as N minus one. Why can I"
+    },
+    {
+      "start": 538.44,
+      "end": 543.12,
+      "duration": 4.68,
+      "text": "call it as N minus one? Because the"
+    },
+    {
+      "start": 540.28,
+      "end": 545.2,
+      "duration": 4.92,
+      "text": "first element that I'll pick up is at N"
+    },
+    {
+      "start": 543.12,
+      "end": 549.84,
+      "duration": 6.72,
+      "text": "minus one. And what I can do is I can"
+    },
+    {
+      "start": 545.2,
+      "end": 552.88,
+      "duration": 7.68,
+      "text": "say right sum is equal to right sum plus"
+    },
+    {
+      "start": 549.84,
+      "end": 555.2,
+      "duration": 5.36,
+      "text": "nums of right index, because that is"
+    },
+    {
+      "start": 552.88,
+      "end": 557.08,
+      "duration": 4.2,
+      "text": "what I'll pick up. Once I've picked it"
+    },
+    {
+      "start": 555.2,
+      "end": 560.04,
+      "duration": 4.84,
+      "text": "up, once I've picked it up."
+    },
+    {
+      "start": 557.08,
+      "end": 562.64,
+      "duration": 5.56,
+      "text": "Because first time this will go off, and"
+    },
+    {
+      "start": 560.04,
+      "end": 564.36,
+      "duration": 4.32,
+      "text": "this will be picked up, right? And after"
+    },
+    {
+      "start": 562.64,
+      "end": 566.56,
+      "duration": 3.92,
+      "text": "that, what will happen? This will go"
+    },
+    {
+      "start": 564.36,
+      "end": 569.92,
+      "duration": 5.56,
+      "text": "off, and this will be picked up. So, the"
+    },
+    {
+      "start": 566.56,
+      "end": 572.44,
+      "duration": 5.88,
+      "text": "right index from here has to move here."
+    },
+    {
+      "start": 569.92,
+      "end": 575.68,
+      "duration": 5.76,
+      "text": "So, please make sure the right index"
+    },
+    {
+      "start": 572.44,
+      "end": 578.44,
+      "duration": 6.0,
+      "text": "also keeps moving by one place to back,"
+    },
+    {
+      "start": 575.68,
+      "end": 580.44,
+      "duration": 4.76,
+      "text": "because for the next time it has to go"
+    },
+    {
+      "start": 578.44,
+      "end": 582.28,
+      "duration": 3.84,
+      "text": "down as well. It has to go down."
+    },
+    {
+      "start": 580.44,
+      "end": 584.44,
+      "duration": 4.0,
+      "text": "Perfect."
+    },
+    {
+      "start": 582.28,
+      "end": 590.84,
+      "duration": 8.56,
+      "text": "I have a left sum. I have a right sum."
+    },
+    {
+      "start": 584.44,
+      "end": 592.08,
+      "duration": 7.64,
+      "text": "So, can I say max sum will be max of max"
+    },
+    {
+      "start": 590.84,
+      "end": 596.56,
+      "duration": 5.72,
+      "text": "sum"
+    },
+    {
+      "start": 592.08,
+      "end": 599.04,
+      "duration": 6.96,
+      "text": "{comma} left sum plus"
+    },
+    {
+      "start": 596.56,
+      "end": 602.32,
+      "duration": 5.76,
+      "text": "right sum. Can I say this? I can. And"
+    },
+    {
+      "start": 599.04,
+      "end": 606.64,
+      "duration": 7.6,
+      "text": "eventually, can I go ahead and return"
+    },
+    {
+      "start": 602.32,
+      "end": 608.32,
+      "duration": 6.0,
+      "text": "max sum? I can. And that will be it."
+    },
+    {
+      "start": 606.64,
+      "end": 611.36,
+      "duration": 4.72,
+      "text": "Super simple."
+    },
+    {
+      "start": 608.32,
+      "end": 614.0,
+      "duration": 5.68,
+      "text": "What is the time complexity? This one is"
+    },
+    {
+      "start": 611.36,
+      "end": 617.6,
+      "duration": 6.24,
+      "text": "taking a big O of K."
+    },
+    {
+      "start": 614.0,
+      "end": 620.48,
+      "duration": 6.48,
+      "text": "This one is taking another big O of K."
+    },
+    {
+      "start": 617.6,
+      "end": 622.12,
+      "duration": 4.52,
+      "text": "Am I using any extra space? I'm not. So,"
+    },
+    {
+      "start": 620.48,
+      "end": 626.12,
+      "duration": 5.64,
+      "text": "can I say that the overall time"
+    },
+    {
+      "start": 622.12,
+      "end": 628.48,
+      "duration": 6.36,
+      "text": "complexity will be big O of 2 into K?"
+    },
+    {
+      "start": 626.12,
+      "end": 632.48,
+      "duration": 6.36,
+      "text": "And the overall space complexity will be"
+    },
+    {
+      "start": 628.48,
+      "end": 634.76,
+      "duration": 6.28,
+      "text": "big O of one. Yes. And this will be the"
+    },
+    {
+      "start": 632.48,
+      "end": 636.32,
+      "duration": 3.84,
+      "text": "most optimal solution. You'll find a lot"
+    },
+    {
+      "start": 634.76,
+      "end": 638.36,
+      "duration": 3.6,
+      "text": "of solutions where people are using"
+    },
+    {
+      "start": 636.32,
+      "end": 642.04,
+      "duration": 5.72,
+      "text": "prefix sum and other things. Don't get"
+    },
+    {
+      "start": 638.36,
+      "end": 644.0,
+      "duration": 5.64,
+      "text": "into that. If you can easily solve it by"
+    },
+    {
+      "start": 642.04,
+      "end": 645.8,
+      "duration": 3.76,
+      "text": "using variables"
+    },
+    {
+      "start": 644.0,
+      "end": 648.24,
+      "duration": 4.24,
+      "text": "prefer that. Prefer that because it's a"
+    },
+    {
+      "start": 645.8,
+      "end": 650.16,
+      "duration": 4.36,
+      "text": "clean solution. It's a easy solution to"
+    },
+    {
+      "start": 648.24,
+      "end": 652.88,
+      "duration": 4.64,
+      "text": "explain as well."
+    },
+    {
+      "start": 650.16,
+      "end": 654.12,
+      "duration": 3.96,
+      "text": "So, this will be it for this one. So, if"
+    },
+    {
+      "start": 652.88,
+      "end": 656.08,
+      "duration": 3.2,
+      "text": "you're still now watching and if you've"
+    },
+    {
+      "start": 654.12,
+      "end": 657.56,
+      "duration": 3.44,
+      "text": "understood everything, please please do"
+    },
+    {
+      "start": 656.08,
+      "end": 659.0,
+      "duration": 2.92,
+      "text": "consider giving us a like. And if you're"
+    },
+    {
+      "start": 657.56,
+      "end": 661.12,
+      "duration": 3.56,
+      "text": "new to our channel, do consider"
+    },
+    {
+      "start": 659.0,
+      "end": 662.36,
+      "duration": 3.36,
+      "text": "subscribing to us as well. With this,"
+    },
+    {
+      "start": 661.12,
+      "end": 663.44,
+      "duration": 2.32,
+      "text": "I'll be wrapping up this video. Let's"
+    },
+    {
+      "start": 662.36,
+      "end": 664.32,
+      "duration": 1.96,
+      "text": "meet in some other video. Till then,"
+    },
+    {
+      "start": 663.44,
+      "end": 667.48,
+      "duration": 4.04,
+      "text": "bye-bye. Take care."
+    },
+    {
+      "start": 664.32,
+      "end": 670.76,
+      "duration": 6.44,
+      "text": "When all your highest broken,"
+    },
+    {
+      "start": 667.48,
+      "end": 674.16,
+      "duration": 6.68,
+      "text": "don't ever forget you're golden."
+    },
+    {
+      "start": 670.76,
+      "end": 674.16,
+      "duration": 3.4,
+      "text": "I will find the light in"
+    }
+  ]
+}

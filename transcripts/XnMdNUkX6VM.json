@@ -1,0 +1,2666 @@
+{
+  "video_id": "XnMdNUkX6VM",
+  "title": "L9. Binary Subarrays With Sum | 2 Pointers and Sliding Window Playlist",
+  "duration_sec": 1227,
+  "num_segments": 443,
+  "segments": [
+    {
+      "start": 3.2,
+      "end": 7.28,
+      "duration": 4.08,
+      "text": "so let's continue with the 2 pointer SL"
+    },
+    {
+      "start": 5.48,
+      "end": 10.28,
+      "duration": 4.8,
+      "text": "sliding window playlist from the drivers"
+    },
+    {
+      "start": 7.28,
+      "end": 11.52,
+      "duration": 4.24,
+      "text": "A2Z DS course what starting hey welcome"
+    },
+    {
+      "start": 10.28,
+      "end": 13.64,
+      "duration": 3.36,
+      "text": "back to the channel I hope you guys are"
+    },
+    {
+      "start": 11.52,
+      "end": 16.48,
+      "duration": 4.96,
+      "text": "doing extremely well so the problem that"
+    },
+    {
+      "start": 13.64,
+      "end": 19.8,
+      "duration": 6.16,
+      "text": "we will be solving today is binary"
+    },
+    {
+      "start": 16.48,
+      "end": 22.12,
+      "duration": 5.64,
+      "text": "subarrays with some but before uh"
+    },
+    {
+      "start": 19.8,
+      "end": 25.16,
+      "duration": 5.36,
+      "text": "starting off with this problem please"
+    },
+    {
+      "start": 22.12,
+      "end": 29.56,
+      "duration": 7.44,
+      "text": "please go back and watch my video on"
+    },
+    {
+      "start": 25.16,
+      "end": 31.6,
+      "duration": 6.44,
+      "text": "count subar where the sum equals K now"
+    },
+    {
+      "start": 29.56,
+      "end": 33.32,
+      "duration": 3.76,
+      "text": "this is a problem that I have already"
+    },
+    {
+      "start": 31.6,
+      "end": 36.08,
+      "duration": 4.48,
+      "text": "done in the arrays and the hashing"
+    },
+    {
+      "start": 33.32,
+      "end": 37.52,
+      "duration": 4.2,
+      "text": "playlist please go back and watch it so"
+    },
+    {
+      "start": 36.08,
+      "end": 40.32,
+      "duration": 4.24,
+      "text": "I'm assuming that you have seen that"
+    },
+    {
+      "start": 37.52,
+      "end": 42.32,
+      "duration": 4.8,
+      "text": "video so let's understand what is the"
+    },
+    {
+      "start": 40.32,
+      "end": 45.12,
+      "duration": 4.8,
+      "text": "current problem stating it is stating"
+    },
+    {
+      "start": 42.32,
+      "end": 47.72,
+      "duration": 5.4,
+      "text": "that you will be given an array the"
+    },
+    {
+      "start": 45.12,
+      "end": 50.52,
+      "duration": 5.4,
+      "text": "array will be a binary array that means"
+    },
+    {
+      "start": 47.72,
+      "end": 53.08,
+      "duration": 5.36,
+      "text": "it will be containing one and zeros in"
+    },
+    {
+      "start": 50.52,
+      "end": 56.04,
+      "duration": 5.52,
+      "text": "it and it'll also be given an integer"
+    },
+    {
+      "start": 53.08,
+      "end": 58.52,
+      "duration": 5.44,
+      "text": "goal now your task is to compute the"
+    },
+    {
+      "start": 56.04,
+      "end": 61.68,
+      "duration": 5.64,
+      "text": "number of subarrays now what is"
+    },
+    {
+      "start": 58.52,
+      "end": 63.6,
+      "duration": 5.08,
+      "text": "subarrays a consecu portion of an array"
+    },
+    {
+      "start": 61.68,
+      "end": 65.56,
+      "duration": 3.88,
+      "text": "right so you'll have to uh you'll have"
+    },
+    {
+      "start": 63.6,
+      "end": 68.76,
+      "duration": 5.16,
+      "text": "to compute the total number of sub"
+    },
+    {
+      "start": 65.56,
+      "end": 72.04,
+      "duration": 6.48,
+      "text": "arrays where the sum is equivalent to"
+    },
+    {
+      "start": 68.76,
+      "end": 74.36,
+      "duration": 5.6,
+      "text": "this particular given goal so let's uh"
+    },
+    {
+      "start": 72.04,
+      "end": 76.92,
+      "duration": 4.88,
+      "text": "pick up one of the subarrays if I pick"
+    },
+    {
+      "start": 74.36,
+      "end": 80.08,
+      "duration": 5.72,
+      "text": "up this subarray the sum of the subarray"
+    },
+    {
+      "start": 76.92,
+      "end": 83.2,
+      "duration": 6.28,
+      "text": "is one so this is not equivalent to the"
+    },
+    {
+      "start": 80.08,
+      "end": 85.32,
+      "duration": 5.24,
+      "text": "goal so you cannot count it so which"
+    },
+    {
+      "start": 83.2,
+      "end": 87.56,
+      "duration": 4.36,
+      "text": "subarrays can I count probably I can"
+    },
+    {
+      "start": 85.32,
+      "end": 91.52,
+      "duration": 6.2,
+      "text": "count this one so if I take this one the"
+    },
+    {
+      "start": 87.56,
+      "end": 94.0,
+      "duration": 6.44,
+      "text": "sum is two so I have one subar right can"
+    },
+    {
+      "start": 91.52,
+      "end": 97.6,
+      "duration": 6.08,
+      "text": "I take this one yes because the sum is"
+    },
+    {
+      "start": 94.0,
+      "end": 100.64,
+      "duration": 6.64,
+      "text": "again two so the count is two now can I"
+    },
+    {
+      "start": 97.6,
+      "end": 103.92,
+      "duration": 6.32,
+      "text": "take this subar yes I can so I have"
+    },
+    {
+      "start": 100.64,
+      "end": 106.24,
+      "duration": 5.6,
+      "text": "three subar can I take this one yes I"
+    },
+    {
+      "start": 103.92,
+      "end": 109.16,
+      "duration": 5.24,
+      "text": "can I have four"
+    },
+    {
+      "start": 106.24,
+      "end": 111.44,
+      "duration": 5.2,
+      "text": "subar do I see anything else no I don't"
+    },
+    {
+      "start": 109.16,
+      "end": 114.12,
+      "duration": 4.96,
+      "text": "see any other subar so in total there"
+    },
+    {
+      "start": 111.44,
+      "end": 116.48,
+      "duration": 5.04,
+      "text": "are four subarrays and this is what you"
+    },
+    {
+      "start": 114.12,
+      "end": 119.52,
+      "duration": 5.4,
+      "text": "return and you might be thinking hey"
+    },
+    {
+      "start": 116.48,
+      "end": 122.16,
+      "duration": 5.68,
+      "text": "straver it is the exact same problem"
+    },
+    {
+      "start": 119.52,
+      "end": 124.72,
+      "duration": 5.2,
+      "text": "because the problem counts sub array"
+    },
+    {
+      "start": 122.16,
+      "end": 128.44,
+      "duration": 6.28,
+      "text": "where the sum is equivalent to the given"
+    },
+    {
+      "start": 124.72,
+      "end": 131.84,
+      "duration": 7.12,
+      "text": "G it is the exact same problem now in"
+    },
+    {
+      "start": 128.44,
+      "end": 135.16,
+      "duration": 6.72,
+      "text": "this problem it was given that the array"
+    },
+    {
+      "start": 131.84,
+      "end": 138.24,
+      "duration": 6.4,
+      "text": "can have positive as well as negative"
+    },
+    {
+      "start": 135.16,
+      "end": 141.04,
+      "duration": 5.88,
+      "text": "integers so we did a bro we did a better"
+    },
+    {
+      "start": 138.24,
+      "end": 144.04,
+      "duration": 5.8,
+      "text": "and the most optimal solution was the"
+    },
+    {
+      "start": 141.04,
+      "end": 147.8,
+      "duration": 6.76,
+      "text": "hashing solution right which was taking"
+    },
+    {
+      "start": 144.04,
+      "end": 150.64,
+      "duration": 6.6,
+      "text": "a Time complexity of B go of N and a"
+    },
+    {
+      "start": 147.8,
+      "end": 153.4,
+      "duration": 5.6,
+      "text": "space complexity of B go of n again I'm"
+    },
+    {
+      "start": 150.64,
+      "end": 155.48,
+      "duration": 4.84,
+      "text": "assuming that the map is working in B go"
+    },
+    {
+      "start": 153.4,
+      "end": 157.48,
+      "duration": 4.08,
+      "text": "one if you assume that the map takes"
+    },
+    {
+      "start": 155.48,
+      "end": 159.8,
+      "duration": 4.32,
+      "text": "logarithmic of n you can add that as"
+    },
+    {
+      "start": 157.48,
+      "end": 162.68,
+      "duration": 5.2,
+      "text": "well so this was the most optimal"
+    },
+    {
+      "start": 159.8,
+      "end": 164.4,
+      "duration": 4.6,
+      "text": "solution now this most optimal solution"
+    },
+    {
+      "start": 162.68,
+      "end": 167.88,
+      "duration": 5.2,
+      "text": "will also work for this particular"
+    },
+    {
+      "start": 164.4,
+      "end": 170.44,
+      "duration": 6.04,
+      "text": "problem statement but over here it is"
+    },
+    {
+      "start": 167.88,
+      "end": 172.8,
+      "duration": 4.92,
+      "text": "mentioned that it is a binary array so"
+    },
+    {
+      "start": 170.44,
+      "end": 175.84,
+      "duration": 5.4,
+      "text": "what we can do is we can further"
+    },
+    {
+      "start": 172.8,
+      "end": 180.44,
+      "duration": 7.64,
+      "text": "optimize it this particular solution was"
+    },
+    {
+      "start": 175.84,
+      "end": 182.84,
+      "duration": 7.0,
+      "text": "working for positive and negative but"
+    },
+    {
+      "start": 180.44,
+      "end": 186.2,
+      "duration": 5.76,
+      "text": "uh we can still further optimize the"
+    },
+    {
+      "start": 182.84,
+      "end": 188.68,
+      "duration": 5.84,
+      "text": "only reason is we're given a special"
+    },
+    {
+      "start": 186.2,
+      "end": 191.4,
+      "duration": 5.2,
+      "text": "condition that the array contains one"
+    },
+    {
+      "start": 188.68,
+      "end": 194.36,
+      "duration": 5.68,
+      "text": "and zeros in it now if I'm looking to"
+    },
+    {
+      "start": 191.4,
+      "end": 196.92,
+      "duration": 5.52,
+      "text": "optimize a Time complexity of B go of N"
+    },
+    {
+      "start": 194.36,
+      "end": 199.12,
+      "duration": 4.76,
+      "text": "and a space complexity of B go of N I"
+    },
+    {
+      "start": 196.92,
+      "end": 201.64,
+      "duration": 4.72,
+      "text": "definitely cannot optimize B go of n"
+    },
+    {
+      "start": 199.12,
+      "end": 204.0,
+      "duration": 4.88,
+      "text": "time because I have n"
+    },
+    {
+      "start": 201.64,
+      "end": 207.2,
+      "duration": 5.56,
+      "text": "elements I cannot do better than that"
+    },
+    {
+      "start": 204.0,
+      "end": 210.12,
+      "duration": 6.12,
+      "text": "that's for sure so the only place that I"
+    },
+    {
+      "start": 207.2,
+      "end": 213.32,
+      "duration": 6.12,
+      "text": "can optimize is the space can I get of"
+    },
+    {
+      "start": 210.12,
+      "end": 214.52,
+      "duration": 4.4,
+      "text": "the external map that I was using again"
+    },
+    {
+      "start": 213.32,
+      "end": 216.56,
+      "duration": 3.24,
+      "text": "I'm assuming that you have seen that"
+    },
+    {
+      "start": 214.52,
+      "end": 219.52,
+      "duration": 5.0,
+      "text": "video so that is why I'm referencing"
+    },
+    {
+      "start": 216.56,
+      "end": 221.56,
+      "duration": 5.0,
+      "text": "like that so I have to get rid of that"
+    },
+    {
+      "start": 219.52,
+      "end": 224.16,
+      "duration": 4.64,
+      "text": "map data structure so that is where the"
+    },
+    {
+      "start": 221.56,
+      "end": 226.6,
+      "duration": 5.04,
+      "text": "optimization will come in okay so if I"
+    },
+    {
+      "start": 224.16,
+      "end": 229.0,
+      "duration": 4.84,
+      "text": "get rid of the map so I'm looking at a"
+    },
+    {
+      "start": 226.6,
+      "end": 232.88,
+      "duration": 6.28,
+      "text": "time complexity of bego of N and a space"
+    },
+    {
+      "start": 229.0,
+      "end": 235.52,
+      "duration": 6.52,
+      "text": "complexity of beo of one and the problem"
+    },
+    {
+      "start": 232.88,
+      "end": 237.84,
+      "duration": 4.96,
+      "text": "is involving sub arrays so if I'm not"
+    },
+    {
+      "start": 235.52,
+      "end": 239.88,
+      "duration": 4.36,
+      "text": "using external data structures which"
+    },
+    {
+      "start": 237.84,
+      "end": 242.4,
+      "duration": 4.56,
+      "text": "algorithm comes to your brain yes the"
+    },
+    {
+      "start": 239.88,
+      "end": 244.68,
+      "duration": 4.8,
+      "text": "two pointer and the sliding window that"
+    },
+    {
+      "start": 242.4,
+      "end": 246.0,
+      "duration": 3.6,
+      "text": "is where I have to think but wait"
+    },
+    {
+      "start": 244.68,
+      "end": 249.04,
+      "duration": 4.36,
+      "text": "whatever problems they have done till"
+    },
+    {
+      "start": 246.0,
+      "end": 251.8,
+      "duration": 5.8,
+      "text": "now has been something like finding the"
+    },
+    {
+      "start": 249.04,
+      "end": 253.92,
+      "duration": 4.88,
+      "text": "longest subarray or a substring but this"
+    },
+    {
+      "start": 251.8,
+      "end": 256.96,
+      "duration": 5.16,
+      "text": "is slightly different over here the"
+    },
+    {
+      "start": 253.92,
+      "end": 259.36,
+      "duration": 5.44,
+      "text": "problem is finding the number of sub ARs"
+    },
+    {
+      "start": 256.96,
+      "end": 261.36,
+      "duration": 4.4,
+      "text": "with a given sum number of subar you"
+    },
+    {
+      "start": 259.36,
+      "end": 263.48,
+      "duration": 4.12,
+      "text": "have to count you don't have to find the"
+    },
+    {
+      "start": 261.36,
+      "end": 266.88,
+      "duration": 5.52,
+      "text": "longest you have to count so how can I"
+    },
+    {
+      "start": 263.48,
+      "end": 268.6,
+      "duration": 5.12,
+      "text": "do it first of all let's try to analyze"
+    },
+    {
+      "start": 266.88,
+      "end": 270.52,
+      "duration": 3.64,
+      "text": "how the sliding window and 2 pointer"
+    },
+    {
+      "start": 268.6,
+      "end": 274.04,
+      "duration": 5.44,
+      "text": "works and see"
+    },
+    {
+      "start": 270.52,
+      "end": 276.4,
+      "duration": 5.88,
+      "text": "if can like if at all can we solve it by"
+    },
+    {
+      "start": 274.04,
+      "end": 278.0,
+      "duration": 3.96,
+      "text": "two pointer or sliding window so let's"
+    },
+    {
+      "start": 276.4,
+      "end": 282.72,
+      "duration": 6.32,
+      "text": "take an example where it is something"
+    },
+    {
+      "start": 278.0,
+      "end": 286.68,
+      "duration": 8.68,
+      "text": "like one uh 0 1 1"
+    },
+    {
+      "start": 282.72,
+      "end": 290.4,
+      "duration": 7.68,
+      "text": "0 and uh the goal is"
+    },
+    {
+      "start": 286.68,
+      "end": 293.96,
+      "duration": 7.28,
+      "text": "two so what do we do generally in 2.2 we"
+    },
+    {
+      "start": 290.4,
+      "end": 296.28,
+      "duration": 5.88,
+      "text": "take a l Point uh we take a l we take R"
+    },
+    {
+      "start": 293.96,
+      "end": 299.32,
+      "duration": 5.36,
+      "text": "and we make it stand at the first place"
+    },
+    {
+      "start": 296.28,
+      "end": 301.0,
+      "duration": 4.72,
+      "text": "we're looking for a sum of the segment"
+    },
+    {
+      "start": 299.32,
+      "end": 304.76,
+      "duration": 5.44,
+      "text": "and we also looking for the count of"
+    },
+    {
+      "start": 301.0,
+      "end": 306.4,
+      "duration": 5.4,
+      "text": "subar so let's initially have it as zero"
+    },
+    {
+      "start": 304.76,
+      "end": 310.28,
+      "duration": 5.52,
+      "text": "so initially I'm standing at this"
+    },
+    {
+      "start": 306.4,
+      "end": 312.36,
+      "duration": 5.96,
+      "text": "element so this is the segment itself so"
+    },
+    {
+      "start": 310.28,
+      "end": 315.96,
+      "duration": 5.68,
+      "text": "can I take this number and add it to the"
+    },
+    {
+      "start": 312.36,
+      "end": 319.04,
+      "duration": 6.68,
+      "text": "sum I can once I've added it to the sum"
+    },
+    {
+      "start": 315.96,
+      "end": 321.4,
+      "duration": 5.44,
+      "text": "is it equivalent to the goal it is not"
+    },
+    {
+      "start": 319.04,
+      "end": 324.32,
+      "duration": 5.28,
+      "text": "so what I can do is I can go ahead and"
+    },
+    {
+      "start": 321.4,
+      "end": 326.44,
+      "duration": 5.04,
+      "text": "take this R and move forward the moment"
+    },
+    {
+      "start": 324.32,
+      "end": 329.36,
+      "duration": 5.04,
+      "text": "I move it forward I get a zero I can add"
+    },
+    {
+      "start": 326.44,
+      "end": 331.52,
+      "duration": 5.08,
+      "text": "it to the sum no change the sum is the"
+    },
+    {
+      "start": 329.36,
+      "end": 334.68,
+      "duration": 5.32,
+      "text": "sum is is no more equivalent to the goal"
+    },
+    {
+      "start": 331.52,
+      "end": 336.92,
+      "duration": 5.4,
+      "text": "so what I do is I again move the r again"
+    },
+    {
+      "start": 334.68,
+      "end": 339.4,
+      "duration": 4.72,
+      "text": "the segment will not have it so I again"
+    },
+    {
+      "start": 336.92,
+      "end": 342.56,
+      "duration": 5.64,
+      "text": "take the r and I'll move it forward this"
+    },
+    {
+      "start": 339.4,
+      "end": 345.12,
+      "duration": 5.72,
+      "text": "is the moment I'll add it to the sum and"
+    },
+    {
+      "start": 342.56,
+      "end": 348.24,
+      "duration": 5.68,
+      "text": "the sum will be two and this is the"
+    },
+    {
+      "start": 345.12,
+      "end": 351.08,
+      "duration": 5.96,
+      "text": "entire segment correct and the sum is"
+    },
+    {
+      "start": 348.24,
+      "end": 354.76,
+      "duration": 6.52,
+      "text": "two which is equivalent to the goal so I"
+    },
+    {
+      "start": 351.08,
+      "end": 357.88,
+      "duration": 6.8,
+      "text": "can say that this is definitely a subar"
+    },
+    {
+      "start": 354.76,
+      "end": 359.36,
+      "duration": 4.6,
+      "text": "right can I count this I can once you"
+    },
+    {
+      "start": 357.88,
+      "end": 361.88,
+      "duration": 4.0,
+      "text": "have counted it now what is the next"
+    },
+    {
+      "start": 359.36,
+      "end": 365.4,
+      "duration": 6.04,
+      "text": "step you'll straight away take this all"
+    },
+    {
+      "start": 361.88,
+      "end": 368.04,
+      "duration": 6.16,
+      "text": "and you'll move it ahead isn't it right"
+    },
+    {
+      "start": 365.4,
+      "end": 370.64,
+      "duration": 5.24,
+      "text": "so I moved it ahead I have a one so what"
+    },
+    {
+      "start": 368.04,
+      "end": 373.4,
+      "duration": 5.36,
+      "text": "you can do is you can add it to your sum"
+    },
+    {
+      "start": 370.64,
+      "end": 376.0,
+      "duration": 5.36,
+      "text": "and your sum is three now this is the"
+    },
+    {
+      "start": 373.4,
+      "end": 378.08,
+      "duration": 4.68,
+      "text": "moment you look for this segment and the"
+    },
+    {
+      "start": 376.0,
+      "end": 381.36,
+      "duration": 5.36,
+      "text": "sum is three which is not equivalent to"
+    },
+    {
+      "start": 378.08,
+      "end": 383.96,
+      "duration": 5.88,
+      "text": "the goal but the sum has exceeded the"
+    },
+    {
+      "start": 381.36,
+      "end": 385.84,
+      "duration": 4.48,
+      "text": "goal so thereby if you keep on adding"
+    },
+    {
+      "start": 383.96,
+      "end": 388.28,
+      "duration": 4.32,
+      "text": "numbers if you keep on adding numbers to"
+    },
+    {
+      "start": 385.84,
+      "end": 390.0,
+      "duration": 4.16,
+      "text": "the window the sum will increase you'll"
+    },
+    {
+      "start": 388.28,
+      "end": 392.12,
+      "duration": 3.84,
+      "text": "have to decrease the sum because sum has"
+    },
+    {
+      "start": 390.0,
+      "end": 394.12,
+      "duration": 4.12,
+      "text": "exceeded the goal so if I have to"
+    },
+    {
+      "start": 392.12,
+      "end": 395.44,
+      "duration": 3.32,
+      "text": "decrease I'll have to eliminate numbers"
+    },
+    {
+      "start": 394.12,
+      "end": 397.8,
+      "duration": 3.68,
+      "text": "from the left I have to shring the"
+    },
+    {
+      "start": 395.44,
+      "end": 399.32,
+      "duration": 3.88,
+      "text": "window shring the window I'm looking to"
+    },
+    {
+      "start": 397.8,
+      "end": 402.04,
+      "duration": 4.24,
+      "text": "shrink the window the first element that"
+    },
+    {
+      "start": 399.32,
+      "end": 403.72,
+      "duration": 4.4,
+      "text": "I'll remove is this one so if I remove"
+    },
+    {
+      "start": 402.04,
+      "end": 406.36,
+      "duration": 4.32,
+      "text": "this one what will happen is the sum"
+    },
+    {
+      "start": 403.72,
+      "end": 408.48,
+      "duration": 4.76,
+      "text": "will again shrink back to two and the L"
+    },
+    {
+      "start": 406.36,
+      "end": 411.12,
+      "duration": 4.76,
+      "text": "will be over here now this is where I"
+    },
+    {
+      "start": 408.48,
+      "end": 414.04,
+      "duration": 5.56,
+      "text": "can say that hey is this segment a valid"
+    },
+    {
+      "start": 411.12,
+      "end": 416.32,
+      "duration": 5.2,
+      "text": "one it is because the sum is two can I"
+    },
+    {
+      "start": 414.04,
+      "end": 419.72,
+      "duration": 5.68,
+      "text": "have a count I can have a count so I can"
+    },
+    {
+      "start": 416.32,
+      "end": 421.28,
+      "duration": 4.96,
+      "text": "count this as well now ideally what I"
+    },
+    {
+      "start": 419.72,
+      "end": 423.76,
+      "duration": 4.04,
+      "text": "will do"
+    },
+    {
+      "start": 421.28,
+      "end": 426.36,
+      "duration": 5.08,
+      "text": "is because the sum is equivalent I'll"
+    },
+    {
+      "start": 423.76,
+      "end": 429.52,
+      "duration": 5.76,
+      "text": "take the r and I'll move ahead if I do"
+    },
+    {
+      "start": 426.36,
+      "end": 431.84,
+      "duration": 5.48,
+      "text": "this what happens is you did consider"
+    },
+    {
+      "start": 429.52,
+      "end": 433.84,
+      "duration": 4.32,
+      "text": "this segment right you did consider this"
+    },
+    {
+      "start": 431.84,
+      "end": 437.24,
+      "duration": 5.4,
+      "text": "segment but you could have also"
+    },
+    {
+      "start": 433.84,
+      "end": 439.8,
+      "duration": 5.96,
+      "text": "considered this segment right you could"
+    },
+    {
+      "start": 437.24,
+      "end": 441.72,
+      "duration": 4.48,
+      "text": "have also considered this segment but"
+    },
+    {
+      "start": 439.8,
+      "end": 443.96,
+      "duration": 4.16,
+      "text": "you didn't"
+    },
+    {
+      "start": 441.72,
+      "end": 445.36,
+      "duration": 3.64,
+      "text": "because you made sure that the L was"
+    },
+    {
+      "start": 443.96,
+      "end": 447.8,
+      "duration": 3.84,
+      "text": "standing now you might be thinking okay"
+    },
+    {
+      "start": 445.36,
+      "end": 449.12,
+      "duration": 3.76,
+      "text": "keep moving L keep moving L okay it"
+    },
+    {
+      "start": 447.8,
+      "end": 451.56,
+      "duration": 3.76,
+      "text": "doesn't work like that if you keep"
+    },
+    {
+      "start": 449.12,
+      "end": 453.92,
+      "duration": 4.8,
+      "text": "moving l what will happen is you'll"
+    },
+    {
+      "start": 451.56,
+      "end": 456.36,
+      "duration": 4.8,
+      "text": "you'll miss out on this segment this is"
+    },
+    {
+      "start": 453.92,
+      "end": 458.52,
+      "duration": 4.6,
+      "text": "also a valid segment right when you move"
+    },
+    {
+      "start": 456.36,
+      "end": 462.48,
+      "duration": 6.12,
+      "text": "R when you move R and you keep the L"
+    },
+    {
+      "start": 458.52,
+      "end": 465.24,
+      "duration": 6.72,
+      "text": "here this is a valid segment correct so"
+    },
+    {
+      "start": 462.48,
+      "end": 468.36,
+      "duration": 5.88,
+      "text": "we are not sure we are not sure whether"
+    },
+    {
+      "start": 465.24,
+      "end": 471.8,
+      "duration": 6.56,
+      "text": "to move L or whether to move R we are in"
+    },
+    {
+      "start": 468.36,
+      "end": 476.56,
+      "duration": 8.2,
+      "text": "dilemma right so I know one thing for"
+    },
+    {
+      "start": 471.8,
+      "end": 478.76,
+      "duration": 6.96,
+      "text": "sure as of now I cannot I cannot figure"
+    },
+    {
+      "start": 476.56,
+      "end": 482.6,
+      "duration": 6.04,
+      "text": "out where to move L and R if I'm looking"
+    },
+    {
+      "start": 478.76,
+      "end": 484.72,
+      "duration": 5.96,
+      "text": "for some equivalent to the goal because"
+    },
+    {
+      "start": 482.6,
+      "end": 487.64,
+      "duration": 5.04,
+      "text": "it's saying equal to it's saying equal"
+    },
+    {
+      "start": 484.72,
+      "end": 491.24,
+      "duration": 6.52,
+      "text": "to and why is the problem coming up"
+    },
+    {
+      "start": 487.64,
+      "end": 493.84,
+      "duration": 6.2,
+      "text": "because we have zeros on removing zeros"
+    },
+    {
+      "start": 491.24,
+      "end": 496.36,
+      "duration": 5.12,
+      "text": "sum is not getting affected that is"
+    },
+    {
+      "start": 493.84,
+      "end": 498.76,
+      "duration": 4.92,
+      "text": "where the problem is coming up okay so"
+    },
+    {
+      "start": 496.36,
+      "end": 501.48,
+      "duration": 5.12,
+      "text": "we need to find a better"
+    },
+    {
+      "start": 498.76,
+      "end": 504.04,
+      "duration": 5.28,
+      "text": "solution so I know that I"
+    },
+    {
+      "start": 501.48,
+      "end": 508.12,
+      "duration": 6.64,
+      "text": "cannot solve this problem to find out"
+    },
+    {
+      "start": 504.04,
+      "end": 510.08,
+      "duration": 6.04,
+      "text": "the exact sum equivalent to goal can I"
+    },
+    {
+      "start": 508.12,
+      "end": 513.16,
+      "duration": 5.04,
+      "text": "do this can I do this"
+    },
+    {
+      "start": 510.08,
+      "end": 515.64,
+      "duration": 5.56,
+      "text": "let's try to solve a different problem"
+    },
+    {
+      "start": 513.16,
+      "end": 518.64,
+      "duration": 5.48,
+      "text": "and see if I can figure out a sliding"
+    },
+    {
+      "start": 515.64,
+      "end": 521.68,
+      "duration": 6.04,
+      "text": "window solution to it can I figure out"
+    },
+    {
+      "start": 518.64,
+      "end": 521.68,
+      "duration": 3.04,
+      "text": "the number of sub"
+    },
+    {
+      "start": 523.48,
+      "end": 530.72,
+      "duration": 7.24,
+      "text": "arrays when the sum is lesser than equal"
+    },
+    {
+      "start": 528.0,
+      "end": 533.16,
+      "duration": 5.16,
+      "text": "to goal I know that the problem is"
+    },
+    {
+      "start": 530.72,
+      "end": 534.84,
+      "duration": 4.12,
+      "text": "asking you to find equal to goal but"
+    },
+    {
+      "start": 533.16,
+      "end": 536.92,
+      "duration": 3.76,
+      "text": "I'll try to solve it for lesser than"
+    },
+    {
+      "start": 534.84,
+      "end": 541.08,
+      "duration": 6.24,
+      "text": "equal to goal and again I'll try again"
+    },
+    {
+      "start": 536.92,
+      "end": 543.28,
+      "duration": 6.36,
+      "text": "I'll try the same method let's take an L"
+    },
+    {
+      "start": 541.08,
+      "end": 546.64,
+      "duration": 5.56,
+      "text": "let's take an R because we know this"
+    },
+    {
+      "start": 543.28,
+      "end": 549.72,
+      "duration": 6.44,
+      "text": "this is how we deal with Windows we will"
+    },
+    {
+      "start": 546.64,
+      "end": 551.92,
+      "duration": 5.28,
+      "text": "take some my bad we will take sum and"
+    },
+    {
+      "start": 549.72,
+      "end": 553.68,
+      "duration": 3.96,
+      "text": "that can be initially zero and we will"
+    },
+    {
+      "start": 551.92,
+      "end": 556.96,
+      "duration": 5.04,
+      "text": "take count and that can also be"
+    },
+    {
+      "start": 553.68,
+      "end": 558.52,
+      "duration": 4.84,
+      "text": "initially zero so where am I standing"
+    },
+    {
+      "start": 556.96,
+      "end": 561.88,
+      "duration": 4.92,
+      "text": "I'm standing at this segment so I can"
+    },
+    {
+      "start": 558.52,
+      "end": 563.84,
+      "duration": 5.32,
+      "text": "add it to the sum is that lesser than"
+    },
+    {
+      "start": 561.88,
+      "end": 566.6,
+      "duration": 4.72,
+      "text": "equal to goal is my very simple question"
+    },
+    {
+      "start": 563.84,
+      "end": 569.08,
+      "duration": 5.24,
+      "text": "to you is this lesser than equal to goal"
+    },
+    {
+      "start": 566.6,
+      "end": 571.92,
+      "duration": 5.32,
+      "text": "it is so can I say this segment is a"
+    },
+    {
+      "start": 569.08,
+      "end": 575.4,
+      "duration": 6.32,
+      "text": "valid segment I'm like yes this is a"
+    },
+    {
+      "start": 571.92,
+      "end": 578.84,
+      "duration": 6.92,
+      "text": "valid segment and if it is increase the"
+    },
+    {
+      "start": 575.4,
+      "end": 581.32,
+      "duration": 5.92,
+      "text": "G perfect now what is the next one I'll"
+    },
+    {
+      "start": 578.84,
+      "end": 584.92,
+      "duration": 6.08,
+      "text": "take the r and I'll move it"
+    },
+    {
+      "start": 581.32,
+      "end": 585.68,
+      "duration": 4.36,
+      "text": "here now this is where you need to apply"
+    },
+    {
+      "start": 584.92,
+      "end": 588.08,
+      "duration": 3.16,
+      "text": "some"
+    },
+    {
+      "start": 585.68,
+      "end": 590.16,
+      "duration": 4.48,
+      "text": "mathematics I'm asking you a very simple"
+    },
+    {
+      "start": 588.08,
+      "end": 592.84,
+      "duration": 4.76,
+      "text": "question when you move it to here you"
+    },
+    {
+      "start": 590.16,
+      "end": 596.68,
+      "duration": 6.52,
+      "text": "add it to the sum the sum still stays as"
+    },
+    {
+      "start": 592.84,
+      "end": 601.24,
+      "duration": 8.4,
+      "text": "one and this is lesser than equal to"
+    },
+    {
+      "start": 596.68,
+      "end": 604.2,
+      "duration": 7.52,
+      "text": "goal now if if if the sum is lesser than"
+    },
+    {
+      "start": 601.24,
+      "end": 607.68,
+      "duration": 6.44,
+      "text": "equal to goal even after adding an"
+    },
+    {
+      "start": 604.2,
+      "end": 610.56,
+      "duration": 6.36,
+      "text": "element can I say that element"
+    },
+    {
+      "start": 607.68,
+      "end": 613.4,
+      "duration": 5.72,
+      "text": "individually can I say that element"
+    },
+    {
+      "start": 610.56,
+      "end": 616.68,
+      "duration": 6.12,
+      "text": "individually can be a subarray where the"
+    },
+    {
+      "start": 613.4,
+      "end": 619.72,
+      "duration": 6.32,
+      "text": "sum is lesser than equal to goal I can I"
+    },
+    {
+      "start": 616.68,
+      "end": 622.72,
+      "duration": 6.04,
+      "text": "can so this element individually is a"
+    },
+    {
+      "start": 619.72,
+      "end": 624.76,
+      "duration": 5.04,
+      "text": "subarray as well as this element can"
+    },
+    {
+      "start": 622.72,
+      "end": 627.72,
+      "duration": 5.0,
+      "text": "combine with the left element so I can"
+    },
+    {
+      "start": 624.76,
+      "end": 630.36,
+      "duration": 5.6,
+      "text": "say I have two subarrays I can say two"
+    },
+    {
+      "start": 627.72,
+      "end": 632.68,
+      "duration": 4.96,
+      "text": "subarrays where the sum is lesser than"
+    },
+    {
+      "start": 630.36,
+      "end": 636.72,
+      "duration": 6.36,
+      "text": "equal to goal one is the zero itself one"
+    },
+    {
+      "start": 632.68,
+      "end": 640.6,
+      "duration": 7.92,
+      "text": "is the one zero agreed so I add another"
+    },
+    {
+      "start": 636.72,
+      "end": 643.92,
+      "duration": 7.2,
+      "text": "two okay what is the next step I'll move"
+    },
+    {
+      "start": 640.6,
+      "end": 646.32,
+      "duration": 5.72,
+      "text": "R the moment I move R sum will not"
+    },
+    {
+      "start": 643.92,
+      "end": 648.88,
+      "duration": 4.96,
+      "text": "change sum will not change and the sum"
+    },
+    {
+      "start": 646.32,
+      "end": 650.8,
+      "duration": 4.48,
+      "text": "is still lesser than equal to goal why"
+    },
+    {
+      "start": 648.88,
+      "end": 654.32,
+      "duration": 5.44,
+      "text": "did that happen because the"
+    },
+    {
+      "start": 650.8,
+      "end": 658.0,
+      "duration": 7.2,
+      "text": "element in itself is not allowing it to"
+    },
+    {
+      "start": 654.32,
+      "end": 660.04,
+      "duration": 5.72,
+      "text": "exceed more than goal okay so can I say"
+    },
+    {
+      "start": 658.0,
+      "end": 663.32,
+      "duration": 5.32,
+      "text": "this element individually"
+    },
+    {
+      "start": 660.04,
+      "end": 666.76,
+      "duration": 6.72,
+      "text": "can be a subar like yeah can be subar"
+    },
+    {
+      "start": 663.32,
+      "end": 670.08,
+      "duration": 6.76,
+      "text": "I'm very sure okay can this be a subar"
+    },
+    {
+      "start": 666.76,
+      "end": 672.56,
+      "duration": 5.8,
+      "text": "it can be can this be a subar yes so"
+    },
+    {
+      "start": 670.08,
+      "end": 674.6,
+      "duration": 4.52,
+      "text": "what I'm trying to do is I'm adding this"
+    },
+    {
+      "start": 672.56,
+      "end": 677.6,
+      "duration": 5.04,
+      "text": "element if I'm adding this element I'm"
+    },
+    {
+      "start": 674.6,
+      "end": 680.72,
+      "duration": 6.12,
+      "text": "trying to figure out how many subarrays"
+    },
+    {
+      "start": 677.6,
+      "end": 685.32,
+      "duration": 7.72,
+      "text": "this element can form with the previous"
+    },
+    {
+      "start": 680.72,
+      "end": 687.48,
+      "duration": 6.76,
+      "text": "valid answer and that is one itself two"
+    },
+    {
+      "start": 685.32,
+      "end": 689.8,
+      "duration": 4.48,
+      "text": "and three that's nothing but the length"
+    },
+    {
+      "start": 687.48,
+      "end": 692.48,
+      "duration": 5.0,
+      "text": "the length so I add"
+    },
+    {
+      "start": 689.8,
+      "end": 695.8,
+      "duration": 6.0,
+      "text": "three more to the answer perfect let's"
+    },
+    {
+      "start": 692.48,
+      "end": 698.48,
+      "duration": 6.0,
+      "text": "move R so this is when I move R and this"
+    },
+    {
+      "start": 695.8,
+      "end": 701.76,
+      "duration": 5.96,
+      "text": "reaches one and the sum gets updated to"
+    },
+    {
+      "start": 698.48,
+      "end": 703.8,
+      "duration": 5.32,
+      "text": "two now this time what happened the sum"
+    },
+    {
+      "start": 701.76,
+      "end": 706.6,
+      "duration": 4.84,
+      "text": "is still lesser than equal to goal the"
+    },
+    {
+      "start": 703.8,
+      "end": 709.8,
+      "duration": 6.0,
+      "text": "sum is still lesser than equal to goal"
+    },
+    {
+      "start": 706.6,
+      "end": 713.12,
+      "duration": 6.52,
+      "text": "okay so I'm very sure that this element"
+    },
+    {
+      "start": 709.8,
+      "end": 715.72,
+      "duration": 5.92,
+      "text": "in itself is possible is possible if"
+    },
+    {
+      "start": 713.12,
+      "end": 718.36,
+      "duration": 5.24,
+      "text": "this is possible how many subar can it"
+    },
+    {
+      "start": 715.72,
+      "end": 719.76,
+      "duration": 4.04,
+      "text": "form I already have a valid I already"
+    },
+    {
+      "start": 718.36,
+      "end": 724.76,
+      "duration": 6.4,
+      "text": "have a valid segment"
+    },
+    {
+      "start": 719.76,
+      "end": 726.8,
+      "duration": 7.04,
+      "text": "so 1 2 3 and a four I can form four"
+    },
+    {
+      "start": 724.76,
+      "end": 729.96,
+      "duration": 5.2,
+      "text": "which is typically the length which is"
+    },
+    {
+      "start": 726.8,
+      "end": 732.12,
+      "duration": 5.32,
+      "text": "typically the length okay perfect what"
+    },
+    {
+      "start": 729.96,
+      "end": 734.68,
+      "duration": 4.72,
+      "text": "is the next step now this is when you"
+    },
+    {
+      "start": 732.12,
+      "end": 738.12,
+      "duration": 6.0,
+      "text": "start understanding I'm going over here"
+    },
+    {
+      "start": 734.68,
+      "end": 741.28,
+      "duration": 6.6,
+      "text": "the sum gets increased to three now when"
+    },
+    {
+      "start": 738.12,
+      "end": 743.96,
+      "duration": 5.84,
+      "text": "the sum gets increased to three what"
+    },
+    {
+      "start": 741.28,
+      "end": 746.76,
+      "duration": 5.48,
+      "text": "happens this time is I'm saying hey on"
+    },
+    {
+      "start": 743.96,
+      "end": 749.2,
+      "duration": 5.24,
+      "text": "adding this no no no you'll have to"
+    },
+    {
+      "start": 746.76,
+      "end": 751.64,
+      "duration": 4.88,
+      "text": "shrink you'll have to shrink I won't"
+    },
+    {
+      "start": 749.2,
+      "end": 754.72,
+      "duration": 5.52,
+      "text": "under goal I want under goal three is"
+    },
+    {
+      "start": 751.64,
+      "end": 756.8,
+      "duration": 5.16,
+      "text": "exceeding exceeding so I'm like okay"
+    },
+    {
+      "start": 754.72,
+      "end": 760.0,
+      "duration": 5.28,
+      "text": "okay let's try to make a valid segment"
+    },
+    {
+      "start": 756.8,
+      "end": 762.04,
+      "duration": 5.24,
+      "text": "so I'm like can I just take it off take"
+    },
+    {
+      "start": 760.0,
+      "end": 765.6,
+      "duration": 5.6,
+      "text": "it off if we take it off the sum"
+    },
+    {
+      "start": 762.04,
+      "end": 768.6,
+      "duration": 6.56,
+      "text": "decreases and the L will go ahead and"
+    },
+    {
+      "start": 765.6,
+      "end": 771.6,
+      "duration": 6.0,
+      "text": "now you stop why do you stop because"
+    },
+    {
+      "start": 768.6,
+      "end": 773.76,
+      "duration": 5.16,
+      "text": "this is less than two so you stop now"
+    },
+    {
+      "start": 771.6,
+      "end": 776.52,
+      "duration": 4.92,
+      "text": "when you're stopping now you can"
+    },
+    {
+      "start": 773.76,
+      "end": 778.44,
+      "duration": 4.68,
+      "text": "definitely say that this entire segment"
+    },
+    {
+      "start": 776.52,
+      "end": 782.84,
+      "duration": 6.32,
+      "text": "is a valid one this entire segment is a"
+    },
+    {
+      "start": 778.44,
+      "end": 785.92,
+      "duration": 7.48,
+      "text": "valid one right right and can I say that"
+    },
+    {
+      "start": 782.84,
+      "end": 788.44,
+      "duration": 5.6,
+      "text": "this is one subartic this is another"
+    },
+    {
+      "start": 785.92,
+      "end": 791.76,
+      "duration": 5.84,
+      "text": "this is another and this is another I"
+    },
+    {
+      "start": 788.44,
+      "end": 793.4,
+      "duration": 4.96,
+      "text": "can so I again have four subarrays and"
+    },
+    {
+      "start": 791.76,
+      "end": 797.0,
+      "duration": 5.24,
+      "text": "you might have a question hey hey hey"
+    },
+    {
+      "start": 793.4,
+      "end": 799.88,
+      "duration": 6.48,
+      "text": "wait did you consider this we did we did"
+    },
+    {
+      "start": 797.0,
+      "end": 802.12,
+      "duration": 5.12,
+      "text": "did you consider this we did when we"
+    },
+    {
+      "start": 799.88,
+      "end": 805.36,
+      "duration": 5.48,
+      "text": "were standing at zero when the r was at"
+    },
+    {
+      "start": 802.12,
+      "end": 806.88,
+      "duration": 4.76,
+      "text": "zero I considered this you remember I"
+    },
+    {
+      "start": 805.36,
+      "end": 809.24,
+      "duration": 3.88,
+      "text": "considered zero and then I considered"
+    },
+    {
+      "start": 806.88,
+      "end": 811.52,
+      "duration": 4.64,
+      "text": "this when I was standing here I I"
+    },
+    {
+      "start": 809.24,
+      "end": 813.92,
+      "duration": 4.68,
+      "text": "considered this I considered this I"
+    },
+    {
+      "start": 811.52,
+      "end": 814.72,
+      "duration": 3.2,
+      "text": "considered this I've already considered"
+    },
+    {
+      "start": 813.92,
+      "end": 819.8,
+      "duration": 5.88,
+      "text": "these"
+    },
+    {
+      "start": 814.72,
+      "end": 822.72,
+      "duration": 8.0,
+      "text": "subies perfect wow next I'll take R and"
+    },
+    {
+      "start": 819.8,
+      "end": 824.92,
+      "duration": 5.12,
+      "text": "I'll move it here so on moving it here"
+    },
+    {
+      "start": 822.72,
+      "end": 826.24,
+      "duration": 3.52,
+      "text": "it's still valid it's still valid"
+    },
+    {
+      "start": 824.92,
+      "end": 828.0,
+      "duration": 3.08,
+      "text": "because the sum is still lesser than"
+    },
+    {
+      "start": 826.24,
+      "end": 831.24,
+      "duration": 5.0,
+      "text": "equal to Gold so again you'll add the"
+    },
+    {
+      "start": 828.0,
+      "end": 833.36,
+      "duration": 5.36,
+      "text": "length and this will be your overall"
+    },
+    {
+      "start": 831.24,
+      "end": 835.32,
+      "duration": 4.08,
+      "text": "count and right after the step what will"
+    },
+    {
+      "start": 833.36,
+      "end": 838.48,
+      "duration": 5.12,
+      "text": "happen is R will move out of the"
+    },
+    {
+      "start": 835.32,
+      "end": 841.16,
+      "duration": 5.84,
+      "text": "boundary and you will be stopping so now"
+    },
+    {
+      "start": 838.48,
+      "end": 843.52,
+      "duration": 5.04,
+      "text": "I know one for sure how many sub arrays"
+    },
+    {
+      "start": 841.16,
+      "end": 846.88,
+      "duration": 5.72,
+      "text": "are there that is lesser than equal to"
+    },
+    {
+      "start": 843.52,
+      "end": 849.24,
+      "duration": 5.72,
+      "text": "Gold I know that I know an algorithm to"
+    },
+    {
+      "start": 846.88,
+      "end": 851.56,
+      "duration": 4.68,
+      "text": "find it correct so I'll try to write"
+    },
+    {
+      "start": 849.24,
+      "end": 855.08,
+      "duration": 5.84,
+      "text": "this algorithm and after that I'll see"
+    },
+    {
+      "start": 851.56,
+      "end": 856.84,
+      "duration": 5.28,
+      "text": "how can I find an answer for sum equal"
+    },
+    {
+      "start": 855.08,
+      "end": 859.96,
+      "duration": 4.88,
+      "text": "to equal to goal because that is what"
+    },
+    {
+      "start": 856.84,
+      "end": 863.32,
+      "duration": 6.48,
+      "text": "we'll have to solve let's try to uh"
+    },
+    {
+      "start": 859.96,
+      "end": 864.72,
+      "duration": 4.76,
+      "text": "write down the algorithm can I say uh"
+    },
+    {
+      "start": 863.32,
+      "end": 867.08,
+      "duration": 3.76,
+      "text": "maybe I'll write a"
+    },
+    {
+      "start": 864.72,
+      "end": 867.8,
+      "duration": 3.08,
+      "text": "function and the function will be taking"
+    },
+    {
+      "start": 867.08,
+      "end": 870.84,
+      "duration": 3.76,
+      "text": "a"
+    },
+    {
+      "start": 867.8,
+      "end": 874.16,
+      "duration": 6.36,
+      "text": "list of of"
+    },
+    {
+      "start": 870.84,
+      "end": 875.72,
+      "duration": 4.88,
+      "text": "integers let's call it nums and it will"
+    },
+    {
+      "start": 874.16,
+      "end": 878.96,
+      "duration": 4.8,
+      "text": "be taking a"
+    },
+    {
+      "start": 875.72,
+      "end": 882.12,
+      "duration": 6.4,
+      "text": "goal what is the first step I need an L"
+    },
+    {
+      "start": 878.96,
+      "end": 884.72,
+      "duration": 5.76,
+      "text": "which is zero I need R which is zero I"
+    },
+    {
+      "start": 882.12,
+      "end": 886.64,
+      "duration": 4.52,
+      "text": "need a sum which is zero do I need"
+    },
+    {
+      "start": 884.72,
+      "end": 890.08,
+      "duration": 5.36,
+      "text": "anything else yeah I definitely need a"
+    },
+    {
+      "start": 886.64,
+      "end": 894.0,
+      "duration": 7.36,
+      "text": "count count is zero what I can do is I"
+    },
+    {
+      "start": 890.08,
+      "end": 898.04,
+      "duration": 7.96,
+      "text": "can start like while R lesser than equal"
+    },
+    {
+      "start": 894.0,
+      "end": 899.64,
+      "duration": 5.64,
+      "text": "to something like nums do size I can do"
+    },
+    {
+      "start": 898.04,
+      "end": 902.48,
+      "duration": 4.44,
+      "text": "that"
+    },
+    {
+      "start": 899.64,
+      "end": 904.12,
+      "duration": 4.48,
+      "text": "perfect okay I've done that what is the"
+    },
+    {
+      "start": 902.48,
+      "end": 907.6,
+      "duration": 5.12,
+      "text": "next thing that I'll do the next thing"
+    },
+    {
+      "start": 904.12,
+      "end": 912.48,
+      "duration": 8.36,
+      "text": "that I'll do is I'll be like sum plus"
+    },
+    {
+      "start": 907.6,
+      "end": 915.64,
+      "duration": 8.04,
+      "text": "equal to nums of R I know"
+    },
+    {
+      "start": 912.48,
+      "end": 917.48,
+      "duration": 5.0,
+      "text": "it and after this I'll add it to the"
+    },
+    {
+      "start": 915.64,
+      "end": 921.44,
+      "duration": 5.8,
+      "text": "answer only"
+    },
+    {
+      "start": 917.48,
+      "end": 925.2,
+      "duration": 7.72,
+      "text": "if I can combine the while and the if"
+    },
+    {
+      "start": 921.44,
+      "end": 926.0,
+      "duration": 4.56,
+      "text": "check if the sum by any means exceeds"
+    },
+    {
+      "start": 925.2,
+      "end": 928.68,
+      "duration": 3.48,
+      "text": "the"
+    },
+    {
+      "start": 926.0,
+      "end": 930.6,
+      "duration": 4.6,
+      "text": "goal then you know what to do you will"
+    },
+    {
+      "start": 928.68,
+      "end": 933.28,
+      "duration": 4.6,
+      "text": "be"
+    },
+    {
+      "start": 930.6,
+      "end": 937.48,
+      "duration": 6.88,
+      "text": "taking out from the back you will"
+    },
+    {
+      "start": 933.28,
+      "end": 940.28,
+      "duration": 7.0,
+      "text": "be shrinking it which is nums of L and"
+    },
+    {
+      "start": 937.48,
+      "end": 943.32,
+      "duration": 5.84,
+      "text": "you can do L equal to l + 1 so what I've"
+    },
+    {
+      "start": 940.28,
+      "end": 946.32,
+      "duration": 6.04,
+      "text": "done is I've have combined a conditional"
+    },
+    {
+      "start": 943.32,
+      "end": 949.0,
+      "duration": 5.68,
+      "text": "check with a while loop because if this"
+    },
+    {
+      "start": 946.32,
+      "end": 951.8,
+      "duration": 5.48,
+      "text": "is true it will keep removing and if it"
+    },
+    {
+      "start": 949.0,
+      "end": 953.88,
+      "duration": 4.88,
+      "text": "is not true it will go ahead and add"
+    },
+    {
+      "start": 951.8,
+      "end": 955.8,
+      "duration": 4.0,
+      "text": "your valid segments how many valid"
+    },
+    {
+      "start": 953.88,
+      "end": 958.6,
+      "duration": 4.72,
+      "text": "segments will you"
+    },
+    {
+      "start": 955.8,
+      "end": 961.04,
+      "duration": 5.24,
+      "text": "get we did see it was the count it was"
+    },
+    {
+      "start": 958.6,
+      "end": 965.48,
+      "duration": 6.88,
+      "text": "the count count that was added and the"
+    },
+    {
+      "start": 961.04,
+      "end": 969.2,
+      "duration": 8.16,
+      "text": "count is r - L + 1 you"
+    },
+    {
+      "start": 965.48,
+      "end": 973.32,
+      "duration": 7.84,
+      "text": "remember we always if L was here R was"
+    },
+    {
+      "start": 969.2,
+      "end": 977.16,
+      "duration": 7.96,
+      "text": "here we said one 2 and three that's not"
+    },
+    {
+      "start": 973.32,
+      "end": 980.84,
+      "duration": 7.52,
+      "text": "nothing but the count r- L +1 so I've"
+    },
+    {
+      "start": 977.16,
+      "end": 985.16,
+      "duration": 8.0,
+      "text": "added this once I've added this you can"
+    },
+    {
+      "start": 980.84,
+      "end": 989.12,
+      "duration": 8.28,
+      "text": "do r equal to R +1 and the while loop"
+    },
+    {
+      "start": 985.16,
+      "end": 992.88,
+      "duration": 7.72,
+      "text": "can end over here there is an hedge case"
+    },
+    {
+      "start": 989.12,
+      "end": 998.0,
+      "duration": 8.88,
+      "text": "please make sure if not"
+    },
+    {
+      "start": 992.88,
+      "end": 1003.0,
+      "duration": 10.12,
+      "text": "here please make sure if the goal is"
+    },
+    {
+      "start": 998.0,
+      "end": 1005.48,
+      "duration": 7.48,
+      "text": "lesser than zero you can return uh zero"
+    },
+    {
+      "start": 1003.0,
+      "end": 1007.92,
+      "duration": 4.92,
+      "text": "again at the starting I said the goal"
+    },
+    {
+      "start": 1005.48,
+      "end": 1010.28,
+      "duration": 4.8,
+      "text": "will be from 0 to n I'm writing this"
+    },
+    {
+      "start": 1007.92,
+      "end": 1013.12,
+      "duration": 5.2,
+      "text": "Edge case for a specific reason you'll"
+    },
+    {
+      "start": 1010.28,
+      "end": 1015.76,
+      "duration": 5.48,
+      "text": "understand in the next step in case your"
+    },
+    {
+      "start": 1013.12,
+      "end": 1018.16,
+      "duration": 5.04,
+      "text": "goal is under zero because the elements"
+    },
+    {
+      "start": 1015.76,
+      "end": 1020.8,
+      "duration": 5.04,
+      "text": "in the array are one and zero so you can"
+    },
+    {
+      "start": 1018.16,
+      "end": 1023.4,
+      "duration": 5.24,
+      "text": "never achieve any subarray where the"
+    },
+    {
+      "start": 1020.8,
+      "end": 1026.12,
+      "duration": 5.32,
+      "text": "goal is lesser than zero this case will"
+    },
+    {
+      "start": 1023.4,
+      "end": 1028.84,
+      "duration": 5.44,
+      "text": "come up when we'll understand okay so I"
+    },
+    {
+      "start": 1026.12,
+      "end": 1032.12,
+      "duration": 6.0,
+      "text": "know one thing for short I have an"
+    },
+    {
+      "start": 1028.84,
+      "end": 1034.64,
+      "duration": 5.8,
+      "text": "algorithm that tells me how many sub ARS"
+    },
+    {
+      "start": 1032.12,
+      "end": 1037.36,
+      "duration": 5.24,
+      "text": "for a sum lesser than equal to Gold what"
+    },
+    {
+      "start": 1034.64,
+      "end": 1040.64,
+      "duration": 6.0,
+      "text": "am I looking for sum equal to equal to"
+    },
+    {
+      "start": 1037.36,
+      "end": 1045.64,
+      "duration": 8.28,
+      "text": "goal can I apply simple"
+    },
+    {
+      "start": 1040.64,
+      "end": 1049.08,
+      "duration": 8.44,
+      "text": "mathematics and say hey for this the"
+    },
+    {
+      "start": 1045.64,
+      "end": 1051.68,
+      "duration": 6.04,
+      "text": "answer will be I can call the function"
+    },
+    {
+      "start": 1049.08,
+      "end": 1055.56,
+      "duration": 6.48,
+      "text": "with the nums array and I can ask him to"
+    },
+    {
+      "start": 1051.68,
+      "end": 1058.76,
+      "duration": 7.08,
+      "text": "find how many are lesser than equal to"
+    },
+    {
+      "start": 1055.56,
+      "end": 1060.0,
+      "duration": 4.44,
+      "text": "goal it will give me right and then I"
+    },
+    {
+      "start": 1058.76,
+      "end": 1064.96,
+      "duration": 6.2,
+      "text": "can"
+    },
+    {
+      "start": 1060.0,
+      "end": 1068.88,
+      "duration": 8.88,
+      "text": "Subtract with how many are with Goal"
+    },
+    {
+      "start": 1064.96,
+      "end": 1071.0,
+      "duration": 6.04,
+      "text": "minus one isn't it that will work"
+    },
+    {
+      "start": 1068.88,
+      "end": 1073.12,
+      "duration": 4.24,
+      "text": "because if I can get because if I can"
+    },
+    {
+      "start": 1071.0,
+      "end": 1074.96,
+      "duration": 3.96,
+      "text": "get how many are lesser than equal to"
+    },
+    {
+      "start": 1073.12,
+      "end": 1077.88,
+      "duration": 4.76,
+      "text": "goal and how many are lesser than equal"
+    },
+    {
+      "start": 1074.96,
+      "end": 1082.08,
+      "duration": 7.12,
+      "text": "to goal minus one and if I can subtract"
+    },
+    {
+      "start": 1077.88,
+      "end": 1085.64,
+      "duration": 7.76,
+      "text": "them that will be equivalent to go that"
+    },
+    {
+      "start": 1082.08,
+      "end": 1089.6,
+      "duration": 7.52,
+      "text": "will be isn't it and that is why I"
+    },
+    {
+      "start": 1085.64,
+      "end": 1092.12,
+      "duration": 6.48,
+      "text": "introduced this condition imagine if the"
+    },
+    {
+      "start": 1089.6,
+      "end": 1094.8,
+      "duration": 5.2,
+      "text": "goal is given as zero whenever you write"
+    },
+    {
+      "start": 1092.12,
+      "end": 1096.44,
+      "duration": 4.32,
+      "text": "0 minus one this will be minus one"
+    },
+    {
+      "start": 1094.8,
+      "end": 1100.2,
+      "duration": 5.4,
+      "text": "that's when this condition will come"
+    },
+    {
+      "start": 1096.44,
+      "end": 1103.84,
+      "duration": 7.4,
+      "text": "into effect I hope this is clear this is"
+    },
+    {
+      "start": 1100.2,
+      "end": 1107.24,
+      "duration": 7.04,
+      "text": "a very very simple condition very simple"
+    },
+    {
+      "start": 1103.84,
+      "end": 1110.56,
+      "duration": 6.72,
+      "text": "maths just it that's it and that will be"
+    },
+    {
+      "start": 1107.24,
+      "end": 1113.48,
+      "duration": 6.24,
+      "text": "the answer if I have to deduce the time"
+    },
+    {
+      "start": 1110.56,
+      "end": 1115.68,
+      "duration": 5.12,
+      "text": "complexity uh let's first uh figure out"
+    },
+    {
+      "start": 1113.48,
+      "end": 1120.32,
+      "duration": 6.84,
+      "text": "the time complexity for the function"
+    },
+    {
+      "start": 1115.68,
+      "end": 1123.4,
+      "duration": 7.72,
+      "text": "over here we have a beo of n for sure"
+    },
+    {
+      "start": 1120.32,
+      "end": 1126.2,
+      "duration": 5.88,
+      "text": "and then there's a y Loop which is"
+    },
+    {
+      "start": 1123.4,
+      "end": 1129.84,
+      "duration": 6.44,
+      "text": "excluding which is excluding something"
+    },
+    {
+      "start": 1126.2,
+      "end": 1131.72,
+      "duration": 5.52,
+      "text": "now overall overall it might be running"
+    },
+    {
+      "start": 1129.84,
+      "end": 1134.84,
+      "duration": 5.0,
+      "text": "for like if you sum it up throughout the"
+    },
+    {
+      "start": 1131.72,
+      "end": 1137.52,
+      "duration": 5.8,
+      "text": "course of this while loop this might run"
+    },
+    {
+      "start": 1134.84,
+      "end": 1140.04,
+      "duration": 5.2,
+      "text": "for B go and throughout not at an"
+    },
+    {
+      "start": 1137.52,
+      "end": 1142.28,
+      "duration": 4.76,
+      "text": "individual occurrence so can I say the"
+    },
+    {
+      "start": 1140.04,
+      "end": 1146.64,
+      "duration": 6.6,
+      "text": "time complexity of this function is B go"
+    },
+    {
+      "start": 1142.28,
+      "end": 1150.4,
+      "duration": 8.12,
+      "text": "of 2 N at the worst possible scenario"
+    },
+    {
+      "start": 1146.64,
+      "end": 1152.44,
+      "duration": 5.8,
+      "text": "and the space complexity is beo of one"
+    },
+    {
+      "start": 1150.4,
+      "end": 1154.36,
+      "duration": 3.96,
+      "text": "and this is the worst possible test"
+    },
+    {
+      "start": 1152.44,
+      "end": 1156.88,
+      "duration": 4.44,
+      "text": "piece it is not going to happen every"
+    },
+    {
+      "start": 1154.36,
+      "end": 1161.16,
+      "duration": 6.8,
+      "text": "now and then and I'm calling it for two"
+    },
+    {
+      "start": 1156.88,
+      "end": 1164.2,
+      "duration": 7.32,
+      "text": "times so can I say B go of 2 into"
+    },
+    {
+      "start": 1161.16,
+      "end": 1167.24,
+      "duration": 6.08,
+      "text": "2N will be the time complexity and the"
+    },
+    {
+      "start": 1164.2,
+      "end": 1169.56,
+      "duration": 5.36,
+      "text": "space complexity will be bigger of one"
+    },
+    {
+      "start": 1167.24,
+      "end": 1172.56,
+      "duration": 5.32,
+      "text": "so I have optimized my"
+    },
+    {
+      "start": 1169.56,
+      "end": 1175.12,
+      "duration": 5.56,
+      "text": "space complexity yes I've compromised a"
+    },
+    {
+      "start": 1172.56,
+      "end": 1179.2,
+      "duration": 6.64,
+      "text": "bit on the time but again it will be"
+    },
+    {
+      "start": 1175.12,
+      "end": 1181.48,
+      "duration": 6.36,
+      "text": "only for extreme uh bad test cases not"
+    },
+    {
+      "start": 1179.2,
+      "end": 1184.76,
+      "duration": 5.56,
+      "text": "for everything so this will be the most"
+    },
+    {
+      "start": 1181.48,
+      "end": 1187.16,
+      "duration": 5.68,
+      "text": "optimal solution I'm not discussing the"
+    },
+    {
+      "start": 1184.76,
+      "end": 1189.64,
+      "duration": 4.88,
+      "text": "brute better because if you have seen"
+    },
+    {
+      "start": 1187.16,
+      "end": 1191.6,
+      "duration": 4.44,
+      "text": "this particular video you can figure out"
+    },
+    {
+      "start": 1189.64,
+      "end": 1194.76,
+      "duration": 5.12,
+      "text": "what is the brute and better The Brute"
+    },
+    {
+      "start": 1191.6,
+      "end": 1196.84,
+      "duration": 5.24,
+      "text": "will be generating all the subar and the"
+    },
+    {
+      "start": 1194.76,
+      "end": 1199.28,
+      "duration": 4.52,
+      "text": "better will be the hashing solution and"
+    },
+    {
+      "start": 1196.84,
+      "end": 1201.16,
+      "duration": 4.32,
+      "text": "this can be the optimal solution and in"
+    },
+    {
+      "start": 1199.28,
+      "end": 1204.04,
+      "duration": 4.76,
+      "text": "case you want the codes you can find"
+    },
+    {
+      "start": 1201.16,
+      "end": 1206.4,
+      "duration": 5.24,
+      "text": "them below so I hope you understood it"
+    },
+    {
+      "start": 1204.04,
+      "end": 1207.6,
+      "duration": 3.56,
+      "text": "and uh that will be it for this one so"
+    },
+    {
+      "start": 1206.4,
+      "end": 1209.36,
+      "duration": 2.96,
+      "text": "if you're still now watching and if"
+    },
+    {
+      "start": 1207.6,
+      "end": 1211.2,
+      "duration": 3.6,
+      "text": "youve understood everything please"
+    },
+    {
+      "start": 1209.36,
+      "end": 1212.64,
+      "duration": 3.28,
+      "text": "please do consider giving us a like and"
+    },
+    {
+      "start": 1211.2,
+      "end": 1215.08,
+      "duration": 3.88,
+      "text": "if you're new to our channel do consider"
+    },
+    {
+      "start": 1212.64,
+      "end": 1216.52,
+      "duration": 3.88,
+      "text": "subscribing to us as well with this I'll"
+    },
+    {
+      "start": 1215.08,
+      "end": 1219.68,
+      "duration": 4.6,
+      "text": "be wrapping up this video let's read in"
+    },
+    {
+      "start": 1216.52,
+      "end": 1221.88,
+      "duration": 5.36,
+      "text": "some other video then bye-bye take"
+    },
+    {
+      "start": 1219.68,
+      "end": 1224.52,
+      "duration": 4.84,
+      "text": "care"
+    },
+    {
+      "start": 1221.88,
+      "end": 1228.88,
+      "duration": 7.0,
+      "text": "Bren forget your"
+    },
+    {
+      "start": 1224.52,
+      "end": 1228.88,
+      "duration": 4.36,
+      "text": "golden I will"
+    }
+  ]
+}

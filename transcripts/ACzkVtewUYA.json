@@ -1,0 +1,2432 @@
+{
+  "video_id": "ACzkVtewUYA",
+  "title": "G-7. Number of Provinces | C++ | Java | Connected Components",
+  "duration_sec": 929,
+  "num_segments": 404,
+  "segments": [
+    {
+      "start": 3.12,
+      "end": 6.16,
+      "duration": 3.04,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.48,
+      "end": 7.68,
+      "duration": 3.2,
+      "text": "i hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.16,
+      "end": 9.6,
+      "duration": 3.44,
+      "text": "so in this video we are going to solve"
+    },
+    {
+      "start": 7.68,
+      "end": 11.84,
+      "duration": 4.16,
+      "text": "this particular problem number of"
+    },
+    {
+      "start": 9.6,
+      "end": 14.24,
+      "duration": 4.64,
+      "text": "provinces what does the problem state"
+    },
+    {
+      "start": 11.84,
+      "end": 17.2,
+      "duration": 5.36,
+      "text": "the problem states a given an undirected"
+    },
+    {
+      "start": 14.24,
+      "end": 19.12,
+      "duration": 4.88,
+      "text": "graph with v vertices we say two"
+    },
+    {
+      "start": 17.2,
+      "end": 22.0,
+      "duration": 4.8,
+      "text": "vertices you and we belong to a single"
+    },
+    {
+      "start": 19.12,
+      "end": 24.72,
+      "duration": 5.6,
+      "text": "province if there is a path from u to v"
+    },
+    {
+      "start": 22.0,
+      "end": 27.44,
+      "duration": 5.44,
+      "text": "or from v to u your task is to find the"
+    },
+    {
+      "start": 24.72,
+      "end": 30.32,
+      "duration": 5.6,
+      "text": "number of provinces so let me explain"
+    },
+    {
+      "start": 27.44,
+      "end": 31.68,
+      "duration": 4.24,
+      "text": "the question so imagine a graph is given"
+    },
+    {
+      "start": 30.32,
+      "end": 33.6,
+      "duration": 3.28,
+      "text": "which is"
+    },
+    {
+      "start": 31.68,
+      "end": 34.96,
+      "duration": 3.28,
+      "text": "something like this like this is a"
+    },
+    {
+      "start": 33.6,
+      "end": 37.2,
+      "duration": 3.6,
+      "text": "particular piece"
+    },
+    {
+      "start": 34.96,
+      "end": 38.56,
+      "duration": 3.6,
+      "text": "and then there is something like this"
+    },
+    {
+      "start": 37.2,
+      "end": 39.92,
+      "duration": 2.72,
+      "text": "then imagine there is something like"
+    },
+    {
+      "start": 38.56,
+      "end": 42.08,
+      "duration": 3.52,
+      "text": "this"
+    },
+    {
+      "start": 39.92,
+      "end": 44.64,
+      "duration": 4.72,
+      "text": "okay so what they're saying is"
+    },
+    {
+      "start": 42.08,
+      "end": 47.28,
+      "duration": 5.2,
+      "text": "this is an entire graph that is given to"
+    },
+    {
+      "start": 44.64,
+      "end": 48.0,
+      "duration": 3.36,
+      "text": "you now what they're calling a province"
+    },
+    {
+      "start": 47.28,
+      "end": 50.48,
+      "duration": 3.2,
+      "text": "is"
+    },
+    {
+      "start": 48.0,
+      "end": 52.64,
+      "duration": 4.64,
+      "text": "if you see if you take this province"
+    },
+    {
+      "start": 50.48,
+      "end": 54.48,
+      "duration": 4.0,
+      "text": "you can go from one to two you can go"
+    },
+    {
+      "start": 52.64,
+      "end": 56.16,
+      "duration": 3.52,
+      "text": "from one to three as well"
+    },
+    {
+      "start": 54.48,
+      "end": 58.24,
+      "duration": 3.76,
+      "text": "from three to two you can go from three"
+    },
+    {
+      "start": 56.16,
+      "end": 60.72,
+      "duration": 4.56,
+      "text": "to one you can go from two you can go to"
+    },
+    {
+      "start": 58.24,
+      "end": 63.68,
+      "duration": 5.44,
+      "text": "one from two you can go to three so from"
+    },
+    {
+      "start": 60.72,
+      "end": 66.24,
+      "duration": 5.52,
+      "text": "every other node in this province you"
+    },
+    {
+      "start": 63.68,
+      "end": 68.4,
+      "duration": 4.72,
+      "text": "can go to every other node thereby this"
+    },
+    {
+      "start": 66.24,
+      "end": 71.84,
+      "duration": 5.6,
+      "text": "is the province and if i take this this"
+    },
+    {
+      "start": 68.4,
+      "end": 74.0,
+      "duration": 5.6,
+      "text": "is also a province because four five six"
+    },
+    {
+      "start": 71.84,
+      "end": 76.24,
+      "duration": 4.4,
+      "text": "every one of them can go"
+    },
+    {
+      "start": 74.0,
+      "end": 78.48,
+      "duration": 4.48,
+      "text": "to each other similarly seven eight is a"
+    },
+    {
+      "start": 76.24,
+      "end": 80.0,
+      "duration": 3.76,
+      "text": "province because every one like seven"
+    },
+    {
+      "start": 78.48,
+      "end": 82.4,
+      "duration": 3.92,
+      "text": "can go to eight and eight can go to"
+    },
+    {
+      "start": 80.0,
+      "end": 84.32,
+      "duration": 4.32,
+      "text": "seven now i cannot call this as a"
+    },
+    {
+      "start": 82.4,
+      "end": 86.8,
+      "duration": 4.4,
+      "text": "province because if you wish to go from"
+    },
+    {
+      "start": 84.32,
+      "end": 88.64,
+      "duration": 4.32,
+      "text": "two to four you will not be able to go"
+    },
+    {
+      "start": 86.8,
+      "end": 92.0,
+      "duration": 5.2,
+      "text": "because there is no connectivity so"
+    },
+    {
+      "start": 88.64,
+      "end": 95.2,
+      "duration": 6.56,
+      "text": "thereby this is first province this is"
+    },
+    {
+      "start": 92.0,
+      "end": 96.72,
+      "duration": 4.72,
+      "text": "second province this is third province"
+    },
+    {
+      "start": 95.2,
+      "end": 99.2,
+      "duration": 4.0,
+      "text": "right so you need to tell me the number"
+    },
+    {
+      "start": 96.72,
+      "end": 102.08,
+      "duration": 5.36,
+      "text": "of provinces so over here the answer to"
+    },
+    {
+      "start": 99.2,
+      "end": 103.68,
+      "duration": 4.48,
+      "text": "that will be three so how do you"
+    },
+    {
+      "start": 102.08,
+      "end": 104.96,
+      "duration": 2.88,
+      "text": "calculate this or how do you calculate"
+    },
+    {
+      "start": 103.68,
+      "end": 107.84,
+      "duration": 4.16,
+      "text": "the number"
+    },
+    {
+      "start": 104.96,
+      "end": 111.36,
+      "duration": 6.4,
+      "text": "it's very simple now you have read about"
+    },
+    {
+      "start": 107.84,
+      "end": 113.2,
+      "duration": 5.36,
+      "text": "the bfs traversal and the dfs strategy"
+    },
+    {
+      "start": 111.36,
+      "end": 115.52,
+      "duration": 4.16,
+      "text": "you've read about both the traversals in"
+    },
+    {
+      "start": 113.2,
+      "end": 118.24,
+      "duration": 5.04,
+      "text": "the previous lectures you can use any"
+    },
+    {
+      "start": 115.52,
+      "end": 120.72,
+      "duration": 5.2,
+      "text": "one of them because you know if you use"
+    },
+    {
+      "start": 118.24,
+      "end": 123.84,
+      "duration": 5.6,
+      "text": "any one of the traversals it visits all"
+    },
+    {
+      "start": 120.72,
+      "end": 127.36,
+      "duration": 6.64,
+      "text": "the nodes in a graph the bfs will visit"
+    },
+    {
+      "start": 123.84,
+      "end": 129.68,
+      "duration": 5.84,
+      "text": "everyone level wise and the dfs"
+    },
+    {
+      "start": 127.36,
+      "end": 130.48,
+      "duration": 3.12,
+      "text": "and the dfs will visit everyone in the"
+    },
+    {
+      "start": 129.68,
+      "end": 132.08,
+      "duration": 2.4,
+      "text": "deep"
+    },
+    {
+      "start": 130.48,
+      "end": 134.88,
+      "duration": 4.4,
+      "text": "right that is something which you know"
+    },
+    {
+      "start": 132.08,
+      "end": 137.68,
+      "duration": 5.6,
+      "text": "now i can use any of that algorithm you"
+    },
+    {
+      "start": 134.88,
+      "end": 140.64,
+      "duration": 5.76,
+      "text": "can use bfs or you can use dfs so"
+    },
+    {
+      "start": 137.68,
+      "end": 143.52,
+      "duration": 5.84,
+      "text": "imagine if i say okay there is a"
+    },
+    {
+      "start": 140.64,
+      "end": 146.16,
+      "duration": 5.52,
+      "text": "starting note or the note that you start"
+    },
+    {
+      "start": 143.52,
+      "end": 149.28,
+      "duration": 5.76,
+      "text": "the dfs traversal is from"
+    },
+    {
+      "start": 146.16,
+      "end": 151.44,
+      "duration": 5.28,
+      "text": "one i'm talking about dfs so what will"
+    },
+    {
+      "start": 149.28,
+      "end": 154.0,
+      "duration": 4.72,
+      "text": "happen is you'll start from one you will"
+    },
+    {
+      "start": 151.44,
+      "end": 156.64,
+      "duration": 5.2,
+      "text": "go to two you will go to three so"
+    },
+    {
+      "start": 154.0,
+      "end": 158.24,
+      "duration": 4.24,
+      "text": "apparently you end up visiting one two"
+    },
+    {
+      "start": 156.64,
+      "end": 162.16,
+      "duration": 5.52,
+      "text": "and three but you'll not be able to"
+    },
+    {
+      "start": 158.24,
+      "end": 164.4,
+      "duration": 6.16,
+      "text": "visit this nor this so can i see if i"
+    },
+    {
+      "start": 162.16,
+      "end": 166.8,
+      "duration": 4.64,
+      "text": "call the yes can i see if i call the"
+    },
+    {
+      "start": 164.4,
+      "end": 168.24,
+      "duration": 3.84,
+      "text": "traversal three times"
+    },
+    {
+      "start": 166.8,
+      "end": 170.8,
+      "duration": 4.0,
+      "text": "once"
+    },
+    {
+      "start": 168.24,
+      "end": 172.88,
+      "duration": 4.64,
+      "text": "from one"
+    },
+    {
+      "start": 170.8,
+      "end": 174.88,
+      "duration": 4.08,
+      "text": "once from four"
+    },
+    {
+      "start": 172.88,
+      "end": 177.68,
+      "duration": 4.8,
+      "text": "once from seven"
+    },
+    {
+      "start": 174.88,
+      "end": 180.08,
+      "duration": 5.2,
+      "text": "can i say if i call the dfs traversal"
+    },
+    {
+      "start": 177.68,
+      "end": 182.24,
+      "duration": 4.56,
+      "text": "once from one that will make sure it"
+    },
+    {
+      "start": 180.08,
+      "end": 183.2,
+      "duration": 3.12,
+      "text": "goes like this"
+    },
+    {
+      "start": 182.24,
+      "end": 185.6,
+      "duration": 3.36,
+      "text": "right"
+    },
+    {
+      "start": 183.2,
+      "end": 187.68,
+      "duration": 4.48,
+      "text": "once if i call for four it will go from"
+    },
+    {
+      "start": 185.6,
+      "end": 189.36,
+      "duration": 3.76,
+      "text": "four go to five"
+    },
+    {
+      "start": 187.68,
+      "end": 191.6,
+      "duration": 3.92,
+      "text": "and then go to six"
+    },
+    {
+      "start": 189.36,
+      "end": 194.08,
+      "duration": 4.72,
+      "text": "and then once i if i call for seven it"
+    },
+    {
+      "start": 191.6,
+      "end": 196.24,
+      "duration": 4.64,
+      "text": "will go from seven then go to eight"
+    },
+    {
+      "start": 194.08,
+      "end": 199.2,
+      "duration": 5.12,
+      "text": "right this can be like i can call the"
+    },
+    {
+      "start": 196.24,
+      "end": 201.2,
+      "duration": 4.96,
+      "text": "dfs traversals starting from three"
+    },
+    {
+      "start": 199.2,
+      "end": 204.0,
+      "duration": 4.8,
+      "text": "different starting nodes and thereby i"
+    },
+    {
+      "start": 201.2,
+      "end": 206.56,
+      "duration": 5.36,
+      "text": "can get three provinces right we know"
+    },
+    {
+      "start": 204.0,
+      "end": 208.56,
+      "duration": 4.56,
+      "text": "how to do a dfs traversal we have learnt"
+    },
+    {
+      "start": 206.56,
+      "end": 210.56,
+      "duration": 4.0,
+      "text": "about that but in that case there was a"
+    },
+    {
+      "start": 208.56,
+      "end": 212.48,
+      "duration": 3.92,
+      "text": "single starting node over here the"
+    },
+    {
+      "start": 210.56,
+      "end": 214.8,
+      "duration": 4.24,
+      "text": "starting node can be multiple"
+    },
+    {
+      "start": 212.48,
+      "end": 217.84,
+      "duration": 5.36,
+      "text": "so we can see if somehow we can figure"
+    },
+    {
+      "start": 214.8,
+      "end": 220.48,
+      "duration": 5.68,
+      "text": "out the starting points then we will be"
+    },
+    {
+      "start": 217.84,
+      "end": 222.32,
+      "duration": 4.48,
+      "text": "able to figure out three provinces but"
+    },
+    {
+      "start": 220.48,
+      "end": 224.8,
+      "duration": 4.32,
+      "text": "now you might have a question in your"
+    },
+    {
+      "start": 222.32,
+      "end": 228.56,
+      "duration": 6.24,
+      "text": "mind does the starting point needs to be"
+    },
+    {
+      "start": 224.8,
+      "end": 229.44,
+      "duration": 4.64,
+      "text": "one no any starting point like one two"
+    },
+    {
+      "start": 228.56,
+      "end": 231.92,
+      "duration": 3.36,
+      "text": "three"
+    },
+    {
+      "start": 229.44,
+      "end": 234.32,
+      "duration": 4.88,
+      "text": "it can be any one it can be any one it"
+    },
+    {
+      "start": 231.92,
+      "end": 236.56,
+      "duration": 4.64,
+      "text": "can be any one if you start from any one"
+    },
+    {
+      "start": 234.32,
+      "end": 239.04,
+      "duration": 4.72,
+      "text": "of these given points it will make sure"
+    },
+    {
+      "start": 236.56,
+      "end": 242.48,
+      "duration": 5.92,
+      "text": "it visits everyone it will make sure it"
+    },
+    {
+      "start": 239.04,
+      "end": 244.0,
+      "duration": 4.96,
+      "text": "visits everyone right so somewhere down"
+    },
+    {
+      "start": 242.48,
+      "end": 246.64,
+      "duration": 4.16,
+      "text": "the line if i can figure out the"
+    },
+    {
+      "start": 244.0,
+      "end": 249.84,
+      "duration": 5.84,
+      "text": "starting points my job will be done this"
+    },
+    {
+      "start": 246.64,
+      "end": 252.0,
+      "duration": 5.36,
+      "text": "is where what we do is we use something"
+    },
+    {
+      "start": 249.84,
+      "end": 254.96,
+      "duration": 5.12,
+      "text": "as a visited array now we see there are"
+    },
+    {
+      "start": 252.0,
+      "end": 257.68,
+      "duration": 5.68,
+      "text": "eight nodes so we will create a nine"
+    },
+    {
+      "start": 254.96,
+      "end": 259.6,
+      "duration": 4.64,
+      "text": "size visited array one two three four"
+    },
+    {
+      "start": 257.68,
+      "end": 262.56,
+      "duration": 4.88,
+      "text": "five six seven"
+    },
+    {
+      "start": 259.6,
+      "end": 265.36,
+      "duration": 5.76,
+      "text": "eight so it's like zero one two three"
+    },
+    {
+      "start": 262.56,
+      "end": 267.44,
+      "duration": 4.88,
+      "text": "four five six seven eight perfect we"
+    },
+    {
+      "start": 265.36,
+      "end": 270.4,
+      "duration": 5.04,
+      "text": "have created a nine size visited array"
+    },
+    {
+      "start": 267.44,
+      "end": 273.12,
+      "duration": 5.68,
+      "text": "and we mark everyone as false"
+    },
+    {
+      "start": 270.4,
+      "end": 275.44,
+      "duration": 5.04,
+      "text": "and this is known as the visited array"
+    },
+    {
+      "start": 273.12,
+      "end": 277.2,
+      "duration": 4.08,
+      "text": "done now what we do is we say okay"
+    },
+    {
+      "start": 275.44,
+      "end": 279.52,
+      "duration": 4.08,
+      "text": "listen for"
+    },
+    {
+      "start": 277.2,
+      "end": 282.64,
+      "duration": 5.44,
+      "text": "int i equal to 1 because we know the"
+    },
+    {
+      "start": 279.52,
+      "end": 283.84,
+      "duration": 4.32,
+      "text": "numbering of nodes start from this to v"
+    },
+    {
+      "start": 282.64,
+      "end": 285.68,
+      "duration": 3.04,
+      "text": "or n"
+    },
+    {
+      "start": 283.84,
+      "end": 286.56,
+      "duration": 2.72,
+      "text": "and we say hey listen"
+    },
+    {
+      "start": 285.68,
+      "end": 288.24,
+      "duration": 2.56,
+      "text": "if"
+    },
+    {
+      "start": 286.56,
+      "end": 290.88,
+      "duration": 4.32,
+      "text": "visited of i"
+    },
+    {
+      "start": 288.24,
+      "end": 292.56,
+      "duration": 4.32,
+      "text": "is equal to equal to 0 or that means it"
+    },
+    {
+      "start": 290.88,
+      "end": 296.32,
+      "duration": 5.44,
+      "text": "has not been visited"
+    },
+    {
+      "start": 292.56,
+      "end": 298.96,
+      "duration": 6.4,
+      "text": "can you call the dfs from this node this"
+    },
+    {
+      "start": 296.32,
+      "end": 301.84,
+      "duration": 5.52,
+      "text": "is what we write this can be bfs as well"
+    },
+    {
+      "start": 298.96,
+      "end": 304.08,
+      "duration": 5.12,
+      "text": "yes this can be bfs of i as well you"
+    },
+    {
+      "start": 301.84,
+      "end": 306.4,
+      "duration": 4.56,
+      "text": "know both the algorithms you can write"
+    },
+    {
+      "start": 304.08,
+      "end": 309.68,
+      "duration": 5.6,
+      "text": "either of them so now what happens is"
+    },
+    {
+      "start": 306.4,
+      "end": 312.4,
+      "duration": 6.0,
+      "text": "for the first time i is one okay it goes"
+    },
+    {
+      "start": 309.68,
+      "end": 314.88,
+      "duration": 5.2,
+      "text": "and checks if it's visited and it finds"
+    },
+    {
+      "start": 312.4,
+      "end": 315.92,
+      "duration": 3.52,
+      "text": "that it's not visited thereby it says"
+    },
+    {
+      "start": 314.88,
+      "end": 317.92,
+      "duration": 3.04,
+      "text": "okay"
+    },
+    {
+      "start": 315.92,
+      "end": 320.16,
+      "duration": 4.24,
+      "text": "i'll consider one as a starting point"
+    },
+    {
+      "start": 317.92,
+      "end": 322.16,
+      "duration": 4.24,
+      "text": "and i'll call the dfs for one i'll call"
+    },
+    {
+      "start": 320.16,
+      "end": 324.56,
+      "duration": 4.4,
+      "text": "the dfs for one now i'm not going to"
+    },
+    {
+      "start": 322.16,
+      "end": 325.6,
+      "duration": 3.44,
+      "text": "teach you dfs because you know that if"
+    },
+    {
+      "start": 324.56,
+      "end": 327.52,
+      "duration": 2.96,
+      "text": "you don't know that go back to the"
+    },
+    {
+      "start": 325.6,
+      "end": 329.6,
+      "duration": 4.0,
+      "text": "previous video so if you do the dfs of"
+    },
+    {
+      "start": 327.52,
+      "end": 331.36,
+      "duration": 3.84,
+      "text": "one what will happen is one will be"
+    },
+    {
+      "start": 329.6,
+      "end": 334.32,
+      "duration": 4.72,
+      "text": "visited two will be visited three will"
+    },
+    {
+      "start": 331.36,
+      "end": 336.88,
+      "duration": 5.52,
+      "text": "be visited in that dfs call because a"
+    },
+    {
+      "start": 334.32,
+      "end": 339.04,
+      "duration": 4.72,
+      "text": "dfs algorithm makes sure that you visit"
+    },
+    {
+      "start": 336.88,
+      "end": 341.84,
+      "duration": 4.96,
+      "text": "all the nodes in a graph so it will make"
+    },
+    {
+      "start": 339.04,
+      "end": 344.32,
+      "duration": 5.28,
+      "text": "sure that it visits right and then the"
+    },
+    {
+      "start": 341.84,
+      "end": 347.04,
+      "duration": 5.2,
+      "text": "call will be over the call came from dfs"
+    },
+    {
+      "start": 344.32,
+      "end": 349.68,
+      "duration": 5.36,
+      "text": "one it will go till dfs two it will go"
+    },
+    {
+      "start": 347.04,
+      "end": 351.36,
+      "duration": 4.32,
+      "text": "to dfs three and then it will come back"
+    },
+    {
+      "start": 349.68,
+      "end": 353.44,
+      "duration": 3.76,
+      "text": "then it will come back and then it will"
+    },
+    {
+      "start": 351.36,
+      "end": 356.24,
+      "duration": 4.88,
+      "text": "come back now in the process when it"
+    },
+    {
+      "start": 353.44,
+      "end": 358.08,
+      "duration": 4.64,
+      "text": "goes from one it marks one as visited if"
+    },
+    {
+      "start": 356.24,
+      "end": 361.04,
+      "duration": 4.8,
+      "text": "you remember then it marks two as"
+    },
+    {
+      "start": 358.08,
+      "end": 363.84,
+      "duration": 5.76,
+      "text": "visited then it marks three as visited"
+    },
+    {
+      "start": 361.04,
+      "end": 367.84,
+      "duration": 6.8,
+      "text": "and then it goes back ultimately so the"
+    },
+    {
+      "start": 363.84,
+      "end": 370.32,
+      "duration": 6.48,
+      "text": "dfs call makes sure that 1 is marked"
+    },
+    {
+      "start": 367.84,
+      "end": 372.64,
+      "duration": 4.8,
+      "text": "2 is marked and 3 is marked in the"
+    },
+    {
+      "start": 370.32,
+      "end": 373.6,
+      "duration": 3.28,
+      "text": "visited array right the next time what"
+    },
+    {
+      "start": 372.64,
+      "end": 376.24,
+      "duration": 3.6,
+      "text": "happens"
+    },
+    {
+      "start": 373.6,
+      "end": 378.48,
+      "duration": 4.88,
+      "text": "the i becomes 2 and it goes and checks"
+    },
+    {
+      "start": 376.24,
+      "end": 380.56,
+      "duration": 4.32,
+      "text": "is that visited yes"
+    },
+    {
+      "start": 378.48,
+      "end": 383.6,
+      "duration": 5.12,
+      "text": "next time i becomes 3"
+    },
+    {
+      "start": 380.56,
+      "end": 384.64,
+      "duration": 4.08,
+      "text": "is that visited yes next time i becomes"
+    },
+    {
+      "start": 383.6,
+      "end": 387.44,
+      "duration": 3.84,
+      "text": "4"
+    },
+    {
+      "start": 384.64,
+      "end": 389.76,
+      "duration": 5.12,
+      "text": "not visited so what happens is it again"
+    },
+    {
+      "start": 387.44,
+      "end": 392.08,
+      "duration": 4.64,
+      "text": "calls the dfs for 4 but this time the"
+    },
+    {
+      "start": 389.76,
+      "end": 394.0,
+      "duration": 4.24,
+      "text": "dfs is called for 4 so if you see the"
+    },
+    {
+      "start": 392.08,
+      "end": 395.84,
+      "duration": 3.76,
+      "text": "first time it is called for one now it"
+    },
+    {
+      "start": 394.0,
+      "end": 398.48,
+      "duration": 4.48,
+      "text": "is called for four now when it is called"
+    },
+    {
+      "start": 395.84,
+      "end": 402.0,
+      "duration": 6.16,
+      "text": "for four it marks four as visited then"
+    },
+    {
+      "start": 398.48,
+      "end": 405.2,
+      "duration": 6.72,
+      "text": "it goes to five then it goes to"
+    },
+    {
+      "start": 402.0,
+      "end": 407.2,
+      "duration": 5.2,
+      "text": "six and makes sure everyone is marked as"
+    },
+    {
+      "start": 405.2,
+      "end": 410.08,
+      "duration": 4.88,
+      "text": "visited in that call and then it comes"
+    },
+    {
+      "start": 407.2,
+      "end": 413.28,
+      "duration": 6.08,
+      "text": "back comes back comes back so apparently"
+    },
+    {
+      "start": 410.08,
+      "end": 415.68,
+      "duration": 5.6,
+      "text": "comes back now we make it five and you"
+    },
+    {
+      "start": 413.28,
+      "end": 418.4,
+      "duration": 5.12,
+      "text": "see that five is already visited then we"
+    },
+    {
+      "start": 415.68,
+      "end": 421.36,
+      "duration": 5.68,
+      "text": "make it six already visited then we make"
+    },
+    {
+      "start": 418.4,
+      "end": 423.52,
+      "duration": 5.12,
+      "text": "it seven not visited so this time the"
+    },
+    {
+      "start": 421.36,
+      "end": 425.76,
+      "duration": 4.4,
+      "text": "dfs call goes for seven now when the"
+    },
+    {
+      "start": 423.52,
+      "end": 428.32,
+      "duration": 4.8,
+      "text": "call goes for seven the starting node is"
+    },
+    {
+      "start": 425.76,
+      "end": 430.88,
+      "duration": 5.12,
+      "text": "again assumed to be seven marks seven is"
+    },
+    {
+      "start": 428.32,
+      "end": 432.96,
+      "duration": 4.64,
+      "text": "visited goes and does the call for eight"
+    },
+    {
+      "start": 430.88,
+      "end": 435.44,
+      "duration": 4.56,
+      "text": "marks it has visited goes back and goes"
+    },
+    {
+      "start": 432.96,
+      "end": 438.16,
+      "duration": 5.2,
+      "text": "back so this is how we can say the"
+    },
+    {
+      "start": 435.44,
+      "end": 440.48,
+      "duration": 5.04,
+      "text": "visited array performs and"
+    },
+    {
+      "start": 438.16,
+      "end": 442.56,
+      "duration": 4.4,
+      "text": "this after this term will be eight and"
+    },
+    {
+      "start": 440.48,
+      "end": 444.72,
+      "duration": 4.24,
+      "text": "it will not find it then it will be nine"
+    },
+    {
+      "start": 442.56,
+      "end": 447.36,
+      "duration": 4.8,
+      "text": "and the for loop will be over so can i"
+    },
+    {
+      "start": 444.72,
+      "end": 449.12,
+      "duration": 4.4,
+      "text": "say this particular if statement was"
+    },
+    {
+      "start": 447.36,
+      "end": 451.6,
+      "duration": 4.24,
+      "text": "executed thrice can i say this"
+    },
+    {
+      "start": 449.12,
+      "end": 453.36,
+      "duration": 4.24,
+      "text": "particular statement was executed thrice"
+    },
+    {
+      "start": 451.6,
+      "end": 455.52,
+      "duration": 3.92,
+      "text": "thereby can i just put a counter plus"
+    },
+    {
+      "start": 453.36,
+      "end": 458.08,
+      "duration": 4.72,
+      "text": "plus over here which will make sure make"
+    },
+    {
+      "start": 455.52,
+      "end": 459.2,
+      "duration": 3.68,
+      "text": "sure that the provinces are counted"
+    },
+    {
+      "start": 458.08,
+      "end": 460.56,
+      "duration": 2.48,
+      "text": "right"
+    },
+    {
+      "start": 459.2,
+      "end": 462.56,
+      "duration": 3.36,
+      "text": "separately"
+    },
+    {
+      "start": 460.56,
+      "end": 465.28,
+      "duration": 4.72,
+      "text": "this will be visited then this and then"
+    },
+    {
+      "start": 462.56,
+      "end": 468.16,
+      "duration": 5.6,
+      "text": "this so this is how you can easily do a"
+    },
+    {
+      "start": 465.28,
+      "end": 471.28,
+      "duration": 6.0,
+      "text": "modification into your dfs traversal and"
+    },
+    {
+      "start": 468.16,
+      "end": 472.8,
+      "duration": 4.64,
+      "text": "it will work fine okay so guys as usual"
+    },
+    {
+      "start": 471.28,
+      "end": 474.48,
+      "duration": 3.2,
+      "text": "i'll be writing the c plus plus code on"
+    },
+    {
+      "start": 472.8,
+      "end": 477.12,
+      "duration": 4.32,
+      "text": "the right and the java code will be on"
+    },
+    {
+      "start": 474.48,
+      "end": 479.28,
+      "duration": 4.8,
+      "text": "the left so the input is slightly tricky"
+    },
+    {
+      "start": 477.12,
+      "end": 482.32,
+      "duration": 5.2,
+      "text": "and it's slightly different so"
+    },
+    {
+      "start": 479.28,
+      "end": 484.32,
+      "duration": 5.04,
+      "text": "you're given an uh adjacency matrix very"
+    },
+    {
+      "start": 482.32,
+      "end": 487.84,
+      "duration": 5.52,
+      "text": "careful it's not a list it's an"
+    },
+    {
+      "start": 484.32,
+      "end": 488.56,
+      "duration": 4.24,
+      "text": "adjacency matrix okay so one of the ways"
+    },
+    {
+      "start": 487.84,
+      "end": 489.92,
+      "duration": 2.08,
+      "text": "is"
+    },
+    {
+      "start": 488.56,
+      "end": 493.44,
+      "duration": 4.88,
+      "text": "either you"
+    },
+    {
+      "start": 489.92,
+      "end": 495.28,
+      "duration": 5.36,
+      "text": "create your adjacency list and then just"
+    },
+    {
+      "start": 493.44,
+      "end": 497.68,
+      "duration": 4.24,
+      "text": "go across that is one of the ways that"
+    },
+    {
+      "start": 495.28,
+      "end": 500.08,
+      "duration": 4.8,
+      "text": "you can do it or what you can do is you"
+    },
+    {
+      "start": 497.68,
+      "end": 502.16,
+      "duration": 4.48,
+      "text": "can use this adjacency matrix and solve"
+    },
+    {
+      "start": 500.08,
+      "end": 504.64,
+      "duration": 4.56,
+      "text": "this particular problem now what i will"
+    },
+    {
+      "start": 502.16,
+      "end": 505.6,
+      "duration": 3.44,
+      "text": "do is since we have been"
+    },
+    {
+      "start": 504.64,
+      "end": 507.68,
+      "duration": 3.04,
+      "text": "doing"
+    },
+    {
+      "start": 505.6,
+      "end": 510.24,
+      "duration": 4.64,
+      "text": "everything in adjacency list what i'll"
+    },
+    {
+      "start": 507.68,
+      "end": 512.64,
+      "duration": 4.96,
+      "text": "do is i'll just quickly uh"
+    },
+    {
+      "start": 510.24,
+      "end": 515.04,
+      "duration": 4.8,
+      "text": "create our adjacency list so it's very"
+    },
+    {
+      "start": 512.64,
+      "end": 518.08,
+      "duration": 5.44,
+      "text": "simple you just do it something like"
+    },
+    {
+      "start": 515.04,
+      "end": 520.64,
+      "duration": 5.6,
+      "text": "this and you know uh"
+    },
+    {
+      "start": 518.08,
+      "end": 523.12,
+      "duration": 5.04,
+      "text": "you're given the adjacency matrix so you"
+    },
+    {
+      "start": 520.64,
+      "end": 525.6,
+      "duration": 4.96,
+      "text": "can just run a couple of loops something"
+    },
+    {
+      "start": 523.12,
+      "end": 525.6,
+      "duration": 2.48,
+      "text": "like this"
+    },
+    {
+      "start": 527.04,
+      "end": 530.0,
+      "duration": 2.96,
+      "text": "and you can say hey let's"
+    },
+    {
+      "start": 529.04,
+      "end": 534.08,
+      "duration": 5.04,
+      "text": "if"
+    },
+    {
+      "start": 530.0,
+      "end": 536.0,
+      "duration": 6.0,
+      "text": "adjacency of i and j is equal to 1 that"
+    },
+    {
+      "start": 534.08,
+      "end": 538.56,
+      "duration": 4.48,
+      "text": "means there is a node and please make"
+    },
+    {
+      "start": 536.0,
+      "end": 540.16,
+      "duration": 4.16,
+      "text": "sure you don't have self notes like i"
+    },
+    {
+      "start": 538.56,
+      "end": 541.92,
+      "duration": 3.36,
+      "text": "should not be equal to j which is"
+    },
+    {
+      "start": 540.16,
+      "end": 544.24,
+      "duration": 4.08,
+      "text": "basically the self node so this is the"
+    },
+    {
+      "start": 541.92,
+      "end": 546.08,
+      "duration": 4.16,
+      "text": "adjacency list and what i can say is"
+    },
+    {
+      "start": 544.24,
+      "end": 547.52,
+      "duration": 3.28,
+      "text": "adjacency list"
+    },
+    {
+      "start": 546.08,
+      "end": 549.68,
+      "duration": 3.6,
+      "text": "of i"
+    },
+    {
+      "start": 547.52,
+      "end": 551.12,
+      "duration": 3.6,
+      "text": "can say of dot push"
+    },
+    {
+      "start": 549.68,
+      "end": 551.84,
+      "duration": 2.16,
+      "text": "back of"
+    },
+    {
+      "start": 551.12,
+      "end": 554.56,
+      "duration": 3.44,
+      "text": "j"
+    },
+    {
+      "start": 551.84,
+      "end": 556.88,
+      "duration": 5.04,
+      "text": "and similarly we can say adjacency list"
+    },
+    {
+      "start": 554.56,
+      "end": 556.88,
+      "duration": 2.32,
+      "text": "of"
+    },
+    {
+      "start": 559.2,
+      "end": 563.28,
+      "duration": 4.08,
+      "text": "j"
+    },
+    {
+      "start": 560.48,
+      "end": 565.2,
+      "duration": 4.72,
+      "text": "dot push back of i"
+    },
+    {
+      "start": 563.28,
+      "end": 566.64,
+      "duration": 3.36,
+      "text": "once you've done this your adjacency"
+    },
+    {
+      "start": 565.2,
+      "end": 568.72,
+      "duration": 3.52,
+      "text": "list is ready"
+    },
+    {
+      "start": 566.64,
+      "end": 571.44,
+      "duration": 4.8,
+      "text": "now we know that what do we need we need"
+    },
+    {
+      "start": 568.72,
+      "end": 573.28,
+      "duration": 4.56,
+      "text": "a visited matrix so we can just take a"
+    },
+    {
+      "start": 571.44,
+      "end": 575.28,
+      "duration": 3.84,
+      "text": "visited matrix"
+    },
+    {
+      "start": 573.28,
+      "end": 577.04,
+      "duration": 3.76,
+      "text": "and you can mark it as zero"
+    },
+    {
+      "start": 575.28,
+      "end": 581.12,
+      "duration": 5.84,
+      "text": "what is the next thing that you will do"
+    },
+    {
+      "start": 577.04,
+      "end": 581.12,
+      "duration": 4.08,
+      "text": "you will go from zero to"
+    },
+    {
+      "start": 581.28,
+      "end": 585.28,
+      "duration": 4.0,
+      "text": "v by the way not n"
+    },
+    {
+      "start": 583.04,
+      "end": 590.92,
+      "duration": 7.88,
+      "text": "i plus plus and you will say if it is"
+    },
+    {
+      "start": 585.28,
+      "end": 590.92,
+      "duration": 5.64,
+      "text": "not visited can you go and call the"
+    },
+    {
+      "start": 591.52,
+      "end": 596.56,
+      "duration": 5.04,
+      "text": "dfs with this particular starting node"
+    },
+    {
+      "start": 593.92,
+      "end": 598.08,
+      "duration": 4.16,
+      "text": "and this adjacency list and the visited"
+    },
+    {
+      "start": 596.56,
+      "end": 600.4,
+      "duration": 3.84,
+      "text": "array at the end of the day you need to"
+    },
+    {
+      "start": 598.08,
+      "end": 602.48,
+      "duration": 4.4,
+      "text": "count the provinces so you can do is in"
+    },
+    {
+      "start": 600.4,
+      "end": 605.68,
+      "duration": 5.28,
+      "text": "the count equal to zero and you can plug"
+    },
+    {
+      "start": 602.48,
+      "end": 607.36,
+      "duration": 4.88,
+      "text": "in a counter plus plus okay so this is a"
+    },
+    {
+      "start": 605.68,
+      "end": 610.56,
+      "duration": 4.88,
+      "text": "very generic code"
+    },
+    {
+      "start": 607.36,
+      "end": 613.36,
+      "duration": 6.0,
+      "text": "to change adjacency"
+    },
+    {
+      "start": 610.56,
+      "end": 615.68,
+      "duration": 5.12,
+      "text": "matrix to list i have already taught you"
+    },
+    {
+      "start": 613.36,
+      "end": 617.76,
+      "duration": 4.4,
+      "text": "how to represent a graph in an adjacency"
+    },
+    {
+      "start": 615.68,
+      "end": 619.92,
+      "duration": 4.24,
+      "text": "matrix as well as a list so it's a very"
+    },
+    {
+      "start": 617.76,
+      "end": 622.4,
+      "duration": 4.64,
+      "text": "generic code it's time to write the dfs"
+    },
+    {
+      "start": 619.92,
+      "end": 624.24,
+      "duration": 4.32,
+      "text": "again it says super simple so you can"
+    },
+    {
+      "start": 622.4,
+      "end": 626.72,
+      "duration": 4.32,
+      "text": "write private"
+    },
+    {
+      "start": 624.24,
+      "end": 626.72,
+      "duration": 2.48,
+      "text": "void"
+    },
+    {
+      "start": 628.4,
+      "end": 634.16,
+      "duration": 5.76,
+      "text": "dfs and this will be the node"
+    },
+    {
+      "start": 632.56,
+      "end": 636.16,
+      "duration": 3.6,
+      "text": "and we can have the adjacency list"
+    },
+    {
+      "start": 634.16,
+      "end": 638.0,
+      "duration": 3.84,
+      "text": "carried across with us"
+    },
+    {
+      "start": 636.16,
+      "end": 640.48,
+      "duration": 4.32,
+      "text": "so yeah perfect we can have the"
+    },
+    {
+      "start": 638.0,
+      "end": 643.12,
+      "duration": 5.12,
+      "text": "adjacency list carried and we need the"
+    },
+    {
+      "start": 640.48,
+      "end": 645.04,
+      "duration": 4.56,
+      "text": "visited so this guy the visited as well"
+    },
+    {
+      "start": 643.12,
+      "end": 647.28,
+      "duration": 4.16,
+      "text": "which is something like this and you"
+    },
+    {
+      "start": 645.04,
+      "end": 649.2,
+      "duration": 4.16,
+      "text": "know whenever you reach you just mark it"
+    },
+    {
+      "start": 647.28,
+      "end": 652.08,
+      "duration": 4.8,
+      "text": "as"
+    },
+    {
+      "start": 649.2,
+      "end": 655.68,
+      "duration": 6.48,
+      "text": "one and then you go to something like"
+    },
+    {
+      "start": 652.08,
+      "end": 658.88,
+      "duration": 6.8,
+      "text": "auto of id adjacency list of note and"
+    },
+    {
+      "start": 655.68,
+      "end": 661.04,
+      "duration": 5.36,
+      "text": "you say hey listen if not visited i t"
+    },
+    {
+      "start": 658.88,
+      "end": 664.08,
+      "duration": 5.2,
+      "text": "what i'll do is i'll go and call the dfs"
+    },
+    {
+      "start": 661.04,
+      "end": 666.32,
+      "duration": 5.28,
+      "text": "for it adjacency list and visit it and"
+    },
+    {
+      "start": 664.08,
+      "end": 667.84,
+      "duration": 3.76,
+      "text": "this will be my dfs calls and at the end"
+    },
+    {
+      "start": 666.32,
+      "end": 669.84,
+      "duration": 3.52,
+      "text": "of the day since i've counted the number"
+    },
+    {
+      "start": 667.84,
+      "end": 671.6,
+      "duration": 3.76,
+      "text": "of provinces i'll return it now let's"
+    },
+    {
+      "start": 669.84,
+      "end": 673.36,
+      "duration": 3.52,
+      "text": "super quickly compile this and check it"
+    },
+    {
+      "start": 671.6,
+      "end": 675.36,
+      "duration": 3.76,
+      "text": "out okay so"
+    },
+    {
+      "start": 673.36,
+      "end": 676.96,
+      "duration": 3.6,
+      "text": "okay so since the adjacency list was"
+    },
+    {
+      "start": 675.36,
+      "end": 677.76,
+      "duration": 2.4,
+      "text": "created like this uh this will be an"
+    },
+    {
+      "start": 676.96,
+      "end": 680.56,
+      "duration": 3.6,
+      "text": "array my bad"
+    },
+    {
+      "start": 677.76,
+      "end": 682.16,
+      "duration": 4.4,
+      "text": "[Music]"
+    },
+    {
+      "start": 680.56,
+      "end": 684.16,
+      "duration": 3.6,
+      "text": "perfect i think we should be fine so"
+    },
+    {
+      "start": 682.16,
+      "end": 686.56,
+      "duration": 4.4,
+      "text": "usually in all the problems you will not"
+    },
+    {
+      "start": 684.16,
+      "end": 687.92,
+      "duration": 3.76,
+      "text": "find the adjacency matrix just because"
+    },
+    {
+      "start": 686.56,
+      "end": 689.92,
+      "duration": 3.36,
+      "text": "if you see the constraints are very"
+    },
+    {
+      "start": 687.92,
+      "end": 691.76,
+      "duration": 3.84,
+      "text": "small thereby the adjacency matrix was"
+    },
+    {
+      "start": 689.92,
+      "end": 693.68,
+      "duration": 3.76,
+      "text": "here but usually you will not find it"
+    },
+    {
+      "start": 691.76,
+      "end": 695.12,
+      "duration": 3.36,
+      "text": "you will mostly find adjacency list"
+    },
+    {
+      "start": 693.68,
+      "end": 696.88,
+      "duration": 3.2,
+      "text": "given to you and then you can perform"
+    },
+    {
+      "start": 695.12,
+      "end": 698.64,
+      "duration": 3.52,
+      "text": "this particular algorithm and then this"
+    },
+    {
+      "start": 696.88,
+      "end": 702.48,
+      "duration": 5.6,
+      "text": "dfs score so"
+    },
+    {
+      "start": 698.64,
+      "end": 703.76,
+      "duration": 5.12,
+      "text": "let's discuss about the time complexity"
+    },
+    {
+      "start": 702.48,
+      "end": 705.52,
+      "duration": 3.04,
+      "text": "because that is something which is very"
+    },
+    {
+      "start": 703.76,
+      "end": 708.08,
+      "duration": 4.32,
+      "text": "important to understand because going"
+    },
+    {
+      "start": 705.52,
+      "end": 709.68,
+      "duration": 4.16,
+      "text": "forward we will be solving problems"
+    },
+    {
+      "start": 708.08,
+      "end": 711.44,
+      "duration": 3.36,
+      "text": "where we will be running this particular"
+    },
+    {
+      "start": 709.68,
+      "end": 714.56,
+      "duration": 4.88,
+      "text": "for loop and then we will be calling"
+    },
+    {
+      "start": 711.44,
+      "end": 716.4,
+      "duration": 4.96,
+      "text": "these dfs or vfs calls so at first let's"
+    },
+    {
+      "start": 714.56,
+      "end": 718.08,
+      "duration": 3.52,
+      "text": "discuss the space complexity are we"
+    },
+    {
+      "start": 716.4,
+      "end": 720.24,
+      "duration": 3.84,
+      "text": "using something yes we created an"
+    },
+    {
+      "start": 718.08,
+      "end": 722.32,
+      "duration": 4.24,
+      "text": "adjacency list let's not take that into"
+    },
+    {
+      "start": 720.24,
+      "end": 723.84,
+      "duration": 3.6,
+      "text": "account because most of the problems"
+    },
+    {
+      "start": 722.32,
+      "end": 725.76,
+      "duration": 3.44,
+      "text": "adjacency list will be given to you so"
+    },
+    {
+      "start": 723.84,
+      "end": 727.44,
+      "duration": 3.6,
+      "text": "let's not uh discuss about the adjacency"
+    },
+    {
+      "start": 725.76,
+      "end": 729.28,
+      "duration": 3.52,
+      "text": "list apart from that we're using a"
+    },
+    {
+      "start": 727.44,
+      "end": 732.0,
+      "duration": 4.56,
+      "text": "visited array which takes we go off n"
+    },
+    {
+      "start": 729.28,
+      "end": 733.92,
+      "duration": 4.64,
+      "text": "and we're using a recursion stack space"
+    },
+    {
+      "start": 732.0,
+      "end": 736.48,
+      "duration": 4.48,
+      "text": "which are the worst case can go up to b"
+    },
+    {
+      "start": 733.92,
+      "end": 738.56,
+      "duration": 4.64,
+      "text": "coffin imagine you're given a graph a"
+    },
+    {
+      "start": 736.48,
+      "end": 740.32,
+      "duration": 3.84,
+      "text": "skewed graph something like this then"
+    },
+    {
+      "start": 738.56,
+      "end": 742.56,
+      "duration": 4.0,
+      "text": "the defect call will go from here to"
+    },
+    {
+      "start": 740.32,
+      "end": 745.04,
+      "duration": 4.72,
+      "text": "here to here so it will go"
+    },
+    {
+      "start": 742.56,
+      "end": 747.84,
+      "duration": 5.28,
+      "text": "the entire way and thereby it will take"
+    },
+    {
+      "start": 745.04,
+      "end": 749.36,
+      "duration": 4.32,
+      "text": "a recursion stack space of pico of n"
+    },
+    {
+      "start": 747.84,
+      "end": 750.96,
+      "duration": 3.12,
+      "text": "okay so you have understood the space"
+    },
+    {
+      "start": 749.36,
+      "end": 753.44,
+      "duration": 4.08,
+      "text": "complexity what about the time"
+    },
+    {
+      "start": 750.96,
+      "end": 755.52,
+      "duration": 4.56,
+      "text": "complexity how much time does it take so"
+    },
+    {
+      "start": 753.44,
+      "end": 757.44,
+      "duration": 4.0,
+      "text": "you can argue that stravo there is a for"
+    },
+    {
+      "start": 755.52,
+      "end": 760.0,
+      "duration": 4.48,
+      "text": "loop that runs and then there is a dfs"
+    },
+    {
+      "start": 757.44,
+      "end": 763.44,
+      "duration": 6.0,
+      "text": "call right so you might see that big o"
+    },
+    {
+      "start": 760.0,
+      "end": 764.8,
+      "duration": 4.8,
+      "text": "of n into the dfs we know takes v plus 2"
+    },
+    {
+      "start": 763.44,
+      "end": 766.72,
+      "duration": 3.28,
+      "text": "e so"
+    },
+    {
+      "start": 764.8,
+      "end": 768.0,
+      "duration": 3.2,
+      "text": "but this is wrong"
+    },
+    {
+      "start": 766.72,
+      "end": 770.56,
+      "duration": 3.84,
+      "text": "it's not this"
+    },
+    {
+      "start": 768.0,
+      "end": 772.56,
+      "duration": 4.56,
+      "text": "instead of that it is n plus"
+    },
+    {
+      "start": 770.56,
+      "end": 773.28,
+      "duration": 2.72,
+      "text": "v plus 2 e"
+    },
+    {
+      "start": 772.56,
+      "end": 775.04,
+      "duration": 2.48,
+      "text": "y"
+    },
+    {
+      "start": 773.28,
+      "end": 778.32,
+      "duration": 5.04,
+      "text": "let's go back"
+    },
+    {
+      "start": 775.04,
+      "end": 779.52,
+      "duration": 4.48,
+      "text": "so how many times is this dfs executed"
+    },
+    {
+      "start": 778.32,
+      "end": 781.28,
+      "duration": 2.96,
+      "text": "three times"
+    },
+    {
+      "start": 779.52,
+      "end": 783.12,
+      "duration": 3.6,
+      "text": "for this particular graph"
+    },
+    {
+      "start": 781.28,
+      "end": 785.2,
+      "duration": 3.92,
+      "text": "once for here"
+    },
+    {
+      "start": 783.12,
+      "end": 789.04,
+      "duration": 5.92,
+      "text": "once for here once for here"
+    },
+    {
+      "start": 785.2,
+      "end": 791.2,
+      "duration": 6.0,
+      "text": "and whenever it's executed for one a dfs"
+    },
+    {
+      "start": 789.04,
+      "end": 793.52,
+      "duration": 4.48,
+      "text": "call for this is made a dfs call for"
+    },
+    {
+      "start": 791.2,
+      "end": 795.44,
+      "duration": 4.24,
+      "text": "this is made a dfs call for this is made"
+    },
+    {
+      "start": 793.52,
+      "end": 797.52,
+      "duration": 4.0,
+      "text": "so in total three dfs calls are made"
+    },
+    {
+      "start": 795.44,
+      "end": 799.76,
+      "duration": 4.32,
+      "text": "whenever it is executed for four in"
+    },
+    {
+      "start": 797.52,
+      "end": 801.92,
+      "duration": 4.4,
+      "text": "total three dfs calls is me whenever it"
+    },
+    {
+      "start": 799.76,
+      "end": 804.48,
+      "duration": 4.72,
+      "text": "is executed for seven in total two dfs"
+    },
+    {
+      "start": 801.92,
+      "end": 807.68,
+      "duration": 5.76,
+      "text": "calls is made so overall can i say i'm"
+    },
+    {
+      "start": 804.48,
+      "end": 809.84,
+      "duration": 5.36,
+      "text": "making a dfs call for all the n notes"
+    },
+    {
+      "start": 807.68,
+      "end": 814.24,
+      "duration": 6.56,
+      "text": "i'm making a dfs call for all the"
+    },
+    {
+      "start": 809.84,
+      "end": 815.68,
+      "duration": 5.84,
+      "text": "endnotes can i say that i can so thereby"
+    },
+    {
+      "start": 814.24,
+      "end": 817.68,
+      "duration": 3.44,
+      "text": "i can say"
+    },
+    {
+      "start": 815.68,
+      "end": 820.4,
+      "duration": 4.72,
+      "text": "this is the outer loop and the inner"
+    },
+    {
+      "start": 817.68,
+      "end": 822.0,
+      "duration": 4.32,
+      "text": "loop overall throughout the loop journey"
+    },
+    {
+      "start": 820.4,
+      "end": 824.08,
+      "duration": 3.68,
+      "text": "throughout the loop journey"
+    },
+    {
+      "start": 822.0,
+      "end": 826.32,
+      "duration": 4.32,
+      "text": "runs for the dfs times for the entire"
+    },
+    {
+      "start": 824.08,
+      "end": 828.24,
+      "duration": 4.16,
+      "text": "graph it runs throughout because"
+    },
+    {
+      "start": 826.32,
+      "end": 829.6,
+      "duration": 3.28,
+      "text": "partially it will run for when the"
+    },
+    {
+      "start": 828.24,
+      "end": 830.8,
+      "duration": 2.56,
+      "text": "starting node is one then the starting"
+    },
+    {
+      "start": 829.6,
+      "end": 833.2,
+      "duration": 3.6,
+      "text": "node is four then the starting node is"
+    },
+    {
+      "start": 830.8,
+      "end": 836.64,
+      "duration": 5.84,
+      "text": "seven so partial dfs partial dfs partial"
+    },
+    {
+      "start": 833.2,
+      "end": 838.48,
+      "duration": 5.28,
+      "text": "dfs sums up to overall dfs of the graph"
+    },
+    {
+      "start": 836.64,
+      "end": 840.96,
+      "duration": 4.32,
+      "text": "and the overall dfs of the graph is"
+    },
+    {
+      "start": 838.48,
+      "end": 843.44,
+      "duration": 4.96,
+      "text": "having a complexity of near about v plus"
+    },
+    {
+      "start": 840.96,
+      "end": 846.24,
+      "duration": 5.28,
+      "text": "2 e near about v plus 2 e and this can"
+    },
+    {
+      "start": 843.44,
+      "end": 849.76,
+      "duration": 6.32,
+      "text": "be like equivalently seen as near about"
+    },
+    {
+      "start": 846.24,
+      "end": 853.04,
+      "duration": 6.8,
+      "text": "a linear stuff near about again it's not"
+    },
+    {
+      "start": 849.76,
+      "end": 854.64,
+      "duration": 4.88,
+      "text": "exactly because v v plus 2 e is there"
+    },
+    {
+      "start": 853.04,
+      "end": 857.28,
+      "duration": 4.24,
+      "text": "then depends on the number of neighbor"
+    },
+    {
+      "start": 854.64,
+      "end": 861.68,
+      "duration": 7.04,
+      "text": "nodes as well imagine you get a graph as"
+    },
+    {
+      "start": 857.28,
+      "end": 863.6,
+      "duration": 6.32,
+      "text": "like one two three four all single nodes"
+    },
+    {
+      "start": 861.68,
+      "end": 865.92,
+      "duration": 4.24,
+      "text": "then there will be no neighbor nodes for"
+    },
+    {
+      "start": 863.6,
+      "end": 867.28,
+      "duration": 3.68,
+      "text": "any one of them so it will boil down to"
+    },
+    {
+      "start": 865.92,
+      "end": 869.2,
+      "duration": 3.28,
+      "text": "b of n"
+    },
+    {
+      "start": 867.28,
+      "end": 872.32,
+      "duration": 5.04,
+      "text": "a single dfs which has no neighbor nodes"
+    },
+    {
+      "start": 869.2,
+      "end": 874.32,
+      "duration": 5.12,
+      "text": "so we got one a single dfs big of one"
+    },
+    {
+      "start": 872.32,
+      "end": 876.16,
+      "duration": 3.84,
+      "text": "single dfs we got one and no neighbor"
+    },
+    {
+      "start": 874.32,
+      "end": 878.72,
+      "duration": 4.4,
+      "text": "nodes so we go off"
+    },
+    {
+      "start": 876.16,
+      "end": 881.2,
+      "duration": 5.04,
+      "text": "n for the for loop and we go of five"
+    },
+    {
+      "start": 878.72,
+      "end": 883.28,
+      "duration": 4.56,
+      "text": "calls so we go off and n again so"
+    },
+    {
+      "start": 881.2,
+      "end": 885.76,
+      "duration": 4.56,
+      "text": "depending on the neighbor nodes the time"
+    },
+    {
+      "start": 883.28,
+      "end": 889.28,
+      "duration": 6.0,
+      "text": "complexity will vary so overall we can"
+    },
+    {
+      "start": 885.76,
+      "end": 891.12,
+      "duration": 5.36,
+      "text": "write that as a beaco of n traversal so"
+    },
+    {
+      "start": 889.28,
+      "end": 892.72,
+      "duration": 3.44,
+      "text": "guys i hope i was able to explain you uh"
+    },
+    {
+      "start": 891.12,
+      "end": 895.44,
+      "duration": 4.32,
+      "text": "the time complexity and this particular"
+    },
+    {
+      "start": 892.72,
+      "end": 897.36,
+      "duration": 4.64,
+      "text": "method because trust me you're gonna see"
+    },
+    {
+      "start": 895.44,
+      "end": 899.6,
+      "duration": 4.16,
+      "text": "this a lot in the next set of the"
+    },
+    {
+      "start": 897.36,
+      "end": 901.52,
+      "duration": 4.16,
+      "text": "questions that we are going to do so i"
+    },
+    {
+      "start": 899.6,
+      "end": 904.08,
+      "duration": 4.48,
+      "text": "hope uh you understood it so just in"
+    },
+    {
+      "start": 901.52,
+      "end": 905.76,
+      "duration": 4.24,
+      "text": "case you did please please hit that like"
+    },
+    {
+      "start": 904.08,
+      "end": 908.16,
+      "duration": 4.08,
+      "text": "button and if you're new to our channel"
+    },
+    {
+      "start": 905.76,
+      "end": 909.76,
+      "duration": 4.0,
+      "text": "what are you waiting for i mean"
+    },
+    {
+      "start": 908.16,
+      "end": 911.2,
+      "duration": 3.04,
+      "text": "you need to hit that subscribe button so"
+    },
+    {
+      "start": 909.76,
+      "end": 912.88,
+      "duration": 3.12,
+      "text": "hit that subscribe button right away and"
+    },
+    {
+      "start": 911.2,
+      "end": 914.72,
+      "duration": 3.52,
+      "text": "if you haven't checked out our dp series"
+    },
+    {
+      "start": 912.88,
+      "end": 916.32,
+      "duration": 3.44,
+      "text": "and the hd sheet the links are in the"
+    },
+    {
+      "start": 914.72,
+      "end": 918.0,
+      "duration": 3.28,
+      "text": "description make sure you check them out"
+    },
+    {
+      "start": 916.32,
+      "end": 919.28,
+      "duration": 2.96,
+      "text": "with this uh let's wrap up this video"
+    },
+    {
+      "start": 918.0,
+      "end": 924.76,
+      "duration": 6.76,
+      "text": "and meet in the next one till then bye"
+    },
+    {
+      "start": 919.28,
+      "end": 930.39,
+      "duration": 11.11,
+      "text": "bye take care whenever your heart is"
+    },
+    {
+      "start": 924.76,
+      "end": 930.39,
+      "duration": 5.63,
+      "text": "[Music]"
+    }
+  ]
+}

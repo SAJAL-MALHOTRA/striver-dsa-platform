@@ -1,0 +1,1937 @@
+{
+  "video_id": "I4g1qbkTPus",
+  "title": "L15. Find the length of the Loop in LinkedList",
+  "duration_sec": 841,
+  "segments": [
+    {
+      "start": 3.16,
+      "end": 5.52,
+      "text": "So, let's continue with our playlist,"
+    },
+    {
+      "start": 4.4,
+      "end": 6.68,
+      "text": "but before that, hey everyone, welcome"
+    },
+    {
+      "start": 5.52,
+      "end": 8.68,
+      "text": "back to the channel. I hope you guys are"
+    },
+    {
+      "start": 6.68,
+      "end": 11.08,
+      "text": "doing extremely well. So, the problem"
+    },
+    {
+      "start": 8.68,
+      "end": 13.2,
+      "text": "that we will be solving today is finding"
+    },
+    {
+      "start": 11.08,
+      "end": 14.68,
+      "text": "out the length of a loop in a given"
+    },
+    {
+      "start": 13.2,
+      "end": 16.64,
+      "text": "linked list. So, what is the problem"
+    },
+    {
+      "start": 14.68,
+      "end": 18.84,
+      "text": "stating? It is stating that you'll be"
+    },
+    {
+      "start": 16.64,
+      "end": 20.88,
+      "text": "given the head of the linked list, and"
+    },
+    {
+      "start": 18.84,
+      "end": 22.48,
+      "text": "if there is a loop and if there is a"
+    },
+    {
+      "start": 20.88,
+      "end": 24.16,
+      "text": "loop, you'll have to return me the"
+    },
+    {
+      "start": 22.48,
+      "end": 25.96,
+      "text": "length of the loop. What is the length"
+    },
+    {
+      "start": 24.16,
+      "end": 29.24,
+      "text": "of the loop? What is the definition of a"
+    },
+    {
+      "start": 25.96,
+      "end": 32.0,
+      "text": "loop? If there exist one node"
+    },
+    {
+      "start": 29.24,
+      "end": 35.12,
+      "text": "if there exist a minimum of one node"
+    },
+    {
+      "start": 32.0,
+      "end": 37.56,
+      "text": "where you can start and end."
+    },
+    {
+      "start": 35.12,
+      "end": 42.56,
+      "text": "So, let's take one node. Let's assume"
+    },
+    {
+      "start": 37.56,
+      "end": 45.72,
+      "text": "five, one two, three, four, five, six,"
+    },
+    {
+      "start": 42.56,
+      "end": 48.36,
+      "text": "seven. So, the length is seven. You can"
+    },
+    {
+      "start": 45.72,
+      "end": 51.08,
+      "text": "take any node, and it is guaranteed that"
+    },
+    {
+      "start": 48.36,
+      "end": 53.64,
+      "text": "there will be one loop. So, the length"
+    },
+    {
+      "start": 51.08,
+      "end": 55.44,
+      "text": "of the loop is seven. You can start"
+    },
+    {
+      "start": 53.64,
+      "end": 57.68,
+      "text": "counting at any node. It can be three,"
+    },
+    {
+      "start": 55.44,
+      "end": 59.16,
+      "text": "it can be four, five, six."
+    },
+    {
+      "start": 57.68,
+      "end": 61.48,
+      "text": "Each of them will be giving you a length"
+    },
+    {
+      "start": 59.16,
+      "end": 64.28,
+      "text": "of seven, and this is what we want you"
+    },
+    {
+      "start": 61.48,
+      "end": 66.32,
+      "text": "to return. What if"
+    },
+    {
+      "start": 64.28,
+      "end": 67.68,
+      "text": "you're given a linear linked list,"
+    },
+    {
+      "start": 66.32,
+      "end": 69.6,
+      "text": "something like this?"
+    },
+    {
+      "start": 67.68,
+      "end": 71.52,
+      "text": "In this case"
+    },
+    {
+      "start": 69.6,
+      "end": 73.4,
+      "text": "is there any loop? No."
+    },
+    {
+      "start": 71.52,
+      "end": 75.16,
+      "text": "In such cases, you'll be returning a"
+    },
+    {
+      "start": 73.4,
+      "end": 77.04,
+      "text": "length of zero. Yes, that is what you'll"
+    },
+    {
+      "start": 75.16,
+      "end": 79.36,
+      "text": "be returning because there is no loop."
+    },
+    {
+      "start": 77.04,
+      "end": 80.56,
+      "text": "So, how can we solve this problem? What"
+    },
+    {
+      "start": 79.36,
+      "end": 82.4,
+      "text": "if this problem comes up in an"
+    },
+    {
+      "start": 80.56,
+      "end": 84.64,
+      "text": "interview? We will be following the"
+    },
+    {
+      "start": 82.4,
+      "end": 87.76,
+      "text": "exact same method that we followed while"
+    },
+    {
+      "start": 84.64,
+      "end": 90.52,
+      "text": "solving the previous problem, which is"
+    },
+    {
+      "start": 87.76,
+      "end": 91.92,
+      "text": "detection of a loop in the linked list."
+    },
+    {
+      "start": 90.52,
+      "end": 92.88,
+      "text": "In case you haven't seen that lecture,"
+    },
+    {
+      "start": 91.92,
+      "end": 94.96,
+      "text": "I'll be leaving out the link in the"
+    },
+    {
+      "start": 92.88,
+      "end": 98.72,
+      "text": "description. Please go back and watch it"
+    },
+    {
+      "start": 94.96,
+      "end": 101.2,
+      "text": "because I did use the hashing concept in"
+    },
+    {
+      "start": 98.72,
+      "end": 104.28,
+      "text": "order to solve it, and after that, we"
+    },
+    {
+      "start": 101.2,
+      "end": 106.68,
+      "text": "optimized using the tortoise and the"
+    },
+    {
+      "start": 104.28,
+      "end": 108.28,
+      "text": "hare algorithm. We'll be using the exact"
+    },
+    {
+      "start": 106.68,
+      "end": 109.76,
+      "text": "same concept over here. So, there's a"
+    },
+    {
+      "start": 108.28,
+      "end": 110.84,
+      "text": "link in the description. Go back and"
+    },
+    {
+      "start": 109.76,
+      "end": 112.84,
+      "text": "watch it"
+    },
+    {
+      "start": 110.84,
+      "end": 114.28,
+      "text": "in case you haven't seen it yet. So, if"
+    },
+    {
+      "start": 112.84,
+      "end": 115.72,
+      "text": "this problem comes up in an interview,"
+    },
+    {
+      "start": 114.28,
+      "end": 118.08,
+      "text": "we will be starting off with the same"
+    },
+    {
+      "start": 115.72,
+      "end": 119.44,
+      "text": "technique, and that is"
+    },
+    {
+      "start": 118.08,
+      "end": 122.6,
+      "text": "using the"
+    },
+    {
+      "start": 119.44,
+      "end": 124.6,
+      "text": "hashing concept. Why hashing? It's very"
+    },
+    {
+      "start": 122.6,
+      "end": 128.12,
+      "text": "obvious because if you're talking about"
+    },
+    {
+      "start": 124.6,
+      "end": 130.8,
+      "text": "a loop, it means any particular node"
+    },
+    {
+      "start": 128.12,
+      "end": 132.24,
+      "text": "will be revisited. Will be revisited."
+    },
+    {
+      "start": 130.8,
+      "end": 135.28,
+      "text": "So, we need to remember. We need to"
+    },
+    {
+      "start": 132.24,
+      "end": 138.32,
+      "text": "remember. And the only technique that"
+    },
+    {
+      "start": 135.28,
+      "end": 140.76,
+      "text": "helps us to remember is hashing. So, we"
+    },
+    {
+      "start": 138.32,
+      "end": 143.68,
+      "text": "will be using the hashing concept. Can I"
+    },
+    {
+      "start": 140.76,
+      "end": 145.88,
+      "text": "say Can I say"
+    },
+    {
+      "start": 143.68,
+      "end": 147.2,
+      "text": "I'm traversing from here. I'm going"
+    },
+    {
+      "start": 145.88,
+      "end": 149.2,
+      "text": "here, then I'm going here, then I'm"
+    },
+    {
+      "start": 147.2,
+      "end": 151.64,
+      "text": "going here, then I'm going here."
+    },
+    {
+      "start": 149.2,
+      "end": 152.6,
+      "text": "How do I find out the length of the"
+    },
+    {
+      "start": 151.64,
+      "end": 154.44,
+      "text": "loop?"
+    },
+    {
+      "start": 152.6,
+      "end": 155.68,
+      "text": "What if I can keep a track, like the"
+    },
+    {
+      "start": 154.44,
+      "end": 158.2,
+      "text": "timer?"
+    },
+    {
+      "start": 155.68,
+      "end": 160.44,
+      "text": "Maybe yes. So, what I'll do is"
+    },
+    {
+      "start": 158.2,
+      "end": 162.32,
+      "text": "I'll keep the temporary at the head."
+    },
+    {
+      "start": 160.44,
+      "end": 164.16,
+      "text": "I'll set the timer to be one. I'll set"
+    },
+    {
+      "start": 162.32,
+      "end": 165.56,
+      "text": "the timer to be one. And I'll start"
+    },
+    {
+      "start": 164.16,
+      "end": 167.36,
+      "text": "moving."
+    },
+    {
+      "start": 165.56,
+      "end": 170.24,
+      "text": "I'll go here, temporary. I'll make the"
+    },
+    {
+      "start": 167.36,
+      "end": 172.64,
+      "text": "timer two. I'll go here, temporary. Make"
+    },
+    {
+      "start": 170.24,
+      "end": 175.2,
+      "text": "the timer three. Go here, temporary."
+    },
+    {
+      "start": 172.64,
+      "end": 177.96,
+      "text": "Make the timer four. Go here, temporary."
+    },
+    {
+      "start": 175.2,
+      "end": 180.68,
+      "text": "Make the timer five. Go here, temporary."
+    },
+    {
+      "start": 177.96,
+      "end": 182.88,
+      "text": "Make the timer six. Go here, temporary."
+    },
+    {
+      "start": 180.68,
+      "end": 186.12,
+      "text": "Make the timer seven. Go here,"
+    },
+    {
+      "start": 182.88,
+      "end": 189.56,
+      "text": "temporary. Make the timers eight. Go"
+    },
+    {
+      "start": 186.12,
+      "end": 192.52,
+      "text": "here, temporary. Make the timer nine."
+    },
+    {
+      "start": 189.56,
+      "end": 195.04,
+      "text": "Go here, temporary. Make the timer 10."
+    },
+    {
+      "start": 192.52,
+      "end": 198.12,
+      "text": "And this is when you realize you visited"
+    },
+    {
+      "start": 195.04,
+      "end": 200.92,
+      "text": "a node twice. You visited a node twice."
+    },
+    {
+      "start": 198.12,
+      "end": 203.68,
+      "text": "Previously, you visited at three. Now"
+    },
+    {
+      "start": 200.92,
+      "end": 205.48,
+      "text": "you're visiting at it at 10. So, what"
+    },
+    {
+      "start": 203.68,
+      "end": 207.28,
+      "text": "will be the overall length? Can I say"
+    },
+    {
+      "start": 205.48,
+      "end": 209.08,
+      "text": "seven? Because it took you seven"
+    },
+    {
+      "start": 207.28,
+      "end": 211.48,
+      "text": "seconds, kind of."
+    },
+    {
+      "start": 209.08,
+      "end": 213.6,
+      "text": "Thereby, if I If I compute that one step"
+    },
+    {
+      "start": 211.48,
+      "end": 216.16,
+      "text": "is taking you 1 second, can I say it is"
+    },
+    {
+      "start": 213.6,
+      "end": 217.8,
+      "text": "seven? The length is seven. I can. But I"
+    },
+    {
+      "start": 216.16,
+      "end": 220.2,
+      "text": "need to remember this timer. I need to"
+    },
+    {
+      "start": 217.8,
+      "end": 221.08,
+      "text": "remember this timer. So, what I will do"
+    },
+    {
+      "start": 220.2,
+      "end": 223.2,
+      "text": "is"
+    },
+    {
+      "start": 221.08,
+      "end": 226.48,
+      "text": "I will take a data structure. And the"
+    },
+    {
+      "start": 223.2,
+      "end": 228.84,
+      "text": "best data structure is to use a map. And"
+    },
+    {
+      "start": 226.48,
+      "end": 231.16,
+      "text": "what will we be And what will we be"
+    },
+    {
+      "start": 228.84,
+      "end": 232.8,
+      "text": "storing? We'll We'll storing the node,"
+    },
+    {
+      "start": 231.16,
+      "end": 235.84,
+      "text": "the entire object, not the values. The"
+    },
+    {
+      "start": 232.8,
+      "end": 237.24,
+      "text": "object and the timer."
+    },
+    {
+      "start": 235.84,
+      "end": 239.6,
+      "text": "This will be an integer. This will be an"
+    },
+    {
+      "start": 237.24,
+      "end": 242.24,
+      "text": "integer. Plain integer. And now we will"
+    },
+    {
+      "start": 239.6,
+      "end": 244.8,
+      "text": "be starting with the head. So, initially"
+    },
+    {
+      "start": 242.24,
+      "end": 246.72,
+      "text": "the object is having one."
+    },
+    {
+      "start": 244.8,
+      "end": 248.96,
+      "text": "And I'll put the timer as one."
+    },
+    {
+      "start": 246.72,
+      "end": 251.04,
+      "text": "We'll move the temporary to the next and"
+    },
+    {
+      "start": 248.96,
+      "end": 253.52,
+      "text": "the timer will increase to two. So, next"
+    },
+    {
+      "start": 251.04,
+      "end": 256.24,
+      "text": "will be two and will be two. Next we'll"
+    },
+    {
+      "start": 253.52,
+      "end": 257.36,
+      "text": "move it to 15. So, temporary will go to"
+    },
+    {
+      "start": 256.24,
+      "end": 259.32,
+      "text": "15."
+    },
+    {
+      "start": 257.36,
+      "end": 260.92,
+      "text": "Remember, do not store 15. Store the"
+    },
+    {
+      "start": 259.32,
+      "end": 262.96,
+      "text": "entire node."
+    },
+    {
+      "start": 260.92,
+      "end": 264.92,
+      "text": "Three. After that, the temporary will"
+    },
+    {
+      "start": 262.96,
+      "end": 267.56,
+      "text": "move"
+    },
+    {
+      "start": 264.92,
+      "end": 267.56,
+      "text": "to four."
+    },
+    {
+      "start": 268.0,
+      "end": 272.52,
+      "text": "And you keep it moving. And there will"
+    },
+    {
+      "start": 270.0,
+      "end": 273.88,
+      "text": "be a point when like it will move here,"
+    },
+    {
+      "start": 272.52,
+      "end": 275.92,
+      "text": "then it will move here, then it will"
+    },
+    {
+      "start": 273.88,
+      "end": 277.36,
+      "text": "move here, then here, then here. After"
+    },
+    {
+      "start": 275.92,
+      "end": 279.96,
+      "text": "that, it will reach here when the timer"
+    },
+    {
+      "start": 277.36,
+      "end": 281.48,
+      "text": "is 10. The moment the temporary reaches"
+    },
+    {
+      "start": 279.96,
+      "end": 283.76,
+      "text": "15,"
+    },
+    {
+      "start": 281.48,
+      "end": 285.72,
+      "text": "it checks out what is the value and it"
+    },
+    {
+      "start": 283.76,
+      "end": 287.2,
+      "text": "gives you a value of three. So, you pick"
+    },
+    {
+      "start": 285.72,
+      "end": 289.48,
+      "text": "out that value three, you take the"
+    },
+    {
+      "start": 287.2,
+      "end": 290.76,
+      "text": "current value, you subtract, and you get"
+    },
+    {
+      "start": 289.48,
+      "end": 292.56,
+      "text": "the length."
+    },
+    {
+      "start": 290.76,
+      "end": 293.96,
+      "text": "Isn't that easy? That's easy, right?"
+    },
+    {
+      "start": 292.56,
+      "end": 295.48,
+      "text": "That's what you have to do. Slight"
+    },
+    {
+      "start": 293.96,
+      "end": 297.08,
+      "text": "modification and you're done with your"
+    },
+    {
+      "start": 295.48,
+      "end": 298.36,
+      "text": "brute force. So, let's quickly write"
+    },
+    {
+      "start": 297.08,
+      "end": 300.0,
+      "text": "down the pseudo code in case you want"
+    },
+    {
+      "start": 298.36,
+      "end": 301.64,
+      "text": "the code for C++, Java, Python, or"
+    },
+    {
+      "start": 300.0,
+      "end": 303.56,
+      "text": "JavaScript. All the links will be in the"
+    },
+    {
+      "start": 301.64,
+      "end": 304.92,
+      "text": "description. So,"
+    },
+    {
+      "start": 303.56,
+      "end": 306.0,
+      "text": "what do we need? We need a map data"
+    },
+    {
+      "start": 304.92,
+      "end": 307.28,
+      "text": "structure"
+    },
+    {
+      "start": 306.0,
+      "end": 310.2,
+      "text": "which will be storing the node and the"
+    },
+    {
+      "start": 307.28,
+      "end": 312.4,
+      "text": "timer. Can be stored in an integer."
+    },
+    {
+      "start": 310.2,
+      "end": 313.72,
+      "text": "We need a temporary which will be used"
+    },
+    {
+      "start": 312.4,
+      "end": 315.44,
+      "text": "for traversal."
+    },
+    {
+      "start": 313.72,
+      "end": 317.04,
+      "text": "And we need a timer which will be"
+    },
+    {
+      "start": 315.44,
+      "end": 318.92,
+      "text": "initially one."
+    },
+    {
+      "start": 317.04,
+      "end": 320.84,
+      "text": "Perfect. This is what we start off with."
+    },
+    {
+      "start": 318.92,
+      "end": 323.48,
+      "text": "And we know that we will be traversing"
+    },
+    {
+      "start": 320.84,
+      "end": 324.72,
+      "text": "till the temporary node is not null. Why"
+    },
+    {
+      "start": 323.48,
+      "end": 327.24,
+      "text": "not null?"
+    },
+    {
+      "start": 324.72,
+      "end": 329.16,
+      "text": "In case it is a linear linked list, it"
+    },
+    {
+      "start": 327.24,
+      "end": 330.92,
+      "text": "will end up reaching the null."
+    },
+    {
+      "start": 329.16,
+      "end": 331.72,
+      "text": "Only in case of loop, it will never have"
+    },
+    {
+      "start": 330.92,
+      "end": 333.68,
+      "text": "a null."
+    },
+    {
+      "start": 331.72,
+      "end": 336.56,
+      "text": "Whenever you are at a node, you first"
+    },
+    {
+      "start": 333.68,
+      "end": 338.36,
+      "text": "check, was this previously visited? Was"
+    },
+    {
+      "start": 336.56,
+      "end": 341.04,
+      "text": "this previously visited?"
+    },
+    {
+      "start": 338.36,
+      "end": 343.52,
+      "text": "So, we say map"
+    },
+    {
+      "start": 341.04,
+      "end": 346.04,
+      "text": "were you previously"
+    },
+    {
+      "start": 343.52,
+      "end": 348.44,
+      "text": "having this temporary node? In case he"
+    },
+    {
+      "start": 346.04,
+      "end": 349.8,
+      "text": "says yes, again this line will depend on"
+    },
+    {
+      "start": 348.44,
+      "end": 351.28,
+      "text": "your language."
+    },
+    {
+      "start": 349.8,
+      "end": 354.08,
+      "text": "You look at the map."
+    },
+    {
+      "start": 351.28,
+      "end": 356.48,
+      "text": "Was temporary there. If he says yes,"
+    },
+    {
+      "start": 354.08,
+      "end": 358.28,
+      "text": "I get the value for that key. I get the"
+    },
+    {
+      "start": 356.48,
+      "end": 359.8,
+      "text": "value for that key."
+    },
+    {
+      "start": 358.28,
+      "end": 362.12,
+      "text": "Map, give me the value for this"
+    },
+    {
+      "start": 359.8,
+      "end": 363.24,
+      "text": "particular key."
+    },
+    {
+      "start": 362.12,
+      "end": 365.28,
+      "text": "Again, depending on language, you can"
+    },
+    {
+      "start": 363.24,
+      "end": 368.44,
+      "text": "write it. It'll give you the value. And"
+    },
+    {
+      "start": 365.28,
+      "end": 370.2,
+      "text": "then you'll be saying return."
+    },
+    {
+      "start": 368.44,
+      "end": 373.16,
+      "text": "What is the current timer?"
+    },
+    {
+      "start": 370.2,
+      "end": 376.12,
+      "text": "It's stored in your timer minus"
+    },
+    {
+      "start": 373.16,
+      "end": 377.48,
+      "text": "value. This is what the length will be."
+    },
+    {
+      "start": 376.12,
+      "end": 379.12,
+      "text": "And you straight away return. You"
+    },
+    {
+      "start": 377.48,
+      "end": 380.84,
+      "text": "straight away return."
+    },
+    {
+      "start": 379.12,
+      "end": 382.64,
+      "text": "And in case, in case,"
+    },
+    {
+      "start": 380.84,
+      "end": 385.24,
+      "text": "it's not in the map. It's a new node."
+    },
+    {
+      "start": 382.64,
+      "end": 388.8,
+      "text": "It's a new node. So, probably put it"
+    },
+    {
+      "start": 385.24,
+      "end": 390.16,
+      "text": "into the map. mpp.put or whatever."
+    },
+    {
+      "start": 388.8,
+      "end": 391.56,
+      "text": "You put it into the map. You set"
+    },
+    {
+      "start": 390.16,
+      "end": 395.04,
+      "text": "temporary"
+    },
+    {
+      "start": 391.56,
+      "end": 396.4,
+      "text": "you are at this particular timer."
+    },
+    {
+      "start": 395.04,
+      "end": 398.44,
+      "text": "Put it into the map. And after that,"
+    },
+    {
+      "start": 396.4,
+      "end": 402.4,
+      "text": "increase the timer for the next"
+    },
+    {
+      "start": 398.44,
+      "end": 404.24,
+      "text": "iteration. For the next iteration."
+    },
+    {
+      "start": 402.4,
+      "end": 407.0,
+      "text": "And also, please make sure you move to"
+    },
+    {
+      "start": 404.24,
+      "end": 408.76,
+      "text": "the next node."
+    },
+    {
+      "start": 407.0,
+      "end": 410.84,
+      "text": "Just temporary.next."
+    },
+    {
+      "start": 408.76,
+      "end": 414.4,
+      "text": "And you end it up here. Once it is"
+    },
+    {
+      "start": 410.84,
+      "end": 417.6,
+      "text": "ended, you can go ahead and return zero."
+    },
+    {
+      "start": 414.4,
+      "end": 420.24,
+      "text": "Why return zero? Because yes."
+    },
+    {
+      "start": 417.6,
+      "end": 421.8,
+      "text": "Because if it is reaching null, it means"
+    },
+    {
+      "start": 420.24,
+      "end": 424.44,
+      "text": "it is a linear linked list. And there is"
+    },
+    {
+      "start": 421.8,
+      "end": 427.12,
+      "text": "no loop. So, you return zero."
+    },
+    {
+      "start": 424.44,
+      "end": 429.88,
+      "text": "What is the time complexity?"
+    },
+    {
+      "start": 427.12,
+      "end": 432.2,
+      "text": "Big O of N to traverse the entire linked"
+    },
+    {
+      "start": 429.88,
+      "end": 434.88,
+      "text": "list, for sure."
+    },
+    {
+      "start": 432.2,
+      "end": 437.0,
+      "text": "Into couple of operations of map. One is"
+    },
+    {
+      "start": 434.88,
+      "end": 439.52,
+      "text": "here. The other one is here. Two"
+    },
+    {
+      "start": 437.0,
+      "end": 441.6,
+      "text": "operations. So, into two into"
+    },
+    {
+      "start": 439.52,
+      "end": 444.08,
+      "text": "logarithmic of N."
+    },
+    {
+      "start": 441.6,
+      "end": 446.04,
+      "text": "In case your map is taking logarithmic."
+    },
+    {
+      "start": 444.08,
+      "end": 447.32,
+      "text": "In case your map works in Big O of one."
+    },
+    {
+      "start": 446.04,
+      "end": 449.16,
+      "text": "It'll be Big O of one. So, I've"
+    },
+    {
+      "start": 447.32,
+      "end": 450.84,
+      "text": "explained the time complexity of map in"
+    },
+    {
+      "start": 449.16,
+      "end": 451.84,
+      "text": "the hashing lecture. Please go back and"
+    },
+    {
+      "start": 450.84,
+      "end": 453.2,
+      "text": "watch it."
+    },
+    {
+      "start": 451.84,
+      "end": 456.08,
+      "text": "So, depending on your map's time"
+    },
+    {
+      "start": 453.2,
+      "end": 458.16,
+      "text": "complexity, it will vary. What about the"
+    },
+    {
+      "start": 456.08,
+      "end": 460.88,
+      "text": "space complexity? I'll end up storing"
+    },
+    {
+      "start": 458.16,
+      "end": 462.32,
+      "text": "all the nodes. So, Big O of N. Now, this"
+    },
+    {
+      "start": 460.88,
+      "end": 464.52,
+      "text": "is where the interviewer will not be"
+    },
+    {
+      "start": 462.32,
+      "end": 466.36,
+      "text": "happy with this big O of n. He'll ask"
+    },
+    {
+      "start": 464.52,
+      "end": 468.04,
+      "text": "you to optimize it. And this is when we"
+    },
+    {
+      "start": 466.36,
+      "end": 470.4,
+      "text": "will move to the"
+    },
+    {
+      "start": 468.04,
+      "end": 473.4,
+      "text": "optimal algorithm of"
+    },
+    {
+      "start": 470.4,
+      "end": 474.72,
+      "text": "tortoise and the hare algorithm. Please"
+    },
+    {
+      "start": 473.4,
+      "end": 476.32,
+      "text": "go back and watch it in case you"
+    },
+    {
+      "start": 474.72,
+      "end": 477.8,
+      "text": "haven't. The link is in the description."
+    },
+    {
+      "start": 476.32,
+      "end": 479.32,
+      "text": "So, let's quickly have a recap of the"
+    },
+    {
+      "start": 477.8,
+      "end": 481.44,
+      "text": "tortoise and the hare algorithm which"
+    },
+    {
+      "start": 479.32,
+      "end": 483.84,
+      "text": "was used to detect a loop because if you"
+    },
+    {
+      "start": 481.44,
+      "end": 485.88,
+      "text": "understand that in depth, finding the"
+    },
+    {
+      "start": 483.84,
+      "end": 488.28,
+      "text": "loop is super simple. So, if you"
+    },
+    {
+      "start": 485.88,
+      "end": 490.76,
+      "text": "remember, we took a slow pointer, we"
+    },
+    {
+      "start": 488.28,
+      "end": 493.16,
+      "text": "took a fast pointer, and we placed it at"
+    },
+    {
+      "start": 490.76,
+      "end": 495.64,
+      "text": "the head. Then we moved the slow by one,"
+    },
+    {
+      "start": 493.16,
+      "end": 498.12,
+      "text": "which means it goes to the next, and the"
+    },
+    {
+      "start": 495.64,
+      "end": 500.28,
+      "text": "fast by two, it means goes to the next"
+    },
+    {
+      "start": 498.12,
+      "end": 502.84,
+      "text": "next. Again in the next step, same"
+    },
+    {
+      "start": 500.28,
+      "end": 505.64,
+      "text": "thing, slow and fast moves by one and"
+    },
+    {
+      "start": 502.84,
+      "end": 507.92,
+      "text": "two steps simultaneously."
+    },
+    {
+      "start": 505.64,
+      "end": 510.0,
+      "text": "After that, again the same thing, slow"
+    },
+    {
+      "start": 507.92,
+      "end": 512.88,
+      "text": "moves by one step, the fast pointer will"
+    },
+    {
+      "start": 510.0,
+      "end": 514.4,
+      "text": "move by two steps."
+    },
+    {
+      "start": 512.88,
+      "end": 516.52,
+      "text": "And after that, let's quickly erase"
+    },
+    {
+      "start": 514.4,
+      "end": 519.36,
+      "text": "this. Yes. After that, again the same"
+    },
+    {
+      "start": 516.52,
+      "end": 522.12,
+      "text": "thing, slow moves by one, the fast moves"
+    },
+    {
+      "start": 519.36,
+      "end": 524.0,
+      "text": "by two steps. Let's quickly erase this"
+    },
+    {
+      "start": 522.12,
+      "end": 525.96,
+      "text": "and this. After that, again the same"
+    },
+    {
+      "start": 524.0,
+      "end": 527.88,
+      "text": "thing, slow and fast moves by one and"
+    },
+    {
+      "start": 525.96,
+      "end": 528.88,
+      "text": "one, sorry, one and two, not one and"
+    },
+    {
+      "start": 527.88,
+      "end": 532.32,
+      "text": "one."
+    },
+    {
+      "start": 528.88,
+      "end": 534.0,
+      "text": "Done. After that, again the same thing,"
+    },
+    {
+      "start": 532.32,
+      "end": 537.2,
+      "text": "the slow moves by one,"
+    },
+    {
+      "start": 534.0,
+      "end": 539.24,
+      "text": "and the fast moves by two."
+    },
+    {
+      "start": 537.2,
+      "end": 542.2,
+      "text": "Let's quickly erase this and erase this."
+    },
+    {
+      "start": 539.24,
+      "end": 544.52,
+      "text": "After that, the slow moves here. After"
+    },
+    {
+      "start": 542.2,
+      "end": 546.32,
+      "text": "that, the fast moves here. And this is"
+    },
+    {
+      "start": 544.52,
+      "end": 548.2,
+      "text": "where they collide. This is where they"
+    },
+    {
+      "start": 546.32,
+      "end": 550.64,
+      "text": "collide. So, this is the node where the"
+    },
+    {
+      "start": 548.2,
+      "end": 552.4,
+      "text": "slow and the fast pointers collide."
+    },
+    {
+      "start": 550.64,
+      "end": 554.52,
+      "text": "Hence, I can definitely say that there"
+    },
+    {
+      "start": 552.4,
+      "end": 556.16,
+      "text": "is a loop. I've talked about the"
+    },
+    {
+      "start": 554.52,
+      "end": 557.52,
+      "text": "intuition in the previous video. In case"
+    },
+    {
+      "start": 556.16,
+      "end": 559.08,
+      "text": "you haven't seen, the link is in the"
+    },
+    {
+      "start": 557.52,
+      "end": 561.48,
+      "text": "description."
+    },
+    {
+      "start": 559.08,
+      "end": 563.48,
+      "text": "So, I'm sure that there is a loop. Now,"
+    },
+    {
+      "start": 561.48,
+      "end": 566.64,
+      "text": "what is the next step? I need to figure"
+    },
+    {
+      "start": 563.48,
+      "end": 569.44,
+      "text": "out the length. Can I say, if I start at"
+    },
+    {
+      "start": 566.64,
+      "end": 571.4,
+      "text": "eight, I will reach back at eight. If I"
+    },
+    {
+      "start": 569.44,
+      "end": 574.68,
+      "text": "start at eight, I will reach back at"
+    },
+    {
+      "start": 571.4,
+      "end": 577.0,
+      "text": "eight. I'll use this. Yes. I'll keep a"
+    },
+    {
+      "start": 574.68,
+      "end": 579.28,
+      "text": "counter,"
+    },
+    {
+      "start": 577.0,
+      "end": 581.48,
+      "text": "and I'll start moving the fast pointer."
+    },
+    {
+      "start": 579.28,
+      "end": 584.0,
+      "text": "You can move the slow as well."
+    },
+    {
+      "start": 581.48,
+      "end": 586.64,
+      "text": "Fast moves to the next, the counter"
+    },
+    {
+      "start": 584.0,
+      "end": 588.8,
+      "text": "increases. The fast moves to the next,"
+    },
+    {
+      "start": 586.64,
+      "end": 591.08,
+      "text": "the counter increases. The fast moves to"
+    },
+    {
+      "start": 588.8,
+      "end": 592.96,
+      "text": "the next, the counter increases. The"
+    },
+    {
+      "start": 591.08,
+      "end": 595.28,
+      "text": "fast moves to the next, the counter"
+    },
+    {
+      "start": 592.96,
+      "end": 597.0,
+      "text": "increases. The fast moves to the next,"
+    },
+    {
+      "start": 595.28,
+      "end": 598.48,
+      "text": "the counter increases. The fast moves to"
+    },
+    {
+      "start": 597.0,
+      "end": 600.52,
+      "text": "the next,"
+    },
+    {
+      "start": 598.48,
+      "end": 603.08,
+      "text": "the counter increases. The fast moves to"
+    },
+    {
+      "start": 600.52,
+      "end": 604.44,
+      "text": "the next, the counter increases. This is"
+    },
+    {
+      "start": 603.08,
+      "end": 606.6,
+      "text": "when you stop."
+    },
+    {
+      "start": 604.44,
+      "end": 608.24,
+      "text": "You reach back at the same node because"
+    },
+    {
+      "start": 606.6,
+      "end": 610.04,
+      "text": "it was a loop. You are bound to reach"
+    },
+    {
+      "start": 608.24,
+      "end": 611.32,
+      "text": "back at the same node. And the moment"
+    },
+    {
+      "start": 610.04,
+      "end": 614.28,
+      "text": "you stop,"
+    },
+    {
+      "start": 611.32,
+      "end": 617.12,
+      "text": "whatever value your counter has, that"
+    },
+    {
+      "start": 614.28,
+      "end": 619.52,
+      "text": "will be Yes, that will be your length of"
+    },
+    {
+      "start": 617.12,
+      "end": 621.72,
+      "text": "the loop of the linked list."
+    },
+    {
+      "start": 619.52,
+      "end": 623.56,
+      "text": "Can I write the code? I can. So, this"
+    },
+    {
+      "start": 621.72,
+      "end": 625.4,
+      "text": "was the code which was detecting the"
+    },
+    {
+      "start": 623.56,
+      "end": 627.24,
+      "text": "loop in a linked list. You basically"
+    },
+    {
+      "start": 625.4,
+      "end": 629.44,
+      "text": "started by taking"
+    },
+    {
+      "start": 627.24,
+      "end": 631.68,
+      "text": "slow and fast pointers pointing to head,"
+    },
+    {
+      "start": 629.44,
+      "end": 634.16,
+      "text": "and you know these conditions. In case"
+    },
+    {
+      "start": 631.68,
+      "end": 636.04,
+      "text": "it is a linear linked list,"
+    },
+    {
+      "start": 634.16,
+      "end": 638.24,
+      "text": "you need to check if you are reaching"
+    },
+    {
+      "start": 636.04,
+      "end": 640.0,
+      "text": "null or if you're reaching the last"
+    },
+    {
+      "start": 638.24,
+      "end": 641.08,
+      "text": "node. Again, discussed in the previous"
+    },
+    {
+      "start": 640.0,
+      "end": 642.0,
+      "text": "video."
+    },
+    {
+      "start": 641.08,
+      "end": 644.12,
+      "text": "So,"
+    },
+    {
+      "start": 642.0,
+      "end": 646.08,
+      "text": "we know this, that the slow will move by"
+    },
+    {
+      "start": 644.12,
+      "end": 646.88,
+      "text": "one and the fast pointer will move by"
+    },
+    {
+      "start": 646.08,
+      "end": 649.0,
+      "text": "two."
+    },
+    {
+      "start": 646.88,
+      "end": 650.68,
+      "text": "The moment this happens, this is where I"
+    },
+    {
+      "start": 649.0,
+      "end": 652.72,
+      "text": "have to find the loop. This is where I"
+    },
+    {
+      "start": 650.68,
+      "end": 654.28,
+      "text": "have to find the length, rather."
+    },
+    {
+      "start": 652.72,
+      "end": 655.36,
+      "text": "So, can I say"
+    },
+    {
+      "start": 654.28,
+      "end": 658.96,
+      "text": "if"
+    },
+    {
+      "start": 655.36,
+      "end": 661.0,
+      "text": "the slow equal to equal to fast,"
+    },
+    {
+      "start": 658.96,
+      "end": 662.32,
+      "text": "return"
+    },
+    {
+      "start": 661.0,
+      "end": 665.4,
+      "text": "find"
+    },
+    {
+      "start": 662.32,
+      "end": 669.8,
+      "text": "length and maybe just"
+    },
+    {
+      "start": 665.4,
+      "end": 669.8,
+      "text": "pass on the slow and fast pointers here."
+    },
+    {
+      "start": 670.52,
+      "end": 673.8,
+      "text": "That's it. And it will find you the"
+    },
+    {
+      "start": 672.12,
+      "end": 675.44,
+      "text": "length. So, we just need to write the"
+    },
+    {
+      "start": 673.8,
+      "end": 677.8,
+      "text": "find length function, which is taking a"
+    },
+    {
+      "start": 675.44,
+      "end": 679.84,
+      "text": "slow pointer and the fast pointer. And"
+    },
+    {
+      "start": 677.8,
+      "end": 682.28,
+      "text": "it should return me the entire traversal"
+    },
+    {
+      "start": 679.84,
+      "end": 685.2,
+      "text": "length. So, what I'll do is I'll write"
+    },
+    {
+      "start": 682.28,
+      "end": 686.32,
+      "text": "the find length function. So, find"
+    },
+    {
+      "start": 685.2,
+      "end": 688.6,
+      "text": "length"
+    },
+    {
+      "start": 686.32,
+      "end": 690.8,
+      "text": "It'll be taking a slow pointer and it'll"
+    },
+    {
+      "start": 688.6,
+      "end": 692.0,
+      "text": "be taking a fast pointer. So, initially"
+    },
+    {
+      "start": 690.8,
+      "end": 694.16,
+      "text": "what you can do is you can keep the"
+    },
+    {
+      "start": 692.0,
+      "end": 697.68,
+      "text": "counter equal to one and you can see the"
+    },
+    {
+      "start": 694.16,
+      "end": 700.2,
+      "text": "fast pointer to move one step."
+    },
+    {
+      "start": 697.68,
+      "end": 702.56,
+      "text": "Not two steps, just one step. And now"
+    },
+    {
+      "start": 700.2,
+      "end": 704.48,
+      "text": "you will say, let's keep on moving them"
+    },
+    {
+      "start": 702.56,
+      "end": 706.76,
+      "text": "till they are not equal. Let's keep"
+    },
+    {
+      "start": 704.48,
+      "end": 709.16,
+      "text": "moving them till they are not equal. And"
+    },
+    {
+      "start": 706.76,
+      "end": 711.44,
+      "text": "now you can do counter plus plus. So"
+    },
+    {
+      "start": 709.16,
+      "end": 716.08,
+      "text": "every time you move, you count. And"
+    },
+    {
+      "start": 711.44,
+      "end": 717.08,
+      "text": "let's move it fast equal to fast next."
+    },
+    {
+      "start": 716.08,
+      "end": 718.96,
+      "text": "Done."
+    },
+    {
+      "start": 717.08,
+      "end": 721.36,
+      "text": "Once this is done, you can return the"
+    },
+    {
+      "start": 718.96,
+      "end": 723.4,
+      "text": "count."
+    },
+    {
+      "start": 721.36,
+      "end": 725.24,
+      "text": "Because that will be the length of the"
+    },
+    {
+      "start": 723.4,
+      "end": 727.76,
+      "text": "loop. So once you have returned the"
+    },
+    {
+      "start": 725.24,
+      "end": 731.8,
+      "text": "count, this is what it will return"
+    },
+    {
+      "start": 727.76,
+      "end": 733.52,
+      "text": "straight away. And in case in case"
+    },
+    {
+      "start": 731.8,
+      "end": 735.52,
+      "text": "there is no loop, you'll be returning a"
+    },
+    {
+      "start": 733.52,
+      "end": 737.36,
+      "text": "zero. Quite simple."
+    },
+    {
+      "start": 735.52,
+      "end": 739.36,
+      "text": "And if I quickly go back into the code"
+    },
+    {
+      "start": 737.36,
+      "end": 741.44,
+      "text": "editor, you can see that you'll have to"
+    },
+    {
+      "start": 739.36,
+      "end": 743.68,
+      "text": "complete this function definition. I've"
+    },
+    {
+      "start": 741.44,
+      "end": 745.76,
+      "text": "written the exact same code, the exact"
+    },
+    {
+      "start": 743.68,
+      "end": 747.92,
+      "text": "stuff. I'll quickly submit the submit"
+    },
+    {
+      "start": 745.76,
+      "end": 750.24,
+      "text": "button, rather click the submit button"
+    },
+    {
+      "start": 747.92,
+      "end": 752.8,
+      "text": "and see if it is running fine. It is. So"
+    },
+    {
+      "start": 750.24,
+      "end": 755.96,
+      "text": "the C++ code runs. I'll copy paste the"
+    },
+    {
+      "start": 752.8,
+      "end": 757.56,
+      "text": "same piece of code. I'll go to Java now."
+    },
+    {
+      "start": 755.96,
+      "end": 759.88,
+      "text": "And in Java what I'll do is I'll copy"
+    },
+    {
+      "start": 757.56,
+      "end": 762.6,
+      "text": "paste it. And over here let's quickly"
+    },
+    {
+      "start": 759.88,
+      "end": 766.64,
+      "text": "give it a tab."
+    },
+    {
+      "start": 762.6,
+      "end": 768.6,
+      "text": "Let's remove the pointers. Removed."
+    },
+    {
+      "start": 766.64,
+      "end": 772.04,
+      "text": "No gaps."
+    },
+    {
+      "start": 768.6,
+      "end": 776.76,
+      "text": "And done. Let's remove this. Let's make"
+    },
+    {
+      "start": 772.04,
+      "end": 776.76,
+      "text": "it dot. Let's make it dot."
+    },
+    {
+      "start": 776.96,
+      "end": 783.0,
+      "text": "Done. We need the find length function."
+    },
+    {
+      "start": 779.4,
+      "end": 785.36,
+      "text": "So let's quickly go back to C++ and get"
+    },
+    {
+      "start": 783.0,
+      "end": 787.32,
+      "text": "the find length function."
+    },
+    {
+      "start": 785.36,
+      "end": 791.64,
+      "text": "So come back to Java and over here"
+    },
+    {
+      "start": 787.32,
+      "end": 791.64,
+      "text": "please make sure it is private static."
+    },
+    {
+      "start": 792.0,
+      "end": 796.28,
+      "text": "And then"
+    },
+    {
+      "start": 793.72,
+      "end": 799.44,
+      "text": "over here remove the pointer concepts"
+    },
+    {
+      "start": 796.28,
+      "end": 801.64,
+      "text": "because it is Java."
+    },
+    {
+      "start": 799.44,
+      "end": 803.2,
+      "text": "Once you've done this,"
+    },
+    {
+      "start": 801.64,
+      "end": 804.72,
+      "text": "should be good."
+    },
+    {
+      "start": 803.2,
+      "end": 807.68,
+      "text": "Let's quickly try to run this and see if"
+    },
+    {
+      "start": 804.72,
+      "end": 809.28,
+      "text": "it is running fine. Should be."
+    },
+    {
+      "start": 807.68,
+      "end": 811.16,
+      "text": "Uh there are issues."
+    },
+    {
+      "start": 809.28,
+      "end": 814.04,
+      "text": "Why? Oh, because this will be lower"
+    },
+    {
+      "start": 811.16,
+      "end": 814.04,
+      "text": "caps. My bad."
+    },
+    {
+      "start": 814.24,
+      "end": 818.2,
+      "text": "Perfect. Let's quickly try to run this."
+    },
+    {
+      "start": 816.48,
+      "end": 820.56,
+      "text": "It is running. Now, let's quickly try to"
+    },
+    {
+      "start": 818.2,
+      "end": 821.96,
+      "text": "submit this and it should be fine. So, I"
+    },
+    {
+      "start": 820.56,
+      "end": 823.52,
+      "text": "hope you have understood everything and"
+    },
+    {
+      "start": 821.96,
+      "end": 824.68,
+      "text": "in case you did, please do consider"
+    },
+    {
+      "start": 823.52,
+      "end": 826.56,
+      "text": "giving us a like and if you're new to"
+    },
+    {
+      "start": 824.68,
+      "end": 828.36,
+      "text": "our channel, please please consider"
+    },
+    {
+      "start": 826.56,
+      "end": 829.48,
+      "text": "subscribing to us and with this I'll be"
+    },
+    {
+      "start": 828.36,
+      "end": 830.84,
+      "text": "wrapping up this video. Let's meet in"
+    },
+    {
+      "start": 829.48,
+      "end": 832.12,
+      "text": "some other video. Till then, bye-bye."
+    },
+    {
+      "start": 830.84,
+      "end": 835.32,
+      "text": "Take care."
+    },
+    {
+      "start": 832.12,
+      "end": 838.56,
+      "text": "Whenever your heart is broken,"
+    },
+    {
+      "start": 835.32,
+      "end": 841.48,
+      "text": "don't ever forget you're golden."
+    },
+    {
+      "start": 838.56,
+      "end": 841.48,
+      "text": "I will find the light"
+    }
+  ]
+}

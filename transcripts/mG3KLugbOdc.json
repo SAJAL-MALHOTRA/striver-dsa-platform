@@ -1,0 +1,1982 @@
+{
+  "video_id": "mG3KLugbOdc",
+  "title": "L28. Design a Browser History | LinkedList Implementation",
+  "duration_sec": 878,
+  "num_segments": 329,
+  "segments": [
+    {
+      "start": 3.24,
+      "end": 6.4,
+      "duration": 3.16,
+      "text": "so we will be continuing with our"
+    },
+    {
+      "start": 4.56,
+      "end": 7.6,
+      "duration": 3.04,
+      "text": "playlist before that hey welcome back to"
+    },
+    {
+      "start": 6.4,
+      "end": 9.48,
+      "duration": 3.08,
+      "text": "the channel I hope you guys are doing"
+    },
+    {
+      "start": 7.6,
+      "end": 12.2,
+      "duration": 4.6,
+      "text": "extremely well so the problem that we"
+    },
+    {
+      "start": 9.48,
+      "end": 14.24,
+      "duration": 4.76,
+      "text": "will be solving today is designing a"
+    },
+    {
+      "start": 12.2,
+      "end": 17.36,
+      "duration": 5.16,
+      "text": "browser history so what you need to do"
+    },
+    {
+      "start": 14.24,
+      "end": 20.8,
+      "duration": 6.56,
+      "text": "is you need to write a class which"
+    },
+    {
+      "start": 17.36,
+      "end": 24.2,
+      "duration": 6.84,
+      "text": "implements The Constructor browser the"
+    },
+    {
+      "start": 20.8,
+      "end": 26.48,
+      "duration": 5.68,
+      "text": "function visit the function back the"
+    },
+    {
+      "start": 24.2,
+      "end": 28.6,
+      "duration": 4.4,
+      "text": "function forward you have to design a"
+    },
+    {
+      "start": 26.48,
+      "end": 31.08,
+      "duration": 4.6,
+      "text": "class okay so if I go back into the code"
+    },
+    {
+      "start": 28.6,
+      "end": 33.88,
+      "duration": 5.28,
+      "text": "editor for a while this is how the"
+    },
+    {
+      "start": 31.08,
+      "end": 36.8,
+      "duration": 5.72,
+      "text": "entire snippet of code will look like"
+    },
+    {
+      "start": 33.88,
+      "end": 39.88,
+      "duration": 6.0,
+      "text": "and you'll have to write pieces of code"
+    },
+    {
+      "start": 36.8,
+      "end": 42.68,
+      "duration": 5.88,
+      "text": "within itself so before I move into that"
+    },
+    {
+      "start": 39.88,
+      "end": 45.96,
+      "duration": 6.08,
+      "text": "let's understand what every function"
+    },
+    {
+      "start": 42.68,
+      "end": 48.2,
+      "duration": 5.52,
+      "text": "does in depth and I'll do that by taking"
+    },
+    {
+      "start": 45.96,
+      "end": 49.88,
+      "duration": 3.92,
+      "text": "these set of queries as an example so"
+    },
+    {
+      "start": 48.2,
+      "end": 52.84,
+      "duration": 4.64,
+      "text": "let's take these set of queries as an"
+    },
+    {
+      "start": 49.88,
+      "end": 55.4,
+      "duration": 5.52,
+      "text": "example and remember this one thing"
+    },
+    {
+      "start": 52.84,
+      "end": 58.08,
+      "duration": 5.24,
+      "text": "always the first thing will be to set"
+    },
+    {
+      "start": 55.4,
+      "end": 60.64,
+      "duration": 5.24,
+      "text": "the Constructor homepage that's the"
+    },
+    {
+      "start": 58.08,
+      "end": 63.52,
+      "duration": 5.44,
+      "text": "first thing and no matter what queries"
+    },
+    {
+      "start": 60.64,
+      "end": 65.64,
+      "duration": 5.0,
+      "text": "you given this will always be your first"
+    },
+    {
+      "start": 63.52,
+      "end": 67.56,
+      "duration": 4.04,
+      "text": "query that is homepage calling the"
+    },
+    {
+      "start": 65.64,
+      "end": 70.32,
+      "duration": 4.68,
+      "text": "Constructor this can be different this"
+    },
+    {
+      "start": 67.56,
+      "end": 71.72,
+      "duration": 4.16,
+      "text": "can be Instagram google.com anything but"
+    },
+    {
+      "start": 70.32,
+      "end": 74.2,
+      "duration": 3.88,
+      "text": "this is what the first query will be"
+    },
+    {
+      "start": 71.72,
+      "end": 76.08,
+      "duration": 4.36,
+      "text": "that is calling the homepage so"
+    },
+    {
+      "start": 74.2,
+      "end": 78.76,
+      "duration": 4.56,
+      "text": "technically in your brain just imagine"
+    },
+    {
+      "start": 76.08,
+      "end": 80.52,
+      "duration": 4.44,
+      "text": "you opened a Google Chrome tab and the"
+    },
+    {
+      "start": 78.76,
+      "end": 83.32,
+      "duration": 4.56,
+      "text": "first thing you type is take you"
+    },
+    {
+      "start": 80.52,
+      "end": 86.44,
+      "duration": 5.92,
+      "text": "forward.org so that's considered as your"
+    },
+    {
+      "start": 83.32,
+      "end": 88.36,
+      "duration": 5.04,
+      "text": "homepage got it so what I will do is"
+    },
+    {
+      "start": 86.44,
+      "end": 92.24,
+      "duration": 5.8,
+      "text": "I'll consider"
+    },
+    {
+      "start": 88.36,
+      "end": 96.68,
+      "duration": 8.32,
+      "text": "tf. G like that's star.org as my"
+    },
+    {
+      "start": 92.24,
+      "end": 99.84,
+      "duration": 7.6,
+      "text": "homepage done so that's my first query"
+    },
+    {
+      "start": 96.68,
+      "end": 102.76,
+      "duration": 6.08,
+      "text": "after that I'm asking on the same tab"
+    },
+    {
+      "start": 99.84,
+      "end": 105.88,
+      "duration": 6.04,
+      "text": "can you go to google.com so on the same"
+    },
+    {
+      "start": 102.76,
+      "end": 105.88,
+      "duration": 3.12,
+      "text": "tab I'll go to"
+    },
+    {
+      "start": 106.4,
+      "end": 112.32,
+      "duration": 5.92,
+      "text": "google.com perfect again on the same"
+    },
+    {
+      "start": 109.24,
+      "end": 114.84,
+      "duration": 5.6,
+      "text": "time I'm asking can you go to insta like"
+    },
+    {
+      "start": 112.32,
+      "end": 114.84,
+      "duration": 2.52,
+      "text": "okay I'll go to"
+    },
+    {
+      "start": 115.2,
+      "end": 121.36,
+      "duration": 6.16,
+      "text": "insta So currently if I look at my"
+    },
+    {
+      "start": 118.6,
+      "end": 124.32,
+      "duration": 5.72,
+      "text": "tab I I'll be at Instagram right I'll be"
+    },
+    {
+      "start": 121.36,
+      "end": 127.4,
+      "duration": 6.04,
+      "text": "at Instagram on the current tab perfect"
+    },
+    {
+      "start": 124.32,
+      "end": 130.92,
+      "duration": 6.6,
+      "text": "next is I'm asking you to go to Facebook"
+    },
+    {
+      "start": 127.4,
+      "end": 130.92,
+      "duration": 3.52,
+      "text": "I'm like fine I'll go to Facebook as"
+    },
+    {
+      "start": 132.08,
+      "end": 137.16,
+      "duration": 5.08,
+      "text": "well on the current tab I'll be on the"
+    },
+    {
+      "start": 134.68,
+      "end": 139.12,
+      "duration": 4.44,
+      "text": "Facebook perfect So currently I'm"
+    },
+    {
+      "start": 137.16,
+      "end": 142.16,
+      "duration": 5.0,
+      "text": "standing on Facebook what is the next"
+    },
+    {
+      "start": 139.12,
+      "end": 144.04,
+      "duration": 4.92,
+      "text": "thing going back by one step so what"
+    },
+    {
+      "start": 142.16,
+      "end": 147.88,
+      "duration": 5.72,
+      "text": "I'll do is I'll go back by one step so"
+    },
+    {
+      "start": 144.04,
+      "end": 151.84,
+      "duration": 7.8,
+      "text": "can I see my current will now be on"
+    },
+    {
+      "start": 147.88,
+      "end": 154.2,
+      "duration": 6.32,
+      "text": "Instagram so whereever you end up this"
+    },
+    {
+      "start": 151.84,
+      "end": 157.84,
+      "duration": 6.0,
+      "text": "is what you will return to this function"
+    },
+    {
+      "start": 154.2,
+      "end": 160.12,
+      "duration": 5.92,
+      "text": "you will say currently I'm on Instagram"
+    },
+    {
+      "start": 157.84,
+      "end": 162.28,
+      "duration": 4.44,
+      "text": "perfect I'm again asking you to go back"
+    },
+    {
+      "start": 160.12,
+      "end": 165.12,
+      "duration": 5.0,
+      "text": "by one step perfect I'll go back by one"
+    },
+    {
+      "start": 162.28,
+      "end": 167.2,
+      "duration": 4.92,
+      "text": "step so if I go back by one step again"
+    },
+    {
+      "start": 165.12,
+      "end": 170.52,
+      "duration": 5.4,
+      "text": "my current will be on"
+    },
+    {
+      "start": 167.2,
+      "end": 174.28,
+      "duration": 7.08,
+      "text": "google.com so this time my current is on"
+    },
+    {
+      "start": 170.52,
+      "end": 177.04,
+      "duration": 6.52,
+      "text": "google.com so this is what I will return"
+    },
+    {
+      "start": 174.28,
+      "end": 180.28,
+      "duration": 6.0,
+      "text": "return Google I'm again asking you to go"
+    },
+    {
+      "start": 177.04,
+      "end": 183.12,
+      "duration": 6.08,
+      "text": "forward by one step so your current"
+    },
+    {
+      "start": 180.28,
+      "end": 186.4,
+      "duration": 6.12,
+      "text": "will technically go to Instagram again"
+    },
+    {
+      "start": 183.12,
+      "end": 189.72,
+      "duration": 6.6,
+      "text": "so this time what you will return is"
+    },
+    {
+      "start": 186.4,
+      "end": 192.12,
+      "duration": 5.72,
+      "text": "inst that's what you'll return I'm"
+    },
+    {
+      "start": 189.72,
+      "end": 194.52,
+      "duration": 4.8,
+      "text": "asking you to visit take you forward so"
+    },
+    {
+      "start": 192.12,
+      "end": 197.28,
+      "duration": 5.16,
+      "text": "what will happen is from Instagram from"
+    },
+    {
+      "start": 194.52,
+      "end": 199.16,
+      "duration": 4.64,
+      "text": "this tab you will go to take you forward"
+    },
+    {
+      "start": 197.28,
+      "end": 201.96,
+      "duration": 4.68,
+      "text": "you will go to take you"
+    },
+    {
+      "start": 199.16,
+      "end": 204.56,
+      "duration": 5.4,
+      "text": "forward if I go to take you"
+    },
+    {
+      "start": 201.96,
+      "end": 206.88,
+      "duration": 4.92,
+      "text": "forward will there be Facebook anymore"
+    },
+    {
+      "start": 204.56,
+      "end": 208.48,
+      "duration": 3.92,
+      "text": "there won't be because I can go to take"
+    },
+    {
+      "start": 206.88,
+      "end": 210.92,
+      "duration": 4.04,
+      "text": "it Forward I can come back to insta but"
+    },
+    {
+      "start": 208.48,
+      "end": 213.08,
+      "duration": 4.6,
+      "text": "I cannot go to Facebook anymore that's"
+    },
+    {
+      "start": 210.92,
+      "end": 216.12,
+      "duration": 5.2,
+      "text": "how Chrome tabs operate right that's how"
+    },
+    {
+      "start": 213.08,
+      "end": 219.6,
+      "duration": 6.52,
+      "text": "browser tabs operate right perfect if I"
+    },
+    {
+      "start": 216.12,
+      "end": 222.4,
+      "duration": 6.28,
+      "text": "go to TF my current like currently I'm"
+    },
+    {
+      "start": 219.6,
+      "end": 225.32,
+      "duration": 5.72,
+      "text": "at Take It Forward perfect we asked to"
+    },
+    {
+      "start": 222.4,
+      "end": 227.36,
+      "duration": 4.96,
+      "text": "go forward by two steps can I go forward"
+    },
+    {
+      "start": 225.32,
+      "end": 230.32,
+      "duration": 5.0,
+      "text": "by two steps there's nothing I never"
+    },
+    {
+      "start": 227.36,
+      "end": 233.12,
+      "duration": 5.76,
+      "text": "visited Beyond TF because currently I'm"
+    },
+    {
+      "start": 230.32,
+      "end": 236.96,
+      "duration": 6.64,
+      "text": "standing at TF have I cannot so if I"
+    },
+    {
+      "start": 233.12,
+      "end": 238.8,
+      "duration": 5.68,
+      "text": "cannot I will not I cannot go by two"
+    },
+    {
+      "start": 236.96,
+      "end": 240.96,
+      "duration": 4.0,
+      "text": "steps ahead so if I cannot go by two"
+    },
+    {
+      "start": 238.8,
+      "end": 243.24,
+      "duration": 4.44,
+      "text": "steps ahead I will return where I'm"
+    },
+    {
+      "start": 240.96,
+      "end": 246.76,
+      "duration": 5.8,
+      "text": "standing which just take you forward"
+    },
+    {
+      "start": 243.24,
+      "end": 249.44,
+      "duration": 6.2,
+      "text": "perfect next we ask to go back by two"
+    },
+    {
+      "start": 246.76,
+      "end": 251.52,
+      "duration": 4.76,
+      "text": "steps okay I'll go back by two steps so"
+    },
+    {
+      "start": 249.44,
+      "end": 254.72,
+      "duration": 5.28,
+      "text": "I'll go back by two steps which is which"
+    },
+    {
+      "start": 251.52,
+      "end": 258.68,
+      "duration": 7.16,
+      "text": "brings me here it basically brings me"
+    },
+    {
+      "start": 254.72,
+      "end": 262.04,
+      "duration": 7.32,
+      "text": "here so at that's Google so I'll return"
+    },
+    {
+      "start": 258.68,
+      "end": 264.76,
+      "duration": 6.08,
+      "text": "Google perfect what's the next go back"
+    },
+    {
+      "start": 262.04,
+      "end": 268.28,
+      "duration": 6.24,
+      "text": "by seven steps"
+    },
+    {
+      "start": 264.76,
+      "end": 270.36,
+      "duration": 5.6,
+      "text": "perfect at Max I can go one step at Max"
+    },
+    {
+      "start": 268.28,
+      "end": 274.32,
+      "duration": 6.04,
+      "text": "I can go one step because"
+    },
+    {
+      "start": 270.36,
+      "end": 277.84,
+      "duration": 7.48,
+      "text": "this is my homepage because this is my"
+    },
+    {
+      "start": 274.32,
+      "end": 280.96,
+      "duration": 6.64,
+      "text": "homepage so at Max I can go one step if"
+    },
+    {
+      "start": 277.84,
+      "end": 282.68,
+      "duration": 4.84,
+      "text": "I can go one step I will not go seven"
+    },
+    {
+      "start": 280.96,
+      "end": 284.84,
+      "duration": 3.88,
+      "text": "and I'll"
+    },
+    {
+      "start": 282.68,
+      "end": 288.12,
+      "duration": 5.44,
+      "text": "return"
+    },
+    {
+      "start": 284.84,
+      "end": 290.36,
+      "duration": 5.52,
+      "text": "this till what I can go I'll return take"
+    },
+    {
+      "start": 288.12,
+      "end": 293.08,
+      "duration": 4.96,
+      "text": "it forward and this is how the queries"
+    },
+    {
+      "start": 290.36,
+      "end": 296.04,
+      "duration": 5.68,
+      "text": "will be executed I'll only return in"
+    },
+    {
+      "start": 293.08,
+      "end": 297.44,
+      "duration": 4.36,
+      "text": "terms of back and in terms of forward"
+    },
+    {
+      "start": 296.04,
+      "end": 299.12,
+      "duration": 3.08,
+      "text": "apart from that this will be the"
+    },
+    {
+      "start": 297.44,
+      "end": 302.08,
+      "duration": 4.64,
+      "text": "Constructor which tells me that this is"
+    },
+    {
+      "start": 299.12,
+      "end": 304.44,
+      "duration": 5.32,
+      "text": "my initi I page this will be okay I'm"
+    },
+    {
+      "start": 302.08,
+      "end": 307.0,
+      "duration": 4.92,
+      "text": "going forward apart from that for back"
+    },
+    {
+      "start": 304.44,
+      "end": 309.44,
+      "duration": 5.0,
+      "text": "and forward I need to return a string"
+    },
+    {
+      "start": 307.0,
+      "end": 312.72,
+      "duration": 5.72,
+      "text": "which is basically the URL where I'm"
+    },
+    {
+      "start": 309.44,
+      "end": 314.44,
+      "duration": 5.0,
+      "text": "currently standing at got this so what"
+    },
+    {
+      "start": 312.72,
+      "end": 316.48,
+      "duration": 3.76,
+      "text": "is the data structure that we will be"
+    },
+    {
+      "start": 314.44,
+      "end": 318.52,
+      "duration": 4.08,
+      "text": "using in order to design this entire"
+    },
+    {
+      "start": 316.48,
+      "end": 321.16,
+      "duration": 4.68,
+      "text": "browser thing before I get into that"
+    },
+    {
+      "start": 318.52,
+      "end": 324.0,
+      "duration": 5.48,
+      "text": "let's understand three use cases first"
+    },
+    {
+      "start": 321.16,
+      "end": 326.68,
+      "duration": 5.52,
+      "text": "of all I'm visiting a new page right so"
+    },
+    {
+      "start": 324.0,
+      "end": 328.28,
+      "duration": 4.28,
+      "text": "I'm kind of getting into new pages and I"
+    },
+    {
+      "start": 326.68,
+      "end": 330.52,
+      "duration": 3.84,
+      "text": "don't know how much we don't know the"
+    },
+    {
+      "start": 328.28,
+      "end": 332.64,
+      "duration": 4.36,
+      "text": "length so I definitely can not use"
+    },
+    {
+      "start": 330.52,
+      "end": 336.4,
+      "duration": 5.88,
+      "text": "something like an array"
+    },
+    {
+      "start": 332.64,
+      "end": 339.36,
+      "duration": 6.72,
+      "text": "correct I need to come back as well okay"
+    },
+    {
+      "start": 336.4,
+      "end": 342.0,
+      "duration": 5.6,
+      "text": "come back I need to go forward as well"
+    },
+    {
+      "start": 339.36,
+      "end": 343.56,
+      "duration": 4.2,
+      "text": "so I cannot use array so what is the"
+    },
+    {
+      "start": 342.0,
+      "end": 346.52,
+      "duration": 4.52,
+      "text": "data structure that allows you to go"
+    },
+    {
+      "start": 343.56,
+      "end": 348.56,
+      "duration": 5.0,
+      "text": "back go front and at the same time"
+    },
+    {
+      "start": 346.52,
+      "end": 352.64,
+      "duration": 6.12,
+      "text": "allows you to keep adding new notes or"
+    },
+    {
+      "start": 348.56,
+      "end": 354.4,
+      "duration": 5.84,
+      "text": "new pages yes double link list not"
+    },
+    {
+      "start": 352.64,
+      "end": 356.88,
+      "duration": 4.24,
+      "text": "single link list because singly link"
+    },
+    {
+      "start": 354.4,
+      "end": 359.52,
+      "duration": 5.12,
+      "text": "list will not allow you to go back so"
+    },
+    {
+      "start": 356.88,
+      "end": 362.08,
+      "duration": 5.2,
+      "text": "dou link list is the data structure okay"
+    },
+    {
+      "start": 359.52,
+      "end": 363.4,
+      "duration": 3.88,
+      "text": "okay I know the data structure now all"
+    },
+    {
+      "start": 362.08,
+      "end": 366.12,
+      "duration": 4.04,
+      "text": "of the problems we have done we have"
+    },
+    {
+      "start": 363.4,
+      "end": 369.4,
+      "duration": 6.0,
+      "text": "stored integers in that node but this"
+    },
+    {
+      "start": 366.12,
+      "end": 371.44,
+      "duration": 5.32,
+      "text": "time if I ask you what can we store in"
+    },
+    {
+      "start": 369.4,
+      "end": 373.36,
+      "duration": 3.96,
+      "text": "that particular node I know one thing"
+    },
+    {
+      "start": 371.44,
+      "end": 374.96,
+      "duration": 3.52,
+      "text": "I'll definitely have an next pointer"
+    },
+    {
+      "start": 373.36,
+      "end": 378.4,
+      "duration": 5.04,
+      "text": "I'll definitely have a back pointer"
+    },
+    {
+      "start": 374.96,
+      "end": 382.04,
+      "duration": 7.08,
+      "text": "that's for sure in this particular node"
+    },
+    {
+      "start": 378.4,
+      "end": 385.44,
+      "duration": 7.04,
+      "text": "what do we store can I say that okay in"
+    },
+    {
+      "start": 382.04,
+      "end": 388.64,
+      "duration": 6.6,
+      "text": "terms of data what I can store is the"
+    },
+    {
+      "start": 385.44,
+      "end": 392.56,
+      "duration": 7.12,
+      "text": "URL I can store the URL of the page I"
+    },
+    {
+      "start": 388.64,
+      "end": 394.28,
+      "duration": 5.64,
+      "text": "can so anytime someone says where am I"
+    },
+    {
+      "start": 392.56,
+      "end": 397.52,
+      "duration": 4.96,
+      "text": "from the URL I can say that we are at"
+    },
+    {
+      "start": 394.28,
+      "end": 399.48,
+      "duration": 5.2,
+      "text": "google.com we are at instagram.com I can"
+    },
+    {
+      "start": 397.52,
+      "end": 401.68,
+      "duration": 4.16,
+      "text": "so this is how the structure of the node"
+    },
+    {
+      "start": 399.48,
+      "end": 404.76,
+      "duration": 5.28,
+      "text": "will look like instead of an integer"
+    },
+    {
+      "start": 401.68,
+      "end": 408.0,
+      "duration": 6.32,
+      "text": "I'll try to store the data in terms of a"
+    },
+    {
+      "start": 404.76,
+      "end": 412.08,
+      "duration": 7.32,
+      "text": "string a URL got it okay what's the"
+    },
+    {
+      "start": 408.0,
+      "end": 414.48,
+      "duration": 6.48,
+      "text": "first thing I need to design this class"
+    },
+    {
+      "start": 412.08,
+      "end": 416.2,
+      "duration": 4.12,
+      "text": "which has the Constructor browser the"
+    },
+    {
+      "start": 414.48,
+      "end": 418.04,
+      "duration": 3.56,
+      "text": "first thing I'll try to do is I'll try"
+    },
+    {
+      "start": 416.2,
+      "end": 420.8,
+      "duration": 4.6,
+      "text": "to design The"
+    },
+    {
+      "start": 418.04,
+      "end": 423.88,
+      "duration": 5.84,
+      "text": "Constructor so right write the class the"
+    },
+    {
+      "start": 420.8,
+      "end": 426.16,
+      "duration": 5.36,
+      "text": "class is browser again the code will not"
+    },
+    {
+      "start": 423.88,
+      "end": 428.12,
+      "duration": 4.24,
+      "text": "be language specific if you want the"
+    },
+    {
+      "start": 426.16,
+      "end": 430.04,
+      "duration": 3.88,
+      "text": "language specific code you can find them"
+    },
+    {
+      "start": 428.12,
+      "end": 432.24,
+      "duration": 4.12,
+      "text": "uh below I'll try to write down the"
+    },
+    {
+      "start": 430.04,
+      "end": 434.68,
+      "duration": 4.64,
+      "text": "functions and the constructors the"
+    },
+    {
+      "start": 432.24,
+      "end": 438.72,
+      "duration": 6.48,
+      "text": "concept is same in all the languages"
+    },
+    {
+      "start": 434.68,
+      "end": 442.08,
+      "duration": 7.4,
+      "text": "first thing I can do is I can call the"
+    },
+    {
+      "start": 438.72,
+      "end": 445.84,
+      "duration": 7.12,
+      "text": "node current and I can initialize it as"
+    },
+    {
+      "start": 442.08,
+      "end": 445.84,
+      "duration": 3.76,
+      "text": "null or whatever you want to"
+    },
+    {
+      "start": 446.16,
+      "end": 452.88,
+      "duration": 6.72,
+      "text": "initialize okay it's not initialized as"
+    },
+    {
+      "start": 450.08,
+      "end": 456.04,
+      "duration": 5.96,
+      "text": "after that I can have the Constructor"
+    },
+    {
+      "start": 452.88,
+      "end": 458.76,
+      "duration": 5.88,
+      "text": "written and the Constructor is always"
+    },
+    {
+      "start": 456.04,
+      "end": 461.64,
+      "duration": 5.6,
+      "text": "getting a string homage and if you"
+    },
+    {
+      "start": 458.76,
+      "end": 463.96,
+      "duration": 5.2,
+      "text": "remember initially I told you one thing"
+    },
+    {
+      "start": 461.64,
+      "end": 466.12,
+      "duration": 4.48,
+      "text": "first query will always be homepage so"
+    },
+    {
+      "start": 463.96,
+      "end": 468.92,
+      "duration": 4.96,
+      "text": "it'll always be given the homage okay if"
+    },
+    {
+      "start": 466.12,
+      "end": 471.04,
+      "duration": 4.92,
+      "text": "I've been given d.org as the homepage"
+    },
+    {
+      "start": 468.92,
+      "end": 476.08,
+      "duration": 7.16,
+      "text": "what I can do is can actually create a"
+    },
+    {
+      "start": 471.04,
+      "end": 478.76,
+      "duration": 7.72,
+      "text": "node which has TF and I can make sure"
+    },
+    {
+      "start": 476.08,
+      "end": 481.88,
+      "duration": 5.8,
+      "text": "current is pointing to this so I can"
+    },
+    {
+      "start": 478.76,
+      "end": 484.48,
+      "duration": 5.72,
+      "text": "create a node and store TF like t.org"
+    },
+    {
+      "start": 481.88,
+      "end": 488.24,
+      "duration": 6.36,
+      "text": "because that's my homepage I'll do that"
+    },
+    {
+      "start": 484.48,
+      "end": 490.92,
+      "duration": 6.44,
+      "text": "I'll say okay let's have new"
+    },
+    {
+      "start": 488.24,
+      "end": 494.32,
+      "duration": 6.08,
+      "text": "node and let's have the homepage stored"
+    },
+    {
+      "start": 490.92,
+      "end": 497.28,
+      "duration": 6.36,
+      "text": "in it because that is my URL t.org"
+    },
+    {
+      "start": 494.32,
+      "end": 500.96,
+      "duration": 6.64,
+      "text": "google.com or whatever and let's call"
+    },
+    {
+      "start": 497.28,
+      "end": 502.68,
+      "duration": 5.4,
+      "text": "current to stand there so can I see that"
+    },
+    {
+      "start": 500.96,
+      "end": 504.92,
+      "duration": 3.96,
+      "text": "my Constructor is done and this will"
+    },
+    {
+      "start": 502.68,
+      "end": 507.52,
+      "duration": 4.84,
+      "text": "only be called once right at the"
+    },
+    {
+      "start": 504.92,
+      "end": 508.96,
+      "duration": 4.04,
+      "text": "starting of all the queries perfect I"
+    },
+    {
+      "start": 507.52,
+      "end": 512.32,
+      "duration": 4.8,
+      "text": "can go back and I can say that this is"
+    },
+    {
+      "start": 508.96,
+      "end": 515.56,
+      "duration": 6.6,
+      "text": "done or the browser is done what is next"
+    },
+    {
+      "start": 512.32,
+      "end": 518.6,
+      "duration": 6.28,
+      "text": "I need to visit a URL when I'm visiting"
+    },
+    {
+      "start": 515.56,
+      "end": 521.24,
+      "duration": 5.68,
+      "text": "an URL I'm visiting google.com what am I"
+    },
+    {
+      "start": 518.6,
+      "end": 524.24,
+      "duration": 5.64,
+      "text": "doing I'm technically again going to a"
+    },
+    {
+      "start": 521.24,
+      "end": 526.28,
+      "duration": 5.04,
+      "text": "new page so it's it's a new data it's a"
+    },
+    {
+      "start": 524.24,
+      "end": 529.88,
+      "duration": 5.64,
+      "text": "new data which is basically saying I'm"
+    },
+    {
+      "start": 526.28,
+      "end": 531.96,
+      "duration": 5.68,
+      "text": "going to Google right to create this new"
+    },
+    {
+      "start": 529.88,
+      "end": 534.88,
+      "duration": 5.0,
+      "text": "thing let's try to write down this"
+    },
+    {
+      "start": 531.96,
+      "end": 537.04,
+      "duration": 5.08,
+      "text": "method as well so I'm saying visit and"
+    },
+    {
+      "start": 534.88,
+      "end": 538.72,
+      "duration": 3.84,
+      "text": "I've been given this URL to visit what"
+    },
+    {
+      "start": 537.04,
+      "end": 542.24,
+      "duration": 5.2,
+      "text": "am I trying to do I'm going to a new"
+    },
+    {
+      "start": 538.72,
+      "end": 543.4,
+      "duration": 4.68,
+      "text": "page okay so technically whatever URL"
+    },
+    {
+      "start": 542.24,
+      "end": 546.0,
+      "duration": 3.76,
+      "text": "you"
+    },
+    {
+      "start": 543.4,
+      "end": 547.64,
+      "duration": 4.24,
+      "text": "given let's try to store it so I'm"
+    },
+    {
+      "start": 546.0,
+      "end": 552.08,
+      "duration": 6.08,
+      "text": "saying new"
+    },
+    {
+      "start": 547.64,
+      "end": 555.44,
+      "duration": 7.8,
+      "text": "node and the UR stored maybe let's store"
+    },
+    {
+      "start": 552.08,
+      "end": 556.92,
+      "duration": 4.84,
+      "text": "it in new uh node so I can call it okay"
+    },
+    {
+      "start": 555.44,
+      "end": 560.96,
+      "duration": 5.52,
+      "text": "new"
+    },
+    {
+      "start": 556.92,
+      "end": 562.68,
+      "duration": 5.76,
+      "text": "node stored what after this can I say"
+    },
+    {
+      "start": 560.96,
+      "end": 565.44,
+      "duration": 4.48,
+      "text": "the"
+    },
+    {
+      "start": 562.68,
+      "end": 568.12,
+      "duration": 5.44,
+      "text": "current will be keeping a track okay"
+    },
+    {
+      "start": 565.44,
+      "end": 569.8,
+      "duration": 4.36,
+      "text": "this is my next page"
+    },
+    {
+      "start": 568.12,
+      "end": 574.32,
+      "duration": 6.2,
+      "text": "okay"
+    },
+    {
+      "start": 569.8,
+      "end": 575.92,
+      "duration": 6.12,
+      "text": "so I say current do next is my next page"
+    },
+    {
+      "start": 574.32,
+      "end": 579.2,
+      "duration": 4.88,
+      "text": "so that's basically new"
+    },
+    {
+      "start": 575.92,
+      "end": 581.8,
+      "duration": 5.88,
+      "text": "loan super simple none understood what"
+    },
+    {
+      "start": 579.2,
+      "end": 583.36,
+      "duration": 4.16,
+      "text": "after this a current cannot stand at"
+    },
+    {
+      "start": 581.8,
+      "end": 586.2,
+      "duration": 4.4,
+      "text": "Take It Forward because this is no more"
+    },
+    {
+      "start": 583.36,
+      "end": 589.8,
+      "duration": 6.44,
+      "text": "the current page so I'll just update the"
+    },
+    {
+      "start": 586.2,
+      "end": 591.68,
+      "duration": 5.48,
+      "text": "current to go to Google quite simple so"
+    },
+    {
+      "start": 589.8,
+      "end": 593.24,
+      "duration": 3.44,
+      "text": "I'll say Okay current can you go to this"
+    },
+    {
+      "start": 591.68,
+      "end": 595.08,
+      "duration": 3.4,
+      "text": "new because this is where you will be"
+    },
+    {
+      "start": 593.24,
+      "end": 598.36,
+      "duration": 5.12,
+      "text": "standing at because you're going to this"
+    },
+    {
+      "start": 595.08,
+      "end": 601.88,
+      "duration": 6.8,
+      "text": "new page so probably my visit is done as"
+    },
+    {
+      "start": 598.36,
+      "end": 604.76,
+      "duration": 6.4,
+      "text": "well okay visit is done what is next"
+    },
+    {
+      "start": 601.88,
+      "end": 607.48,
+      "duration": 5.6,
+      "text": "going back my certain number of integer"
+    },
+    {
+      "start": 604.76,
+      "end": 611.24,
+      "duration": 6.48,
+      "text": "steps okay let's try to go back"
+    },
+    {
+      "start": 607.48,
+      "end": 612.84,
+      "duration": 5.36,
+      "text": "now so if I've been asked go back by"
+    },
+    {
+      "start": 611.24,
+      "end": 615.36,
+      "duration": 4.12,
+      "text": "certain number of steps and this steps"
+    },
+    {
+      "start": 612.84,
+      "end": 617.52,
+      "duration": 4.68,
+      "text": "is integer I just need to go back I just"
+    },
+    {
+      "start": 615.36,
+      "end": 618.92,
+      "duration": 3.56,
+      "text": "need to go back so currently I'm"
+    },
+    {
+      "start": 617.52,
+      "end": 622.44,
+      "duration": 4.92,
+      "text": "standing here I just need to make sure"
+    },
+    {
+      "start": 618.92,
+      "end": 624.08,
+      "duration": 5.16,
+      "text": "current tra Travers is back correct just"
+    },
+    {
+      "start": 622.44,
+      "end": 625.16,
+      "duration": 2.72,
+      "text": "do it now what are you waiting for it's"
+    },
+    {
+      "start": 624.08,
+      "end": 628.04,
+      "duration": 3.96,
+      "text": "it's super"
+    },
+    {
+      "start": 625.16,
+      "end": 630.56,
+      "duration": 5.4,
+      "text": "simple it like"
+    },
+    {
+      "start": 628.04,
+      "end": 634.04,
+      "duration": 6.0,
+      "text": "while"
+    },
+    {
+      "start": 630.56,
+      "end": 637.16,
+      "duration": 6.6,
+      "text": "steps and then greater than zero"
+    },
+    {
+      "start": 634.04,
+      "end": 643.36,
+      "duration": 9.32,
+      "text": "basically and you can say okay my"
+    },
+    {
+      "start": 637.16,
+      "end": 647.32,
+      "duration": 10.16,
+      "text": "current can you go back hey current go"
+    },
+    {
+      "start": 643.36,
+      "end": 649.44,
+      "duration": 6.08,
+      "text": "back and you can do steps minus"
+    },
+    {
+      "start": 647.32,
+      "end": 650.88,
+      "duration": 3.56,
+      "text": "minus and at the end of the day you can"
+    },
+    {
+      "start": 649.44,
+      "end": 652.92,
+      "duration": 3.48,
+      "text": "say return because you need to return"
+    },
+    {
+      "start": 650.88,
+      "end": 654.84,
+      "duration": 3.96,
+      "text": "the string where you are ending like"
+    },
+    {
+      "start": 652.92,
+      "end": 657.28,
+      "duration": 4.36,
+      "text": "after going back by certain number of"
+    },
+    {
+      "start": 654.84,
+      "end": 660.2,
+      "duration": 5.36,
+      "text": "steps where you ending at so you can say"
+    },
+    {
+      "start": 657.28,
+      "end": 662.32,
+      "duration": 5.04,
+      "text": "current this is the page I at so you can"
+    },
+    {
+      "start": 660.2,
+      "end": 666.32,
+      "duration": 6.12,
+      "text": "call it as data Val URL whatever you"
+    },
+    {
+      "start": 662.32,
+      "end": 668.64,
+      "duration": 6.32,
+      "text": "call it done is it correct there was an"
+    },
+    {
+      "start": 666.32,
+      "end": 671.12,
+      "duration": 4.8,
+      "text": "hedge case"
+    },
+    {
+      "start": 668.64,
+      "end": 674.16,
+      "duration": 5.52,
+      "text": "remember if back goes by seven steps"
+    },
+    {
+      "start": 671.12,
+      "end": 676.68,
+      "duration": 5.56,
+      "text": "there were not seven steps so remember"
+    },
+    {
+      "start": 674.16,
+      "end": 679.48,
+      "duration": 5.32,
+      "text": "you go to current imagine you go"
+    },
+    {
+      "start": 676.68,
+      "end": 681.8,
+      "duration": 5.12,
+      "text": "back and now you cannot go back you need"
+    },
+    {
+      "start": 679.48,
+      "end": 684.6,
+      "duration": 5.12,
+      "text": "to check can you go back you need to"
+    },
+    {
+      "start": 681.8,
+      "end": 687.96,
+      "duration": 6.16,
+      "text": "check so please check so please make"
+    },
+    {
+      "start": 684.6,
+      "end": 691.64,
+      "duration": 7.04,
+      "text": "sure you put a check over here if"
+    },
+    {
+      "start": 687.96,
+      "end": 691.64,
+      "duration": 3.68,
+      "text": "current can go back that's very"
+    },
+    {
+      "start": 693.44,
+      "end": 699.76,
+      "duration": 6.32,
+      "text": "important if only current can go back"
+    },
+    {
+      "start": 696.12,
+      "end": 702.4,
+      "duration": 6.28,
+      "text": "then only it will go or else it will"
+    },
+    {
+      "start": 699.76,
+      "end": 704.48,
+      "duration": 4.72,
+      "text": "break quite simple if it can go it will"
+    },
+    {
+      "start": 702.4,
+      "end": 706.28,
+      "duration": 3.88,
+      "text": "otherwise it will break so can I say"
+    },
+    {
+      "start": 704.48,
+      "end": 708.08,
+      "duration": 3.6,
+      "text": "that I've written the back as well I"
+    },
+    {
+      "start": 706.28,
+      "end": 710.88,
+      "duration": 4.6,
+      "text": "think I"
+    },
+    {
+      "start": 708.08,
+      "end": 712.16,
+      "duration": 4.08,
+      "text": "can forward is going to be similar"
+    },
+    {
+      "start": 710.88,
+      "end": 714.52,
+      "duration": 3.64,
+      "text": "because I'm just going forward instead"
+    },
+    {
+      "start": 712.16,
+      "end": 716.96,
+      "duration": 4.8,
+      "text": "of back so let's write down the forward"
+    },
+    {
+      "start": 714.52,
+      "end": 720.44,
+      "duration": 5.92,
+      "text": "as well so I can say"
+    },
+    {
+      "start": 716.96,
+      "end": 722.88,
+      "duration": 5.92,
+      "text": "forward again I'll be given a URL so"
+    },
+    {
+      "start": 720.44,
+      "end": 725.36,
+      "duration": 4.92,
+      "text": "let's take the URL and this time oh"
+    },
+    {
+      "start": 722.88,
+      "end": 728.36,
+      "duration": 5.48,
+      "text": "sorry it'll be given the"
+    },
+    {
+      "start": 725.36,
+      "end": 731.28,
+      "duration": 5.92,
+      "text": "steps so let's write the forward so"
+    },
+    {
+      "start": 728.36,
+      "end": 733.64,
+      "duration": 5.28,
+      "text": "it'll be given the steps you have to"
+    },
+    {
+      "start": 731.28,
+      "end": 736.36,
+      "duration": 5.08,
+      "text": "return the string or the URL where"
+    },
+    {
+      "start": 733.64,
+      "end": 739.2,
+      "duration": 5.56,
+      "text": "you're standing at so what I can do is I"
+    },
+    {
+      "start": 736.36,
+      "end": 743.4,
+      "duration": 7.04,
+      "text": "can say okay while steps greater than"
+    },
+    {
+      "start": 739.2,
+      "end": 745.4,
+      "duration": 6.2,
+      "text": "zero which basically means this and if I"
+    },
+    {
+      "start": 743.4,
+      "end": 747.0,
+      "duration": 3.6,
+      "text": "have something at the front it's very"
+    },
+    {
+      "start": 745.4,
+      "end": 749.76,
+      "duration": 4.36,
+      "text": "important you should have something at"
+    },
+    {
+      "start": 747.0,
+      "end": 752.52,
+      "duration": 5.52,
+      "text": "the front To Go Front otherwise you"
+    },
+    {
+      "start": 749.76,
+      "end": 755.64,
+      "duration": 5.88,
+      "text": "cannot you say current can you go front"
+    },
+    {
+      "start": 752.52,
+      "end": 755.64,
+      "duration": 3.12,
+      "text": "or next whatever it"
+    },
+    {
+      "start": 757.6,
+      "end": 761.96,
+      "duration": 4.36,
+      "text": "is if there is nothing then there's no"
+    },
+    {
+      "start": 759.92,
+      "end": 764.44,
+      "duration": 4.52,
+      "text": "need to go any further you can simply"
+    },
+    {
+      "start": 761.96,
+      "end": 766.88,
+      "duration": 4.92,
+      "text": "break you can simply break or else you"
+    },
+    {
+      "start": 764.44,
+      "end": 769.04,
+      "duration": 4.6,
+      "text": "can say steps okay I've gone these many"
+    },
+    {
+      "start": 766.88,
+      "end": 771.44,
+      "duration": 4.56,
+      "text": "steps so please reduce it once"
+    },
+    {
+      "start": 769.04,
+      "end": 773.6,
+      "duration": 4.56,
+      "text": "everything is done you could just go"
+    },
+    {
+      "start": 771.44,
+      "end": 776.28,
+      "duration": 4.84,
+      "text": "ahead and say current whatever is your"
+    },
+    {
+      "start": 773.6,
+      "end": 778.56,
+      "duration": 4.96,
+      "text": "data or URL or whatever you call it just"
+    },
+    {
+      "start": 776.28,
+      "end": 779.52,
+      "duration": 3.24,
+      "text": "return it this is how the forward will"
+    },
+    {
+      "start": 778.56,
+      "end": 782.48,
+      "duration": 3.92,
+      "text": "look like"
+    },
+    {
+      "start": 779.52,
+      "end": 784.96,
+      "duration": 5.44,
+      "text": "super simple and the class ends over"
+    },
+    {
+      "start": 782.48,
+      "end": 787.4,
+      "duration": 4.92,
+      "text": "here if I quickly go back into the code"
+    },
+    {
+      "start": 784.96,
+      "end": 789.36,
+      "duration": 4.4,
+      "text": "editor I've written down the exact same"
+    },
+    {
+      "start": 787.4,
+      "end": 791.56,
+      "duration": 4.16,
+      "text": "code the only thing that I've done is"
+    },
+    {
+      "start": 789.36,
+      "end": 793.68,
+      "duration": 4.32,
+      "text": "I've taken a class node again this is in"
+    },
+    {
+      "start": 791.56,
+      "end": 794.96,
+      "duration": 3.4,
+      "text": "C++ if you want the Java Python and any"
+    },
+    {
+      "start": 793.68,
+      "end": 797.6,
+      "duration": 3.92,
+      "text": "other language specific codes you can"
+    },
+    {
+      "start": 794.96,
+      "end": 799.12,
+      "duration": 4.16,
+      "text": "find them below so I wrote down the"
+    },
+    {
+      "start": 797.6,
+      "end": 802.72,
+      "duration": 5.12,
+      "text": "pseudo code in the iPad and I'm just"
+    },
+    {
+      "start": 799.12,
+      "end": 804.88,
+      "duration": 5.76,
+      "text": "showing you one of the language codes"
+    },
+    {
+      "start": 802.72,
+      "end": 806.72,
+      "duration": 4.0,
+      "text": "I'm just storing string data apart from"
+    },
+    {
+      "start": 804.88,
+      "end": 809.52,
+      "duration": 4.64,
+      "text": "that everything stays the same whatever"
+    },
+    {
+      "start": 806.72,
+      "end": 814.52,
+      "duration": 7.8,
+      "text": "I taught you in W link list and and node"
+    },
+    {
+      "start": 809.52,
+      "end": 817.52,
+      "duration": 8.0,
+      "text": "current page browser visit string back"
+    },
+    {
+      "start": 814.52,
+      "end": 819.92,
+      "duration": 5.4,
+      "text": "string forward done and I'll go ahead"
+    },
+    {
+      "start": 817.52,
+      "end": 822.2,
+      "duration": 4.68,
+      "text": "and click submit and this will be"
+    },
+    {
+      "start": 819.92,
+      "end": 824.16,
+      "duration": 4.24,
+      "text": "accepted you might have a question what"
+    },
+    {
+      "start": 822.2,
+      "end": 827.84,
+      "duration": 5.64,
+      "text": "is the time complexity of each and every"
+    },
+    {
+      "start": 824.16,
+      "end": 830.92,
+      "duration": 6.76,
+      "text": "function let's understand that can I say"
+    },
+    {
+      "start": 827.84,
+      "end": 833.88,
+      "duration": 6.04,
+      "text": "the Constructor will be B fun I can can"
+    },
+    {
+      "start": 830.92,
+      "end": 837.04,
+      "duration": 6.12,
+      "text": "I say visit will be B fun I can because"
+    },
+    {
+      "start": 833.88,
+      "end": 839.76,
+      "duration": 5.88,
+      "text": "I'm just attaching pointers can I say"
+    },
+    {
+      "start": 837.04,
+      "end": 841.96,
+      "duration": 4.92,
+      "text": "back will be bigo of number of steps"
+    },
+    {
+      "start": 839.76,
+      "end": 844.76,
+      "duration": 5.0,
+      "text": "depending on how many steps you go back"
+    },
+    {
+      "start": 841.96,
+      "end": 847.64,
+      "duration": 5.68,
+      "text": "at the worst possible scenario forward"
+    },
+    {
+      "start": 844.76,
+      "end": 850.08,
+      "duration": 5.32,
+      "text": "will be be go off steps"
+    },
+    {
+      "start": 847.64,
+      "end": 852.04,
+      "duration": 4.4,
+      "text": "again that's how a browser operates"
+    },
+    {
+      "start": 850.08,
+      "end": 854.88,
+      "duration": 4.8,
+      "text": "isn't it so on the back end of the"
+    },
+    {
+      "start": 852.04,
+      "end": 856.88,
+      "duration": 4.84,
+      "text": "browser this is how data structure works"
+    },
+    {
+      "start": 854.88,
+      "end": 858.04,
+      "duration": 3.16,
+      "text": "got this thing so if you're still"
+    },
+    {
+      "start": 856.88,
+      "end": 859.92,
+      "duration": 3.04,
+      "text": "watching I'm very sure you have"
+    },
+    {
+      "start": 858.04,
+      "end": 861.4,
+      "duration": 3.36,
+      "text": "understood this and if that is the case"
+    },
+    {
+      "start": 859.92,
+      "end": 862.76,
+      "duration": 2.84,
+      "text": "please please do consider giving us a"
+    },
+    {
+      "start": 861.4,
+      "end": 864.88,
+      "duration": 3.48,
+      "text": "like and if you're new to our channel do"
+    },
+    {
+      "start": 862.76,
+      "end": 866.0,
+      "duration": 3.24,
+      "text": "consider subscribing to us as well with"
+    },
+    {
+      "start": 864.88,
+      "end": 867.32,
+      "duration": 2.44,
+      "text": "this I'll be wrapping up this video"
+    },
+    {
+      "start": 866.0,
+      "end": 871.28,
+      "duration": 5.28,
+      "text": "let's get some the video till then"
+    },
+    {
+      "start": 867.32,
+      "end": 874.6,
+      "duration": 7.28,
+      "text": "bye-bye take care whenever your heart is"
+    },
+    {
+      "start": 871.28,
+      "end": 879.08,
+      "duration": 7.8,
+      "text": "broken don't ever forget your"
+    },
+    {
+      "start": 874.6,
+      "end": 879.08,
+      "duration": 4.48,
+      "text": "golden I will find a light"
+    }
+  ]
+}

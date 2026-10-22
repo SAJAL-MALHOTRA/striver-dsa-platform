@@ -1,0 +1,4537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecture Retriever — Timestamp Search &amp; DSA Engine</title>
+  <!-- Offline-First Local Pyodide Wasm with Seamless CDN Fallback -->
+  <script>
+    (function() {
+      const s = document.createElement("script");
+      s.src = "/static/vendor/pyodide/pyodide.js";
+      s.defer = true;
+      s.onerror = function() {
+        console.warn("Local Pyodide vendor bundle not found, falling back to CDN.");
+        const cdn = document.createElement("script");
+        cdn.src = "https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js";
+        cdn.defer = true;
+        document.head.appendChild(cdn);
+      };
+      document.head.appendChild(s);
+    })();
+  </script>
+  <style>
+    /* -------------------------------------------------------------
+       Clean, slate/paper textured design. Polished white theme.
+       ------------------------------------------------------------- */
+    :root {
+      --bg: #f7f7f4;
+      --surface: #ffffff;
+      --surface-hover: #fafaf8;
+      --surface-active: #f2f2ee;
+      --border: #e3e3dc;
+      --border-dark: #cdcdc5;
+      --ink: #171716;
+      --ink-secondary: #52524d;
+      --ink-muted: #85857c;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --accent-orange: #ea580c;
+      --accent-green: #059669;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --font-mono: "SF Mono", "JetBrains Mono", "Cascadia Code", Consolas, Menlo, monospace;
+      --radius: 8px;
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      background-image: radial-gradient(#dfdfe0 0.75px, transparent 0.75px);
+      background-size: 16px 16px;
+      color: var(--ink);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top utility bar */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      text-transform: uppercase;
+      font-family: var(--font-mono);
+    }
+
+    .badge-corpus {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-muted);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 2px 8px;
+      border-radius: var(--radius);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .btn-key-status {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--ink-secondary);
+      padding: 5px 12px;
+      font-size: 12px;
+      font-family: var(--font-mono);
+      border-radius: var(--radius);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.15s ease;
+    }
+
+    .btn-key-status:hover {
+      border-color: var(--border-dark);
+      color: var(--ink);
+      background: var(--surface);
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #94a3b8;
+    }
+
+    .status-dot.active {
+      background: var(--accent-green);
+      box-shadow: 0 0 6px rgba(5, 150, 105, 0.4);
+    }
+
+    /* Main two-column workspace */
+    .workspace {
+      display: grid;
+      grid-template-columns: 1fr 500px;
+      gap: 24px;
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 24px 28px 48px;
+      flex: 1;
+    }
+
+    @media (max-width: 1100px) {
+      .workspace {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Left pane: Search & Moments */
+    .search-pane {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .search-box-container {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 8px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .search-box-container:focus-within {
+      border-color: var(--ink);
+      box-shadow: 0 0 0 1px var(--ink);
+    }
+
+    .search-icon {
+      color: var(--ink-muted);
+      flex-shrink: 0;
+    }
+
+    .search-input {
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 15px;
+      font-family: var(--font-sans);
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .search-input::placeholder {
+      color: var(--ink-muted);
+    }
+
+    .kbd {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      color: var(--ink-muted);
+    }
+
+    /* Quick Suggestions */
+    .quick-chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .chip-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--ink-secondary);
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .chip-btn:hover {
+      background: var(--surface-hover);
+      border-color: var(--border-dark);
+      color: var(--ink);
+    }
+
+    /* Matched DSA Algorithm Card (With Smooth Pop-Out Button) */
+    .dsa-algo-banner {
+      display: none;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.15s ease;
+    }
+
+    .dsa-algo-banner.active {
+      display: flex;
+    }
+
+    .dsa-algo-banner:hover {
+      border-color: var(--border-dark);
+    }
+
+    .algo-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .algo-title-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .algo-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .badge-tc, .badge-sc, .badge-tp {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--ink-secondary);
+    }
+
+    .badge-tc { color: var(--accent-orange); border-color: #fed7aa; background: #fff7ed; }
+    .badge-sc { color: var(--accent-green); border-color: #a7f3d0; background: #ecfdf5; }
+
+    .btn-popout-code {
+      background: var(--ink);
+      color: #fff;
+      border: none;
+      padding: 7px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-mono);
+      border-radius: var(--radius);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+      transition: background 0.15s ease, transform 0.1s ease;
+    }
+
+    .btn-popout-code:hover {
+      background: #27272a;
+      transform: translateY(-1px);
+    }
+
+    /* Grounded Synthesis Card */
+    .answer-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .answer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .answer-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--ink-secondary);
+    }
+
+    .provider-pill {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--ink-muted);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    .answer-bullet {
+      font-size: 14px;
+      color: var(--ink);
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
+    .answer-bullet:last-child {
+      margin-bottom: 0;
+    }
+
+    .citation-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 1px 6px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 6px;
+      transition: all 0.15s ease;
+      vertical-align: middle;
+    }
+
+    .citation-btn:hover {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+    }
+
+    /* Retrieved Moments Section */
+    .section-title {
+      font-size: 12px;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .moments-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .moment-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .moment-card:hover {
+      border-color: var(--border-dark);
+      background: var(--surface-hover);
+      box-shadow: var(--shadow-md);
+    }
+
+    .moment-card.active {
+      border-color: var(--ink);
+      background: #fafaf9;
+    }
+
+    .moment-thumb-box {
+      position: relative;
+      width: 140px;
+      min-width: 140px;
+      height: 79px;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #171716;
+      flex-shrink: 0;
+    }
+
+    .moment-thumb-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.2s ease;
+      display: block;
+    }
+
+    .moment-card:hover .moment-thumb-img {
+      transform: scale(1.05);
+    }
+
+    .moment-thumb-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.65) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s ease;
+    }
+
+    .moment-thumb-play {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: rgba(234, 88, 12, 0.95);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      transition: transform 0.15s ease;
+    }
+
+    .moment-card:hover .moment-thumb-play {
+      transform: scale(1.15);
+    }
+
+    .moment-thumb-badge {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      background: rgba(0, 0, 0, 0.82);
+      color: #ffffff;
+      font-family: var(--font-mono);
+      font-size: 9.5px;
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+
+    .moment-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 0;
+    }
+
+    .moment-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .moment-lecture-title {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--ink);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .moment-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .btn-card-action {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--ink-secondary);
+      font-size: 11px;
+      font-family: var(--font-mono);
+      padding: 2px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .btn-card-action:hover {
+      background: var(--surface-hover);
+      border-color: var(--border-dark);
+      color: var(--ink);
+    }
+
+    .btn-card-trace {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+      color: #1d4ed8;
+    }
+
+    .btn-card-trace:hover {
+      background: #dbeafe;
+      color: #1e40af;
+    }
+
+    .moment-time-chip {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #c2410c;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 1px 6px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .moment-text {
+      font-size: 13px;
+      color: var(--ink-secondary);
+      line-height: 1.45;
+    }
+
+    /* Right pane: Sticky Synchronized Player */
+    .player-pane {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      position: sticky;
+      top: 72px;
+      height: fit-content;
+    }
+
+    .player-frame-box {
+      background: #000;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      box-shadow: var(--shadow-md);
+    }
+
+    .player-frame-box iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .player-info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      font-size: 12px;
+      color: var(--ink-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Lecture Whiteboard Keyframes Strip */
+    .whiteboard-keyframe-strip {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .keyframe-strip-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .keyframe-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .keyframe-item {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: transform 0.15s ease;
+    }
+
+    .keyframe-item:hover {
+      transform: translateY(-2px);
+    }
+
+    .keyframe-thumb-box {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 4px;
+      overflow: hidden;
+      background: #000;
+      border: 1px solid var(--border);
+    }
+
+    .keyframe-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.2s ease;
+    }
+
+    .keyframe-item:hover .keyframe-img {
+      transform: scale(1.06);
+    }
+
+    .keyframe-time-pill {
+      position: absolute;
+      bottom: 3px;
+      right: 3px;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      font-family: var(--font-mono);
+      font-size: 9px;
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+
+    .keyframe-caption {
+      font-size: 10.5px;
+      font-weight: 500;
+      color: var(--ink-secondary);
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* -------------------------------------------------------------
+       SMOOTH POP-OUT DRAWER FOR ALGORITHM CODE & APPROACH
+       ------------------------------------------------------------- */
+    .drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(4px);
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .drawer-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .code-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 660px;
+      max-width: 92vw;
+      height: 100vh;
+      background: var(--surface);
+      box-shadow: var(--shadow-lg);
+      border-left: 1px solid var(--border);
+      z-index: 101;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .drawer-overlay.open .code-drawer {
+      transform: translateX(0);
+    }
+
+    .drawer-header {
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--surface);
+    }
+
+    .drawer-title-box {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .drawer-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .drawer-close-btn {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--ink-secondary);
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      transition: all 0.15s ease;
+    }
+
+    .drawer-close-btn:hover {
+      background: #fee2e2;
+      border-color: #fca5a5;
+      color: #b91c1c;
+    }
+
+    .drawer-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px 24px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .text-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      font-size: 13.5px;
+      color: var(--ink);
+      line-height: 1.6;
+      white-space: pre-line;
+    }
+
+    /* Multi-language code viewer */
+    .drawer-code-container {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .drawer-code-header {
+      background: #161b22;
+      border-bottom: 1px solid #30363d;
+      padding: 8px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .code-lang-tabs {
+      display: flex;
+      gap: 6px;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      color: #8b949e;
+      font-size: 12px;
+      font-family: var(--font-mono);
+      padding: 4px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .lang-btn:hover {
+      color: #f0f6fc;
+    }
+
+    .lang-btn.active {
+      background: #21262d;
+      color: #58a6ff;
+      border-color: #388bfd;
+    }
+
+    .btn-copy-drawer {
+      background: #21262d;
+      border: 1px solid #30363d;
+      color: #c9d1d9;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      padding: 4px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+    }
+
+    .btn-copy-drawer:hover {
+      background: #30363d;
+      color: #fff;
+    }
+
+    .drawer-code-editor {
+      width: 100%;
+      min-height: 250px;
+      max-height: 400px;
+      background: #0d1117;
+      color: #e6edf3;
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      line-height: 1.6;
+      padding: 14px 16px;
+      border: none;
+      outline: none;
+      resize: vertical;
+      tab-size: 4;
+      white-space: pre;
+      overflow-x: auto;
+      box-sizing: border-box;
+      display: block;
+    }
+
+    .drawer-code-editor:focus {
+      background: #090d13;
+    }
+
+    .btn-run-drawer {
+      background: #238636;
+      border: 1px solid #2ea043;
+      color: #ffffff;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.15s ease;
+    }
+
+    .btn-run-drawer:hover {
+      background: #2ea043;
+    }
+
+    .btn-run-drawer:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .runtime-badge {
+      font-size: 10px;
+      font-family: var(--font-mono);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #21262d;
+      border: 1px solid #30363d;
+      color: #8b949e;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+
+    .runtime-badge.wasm {
+      background: #0f2d1e;
+      border-color: #238636;
+      color: #3fb950;
+    }
+
+    .runtime-badge.server {
+      background: #1c2128;
+      border-color: #388bfd;
+      color: #58a6ff;
+    }
+
+    .drawer-console-box {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: none;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+
+    .drawer-console-box.visible {
+      display: flex;
+    }
+
+    .drawer-console-header {
+      background: #161b22;
+      border-bottom: 1px solid #30363d;
+      padding: 6px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      color: #8b949e;
+    }
+
+    .drawer-console-out {
+      padding: 12px 14px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      line-height: 1.5;
+      margin: 0;
+      max-height: 180px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .console-success {
+      color: #7ee787;
+    }
+
+    .console-error {
+      color: #ff7b72;
+    }
+
+    .drawer-stdin-box {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: 8px;
+    }
+
+    .drawer-stdin-input {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 4px;
+      color: #c9d1d9;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      padding: 8px 10px;
+      resize: vertical;
+      min-height: 40px;
+      outline: none;
+    }
+
+    .drawer-stdin-input:focus {
+      border-color: #58a6ff;
+    }
+
+    /* Edge Cases and Grill-Me Styles */
+    .btn-edge-cases {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      color: #b45309;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+    }
+
+    .btn-edge-cases:hover {
+      background: #fef3c7;
+      border-color: #fcd34d;
+      color: #92400e;
+    }
+
+    .edge-cases-panel {
+      display: none;
+      background: #fffdf5;
+      border: 1px solid #fde68a;
+      border-radius: var(--radius);
+      padding: 12px;
+      margin-top: 10px;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .edge-cases-panel.visible {
+      display: flex;
+    }
+
+    .edge-cases-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #92400e;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      font-family: var(--font-mono);
+    }
+
+    .edge-case-card {
+      background: #ffffff;
+      border: 1px solid #fef08a;
+      border-radius: 6px;
+      padding: 9px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .edge-case-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .edge-case-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: #92400e;
+    }
+
+    .btn-use-stdin {
+      background: #fef3c7;
+      border: 1px solid #fde68a;
+      color: #b45309;
+      font-size: 10.5px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+
+    .btn-use-stdin:hover {
+      background: #fde68a;
+      color: #78350f;
+    }
+
+    .edge-case-trap {
+      font-size: 11.5px;
+      color: #78350f;
+      line-height: 1.4;
+    }
+
+    .edge-case-input {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 4px 8px;
+      border-radius: 4px;
+      color: #334155;
+    }
+
+    /* Grill Me Interactive Interview Simulator */
+    .grill-panel {
+      background: #faf5ff;
+      border: 1px solid #e9d5ff;
+      border-radius: var(--radius);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .grill-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .grill-tag {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #6d28d9;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      font-family: var(--font-mono);
+    }
+
+    .btn-grill-refresh {
+      background: #f3e8ff;
+      border: 1px solid #d8b4fe;
+      color: #6d28d9;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      padding: 3px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+
+    .btn-grill-refresh:hover {
+      background: #e9d5ff;
+    }
+
+    .btn-speak-question {
+      background: #f5f3ff;
+      border: 1px solid #ddd6fe;
+      color: #6d28d9;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+    }
+
+    .btn-speak-question:hover {
+      background: #ede9fe;
+    }
+
+    .btn-voice-input {
+      background: #fdf4ff;
+      border: 1px solid #d8b4fe;
+      color: #7c3aed;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-voice-input:hover {
+      background: #fae8ff;
+      border-color: #c084fc;
+    }
+
+    .btn-voice-input.recording {
+      background: #fee2e2;
+      border-color: #f87171;
+      color: #b91c1c;
+      animation: voice-pulse 1.2s infinite ease-in-out;
+    }
+
+    @keyframes voice-pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+      50% { transform: scale(1.04); box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
+    }
+
+    .dry-run-custom-bar {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 6px 10px;
+      border-radius: 6px;
+    }
+
+    .dry-run-input {
+      flex: 2;
+      border: 1px solid var(--border);
+      background: #fff;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 11.5px;
+      font-family: var(--font-mono);
+      outline: none;
+    }
+
+    .dry-run-input:focus {
+      border-color: #0d9488;
+    }
+
+    .dry-run-target {
+      flex: 1;
+      max-width: 90px;
+    }
+
+    .btn-dry-run-custom {
+      background: #0d9488;
+      border: 1px solid #0f766e;
+      color: #fff;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+
+    .btn-dry-run-custom:hover {
+      background: #0f766e;
+    }
+
+    .dry-run-speed-select {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--ink-secondary);
+      font-size: 10.5px;
+      font-family: var(--font-mono);
+      padding: 2px 6px;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .grill-question-box {
+      background: #ffffff;
+      border: 1px solid #d8b4fe;
+      border-radius: 6px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .grill-question-text {
+      font-size: 13px;
+      color: #2e1065;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .grill-trap-pill {
+      align-self: flex-start;
+      font-size: 10.5px;
+      font-family: var(--font-mono);
+      background: #fdf4ff;
+      color: #a21caf;
+      border: 1px solid #f0abfc;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .grill-user-answer {
+      width: 100%;
+      border: 1px solid #d8b4fe;
+      border-radius: 6px;
+      padding: 10px 12px;
+      font-size: 12.5px;
+      font-family: var(--font-sans);
+      line-height: 1.5;
+      min-height: 70px;
+      resize: vertical;
+      outline: none;
+      box-sizing: border-box;
+      transition: border-color 0.15s ease;
+      background: #ffffff;
+    }
+
+    .grill-user-answer:focus {
+      border-color: #7c3aed;
+      box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.1);
+    }
+
+    .grill-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .grill-eval-card {
+      display: none;
+      background: #ffffff;
+      border: 1px solid #d8b4fe;
+      border-radius: 6px;
+      padding: 12px 14px;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .grill-eval-card.visible {
+      display: flex;
+    }
+
+    .grill-score-chip {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .score-high { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+    .score-med { background: #fef9c3; color: #854d0e; border: 1px solid #fde047; }
+    .score-low { background: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; }
+
+    /* Whiteboard Dry-Run Visualizer */
+    .dry-run-panel {
+      background: #fdfdfc;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .dry-run-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .dry-run-tag {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #0f766e;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      font-family: var(--font-mono);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .dry-run-badge {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      background: #f0fdfa;
+      color: #0d9488;
+      border: 1px solid #ccfbf1;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .btn-trace-nav {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--ink-secondary);
+      font-size: 11px;
+      font-family: var(--font-mono);
+      padding: 3px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn-trace-nav:hover {
+      background: var(--surface);
+      border-color: var(--border-dark);
+      color: var(--ink);
+    }
+
+    .dry-run-board {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 10px 4px 28px 4px;
+      align-items: flex-end;
+      min-height: 85px;
+      position: relative;
+    }
+
+    .dry-cell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 44px;
+      position: relative;
+    }
+
+    .cell-idx {
+      font-size: 10px;
+      font-family: var(--font-mono);
+      color: var(--ink-muted);
+      margin-bottom: 3px;
+    }
+
+    .cell-val {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 600;
+      background: var(--surface);
+      border: 1.5px solid var(--border-dark);
+      border-radius: 6px;
+      color: var(--ink);
+      transition: all 0.2s ease;
+    }
+
+    .cell-val.active-left {
+      background: #eff6ff;
+      border-color: #3b82f6;
+      color: #1d4ed8;
+      box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+    }
+
+    .cell-val.active-right {
+      background: #fef2f2;
+      border-color: #ef4444;
+      color: #b91c1c;
+      box-shadow: 0 0 8px rgba(239, 68, 68, 0.3);
+    }
+
+    .cell-val.active-mid {
+      background: #f0fdf4;
+      border-color: #22c55e;
+      color: #15803d;
+      box-shadow: 0 0 8px rgba(34, 197, 94, 0.3);
+    }
+
+    .cell-val.matched {
+      background: #fefce8;
+      border-color: #eab308;
+      color: #854d0e;
+      box-shadow: 0 0 10px rgba(234, 179, 8, 0.4);
+    }
+
+    .cell-pointer {
+      position: absolute;
+      bottom: -24px;
+      font-size: 10px;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .ptr-left { color: #2563eb; }
+    .ptr-right { color: #dc2626; }
+    .ptr-mid { color: #16a34a; }
+    .ptr-i { color: #7c3aed; }
+
+    .dry-run-state-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .dry-run-vars {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .var-chip {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      background: var(--surface);
+      border: 1px solid #cbd5e1;
+      padding: 2px 7px;
+      border-radius: 4px;
+      color: #334155;
+    }
+
+    .var-chip strong {
+      color: #0f172a;
+    }
+
+    .dry-run-explanation {
+      font-size: 12px;
+      color: #334155;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* -------------------------------------------------------------
+       MODAL: API KEY & LIVE VALIDATION
+       ------------------------------------------------------------- */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(4px);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+    }
+
+    .modal-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      max-width: 440px;
+      width: 90%;
+      padding: 24px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .modal-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--ink-secondary);
+      margin-bottom: 5px;
+    }
+
+    .form-select, .form-input {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--ink);
+      padding: 8px 10px;
+      font-size: 13px;
+      outline: none;
+      font-family: var(--font-mono);
+    }
+
+    .form-select:focus, .form-input:focus {
+      border-color: var(--ink);
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: var(--ink);
+      border: none;
+      border-radius: var(--radius);
+      color: #fff;
+      font-weight: 600;
+      padding: 9px;
+      font-size: 13px;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background 0.15s ease;
+    }
+
+    .btn-submit:hover {
+      background: #27272a;
+    }
+
+    .validation-feedback {
+      margin-top: 12px;
+      padding: 8px 12px;
+      border-radius: var(--radius);
+      font-size: 12px;
+      display: none;
+    }
+
+    .validation-feedback.success {
+      display: block;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      color: #065f46;
+    }
+
+    .validation-feedback.error {
+      display: block;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: #991b1b;
+    }
+
+    /* -------------------------------------------------------------
+       ROADMAP.SH INSPIRED DSA CHECKLIST & TOPIC ROADMAP STYLES
+       ------------------------------------------------------------- */
+    .nav-tabs {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg);
+      padding: 3px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    .nav-tab-btn {
+      border: none;
+      background: transparent;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--ink-secondary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .nav-tab-btn:hover {
+      color: var(--ink);
+    }
+
+    .nav-tab-btn.active {
+      background: var(--surface);
+      color: var(--ink);
+      font-weight: 600;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .roadmap-counter-badge {
+      background: #ffedd5;
+      color: #c2410c;
+      border: 1px solid #fed7aa;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      padding: 1px 6px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    .roadmap-workspace {
+      max-width: 1360px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 24px 28px 80px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      box-sizing: border-box;
+    }
+
+    .roadmap-hero {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 26px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .roadmap-hero-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .roadmap-title-area h1 {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0 0 6px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .roadmap-title-area p {
+      font-size: 13px;
+      color: var(--ink-secondary);
+      margin: 0;
+      max-width: 680px;
+      line-height: 1.5;
+    }
+
+    .roadmap-stats-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .stat-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 8px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 95px;
+    }
+
+    .stat-val {
+      font-size: 17px;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      color: var(--ink);
+    }
+
+    .stat-lbl {
+      font-size: 10.5px;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-family: var(--font-mono);
+    }
+
+    .roadmap-progress-bar-container {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .roadmap-progress-bar-track {
+      width: 100%;
+      height: 9px;
+      background: #f1f1ee;
+      border-radius: 999px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .roadmap-progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #ea580c, #f97316);
+      border-radius: 999px;
+      transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .roadmap-controls-bar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .filter-search-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .roadmap-search-box {
+      flex: 1;
+      min-width: 260px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 7px 12px;
+    }
+
+    .roadmap-search-input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 13px;
+      font-family: var(--font-sans);
+      color: var(--ink);
+    }
+
+    .filter-pills-row {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .filter-pill-btn {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--ink-secondary);
+      font-size: 12px;
+      padding: 4px 11px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .filter-pill-btn:hover {
+      background: var(--surface-hover);
+      color: var(--ink);
+    }
+
+    .filter-pill-btn.active {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+
+    .btn-export-cheatsheet {
+      background: #0f172a;
+      color: #ffffff;
+      border: 1px solid #1e293b;
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.15s ease;
+      margin-left: 6px;
+    }
+
+    .btn-export-cheatsheet:hover {
+      background: #1e293b;
+      transform: translateY(-1px);
+    }
+
+    .drawer-notes-section {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .notes-status-badge {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      color: #16a34a;
+      background: #dcfce7;
+      padding: 2px 7px;
+      border-radius: 4px;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .notes-status-badge.visible {
+      opacity: 1;
+    }
+
+    .drawer-notes-editor {
+      width: 100%;
+      min-height: 110px;
+      max-height: 250px;
+      background: #ffffff;
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 13px;
+      line-height: 1.6;
+      padding: 10px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      outline: none;
+      resize: vertical;
+      box-sizing: border-box;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .drawer-notes-editor:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
+    }
+
+    .topic-jumper-strip {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+      scrollbar-width: thin;
+    }
+
+    .topic-jump-chip {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--ink-secondary);
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .topic-jump-chip:hover {
+      background: #fff;
+      border-color: var(--border-dark);
+      color: var(--ink);
+    }
+
+    .roadmap-topics-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .topic-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .topic-card:hover {
+      border-color: var(--border-dark);
+    }
+
+    .topic-header {
+      padding: 14px 18px;
+      background: #fafaf8;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .topic-header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .topic-icon {
+      font-size: 18px;
+    }
+
+    .topic-name {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .topic-header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .topic-progress-badge {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--ink-secondary);
+    }
+
+    .topic-chevron {
+      font-size: 11px;
+      color: var(--ink-muted);
+      transition: transform 0.2s ease;
+    }
+
+    .topic-card.collapsed .topic-chevron {
+      transform: rotate(-90deg);
+    }
+
+    .topic-card.collapsed .topic-body {
+      display: none;
+    }
+
+    .topic-body {
+      padding: 14px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .subtopic-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .subtopic-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-family: var(--font-mono);
+      padding-bottom: 4px;
+      border-bottom: 1px dashed var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .problem-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .problem-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 10px;
+      border-radius: 5px;
+      background: var(--surface);
+      border: 1px solid transparent;
+      transition: all 0.12s ease;
+      gap: 10px;
+    }
+
+    .problem-item:hover {
+      background: var(--bg);
+      border-color: var(--border);
+    }
+
+    .problem-item.completed {
+      background: #f0fdf4;
+      border-color: #dcfce7;
+    }
+
+    .problem-item-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      flex: 1;
+    }
+
+    .chk-problem {
+      width: 16px;
+      height: 16px;
+      accent-color: #16a34a;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .btn-star-problem {
+      background: transparent;
+      border: none;
+      font-size: 14px;
+      color: #cbd5e1;
+      cursor: pointer;
+      padding: 0;
+      line-height: 1;
+      transition: color 0.15s ease, transform 0.15s ease;
+    }
+
+    .btn-star-problem:hover, .btn-star-problem.starred {
+      color: #eab308;
+      transform: scale(1.15);
+    }
+
+    .problem-title-text {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink);
+      cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .problem-item.completed .problem-title-text {
+      color: #15803d;
+      text-decoration: line-through;
+      opacity: 0.85;
+    }
+
+    .problem-item-right {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      flex-shrink: 0;
+    }
+
+    .diff-badge {
+      font-size: 10px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      padding: 1px 5px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    .diff-easy { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+    .diff-medium { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+    .diff-hard { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+
+    .tc-chip {
+      font-size: 10px;
+      font-family: var(--font-mono);
+      color: var(--ink-muted);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
+
+    .btn-prob-jump {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1d4ed8;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      padding: 2px 7px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .btn-prob-jump:hover {
+      background: #dbeafe;
+      border-color: #93c5fd;
+      color: #1e40af;
+    }
+
+    .btn-prob-code {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--ink-secondary);
+      font-size: 11px;
+      font-family: var(--font-mono);
+      padding: 2px 7px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn-prob-code:hover {
+      background: var(--surface-hover);
+      color: var(--ink);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header>
+    <a href="#" class="brand">
+      <span class="brand-title">Lecture Retriever</span>
+      <span class="badge-corpus">Striver DSA</span>
+    </a>
+
+    <!-- View Switcher Tabs (Search vs Roadmap) -->
+    <div class="nav-tabs">
+      <button id="nav-btn-search" class="nav-tab-btn active" title="Search lecture moments and video timestamps">
+        <span>🔍 Search &amp; Moments</span>
+      </button>
+      <button id="nav-btn-roadmap" class="nav-tab-btn" title="Topic-wise DSA Checklist inspired by roadmap.sh">
+        <span>🗺️ A2Z Roadmap &amp; Checklist</span>
+        <span id="nav-roadmap-badge" class="roadmap-counter-badge">0/369</span>
+      </button>
+    </div>
+
+    <div class="header-actions">
+      <button id="open-key-modal" class="btn-key-status">
+        <span id="key-indicator" class="status-dot"></span>
+        <span id="key-label">Key: Extractive (Offline)</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Unified Workspace (Search & Video Player) -->
+  <div id="view-search" class="workspace">
+    
+    <!-- Left Column: Search, Matched Algo, Grounded Answer & Moments -->
+    <div class="search-pane">
+      
+      <!-- Tactile White Search Box -->
+      <div class="search-box-container">
+        <span class="search-icon">🔍</span>
+        <input 
+          id="search-input" 
+          class="search-input" 
+          type="text" 
+          placeholder="Ask anything, find anything... (e.g. two sum, kadane, cycle in linked list)" 
+          value="two sum"
+          autocomplete="off"
+        />
+        <span class="kbd">↵ Enter</span>
+      </div>
+
+      <!-- Quick Suggestion Chips -->
+      <div class="quick-chips">
+        <button class="chip-btn" data-q="two sum">Two Sum</button>
+        <button class="chip-btn" data-q="kadane's algorithm">Kadane's Algorithm</button>
+        <button class="chip-btn" data-q="detect cycle in linked list">Cycle in Linked List</button>
+        <button class="chip-btn" data-q="merge sort">Merge Sort</button>
+        <button class="chip-btn" data-q="binary search">Binary Search</button>
+        <button class="chip-btn" data-q="longest subarray with sum k">Subarray Sum K</button>
+      </div>
+
+      <!-- Matched DSA Algorithm Card with Smooth Pop-out Button -->
+      <div id="algo-banner" class="dsa-algo-banner">
+        <div class="algo-info">
+          <div class="algo-title-row">
+            <span id="banner-algo-name" class="algo-name">Two Sum Problem</span>
+            <span id="banner-algo-topic" class="badge-tp">Arrays</span>
+            <span id="banner-algo-tc" class="badge-tc">Time: O(N)</span>
+            <span id="banner-algo-sc" class="badge-sc">Space: O(N)</span>
+          </div>
+        </div>
+        <button id="btn-open-drawer" class="btn-popout-code">
+          <span>&lt;/&gt;</span> Pop Out Code &amp; Approach
+        </button>
+      </div>
+
+      <!-- Grounded Synthesis Card -->
+      <div class="answer-card">
+        <div class="answer-header">
+          <span class="answer-tag">Grounded Lecture Answer</span>
+          <span id="provider-badge" class="provider-pill">Extractive Citation</span>
+        </div>
+        <div id="answer-bullets">
+          <p style="color: var(--ink-muted); font-size: 13px;">Searching lecture moments...</p>
+        </div>
+      </div>
+
+      <!-- Retrieved Moments List -->
+      <div class="section-title">
+        <span>Relevant Lecture Moments</span>
+        <span id="moments-count" style="font-weight: normal; color: var(--ink-muted);">0 found</span>
+      </div>
+
+      <div id="moments-list" class="moments-list"></div>
+
+    </div>
+
+    <!-- Right Column: Sticky Synchronized Player -->
+    <div class="player-pane">
+      <div class="player-frame-box">
+        <iframe id="yt-player" src="https://www.youtube.com/embed/UXDSeD9mN-k?enablejsapi=1" allowfullscreen allow="autoplay"></iframe>
+      </div>
+      <div class="player-info-card">
+        <span id="player-status-text">Synced: Click any moment or badge to jump</span>
+        <button id="btn-player-drawer" class="btn-popout-code" style="padding: 4px 10px; font-size: 11px;">
+          &lt;/&gt; Code
+        </button>
+      </div>
+
+      <!-- Lecture Whiteboard Keyframe Snapshots -->
+      <div class="whiteboard-keyframe-strip" id="whiteboard-keyframe-strip">
+        <div class="keyframe-strip-header">
+          <span>🎨 Whiteboard Lecture Keyframes</span>
+          <span style="font-size: 10px; color: var(--ink-muted);">Click frame to jump</span>
+        </div>
+        <div class="keyframe-grid" id="keyframe-grid">
+          <div class="keyframe-item" id="kf-item-1" data-pos="0.20" title="Problem Setup & Whiteboard Drawing">
+            <div class="keyframe-thumb-box">
+              <img class="keyframe-img" id="kf-img-1" src="https://img.youtube.com/vi/UXDSeD9mN-k/1.jpg" alt="Keyframe 1" />
+              <span class="keyframe-time-pill" id="kf-time-1">Part 1</span>
+            </div>
+            <div class="keyframe-caption">1. Intuition</div>
+          </div>
+          <div class="keyframe-item" id="kf-item-2" data-pos="0.50" title="Pointer Dry-Run & Invariants">
+            <div class="keyframe-thumb-box">
+              <img class="keyframe-img" id="kf-img-2" src="https://img.youtube.com/vi/UXDSeD9mN-k/2.jpg" alt="Keyframe 2" />
+              <span class="keyframe-time-pill" id="kf-time-2">Part 2</span>
+            </div>
+            <div class="keyframe-caption">2. Dry Run</div>
+          </div>
+          <div class="keyframe-item" id="kf-item-3" data-pos="0.80" title="Code Walkthrough & Complexity">
+            <div class="keyframe-thumb-box">
+              <img class="keyframe-img" id="kf-img-3" src="https://img.youtube.com/vi/UXDSeD9mN-k/3.jpg" alt="Keyframe 3" />
+              <span class="keyframe-time-pill" id="kf-time-3">Part 3</span>
+            </div>
+            <div class="keyframe-caption">3. Code &amp; SC</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- -------------------------------------------------------------
+       ROADMAP.SH INSPIRED STRIVER A2Z TOPIC CHECKLIST & ROADMAP VIEW
+       ------------------------------------------------------------- -->
+  <div id="view-roadmap" class="roadmap-workspace" style="display: none;">
+    
+    <!-- Hero & Progress Dashboard -->
+    <div class="roadmap-hero">
+      <div class="roadmap-hero-top">
+        <div class="roadmap-title-area">
+          <h1><span>🗺️</span> Striver's A2Z DSA Roadmap</h1>
+          <p>
+            Master 369 core interview problems organized by topic hierarchy. Track your completion, bookmark tricky questions, and click any problem to instantly jump to the exact video lecture timestamp or code solution.
+          </p>
+        </div>
+        <div class="roadmap-stats-row">
+          <div class="stat-card">
+            <span id="stat-total-progress" class="stat-val">0 / 369</span>
+            <span class="stat-lbl">Solved</span>
+          </div>
+          <div class="stat-card">
+            <span id="stat-pct-progress" class="stat-val">0.0%</span>
+            <span class="stat-lbl">Progress</span>
+          </div>
+          <div class="stat-card">
+            <span id="stat-easy-progress" class="stat-val">0 / --</span>
+            <span class="stat-lbl">Easy</span>
+          </div>
+          <div class="stat-card">
+            <span id="stat-med-progress" class="stat-val">0 / --</span>
+            <span class="stat-lbl">Medium</span>
+          </div>
+          <div class="stat-card">
+            <span id="stat-hard-progress" class="stat-val">0 / --</span>
+            <span class="stat-lbl">Hard</span>
+          </div>
+          <div class="stat-card">
+            <span id="stat-starred-count" class="stat-val" style="color: #eab308;">0</span>
+            <span class="stat-lbl">⭐️ Starred</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Gradient Progress Bar -->
+      <div class="roadmap-progress-bar-container">
+        <div class="roadmap-progress-bar-track">
+          <div id="roadmap-main-progress-bar" class="roadmap-progress-bar-fill"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter & Quick Jump Controls -->
+    <div class="roadmap-controls-bar">
+      <div class="filter-search-row">
+        <div class="roadmap-search-box">
+          <span style="font-size: 14px; color: var(--ink-muted);">🔍</span>
+          <input 
+            id="roadmap-search-input" 
+            class="roadmap-search-input" 
+            type="text" 
+            placeholder="Filter 369 problems by name, topic, or complexity... (e.g. kadane, binary search, tree)" 
+          />
+        </div>
+        <div class="filter-pills-row">
+          <button class="filter-pill-btn active" data-filter="all">All (369)</button>
+          <button class="filter-pill-btn" data-filter="unsolved">Unsolved</button>
+          <button class="filter-pill-btn" data-filter="completed">Completed ✓</button>
+          <button class="filter-pill-btn" data-filter="starred">Starred ⭐️</button>
+          <button id="btn-export-cheatsheet" class="btn-export-cheatsheet" title="Export your completed & starred problems with personal notes into a Markdown cheat sheet">📥 Export Cheat Sheet</button>
+        </div>
+      </div>
+
+      <!-- Topic Jump Strip -->
+      <div id="topic-jumper-strip" class="topic-jumper-strip">
+        <!-- Dynamically populated topic chips e.g. 📦 Arrays (39), 🔍 Binary Search (31) -->
+      </div>
+    </div>
+
+    <!-- Topic Groups & Problem Checklists -->
+    <div id="roadmap-topics-grid" class="roadmap-topics-grid">
+      <div style="text-align: center; padding: 40px; color: var(--ink-muted); font-size: 14px;">
+        Loading Striver's A2Z Roadmap &amp; Topic Checklists...
+      </div>
+    </div>
+
+  </div>
+
+  <!-- -------------------------------------------------------------
+       SMOOTH POP-OUT DRAWER FOR ALGORITHM CODE & APPROACH
+       ------------------------------------------------------------- -->
+  <div id="drawer-overlay" class="drawer-overlay">
+    <div class="code-drawer">
+      
+      <div class="drawer-header">
+        <div class="drawer-title-box">
+          <h2 id="drawer-algo-title" class="drawer-title">2 Sum Problem</h2>
+          <div style="display: flex; gap: 6px; margin-top: 4px;">
+            <span id="drawer-topic-badge" class="badge-tp">Arrays / Medium</span>
+            <span id="drawer-tc-badge" class="badge-tc">O(N)</span>
+            <span id="drawer-sc-badge" class="badge-sc">O(N)</span>
+          </div>
+        </div>
+        <button id="btn-close-drawer" class="drawer-close-btn">&times;</button>
+      </div>
+
+      <div class="drawer-content">
+        
+        <!-- Multi-Language Code Implementation -->
+        <div>
+          <div class="section-label">Multi-Language Code Implementation</div>
+          <div class="drawer-code-container">
+            <div class="drawer-code-header">
+              <div class="code-lang-tabs">
+                <button class="lang-btn active" data-cl="cpp">C++ (Original)</button>
+                <button class="lang-btn" data-cl="python">Python 3 (Idiomatic)</button>
+                <button class="lang-btn" data-cl="java">Java (Solution)</button>
+              </div>
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <span id="runtime-badge" class="runtime-badge server" title="Active Execution Sandbox">🛡️ MinGW Sandbox</span>
+                <button id="btn-edge-cases" class="btn-edge-cases" title="Inspect &amp; Test Canonical Edge Cases">⚡ Corner Cases</button>
+                <button id="btn-reset-code" class="btn-copy-drawer" title="Revert edits to original solution">↺ Reset</button>
+                <button id="btn-copy-code" class="btn-copy-drawer">📋 Copy</button>
+                <button id="btn-run-code" class="btn-run-drawer">▶ Run Code</button>
+              </div>
+            </div>
+            <textarea id="drawer-code-editor" class="drawer-code-editor" spellcheck="false"></textarea>
+          </div>
+
+          <!-- Canonical Edge Cases Panel -->
+          <div id="drawer-edge-cases-box" class="edge-cases-panel">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="edge-cases-title">⚡ Canonical Stress-Testing Cases</span>
+              <button id="btn-close-edge-cases" style="background: none; border: none; font-size: 16px; cursor: pointer; color: #b45309; line-height: 1;">&times;</button>
+            </div>
+            <div id="edge-cases-list" style="display: flex; flex-direction: column; gap: 8px;">
+              <!-- Dynamically populated edge-case cards -->
+            </div>
+          </div>
+
+          <!-- Stdin Input -->
+          <div class="drawer-stdin-box">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="section-label" style="margin-bottom: 2px;">Standard Input (Stdin)</span>
+              <span style="font-size: 10.5px; font-family: var(--font-mono); color: var(--ink-muted);">Optional</span>
+            </div>
+            <textarea id="drawer-stdin-input" class="drawer-stdin-input" placeholder="Optional standard input (e.g. 2 7 11 15&#10;9)"></textarea>
+          </div>
+
+          <!-- Terminal Output Console -->
+          <div id="drawer-console-box" class="drawer-console-box">
+            <div class="drawer-console-header">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span id="console-status-dot">●</span>
+                <span>Console Output</span>
+                <span id="console-metric" style="color: #58a6ff; font-weight: 600;"></span>
+              </div>
+              <button id="btn-clear-console" style="background: transparent; border: none; color: #8b949e; cursor: pointer; font-size: 11px;">Clear</button>
+            </div>
+            <pre id="drawer-console-out" class="drawer-console-out"></pre>
+          </div>
+        </div>
+
+        <!-- Interactive FAANG Interview Drill -->
+        <div>
+          <div class="section-label">Interactive FAANG Interview Drill</div>
+          <div id="drawer-grill-card" class="grill-panel">
+            <div class="grill-header">
+              <span class="grill-tag">🎯 Technical Interview Challenge</span>
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <button id="btn-speak-question" class="btn-speak-question" title="Read Challenge Aloud (Voice)">🔊 Read Aloud</button>
+                <button id="btn-refresh-grill" class="btn-grill-refresh" title="Get another conceptual question">↺ Next Question</button>
+              </div>
+            </div>
+            <div class="grill-question-box">
+              <div id="grill-question-text" class="grill-question-text">Loading interview challenge...</div>
+              <span id="grill-trap-pill" class="grill-trap-pill">Trap: Edge Case</span>
+            </div>
+            <textarea id="grill-user-answer" class="grill-user-answer" placeholder="Type or speak your technical reasoning, pointer movement, or invariant proof here..."></textarea>
+            <div class="grill-actions">
+              <span id="grill-status-hint" style="font-size: 11px; color: var(--ink-muted);">Answer clearly or click 'Speak Answer' to dictate.</span>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <button id="btn-voice-input" class="btn-voice-input" title="Dictate answer with voice">🎙️ Speak Answer</button>
+                <button id="btn-submit-grill" class="btn-run-drawer" style="background: #7c3aed; border-color: #6d28d9;">Submit Answer</button>
+              </div>
+            </div>
+            <!-- Evaluation Output -->
+            <div id="grill-eval-card" class="grill-eval-card">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span id="grill-score-chip" class="grill-score-chip score-high">Score: 8/10</span>
+                  <span id="grill-verdict-text" style="font-size: 12px; font-weight: 700; color: #1f2937;">Strong</span>
+                </div>
+                <span id="grill-source-text" style="font-size: 10.5px; font-family: var(--font-mono); color: var(--ink-muted);">Evaluator: Local</span>
+              </div>
+              <p id="grill-feedback-text" style="font-size: 12px; line-height: 1.5; color: #374151; margin: 0;"></p>
+              <details style="font-size: 11.5px; margin-top: 4px;">
+                <summary style="cursor: pointer; font-weight: 600; color: #7c3aed;">📖 View Gold-Standard FAANG Answer</summary>
+                <pre id="grill-gold-text" style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 8px 10px; border-radius: 4px; font-family: var(--font-mono); font-size: 11px; white-space: pre-wrap; margin-top: 6px;"></pre>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Whiteboard Dry-Run Simulator -->
+        <div>
+          <div class="section-label">Interactive Whiteboard Dry-Run &amp; Pointer Trace</div>
+          <div id="dry-run-container" class="dry-run-panel">
+            <div class="dry-run-header">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span class="dry-run-tag">📊 Visual Dry-Run</span>
+                <span id="dry-run-step-badge" class="dry-run-badge">Step 1 of 4</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <select id="dry-run-speed" class="dry-run-speed-select" title="Auto-play speed">
+                  <option value="1200">1x</option>
+                  <option value="600">2x</option>
+                  <option value="2200">0.5x</option>
+                </select>
+                <button id="btn-trace-prev" class="btn-trace-nav" title="Previous step">⏮ Prev</button>
+                <button id="btn-trace-play" class="btn-trace-nav" title="Auto play trace">▶ Auto</button>
+                <button id="btn-trace-next" class="btn-trace-nav" title="Next step">Next ⏭</button>
+                <button id="btn-trace-reset" class="btn-trace-nav" title="Reset trace">↺</button>
+              </div>
+            </div>
+
+            <!-- Custom Input / Testcase Control Bar -->
+            <div class="dry-run-custom-bar">
+              <input id="dry-run-custom-input" class="dry-run-input" type="text" placeholder="Custom Array e.g. 2, 7, 11, 15" />
+              <input id="dry-run-custom-target" class="dry-run-input dry-run-target" type="text" placeholder="Target e.g. 9" />
+              <button id="btn-dry-run-custom" class="btn-dry-run-custom">Simulate</button>
+            </div>
+
+            <!-- Visual Array and Pointer Canvas -->
+            <div id="dry-run-board" class="dry-run-board">
+              <!-- Dynamically populated array elements with pointer markers -->
+            </div>
+
+            <!-- Dynamic State & Invariant Card -->
+            <div class="dry-run-state-box">
+              <div id="dry-run-vars" class="dry-run-vars">
+                <!-- e.g. left: 0 | right: 3 | sum: 17 -->
+              </div>
+              <p id="dry-run-explanation" class="dry-run-explanation">
+                Loading pointer states and dry-run invariant...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step-by-Step Approach -->
+        <div>
+          <div class="section-label">Striver's Step-by-Step Intuition &amp; Approach</div>
+          <div id="drawer-approach-text" class="text-box"></div>
+        </div>
+
+
+        <!-- Problem Statement & Examples -->
+        <div>
+          <div class="section-label">Problem Statement &amp; Examples</div>
+          <div id="drawer-question-text" class="text-box"></div>
+        </div>
+
+        <!-- Personal Revision Notes Scratchpad -->
+        <div class="drawer-notes-section">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+            <div class="section-label" style="margin-bottom: 0;">📝 My Revision Notes &amp; Key Intuitions</div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span id="drawer-notes-status" class="notes-status-badge">Saved ✓</span>
+              <button id="btn-notes-template" class="btn-copy-drawer" style="padding: 2px 8px; font-size: 11px;" title="Insert structured revision template">+ Quick Template</button>
+            </div>
+          </div>
+          <div>
+            <textarea 
+              id="drawer-notes-input" 
+              class="drawer-notes-editor" 
+              spellcheck="false"
+              placeholder="Jot down tricky edge cases, personal intuitions, time complexity pitfalls, or patterns to remember before an interview (auto-saves locally)..."
+            ></textarea>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 4px; font-size: 11px; color: var(--ink-muted);">
+              <span>💡 Notes auto-save in your browser and export into your Markdown Cheat Sheet.</span>
+              <span id="drawer-notes-counter" style="font-family: var(--font-mono);">0 chars</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- API Key & Provider Modal -->
+  <div id="key-modal" class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="modal-title">Configure LLM Provider</h3>
+        <button id="close-key-modal" class="drawer-close-btn">&times;</button>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Provider</label>
+        <select id="modal-provider" class="form-select">
+          <option value="local">🚀 Local RTX 5050 (Striver Qwen2.5-Coder 7B)</option>
+          <option value="groq">Groq (Llama-3.3 70B Versatile)</option>
+          <option value="grok">Grok / xAI (grok-2-latest)</option>
+          <option value="openai">OpenAI (GPT-4o-mini)</option>
+          <option value="custom">Custom Endpoint (Ollama / Local)</option>
+        </select>
+      </div>
+
+      <div id="local-info-group" class="form-group" style="font-size: 12px; color: var(--brand-accent); background: rgba(0, 180, 216, 0.08); padding: 10px 12px; border-radius: 6px; border: 1px solid rgba(0, 180, 216, 0.25);">
+        ✨ <strong>Fine-Tuned Striver LLM Active:</strong> Runs directly on your NVIDIA GeForce RTX 5050 (8GB VRAM). No external API key or internet required.
+      </div>
+
+      <div id="api-key-group" class="form-group" style="display: none;">
+        <label class="form-label">API Key</label>
+        <input id="modal-api-key" class="form-input" type="password" placeholder="gsk_... or xai-..." />
+      </div>
+
+      <div id="custom-url-group" class="form-group" style="display: none;">
+        <label class="form-label">Base URL</label>
+        <input id="modal-base-url" class="form-input" type="text" placeholder="http://localhost:11434/v1" />
+      </div>
+
+      <button id="modal-validate-btn" class="btn-submit">Connect Provider</button>
+      <div id="modal-feedback" class="validation-feedback"></div>
+    </div>
+  </div>
+
+  <script>
+    // State
+    const state = {
+      query: "two sum",
+      provider: localStorage.getItem("dsa_provider") || "local",
+      apiKey: localStorage.getItem("dsa_api_key") || "",
+      baseUrl: localStorage.getItem("dsa_base_url") || "",
+      currentDsa: null,
+      currentLang: "cpp",
+    };
+
+    // DOM Elements
+    const searchInput = document.getElementById("search-input");
+    const algoBanner = document.getElementById("algo-banner");
+    const bannerAlgoName = document.getElementById("banner-algo-name");
+    const bannerAlgoTopic = document.getElementById("banner-algo-topic");
+    const bannerAlgoTc = document.getElementById("banner-algo-tc");
+    const bannerAlgoSc = document.getElementById("banner-algo-sc");
+    const answerBullets = document.getElementById("answer-bullets");
+    const providerBadge = document.getElementById("provider-badge");
+    const momentsList = document.getElementById("moments-list");
+    const momentsCount = document.getElementById("moments-count");
+    const ytPlayer = document.getElementById("yt-player");
+    const playerStatusText = document.getElementById("player-status-text");
+
+    // Drawer Elements
+    const drawerOverlay = document.getElementById("drawer-overlay");
+    const btnOpenDrawer = document.getElementById("btn-open-drawer");
+    const btnPlayerDrawer = document.getElementById("btn-player-drawer");
+    const btnCloseDrawer = document.getElementById("btn-close-drawer");
+    const drawerAlgoTitle = document.getElementById("drawer-algo-title");
+    const drawerTopicBadge = document.getElementById("drawer-topic-badge");
+    const drawerTcBadge = document.getElementById("drawer-tc-badge");
+    const drawerScBadge = document.getElementById("drawer-sc-badge");
+    const drawerCodeEditor = document.getElementById("drawer-code-editor");
+    const drawerApproachText = document.getElementById("drawer-approach-text");
+    const drawerQuestionText = document.getElementById("drawer-question-text");
+    const drawerNotesInput = document.getElementById("drawer-notes-input");
+    const drawerNotesStatus = document.getElementById("drawer-notes-status");
+    const drawerNotesCounter = document.getElementById("drawer-notes-counter");
+    const btnNotesTemplate = document.getElementById("btn-notes-template");
+    const btnCopyCode = document.getElementById("btn-copy-code");
+    const btnResetCode = document.getElementById("btn-reset-code");
+    const btnRunCode = document.getElementById("btn-run-code");
+    const drawerStdinInput = document.getElementById("drawer-stdin-input");
+    const drawerConsoleBox = document.getElementById("drawer-console-box");
+    const drawerConsoleOut = document.getElementById("drawer-console-out");
+    const consoleMetric = document.getElementById("console-metric");
+    const consoleStatusDot = document.getElementById("console-status-dot");
+    const btnClearConsole = document.getElementById("btn-clear-console");
+    const langBtns = document.querySelectorAll(".lang-btn");
+
+    // Edge-Cases & Grill-Me Elements
+    const btnEdgeCases = document.getElementById("btn-edge-cases");
+    const drawerEdgeCasesBox = document.getElementById("drawer-edge-cases-box");
+    const edgeCasesList = document.getElementById("edge-cases-list");
+    const btnCloseEdgeCases = document.getElementById("btn-close-edge-cases");
+
+    const drawerGrillCard = document.getElementById("drawer-grill-card");
+    const grillQuestionText = document.getElementById("grill-question-text");
+    const grillTrapPill = document.getElementById("grill-trap-pill");
+    const grillUserAnswer = document.getElementById("grill-user-answer");
+    const btnSubmitGrill = document.getElementById("btn-submit-grill");
+    const btnRefreshGrill = document.getElementById("btn-refresh-grill");
+    const grillStatusHint = document.getElementById("grill-status-hint");
+    const grillEvalCard = document.getElementById("grill-eval-card");
+    const grillScoreChip = document.getElementById("grill-score-chip");
+    const grillVerdictText = document.getElementById("grill-verdict-text");
+    const grillSourceText = document.getElementById("grill-source-text");
+    const grillFeedbackText = document.getElementById("grill-feedback-text");
+    const grillGoldText = document.getElementById("grill-gold-text");
+    const btnSpeakQuestion = document.getElementById("btn-speak-question");
+    const btnVoiceInput = document.getElementById("btn-voice-input");
+
+    // Whiteboard Dry-Run Visualizer Elements
+    const dryRunContainer = document.getElementById("dry-run-container");
+    const dryRunStepBadge = document.getElementById("dry-run-step-badge");
+    const dryRunBoard = document.getElementById("dry-run-board");
+    const dryRunVars = document.getElementById("dry-run-vars");
+    const dryRunExplanation = document.getElementById("dry-run-explanation");
+    const btnTracePrev = document.getElementById("btn-trace-prev");
+    const btnTracePlay = document.getElementById("btn-trace-play");
+    const btnTraceNext = document.getElementById("btn-trace-next");
+    const btnTraceReset = document.getElementById("btn-trace-reset");
+    const dryRunCustomInput = document.getElementById("dry-run-custom-input");
+    const dryRunCustomTarget = document.getElementById("dry-run-custom-target");
+    const btnDryRunCustom = document.getElementById("btn-dry-run-custom");
+    const dryRunSpeed = document.getElementById("dry-run-speed");
+
+    // Modal Elements
+    const keyModal = document.getElementById("key-modal");
+    const openKeyModal = document.getElementById("open-key-modal");
+    const closeKeyModal = document.getElementById("close-key-modal");
+    const modalProvider = document.getElementById("modal-provider");
+    const modalApiKey = document.getElementById("modal-api-key");
+    const modalBaseUrl = document.getElementById("modal-base-url");
+    const customUrlGroup = document.getElementById("custom-url-group");
+    const localInfoGroup = document.getElementById("local-info-group");
+    const apiKeyGroup = document.getElementById("api-key-group");
+    const modalValidateBtn = document.getElementById("modal-validate-btn");
+    const modalFeedback = document.getElementById("modal-feedback");
+    const keyIndicator = document.getElementById("key-indicator");
+    const keyLabel = document.getElementById("key-label");
+
+    // Track user-edited code per language
+    state.editedCode = {};
+
+    // Update status badge
+    function updateKeyStatusUI() {
+      if (state.provider === "local") {
+        keyIndicator.classList.add("active");
+        keyLabel.textContent = "⚡ RTX 5050 (Striver AI)";
+      } else if (state.provider === "groq" && (state.apiKey || state.serverHasGroq)) {
+        keyIndicator.classList.add("active");
+        keyLabel.textContent = "⚡ Groq (Llama-3.3 70B)";
+      } else if (state.apiKey) {
+        keyIndicator.classList.add("active");
+        keyLabel.textContent = `Connected: ${state.provider.toUpperCase()}`;
+      } else {
+        keyIndicator.classList.remove("active");
+        keyLabel.textContent = "Key: Extractive (Offline)";
+      }
+    }
+    updateKeyStatusUI();
+
+    // Auto-detect server backend status (Groq vs Local)
+    fetch("/api/health")
+      .then(res => res.json())
+      .then(data => {
+        state.serverHasGroq = data.has_server_groq_key;
+        if (!localStorage.getItem("dsa_provider") && data.default_provider) {
+          state.provider = data.default_provider;
+        }
+        updateKeyStatusUI();
+      })
+      .catch(() => {});
+
+    // Drawer Controls (Smooth Pop-out)
+    function openDrawer() {
+      if (!state.currentDsa) return;
+      drawerOverlay.classList.add("open");
+    }
+
+    function closeDrawer() {
+      drawerOverlay.classList.remove("open");
+    }
+
+    btnOpenDrawer.addEventListener("click", openDrawer);
+    btnPlayerDrawer.addEventListener("click", openDrawer);
+    btnCloseDrawer.addEventListener("click", closeDrawer);
+    drawerOverlay.addEventListener("click", (e) => {
+      if (e.target === drawerOverlay) closeDrawer();
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closeDrawer();
+        keyModal.classList.remove("open");
+      }
+    });
+
+    // Language switcher inside drawer
+    langBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        langBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        state.currentLang = btn.dataset.cl;
+        renderDrawerCode();
+      });
+    });
+
+    // Support Tab key in code editor
+    drawerCodeEditor.addEventListener("keydown", (e) => {
+      if (e.key === "Tab") {
+        e.preventDefault();
+        const start = drawerCodeEditor.selectionStart;
+        const end = drawerCodeEditor.selectionEnd;
+        drawerCodeEditor.value = drawerCodeEditor.value.substring(0, start) + "    " + drawerCodeEditor.value.substring(end);
+        drawerCodeEditor.selectionStart = drawerCodeEditor.selectionEnd = start + 4;
+        state.editedCode[state.currentLang] = drawerCodeEditor.value;
+      }
+    });
+
+    drawerCodeEditor.addEventListener("input", () => {
+      state.editedCode[state.currentLang] = drawerCodeEditor.value;
+    });
+
+    // In-Browser Pyodide WebAssembly Runtime Manager
+    let pyodideInstance = null;
+    let pyodideLoadingPromise = null;
+
+    async function getPyodideInstance() {
+      if (pyodideInstance) return pyodideInstance;
+      if (!pyodideLoadingPromise) {
+        pyodideLoadingPromise = (async () => {
+          if (typeof loadPyodide !== "function") {
+            throw new Error("Pyodide script not loaded in browser.");
+          }
+          let indexURL = "/static/vendor/pyodide/";
+          try {
+            const check = await fetch("/static/vendor/pyodide/pyodide-lock.json", { method: "HEAD" });
+            if (!check.ok) indexURL = "https://cdn.jsdelivr.net/pyodide/v0.26.4/full/";
+          } catch {
+            indexURL = "https://cdn.jsdelivr.net/pyodide/v0.26.4/full/";
+          }
+          const py = await loadPyodide({
+            indexURL: indexURL,
+          });
+          pyodideInstance = py;
+          return py;
+        })();
+      }
+      return pyodideLoadingPromise;
+    }
+
+    // Preload Pyodide asynchronously after page loads
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        getPyodideInstance().catch(() => {});
+      }, 1500);
+    });
+
+    function updateRuntimeBadge(lang) {
+      const badge = document.getElementById("runtime-badge");
+      if (!badge) return;
+      if (lang === "python") {
+        badge.className = "runtime-badge wasm";
+        badge.innerHTML = "⚡ Wasm (In-Browser)";
+        badge.title = "Zero server computing bill & 100% sandboxed in browser memory";
+      } else if (lang === "cpp") {
+        badge.className = "runtime-badge server";
+        badge.innerHTML = "🛡️ MinGW (AST Guarded)";
+        badge.title = "Compiled on server with AST & syscall security guard";
+      } else {
+        badge.className = "runtime-badge";
+        badge.innerHTML = "☕ Java (Solution)";
+        badge.title = "Reference solution";
+      }
+    }
+
+    function renderDrawerCode() {
+      if (!state.currentDsa) return;
+      let code = "";
+      if (state.editedCode[state.currentLang] !== undefined) {
+        code = state.editedCode[state.currentLang];
+      } else {
+        if (state.currentLang === "cpp") code = state.currentDsa.code_cpp || "// C++ implementation";
+        else if (state.currentLang === "python") code = state.currentDsa.code_python || "# Python implementation";
+        else if (state.currentLang === "java") code = state.currentDsa.code_java || "// Java implementation";
+        state.editedCode[state.currentLang] = code;
+      }
+      drawerCodeEditor.value = code;
+      updateRuntimeBadge(state.currentLang);
+
+      // Adjust Run button text/style for Java
+      if (state.currentLang === "java") {
+        btnRunCode.textContent = "⚠️ Java (Use Py/C++)";
+        btnRunCode.style.background = "#484f58";
+      } else {
+        btnRunCode.textContent = state.currentLang === "python" ? "▶ Run (Wasm)" : "▶ Run Code";
+        btnRunCode.style.background = "#238636";
+      }
+    }
+
+    btnResetCode.addEventListener("click", () => {
+      if (!state.currentDsa) return;
+      delete state.editedCode[state.currentLang];
+      renderDrawerCode();
+      drawerConsoleBox.classList.remove("visible");
+      btnResetCode.textContent = "✓ Reset";
+      setTimeout(() => btnResetCode.textContent = "↺ Reset", 1000);
+    });
+
+    btnCopyCode.addEventListener("click", () => {
+      navigator.clipboard.writeText(drawerCodeEditor.value);
+      btnCopyCode.textContent = "✅ Copied!";
+      setTimeout(() => btnCopyCode.textContent = "📋 Copy", 1600);
+    });
+
+    // Execute Code Handler (Pyodide Wasm for Python with Server Fallback, AST Server Sandbox for C++)
+    btnRunCode.addEventListener("click", async () => {
+      if (state.currentLang === "java") {
+        drawerConsoleBox.classList.add("visible");
+        consoleStatusDot.style.color = "#d29922";
+        consoleMetric.textContent = "Java Notice";
+        drawerConsoleOut.className = "drawer-console-out console-error";
+        drawerConsoleOut.textContent = "Java compilation requires a local JDK configured. Please select the 'Python 3' or 'C++' tab to execute directly using the machine's local compiler/interpreter.";
+        return;
+      }
+
+      const codeToRun = drawerCodeEditor.value.trim();
+      if (!codeToRun) return;
+
+      const stdin = drawerStdinInput.value;
+      btnRunCode.disabled = true;
+
+      // 1. Client-Side WebAssembly Execution for Python
+      if (state.currentLang === "python") {
+        btnRunCode.textContent = "⏳ Running (Wasm)...";
+        drawerConsoleBox.classList.add("visible");
+        consoleStatusDot.style.color = "#58a6ff";
+        consoleMetric.textContent = "Pyodide Wasm...";
+        drawerConsoleOut.className = "drawer-console-out";
+        drawerConsoleOut.textContent = "Initializing in-browser WebAssembly runtime...";
+
+        try {
+          const py = await getPyodideInstance();
+          let stdoutBuf = "";
+          let stderrBuf = "";
+
+          py.setStdout({
+            batched: (str) => { stdoutBuf += str + "\n"; },
+          });
+          py.setStderr({
+            batched: (str) => { stderrBuf += str + "\n"; },
+          });
+
+          if (stdin.trim()) {
+            const lines = stdin.split("\n");
+            let lineIdx = 0;
+            py.setStdin({
+              stdin: () => (lineIdx < lines.length ? lines[lineIdx++] : null),
+            });
+          }
+
+          const t0 = performance.now();
+          await py.runPythonAsync(codeToRun);
+          const elapsedMs = (performance.now() - t0).toFixed(1);
+
+          consoleStatusDot.style.color = "#7ee787";
+          consoleMetric.textContent = `⚡ Wasm ${elapsedMs}ms (0ms RTT, Exit 0)`;
+          drawerConsoleOut.className = "drawer-console-out console-success";
+          drawerConsoleOut.textContent = (stdoutBuf || stderrBuf || "Executed successfully in browser Pyodide WebAssembly sandbox (no stdout produced).").trim();
+          btnRunCode.disabled = false;
+          btnRunCode.textContent = "▶ Run (Wasm)";
+          return;
+        } catch (pyErr) {
+          // If the error was a real Python exception in user code, show traceback directly
+          if (pyErr.name === "PythonError" || (pyErr.message && pyErr.message.includes("Traceback"))) {
+            consoleStatusDot.style.color = "#ff7b72";
+            consoleMetric.textContent = "Wasm Exception";
+            drawerConsoleOut.className = "drawer-console-out console-error";
+            drawerConsoleOut.textContent = pyErr.message || String(pyErr);
+            btnRunCode.disabled = false;
+            btnRunCode.textContent = "▶ Run (Wasm)";
+            return;
+          }
+          // If Pyodide CDN failed to load (e.g. offline), log and gracefully fall back to server sandbox
+          console.warn("Pyodide Wasm unavailable, falling back to server sandbox:", pyErr);
+        }
+      }
+
+      // 2. Server-Side Execution (for C++, or Python fallback)
+      btnRunCode.textContent = "⏳ Running...";
+      drawerConsoleBox.classList.add("visible");
+      consoleStatusDot.style.color = "#58a6ff";
+      consoleMetric.textContent = "Server Sandbox...";
+      drawerConsoleOut.className = "drawer-console-out";
+      drawerConsoleOut.textContent = "Compiling and running in AST-guarded sandbox...";
+
+      try {
+        const res = await fetch("/api/execute", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            language: state.currentLang,
+            code: codeToRun,
+            stdin_input: stdin,
+          }),
+        });
+        const data = await res.json();
+
+        if (data.success) {
+          consoleStatusDot.style.color = "#7ee787";
+          consoleMetric.textContent = `⚡ ${data.execution_time_ms}ms (Exit 0)`;
+          drawerConsoleOut.className = "drawer-console-out console-success";
+          drawerConsoleOut.textContent = data.stdout || data.message;
+        } else {
+          consoleStatusDot.style.color = "#ff7b72";
+          consoleMetric.textContent = `Exit ${data.exit_code} (${data.execution_time_ms}ms)`;
+          drawerConsoleOut.className = "drawer-console-out console-error";
+          drawerConsoleOut.textContent = (data.stderr || data.message || "Execution error").trim();
+        }
+      } catch (err) {
+        consoleStatusDot.style.color = "#ff7b72";
+        consoleMetric.textContent = "Network Error";
+        drawerConsoleOut.className = "drawer-console-out console-error";
+        drawerConsoleOut.textContent = "Failed to communicate with runner backend: " + err.message;
+      } finally {
+        btnRunCode.disabled = false;
+        btnRunCode.textContent = state.currentLang === "python" ? "▶ Run (Wasm)" : "▶ Run Code";
+      }
+    });
+
+    btnClearConsole.addEventListener("click", () => {
+      drawerConsoleBox.classList.remove("visible");
+      drawerConsoleOut.textContent = "";
+      consoleMetric.textContent = "";
+    });
+
+    // -------------------------------------------------------------
+    // EDGE CASES STRESS-TESTING SUITE
+    // -------------------------------------------------------------
+    btnEdgeCases.addEventListener("click", async () => {
+      if (!state.currentDsa) return;
+      if (drawerEdgeCasesBox.classList.contains("visible")) {
+        drawerEdgeCasesBox.classList.remove("visible");
+        return;
+      }
+      drawerEdgeCasesBox.classList.add("visible");
+      edgeCasesList.innerHTML = `<span style="font-size: 11px; color: #b45309; padding: 4px;">Loading canonical edge cases...</span>`;
+      try {
+        const res = await fetch(`/api/edge-cases?topic=${encodeURIComponent(state.currentDsa.topic || "")}&title=${encodeURIComponent(state.currentDsa.title || "")}`);
+        const data = await res.json();
+        edgeCasesList.innerHTML = "";
+        if (!data.cases || data.cases.length === 0) {
+          edgeCasesList.innerHTML = `<span style="font-size: 11px; color: #b45309;">No specific edge cases configured.</span>`;
+          return;
+        }
+        data.cases.forEach(c => {
+          const card = document.createElement("div");
+          card.className = "edge-case-card";
+          card.innerHTML = `
+            <div class="edge-case-top">
+              <span class="edge-case-name">${escapeHtml(c.name)}</span>
+              <button class="btn-use-stdin" data-input="${escapeHtml(c.sample_input)}">↳ Inject Stdin</button>
+            </div>
+            <div class="edge-case-trap">⚠️ ${escapeHtml(c.trap_warning)}</div>
+            <div class="edge-case-input">Input: ${escapeHtml(c.sample_input)}</div>
+          `;
+          card.querySelector(".btn-use-stdin").addEventListener("click", (e) => {
+            drawerStdinInput.value = c.sample_input;
+            drawerStdinInput.scrollIntoView({ behavior: "smooth", block: "center" });
+            drawerStdinInput.focus();
+            const btn = e.target;
+            btn.textContent = "✓ Injected";
+            setTimeout(() => btn.textContent = "↳ Inject Stdin", 1200);
+          });
+          edgeCasesList.appendChild(card);
+        });
+      } catch (err) {
+        edgeCasesList.innerHTML = `<span style="font-size: 11px; color: #b45309;">Failed to load edge cases: ${escapeHtml(err.message)}</span>`;
+      }
+    });
+
+    btnCloseEdgeCases.addEventListener("click", () => {
+      drawerEdgeCasesBox.classList.remove("visible");
+    });
+
+    // -------------------------------------------------------------
+    // "GRILL ME" INTERACTIVE TECHNICAL INTERVIEW DRILL
+    // -------------------------------------------------------------
+    state.currentGrill = null;
+
+    async function loadGrillQuestion() {
+      if (!state.currentDsa) return;
+      grillQuestionText.textContent = "Generating technical interview challenge...";
+      grillTrapPill.textContent = "Analyzing solution code...";
+      grillUserAnswer.value = "";
+      grillEvalCard.classList.remove("visible");
+      grillStatusHint.textContent = "Answer clearly to receive interview scoring.";
+      btnSubmitGrill.disabled = true;
+
+      try {
+        const codeSnippet = (state.editedCode && state.editedCode[state.currentLang]) || drawerCodeEditor.value || "";
+        const res = await fetch("/api/grill-me", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            title: state.currentDsa.title,
+            topic: state.currentDsa.topic,
+            code: codeSnippet,
+            provider: state.provider,
+            api_key: state.apiKey,
+            base_url: state.baseUrl,
+          }),
+        });
+        const data = await res.json();
+        state.currentGrill = data;
+        grillQuestionText.textContent = data.question;
+        grillTrapPill.textContent = `Trap: ${data.trap_warning}`;
+      } catch (err) {
+        grillQuestionText.textContent = "Interview question generator offline: " + err.message;
+      } finally {
+        btnSubmitGrill.disabled = false;
+      }
+    }
+
+    btnRefreshGrill.addEventListener("click", loadGrillQuestion);
+
+    btnSubmitGrill.addEventListener("click", async () => {
+      const ans = grillUserAnswer.value.trim();
+      if (!ans) {
+        alert("Please provide an answer before submitting.");
+        return;
+      }
+      btnSubmitGrill.disabled = true;
+      btnSubmitGrill.textContent = "Evaluating...";
+      grillStatusHint.textContent = "Grading response against FAANG standards...";
+
+      try {
+        const codeSnippet = (state.editedCode && state.editedCode[state.currentLang]) || drawerCodeEditor.value || "";
+        const res = await fetch("/api/grill-me", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            title: state.currentDsa ? state.currentDsa.title : "",
+            topic: state.currentDsa ? state.currentDsa.topic : "",
+            code: codeSnippet,
+            question: state.currentGrill ? state.currentGrill.question : "",
+            trap_warning: state.currentGrill ? state.currentGrill.trap_warning : "",
+            gold_standard: state.currentGrill ? state.currentGrill.gold_standard : "",
+            user_answer: ans,
+            provider: state.provider,
+            api_key: state.apiKey,
+            base_url: state.baseUrl,
+          }),
+        });
+        const data = await res.json();
+        const ev = data.evaluation;
+        if (ev) {
+          grillScoreChip.textContent = `Score: ${ev.score}/10`;
+          grillScoreChip.className = `grill-score-chip ${ev.score >= 8 ? 'score-high' : ev.score >= 5 ? 'score-med' : 'score-low'}`;
+          grillVerdictText.textContent = ev.verdict;
+          grillSourceText.textContent = `Evaluator: ${data.source.toUpperCase()}`;
+          grillFeedbackText.textContent = ev.feedback;
+          grillGoldText.textContent = ev.gold_standard || data.gold_standard || "Standard boundary and pointer check.";
+          grillEvalCard.classList.add("visible");
+          grillStatusHint.textContent = `Evaluated: Score ${ev.score}/10 (${ev.verdict})`;
+        }
+      } catch (err) {
+        alert("Failed to evaluate answer: " + err.message);
+      } finally {
+        btnSubmitGrill.disabled = false;
+        btnSubmitGrill.textContent = "Submit Answer";
+      }
+    });
+
+    // -------------------------------------------------------------
+    // VOICE INTERVIEWER DRILL (TTS & STT Speech-to-Speech)
+    // -------------------------------------------------------------
+    function speakInterviewQuestion(text) {
+      if (!("speechSynthesis" in window)) {
+        alert("Text-to-speech is not supported in this browser.");
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.rate = 1.0;
+      utterance.pitch = 1.0;
+      const voices = window.speechSynthesis.getVoices();
+      const naturalVoice = voices.find(v => v.lang.startsWith("en") && (v.name.includes("Google") || v.name.includes("Natural") || v.name.includes("David") || v.name.includes("Samantha")));
+      if (naturalVoice) utterance.voice = naturalVoice;
+      window.speechSynthesis.speak(utterance);
+    }
+
+    if (btnSpeakQuestion) {
+      btnSpeakQuestion.addEventListener("click", () => {
+        const text = grillQuestionText.textContent;
+        if (text && !text.includes("Loading")) {
+          speakInterviewQuestion(text);
+        }
+      });
+    }
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    let voiceRecognition = null;
+    let isVoiceRecording = false;
+
+    if (SpeechRecognition) {
+      voiceRecognition = new SpeechRecognition();
+      voiceRecognition.continuous = true;
+      voiceRecognition.interimResults = true;
+      voiceRecognition.lang = "en-US";
+
+      voiceRecognition.onresult = (event) => {
+        let transcript = "";
+        for (let i = 0; i < event.results.length; i++) {
+          transcript += event.results[i][0].transcript + " ";
+        }
+        grillUserAnswer.value = transcript.trim();
+      };
+
+      voiceRecognition.onerror = (event) => {
+        console.warn("Speech recognition error:", event.error);
+        stopVoiceRecording();
+      };
+
+      voiceRecognition.onend = () => {
+        stopVoiceRecording();
+      };
+    }
+
+    function stopVoiceRecording() {
+      isVoiceRecording = false;
+      if (btnVoiceInput) {
+        btnVoiceInput.classList.remove("recording");
+        btnVoiceInput.innerHTML = "🎙️ Speak Answer";
+      }
+      grillStatusHint.textContent = "Voice input captured. Review text and submit for evaluation.";
+    }
+
+    if (btnVoiceInput) {
+      btnVoiceInput.addEventListener("click", () => {
+        if (!voiceRecognition) {
+          alert("Speech recognition is not supported in this browser. Please use Chrome, Edge, or Safari.");
+          return;
+        }
+        if (isVoiceRecording) {
+          voiceRecognition.stop();
+          stopVoiceRecording();
+        } else {
+          try {
+            voiceRecognition.start();
+            isVoiceRecording = true;
+            btnVoiceInput.classList.add("recording");
+            btnVoiceInput.innerHTML = "🔴 Listening... (Click to stop)";
+            grillStatusHint.textContent = "Listening to microphone... articulate your algorithmic reasoning.";
+          } catch (err) {
+            console.warn("Could not start speech recognition:", err);
+          }
+        }
+      });
+    }
+
+    // -------------------------------------------------------------
+    // WHITEBOARD DRY-RUN & DYNAMIC TESTCASE SIMULATOR
+    // -------------------------------------------------------------
+    state.dryRun = {
+      steps: [],
+      currentStepIdx: 0,
+      isPlaying: false,
+      timer: null,
+    };
+
+    function generateDryRunSteps(sol, customArr = null, customTarget = null) {
+      if (!sol) return [];
+      const titleLower = (sol.title || "").toLowerCase();
+
+      // 1. Two Sum / Two Pointers
+      if (titleLower.includes("two sum") || titleLower.includes("2 sum")) {
+        const arr = customArr || [2, 7, 11, 15];
+        const target = customTarget !== null ? customTarget : 9;
+        const steps = [];
+        let left = 0, right = arr.length - 1;
+        let found = false;
+
+        while (left < right) {
+          const sum = arr[left] + arr[right];
+          if (sum === target) {
+            steps.push({
+              array: [...arr],
+              pointers: { [left]: { name: "left", class: "ptr-left" }, [right]: { name: "right", class: "ptr-right" } },
+              activeIndices: { [left]: "matched", [right]: "matched" },
+              vars: { "arr[left]": arr[left], "arr[right]": arr[right], "sum": sum, "target": target, "result": `[${left}, ${right}]` },
+              explanation: `🎯 Target match found! arr[${left}] + arr[${right}] = ${arr[left]} + ${arr[right]} = ${target}. Return indices [${left}, ${right}]. O(N) time & O(1) space achieved!`,
+            });
+            found = true;
+            break;
+          } else if (sum < target) {
+            steps.push({
+              array: [...arr],
+              pointers: { [left]: { name: "left", class: "ptr-left" }, [right]: { name: "right", class: "ptr-right" } },
+              activeIndices: { [left]: "active-left", [right]: "active-right" },
+              vars: { "arr[left]": arr[left], "arr[right]": arr[right], "sum": sum, "target": target },
+              explanation: `arr[${left}] + arr[${right}] = ${sum} < target (${target}). Since array is sorted, advance left pointer to increase sum: left++.`,
+            });
+            left++;
+          } else {
+            steps.push({
+              array: [...arr],
+              pointers: { [left]: { name: "left", class: "ptr-left" }, [right]: { name: "right", class: "ptr-right" } },
+              activeIndices: { [left]: "active-left", [right]: "active-right" },
+              vars: { "arr[left]": arr[left], "arr[right]": arr[right], "sum": sum, "target": target },
+              explanation: `arr[${left}] + arr[${right}] = ${sum} > target (${target}). Sum is too large, decrement right pointer to reduce sum: right--.`,
+            });
+            right--;
+          }
+        }
+        if (!found) {
+          steps.push({
+            array: [...arr],
+            pointers: {},
+            activeIndices: {},
+            vars: { "target": target, "result": "None" },
+            explanation: `Pointers crossed (left >= right). No two elements in this array sum to ${target}.`,
+          });
+        }
+        return steps;
+      }
+
+      // 2. Kadane's Algorithm (Max Subarray Sum)
+      if (titleLower.includes("kadane") || (titleLower.includes("max") && titleLower.includes("subarray"))) {
+        const arr = customArr || [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+        const steps = [];
+        let curSum = 0;
+        let maxSum = arr[0];
+        let bestStart = 0, bestEnd = 0, curStart = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+          curSum += arr[i];
+          let updated = false;
+          if (curSum > maxSum) {
+            maxSum = curSum;
+            bestStart = curStart;
+            bestEnd = i;
+            updated = true;
+          }
+
+          const activeInds = {};
+          for (let s = curStart; s <= i; s++) activeInds[s] = updated ? "matched" : "active-left";
+
+          let note = `Step ${i}: arr[${i}] = ${arr[i]}. cur_sum = ${curSum}. max_sum = ${maxSum}.`;
+          if (curSum < 0) {
+            note += " Since cur_sum < 0, reset cur_sum = 0 and advance window to avoid dragging down future elements.";
+            curSum = 0;
+            curStart = i + 1;
+          }
+
+          steps.push({
+            array: [...arr],
+            pointers: { [i]: { name: "i", class: updated ? "ptr-right" : "ptr-i" } },
+            activeIndices: activeInds,
+            vars: { "arr[i]": arr[i], "cur_sum": curSum, "max_sum": maxSum },
+            explanation: note,
+          });
+        }
+
+        // Final summary step
+        const finalActive = {};
+        for (let s = bestStart; s <= bestEnd; s++) finalActive[s] = "matched";
+        steps.push({
+          array: [...arr],
+          pointers: { [bestStart]: { name: "start", class: "ptr-left" }, [bestEnd]: { name: "end", class: "ptr-right" } },
+          activeIndices: finalActive,
+          vars: { "max_sum": maxSum, "subarray": `[${arr.slice(bestStart, bestEnd + 1).join(", ")}]` },
+          explanation: `🎯 Optimal Subarray identified! Maximum sum is ${maxSum} found in range [${bestStart}..${bestEnd}]. Linear O(N) Kadane traversal completed.`,
+        });
+        return steps;
+      }
+
+      // 3. Dutch National Flag (Sort 0s, 1s, 2s)
+      if (titleLower.includes("0's") || titleLower.includes("sort colors") || titleLower.includes("sort 0")) {
+        const arr = customArr || [2, 0, 2, 1, 1, 0];
+        const steps = [];
+        let low = 0, mid = 0, high = arr.length - 1;
+
+        while (mid <= high) {
+          if (arr[mid] === 0) {
+            steps.push({
+              array: [...arr],
+              pointers: { [low]: { name: "low", class: "ptr-left" }, [mid]: { name: "mid", class: "ptr-mid" }, [high]: { name: "high", class: "ptr-right" } },
+              activeIndices: { [low]: "active-left", [mid]: "active-mid" },
+              vars: { "low": low, "mid": mid, "high": high, "val": arr[mid] },
+              explanation: `arr[mid] is 0! Swap arr[low] and arr[mid], then advance both low++ and mid++.`,
+            });
+            [arr[low], arr[mid]] = [arr[mid], arr[low]];
+            low++;
+            mid++;
+          } else if (arr[mid] === 1) {
+            steps.push({
+              array: [...arr],
+              pointers: { [low]: { name: "low", class: "ptr-left" }, [mid]: { name: "mid", class: "ptr-mid" }, [high]: { name: "high", class: "ptr-right" } },
+              activeIndices: { [mid]: "active-mid" },
+              vars: { "low": low, "mid": mid, "high": high, "val": arr[mid] },
+              explanation: `arr[mid] is 1! Element is in its correct middle partition. Advance mid++.`,
+            });
+            mid++;
+          } else {
+            steps.push({
+              array: [...arr],
+              pointers: { [low]: { name: "low", class: "ptr-left" }, [mid]: { name: "mid", class: "ptr-mid" }, [high]: { name: "high", class: "ptr-right" } },
+              activeIndices: { [mid]: "active-mid", [high]: "active-right" },
+              vars: { "low": low, "mid": mid, "high": high, "val": arr[mid] },
+              explanation: `arr[mid] is 2! Swap arr[mid] with arr[high], then decrement high--. (Do NOT advance mid yet as swapped element needs checking).`,
+            });
+            [arr[mid], arr[high]] = [arr[high], arr[mid]];
+            high--;
+          }
+        }
+        steps.push({
+          array: [...arr],
+          pointers: {},
+          activeIndices: Object.fromEntries(arr.map((_, i) => [i, "matched"])),
+          vars: { "result": `[${arr.join(", ")}]` },
+          explanation: `🎯 Dutch National Flag completed! Array partitioned into 0s, 1s, and 2s in-place with O(N) time and O(1) space.`,
+        });
+        return steps;
+      }
+
+      // 4. Binary Search
+      if (titleLower.includes("binary search") || titleLower.includes("search")) {
+        const arr = (customArr || [1, 3, 5, 7, 9, 11, 13]).sort((a, b) => a - b);
+        const target = customTarget !== null ? customTarget : 7;
+        const steps = [];
+        let low = 0, high = arr.length - 1;
+        let found = false;
+
+        while (low <= high) {
+          const mid = Math.floor(low + (high - low) / 2);
+          if (arr[mid] === target) {
+            steps.push({
+              array: [...arr],
+              pointers: { [low]: { name: "low", class: "ptr-left" }, [mid]: { name: "mid", class: "ptr-mid" }, [high]: { name: "high", class: "ptr-right" } },
+              activeIndices: { [mid]: "matched" },
+              vars: { "low": low, "high": high, "mid": mid, "arr[mid]": arr[mid], "target": target },
+              explanation: `🎯 Target match found at index ${mid}! arr[${mid}] = ${arr[mid]} == ${target}. Binary search finished in O(log N) iterations.`,
+            });
+            found = true;
+            break;
+          } else if (arr[mid] < target) {
+            steps.push({
+              array: [...arr],
+              pointers: { [low]: { name: "low", class: "ptr-left" }, [mid]: { name: "mid", class: "ptr-mid" }, [high]: { name: "high", class: "ptr-right" } },
+              activeIndices: { [mid]: "active-mid" },
+              vars: { "low": low, "high": high, "mid": mid, "arr[mid]": arr[mid], "target": target },
+              explanation: `arr[mid] = ${arr[mid]} < ${target}. Target lies in right partition. Advance low = mid + 1.`,
+            });
+            low = mid + 1;
+          } else {
+            steps.push({
+              array: [...arr],
+              pointers: { [low]: { name: "low", class: "ptr-left" }, [mid]: { name: "mid", class: "ptr-mid" }, [high]: { name: "high", class: "ptr-right" } },
+              activeIndices: { [mid]: "active-mid" },
+              vars: { "low": low, "high": high, "mid": mid, "arr[mid]": arr[mid], "target": target },
+              explanation: `arr[mid] = ${arr[mid]} > ${target}. Target lies in left partition. Decrement high = mid - 1.`,
+            });
+            high = mid - 1;
+          }
+        }
+        if (!found) {
+          steps.push({
+            array: [...arr],
+            pointers: {},
+            activeIndices: {},
+            vars: { "target": target, "result": "Not Found (-1)" },
+            explanation: `Pointers crossed (low > high). Target ${target} does not exist in the array.`,
+          });
+        }
+        return steps;
+      }
+
+      // 5. Default / General In-Place Swapping or Traversal
+      const arr = customArr || [1, 2, 3, 4, 5];
+      return [
+        {
+          array: arr,
+          pointers: { 0: { name: "ptr", class: "ptr-left" } },
+          activeIndices: { 0: "active-left" },
+          vars: { "index": 0, "val": arr[0] },
+          explanation: `Visual dry-run for ${sol.title}. Invariants: Time ${sol.time_complexity}, Space ${sol.space_complexity}.`,
+        },
+        {
+          array: arr,
+          pointers: { [arr.length - 1]: { name: "end", class: "ptr-right" } },
+          activeIndices: { [arr.length - 1]: "matched" },
+          vars: { "index": arr.length - 1, "val": arr[arr.length - 1] },
+          explanation: `Completed walkthrough across ${arr.length} elements.`,
+        },
+      ];
+    }
+
+    if (btnDryRunCustom) {
+      btnDryRunCustom.addEventListener("click", () => {
+        if (!state.currentDsa) return;
+        const rawArr = dryRunCustomInput.value.trim();
+        const rawTarget = dryRunCustomTarget.value.trim();
+        if (!rawArr) return;
+
+        const parsedArr = rawArr.split(/[\s,]+/).map(v => parseInt(v.trim())).filter(v => !isNaN(v));
+        const parsedTarget = rawTarget !== "" ? parseInt(rawTarget) : null;
+        if (parsedArr.length === 0) {
+          alert("Please provide valid integers in the custom array.");
+          return;
+        }
+
+        state.dryRun.steps = generateDryRunSteps(state.currentDsa, parsedArr, parsedTarget);
+        state.dryRun.currentStepIdx = 0;
+        renderDryRunStep();
+      });
+    }
+
+    function renderDryRunStep() {
+      const { steps, currentStepIdx } = state.dryRun;
+      if (!steps || steps.length === 0) {
+        dryRunBoard.innerHTML = "<span style='font-size:11px;color:var(--ink-muted);'>No trace steps available.</span>";
+        return;
+      }
+      const step = steps[currentStepIdx];
+      dryRunStepBadge.textContent = `Step ${currentStepIdx + 1} of ${steps.length}`;
+
+      // Render cells
+      dryRunBoard.innerHTML = "";
+      step.array.forEach((val, idx) => {
+        const cell = document.createElement("div");
+        cell.className = "dry-cell";
+
+        const idxSpan = document.createElement("span");
+        idxSpan.className = "cell-idx";
+        idxSpan.textContent = idx;
+        cell.appendChild(idxSpan);
+
+        const valDiv = document.createElement("div");
+        valDiv.className = `cell-val ${step.activeIndices[idx] || ""}`;
+        valDiv.textContent = val;
+        cell.appendChild(valDiv);
+
+        if (step.pointers[idx]) {
+          const ptr = step.pointers[idx];
+          const ptrDiv = document.createElement("div");
+          ptrDiv.className = `cell-pointer ${ptr.class}`;
+          ptrDiv.innerHTML = `<span>▲</span><span>${ptr.name}</span>`;
+          cell.appendChild(ptrDiv);
+        }
+
+        dryRunBoard.appendChild(cell);
+      });
+
+      // Render variables
+      dryRunVars.innerHTML = "";
+      for (const [k, v] of Object.entries(step.vars || {})) {
+        const chip = document.createElement("span");
+        chip.className = "var-chip";
+        chip.innerHTML = `${k}: <strong>${v}</strong>`;
+        dryRunVars.appendChild(chip);
+      }
+
+      // Render explanation
+      dryRunExplanation.textContent = step.explanation;
+
+      // Nav button states
+      btnTracePrev.disabled = currentStepIdx === 0;
+      btnTraceNext.disabled = currentStepIdx === steps.length - 1;
+    }
+
+    function initDryRun(sol) {
+      if (state.dryRun.timer) {
+        clearInterval(state.dryRun.timer);
+        state.dryRun.timer = null;
+        state.dryRun.isPlaying = false;
+        btnTracePlay.textContent = "▶ Auto";
+      }
+      state.dryRun.steps = generateDryRunSteps(sol);
+      state.dryRun.currentStepIdx = 0;
+      if (dryRunCustomInput) dryRunCustomInput.value = "";
+      if (dryRunCustomTarget) dryRunCustomTarget.value = "";
+      renderDryRunStep();
+    }
+
+    btnTracePrev.addEventListener("click", () => {
+      if (state.dryRun.currentStepIdx > 0) {
+        state.dryRun.currentStepIdx--;
+        renderDryRunStep();
+      }
+    });
+
+    btnTraceNext.addEventListener("click", () => {
+      if (state.dryRun.currentStepIdx < state.dryRun.steps.length - 1) {
+        state.dryRun.currentStepIdx++;
+        renderDryRunStep();
+      }
+    });
+
+    btnTraceReset.addEventListener("click", () => {
+      state.dryRun.currentStepIdx = 0;
+      renderDryRunStep();
+    });
+
+    btnTracePlay.addEventListener("click", () => {
+      if (state.dryRun.isPlaying) {
+        clearInterval(state.dryRun.timer);
+        state.dryRun.timer = null;
+        state.dryRun.isPlaying = false;
+        btnTracePlay.textContent = "▶ Auto";
+      } else {
+        state.dryRun.isPlaying = true;
+        btnTracePlay.textContent = "⏸ Pause";
+        const delay = parseInt(dryRunSpeed ? dryRunSpeed.value : 1200) || 1200;
+        state.dryRun.timer = setInterval(() => {
+          if (state.dryRun.currentStepIdx < state.dryRun.steps.length - 1) {
+            state.dryRun.currentStepIdx++;
+            renderDryRunStep();
+          } else {
+            clearInterval(state.dryRun.timer);
+            state.dryRun.timer = null;
+            state.dryRun.isPlaying = false;
+            btnTracePlay.textContent = "▶ Auto";
+          }
+        }, delay);
+      }
+    });
+
+    // Populate drawer with problem info
+    function updateDrawerContent(sol) {
+      if (!sol) {
+        algoBanner.classList.remove("active");
+        btnPlayerDrawer.style.display = "none";
+        state.currentDsa = null;
+        return;
+      }
+      state.currentDsa = sol;
+      state.editedCode = {}; // Reset edited code cache on problem switch
+      drawerEdgeCasesBox.classList.remove("visible");
+
+      // Update banner
+      bannerAlgoName.textContent = sol.title;
+      bannerAlgoTopic.textContent = sol.topic.replace(/^\d+\./, "");
+      bannerAlgoTc.textContent = `Time: ${sol.time_complexity}`;
+      bannerAlgoSc.textContent = `Space: ${sol.space_complexity}`;
+      algoBanner.classList.add("active");
+      btnPlayerDrawer.style.display = "inline-flex";
+
+      // Update drawer
+      drawerAlgoTitle.textContent = sol.title;
+      drawerTopicBadge.textContent = sol.topic;
+      drawerTcBadge.textContent = `Time: ${sol.time_complexity}`;
+      drawerScBadge.textContent = `Space: ${sol.space_complexity}`;
+      drawerApproachText.textContent = sol.approach;
+      drawerQuestionText.textContent = sol.question;
+      renderDrawerCode();
+      drawerConsoleBox.classList.remove("visible");
+      loadGrillQuestion();
+      initDryRun(sol);
+      loadProblemNotes(sol);
+    }
+
+    // Personal Revision Notes Persistence
+    function getProblemNoteKey(sol) {
+      if (!sol) return "";
+      const base = sol.id || sol.title.toLowerCase().replace(/[^a-z0-9]/g, '_');
+      return "dsa_note_" + base;
+    }
+
+    let notesSaveTimeout = null;
+    function loadProblemNotes(sol) {
+      if (!drawerNotesInput) return;
+      const key = getProblemNoteKey(sol);
+      const saved = key ? (localStorage.getItem(key) || "") : "";
+      drawerNotesInput.value = saved;
+      updateNotesCharCount();
+      if (drawerNotesStatus) drawerNotesStatus.classList.remove("visible");
+    }
+
+    function updateNotesCharCount() {
+      if (!drawerNotesCounter || !drawerNotesInput) return;
+      const len = drawerNotesInput.value.length;
+      drawerNotesCounter.textContent = `${len} char${len === 1 ? '' : 's'}`;
+    }
+
+    if (drawerNotesInput) {
+      drawerNotesInput.addEventListener("input", () => {
+        if (!state.currentDsa) return;
+        const key = getProblemNoteKey(state.currentDsa);
+        if (!key) return;
+        localStorage.setItem(key, drawerNotesInput.value);
+        updateNotesCharCount();
+        if (drawerNotesStatus) {
+          drawerNotesStatus.classList.add("visible");
+          if (notesSaveTimeout) clearTimeout(notesSaveTimeout);
+          notesSaveTimeout = setTimeout(() => {
+            drawerNotesStatus.classList.remove("visible");
+          }, 1500);
+        }
+      });
+    }
+
+    if (btnNotesTemplate) {
+      btnNotesTemplate.addEventListener("click", () => {
+        if (!drawerNotesInput) return;
+        const template = `• Core Intuition / Invariant: \n• Time Complexity Pitfalls: \n• Edge Cases to Watch: \n• Common Traps & Bugs: `;
+        if (!drawerNotesInput.value.trim()) {
+          drawerNotesInput.value = template;
+        } else {
+          drawerNotesInput.value = drawerNotesInput.value.trimEnd() + "\n\n" + template;
+        }
+        drawerNotesInput.dispatchEvent(new Event("input"));
+        drawerNotesInput.focus();
+      });
+    }
+
+    // Seek YouTube Player (-5s lead so playback begins right as the thought starts)
+    function seekPlayer(videoId, sec, label, dsaSnippet) {
+      const actualSec = Math.max(0, sec - 5);
+      ytPlayer.src = `https://www.youtube.com/embed/${videoId}?start=${actualSec}&autoplay=1`;
+      state.currentVideoId = videoId;
+      if (label) {
+        playerStatusText.textContent = `Playing: ${label}`;
+      }
+
+      // Update whiteboard keyframe thumbnails
+      const kf1 = document.getElementById("kf-img-1");
+      const kf2 = document.getElementById("kf-img-2");
+      const kf3 = document.getElementById("kf-img-3");
+      if (kf1) kf1.src = `https://img.youtube.com/vi/${videoId}/1.jpg`;
+      if (kf2) kf2.src = `https://img.youtube.com/vi/${videoId}/2.jpg`;
+      if (kf3) kf3.src = `https://img.youtube.com/vi/${videoId}/3.jpg`;
+
+      // Highlight active card
+      document.querySelectorAll(".moment-card").forEach(c => {
+        c.classList.toggle("active", c.dataset.vid === videoId && parseInt(c.dataset.sec) === sec);
+      });
+      // Dynamically update the code drawer to match this specific video's algorithm!
+      if (dsaSnippet) {
+        updateDrawerContent(dsaSnippet);
+      } else if (state.resultsMap && state.resultsMap[videoId] && state.resultsMap[videoId].dsa_snippet) {
+        updateDrawerContent(state.resultsMap[videoId].dsa_snippet);
+      }
+    }
+
+    // Whiteboard keyframe click listeners
+    [1, 2, 3].forEach(idx => {
+      const item = document.getElementById(`kf-item-${idx}`);
+      if (item) {
+        item.addEventListener("click", () => {
+          const vid = state.currentVideoId || "UXDSeD9mN-k";
+          const targetSec = idx === 1 ? 300 : idx === 2 ? 900 : 1500;
+          seekPlayer(vid, targetSec, `Keyframe ${idx} (~${Math.floor(targetSec/60)}m)`);
+        });
+      }
+    });
+
+    function escapeHtml(str) {
+      return (str || "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+
+    // Execute Search & Answer
+    async function executeSearch() {
+      const q = searchInput.value.trim();
+      if (!q) return;
+      state.query = q;
+
+      // 1. Search (Moments + DSA Problem)
+      try {
+        const sRes = await fetch(`/api/search?q=${encodeURIComponent(q)}&k=5`);
+        const sData = await sRes.json();
+
+        momentsCount.textContent = `${sData.total_found} moments`;
+        momentsList.innerHTML = "";
+        state.resultsMap = {};
+
+        if (!sData.results || sData.results.length === 0) {
+          momentsList.innerHTML = `<p style="color: var(--ink-muted); font-size: 13px;">No direct lecture moments found.</p>`;
+          updateDrawerContent(sData.dsa_snippet);
+        } else {
+          sData.results.forEach((r, idx) => {
+            state.resultsMap[r.video_id] = r;
+            const card = document.createElement("div");
+            card.className = `moment-card ${idx === 0 ? 'active' : ''}`;
+            card.dataset.vid = r.video_id;
+            card.dataset.sec = r.seek_sec;
+            card.innerHTML = `
+              <div class="moment-thumb-box">
+                <img class="moment-thumb-img" src="https://img.youtube.com/vi/${r.video_id}/hqdefault.jpg" alt="${escapeHtml(r.video_title)}" loading="lazy" />
+                <div class="moment-thumb-overlay">
+                  <div class="moment-thumb-play">▶</div>
+                  <span class="moment-thumb-badge">⏱ ${r.timestamp_display}</span>
+                </div>
+              </div>
+              <div class="moment-main">
+                <div class="moment-top">
+                  <span class="moment-lecture-title" title="${escapeHtml(r.video_title)}">${escapeHtml(r.video_title)}</span>
+                  <div class="moment-actions">
+                    <button class="btn-card-action btn-card-trace" title="Open Whiteboard Pointer Trace">🎨 Whiteboard</button>
+                    <button class="btn-card-action btn-card-code" title="View Code Solution">&lt;/&gt; Code</button>
+                  </div>
+                </div>
+                <p class="moment-text">${escapeHtml(r.snippet.slice(0, 200))}...</p>
+              </div>
+            `;
+
+            // Clicking card seeks video
+            card.addEventListener("click", () => {
+              seekPlayer(r.video_id, r.seek_sec, `${r.video_title} (${r.timestamp_display})`, r.dsa_snippet);
+            });
+
+            // Clicking 🎨 Whiteboard opens drawer, scrolls to simulator, and auto-starts trace
+            const traceBtn = card.querySelector(".btn-card-trace");
+            traceBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              seekPlayer(r.video_id, r.seek_sec, `${r.video_title} (${r.timestamp_display})`, r.dsa_snippet);
+              openDrawer();
+              const dryRunContainer = document.getElementById("dry-run-container");
+              if (dryRunContainer) {
+                setTimeout(() => {
+                  dryRunContainer.scrollIntoView({ behavior: "smooth", block: "center" });
+                  const playBtn = document.getElementById("btn-trace-play");
+                  if (playBtn && !state.dryRun.isPlaying) {
+                    playBtn.click();
+                  }
+                }, 300);
+              }
+            });
+
+            // Clicking </> Code button seeks AND opens drawer
+            const codeBtn = card.querySelector(".btn-card-code");
+            codeBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              seekPlayer(r.video_id, r.seek_sec, `${r.video_title} (${r.timestamp_display})`, r.dsa_snippet);
+              openDrawer();
+            });
+
+            momentsList.appendChild(card);
+          });
+
+          // Sync player and code drawer with the searched problem!
+          const first = sData.results[0];
+          const chosenDsa = sData.dsa_snippet || first.dsa_snippet;
+          seekPlayer(first.video_id, first.seek_sec, `${first.video_title} (${first.timestamp_display})`, chosenDsa);
+        }
+
+      } catch (err) {
+        console.error("Search failed:", err);
+      }
+
+      // 2. Answer (Grounded Synthesis)
+      try {
+        const aRes = await fetch("/api/answer", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            query: q,
+            provider: (state.provider === "local" || state.apiKey) ? state.provider : "local",
+            api_key: state.apiKey,
+            base_url: state.baseUrl,
+          }),
+        });
+        const aData = await aRes.json();
+
+        if (aData.provider === "local") {
+          providerBadge.textContent = "⚡ LOCAL RTX 5050";
+          providerBadge.style.color = "var(--brand-accent)";
+        } else {
+          providerBadge.textContent = aData.provider ? aData.provider.toUpperCase() : "EXTRACTIVE";
+          providerBadge.style.color = "";
+        }
+        answerBullets.innerHTML = "";
+
+        if (!aData.bullets || aData.bullets.length === 0) {
+          answerBullets.innerHTML = `<p style="color: var(--ink-muted); font-size: 13px;">${aData.message || 'No direct answer available.'}</p>`;
+        } else {
+          aData.bullets.forEach(b => {
+            const div = document.createElement("div");
+            div.className = "answer-bullet";
+            let cits = "";
+            (b.citations || []).forEach(c => {
+              cits += `<button class="citation-btn" onclick="seekPlayer('${c.video_id}', ${c.seek_sec}, '${c.video_title} (${c.timestamp_display})')">▶ ${c.timestamp_display}</button>`;
+            });
+            div.innerHTML = `• ${escapeHtml(b.text)} ${cits}`;
+            answerBullets.appendChild(div);
+          });
+        }
+
+      } catch (err) {
+        console.error("Answer failed:", err);
+      }
+    }
+
+    // Input handlers
+    searchInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") executeSearch();
+    });
+
+    document.querySelectorAll(".chip-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        searchInput.value = btn.dataset.q;
+        executeSearch();
+      });
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "/" && document.activeElement !== searchInput) {
+        e.preventDefault();
+        searchInput.focus();
+        searchInput.select();
+      }
+    });
+
+    function syncModalProviderUI() {
+      const isLocal = modalProvider.value === "local";
+      const isCustom = modalProvider.value === "custom";
+      if (localInfoGroup) localInfoGroup.style.display = isLocal ? "block" : "none";
+      if (apiKeyGroup) apiKeyGroup.style.display = isLocal ? "none" : "block";
+      if (customUrlGroup) customUrlGroup.style.display = isCustom ? "block" : "none";
+    }
+
+    // Key Modal events
+    openKeyModal.addEventListener("click", () => {
+      modalProvider.value = state.provider;
+      modalApiKey.value = state.apiKey;
+      modalBaseUrl.value = state.baseUrl;
+      syncModalProviderUI();
+      modalFeedback.className = "validation-feedback";
+      modalFeedback.style.display = "none";
+      keyModal.classList.add("open");
+    });
+
+    closeKeyModal.addEventListener("click", () => keyModal.classList.remove("open"));
+
+    modalProvider.addEventListener("change", syncModalProviderUI);
+
+    modalValidateBtn.addEventListener("click", async () => {
+      const p = modalProvider.value;
+      const k = modalApiKey.value.trim();
+      const b = modalBaseUrl.value.trim();
+
+      if (p === "local") {
+        modalFeedback.className = "validation-feedback success";
+        modalFeedback.textContent = "✅ Connected to Local RTX 5050 Striver Model (Offline)!";
+        modalFeedback.style.display = "block";
+        state.provider = "local";
+        localStorage.setItem("dsa_provider", "local");
+        updateKeyStatusUI();
+        setTimeout(() => keyModal.classList.remove("open"), 1000);
+        return;
+      }
+
+      modalValidateBtn.textContent = "Verifying...";
+      modalValidateBtn.disabled = true;
+
+      try {
+        const res = await fetch("/api/validate-key", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ provider: p, api_key: k, base_url: b }),
+        });
+        const data = await res.json();
+
+        if (data.valid) {
+          modalFeedback.className = "validation-feedback success";
+          modalFeedback.textContent = `✅ ${data.message}`;
+          state.provider = p;
+          state.apiKey = k;
+          state.baseUrl = b;
+          localStorage.setItem("dsa_provider", p);
+          localStorage.setItem("dsa_api_key", k);
+          localStorage.setItem("dsa_base_url", b);
+          updateKeyStatusUI();
+          setTimeout(() => keyModal.classList.remove("open"), 1200);
+        } else {
+          modalFeedback.className = "validation-feedback error";
+          modalFeedback.textContent = `❌ ${data.error || 'Failed to authenticate key.'}`;
+        }
+      } catch (err) {
+        modalFeedback.className = "validation-feedback error";
+        modalFeedback.textContent = `❌ Network Error: ${err.message}`;
+      } finally {
+        modalValidateBtn.textContent = "Verify & Connect Key";
+        modalValidateBtn.disabled = false;
+      }
+    });
+
+    // -------------------------------------------------------------
+    // ROADMAP.SH INSPIRED STRIVER A2Z TOPIC CHECKLIST ENGINE
+    // -------------------------------------------------------------
+    state.roadmap = {
+      data: null,
+      completed: new Set(JSON.parse(localStorage.getItem("dsa_completed_problems") || "[]")),
+      starred: new Set(JSON.parse(localStorage.getItem("dsa_starred_problems") || "[]")),
+      activeFilter: "all",
+      searchQuery: "",
+      collapsedTopics: new Set(JSON.parse(localStorage.getItem("dsa_collapsed_topics") || "[]")),
+    };
+
+    const navBtnSearch = document.getElementById("nav-btn-search");
+    const navBtnRoadmap = document.getElementById("nav-btn-roadmap");
+    const navRoadmapBadge = document.getElementById("nav-roadmap-badge");
+    const viewSearch = document.getElementById("view-search");
+    const viewRoadmap = document.getElementById("view-roadmap");
+
+    const statTotalProgress = document.getElementById("stat-total-progress");
+    const statPctProgress = document.getElementById("stat-pct-progress");
+    const statEasyProgress = document.getElementById("stat-easy-progress");
+    const statMedProgress = document.getElementById("stat-med-progress");
+    const statHardProgress = document.getElementById("stat-hard-progress");
+    const statStarredCount = document.getElementById("stat-starred-count");
+    const roadmapMainProgressBar = document.getElementById("roadmap-main-progress-bar");
+
+    const roadmapSearchInput = document.getElementById("roadmap-search-input");
+    const topicJumperStrip = document.getElementById("topic-jumper-strip");
+    const roadmapTopicsGrid = document.getElementById("roadmap-topics-grid");
+    const btnExportCheatsheet = document.getElementById("btn-export-cheatsheet");
+
+    function switchView(viewName) {
+      if (viewName === "roadmap") {
+        viewSearch.style.display = "none";
+        viewRoadmap.style.display = "flex";
+        navBtnRoadmap.classList.add("active");
+        navBtnSearch.classList.remove("active");
+        if (!state.roadmap.data) {
+          loadRoadmapData();
+        }
+      } else {
+        viewRoadmap.style.display = "none";
+        viewSearch.style.display = "flex";
+        navBtnSearch.classList.add("active");
+        navBtnRoadmap.classList.remove("active");
+      }
+    }
+
+    if (navBtnSearch) navBtnSearch.addEventListener("click", () => switchView("search"));
+    if (navBtnRoadmap) navBtnRoadmap.addEventListener("click", () => switchView("roadmap"));
+
+    async function loadRoadmapData() {
+      try {
+        const res = await fetch("/api/roadmap");
+        const data = await res.json();
+        state.roadmap.data = data;
+        renderRoadmapJumper();
+        renderRoadmap();
+        updateRoadmapStats();
+      } catch (err) {
+        roadmapTopicsGrid.innerHTML = `<div style="text-align:center;color:#ef4444;padding:30px;">Failed to load roadmap: ${err.message}</div>`;
+      }
+    }
+
+    function renderRoadmapJumper() {
+      if (!state.roadmap.data || !state.roadmap.data.topics) return;
+      topicJumperStrip.innerHTML = "";
+      state.roadmap.data.topics.forEach(t => {
+        const chip = document.createElement("button");
+        chip.className = "topic-jump-chip";
+        chip.innerHTML = `<span>${t.icon}</span> <span>${escapeHtml(t.name)}</span> <span style="font-family:var(--font-mono);font-size:10px;color:var(--ink-muted);">(${t.total_count})</span>`;
+        chip.addEventListener("click", () => {
+          const targetCard = document.getElementById(`topic-card-${t.raw_name}`);
+          if (targetCard) {
+            targetCard.classList.remove("collapsed");
+            targetCard.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+        topicJumperStrip.appendChild(chip);
+      });
+    }
+
+    function updateRoadmapStats() {
+      if (!state.roadmap.data || !state.roadmap.data.topics) return;
+      let total = 0, completed = 0;
+      let easyTotal = 0, easyDone = 0;
+      let medTotal = 0, medDone = 0;
+      let hardTotal = 0, hardDone = 0;
+
+      state.roadmap.data.topics.forEach(t => {
+        t.subtopics.forEach(sub => {
+          sub.problems.forEach(p => {
+            total++;
+            const isDone = state.roadmap.completed.has(p.id);
+            if (isDone) completed++;
+
+            const d = (p.difficulty || "medium").toLowerCase();
+            if (d.includes("easy")) {
+              easyTotal++;
+              if (isDone) easyDone++;
+            } else if (d.includes("hard")) {
+              hardTotal++;
+              if (isDone) hardDone++;
+            } else {
+              medTotal++;
+              if (isDone) medDone++;
+            }
+          });
+        });
+      });
+
+      const pct = total > 0 ? ((completed / total) * 100).toFixed(1) : 0;
+      statTotalProgress.textContent = `${completed} / ${total}`;
+      statPctProgress.textContent = `${pct}%`;
+      statEasyProgress.textContent = `${easyDone} / ${easyTotal}`;
+      statMedProgress.textContent = `${medDone} / ${medTotal}`;
+      statHardProgress.textContent = `${hardDone} / ${hardTotal}`;
+      statStarredCount.textContent = state.roadmap.starred.size;
+
+      roadmapMainProgressBar.style.width = `${pct}%`;
+      navRoadmapBadge.textContent = `${completed}/${total}`;
+
+      // Update per-topic badges
+      state.roadmap.data.topics.forEach(t => {
+        let tDone = 0;
+        t.subtopics.forEach(sub => {
+          sub.problems.forEach(p => {
+            if (state.roadmap.completed.has(p.id)) tDone++;
+          });
+        });
+        const badge = document.getElementById(`topic-prog-${t.raw_name}`);
+        if (badge) {
+          const tPct = t.total_count > 0 ? Math.round((tDone / t.total_count) * 100) : 0;
+          badge.textContent = `${tDone}/${t.total_count} (${tPct}%)`;
+          if (tDone === t.total_count && t.total_count > 0) {
+            badge.style.background = "#dcfce7";
+            badge.style.color = "#15803d";
+            badge.style.borderColor = "#86efac";
+          } else {
+            badge.style.background = "var(--bg)";
+            badge.style.color = "var(--ink-secondary)";
+            badge.style.borderColor = "var(--border)";
+          }
+        }
+      });
+    }
+
+    function renderRoadmap() {
+      if (!state.roadmap.data || !state.roadmap.data.topics) return;
+      roadmapTopicsGrid.innerHTML = "";
+
+      const q = state.roadmap.searchQuery.toLowerCase().trim();
+      const filter = state.roadmap.activeFilter;
+
+      state.roadmap.data.topics.forEach(t => {
+        // Topic card container
+        const card = document.createElement("div");
+        card.className = `topic-card ${state.roadmap.collapsedTopics.has(t.raw_name) && !q ? 'collapsed' : ''}`;
+        card.id = `topic-card-${t.raw_name}`;
+
+        let topicVisibleCount = 0;
+        const subtopicsHtml = t.subtopics.map(sub => {
+          const problemsHtml = sub.problems.filter(p => {
+            const isCompleted = state.roadmap.completed.has(p.id);
+            const isStarred = state.roadmap.starred.has(p.id);
+
+            // Filter checks
+            if (filter === "completed" && !isCompleted) return false;
+            if (filter === "unsolved" && isCompleted) return false;
+            if (filter === "starred" && !isStarred) return false;
+
+            // Search query check
+            if (q) {
+              const matchTitle = p.title.toLowerCase().includes(q);
+              const matchTopic = (p.topic || "").toLowerCase().includes(q);
+              const matchSub = (p.subtopic || "").toLowerCase().includes(q);
+              const matchDiff = (p.difficulty || "").toLowerCase().includes(q);
+              if (!matchTitle && !matchTopic && !matchSub && !matchDiff) return false;
+            }
+            return true;
+          }).map(p => {
+            topicVisibleCount++;
+            const isDone = state.roadmap.completed.has(p.id);
+            const isStar = state.roadmap.starred.has(p.id);
+            const diffClass = (p.difficulty || "medium").toLowerCase().includes("easy") ? "diff-easy" : (p.difficulty || "").toLowerCase().includes("hard") ? "diff-hard" : "diff-medium";
+
+            return `
+              <div class="problem-item ${isDone ? 'completed' : ''}" id="prob-item-${p.id}">
+                <div class="problem-item-left">
+                  <input type="checkbox" class="chk-problem" data-id="${p.id}" ${isDone ? 'checked' : ''} title="Mark problem as completed" />
+                  <button class="btn-star-problem ${isStar ? 'starred' : ''}" data-id="${p.id}" title="Star problem for interview review">${isStar ? '★' : '☆'}</button>
+                  <span class="problem-title-text" data-title="${escapeHtml(p.title)}" title="Jump to lecture for ${escapeHtml(p.title)}">${escapeHtml(p.title)}</span>
+                </div>
+                <div class="problem-item-right">
+                  <span class="diff-badge ${diffClass}">${p.difficulty}</span>
+                  <span class="tc-chip" title="Time Complexity">${p.time_complexity || 'O(N)'}</span>
+                  <button class="btn-prob-jump" data-title="${escapeHtml(p.title)}" title="Jump to exact lecture moment">▶ Jump</button>
+                  <button class="btn-prob-code" data-id="${p.id}" data-title="${escapeHtml(p.title)}" title="Open multi-language code solution">&lt;/&gt; Code</button>
+                </div>
+              </div>
+            `;
+          }).join("");
+
+          if (!problemsHtml) return "";
+
+          return `
+            <div class="subtopic-group">
+              <div class="subtopic-title">
+                <span>${escapeHtml(sub.name)}</span>
+                <span style="font-weight:normal;font-size:10.5px;color:var(--ink-muted);">${sub.count} questions</span>
+              </div>
+              <div class="problem-list">
+                ${problemsHtml}
+              </div>
+            </div>
+          `;
+        }).join("");
+
+        // If searching or filtering and no problems match this topic, skip rendering topic card
+        if ((q || filter !== "all") && topicVisibleCount === 0) {
+          return;
+        }
+
+        card.innerHTML = `
+          <div class="topic-header" data-topic="${t.raw_name}">
+            <div class="topic-header-left">
+              <span class="topic-icon">${t.icon}</span>
+              <span class="topic-name">${escapeHtml(t.name)}</span>
+            </div>
+            <div class="topic-header-right">
+              <span id="topic-prog-${t.raw_name}" class="topic-progress-badge">0/${t.total_count}</span>
+              <span class="topic-chevron">▼</span>
+            </div>
+          </div>
+          <div class="topic-body">
+            ${subtopicsHtml || '<div style="color:var(--ink-muted);font-size:12px;">No matching problems in this topic.</div>'}
+          </div>
+        `;
+
+        // Wire topic expand/collapse
+        const header = card.querySelector(".topic-header");
+        header.addEventListener("click", () => {
+          card.classList.toggle("collapsed");
+          if (card.classList.contains("collapsed")) {
+            state.roadmap.collapsedTopics.add(t.raw_name);
+          } else {
+            state.roadmap.collapsedTopics.delete(t.raw_name);
+          }
+          localStorage.setItem("dsa_collapsed_topics", JSON.stringify([...state.roadmap.collapsedTopics]));
+        });
+
+        // Wire problem checkboxes
+        card.querySelectorAll(".chk-problem").forEach(chk => {
+          chk.addEventListener("change", (e) => {
+            const pid = e.target.dataset.id;
+            const item = document.getElementById(`prob-item-${pid}`);
+            if (e.target.checked) {
+              state.roadmap.completed.add(pid);
+              if (item) item.classList.add("completed");
+            } else {
+              state.roadmap.completed.delete(pid);
+              if (item) item.classList.remove("completed");
+            }
+            localStorage.setItem("dsa_completed_problems", JSON.stringify([...state.roadmap.completed]));
+            updateRoadmapStats();
+          });
+        });
+
+        // Wire star buttons
+        card.querySelectorAll(".btn-star-problem").forEach(star => {
+          star.addEventListener("click", (e) => {
+            const pid = e.target.dataset.id;
+            if (state.roadmap.starred.has(pid)) {
+              state.roadmap.starred.delete(pid);
+              e.target.classList.remove("starred");
+              e.target.textContent = "☆";
+            } else {
+              state.roadmap.starred.add(pid);
+              e.target.classList.add("starred");
+              e.target.textContent = "★";
+            }
+            localStorage.setItem("dsa_starred_problems", JSON.stringify([...state.roadmap.starred]));
+            updateRoadmapStats();
+          });
+        });
+
+        // Wire direct Jump to Lecture
+        card.querySelectorAll(".btn-prob-jump, .problem-title-text").forEach(el => {
+          el.addEventListener("click", (e) => {
+            const title = e.currentTarget.dataset.title;
+            if (title) {
+              switchView("search");
+              searchInput.value = title;
+              executeSearch();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          });
+        });
+
+        // Wire pop-out Code
+        card.querySelectorAll(".btn-prob-code").forEach(btn => {
+          btn.addEventListener("click", async (e) => {
+            const title = e.currentTarget.dataset.title;
+            if (!title) return;
+            try {
+              const res = await fetch(`/api/dsa-snippet?title=${encodeURIComponent(title)}`);
+              const data = await res.json();
+              if (data && data.dsa_snippet) {
+                updateDrawerContent(data.dsa_snippet);
+                openDrawer();
+              } else {
+                switchView("search");
+                searchInput.value = title;
+                executeSearch();
+              }
+            } catch {
+              switchView("search");
+              searchInput.value = title;
+              executeSearch();
+            }
+          });
+        });
+
+        roadmapTopicsGrid.appendChild(card);
+      });
+
+      if (roadmapTopicsGrid.children.length === 0) {
+        roadmapTopicsGrid.innerHTML = `
+          <div style="text-align:center;padding:40px;color:var(--ink-muted);font-size:14px;">
+            No problems match the current filter or search query.
+          </div>
+        `;
+      }
+
+      updateRoadmapStats();
+    }
+
+    // Filter pill buttons
+    document.querySelectorAll(".filter-pill-btn").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        document.querySelectorAll(".filter-pill-btn").forEach(b => b.classList.remove("active"));
+        e.currentTarget.classList.add("active");
+        state.roadmap.activeFilter = e.currentTarget.dataset.filter;
+        renderRoadmap();
+      });
+    });
+
+    // Real-time search filter in roadmap
+    if (roadmapSearchInput) {
+      roadmapSearchInput.addEventListener("input", (e) => {
+        state.roadmap.searchQuery = e.target.value;
+        renderRoadmap();
+      });
+    }
+
+    // 1-Click Markdown Revision Cheat Sheet Exporter
+    async function exportCheatSheet() {
+      if (!state.roadmap.data) {
+        await loadRoadmapData();
+      }
+      const data = state.roadmap.data;
+      if (!data || !data.topics) return;
+
+      const dateStr = new Date().toLocaleDateString("en-US", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
+
+      let total = 0, completed = 0;
+      let easyTotal = 0, easyDone = 0;
+      let medTotal = 0, medDone = 0;
+      let hardTotal = 0, hardDone = 0;
+
+      data.topics.forEach(t => {
+        t.subtopics.forEach(sub => {
+          sub.problems.forEach(p => {
+            total++;
+            const isDone = state.roadmap.completed.has(p.id);
+            if (isDone) completed++;
+
+            const d = (p.difficulty || "medium").toLowerCase();
+            if (d.includes("easy")) {
+              easyTotal++;
+              if (isDone) easyDone++;
+            } else if (d.includes("hard")) {
+              hardTotal++;
+              if (isDone) hardDone++;
+            } else {
+              medTotal++;
+              if (isDone) medDone++;
+            }
+          });
+        });
+      });
+
+      const pct = total > 0 ? ((completed / total) * 100).toFixed(1) : "0.0";
+      const starredCount = state.roadmap.starred.size;
+
+      let md = `# 🚀 Striver A2Z DSA — Master Interview Revision Cheat Sheet\n`;
+      md += `*Generated: ${dateStr} | Completed: ${completed}/${total} (${pct}%) | Starred for Revision: ${starredCount}*\n\n`;
+      md += `---\n\n`;
+      md += `## 📊 Preparation Milestones & Metrics\n\n`;
+      md += `| Category | Completed | Total | Percentage |\n`;
+      md += `| :--- | :--- | :--- | :--- |\n`;
+      md += `| **Overall Syllabus** | **${completed}** | **${total}** | **${pct}%** |\n`;
+      md += `| **Easy Problems** | ${easyDone} | ${easyTotal} | ${(easyTotal > 0 ? (easyDone / easyTotal * 100).toFixed(1) : 0)}% |\n`;
+      md += `| **Medium Problems** | ${medDone} | ${medTotal} | ${(medTotal > 0 ? (medDone / medTotal * 100).toFixed(1) : 0)}% |\n`;
+      md += `| **Hard Problems** | ${hardDone} | ${hardTotal} | ${(hardTotal > 0 ? (hardDone / hardTotal * 100).toFixed(1) : 0)}% |\n`;
+      md += `| **Starred for Revision** | ${starredCount} | ${total} | ${(total > 0 ? (starredCount / total * 100).toFixed(1) : 0)}% |\n\n`;
+      md += `---\n\n`;
+
+      // Priority Starred Section
+      if (starredCount > 0) {
+        md += `## ⭐️ Priority Starred Problems (Revisit Before Interviews)\n\n`;
+        data.topics.forEach(t => {
+          t.subtopics.forEach(sub => {
+            sub.problems.forEach(p => {
+              if (state.roadmap.starred.has(p.id)) {
+                const isDone = state.roadmap.completed.has(p.id) ? "✓ Done" : "⏳ Pending";
+                const note = localStorage.getItem("dsa_note_" + p.id) || "";
+                md += `### ⭐ ${p.title} (${p.difficulty})\n`;
+                md += `- **Topic:** ${t.name} > ${sub.name}\n`;
+                md += `- **Complexity:** Time: \`${p.time_complexity || 'O(N)'}\` | Space: \`${p.space_complexity || 'O(1)'}\`\n`;
+                md += `- **Status:** \`${isDone}\`\n`;
+                if (note.trim()) {
+                  md += `- **Personal Revision Notes & Intuition:**\n`;
+                  md += note.split("\n").map(l => `  > ${l}`).join("\n") + "\n";
+                }
+                md += `\n`;
+              }
+            });
+          });
+        });
+        md += `---\n\n`;
+      }
+
+      // Complete Syllabus by Topic
+      md += `## 📚 Complete Topic-by-Topic Syllabus & Notes\n\n`;
+      data.topics.forEach(t => {
+        let tDone = 0;
+        let tTotal = 0;
+        t.subtopics.forEach(sub => {
+          sub.problems.forEach(p => {
+            tTotal++;
+            if (state.roadmap.completed.has(p.id)) tDone++;
+          });
+        });
+
+        md += `### ${t.icon} ${t.name} (${tDone}/${tTotal} Completed)\n\n`;
+
+        t.subtopics.forEach(sub => {
+          md += `#### ${sub.name}\n\n`;
+          sub.problems.forEach(p => {
+            const isDone = state.roadmap.completed.has(p.id);
+            const isStar = state.roadmap.starred.has(p.id);
+            const check = isDone ? "[x]" : "[ ]";
+            const starMark = isStar ? "⭐ " : "";
+            const note = localStorage.getItem("dsa_note_" + p.id) || "";
+
+            md += `- ${check} ${starMark}**${p.title}** \`${p.difficulty}\` — *Time:* \`${p.time_complexity || 'O(N)'}\` | *Space:* \`${p.space_complexity || 'O(1)'}\`\n`;
+            if (note.trim()) {
+              md += note.split("\n").map(l => `  > 📝 ${l}`).join("\n") + "\n";
+            }
+          });
+          md += `\n`;
+        });
+      });
+
+      // Trigger file download
+      const blob = new Blob([md], { type: "text/markdown;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      const sanitizedDate = new Date().toISOString().slice(0, 10);
+      a.download = `Striver_A2Z_DSA_Revision_CheatSheet_${sanitizedDate}.md`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+
+      if (btnExportCheatsheet) {
+        const origText = btnExportCheatsheet.textContent;
+        btnExportCheatsheet.textContent = "Exported ✓";
+        btnExportCheatsheet.style.background = "#16a34a";
+        setTimeout(() => {
+          btnExportCheatsheet.textContent = origText;
+          btnExportCheatsheet.style.background = "#0f172a";
+        }, 2000);
+      }
+    }
+
+    if (btnExportCheatsheet) {
+      btnExportCheatsheet.addEventListener("click", exportCheatSheet);
+    }
+
+    // Initial search
+    executeSearch();
+  </script>
+</body>
+</html>

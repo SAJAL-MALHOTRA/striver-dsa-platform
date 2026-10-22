@@ -1,0 +1,4197 @@
+{
+  "video_id": "MHf6awe89xw",
+  "title": "BS-1. Binary Search Introduction | Real Life Example | Iterative | Recursive | Overflow Cases",
+  "duration_sec": 2007,
+  "segments": [
+    {
+      "start": 2.94,
+      "end": 7.2,
+      "text": "okay so let's get started with binary"
+    },
+    {
+      "start": 4.98,
+      "end": 9.0,
+      "text": "search I'm not going to teach you the"
+    },
+    {
+      "start": 7.2,
+      "end": 10.86,
+      "text": "typical binary search where I take an"
+    },
+    {
+      "start": 9.0,
+      "end": 12.6,
+      "text": "array and I tell you that okay this is"
+    },
+    {
+      "start": 10.86,
+      "end": 14.4,
+      "text": "what binary search means I'm going to"
+    },
+    {
+      "start": 12.6,
+      "end": 16.32,
+      "text": "follow a very structured path in this"
+    },
+    {
+      "start": 14.4,
+      "end": 18.36,
+      "text": "video and that is why the video might be"
+    },
+    {
+      "start": 16.32,
+      "end": 21.42,
+      "text": "slightly longer than the other videos on"
+    },
+    {
+      "start": 18.36,
+      "end": 23.22,
+      "text": "the platform so we will be starting off"
+    },
+    {
+      "start": 21.42,
+      "end": 25.8,
+      "text": "with a real life example and I'll"
+    },
+    {
+      "start": 23.22,
+      "end": 27.9,
+      "text": "explain you how binary search works in a"
+    },
+    {
+      "start": 25.8,
+      "end": 30.42,
+      "text": "real life post that I'll be giving you a"
+    },
+    {
+      "start": 27.9,
+      "end": 32.88,
+      "text": "coding problem example to show you how"
+    },
+    {
+      "start": 30.42,
+      "end": 34.98,
+      "text": "binary search is implemented after that"
+    },
+    {
+      "start": 32.88,
+      "end": 37.56,
+      "text": "I'll be writing the iterative code again"
+    },
+    {
+      "start": 34.98,
+      "end": 38.88,
+      "text": "it won't be any language based I'll be"
+    },
+    {
+      "start": 37.56,
+      "end": 40.8,
+      "text": "writing the pseudo code for the"
+    },
+    {
+      "start": 38.88,
+      "end": 42.48,
+      "text": "iterative version both that I'll be"
+    },
+    {
+      "start": 40.8,
+      "end": 44.04,
+      "text": "adding the recursive code as well to"
+    },
+    {
+      "start": 42.48,
+      "end": 46.56,
+      "text": "show you the recursive implementation"
+    },
+    {
+      "start": 44.04,
+      "end": 48.24,
+      "text": "again that will be language independent"
+    },
+    {
+      "start": 46.56,
+      "end": 50.7,
+      "text": "and I will be writing the pseudo code"
+    },
+    {
+      "start": 48.24,
+      "end": 53.46,
+      "text": "after that I'll be explaining the time"
+    },
+    {
+      "start": 50.7,
+      "end": 55.68,
+      "text": "complexity by showing you the proof of"
+    },
+    {
+      "start": 53.46,
+      "end": 57.18,
+      "text": "it at the end I'll be talking about the"
+    },
+    {
+      "start": 55.68,
+      "end": 59.7,
+      "text": "Overflow case which is very very"
+    },
+    {
+      "start": 57.18,
+      "end": 61.56,
+      "text": "important when it comes to interviews"
+    },
+    {
+      "start": 59.7,
+      "end": 64.44,
+      "text": "now in case you want the C plus plus"
+    },
+    {
+      "start": 61.56,
+      "end": 66.12,
+      "text": "Java Python and JavaScript code you can"
+    },
+    {
+      "start": 64.44,
+      "end": 67.98,
+      "text": "find the link in the description you can"
+    },
+    {
+      "start": 66.12,
+      "end": 70.02,
+      "text": "open that article you can scroll down"
+    },
+    {
+      "start": 67.98,
+      "end": 72.3,
+      "text": "and you'll find the C plus plus Java"
+    },
+    {
+      "start": 70.02,
+      "end": 74.88,
+      "text": "python JavaScript all the code links"
+    },
+    {
+      "start": 72.3,
+      "end": 76.56,
+      "text": "over there so make sure in every video"
+    },
+    {
+      "start": 74.88,
+      "end": 78.42,
+      "text": "in this particular playlist you check"
+    },
+    {
+      "start": 76.56,
+      "end": 80.4,
+      "text": "out the link in the description go to"
+    },
+    {
+      "start": 78.42,
+      "end": 82.08,
+      "text": "the article and find out your code just"
+    },
+    {
+      "start": 80.4,
+      "end": 83.94,
+      "text": "in case you're uncomfortable table you"
+    },
+    {
+      "start": 82.08,
+      "end": 85.68,
+      "text": "can have the code open with parallel"
+    },
+    {
+      "start": 83.94,
+      "end": 89.1,
+      "text": "with this video so that you can follow"
+    },
+    {
+      "start": 85.68,
+      "end": 92.1,
+      "text": "as well so what is binary search it is"
+    },
+    {
+      "start": 89.1,
+      "end": 95.28,
+      "text": "nothing but a searching algorithm in a"
+    },
+    {
+      "start": 92.1,
+      "end": 97.68,
+      "text": "limited search space let me give you an"
+    },
+    {
+      "start": 95.28,
+      "end": 100.26,
+      "text": "example so if I ask you that I'm giving"
+    },
+    {
+      "start": 97.68,
+      "end": 102.98,
+      "text": "you a dictionary okay I'm giving you a"
+    },
+    {
+      "start": 100.26,
+      "end": 106.98,
+      "text": "very very simple dictionary and you know"
+    },
+    {
+      "start": 102.98,
+      "end": 109.62,
+      "text": "dictionary contains all the words now"
+    },
+    {
+      "start": 106.98,
+      "end": 111.84,
+      "text": "in what order are the words please in"
+    },
+    {
+      "start": 109.62,
+      "end": 114.24,
+      "text": "the dictionary first you will find all"
+    },
+    {
+      "start": 111.84,
+      "end": 115.74,
+      "text": "the words with the letter A then with"
+    },
+    {
+      "start": 114.24,
+      "end": 117.42,
+      "text": "the letter B then with the letter c then"
+    },
+    {
+      "start": 115.74,
+      "end": 119.16,
+      "text": "with the letter D then with the letter e"
+    },
+    {
+      "start": 117.42,
+      "end": 120.78,
+      "text": "and so on"
+    },
+    {
+      "start": 119.16,
+      "end": 123.72,
+      "text": "at the end you'll find all the words"
+    },
+    {
+      "start": 120.78,
+      "end": 126.6,
+      "text": "with the letter Z correct now if I ask"
+    },
+    {
+      "start": 123.72,
+      "end": 130.8,
+      "text": "you in the dictionary can you find me"
+    },
+    {
+      "start": 126.6,
+      "end": 133.38,
+      "text": "out the letter Raj"
+    },
+    {
+      "start": 130.8,
+      "end": 135.42,
+      "text": "now what is one of the basic ways to do"
+    },
+    {
+      "start": 133.38,
+      "end": 136.86,
+      "text": "it one of the basic ways is let's assume"
+    },
+    {
+      "start": 135.42,
+      "end": 138.9,
+      "text": "this is dictionary I know this is not"
+    },
+    {
+      "start": 136.86,
+      "end": 141.48,
+      "text": "but let's assume one of the basic ways"
+    },
+    {
+      "start": 138.9,
+      "end": 143.46,
+      "text": "is go to the first page and you say is"
+    },
+    {
+      "start": 141.48,
+      "end": 146.16,
+      "text": "Raj there no then you go to the second"
+    },
+    {
+      "start": 143.46,
+      "end": 149.1,
+      "text": "page is Ross there third page is Raj"
+    },
+    {
+      "start": 146.16,
+      "end": 151.44,
+      "text": "there fourth page and you go on go on by"
+    },
+    {
+      "start": 149.1,
+      "end": 154.02,
+      "text": "every page and at some point you will"
+    },
+    {
+      "start": 151.44,
+      "end": 155.88,
+      "text": "find out Raj in the dictionary now this"
+    },
+    {
+      "start": 154.02,
+      "end": 158.64,
+      "text": "algorithm is known as"
+    },
+    {
+      "start": 155.88,
+      "end": 161.46,
+      "text": "linear search but it basically travels"
+    },
+    {
+      "start": 158.64,
+      "end": 164.04,
+      "text": "from the first till the end in the"
+    },
+    {
+      "start": 161.46,
+      "end": 167.4,
+      "text": "search space where the search space is"
+    },
+    {
+      "start": 164.04,
+      "end": 169.32,
+      "text": "the dictionary entirely but does the"
+    },
+    {
+      "start": 167.4,
+      "end": 172.14,
+      "text": "dictionary have any specific property"
+    },
+    {
+      "start": 169.32,
+      "end": 175.32,
+      "text": "yes it does have it has a property of"
+    },
+    {
+      "start": 172.14,
+      "end": 177.72,
+      "text": "being sorted all the words in the"
+    },
+    {
+      "start": 175.32,
+      "end": 180.0,
+      "text": "dictionary are in the sorted order so"
+    },
+    {
+      "start": 177.72,
+      "end": 182.34,
+      "text": "binary search is an algorithm which is"
+    },
+    {
+      "start": 180.0,
+      "end": 185.4,
+      "text": "always applicable whenever we are"
+    },
+    {
+      "start": 182.34,
+      "end": 186.84,
+      "text": "performing a search in a sorted area in"
+    },
+    {
+      "start": 185.4,
+      "end": 189.42,
+      "text": "a sorted area binary search is"
+    },
+    {
+      "start": 186.84,
+      "end": 191.94,
+      "text": "applicable keep that in mind so I have"
+    },
+    {
+      "start": 189.42,
+      "end": 194.7,
+      "text": "to find out Raj if I have the dictionary"
+    },
+    {
+      "start": 191.94,
+      "end": 197.28,
+      "text": "I have the dictionary I will just open"
+    },
+    {
+      "start": 194.7,
+      "end": 200.22,
+      "text": "it into two halves if I open it into two"
+    },
+    {
+      "start": 197.28,
+      "end": 202.2,
+      "text": "halves I will see some words over here"
+    },
+    {
+      "start": 200.22,
+      "end": 205.68,
+      "text": "see some words over here as well now"
+    },
+    {
+      "start": 202.2,
+      "end": 209.58,
+      "text": "imagine on this side I see something as"
+    },
+    {
+      "start": 205.68,
+      "end": 211.62,
+      "text": "the words with s the words with s so can"
+    },
+    {
+      "start": 209.58,
+      "end": 215.04,
+      "text": "I say something for sure if this side"
+    },
+    {
+      "start": 211.62,
+      "end": 218.04,
+      "text": "has words with s this side will always"
+    },
+    {
+      "start": 215.04,
+      "end": 220.92,
+      "text": "have words with maybe s maybe the"
+    },
+    {
+      "start": 218.04,
+      "end": 224.28,
+      "text": "alphabets after s can I say that I can"
+    },
+    {
+      "start": 220.92,
+      "end": 228.06,
+      "text": "so I know the left side has s so the"
+    },
+    {
+      "start": 224.28,
+      "end": 230.34,
+      "text": "right side will either have S or these"
+    },
+    {
+      "start": 228.06,
+      "end": 233.28,
+      "text": "things correct and everything on the"
+    },
+    {
+      "start": 230.34,
+      "end": 235.44,
+      "text": "left might be a b c d e f all the left"
+    },
+    {
+      "start": 233.28,
+      "end": 238.5,
+      "text": "side might have a b c d all the words"
+    },
+    {
+      "start": 235.44,
+      "end": 240.9,
+      "text": "with that so can I definitely say this"
+    },
+    {
+      "start": 238.5,
+      "end": 243.36,
+      "text": "portion will never have Raj will never"
+    },
+    {
+      "start": 240.9,
+      "end": 245.82,
+      "text": "have Raj I can which portion will have"
+    },
+    {
+      "start": 243.36,
+      "end": 248.28,
+      "text": "Raj the left portion so can I trim down"
+    },
+    {
+      "start": 245.82,
+      "end": 250.68,
+      "text": "my third space to this much only this"
+    },
+    {
+      "start": 248.28,
+      "end": 252.0,
+      "text": "much I can and now again I can do a"
+    },
+    {
+      "start": 250.68,
+      "end": 254.94,
+      "text": "split on it"
+    },
+    {
+      "start": 252.0,
+      "end": 257.22,
+      "text": "so this is a real life example of binary"
+    },
+    {
+      "start": 254.94,
+      "end": 259.5,
+      "text": "search where we split the dictionary"
+    },
+    {
+      "start": 257.22,
+      "end": 262.02,
+      "text": "into half and we're like no it's not on"
+    },
+    {
+      "start": 259.5,
+      "end": 264.36,
+      "text": "the right let's split on the left half"
+    },
+    {
+      "start": 262.02,
+      "end": 267.36,
+      "text": "let's split so that is how binary search"
+    },
+    {
+      "start": 264.36,
+      "end": 270.12,
+      "text": "works so if you splitted it into half"
+    },
+    {
+      "start": 267.36,
+      "end": 272.34,
+      "text": "and you did not find because s you found"
+    },
+    {
+      "start": 270.12,
+      "end": 274.56,
+      "text": "out s so you will now take the left half"
+    },
+    {
+      "start": 272.34,
+      "end": 277.08,
+      "text": "and you'll split the left half and again"
+    },
+    {
+      "start": 274.56,
+      "end": 280.62,
+      "text": "you perform the same algorithm till you"
+    },
+    {
+      "start": 277.08,
+      "end": 282.48,
+      "text": "end up at Raj right now that's a"
+    },
+    {
+      "start": 280.62,
+      "end": 284.94,
+      "text": "classical example of binary search which"
+    },
+    {
+      "start": 282.48,
+      "end": 286.8,
+      "text": "we use in day to day life but when I"
+    },
+    {
+      "start": 284.94,
+      "end": 289.14,
+      "text": "take the coding problem example you'll"
+    },
+    {
+      "start": 286.8,
+      "end": 291.66,
+      "text": "get to know the algorithm in much depth"
+    },
+    {
+      "start": 289.14,
+      "end": 294.0,
+      "text": "but as of now it's an overview where to"
+    },
+    {
+      "start": 291.66,
+      "end": 297.24,
+      "text": "use binary search wherever the search"
+    },
+    {
+      "start": 294.0,
+      "end": 299.94,
+      "text": "spaces search space the search space was"
+    },
+    {
+      "start": 297.24,
+      "end": 302.34,
+      "text": "the entire dictionary is sorted it can"
+    },
+    {
+      "start": 299.94,
+      "end": 304.62,
+      "text": "be a array related problem it can be any"
+    },
+    {
+      "start": 302.34,
+      "end": 306.84,
+      "text": "problem statement it doesn't necessarily"
+    },
+    {
+      "start": 304.62,
+      "end": 310.5,
+      "text": "have to be an array it can be anything"
+    },
+    {
+      "start": 306.84,
+      "end": 312.6,
+      "text": "as long as the third space is sorted I"
+    },
+    {
+      "start": 310.5,
+      "end": 314.1,
+      "text": "can probably apply binary search in"
+    },
+    {
+      "start": 312.6,
+      "end": 316.38,
+      "text": "order to find out my answer keep that in"
+    },
+    {
+      "start": 314.1,
+      "end": 318.36,
+      "text": "mind so what I can say is we have kind"
+    },
+    {
+      "start": 316.38,
+      "end": 320.7,
+      "text": "of got a real life example it's time to"
+    },
+    {
+      "start": 318.36,
+      "end": 322.5,
+      "text": "go to a coding problem example let's go"
+    },
+    {
+      "start": 320.7,
+      "end": 325.02,
+      "text": "so for the coding example what I've done"
+    },
+    {
+      "start": 322.5,
+      "end": 327.36,
+      "text": "is I've taken an array and again as you"
+    },
+    {
+      "start": 325.02,
+      "end": 330.12,
+      "text": "know it will always be sorted so the"
+    },
+    {
+      "start": 327.36,
+      "end": 332.58,
+      "text": "array is sorted imagine I ask you hey if"
+    },
+    {
+      "start": 330.12,
+      "end": 335.34,
+      "text": "I give you your target of five"
+    },
+    {
+      "start": 332.58,
+      "end": 337.8,
+      "text": "can you help me find out five in this"
+    },
+    {
+      "start": 335.34,
+      "end": 339.72,
+      "text": "given array so what is the generic way"
+    },
+    {
+      "start": 337.8,
+      "end": 341.88,
+      "text": "that you can do again you'll start from"
+    },
+    {
+      "start": 339.72,
+      "end": 343.56,
+      "text": "three then you'll go to 4 then you'll go"
+    },
+    {
+      "start": 341.88,
+      "end": 345.06,
+      "text": "to six then you'll go to seven then"
+    },
+    {
+      "start": 343.56,
+      "end": 347.1,
+      "text": "you'll go to nine then you'll go to 12"
+    },
+    {
+      "start": 345.06,
+      "end": 349.74,
+      "text": "then you'll go to 16 then you'll go to"
+    },
+    {
+      "start": 347.1,
+      "end": 351.72,
+      "text": "17 and you will say that 5 is not there"
+    },
+    {
+      "start": 349.74,
+      "end": 354.66,
+      "text": "right imagine if I give you the target"
+    },
+    {
+      "start": 351.72,
+      "end": 356.46,
+      "text": "as something like six"
+    },
+    {
+      "start": 354.66,
+      "end": 359.7,
+      "text": "in this case I give you the target as"
+    },
+    {
+      "start": 356.46,
+      "end": 362.34,
+      "text": "six in that case you'll go to 3 4 6 and"
+    },
+    {
+      "start": 359.7,
+      "end": 364.86,
+      "text": "you found out so I'm asking you to find"
+    },
+    {
+      "start": 362.34,
+      "end": 367.02,
+      "text": "out the target again we are taking into"
+    },
+    {
+      "start": 364.86,
+      "end": 370.14,
+      "text": "consideration this thing that this is a"
+    },
+    {
+      "start": 367.02,
+      "end": 373.8,
+      "text": "unique array it will not have duplicates"
+    },
+    {
+      "start": 370.14,
+      "end": 376.62,
+      "text": "so if Target does exist in the array it"
+    },
+    {
+      "start": 373.8,
+      "end": 378.66,
+      "text": "will only exist at a particular index so"
+    },
+    {
+      "start": 376.62,
+      "end": 379.92,
+      "text": "I want the index number so if I have to"
+    },
+    {
+      "start": 378.66,
+      "end": 385.86,
+      "text": "write down the index number can I say"
+    },
+    {
+      "start": 379.92,
+      "end": 387.3,
+      "text": "it'll be 0 1 2 3 4 5 6 and 7 for sure so"
+    },
+    {
+      "start": 385.86,
+      "end": 390.06,
+      "text": "I'm asking you to find out the target"
+    },
+    {
+      "start": 387.3,
+      "end": 392.94,
+      "text": "six so over here you got the six so it"
+    },
+    {
+      "start": 390.06,
+      "end": 396.66,
+      "text": "is like one two three steps but what if"
+    },
+    {
+      "start": 392.94,
+      "end": 399.72,
+      "text": "the target was 17 in that case you would"
+    },
+    {
+      "start": 396.66,
+      "end": 401.52,
+      "text": "have ended up iterating the entire array"
+    },
+    {
+      "start": 399.72,
+      "end": 404.16,
+      "text": "and the time complexity would have been"
+    },
+    {
+      "start": 401.52,
+      "end": 405.66,
+      "text": "a O(N) where n is the length of"
+    },
+    {
+      "start": 404.16,
+      "end": 407.46,
+      "text": "the array because you have iterated"
+    },
+    {
+      "start": 405.66,
+      "end": 409.08,
+      "text": "through the entire array this is why"
+    },
+    {
+      "start": 407.46,
+      "end": 410.7,
+      "text": "something like binary search comes in"
+    },
+    {
+      "start": 409.08,
+      "end": 412.32,
+      "text": "but as of now let's understand binary"
+    },
+    {
+      "start": 410.7,
+      "end": 414.66,
+      "text": "search by taking this particular example"
+    },
+    {
+      "start": 412.32,
+      "end": 417.66,
+      "text": "where Target is six so binary search C"
+    },
+    {
+      "start": 414.66,
+      "end": 419.16,
+      "text": "is which is my silk space and I know the"
+    },
+    {
+      "start": 417.66,
+      "end": 421.74,
+      "text": "entire array is where you have to"
+    },
+    {
+      "start": 419.16,
+      "end": 423.84,
+      "text": "perform the search so in order to store"
+    },
+    {
+      "start": 421.74,
+      "end": 426.72,
+      "text": "the space we use couple of variables in"
+    },
+    {
+      "start": 423.84,
+      "end": 429.3,
+      "text": "binary search it's basically like we"
+    },
+    {
+      "start": 426.72,
+      "end": 431.64,
+      "text": "keep a pointer as low at the first index"
+    },
+    {
+      "start": 429.3,
+      "end": 434.16,
+      "text": "which is the zeroth index we keep a"
+    },
+    {
+      "start": 431.64,
+      "end": 437.04,
+      "text": "pointer high at the last index which is"
+    },
+    {
+      "start": 434.16,
+      "end": 439.14,
+      "text": "basically n minus one at index and we"
+    },
+    {
+      "start": 437.04,
+      "end": 441.12,
+      "text": "say everything between low and high very"
+    },
+    {
+      "start": 439.14,
+      "end": 443.88,
+      "text": "very important everything between low"
+    },
+    {
+      "start": 441.12,
+      "end": 446.88,
+      "text": "and high is considered as my search"
+    },
+    {
+      "start": 443.88,
+      "end": 449.46,
+      "text": "space got it so as of now my search"
+    },
+    {
+      "start": 446.88,
+      "end": 451.86,
+      "text": "space is this much I'm looking to find"
+    },
+    {
+      "start": 449.46,
+      "end": 454.56,
+      "text": "out six if you remember the dictionary"
+    },
+    {
+      "start": 451.86,
+      "end": 456.9,
+      "text": "example we have to split it into half so"
+    },
+    {
+      "start": 454.56,
+      "end": 458.88,
+      "text": "probably split it into half so if I have"
+    },
+    {
+      "start": 456.9,
+      "end": 460.86,
+      "text": "to split it into half we can introduce"
+    },
+    {
+      "start": 458.88,
+      "end": 462.48,
+      "text": "another variable middle and I can say"
+    },
+    {
+      "start": 460.86,
+      "end": 464.64,
+      "text": "what is the value of low that is 0 what"
+    },
+    {
+      "start": 462.48,
+      "end": 467.46,
+      "text": "is the value of I that is 7 any divided"
+    },
+    {
+      "start": 464.64,
+      "end": 469.5,
+      "text": "by 3 that is 3.5 which is we'll take an"
+    },
+    {
+      "start": 467.46,
+      "end": 471.36,
+      "text": "integer so that's three so the third"
+    },
+    {
+      "start": 469.5,
+      "end": 473.82,
+      "text": "index very important it's the third"
+    },
+    {
+      "start": 471.36,
+      "end": 475.08,
+      "text": "index so the third index is this and"
+    },
+    {
+      "start": 473.82,
+      "end": 476.88,
+      "text": "you're writing the index over here just"
+    },
+    {
+      "start": 475.08,
+      "end": 478.2,
+      "text": "in in case you're confused so third"
+    },
+    {
+      "start": 476.88,
+      "end": 480.18,
+      "text": "index is this"
+    },
+    {
+      "start": 478.2,
+      "end": 482.52,
+      "text": "so I've figured out the mid and I"
+    },
+    {
+      "start": 480.18,
+      "end": 484.02,
+      "text": "pointed it now let's see what is at the"
+    },
+    {
+      "start": 482.52,
+      "end": 488.04,
+      "text": "mid 7"
+    },
+    {
+      "start": 484.02,
+      "end": 490.56,
+      "text": "is 7 equivalent to the Target no so can"
+    },
+    {
+      "start": 488.04,
+      "end": 492.54,
+      "text": "I say the six will always lie on the"
+    },
+    {
+      "start": 490.56,
+      "end": 494.94,
+      "text": "left half will always lie on the left"
+    },
+    {
+      "start": 492.54,
+      "end": 498.18,
+      "text": "and if 7 is not equivalent"
+    },
+    {
+      "start": 494.94,
+      "end": 500.64,
+      "text": "nothing on the right way be equivalent"
+    },
+    {
+      "start": 498.18,
+      "end": 502.98,
+      "text": "to six because it's a sorted array and"
+    },
+    {
+      "start": 500.64,
+      "end": 505.14,
+      "text": "if seven is not everything on the right"
+    },
+    {
+      "start": 502.98,
+      "end": 507.12,
+      "text": "of seven will be greater than seven"
+    },
+    {
+      "start": 505.14,
+      "end": 508.44,
+      "text": "thereby you can never find six on the"
+    },
+    {
+      "start": 507.12,
+      "end": 511.32,
+      "text": "right there but you can never find six"
+    },
+    {
+      "start": 508.44,
+      "end": 513.36,
+      "text": "on the right correct so I'll never find"
+    },
+    {
+      "start": 511.32,
+      "end": 515.28,
+      "text": "it here I'll never find it here so why"
+    },
+    {
+      "start": 513.36,
+      "end": 517.14,
+      "text": "to keep the search space similar to"
+    },
+    {
+      "start": 515.28,
+      "end": 520.5,
+      "text": "dictionary why to keep the search space"
+    },
+    {
+      "start": 517.14,
+      "end": 522.9,
+      "text": "this is why I will say hey hi can you"
+    },
+    {
+      "start": 520.5,
+      "end": 524.34,
+      "text": "move back to this portion can you trim"
+    },
+    {
+      "start": 522.9,
+      "end": 527.34,
+      "text": "down your search space"
+    },
+    {
+      "start": 524.34,
+      "end": 529.56,
+      "text": "that means come to one place before mid"
+    },
+    {
+      "start": 527.34,
+      "end": 532.62,
+      "text": "very important come to one place before"
+    },
+    {
+      "start": 529.56,
+      "end": 535.08,
+      "text": "mid so if I come to one place before mid"
+    },
+    {
+      "start": 532.62,
+      "end": 537.48,
+      "text": "I cannot I cannot delete the array but I"
+    },
+    {
+      "start": 535.08,
+      "end": 539.34,
+      "text": "can trim down the search space now can I"
+    },
+    {
+      "start": 537.48,
+      "end": 541.2,
+      "text": "say the search faces this much if you"
+    },
+    {
+      "start": 539.34,
+      "end": 543.42,
+      "text": "remember at the starting I told you"
+    },
+    {
+      "start": 541.2,
+      "end": 545.28,
+      "text": "everything between low and high is your"
+    },
+    {
+      "start": 543.42,
+      "end": 547.86,
+      "text": "search space so I'm sure that my third"
+    },
+    {
+      "start": 545.28,
+      "end": 548.82,
+      "text": "space is this much I'm very much okay"
+    },
+    {
+      "start": 547.86,
+      "end": 551.4,
+      "text": "fine"
+    },
+    {
+      "start": 548.82,
+      "end": 552.96,
+      "text": "so again we have a limited search space"
+    },
+    {
+      "start": 551.4,
+      "end": 555.36,
+      "text": "again we'll do the same thing splitted"
+    },
+    {
+      "start": 552.96,
+      "end": 558.0,
+      "text": "into half let's split it into half so we"
+    },
+    {
+      "start": 555.36,
+      "end": 562.02,
+      "text": "go mid equal to low plus I low is index"
+    },
+    {
+      "start": 558.0,
+      "end": 564.66,
+      "text": "0 high is index 2 by 2 equal to 1 so the"
+    },
+    {
+      "start": 562.02,
+      "end": 567.68,
+      "text": "mid will be pointing to index one again"
+    },
+    {
+      "start": 564.66,
+      "end": 570.72,
+      "text": "we do the same thing is this 4"
+    },
+    {
+      "start": 567.68,
+      "end": 574.44,
+      "text": "equivalent to six I'm like no it is not"
+    },
+    {
+      "start": 570.72,
+      "end": 576.42,
+      "text": "this 4 is not equivalent to 6 so what"
+    },
+    {
+      "start": 574.44,
+      "end": 578.76,
+      "text": "can I do like"
+    },
+    {
+      "start": 576.42,
+      "end": 582.24,
+      "text": "not possible so I have to eliminate a"
+    },
+    {
+      "start": 578.76,
+      "end": 584.34,
+      "text": "search space so 6 is greater than 4 so"
+    },
+    {
+      "start": 582.24,
+      "end": 586.98,
+      "text": "it will be on the right so everything on"
+    },
+    {
+      "start": 584.34,
+      "end": 589.16,
+      "text": "the left of 4 it can never be there so"
+    },
+    {
+      "start": 586.98,
+      "end": 592.56,
+      "text": "I'll kind of eliminate these portions"
+    },
+    {
+      "start": 589.16,
+      "end": 594.8,
+      "text": "thereby then low will say probably I'll"
+    },
+    {
+      "start": 592.56,
+      "end": 598.86,
+      "text": "move ahead and I'll move to one place"
+    },
+    {
+      "start": 594.8,
+      "end": 601.5,
+      "text": "ahead of mid ahead of mid thereby"
+    },
+    {
+      "start": 598.86,
+      "end": 603.72,
+      "text": "this will be my trimmed search space"
+    },
+    {
+      "start": 601.5,
+      "end": 606.36,
+      "text": "this will be my trimmed search space"
+    },
+    {
+      "start": 603.72,
+      "end": 608.52,
+      "text": "thereby low and high are pointing to the"
+    },
+    {
+      "start": 606.36,
+      "end": 610.2,
+      "text": "same index because we already have"
+    },
+    {
+      "start": 608.52,
+      "end": 612.0,
+      "text": "figured out that it will never be here"
+    },
+    {
+      "start": 610.2,
+      "end": 614.88,
+      "text": "after that we figured out it will never"
+    },
+    {
+      "start": 612.0,
+      "end": 617.4,
+      "text": "be here then we are over here let's do"
+    },
+    {
+      "start": 614.88,
+      "end": 620.88,
+      "text": "the same thing again and say mid equal"
+    },
+    {
+      "start": 617.4,
+      "end": 623.52,
+      "text": "to low plus I this time low S2 highest 2"
+    },
+    {
+      "start": 620.88,
+      "end": 625.98,
+      "text": "by 2 index is two so the mid will also"
+    },
+    {
+      "start": 623.52,
+      "end": 630.6,
+      "text": "point to 6 and this is the point we say"
+    },
+    {
+      "start": 625.98,
+      "end": 633.48,
+      "text": "six is equivalent to six thereby we"
+    },
+    {
+      "start": 630.6,
+      "end": 635.88,
+      "text": "found it we found it at the index two"
+    },
+    {
+      "start": 633.48,
+      "end": 638.82,
+      "text": "and that is my answer so in this example"
+    },
+    {
+      "start": 635.88,
+      "end": 642.12,
+      "text": "you figured out six at the last Point"
+    },
+    {
+      "start": 638.82,
+      "end": 644.28,
+      "text": "like where the third space was the least"
+    },
+    {
+      "start": 642.12,
+      "end": 646.08,
+      "text": "what if the target was something like"
+    },
+    {
+      "start": 644.28,
+      "end": 648.24,
+      "text": "seven in that case you would have"
+    },
+    {
+      "start": 646.08,
+      "end": 650.64,
+      "text": "figured out right at the starting when"
+    },
+    {
+      "start": 648.24,
+      "end": 652.86,
+      "text": "you took the low here and high here"
+    },
+    {
+      "start": 650.64,
+      "end": 655.14,
+      "text": "let's directly figure out seven so"
+    },
+    {
+      "start": 652.86,
+      "end": 657.06,
+      "text": "whenever you figure out you stop you"
+    },
+    {
+      "start": 655.14,
+      "end": 658.74,
+      "text": "don't do any further because it's a"
+    },
+    {
+      "start": 657.06,
+      "end": 660.84,
+      "text": "unique sorted array and you have to find"
+    },
+    {
+      "start": 658.74,
+      "end": 663.18,
+      "text": "just one occurrence of that element got"
+    },
+    {
+      "start": 660.84,
+      "end": 664.86,
+      "text": "it let's uh probably change the example"
+    },
+    {
+      "start": 663.18,
+      "end": 667.92,
+      "text": "what I'll do is"
+    },
+    {
+      "start": 664.86,
+      "end": 671.4,
+      "text": "I will change the target this time let's"
+    },
+    {
+      "start": 667.92,
+      "end": 673.5,
+      "text": "keep the target as 13 so that we see if"
+    },
+    {
+      "start": 671.4,
+      "end": 675.18,
+      "text": "we can figure out 13 is there so if"
+    },
+    {
+      "start": 673.5,
+      "end": 677.76,
+      "text": "you've seen the array 13 is not there so"
+    },
+    {
+      "start": 675.18,
+      "end": 680.94,
+      "text": "let's see how it works if an element is"
+    },
+    {
+      "start": 677.76,
+      "end": 683.52,
+      "text": "not there so initially where is low low"
+    },
+    {
+      "start": 680.94,
+      "end": 685.2,
+      "text": "is here whereas I I will be here because"
+    },
+    {
+      "start": 683.52,
+      "end": 687.12,
+      "text": "initially we start with the entire"
+    },
+    {
+      "start": 685.2,
+      "end": 690.18,
+      "text": "search space so let's quickly start off"
+    },
+    {
+      "start": 687.12,
+      "end": 693.18,
+      "text": "with mid what will be mid 0 plus 7 by 2"
+    },
+    {
+      "start": 690.18,
+      "end": 694.74,
+      "text": "that's 3.5 that's equivalent to three so"
+    },
+    {
+      "start": 693.18,
+      "end": 696.84,
+      "text": "mid will be here"
+    },
+    {
+      "start": 694.74,
+      "end": 698.82,
+      "text": "this time what will happen we will"
+    },
+    {
+      "start": 696.84,
+      "end": 702.6,
+      "text": "compare 7 with 13 and we'll figure out"
+    },
+    {
+      "start": 698.82,
+      "end": 704.52,
+      "text": "it's not and 13 is greater 13 is greater"
+    },
+    {
+      "start": 702.6,
+      "end": 707.04,
+      "text": "than 7 so it will never be on the left"
+    },
+    {
+      "start": 704.52,
+      "end": 709.92,
+      "text": "it will never be on the left so"
+    },
+    {
+      "start": 707.04,
+      "end": 713.16,
+      "text": "low will come to one place ahead of mid"
+    },
+    {
+      "start": 709.92,
+      "end": 716.82,
+      "text": "and we will reupdate mid will be the"
+    },
+    {
+      "start": 713.16,
+      "end": 720.36,
+      "text": "re-updation of mid low S4 highest 7 by 2"
+    },
+    {
+      "start": 716.82,
+      "end": 722.52,
+      "text": "11 by 2 5.5 that's 5 so mid will be"
+    },
+    {
+      "start": 720.36,
+      "end": 726.84,
+      "text": "pointing to 12. perfect let's again do"
+    },
+    {
+      "start": 722.52,
+      "end": 728.82,
+      "text": "the same thing 12 13 no so anything on"
+    },
+    {
+      "start": 726.84,
+      "end": 730.8,
+      "text": "the left of 12 is not possible so"
+    },
+    {
+      "start": 728.82,
+      "end": 732.96,
+      "text": "basically what will happen the low will"
+    },
+    {
+      "start": 730.8,
+      "end": 735.84,
+      "text": "go to one place ahead of mid and the low"
+    },
+    {
+      "start": 732.96,
+      "end": 738.48,
+      "text": "will go here perfect very good what's an"
+    },
+    {
+      "start": 735.84,
+      "end": 739.74,
+      "text": "excerpt space this much and if I have to"
+    },
+    {
+      "start": 738.48,
+      "end": 743.28,
+      "text": "figure out the middle vertically the"
+    },
+    {
+      "start": 739.74,
+      "end": 744.9,
+      "text": "middle six is low 7 is high six by seven"
+    },
+    {
+      "start": 743.28,
+      "end": 747.3,
+      "text": "is six point five which is equivalent to"
+    },
+    {
+      "start": 744.9,
+      "end": 750.36,
+      "text": "six so the mid points to the sixth index"
+    },
+    {
+      "start": 747.3,
+      "end": 752.04,
+      "text": "perfect what will be the next thing"
+    },
+    {
+      "start": 750.36,
+      "end": 755.16,
+      "text": "if the mid is pointing to the sixth"
+    },
+    {
+      "start": 752.04,
+      "end": 757.82,
+      "text": "index you're like okay 16 13 is kind of"
+    },
+    {
+      "start": 755.16,
+      "end": 760.56,
+      "text": "lesser than 16. so thereby the right"
+    },
+    {
+      "start": 757.82,
+      "end": 763.2,
+      "text": "portion gets eliminated thereby the"
+    },
+    {
+      "start": 760.56,
+      "end": 765.02,
+      "text": "right portion gets eliminated so the"
+    },
+    {
+      "start": 763.2,
+      "end": 767.4,
+      "text": "high will move to one place before mid"
+    },
+    {
+      "start": 765.02,
+      "end": 769.98,
+      "text": "so it moves here"
+    },
+    {
+      "start": 767.4,
+      "end": 772.14,
+      "text": "and I'll again eliminate mid so this"
+    },
+    {
+      "start": 769.98,
+      "end": 775.02,
+      "text": "time before we go to the next step Do"
+    },
+    {
+      "start": 772.14,
+      "end": 777.42,
+      "text": "You observe something I do the high has"
+    },
+    {
+      "start": 775.02,
+      "end": 779.28,
+      "text": "gone to the left of flow thereby the"
+    },
+    {
+      "start": 777.42,
+      "end": 781.74,
+      "text": "third spaces there's no more such space"
+    },
+    {
+      "start": 779.28,
+      "end": 783.9,
+      "text": "because we know the third space is"
+    },
+    {
+      "start": 781.74,
+      "end": 785.7,
+      "text": "always between low to high but if High"
+    },
+    {
+      "start": 783.9,
+      "end": 789.3,
+      "text": "has gone here there is no search space"
+    },
+    {
+      "start": 785.7,
+      "end": 791.64,
+      "text": "so we have ran out of search space if"
+    },
+    {
+      "start": 789.3,
+      "end": 794.88,
+      "text": "that happens that means element is not"
+    },
+    {
+      "start": 791.64,
+      "end": 796.92,
+      "text": "there and we can return -1 stating we"
+    },
+    {
+      "start": 794.88,
+      "end": 798.84,
+      "text": "cannot find it out it's not present so"
+    },
+    {
+      "start": 796.92,
+      "end": 800.28,
+      "text": "this is how the binary search works so"
+    },
+    {
+      "start": 798.84,
+      "end": 802.92,
+      "text": "you have understood binary search with"
+    },
+    {
+      "start": 800.28,
+      "end": 804.6,
+      "text": "the coding problem example it's time to"
+    },
+    {
+      "start": 802.92,
+      "end": 806.4,
+      "text": "write the iterative code again I'll be"
+    },
+    {
+      "start": 804.6,
+      "end": 809.16,
+      "text": "writing the pseudocode so that you can"
+    },
+    {
+      "start": 806.4,
+      "end": 810.54,
+      "text": "write in either of these languages if"
+    },
+    {
+      "start": 809.16,
+      "end": 812.16,
+      "text": "you want either of these languages you"
+    },
+    {
+      "start": 810.54,
+      "end": 814.2,
+      "text": "can find the link in the description and"
+    },
+    {
+      "start": 812.16,
+      "end": 816.24,
+      "text": "you can open it in parallel as well to"
+    },
+    {
+      "start": 814.2,
+      "end": 818.4,
+      "text": "just have a comparison so you have to"
+    },
+    {
+      "start": 816.24,
+      "end": 821.1,
+      "text": "write the pseudo code I know I'll always"
+    },
+    {
+      "start": 818.4,
+      "end": 822.66,
+      "text": "have a function and it will always give"
+    },
+    {
+      "start": 821.1,
+      "end": 825.78,
+      "text": "me an array it will give me the size of"
+    },
+    {
+      "start": 822.66,
+      "end": 829.02,
+      "text": "the array and it will give me the Target"
+    },
+    {
+      "start": 825.78,
+      "end": 831.9,
+      "text": "that is something which I know for sure"
+    },
+    {
+      "start": 829.02,
+      "end": 833.7,
+      "text": "what is the initial search space I know"
+    },
+    {
+      "start": 831.9,
+      "end": 836.46,
+      "text": "the initial search spaces between low"
+    },
+    {
+      "start": 833.7,
+      "end": 838.38,
+      "text": "and high so we'll keep low as 0 and high"
+    },
+    {
+      "start": 836.46,
+      "end": 840.66,
+      "text": "as size minus one that's my initial"
+    },
+    {
+      "start": 838.38,
+      "end": 842.76,
+      "text": "third space which is basically low here"
+    },
+    {
+      "start": 840.66,
+      "end": 844.56,
+      "text": "and high will be here that is something"
+    },
+    {
+      "start": 842.76,
+      "end": 846.66,
+      "text": "which we know now what are we doing"
+    },
+    {
+      "start": 844.56,
+      "end": 848.52,
+      "text": "we're kind of keeping on searching"
+    },
+    {
+      "start": 846.66,
+      "end": 850.62,
+      "text": "keeping on searching so it is repetitive"
+    },
+    {
+      "start": 848.52,
+      "end": 853.32,
+      "text": "process so whenever reputation comes"
+    },
+    {
+      "start": 850.62,
+      "end": 854.7,
+      "text": "looping comes correct so we will keep on"
+    },
+    {
+      "start": 853.32,
+      "end": 857.88,
+      "text": "looping"
+    },
+    {
+      "start": 854.7,
+      "end": 860.16,
+      "text": "but can you tell me till how like till"
+    },
+    {
+      "start": 857.88,
+      "end": 862.26,
+      "text": "what time will I look till I run out of"
+    },
+    {
+      "start": 860.16,
+      "end": 865.32,
+      "text": "search space and you remember if you"
+    },
+    {
+      "start": 862.26,
+      "end": 867.3,
+      "text": "remember till low is lesser than high we"
+    },
+    {
+      "start": 865.32,
+      "end": 869.28,
+      "text": "are still having third space the moment"
+    },
+    {
+      "start": 867.3,
+      "end": 871.92,
+      "text": "low Cross Lake high crosses slow or low"
+    },
+    {
+      "start": 869.28,
+      "end": 873.18,
+      "text": "cross the side the result space is done"
+    },
+    {
+      "start": 871.92,
+      "end": 875.7,
+      "text": "and dusted"
+    },
+    {
+      "start": 873.18,
+      "end": 878.04,
+      "text": "so I know the condition and now I'll"
+    },
+    {
+      "start": 875.7,
+      "end": 882.12,
+      "text": "write mid equal to"
+    },
+    {
+      "start": 878.04,
+      "end": 884.28,
+      "text": "low plus High by 2 that's what I'll"
+    },
+    {
+      "start": 882.12,
+      "end": 886.74,
+      "text": "write value of this because at first"
+    },
+    {
+      "start": 884.28,
+      "end": 888.48,
+      "text": "time the mid will be pointing here and"
+    },
+    {
+      "start": 886.74,
+      "end": 890.64,
+      "text": "then we will do a comparison of the"
+    },
+    {
+      "start": 888.48,
+      "end": 893.46,
+      "text": "seven with this target so the first"
+    },
+    {
+      "start": 890.64,
+      "end": 894.48,
+      "text": "thing I'll do is I'll say hey array of"
+    },
+    {
+      "start": 893.46,
+      "end": 897.48,
+      "text": "mid"
+    },
+    {
+      "start": 894.48,
+      "end": 898.38,
+      "text": "are you equivalent to the Target if you"
+    },
+    {
+      "start": 897.48,
+      "end": 900.12,
+      "text": "are"
+    },
+    {
+      "start": 898.38,
+      "end": 903.42,
+      "text": "I found my element I found my element"
+    },
+    {
+      "start": 900.12,
+      "end": 905.46,
+      "text": "why do I go further my element a is"
+    },
+    {
+      "start": 903.42,
+      "end": 906.84,
+      "text": "present at the mid index so I'll"
+    },
+    {
+      "start": 905.46,
+      "end": 909.36,
+      "text": "straight away later straight away"
+    },
+    {
+      "start": 906.84,
+      "end": 911.88,
+      "text": "written otherwise what can be the case"
+    },
+    {
+      "start": 909.36,
+      "end": 914.64,
+      "text": "we have seven over here we have a Target"
+    },
+    {
+      "start": 911.88,
+      "end": 917.04,
+      "text": "so 13 is greater than 7 so either the"
+    },
+    {
+      "start": 914.64,
+      "end": 920.16,
+      "text": "target is greater in that case the left"
+    },
+    {
+      "start": 917.04,
+      "end": 922.02,
+      "text": "search space will be eliminated or what"
+    },
+    {
+      "start": 920.16,
+      "end": 925.86,
+      "text": "if the target was six"
+    },
+    {
+      "start": 922.02,
+      "end": 929.7,
+      "text": "in that case 6 was lesser than this so"
+    },
+    {
+      "start": 925.86,
+      "end": 931.8,
+      "text": "the right will be eliminated so if if"
+    },
+    {
+      "start": 929.7,
+      "end": 935.46,
+      "text": "if this is not the case the other case"
+    },
+    {
+      "start": 931.8,
+      "end": 938.22,
+      "text": "will be what if the target is lying on"
+    },
+    {
+      "start": 935.46,
+      "end": 940.08,
+      "text": "the right that means Target will be"
+    },
+    {
+      "start": 938.22,
+      "end": 941.88,
+      "text": "greater Target will be greater than"
+    },
+    {
+      "start": 940.08,
+      "end": 945.36,
+      "text": "arr[mid] that that is why it is"
+    },
+    {
+      "start": 941.88,
+      "end": 948.06,
+      "text": "lying on the right so low will move to"
+    },
+    {
+      "start": 945.36,
+      "end": 951.3,
+      "text": "one place ahead of mid so basically if"
+    },
+    {
+      "start": 948.06,
+      "end": 953.88,
+      "text": "mid was here I'll just take the low and"
+    },
+    {
+      "start": 951.3,
+      "end": 956.94,
+      "text": "I'll move it here this line will do it"
+    },
+    {
+      "start": 953.88,
+      "end": 958.68,
+      "text": "if the target is 13 this line will move"
+    },
+    {
+      "start": 956.94,
+      "end": 961.08,
+      "text": "the low to here and again it will come"
+    },
+    {
+      "start": 958.68,
+      "end": 962.64,
+      "text": "back and do the search on this same"
+    },
+    {
+      "start": 961.08,
+      "end": 966.12,
+      "text": "process goes on because of the while"
+    },
+    {
+      "start": 962.64,
+      "end": 969.36,
+      "text": "loop so let's emit this what if the"
+    },
+    {
+      "start": 966.12,
+      "end": 973.2,
+      "text": "target was six in that case do I need to"
+    },
+    {
+      "start": 969.36,
+      "end": 975.54,
+      "text": "write the condition where I say hey is 6"
+    },
+    {
+      "start": 973.2,
+      "end": 977.1,
+      "text": "lesser than 7 do I need because we have"
+    },
+    {
+      "start": 975.54,
+      "end": 978.78,
+      "text": "already checked for equal to we've"
+    },
+    {
+      "start": 977.1,
+      "end": 980.82,
+      "text": "already checked for greater so what's"
+    },
+    {
+      "start": 978.78,
+      "end": 983.28,
+      "text": "the other case will always be lesser"
+    },
+    {
+      "start": 980.82,
+      "end": 986.94,
+      "text": "correct so I'll go to else and I'll say"
+    },
+    {
+      "start": 983.28,
+      "end": 990.3,
+      "text": "in that case high will be mid minus 1"
+    },
+    {
+      "start": 986.94,
+      "end": 992.52,
+      "text": "why because imagine if Target is 6 then"
+    },
+    {
+      "start": 990.3,
+      "end": 994.2,
+      "text": "this will get eliminated this high will"
+    },
+    {
+      "start": 992.52,
+      "end": 995.7,
+      "text": "come out to be here which is mid minus"
+    },
+    {
+      "start": 994.2,
+      "end": 997.5,
+      "text": "one quite simple"
+    },
+    {
+      "start": 995.7,
+      "end": 1000.56,
+      "text": "and once the while loop is completed"
+    },
+    {
+      "start": 997.5,
+      "end": 1002.72,
+      "text": "imagine this line never got executed"
+    },
+    {
+      "start": 1000.56,
+      "end": 1005.18,
+      "text": "that means the search space was"
+    },
+    {
+      "start": 1002.72,
+      "end": 1008.9,
+      "text": "exhausted and I'll end up at this line"
+    },
+    {
+      "start": 1005.18,
+      "end": 1011.6,
+      "text": "in that case I'll end up returning minus"
+    },
+    {
+      "start": 1008.9,
+      "end": 1013.64,
+      "text": "one that's how the iterative pseudocode"
+    },
+    {
+      "start": 1011.6,
+      "end": 1014.9,
+      "text": "will look like quite simple isn't it so"
+    },
+    {
+      "start": 1013.64,
+      "end": 1016.34,
+      "text": "I've written the same code in the code"
+    },
+    {
+      "start": 1014.9,
+      "end": 1018.2,
+      "text": "editor again you can find the problem"
+    },
+    {
+      "start": 1016.34,
+      "end": 1019.94,
+      "text": "Link in the description you can try it"
+    },
+    {
+      "start": 1018.2,
+      "end": 1021.56,
+      "text": "out from there so what I'll do is I'll"
+    },
+    {
+      "start": 1019.94,
+      "end": 1023.66,
+      "text": "quickly go and submit it in case you"
+    },
+    {
+      "start": 1021.56,
+      "end": 1025.64,
+      "text": "want the JavaScript python everything is"
+    },
+    {
+      "start": 1023.66,
+      "end": 1027.92,
+      "text": "there in the description so this runs"
+    },
+    {
+      "start": 1025.64,
+      "end": 1030.26,
+      "text": "quite simple but this one was the"
+    },
+    {
+      "start": 1027.92,
+      "end": 1032.54,
+      "text": "iterative one because we were using a"
+    },
+    {
+      "start": 1030.26,
+      "end": 1034.76,
+      "text": "while loop so I can say I have"
+    },
+    {
+      "start": 1032.54,
+      "end": 1036.68,
+      "text": "understood the iterative code as well"
+    },
+    {
+      "start": 1034.76,
+      "end": 1038.18,
+      "text": "it's time to understand the recursive"
+    },
+    {
+      "start": 1036.68,
+      "end": 1040.64,
+      "text": "code so let's go ahead and understand"
+    },
+    {
+      "start": 1038.18,
+      "end": 1042.86,
+      "text": "the recursive implementation of binary"
+    },
+    {
+      "start": 1040.64,
+      "end": 1045.32,
+      "text": "search so just a disclaimer please"
+    },
+    {
+      "start": 1042.86,
+      "end": 1048.26,
+      "text": "please make sure that you should have"
+    },
+    {
+      "start": 1045.32,
+      "end": 1050.9,
+      "text": "seen the step 1.5 where I have covered"
+    },
+    {
+      "start": 1048.26,
+      "end": 1052.88,
+      "text": "up basic recursion if you have seen that"
+    },
+    {
+      "start": 1050.9,
+      "end": 1054.56,
+      "text": "then only come up and see the recursive"
+    },
+    {
+      "start": 1052.88,
+      "end": 1056.66,
+      "text": "implementation otherwise you can skip"
+    },
+    {
+      "start": 1054.56,
+      "end": 1058.4,
+      "text": "the recursive implementation as of now"
+    },
+    {
+      "start": 1056.66,
+      "end": 1060.44,
+      "text": "you can watch it afterwards you have an"
+    },
+    {
+      "start": 1058.4,
+      "end": 1062.3,
+      "text": "idea about recursion got it"
+    },
+    {
+      "start": 1060.44,
+      "end": 1063.56,
+      "text": "so you have to do the recursive"
+    },
+    {
+      "start": 1062.3,
+      "end": 1066.44,
+      "text": "implementation"
+    },
+    {
+      "start": 1063.56,
+      "end": 1069.5,
+      "text": "when is recursion applicable again when"
+    },
+    {
+      "start": 1066.44,
+      "end": 1071.12,
+      "text": "we perform same task repeatedly right"
+    },
+    {
+      "start": 1069.5,
+      "end": 1072.92,
+      "text": "because if you're performing the same"
+    },
+    {
+      "start": 1071.12,
+      "end": 1075.14,
+      "text": "number of steps repeatedly because over"
+    },
+    {
+      "start": 1072.92,
+      "end": 1076.88,
+      "text": "here we're kind of taking the mid then"
+    },
+    {
+      "start": 1075.14,
+      "end": 1078.32,
+      "text": "we are comparing or else we are"
+    },
+    {
+      "start": 1076.88,
+      "end": 1080.48,
+      "text": "comparing greater or else we are"
+    },
+    {
+      "start": 1078.32,
+      "end": 1081.92,
+      "text": "comparing smaller so these three steps"
+    },
+    {
+      "start": 1080.48,
+      "end": 1084.26,
+      "text": "is what we are doing we are basically"
+    },
+    {
+      "start": 1081.92,
+      "end": 1086.6,
+      "text": "taking the mid if it's equal we found it"
+    },
+    {
+      "start": 1084.26,
+      "end": 1088.7,
+      "text": "otherwise we say greater trim down the"
+    },
+    {
+      "start": 1086.6,
+      "end": 1091.04,
+      "text": "search space or smaller trim down the"
+    },
+    {
+      "start": 1088.7,
+      "end": 1092.84,
+      "text": "Subspace it's a repetitive step that we"
+    },
+    {
+      "start": 1091.04,
+      "end": 1095.24,
+      "text": "are doing initially we start with this"
+    },
+    {
+      "start": 1092.84,
+      "end": 1098.12,
+      "text": "then probably if the target is 13 then"
+    },
+    {
+      "start": 1095.24,
+      "end": 1100.46,
+      "text": "we eliminate this then we have this so"
+    },
+    {
+      "start": 1098.12,
+      "end": 1102.86,
+      "text": "it's a trimming down of search space but"
+    },
+    {
+      "start": 1100.46,
+      "end": 1105.08,
+      "text": "the steps are same so whenever the steps"
+    },
+    {
+      "start": 1102.86,
+      "end": 1107.24,
+      "text": "are same we can reuse the code we can"
+    },
+    {
+      "start": 1105.08,
+      "end": 1110.06,
+      "text": "reuse the code and that is when a"
+    },
+    {
+      "start": 1107.24,
+      "end": 1112.88,
+      "text": "recursion comes in so probably I can say"
+    },
+    {
+      "start": 1110.06,
+      "end": 1115.82,
+      "text": "what if there is a recursive function"
+    },
+    {
+      "start": 1112.88,
+      "end": 1118.94,
+      "text": "there's a function which takes an array"
+    },
+    {
+      "start": 1115.82,
+      "end": 1120.68,
+      "text": "and takes a low and takes a high"
+    },
+    {
+      "start": 1118.94,
+      "end": 1122.84,
+      "text": "so there's the array which takes a low"
+    },
+    {
+      "start": 1120.68,
+      "end": 1126.08,
+      "text": "and takes a high so initially can I see"
+    },
+    {
+      "start": 1122.84,
+      "end": 1128.3,
+      "text": "the low is here and the higher is here"
+    },
+    {
+      "start": 1126.08,
+      "end": 1132.26,
+      "text": "for this target 30 just imagine for the"
+    },
+    {
+      "start": 1128.3,
+      "end": 1135.08,
+      "text": "stock at 13. so logos as zeroth index"
+    },
+    {
+      "start": 1132.26,
+      "end": 1137.18,
+      "text": "and high goes as seven index what's the"
+    },
+    {
+      "start": 1135.08,
+      "end": 1139.76,
+      "text": "first step if you remember for the Merit"
+    },
+    {
+      "start": 1137.18,
+      "end": 1141.62,
+      "text": "it will take up seven and figure it out"
+    },
+    {
+      "start": 1139.76,
+      "end": 1144.98,
+      "text": "that seven is naughty equivalent to 13"
+    },
+    {
+      "start": 1141.62,
+      "end": 1148.64,
+      "text": "so the left has to be trimmed so thereby"
+    },
+    {
+      "start": 1144.98,
+      "end": 1150.8,
+      "text": "the slope will kind of move to this"
+    },
+    {
+      "start": 1148.64,
+      "end": 1152.84,
+      "text": "do you agree that low will move to here"
+    },
+    {
+      "start": 1150.8,
+      "end": 1154.82,
+      "text": "you do because the left cell space will"
+    },
+    {
+      "start": 1152.84,
+      "end": 1156.44,
+      "text": "be trimmed because you have to find 13."
+    },
+    {
+      "start": 1154.82,
+      "end": 1158.84,
+      "text": "so you'll again call the same function"
+    },
+    {
+      "start": 1156.44,
+      "end": 1161.36,
+      "text": "you'll again call the same function but"
+    },
+    {
+      "start": 1158.84,
+      "end": 1163.1,
+      "text": "this time you'll call it with array a"
+    },
+    {
+      "start": 1161.36,
+      "end": 1164.3,
+      "text": "different search space this time you"
+    },
+    {
+      "start": 1163.1,
+      "end": 1167.24,
+      "text": "will say the search space is between"
+    },
+    {
+      "start": 1164.3,
+      "end": 1169.52,
+      "text": "four and seven so what you did was you"
+    },
+    {
+      "start": 1167.24,
+      "end": 1171.44,
+      "text": "trim down the third space you trim down"
+    },
+    {
+      "start": 1169.52,
+      "end": 1173.84,
+      "text": "the search space again you can do the"
+    },
+    {
+      "start": 1171.44,
+      "end": 1175.7,
+      "text": "same thing because the recursive"
+    },
+    {
+      "start": 1173.84,
+      "end": 1177.68,
+      "text": "function is performing the same steps so"
+    },
+    {
+      "start": 1175.7,
+      "end": 1181.64,
+      "text": "you'll be like what is mid the mid will"
+    },
+    {
+      "start": 1177.68,
+      "end": 1183.98,
+      "text": "be this again you'll compare 12 13 no so"
+    },
+    {
+      "start": 1181.64,
+      "end": 1186.8,
+      "text": "the search the slow will go"
+    },
+    {
+      "start": 1183.98,
+      "end": 1189.2,
+      "text": "and the low will be somewhere here so"
+    },
+    {
+      "start": 1186.8,
+      "end": 1192.56,
+      "text": "this time again you will call F of array"
+    },
+    {
+      "start": 1189.2,
+      "end": 1194.66,
+      "text": "with the search space as 6 comma 7 and"
+    },
+    {
+      "start": 1192.56,
+      "end": 1196.64,
+      "text": "when you try to find out the next time"
+    },
+    {
+      "start": 1194.66,
+      "end": 1198.56,
+      "text": "the high will be here so it kind of ends"
+    },
+    {
+      "start": 1196.64,
+      "end": 1200.36,
+      "text": "it's kind of a repeated thing that I'm"
+    },
+    {
+      "start": 1198.56,
+      "end": 1202.04,
+      "text": "doing so that's why I can write a"
+    },
+    {
+      "start": 1200.36,
+      "end": 1204.56,
+      "text": "recursion because I'm going to call the"
+    },
+    {
+      "start": 1202.04,
+      "end": 1206.42,
+      "text": "same function with different values of"
+    },
+    {
+      "start": 1204.56,
+      "end": 1209.48,
+      "text": "flow and high and it will perform the"
+    },
+    {
+      "start": 1206.42,
+      "end": 1211.4,
+      "text": "same number of tasks got it so what I'll"
+    },
+    {
+      "start": 1209.48,
+      "end": 1213.68,
+      "text": "do is I'll try to write the recursive"
+    },
+    {
+      "start": 1211.4,
+      "end": 1216.02,
+      "text": "code now can I say the recursive code"
+    },
+    {
+      "start": 1213.68,
+      "end": 1218.78,
+      "text": "I'll just try to write it for one"
+    },
+    {
+      "start": 1216.02,
+      "end": 1220.64,
+      "text": "instance and that will make sure that it"
+    },
+    {
+      "start": 1218.78,
+      "end": 1223.1,
+      "text": "solves for all the other instances how"
+    },
+    {
+      "start": 1220.64,
+      "end": 1224.9,
+      "text": "I'll explain you so can I say I'll write"
+    },
+    {
+      "start": 1223.1,
+      "end": 1226.94,
+      "text": "a function and I know it'll have an"
+    },
+    {
+      "start": 1224.9,
+      "end": 1229.46,
+      "text": "array it will have a low it will have a"
+    },
+    {
+      "start": 1226.94,
+      "end": 1230.78,
+      "text": "high can you tell me you know in"
+    },
+    {
+      "start": 1229.46,
+      "end": 1232.88,
+      "text": "recursion what is the first thing that I"
+    },
+    {
+      "start": 1230.78,
+      "end": 1235.34,
+      "text": "have to write the base case over here"
+    },
+    {
+      "start": 1232.88,
+      "end": 1237.26,
+      "text": "what is the base case when it stops when"
+    },
+    {
+      "start": 1235.34,
+      "end": 1240.98,
+      "text": "did it stop when the third space was"
+    },
+    {
+      "start": 1237.26,
+      "end": 1243.56,
+      "text": "exhausted so can I say at any moment low"
+    },
+    {
+      "start": 1240.98,
+      "end": 1245.84,
+      "text": "is greater than high that means the it's"
+    },
+    {
+      "start": 1243.56,
+      "end": 1247.88,
+      "text": "over there's nothing to do it's over so"
+    },
+    {
+      "start": 1245.84,
+      "end": 1250.64,
+      "text": "at that moment we will say return minus"
+    },
+    {
+      "start": 1247.88,
+      "end": 1252.98,
+      "text": "one that's our base case that is our"
+    },
+    {
+      "start": 1250.64,
+      "end": 1256.04,
+      "text": "exhaustion Keys done what is the next"
+    },
+    {
+      "start": 1252.98,
+      "end": 1258.26,
+      "text": "thing mid equal to"
+    },
+    {
+      "start": 1256.04,
+      "end": 1261.14,
+      "text": "low plus High"
+    },
+    {
+      "start": 1258.26,
+      "end": 1262.82,
+      "text": "by 2 and I say that's our next thing I"
+    },
+    {
+      "start": 1261.14,
+      "end": 1264.44,
+      "text": "can"
+    },
+    {
+      "start": 1262.82,
+      "end": 1266.84,
+      "text": "what's the next step we were doing we"
+    },
+    {
+      "start": 1264.44,
+      "end": 1269.24,
+      "text": "were checking if we are finding the"
+    },
+    {
+      "start": 1266.84,
+      "end": 1274.46,
+      "text": "element at that mid index I'll be like"
+    },
+    {
+      "start": 1269.24,
+      "end": 1276.44,
+      "text": "okay if arr[mid] is equal to equal"
+    },
+    {
+      "start": 1274.46,
+      "end": 1279.02,
+      "text": "to obviously we have to have a Target as"
+    },
+    {
+      "start": 1276.44,
+      "end": 1281.92,
+      "text": "well I forgot to carry the target but"
+    },
+    {
+      "start": 1279.02,
+      "end": 1281.92,
+      "text": "yeah you'll carry the target"
+    },
+    {
+      "start": 1282.74,
+      "end": 1287.42,
+      "text": "so I'll have to have a Target if I find"
+    },
+    {
+      "start": 1284.72,
+      "end": 1289.88,
+      "text": "it can I see okay I found it at the mid"
+    },
+    {
+      "start": 1287.42,
+      "end": 1292.46,
+      "text": "index so you can go back quite simple"
+    },
+    {
+      "start": 1289.88,
+      "end": 1294.38,
+      "text": "now what was the other case the other"
+    },
+    {
+      "start": 1292.46,
+      "end": 1298.16,
+      "text": "case was what if"
+    },
+    {
+      "start": 1294.38,
+      "end": 1301.1,
+      "text": "the target was supposed to be lying on"
+    },
+    {
+      "start": 1298.16,
+      "end": 1303.08,
+      "text": "the right of the mid in that case the"
+    },
+    {
+      "start": 1301.1,
+      "end": 1305.18,
+      "text": "left search space will be eliminated"
+    },
+    {
+      "start": 1303.08,
+      "end": 1307.52,
+      "text": "step two in the next step I have to"
+    },
+    {
+      "start": 1305.18,
+      "end": 1309.62,
+      "text": "perform a third space on the right half"
+    },
+    {
+      "start": 1307.52,
+      "end": 1311.6,
+      "text": "but how do I do this I know this"
+    },
+    {
+      "start": 1309.62,
+      "end": 1313.28,
+      "text": "function will do it for me so I'll kind"
+    },
+    {
+      "start": 1311.6,
+      "end": 1315.86,
+      "text": "of call this function"
+    },
+    {
+      "start": 1313.28,
+      "end": 1317.96,
+      "text": "the call this function hey function take"
+    },
+    {
+      "start": 1315.86,
+      "end": 1319.22,
+      "text": "the array but this time the low will be"
+    },
+    {
+      "start": 1317.96,
+      "end": 1321.26,
+      "text": "mid plus one because you have to perform"
+    },
+    {
+      "start": 1319.22,
+      "end": 1322.7,
+      "text": "on the right half I will be this and the"
+    },
+    {
+      "start": 1321.26,
+      "end": 1325.82,
+      "text": "target will be this"
+    },
+    {
+      "start": 1322.7,
+      "end": 1327.2,
+      "text": "and please give me so when you give me I"
+    },
+    {
+      "start": 1325.82,
+      "end": 1330.86,
+      "text": "will return that when you give me I'll"
+    },
+    {
+      "start": 1327.2,
+      "end": 1332.12,
+      "text": "return that so if this is happening if"
+    },
+    {
+      "start": 1330.86,
+      "end": 1334.1,
+      "text": "this is"
+    },
+    {
+      "start": 1332.12,
+      "end": 1335.48,
+      "text": "so if this is not happening and if this"
+    },
+    {
+      "start": 1334.1,
+      "end": 1338.18,
+      "text": "is not happening there's only one other"
+    },
+    {
+      "start": 1335.48,
+      "end": 1340.4,
+      "text": "case where the target will be on the"
+    },
+    {
+      "start": 1338.18,
+      "end": 1342.62,
+      "text": "left because greater so it will be"
+    },
+    {
+      "start": 1340.4,
+      "end": 1344.72,
+      "text": "lesser so that we don't have to write a"
+    },
+    {
+      "start": 1342.62,
+      "end": 1347.06,
+      "text": "condition for it I'll always little go"
+    },
+    {
+      "start": 1344.72,
+      "end": 1349.04,
+      "text": "to else so I can simply write this line"
+    },
+    {
+      "start": 1347.06,
+      "end": 1350.56,
+      "text": "will be always executed right so I'll"
+    },
+    {
+      "start": 1349.04,
+      "end": 1352.76,
+      "text": "write return"
+    },
+    {
+      "start": 1350.56,
+      "end": 1355.94,
+      "text": "hey can you please search on the left"
+    },
+    {
+      "start": 1352.76,
+      "end": 1358.64,
+      "text": "half which is mid minus 1 and Target"
+    },
+    {
+      "start": 1355.94,
+      "end": 1361.04,
+      "text": "and when you find it please return it"
+    },
+    {
+      "start": 1358.64,
+      "end": 1363.26,
+      "text": "when you find it please return it quite"
+    },
+    {
+      "start": 1361.04,
+      "end": 1364.52,
+      "text": "simple and that's how the recursive code"
+    },
+    {
+      "start": 1363.26,
+      "end": 1366.2,
+      "text": "will look like yes that is how the"
+    },
+    {
+      "start": 1364.52,
+      "end": 1367.58,
+      "text": "recursive code will look like you want"
+    },
+    {
+      "start": 1366.2,
+      "end": 1369.5,
+      "text": "to draw in let me quickly give you a"
+    },
+    {
+      "start": 1367.58,
+      "end": 1371.36,
+      "text": "driver so let's quickly do a dry run for"
+    },
+    {
+      "start": 1369.5,
+      "end": 1374.06,
+      "text": "the Target 13 and let's understand how"
+    },
+    {
+      "start": 1371.36,
+      "end": 1376.04,
+      "text": "it works so if low is here and high is"
+    },
+    {
+      "start": 1374.06,
+      "end": 1379.28,
+      "text": "here initially the first call will go"
+    },
+    {
+      "start": 1376.04,
+      "end": 1382.82,
+      "text": "for when low is 0 and high is 7. what"
+    },
+    {
+      "start": 1379.28,
+      "end": 1385.4,
+      "text": "happens it finds out the mid to be at"
+    },
+    {
+      "start": 1382.82,
+      "end": 1387.2,
+      "text": "this portion which is this line correct"
+    },
+    {
+      "start": 1385.4,
+      "end": 1389.84,
+      "text": "because this line is not executed and"
+    },
+    {
+      "start": 1387.2,
+      "end": 1393.02,
+      "text": "then this is false then it says Target"
+    },
+    {
+      "start": 1389.84,
+      "end": 1395.6,
+      "text": "13 is greater than the element seven so"
+    },
+    {
+      "start": 1393.02,
+      "end": 1397.88,
+      "text": "can you please call this so it says call"
+    },
+    {
+      "start": 1395.6,
+      "end": 1399.98,
+      "text": "the function with mid plus one basically"
+    },
+    {
+      "start": 1397.88,
+      "end": 1402.14,
+      "text": "with low pointed here and high"
+    },
+    {
+      "start": 1399.98,
+      "end": 1405.2,
+      "text": "quantitative so it kind of calls another"
+    },
+    {
+      "start": 1402.14,
+      "end": 1406.7,
+      "text": "recursive function where it passes the"
+    },
+    {
+      "start": 1405.2,
+      "end": 1410.54,
+      "text": "low as"
+    },
+    {
+      "start": 1406.7,
+      "end": 1412.7,
+      "text": "4 and the high as seven that is what it"
+    },
+    {
+      "start": 1410.54,
+      "end": 1414.8,
+      "text": "passes let's go and perform the next set"
+    },
+    {
+      "start": 1412.7,
+      "end": 1417.86,
+      "text": "of recursion so can I say this time low"
+    },
+    {
+      "start": 1414.8,
+      "end": 1420.38,
+      "text": "comes as 4 and high comes up as 7 right"
+    },
+    {
+      "start": 1417.86,
+      "end": 1423.26,
+      "text": "so if I have to solve it maybe I'll just"
+    },
+    {
+      "start": 1420.38,
+      "end": 1425.72,
+      "text": "erase it and can I write lowers here"
+    },
+    {
+      "start": 1423.26,
+      "end": 1428.66,
+      "text": "so this framework will be mid mid will"
+    },
+    {
+      "start": 1425.72,
+      "end": 1431.36,
+      "text": "be somewhere here mid will be somewhere"
+    },
+    {
+      "start": 1428.66,
+      "end": 1434.72,
+      "text": "here so if mid is here what do I need to"
+    },
+    {
+      "start": 1431.36,
+      "end": 1437.48,
+      "text": "check if 12 is equivalent to Target no"
+    },
+    {
+      "start": 1434.72,
+      "end": 1439.4,
+      "text": "it is not is 13 greater than 12 yes it"
+    },
+    {
+      "start": 1437.48,
+      "end": 1441.14,
+      "text": "is so it will again go and call another"
+    },
+    {
+      "start": 1439.4,
+      "end": 1442.94,
+      "text": "recursion it will again go and call"
+    },
+    {
+      "start": 1441.14,
+      "end": 1444.38,
+      "text": "another equation and this time it will"
+    },
+    {
+      "start": 1442.94,
+      "end": 1447.8,
+      "text": "call with"
+    },
+    {
+      "start": 1444.38,
+      "end": 1449.48,
+      "text": "the slow will go here so 6 comma 7 is"
+    },
+    {
+      "start": 1447.8,
+      "end": 1451.28,
+      "text": "what it will call with so let's quickly"
+    },
+    {
+      "start": 1449.48,
+      "end": 1453.74,
+      "text": "erase this"
+    },
+    {
+      "start": 1451.28,
+      "end": 1456.38,
+      "text": "and lowers here not high is here because"
+    },
+    {
+      "start": 1453.74,
+      "end": 1458.54,
+      "text": "it found here so from this line it will"
+    },
+    {
+      "start": 1456.38,
+      "end": 1459.92,
+      "text": "go and call so let's write the next set"
+    },
+    {
+      "start": 1458.54,
+      "end": 1462.86,
+      "text": "of precaution so when this time"
+    },
+    {
+      "start": 1459.92,
+      "end": 1466.42,
+      "text": "recursion is called Lower 6 and high is"
+    },
+    {
+      "start": 1462.86,
+      "end": 1468.98,
+      "text": "7 right and this time the mid will be"
+    },
+    {
+      "start": 1466.42,
+      "end": 1471.74,
+      "text": "performed and what will be mid Middle"
+    },
+    {
+      "start": 1468.98,
+      "end": 1475.34,
+      "text": "with this element 16 what happens is it"
+    },
+    {
+      "start": 1471.74,
+      "end": 1477.44,
+      "text": "equivalent no is it Greater no is it"
+    },
+    {
+      "start": 1475.34,
+      "end": 1479.48,
+      "text": "lesser yes so this time this call will"
+    },
+    {
+      "start": 1477.44,
+      "end": 1481.16,
+      "text": "be done so it will go ahead and call it"
+    },
+    {
+      "start": 1479.48,
+      "end": 1483.68,
+      "text": "so let's quickly call it the same mode"
+    },
+    {
+      "start": 1481.16,
+      "end": 1485.0,
+      "text": "call will be done this high will move to"
+    },
+    {
+      "start": 1483.68,
+      "end": 1487.1,
+      "text": "one place back"
+    },
+    {
+      "start": 1485.0,
+      "end": 1489.5,
+      "text": "this high will move to here hence the"
+    },
+    {
+      "start": 1487.1,
+      "end": 1491.3,
+      "text": "call will be made for 6 comma 5 very"
+    },
+    {
+      "start": 1489.5,
+      "end": 1494.06,
+      "text": "very important as the call will be made"
+    },
+    {
+      "start": 1491.3,
+      "end": 1495.86,
+      "text": "for 6 comma five so the same when the"
+    },
+    {
+      "start": 1494.06,
+      "end": 1498.86,
+      "text": "call is made for six and five what"
+    },
+    {
+      "start": 1495.86,
+      "end": 1501.14,
+      "text": "happens the base case is executed and it"
+    },
+    {
+      "start": 1498.86,
+      "end": 1503.24,
+      "text": "returns minus one so this returning of"
+    },
+    {
+      "start": 1501.14,
+      "end": 1505.94,
+      "text": "minus 1 goes here and I can quickly"
+    },
+    {
+      "start": 1503.24,
+      "end": 1509.06,
+      "text": "erase this so hence the entire function"
+    },
+    {
+      "start": 1505.94,
+      "end": 1512.0,
+      "text": "will get erased and will get a value of"
+    },
+    {
+      "start": 1509.06,
+      "end": 1514.1,
+      "text": "-1 so this gets a return minus one so"
+    },
+    {
+      "start": 1512.0,
+      "end": 1516.44,
+      "text": "this time this will return minus 1 and"
+    },
+    {
+      "start": 1514.1,
+      "end": 1518.78,
+      "text": "again this will get erased with minus"
+    },
+    {
+      "start": 1516.44,
+      "end": 1521.9,
+      "text": "one let's quickly raise with minus one"
+    },
+    {
+      "start": 1518.78,
+      "end": 1524.3,
+      "text": "and this return minus 1 will now return"
+    },
+    {
+      "start": 1521.9,
+      "end": 1526.04,
+      "text": "-1 so what will happen this will get"
+    },
+    {
+      "start": 1524.3,
+      "end": 1528.26,
+      "text": "erased with minus 1 because it got a"
+    },
+    {
+      "start": 1526.04,
+      "end": 1530.24,
+      "text": "value of -1 thereby this will return"
+    },
+    {
+      "start": 1528.26,
+      "end": 1532.58,
+      "text": "minus 1 and thereby this function will"
+    },
+    {
+      "start": 1530.24,
+      "end": 1535.04,
+      "text": "return minus 1 stating it was never"
+    },
+    {
+      "start": 1532.58,
+      "end": 1537.44,
+      "text": "found this is how recursion Works magic"
+    },
+    {
+      "start": 1535.04,
+      "end": 1539.12,
+      "text": "right wonderful"
+    },
+    {
+      "start": 1537.44,
+      "end": 1540.8,
+      "text": "this is how I have taught the entire"
+    },
+    {
+      "start": 1539.12,
+      "end": 1543.32,
+      "text": "recursion so please make sure you check"
+    },
+    {
+      "start": 1540.8,
+      "end": 1545.96,
+      "text": "out the recursion playlist as well as a"
+    },
+    {
+      "start": 1543.32,
+      "end": 1548.0,
+      "text": "proper in-depth uh playlist so I've"
+    },
+    {
+      "start": 1545.96,
+      "end": 1549.62,
+      "text": "written the recursive code over here now"
+    },
+    {
+      "start": 1548.0,
+      "end": 1551.24,
+      "text": "we have been asked to write a function"
+    },
+    {
+      "start": 1549.62,
+      "end": 1553.88,
+      "text": "so what I'll do is I'll just call the"
+    },
+    {
+      "start": 1551.24,
+      "end": 1556.28,
+      "text": "recursive code I'll pass all the nums"
+    },
+    {
+      "start": 1553.88,
+      "end": 1558.68,
+      "text": "they are low will always be zero the"
+    },
+    {
+      "start": 1556.28,
+      "end": 1560.12,
+      "text": "high will be size minus one that's the"
+    },
+    {
+      "start": 1558.68,
+      "end": 1562.1,
+      "text": "last index and I'll pass on the target"
+    },
+    {
+      "start": 1560.12,
+      "end": 1563.6,
+      "text": "as well once I've done this I'll quickly"
+    },
+    {
+      "start": 1562.1,
+      "end": 1566.78,
+      "text": "go ahead and run this and see if it is"
+    },
+    {
+      "start": 1563.6,
+      "end": 1569.48,
+      "text": "running fine should be running fine"
+    },
+    {
+      "start": 1566.78,
+      "end": 1571.82,
+      "text": "it does let's quickly submit it and it"
+    },
+    {
+      "start": 1569.48,
+      "end": 1572.96,
+      "text": "will be submitted again you can try out"
+    },
+    {
+      "start": 1571.82,
+      "end": 1574.64,
+      "text": "the problem from the link in the"
+    },
+    {
+      "start": 1572.96,
+      "end": 1577.22,
+      "text": "description so I can say that the"
+    },
+    {
+      "start": 1574.64,
+      "end": 1579.92,
+      "text": "recursive code is done as well what is"
+    },
+    {
+      "start": 1577.22,
+      "end": 1581.3,
+      "text": "the next thing time complexity is very"
+    },
+    {
+      "start": 1579.92,
+      "end": 1583.7,
+      "text": "important to understand the time"
+    },
+    {
+      "start": 1581.3,
+      "end": 1587.9,
+      "text": "complexity it's analyze what is"
+    },
+    {
+      "start": 1583.7,
+      "end": 1590.54,
+      "text": "happening can I see when I have a 32"
+    },
+    {
+      "start": 1587.9,
+      "end": 1593.6,
+      "text": "size array what am I doing I'm saying"
+    },
+    {
+      "start": 1590.54,
+      "end": 1595.64,
+      "text": "the entire search space is of 32 length"
+    },
+    {
+      "start": 1593.6,
+      "end": 1597.62,
+      "text": "and then I'm putting a mid"
+    },
+    {
+      "start": 1595.64,
+      "end": 1599.9,
+      "text": "then I'm putting a mid I'm either"
+    },
+    {
+      "start": 1597.62,
+      "end": 1603.32,
+      "text": "eliminating the right half or either I'm"
+    },
+    {
+      "start": 1599.9,
+      "end": 1605.48,
+      "text": "eliminating the left half so kind of"
+    },
+    {
+      "start": 1603.32,
+      "end": 1607.88,
+      "text": "kind of I'm trimming 32 down to"
+    },
+    {
+      "start": 1605.48,
+      "end": 1610.4,
+      "text": "somewhere near about 60. somewhere near"
+    },
+    {
+      "start": 1607.88,
+      "end": 1612.44,
+      "text": "about 60 might not be 60 might not be 16"
+    },
+    {
+      "start": 1610.4,
+      "end": 1615.62,
+      "text": "why let me give you an example imagine"
+    },
+    {
+      "start": 1612.44,
+      "end": 1618.26,
+      "text": "in this case low was here high was here"
+    },
+    {
+      "start": 1615.62,
+      "end": 1620.96,
+      "text": "and mid was here so when we trim down"
+    },
+    {
+      "start": 1618.26,
+      "end": 1623.18,
+      "text": "the left so space we are still left off"
+    },
+    {
+      "start": 1620.96,
+      "end": 1626.0,
+      "text": "with four elements when we trim down the"
+    },
+    {
+      "start": 1623.18,
+      "end": 1629.24,
+      "text": "left third space but when we trim down"
+    },
+    {
+      "start": 1626.0,
+      "end": 1631.4,
+      "text": "when low is here and high is here and"
+    },
+    {
+      "start": 1629.24,
+      "end": 1633.32,
+      "text": "mid is here when we trim down the right"
+    },
+    {
+      "start": 1631.4,
+      "end": 1635.9,
+      "text": "third space we are left with three"
+    },
+    {
+      "start": 1633.32,
+      "end": 1637.52,
+      "text": "elements so it might be a half or might"
+    },
+    {
+      "start": 1635.9,
+      "end": 1639.38,
+      "text": "be slightly lesser than half might be"
+    },
+    {
+      "start": 1637.52,
+      "end": 1641.96,
+      "text": "slightly lesser than half got it"
+    },
+    {
+      "start": 1639.38,
+      "end": 1643.94,
+      "text": "so might be 16 or might be 15 but"
+    },
+    {
+      "start": 1641.96,
+      "end": 1645.98,
+      "text": "somewhere near about that just taking"
+    },
+    {
+      "start": 1643.94,
+      "end": 1648.08,
+      "text": "some approximations to find out the time"
+    },
+    {
+      "start": 1645.98,
+      "end": 1650.18,
+      "text": "complexity 16 will be trimmed down to"
+    },
+    {
+      "start": 1648.08,
+      "end": 1651.26,
+      "text": "eight somewhere near 8 will be trimmed"
+    },
+    {
+      "start": 1650.18,
+      "end": 1652.76,
+      "text": "down to four"
+    },
+    {
+      "start": 1651.26,
+      "end": 1654.86,
+      "text": "four will be trimmed down to two two"
+    },
+    {
+      "start": 1652.76,
+      "end": 1657.56,
+      "text": "will be trimmed down to one and whenever"
+    },
+    {
+      "start": 1654.86,
+      "end": 1659.42,
+      "text": "the size is 32 how many steps are you"
+    },
+    {
+      "start": 1657.56,
+      "end": 1662.78,
+      "text": "performing you're just performing some"
+    },
+    {
+      "start": 1659.42,
+      "end": 1665.18,
+      "text": "one two three unit operations there is"
+    },
+    {
+      "start": 1662.78,
+      "end": 1666.86,
+      "text": "no for loop it's like either there or"
+    },
+    {
+      "start": 1665.18,
+      "end": 1668.54,
+      "text": "there or there that's it that's what"
+    },
+    {
+      "start": 1666.86,
+      "end": 1671.12,
+      "text": "you're doing correct it's kind of unit"
+    },
+    {
+      "start": 1668.54,
+      "end": 1674.6,
+      "text": "operations unit operations all one one"
+    },
+    {
+      "start": 1671.12,
+      "end": 1678.08,
+      "text": "Atomic operations so how many steps"
+    },
+    {
+      "start": 1674.6,
+      "end": 1681.32,
+      "text": "exactly you did probably one"
+    },
+    {
+      "start": 1678.08,
+      "end": 1682.58,
+      "text": "one more here one searching here one"
+    },
+    {
+      "start": 1681.32,
+      "end": 1684.76,
+      "text": "searching here one searching here one"
+    },
+    {
+      "start": 1682.58,
+      "end": 1687.44,
+      "text": "searching here which is an overall of"
+    },
+    {
+      "start": 1684.76,
+      "end": 1688.58,
+      "text": "six steps"
+    },
+    {
+      "start": 1687.44,
+      "end": 1690.92,
+      "text": "right"
+    },
+    {
+      "start": 1688.58,
+      "end": 1693.38,
+      "text": "so if you see something"
+    },
+    {
+      "start": 1690.92,
+      "end": 1696.56,
+      "text": "32 is written as 2 to the power five so"
+    },
+    {
+      "start": 1693.38,
+      "end": 1700.34,
+      "text": "if you do for 64 for 64 to come down to"
+    },
+    {
+      "start": 1696.56,
+      "end": 1702.14,
+      "text": "one you'll find seven steps and 64 is 2"
+    },
+    {
+      "start": 1700.34,
+      "end": 1705.94,
+      "text": "to the power 6."
+    },
+    {
+      "start": 1702.14,
+      "end": 1708.92,
+      "text": "so the time complexity is actually"
+    },
+    {
+      "start": 1705.94,
+      "end": 1711.68,
+      "text": "logarithmic of Base to offend that's the"
+    },
+    {
+      "start": 1708.92,
+      "end": 1715.82,
+      "text": "time complexity why because imagine if"
+    },
+    {
+      "start": 1711.68,
+      "end": 1718.82,
+      "text": "the size is 32 can I write log base 2 32"
+    },
+    {
+      "start": 1715.82,
+      "end": 1723.32,
+      "text": "can I write log base 2 2 to the power"
+    },
+    {
+      "start": 1718.82,
+      "end": 1725.66,
+      "text": "five can I write 5 into log 2 B is 2"
+    },
+    {
+      "start": 1723.32,
+      "end": 1727.94,
+      "text": "because the power comes ahead you know"
+    },
+    {
+      "start": 1725.66,
+      "end": 1730.1,
+      "text": "base is same and this is same so this"
+    },
+    {
+      "start": 1727.94,
+      "end": 1733.46,
+      "text": "will be five into one hence will be five"
+    },
+    {
+      "start": 1730.1,
+      "end": 1735.68,
+      "text": "which is kind of near about two six kind"
+    },
+    {
+      "start": 1733.46,
+      "end": 1739.28,
+      "text": "of near about to six approximation five"
+    },
+    {
+      "start": 1735.68,
+      "end": 1741.56,
+      "text": "steps that's why time complexity is"
+    },
+    {
+      "start": 1739.28,
+      "end": 1743.66,
+      "text": "logarithmic base to n because you're"
+    },
+    {
+      "start": 1741.56,
+      "end": 1747.14,
+      "text": "dividing it by two hence the time"
+    },
+    {
+      "start": 1743.66,
+      "end": 1748.04,
+      "text": "complex it is logarithmic base to N I"
+    },
+    {
+      "start": 1747.14,
+      "end": 1750.38,
+      "text": "hope you've understood the time"
+    },
+    {
+      "start": 1748.04,
+      "end": 1753.14,
+      "text": "complexity as well now it's time to"
+    },
+    {
+      "start": 1750.38,
+      "end": 1755.96,
+      "text": "understand the Overflow case"
+    },
+    {
+      "start": 1753.14,
+      "end": 1758.6,
+      "text": "now we have taken an example of a coding"
+    },
+    {
+      "start": 1755.96,
+      "end": 1761.84,
+      "text": "problem thereby the example taken was an"
+    },
+    {
+      "start": 1758.6,
+      "end": 1764.48,
+      "text": "array and we always know an array will"
+    },
+    {
+      "start": 1761.84,
+      "end": 1767.12,
+      "text": "always have a size of 10 to the power 5"
+    },
+    {
+      "start": 1764.48,
+      "end": 1770.48,
+      "text": "10 to the power 6 or 10 to the power 7"
+    },
+    {
+      "start": 1767.12,
+      "end": 1772.7,
+      "text": "nothing more than that so what if it's"
+    },
+    {
+      "start": 1770.48,
+      "end": 1775.22,
+      "text": "not an array and I'm giving you some"
+    },
+    {
+      "start": 1772.7,
+      "end": 1777.38,
+      "text": "random problem statement the dictionary"
+    },
+    {
+      "start": 1775.22,
+      "end": 1779.54,
+      "text": "one just imagine just take an example of"
+    },
+    {
+      "start": 1777.38,
+      "end": 1782.9,
+      "text": "a dictionary itself imagine I give you"
+    },
+    {
+      "start": 1779.54,
+      "end": 1784.94,
+      "text": "such an example where the search space"
+    },
+    {
+      "start": 1782.9,
+      "end": 1787.7,
+      "text": "starts from 0"
+    },
+    {
+      "start": 1784.94,
+      "end": 1790.04,
+      "text": "and the third space is still"
+    },
+    {
+      "start": 1787.7,
+      "end": 1792.2,
+      "text": "into max which is the maximum the"
+    },
+    {
+      "start": 1790.04,
+      "end": 1794.72,
+      "text": "integer variable can store"
+    },
+    {
+      "start": 1792.2,
+      "end": 1798.02,
+      "text": "the maximum the integer variable can"
+    },
+    {
+      "start": 1794.72,
+      "end": 1801.14,
+      "text": "store remember binary search is not only"
+    },
+    {
+      "start": 1798.02,
+      "end": 1802.88,
+      "text": "limited to the search in an array it can"
+    },
+    {
+      "start": 1801.14,
+      "end": 1805.52,
+      "text": "be a search in a dictionary it can be"
+    },
+    {
+      "start": 1802.88,
+      "end": 1807.56,
+      "text": "search in answers we will be solving a"
+    },
+    {
+      "start": 1805.52,
+      "end": 1809.24,
+      "text": "bunch of problems and you'll see it's"
+    },
+    {
+      "start": 1807.56,
+      "end": 1811.1,
+      "text": "just not limited to searching in an"
+    },
+    {
+      "start": 1809.24,
+      "end": 1814.22,
+      "text": "array binary search is way more than"
+    },
+    {
+      "start": 1811.1,
+      "end": 1816.08,
+      "text": "that so we are taking such cases where"
+    },
+    {
+      "start": 1814.22,
+      "end": 1818.42,
+      "text": "imagine your search space is not an"
+    },
+    {
+      "start": 1816.08,
+      "end": 1820.64,
+      "text": "array and it is somewhere between 0 and"
+    },
+    {
+      "start": 1818.42,
+      "end": 1823.52,
+      "text": "into X imagine I take this dictionary"
+    },
+    {
+      "start": 1820.64,
+      "end": 1825.32,
+      "text": "where the page number one is oh the"
+    },
+    {
+      "start": 1823.52,
+      "end": 1827.06,
+      "text": "dictionary is closed now the page number"
+    },
+    {
+      "start": 1825.32,
+      "end": 1829.46,
+      "text": "one is zero and the last page is into"
+    },
+    {
+      "start": 1827.06,
+      "end": 1830.96,
+      "text": "max imagine"
+    },
+    {
+      "start": 1829.46,
+      "end": 1832.88,
+      "text": "so"
+    },
+    {
+      "start": 1830.96,
+      "end": 1834.98,
+      "text": "what are you writing Midas let's see"
+    },
+    {
+      "start": 1832.88,
+      "end": 1839.48,
+      "text": "you're adding Midas"
+    },
+    {
+      "start": 1834.98,
+      "end": 1842.06,
+      "text": "low plus High by 2."
+    },
+    {
+      "start": 1839.48,
+      "end": 1843.8,
+      "text": "what if while performing binary search"
+    },
+    {
+      "start": 1842.06,
+      "end": 1846.56,
+      "text": "you're trimming trimming trimming down"
+    },
+    {
+      "start": 1843.8,
+      "end": 1849.26,
+      "text": "and the low"
+    },
+    {
+      "start": 1846.56,
+      "end": 1850.7,
+      "text": "comes down to this portion"
+    },
+    {
+      "start": 1849.26,
+      "end": 1853.1,
+      "text": "there is a portion where the search"
+    },
+    {
+      "start": 1850.7,
+      "end": 1855.38,
+      "text": "space is only this much might happen"
+    },
+    {
+      "start": 1853.1,
+      "end": 1856.88,
+      "text": "might happen you add the last element"
+    },
+    {
+      "start": 1855.38,
+      "end": 1858.8,
+      "text": "even in the array it can happen no"
+    },
+    {
+      "start": 1856.88,
+      "end": 1860.24,
+      "text": "you're just in the last element the last"
+    },
+    {
+      "start": 1858.8,
+      "end": 1861.56,
+      "text": "element is your search space might"
+    },
+    {
+      "start": 1860.24,
+      "end": 1864.02,
+      "text": "happen if you're searching for something"
+    },
+    {
+      "start": 1861.56,
+      "end": 1866.3,
+      "text": "might happen right so"
+    },
+    {
+      "start": 1864.02,
+      "end": 1868.52,
+      "text": "imagine the third space is just the last"
+    },
+    {
+      "start": 1866.3,
+      "end": 1870.62,
+      "text": "so what are you giving low as low you're"
+    },
+    {
+      "start": 1868.52,
+      "end": 1873.8,
+      "text": "giving us into max how you are giving us"
+    },
+    {
+      "start": 1870.62,
+      "end": 1877.76,
+      "text": "into max it's like into Max Plus"
+    },
+    {
+      "start": 1873.8,
+      "end": 1880.76,
+      "text": "interbox so it will overflow y because"
+    },
+    {
+      "start": 1877.76,
+      "end": 1883.1,
+      "text": "it is 2 into Max and that cannot be"
+    },
+    {
+      "start": 1880.76,
+      "end": 1886.28,
+      "text": "stored in an integer cannot be stored in"
+    },
+    {
+      "start": 1883.1,
+      "end": 1889.82,
+      "text": "an integer so the solutions are either"
+    },
+    {
+      "start": 1886.28,
+      "end": 1892.4,
+      "text": "you take long long while assigning low"
+    },
+    {
+      "start": 1889.82,
+      "end": 1894.32,
+      "text": "and high just assign long long to low"
+    },
+    {
+      "start": 1892.4,
+      "end": 1896.12,
+      "text": "and high that's one of the solutions or"
+    },
+    {
+      "start": 1894.32,
+      "end": 1899.12,
+      "text": "the other solution is if you are very"
+    },
+    {
+      "start": 1896.12,
+      "end": 1901.64,
+      "text": "sure that a third space is between 0 and"
+    },
+    {
+      "start": 1899.12,
+      "end": 1903.2,
+      "text": "Inter Max you're very sure because if it"
+    },
+    {
+      "start": 1901.64,
+      "end": 1905.36,
+      "text": "is still interbox you don't need a long"
+    },
+    {
+      "start": 1903.2,
+      "end": 1907.28,
+      "text": "loan if you're very sure about that you"
+    },
+    {
+      "start": 1905.36,
+      "end": 1913.34,
+      "text": "should write it you should write the mid"
+    },
+    {
+      "start": 1907.28,
+      "end": 1915.92,
+      "text": "as like this low plus High minus Low by"
+    },
+    {
+      "start": 1913.34,
+      "end": 1917.84,
+      "text": "two that's an alternative way of writing"
+    },
+    {
+      "start": 1915.92,
+      "end": 1922.22,
+      "text": "finding out mid why does this work"
+    },
+    {
+      "start": 1917.84,
+      "end": 1925.34,
+      "text": "simple maths if I just take the"
+    },
+    {
+      "start": 1922.22,
+      "end": 1927.08,
+      "text": "denominator then I can spread it across"
+    },
+    {
+      "start": 1925.34,
+      "end": 1929.3,
+      "text": "and this will be it and then I can write"
+    },
+    {
+      "start": 1927.08,
+      "end": 1933.08,
+      "text": "too low minus low will be low"
+    },
+    {
+      "start": 1929.3,
+      "end": 1934.88,
+      "text": "plus High by two it's it's the same as"
+    },
+    {
+      "start": 1933.08,
+      "end": 1937.64,
+      "text": "this is the same as this the only"
+    },
+    {
+      "start": 1934.88,
+      "end": 1941.18,
+      "text": "difference is we are subtracting so into"
+    },
+    {
+      "start": 1937.64,
+      "end": 1943.7,
+      "text": "max minus into max will be zero thereby"
+    },
+    {
+      "start": 1941.18,
+      "end": 1945.26,
+      "text": "it will not go into two into X so the"
+    },
+    {
+      "start": 1943.7,
+      "end": 1947.6,
+      "text": "alternative is"
+    },
+    {
+      "start": 1945.26,
+      "end": 1950.12,
+      "text": "so if you are seeing the search spaces"
+    },
+    {
+      "start": 1947.6,
+      "end": 1955.04,
+      "text": "around it backs please make sure you"
+    },
+    {
+      "start": 1950.12,
+      "end": 1956.54,
+      "text": "assign mid as low plus High minus Low by"
+    },
+    {
+      "start": 1955.04,
+      "end": 1959.18,
+      "text": "2 in that case you don't have to take"
+    },
+    {
+      "start": 1956.54,
+      "end": 1960.68,
+      "text": "long long or long integer will work but"
+    },
+    {
+      "start": 1959.18,
+      "end": 1963.98,
+      "text": "this is only valid if the search space"
+    },
+    {
+      "start": 1960.68,
+      "end": 1965.78,
+      "text": "is still into max not beyond that so I"
+    },
+    {
+      "start": 1963.98,
+      "end": 1967.94,
+      "text": "hope you've understood the Overflow case"
+    },
+    {
+      "start": 1965.78,
+      "end": 1969.32,
+      "text": "as well so I hope you have enjoyed the"
+    },
+    {
+      "start": 1967.94,
+      "end": 1971.6,
+      "text": "entire lecture so I'll go back to the"
+    },
+    {
+      "start": 1969.32,
+      "end": 1973.7,
+      "text": "sheet and I'll mark this as done as I"
+    },
+    {
+      "start": 1971.6,
+      "end": 1975.08,
+      "text": "said during the start that I'll not just"
+    },
+    {
+      "start": 1973.7,
+      "end": 1977.06,
+      "text": "be solving this problem I'll be"
+    },
+    {
+      "start": 1975.08,
+      "end": 1979.46,
+      "text": "explaining you binary search in depth I"
+    },
+    {
+      "start": 1977.06,
+      "end": 1981.2,
+      "text": "hope I have kept my promise so just"
+    },
+    {
+      "start": 1979.46,
+      "end": 1982.7,
+      "text": "please please make sure that you hit"
+    },
+    {
+      "start": 1981.2,
+      "end": 1984.14,
+      "text": "that like because it's a small thing for"
+    },
+    {
+      "start": 1982.7,
+      "end": 1985.34,
+      "text": "you but it's something that highly"
+    },
+    {
+      "start": 1984.14,
+      "end": 1987.26,
+      "text": "motivates me if you're new to our"
+    },
+    {
+      "start": 1985.34,
+      "end": 1989.12,
+      "text": "Channel please please do consider"
+    },
+    {
+      "start": 1987.26,
+      "end": 1990.74,
+      "text": "subscribing to us and if you haven't"
+    },
+    {
+      "start": 1989.12,
+      "end": 1992.42,
+      "text": "followed me on Instagram Twitter and"
+    },
+    {
+      "start": 1990.74,
+      "end": 1994.34,
+      "text": "Linkedin you can find all my profile"
+    },
+    {
+      "start": 1992.42,
+      "end": 1995.66,
+      "text": "links in the description with this I'll"
+    },
+    {
+      "start": 1994.34,
+      "end": 1996.86,
+      "text": "be wrapping up this video let's put in"
+    },
+    {
+      "start": 1995.66,
+      "end": 2003.5,
+      "text": "some other videos"
+    },
+    {
+      "start": 1996.86,
+      "end": 2003.5,
+      "text": "[Music]"
+    },
+    {
+      "start": 2004.84,
+      "end": 2007.92,
+      "text": "will find the lighting"
+    }
+  ]
+}

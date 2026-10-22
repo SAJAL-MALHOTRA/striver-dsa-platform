@@ -1,0 +1,3897 @@
+{
+  "video_id": "6zhGS79oQ4k",
+  "title": "BS-2. Implement Lower Bound and Upper Bound | Search Insert Position | Floor and Ceil",
+  "duration_sec": 1946,
+  "segments": [
+    {
+      "start": 2.94,
+      "end": 8.94,
+      "text": "so what is lower bound the definition"
+    },
+    {
+      "start": 5.28,
+      "end": 11.88,
+      "text": "goes as the smallest index yes the"
+    },
+    {
+      "start": 8.94,
+      "end": 14.94,
+      "text": "smallest index such that the number at"
+    },
+    {
+      "start": 11.88,
+      "end": 17.64,
+      "text": "that index is greater than equal to the"
+    },
+    {
+      "start": 14.94,
+      "end": 19.92,
+      "text": "given number let's take an example so"
+    },
+    {
+      "start": 17.64,
+      "end": 21.66,
+      "text": "this is a sorted array again the array"
+    },
+    {
+      "start": 19.92,
+      "end": 24.98,
+      "text": "has to be sorted for lower bound to be"
+    },
+    {
+      "start": 21.66,
+      "end": 29.7,
+      "text": "implemented imagine I give you X as"
+    },
+    {
+      "start": 24.98,
+      "end": 34.74,
+      "text": "eight if I give you X as 8 I can say the"
+    },
+    {
+      "start": 29.7,
+      "end": 38.76,
+      "text": "smallest index is 3 no it's five no S8"
+    },
+    {
+      "start": 34.74,
+      "end": 42.72,
+      "text": "yes why because 8 is greater than equal"
+    },
+    {
+      "start": 38.76,
+      "end": 45.06,
+      "text": "to 8 that's why this is the first index"
+    },
+    {
+      "start": 42.72,
+      "end": 47.52,
+      "text": "where you get a number that is greater"
+    },
+    {
+      "start": 45.06,
+      "end": 49.02,
+      "text": "than equal to correct so what is the"
+    },
+    {
+      "start": 47.52,
+      "end": 55.32,
+      "text": "index if I have to write down the index"
+    },
+    {
+      "start": 49.02,
+      "end": 59.58,
+      "text": "0 1 2 3 4 so the low bound will go as 2."
+    },
+    {
+      "start": 55.32,
+      "end": 65.46,
+      "text": "quite simple what if x is nine in this"
+    },
+    {
+      "start": 59.58,
+      "end": 68.46,
+      "text": "case let's see N3 N5 can 8 15 yes 15 can"
+    },
+    {
+      "start": 65.46,
+      "end": 71.52,
+      "text": "be because 15 is greater than equal to 9"
+    },
+    {
+      "start": 68.46,
+      "end": 73.14,
+      "text": "because X is nine so thereby the index"
+    },
+    {
+      "start": 71.52,
+      "end": 77.58,
+      "text": "will go as"
+    },
+    {
+      "start": 73.14,
+      "end": 82.08,
+      "text": "three perfect what if x is let's say"
+    },
+    {
+      "start": 77.58,
+      "end": 85.74,
+      "text": "16. in that case is it no is it no is it"
+    },
+    {
+      "start": 82.08,
+      "end": 88.5,
+      "text": "no is it no yes this is 19 greater than"
+    },
+    {
+      "start": 85.74,
+      "end": 93.36,
+      "text": "equal to 16 so thereby the lower bound"
+    },
+    {
+      "start": 88.5,
+      "end": 94.92,
+      "text": "will be 4 in this case what if x is"
+    },
+    {
+      "start": 93.36,
+      "end": 97.56,
+      "text": "let's say 20"
+    },
+    {
+      "start": 94.92,
+      "end": 101.34,
+      "text": "for 19 it will be this itself what if"
+    },
+    {
+      "start": 97.56,
+      "end": 104.52,
+      "text": "it's 20 this no this no this no this no"
+    },
+    {
+      "start": 101.34,
+      "end": 107.7,
+      "text": "this no so the last hypothetical index"
+    },
+    {
+      "start": 104.52,
+      "end": 110.04,
+      "text": "is five so the low bound will be the"
+    },
+    {
+      "start": 107.7,
+      "end": 112.62,
+      "text": "size of the array or the index the last"
+    },
+    {
+      "start": 110.04,
+      "end": 115.74,
+      "text": "hypothetical index because there is no"
+    },
+    {
+      "start": 112.62,
+      "end": 118.1,
+      "text": "one who is greater than equal to 20 so"
+    },
+    {
+      "start": 115.74,
+      "end": 120.72,
+      "text": "thereby it will be the last hypothetical"
+    },
+    {
+      "start": 118.1,
+      "end": 123.12,
+      "text": "scenario so what if"
+    },
+    {
+      "start": 120.72,
+      "end": 127.5,
+      "text": "I give you something as"
+    },
+    {
+      "start": 123.12,
+      "end": 129.6,
+      "text": "Let's uh rename this as 1919 and"
+    },
+    {
+      "start": 127.5,
+      "end": 133.92,
+      "text": "probably remove this and add one more"
+    },
+    {
+      "start": 129.6,
+      "end": 137.46,
+      "text": "90. in this case ns7 what if this time x"
+    },
+    {
+      "start": 133.92,
+      "end": 139.14,
+      "text": "comes up as 19 what will be the answer"
+    },
+    {
+      "start": 137.46,
+      "end": 142.98,
+      "text": "which index"
+    },
+    {
+      "start": 139.14,
+      "end": 145.62,
+      "text": "obviously the smallest index so this one"
+    },
+    {
+      "start": 142.98,
+      "end": 148.14,
+      "text": "will be your answer first index where"
+    },
+    {
+      "start": 145.62,
+      "end": 150.0,
+      "text": "the number at that index is greater than"
+    },
+    {
+      "start": 148.14,
+      "end": 152.22,
+      "text": "equal to very important greater than"
+    },
+    {
+      "start": 150.0,
+      "end": 154.14,
+      "text": "equal to so by getting equal to fine if"
+    },
+    {
+      "start": 152.22,
+      "end": 155.52,
+      "text": "you're not getting find the greater so"
+    },
+    {
+      "start": 154.14,
+      "end": 157.08,
+      "text": "that's what you have to got the"
+    },
+    {
+      "start": 155.52,
+      "end": 160.68,
+      "text": "definition of flow bound"
+    },
+    {
+      "start": 157.08,
+      "end": 163.08,
+      "text": "so let's take X as 11. so if I ask you"
+    },
+    {
+      "start": 160.68,
+      "end": 164.82,
+      "text": "to find out the low bound of 11 what's"
+    },
+    {
+      "start": 163.08,
+      "end": 166.32,
+      "text": "the first approach that comes to your"
+    },
+    {
+      "start": 164.82,
+      "end": 169.08,
+      "text": "brain the first approach is very simple"
+    },
+    {
+      "start": 166.32,
+      "end": 170.82,
+      "text": "we'll go to one we'll go to 2 we'll go"
+    },
+    {
+      "start": 169.08,
+      "end": 172.38,
+      "text": "to 3 we'll go to 3 we'll go to 7 we'll"
+    },
+    {
+      "start": 170.82,
+      "end": 174.36,
+      "text": "go to 8 we'll go to 9 we'll go to 9"
+    },
+    {
+      "start": 172.38,
+      "end": 176.64,
+      "text": "we'll go to 9 and this is where we stop"
+    },
+    {
+      "start": 174.36,
+      "end": 178.62,
+      "text": "because it's greater than equal to 11."
+    },
+    {
+      "start": 176.64,
+      "end": 181.44,
+      "text": "it's kind of a linear search and I have"
+    },
+    {
+      "start": 178.62,
+      "end": 183.84,
+      "text": "to do a big go of n iteration I can use"
+    },
+    {
+      "start": 181.44,
+      "end": 186.24,
+      "text": "a for Loop because that will work so"
+    },
+    {
+      "start": 183.84,
+      "end": 187.38,
+      "text": "it's a big of n approach obviously this"
+    },
+    {
+      "start": 186.24,
+      "end": 189.66,
+      "text": "is something which you don't want"
+    },
+    {
+      "start": 187.38,
+      "end": 193.56,
+      "text": "because it's extremely easy"
+    },
+    {
+      "start": 189.66,
+      "end": 195.96,
+      "text": "now we know that the array is sorted so"
+    },
+    {
+      "start": 193.56,
+      "end": 198.3,
+      "text": "if we know that the array is sorted we"
+    },
+    {
+      "start": 195.96,
+      "end": 200.52,
+      "text": "have to search we kind of have to search"
+    },
+    {
+      "start": 198.3,
+      "end": 203.22,
+      "text": "so we have to think in the direction of"
+    },
+    {
+      "start": 200.52,
+      "end": 205.08,
+      "text": "searching so whenever the search space"
+    },
+    {
+      "start": 203.22,
+      "end": 207.6,
+      "text": "is sorted and I have to search which"
+    },
+    {
+      "start": 205.08,
+      "end": 209.58,
+      "text": "algorithm binary search yes this is the"
+    },
+    {
+      "start": 207.6,
+      "end": 210.9,
+      "text": "reason I'll apply binary search but in"
+    },
+    {
+      "start": 209.58,
+      "end": 213.3,
+      "text": "order to explain binary search better"
+    },
+    {
+      "start": 210.9,
+      "end": 215.58,
+      "text": "I'll change the value of X2"
+    },
+    {
+      "start": 213.3,
+      "end": 217.68,
+      "text": "1 and let's see how binary search works"
+    },
+    {
+      "start": 215.58,
+      "end": 220.2,
+      "text": "so I'll be keeping"
+    },
+    {
+      "start": 217.68,
+      "end": 222.06,
+      "text": "my low at the zeroth index and my high"
+    },
+    {
+      "start": 220.2,
+      "end": 224.94,
+      "text": "as"
+    },
+    {
+      "start": 222.06,
+      "end": 228.0,
+      "text": "the ninth index now you know one thing"
+    },
+    {
+      "start": 224.94,
+      "end": 229.74,
+      "text": "for short no matter what happens even if"
+    },
+    {
+      "start": 228.0,
+      "end": 231.72,
+      "text": "the low bound doesn't exist even if"
+    },
+    {
+      "start": 229.74,
+      "end": 234.3,
+      "text": "there doesn't exist Any number greater"
+    },
+    {
+      "start": 231.72,
+      "end": 236.88,
+      "text": "than equal to X I will always have an"
+    },
+    {
+      "start": 234.3,
+      "end": 239.28,
+      "text": "answer equal to the size of the array in"
+    },
+    {
+      "start": 236.88,
+      "end": 241.8,
+      "text": "this case 10 basically the hypothetical"
+    },
+    {
+      "start": 239.28,
+      "end": 243.6,
+      "text": "index even if there is no answer"
+    },
+    {
+      "start": 241.8,
+      "end": 246.72,
+      "text": "possible even if there is no element"
+    },
+    {
+      "start": 243.6,
+      "end": 248.46,
+      "text": "possible I will always return the last"
+    },
+    {
+      "start": 246.72,
+      "end": 250.2,
+      "text": "hypothetical index that is something I"
+    },
+    {
+      "start": 248.46,
+      "end": 251.82,
+      "text": "know for sure so I'll try to keep an"
+    },
+    {
+      "start": 250.2,
+      "end": 253.56,
+      "text": "answer why am I taking an answer"
+    },
+    {
+      "start": 251.82,
+      "end": 255.24,
+      "text": "variable you will understand and this is"
+    },
+    {
+      "start": 253.56,
+      "end": 257.16,
+      "text": "a trick which you have to keep in your"
+    },
+    {
+      "start": 255.24,
+      "end": 259.44,
+      "text": "mind throughout the binary search and it"
+    },
+    {
+      "start": 257.16,
+      "end": 262.08,
+      "text": "will be very very useful so what I'll"
+    },
+    {
+      "start": 259.44,
+      "end": 265.26,
+      "text": "say is okay let's find out mid what is"
+    },
+    {
+      "start": 262.08,
+      "end": 267.9,
+      "text": "mid would be 0 plus 9 by 2 4.5 that's"
+    },
+    {
+      "start": 265.26,
+      "end": 271.86,
+      "text": "integer value of 4. so the mid will be"
+    },
+    {
+      "start": 267.9,
+      "end": 275.64,
+      "text": "pointing to 7. I'm like yes"
+    },
+    {
+      "start": 271.86,
+      "end": 277.8,
+      "text": "7 is greater than equal to 1 I got my"
+    },
+    {
+      "start": 275.64,
+      "end": 279.96,
+      "text": "lower bound no no I need to find the"
+    },
+    {
+      "start": 277.8,
+      "end": 283.38,
+      "text": "smallest I need to find the smallest"
+    },
+    {
+      "start": 279.96,
+      "end": 286.86,
+      "text": "so can I say I did not get my logo but"
+    },
+    {
+      "start": 283.38,
+      "end": 289.56,
+      "text": "probably I got a number probably I got a"
+    },
+    {
+      "start": 286.86,
+      "end": 291.6,
+      "text": "number which is greater than equal to"
+    },
+    {
+      "start": 289.56,
+      "end": 293.64,
+      "text": "one I definitely got a number which is"
+    },
+    {
+      "start": 291.6,
+      "end": 296.88,
+      "text": "greater than equal to one this can be my"
+    },
+    {
+      "start": 293.64,
+      "end": 300.84,
+      "text": "answer maybe maybe can be my answer so I"
+    },
+    {
+      "start": 296.88,
+      "end": 303.86,
+      "text": "know this maybe or can be my answer so"
+    },
+    {
+      "start": 300.84,
+      "end": 307.98,
+      "text": "thereby whatever is the index I will say"
+    },
+    {
+      "start": 303.86,
+      "end": 310.14,
+      "text": "I probably got someone who is greater"
+    },
+    {
+      "start": 307.98,
+      "end": 312.9,
+      "text": "than me who is greater than me so let's"
+    },
+    {
+      "start": 310.14,
+      "end": 315.18,
+      "text": "keep it so if I've got someone I need"
+    },
+    {
+      "start": 312.9,
+      "end": 317.1,
+      "text": "the smallest index so if you need the"
+    },
+    {
+      "start": 315.18,
+      "end": 319.68,
+      "text": "smaller one will you go left or will you"
+    },
+    {
+      "start": 317.1,
+      "end": 321.96,
+      "text": "go right he will go left smaller will"
+    },
+    {
+      "start": 319.68,
+      "end": 323.7,
+      "text": "always exist on left so you'll try to"
+    },
+    {
+      "start": 321.96,
+      "end": 325.8,
+      "text": "eliminate the right Source piece"
+    },
+    {
+      "start": 323.7,
+      "end": 327.66,
+      "text": "eliminate the right search piece so"
+    },
+    {
+      "start": 325.8,
+      "end": 329.4,
+      "text": "you'll try to eliminate this so This"
+    },
+    {
+      "start": 327.66,
+      "end": 331.98,
+      "text": "high will come over here so what you'll"
+    },
+    {
+      "start": 329.4,
+      "end": 335.04,
+      "text": "do is this high will be going to one"
+    },
+    {
+      "start": 331.98,
+      "end": 336.54,
+      "text": "place before the mid which is this"
+    },
+    {
+      "start": 335.04,
+      "end": 338.82,
+      "text": "perfect"
+    },
+    {
+      "start": 336.54,
+      "end": 341.4,
+      "text": "I have a probable answer let's see if I"
+    },
+    {
+      "start": 338.82,
+      "end": 343.8,
+      "text": "can get better I'll again take mid will"
+    },
+    {
+      "start": 341.4,
+      "end": 346.26,
+      "text": "be 0 plus 3 which is low plus I 1.5"
+    },
+    {
+      "start": 343.8,
+      "end": 350.46,
+      "text": "that's one so this will be pointing to"
+    },
+    {
+      "start": 346.26,
+      "end": 353.52,
+      "text": "this portion let's see let's analyze"
+    },
+    {
+      "start": 350.46,
+      "end": 356.1,
+      "text": "we have a two yes we have a two so we"
+    },
+    {
+      "start": 353.52,
+      "end": 358.86,
+      "text": "are like can this be my answer let's"
+    },
+    {
+      "start": 356.1,
+      "end": 362.88,
+      "text": "handle this 2 greater than equal to one"
+    },
+    {
+      "start": 358.86,
+      "end": 365.7,
+      "text": "I'm like yes it can be so I probably"
+    },
+    {
+      "start": 362.88,
+      "end": 367.92,
+      "text": "found a better index because I moved to"
+    },
+    {
+      "start": 365.7,
+      "end": 370.14,
+      "text": "left because I moved to left so I"
+    },
+    {
+      "start": 367.92,
+      "end": 372.48,
+      "text": "definitely found a better index because"
+    },
+    {
+      "start": 370.14,
+      "end": 374.46,
+      "text": "I I never moved to write so if I am"
+    },
+    {
+      "start": 372.48,
+      "end": 377.64,
+      "text": "moving to left that's definitely smaller"
+    },
+    {
+      "start": 374.46,
+      "end": 380.94,
+      "text": "and this is greater than equal to 1 can"
+    },
+    {
+      "start": 377.64,
+      "end": 383.58,
+      "text": "be maybe my answer maybe I don't know so"
+    },
+    {
+      "start": 380.94,
+      "end": 386.1,
+      "text": "I'll probably keep that index 1 because"
+    },
+    {
+      "start": 383.58,
+      "end": 388.56,
+      "text": "2 occurs said and I'll keep it I'm like"
+    },
+    {
+      "start": 386.1,
+      "end": 390.6,
+      "text": "okay so if I have kept it"
+    },
+    {
+      "start": 388.56,
+      "end": 392.76,
+      "text": "I know this is an answer so I'll never"
+    },
+    {
+      "start": 390.6,
+      "end": 396.0,
+      "text": "look on the right anymore I'll go to the"
+    },
+    {
+      "start": 392.76,
+      "end": 398.94,
+      "text": "left so I'll move the high to this index"
+    },
+    {
+      "start": 396.0,
+      "end": 400.44,
+      "text": "and I'll eliminate mid again let's do"
+    },
+    {
+      "start": 398.94,
+      "end": 402.42,
+      "text": "the next thing again"
+    },
+    {
+      "start": 400.44,
+      "end": 405.36,
+      "text": "we are at low and high mid will be 0"
+    },
+    {
+      "start": 402.42,
+      "end": 406.5,
+      "text": "plus 0 by 2 which is zero so it will"
+    },
+    {
+      "start": 405.36,
+      "end": 407.7,
+      "text": "also be this"
+    },
+    {
+      "start": 406.5,
+      "end": 410.58,
+      "text": "perfect"
+    },
+    {
+      "start": 407.7,
+      "end": 412.8,
+      "text": "let's see can this be my answer what is"
+    },
+    {
+      "start": 410.58,
+      "end": 415.26,
+      "text": "there one so like one greater than equal"
+    },
+    {
+      "start": 412.8,
+      "end": 417.72,
+      "text": "to one is like yes this might be your"
+    },
+    {
+      "start": 415.26,
+      "end": 421.08,
+      "text": "answer I'd be like okay the zeroth index"
+    },
+    {
+      "start": 417.72,
+      "end": 422.64,
+      "text": "might be my answer and I still have to"
+    },
+    {
+      "start": 421.08,
+      "end": 424.92,
+      "text": "look for smallest so I have to go left"
+    },
+    {
+      "start": 422.64,
+      "end": 428.22,
+      "text": "so what will happen is this high will go"
+    },
+    {
+      "start": 424.92,
+      "end": 430.62,
+      "text": "left and it will go at -1"
+    },
+    {
+      "start": 428.22,
+      "end": 433.62,
+      "text": "equal to minus 1 so high across the"
+    },
+    {
+      "start": 430.62,
+      "end": 436.38,
+      "text": "slope I stop I stop"
+    },
+    {
+      "start": 433.62,
+      "end": 439.14,
+      "text": "when I stop"
+    },
+    {
+      "start": 436.38,
+      "end": 442.46,
+      "text": "so the last smallest which could be my"
+    },
+    {
+      "start": 439.14,
+      "end": 446.04,
+      "text": "answer is zero thereby the lower bound"
+    },
+    {
+      "start": 442.46,
+      "end": 448.2,
+      "text": "is zero thereby the low bound is zero I"
+    },
+    {
+      "start": 446.04,
+      "end": 449.82,
+      "text": "hope you understood this"
+    },
+    {
+      "start": 448.2,
+      "end": 451.8,
+      "text": "so let's take one more example to"
+    },
+    {
+      "start": 449.82,
+      "end": 454.98,
+      "text": "understand low bound better so I'll take"
+    },
+    {
+      "start": 451.8,
+      "end": 456.48,
+      "text": "X to be 9 this time let's see what how"
+    },
+    {
+      "start": 454.98,
+      "end": 459.0,
+      "text": "binary search will work"
+    },
+    {
+      "start": 456.48,
+      "end": 460.86,
+      "text": "so I'll keep the low here and as usual"
+    },
+    {
+      "start": 459.0,
+      "end": 462.78,
+      "text": "I'll keep the high here and initially"
+    },
+    {
+      "start": 460.86,
+      "end": 465.54,
+      "text": "what will be the answer"
+    },
+    {
+      "start": 462.78,
+      "end": 467.7,
+      "text": "either even if I do not find any numbers"
+    },
+    {
+      "start": 465.54,
+      "end": 469.68,
+      "text": "which are greater the hypothetical index"
+    },
+    {
+      "start": 467.7,
+      "end": 472.32,
+      "text": "will be my answer which is the last"
+    },
+    {
+      "start": 469.68,
+      "end": 474.66,
+      "text": "index which is index 10. let's try to"
+    },
+    {
+      "start": 472.32,
+      "end": 476.94,
+      "text": "analyze what is the value of bit low"
+    },
+    {
+      "start": 474.66,
+      "end": 480.3,
+      "text": "plus I 0 plus 9"
+    },
+    {
+      "start": 476.94,
+      "end": 482.28,
+      "text": "Y 2 which is near about 4 integer"
+    },
+    {
+      "start": 480.3,
+      "end": 483.48,
+      "text": "which is this"
+    },
+    {
+      "start": 482.28,
+      "end": 487.14,
+      "text": "Phi"
+    },
+    {
+      "start": 483.48,
+      "end": 489.24,
+      "text": "is 5 greater than 9 no can 5 be your"
+    },
+    {
+      "start": 487.14,
+      "end": 491.58,
+      "text": "answer maybe and look it cannot be"
+    },
+    {
+      "start": 489.24,
+      "end": 493.5,
+      "text": "because 5 is not greater so it it"
+    },
+    {
+      "start": 491.58,
+      "end": 495.3,
+      "text": "doesn't have a probability to get my"
+    },
+    {
+      "start": 493.5,
+      "end": 497.4,
+      "text": "answer so if it doesn't have a"
+    },
+    {
+      "start": 495.3,
+      "end": 499.56,
+      "text": "probability to my answer so if it"
+    },
+    {
+      "start": 497.4,
+      "end": 501.96,
+      "text": "doesn't have a probability to be my"
+    },
+    {
+      "start": 499.56,
+      "end": 504.06,
+      "text": "answer can I say I'll not replace answer"
+    },
+    {
+      "start": 501.96,
+      "end": 506.58,
+      "text": "I will not so I'll never find an answer"
+    },
+    {
+      "start": 504.06,
+      "end": 508.68,
+      "text": "on the left as well because if 5 is not"
+    },
+    {
+      "start": 506.58,
+      "end": 511.2,
+      "text": "an answer anything to the left of five"
+    },
+    {
+      "start": 508.68,
+      "end": 513.78,
+      "text": "can never be my answer very obvious very"
+    },
+    {
+      "start": 511.2,
+      "end": 515.48,
+      "text": "obvious so where will I move I'll go on"
+    },
+    {
+      "start": 513.78,
+      "end": 519.84,
+      "text": "the right and I'll try to do a search"
+    },
+    {
+      "start": 515.48,
+      "end": 520.92,
+      "text": "thereby the slow will go here and try to"
+    },
+    {
+      "start": 519.84,
+      "end": 524.1,
+      "text": "do a search"
+    },
+    {
+      "start": 520.92,
+      "end": 525.12,
+      "text": "quite simple by any search next I'm over"
+    },
+    {
+      "start": 524.1,
+      "end": 527.52,
+      "text": "here"
+    },
+    {
+      "start": 525.12,
+      "end": 530.76,
+      "text": "so let's try to figure out the mid again"
+    },
+    {
+      "start": 527.52,
+      "end": 532.98,
+      "text": "mid will be 5 plus 9 by 2 which is 7"
+    },
+    {
+      "start": 530.76,
+      "end": 536.04,
+      "text": "which is this"
+    },
+    {
+      "start": 532.98,
+      "end": 538.8,
+      "text": "let's see I'm like how much is this 10"
+    },
+    {
+      "start": 536.04,
+      "end": 541.8,
+      "text": "it's greater than equal to 9."
+    },
+    {
+      "start": 538.8,
+      "end": 544.98,
+      "text": "yes you can be my answer"
+    },
+    {
+      "start": 541.8,
+      "end": 547.32,
+      "text": "you may be I'm not sure let's store you"
+    },
+    {
+      "start": 544.98,
+      "end": 548.46,
+      "text": "what index seven let's store the index"
+    },
+    {
+      "start": 547.32,
+      "end": 549.96,
+      "text": "seven"
+    },
+    {
+      "start": 548.46,
+      "end": 552.3,
+      "text": "I store it"
+    },
+    {
+      "start": 549.96,
+      "end": 555.24,
+      "text": "so this might be my answer"
+    },
+    {
+      "start": 552.3,
+      "end": 556.98,
+      "text": "so I need smallest so this might be my"
+    },
+    {
+      "start": 555.24,
+      "end": 559.44,
+      "text": "answer I don't need to look at right"
+    },
+    {
+      "start": 556.98,
+      "end": 561.78,
+      "text": "because I need small small I go to the"
+    },
+    {
+      "start": 559.44,
+      "end": 563.22,
+      "text": "left so the third space will be trimmed"
+    },
+    {
+      "start": 561.78,
+      "end": 564.66,
+      "text": "down to the left"
+    },
+    {
+      "start": 563.22,
+      "end": 565.98,
+      "text": "so it trimmed on the right and we'll"
+    },
+    {
+      "start": 564.66,
+      "end": 568.38,
+      "text": "move left"
+    },
+    {
+      "start": 565.98,
+      "end": 571.44,
+      "text": "amazing my research is such an amazing"
+    },
+    {
+      "start": 568.38,
+      "end": 576.24,
+      "text": "algorithm next let's find out the new"
+    },
+    {
+      "start": 571.44,
+      "end": 579.9,
+      "text": "MID it's five plus six by two 11.5 okay"
+    },
+    {
+      "start": 576.24,
+      "end": 582.66,
+      "text": "so mid will also be pointing to this how"
+    },
+    {
+      "start": 579.9,
+      "end": 584.16,
+      "text": "much is the value 8 is 8 greater than"
+    },
+    {
+      "start": 582.66,
+      "end": 586.5,
+      "text": "equal to nine no"
+    },
+    {
+      "start": 584.16,
+      "end": 588.66,
+      "text": "cannot be my possible answer don't don't"
+    },
+    {
+      "start": 586.5,
+      "end": 591.24,
+      "text": "alter the answer don't alter the answer"
+    },
+    {
+      "start": 588.66,
+      "end": 594.12,
+      "text": "don't alter the answer because the value"
+    },
+    {
+      "start": 591.24,
+      "end": 595.5,
+      "text": "at Mid is not greater than equal to 9 so"
+    },
+    {
+      "start": 594.12,
+      "end": 597.24,
+      "text": "do not alter the answer do not even"
+    },
+    {
+      "start": 595.5,
+      "end": 599.4,
+      "text": "touch because this doesn't have a"
+    },
+    {
+      "start": 597.24,
+      "end": 601.62,
+      "text": "probability to be my answer so if this"
+    },
+    {
+      "start": 599.4,
+      "end": 604.68,
+      "text": "doesn't have I have to go and look for"
+    },
+    {
+      "start": 601.62,
+      "end": 608.58,
+      "text": "probably right yes so I will this time"
+    },
+    {
+      "start": 604.68,
+      "end": 611.1,
+      "text": "take low and I'll move 1 ahead of mid so"
+    },
+    {
+      "start": 608.58,
+      "end": 614.22,
+      "text": "thereby low will be pointing here that's"
+    },
+    {
+      "start": 611.1,
+      "end": 616.68,
+      "text": "one ahead of mid perfect what's the next"
+    },
+    {
+      "start": 614.22,
+      "end": 618.42,
+      "text": "job a standing at eight very important"
+    },
+    {
+      "start": 616.68,
+      "end": 619.32,
+      "text": "we are standing at eight the same what"
+    },
+    {
+      "start": 618.42,
+      "end": 621.72,
+      "text": "will happen"
+    },
+    {
+      "start": 619.32,
+      "end": 625.86,
+      "text": "mid will be pointing to here and we'll"
+    },
+    {
+      "start": 621.72,
+      "end": 628.86,
+      "text": "get 8 which is at index 6. please please"
+    },
+    {
+      "start": 625.86,
+      "end": 632.28,
+      "text": "observe which is at index six but this"
+    },
+    {
+      "start": 628.86,
+      "end": 634.68,
+      "text": "value is not greater than 9 so not to be"
+    },
+    {
+      "start": 632.28,
+      "end": 637.2,
+      "text": "done and we will again move on right in"
+    },
+    {
+      "start": 634.68,
+      "end": 639.42,
+      "text": "the search space will be completed and"
+    },
+    {
+      "start": 637.2,
+      "end": 642.18,
+      "text": "we just got one occulents and that's my"
+    },
+    {
+      "start": 639.42,
+      "end": 644.28,
+      "text": "answer so index 7 is my answer which is"
+    },
+    {
+      "start": 642.18,
+      "end": 645.72,
+      "text": "actually my answer the first index where"
+    },
+    {
+      "start": 644.28,
+      "end": 647.34,
+      "text": "the value is greater than equal to"
+    },
+    {
+      "start": 645.72,
+      "end": 649.68,
+      "text": "There's No 9 so I have to find the"
+    },
+    {
+      "start": 647.34,
+      "end": 653.4,
+      "text": "greater value we got it so this is how"
+    },
+    {
+      "start": 649.68,
+      "end": 655.68,
+      "text": "we can easily find out the logo"
+    },
+    {
+      "start": 653.4,
+      "end": 657.24,
+      "text": "how can we implement this quite simple"
+    },
+    {
+      "start": 655.68,
+      "end": 659.76,
+      "text": "binary search you don't have to think a"
+    },
+    {
+      "start": 657.24,
+      "end": 663.12,
+      "text": "lot follow the same template"
+    },
+    {
+      "start": 659.76,
+      "end": 665.64,
+      "text": "take a function take an array take a"
+    },
+    {
+      "start": 663.12,
+      "end": 668.4,
+      "text": "Target and take the size of the array"
+    },
+    {
+      "start": 665.64,
+      "end": 670.56,
+      "text": "let's follow the same template we know"
+    },
+    {
+      "start": 668.4,
+      "end": 671.94,
+      "text": "binary search will always have zero and"
+    },
+    {
+      "start": 670.56,
+      "end": 674.34,
+      "text": "the high will always point to the last"
+    },
+    {
+      "start": 671.94,
+      "end": 676.5,
+      "text": "index which is n minus 1 and we know the"
+    },
+    {
+      "start": 674.34,
+      "end": 678.66,
+      "text": "third space over here there's a slight"
+    },
+    {
+      "start": 676.5,
+      "end": 680.64,
+      "text": "difference the we take an answer"
+    },
+    {
+      "start": 678.66,
+      "end": 682.56,
+      "text": "variable we take an answer variable"
+    },
+    {
+      "start": 680.64,
+      "end": 686.82,
+      "text": "so answer will be pointing to"
+    },
+    {
+      "start": 682.56,
+      "end": 688.02,
+      "text": "answer will be n and then while"
+    },
+    {
+      "start": 686.82,
+      "end": 690.66,
+      "text": "low"
+    },
+    {
+      "start": 688.02,
+      "end": 693.96,
+      "text": "lesser than equal to high is what we'll"
+    },
+    {
+      "start": 690.66,
+      "end": 696.18,
+      "text": "do and the generic tendency is"
+    },
+    {
+      "start": 693.96,
+      "end": 699.9,
+      "text": "mid equal to"
+    },
+    {
+      "start": 696.18,
+      "end": 702.96,
+      "text": "low plus High by 12 if you remember"
+    },
+    {
+      "start": 699.9,
+      "end": 704.58,
+      "text": "and what is the next thing"
+    },
+    {
+      "start": 702.96,
+      "end": 706.26,
+      "text": "if you remember in binary search you"
+    },
+    {
+      "start": 704.58,
+      "end": 708.78,
+      "text": "always did a equal to then you did a"
+    },
+    {
+      "start": 706.26,
+      "end": 710.1,
+      "text": "greater than you did a lesser right you"
+    },
+    {
+      "start": 708.78,
+      "end": 712.8,
+      "text": "don't need to do it here you don't need"
+    },
+    {
+      "start": 710.1,
+      "end": 715.02,
+      "text": "to do it here because you know"
+    },
+    {
+      "start": 712.8,
+      "end": 718.38,
+      "text": "maybe an answer"
+    },
+    {
+      "start": 715.02,
+      "end": 720.78,
+      "text": "is a possibility may be an answer"
+    },
+    {
+      "start": 718.38,
+      "end": 723.18,
+      "text": "or cannot be an answer"
+    },
+    {
+      "start": 720.78,
+      "end": 725.7,
+      "text": "there are only two possibilities maybe"
+    },
+    {
+      "start": 723.18,
+      "end": 727.5,
+      "text": "an answer or cannot be an answer so if"
+    },
+    {
+      "start": 725.7,
+      "end": 731.04,
+      "text": "you remember low was here"
+    },
+    {
+      "start": 727.5,
+      "end": 734.22,
+      "text": "I was here and mid was pointing here"
+    },
+    {
+      "start": 731.04,
+      "end": 738.18,
+      "text": "in this case when X was"
+    },
+    {
+      "start": 734.22,
+      "end": 739.74,
+      "text": "one I said this might be an answer so"
+    },
+    {
+      "start": 738.18,
+      "end": 742.56,
+      "text": "can I say"
+    },
+    {
+      "start": 739.74,
+      "end": 744.78,
+      "text": "if because I'm not searching I'm rather"
+    },
+    {
+      "start": 742.56,
+      "end": 747.06,
+      "text": "looking for a particular smallest index"
+    },
+    {
+      "start": 744.78,
+      "end": 750.3,
+      "text": "not searching for an element that's why"
+    },
+    {
+      "start": 747.06,
+      "end": 751.98,
+      "text": "all right if this is lesser than equal"
+    },
+    {
+      "start": 750.3,
+      "end": 754.32,
+      "text": "to oh sorry greater than equal to is my"
+    },
+    {
+      "start": 751.98,
+      "end": 756.66,
+      "text": "condition is greater than equal to X or"
+    },
+    {
+      "start": 754.32,
+      "end": 758.88,
+      "text": "my target whatever it is I know this may"
+    },
+    {
+      "start": 756.66,
+      "end": 760.62,
+      "text": "be an answer so I'll say this may be an"
+    },
+    {
+      "start": 758.88,
+      "end": 762.66,
+      "text": "answer so please store that maybe index"
+    },
+    {
+      "start": 760.62,
+      "end": 764.22,
+      "text": "in answer because it may be an answer"
+    },
+    {
+      "start": 762.66,
+      "end": 766.08,
+      "text": "and"
+    },
+    {
+      "start": 764.22,
+      "end": 768.0,
+      "text": "trim down the third space go to the left"
+    },
+    {
+      "start": 766.08,
+      "end": 770.7,
+      "text": "and find out go to the left and whenever"
+    },
+    {
+      "start": 768.0,
+      "end": 773.16,
+      "text": "you go to Left High goes High goes so"
+    },
+    {
+      "start": 770.7,
+      "end": 775.86,
+      "text": "that's it or else"
+    },
+    {
+      "start": 773.16,
+      "end": 778.02,
+      "text": "if that is not the case imagine if x was"
+    },
+    {
+      "start": 775.86,
+      "end": 780.3,
+      "text": "9 in this case"
+    },
+    {
+      "start": 778.02,
+      "end": 782.52,
+      "text": "what will happen also this cannot be an"
+    },
+    {
+      "start": 780.3,
+      "end": 784.2,
+      "text": "answer cannot be an answer so the low"
+    },
+    {
+      "start": 782.52,
+      "end": 787.68,
+      "text": "will just go here so the low will just"
+    },
+    {
+      "start": 784.2,
+      "end": 789.66,
+      "text": "go here so just you move to the low to"
+    },
+    {
+      "start": 787.68,
+      "end": 791.94,
+      "text": "made plus one"
+    },
+    {
+      "start": 789.66,
+      "end": 793.38,
+      "text": "is that sort of it isn't so you just"
+    },
+    {
+      "start": 791.94,
+      "end": 795.3,
+      "text": "move the mid to"
+    },
+    {
+      "start": 793.38,
+      "end": 798.06,
+      "text": "sorry you just move the low to mid plus"
+    },
+    {
+      "start": 795.3,
+      "end": 800.28,
+      "text": "one done and at the end of the day if"
+    },
+    {
+      "start": 798.06,
+      "end": 802.02,
+      "text": "you found out an index fine you'll get"
+    },
+    {
+      "start": 800.28,
+      "end": 803.82,
+      "text": "it an answer otherwise answer stays as n"
+    },
+    {
+      "start": 802.02,
+      "end": 806.64,
+      "text": "which is your hypothetical answer always"
+    },
+    {
+      "start": 803.82,
+      "end": 808.68,
+      "text": "so that's what you'll return"
+    },
+    {
+      "start": 806.64,
+      "end": 811.38,
+      "text": "it's a very very important algorithm low"
+    },
+    {
+      "start": 808.68,
+      "end": 813.96,
+      "text": "bound it can solve so many of your"
+    },
+    {
+      "start": 811.38,
+      "end": 816.54,
+      "text": "problems so many trust me please please"
+    },
+    {
+      "start": 813.96,
+      "end": 818.28,
+      "text": "keep this in mind so coming to the code"
+    },
+    {
+      "start": 816.54,
+      "end": 820.02,
+      "text": "editor you can find the same code I have"
+    },
+    {
+      "start": 818.28,
+      "end": 821.76,
+      "text": "written in C plus plus you can write the"
+    },
+    {
+      "start": 820.02,
+      "end": 824.04,
+      "text": "equivalent Java Python and JavaScript"
+    },
+    {
+      "start": 821.76,
+      "end": 825.3,
+      "text": "code from the link in the description so"
+    },
+    {
+      "start": 824.04,
+      "end": 827.04,
+      "text": "what I'll do is I'll quickly go ahead"
+    },
+    {
+      "start": 825.3,
+      "end": 829.38,
+      "text": "and submit this and you'll see that this"
+    },
+    {
+      "start": 827.04,
+      "end": 832.38,
+      "text": "is running fine so please please make"
+    },
+    {
+      "start": 829.38,
+      "end": 834.9,
+      "text": "sure that you kind of keep in your brain"
+    },
+    {
+      "start": 832.38,
+      "end": 836.58,
+      "text": "what is low bound"
+    },
+    {
+      "start": 834.9,
+      "end": 838.2,
+      "text": "so if you're a C plus plus user and"
+    },
+    {
+      "start": 836.58,
+      "end": 840.96,
+      "text": "you're giving coding rounds you don't"
+    },
+    {
+      "start": 838.2,
+      "end": 842.58,
+      "text": "have to write this entire long piece of"
+    },
+    {
+      "start": 840.96,
+      "end": 845.4,
+      "text": "code if it comes up in a coding round"
+    },
+    {
+      "start": 842.58,
+      "end": 849.06,
+      "text": "you can simply write low bound index"
+    },
+    {
+      "start": 845.4,
+      "end": 850.68,
+      "text": "equal to lower underscore bound"
+    },
+    {
+      "start": 849.06,
+      "end": 852.78,
+      "text": "and you can keep the starting of the"
+    },
+    {
+      "start": 850.68,
+      "end": 855.24,
+      "text": "array like the starting iterator in case"
+    },
+    {
+      "start": 852.78,
+      "end": 858.48,
+      "text": "of arrays it will be array in case of"
+    },
+    {
+      "start": 855.24,
+      "end": 861.0,
+      "text": "vector it will be array dot begin"
+    },
+    {
+      "start": 858.48,
+      "end": 864.0,
+      "text": "array dot end so it will Define the"
+    },
+    {
+      "start": 861.0,
+      "end": 867.06,
+      "text": "search space starts from begin goes till"
+    },
+    {
+      "start": 864.0,
+      "end": 870.3,
+      "text": "end and looks for X so this will return"
+    },
+    {
+      "start": 867.06,
+      "end": 872.4,
+      "text": "an i Trader pointing to that index and I"
+    },
+    {
+      "start": 870.3,
+      "end": 874.62,
+      "text": "Trader pointing to that index and in"
+    },
+    {
+      "start": 872.4,
+      "end": 876.72,
+      "text": "order to get the index you just subtract"
+    },
+    {
+      "start": 874.62,
+      "end": 878.4,
+      "text": "this beginner iterator"
+    },
+    {
+      "start": 876.72,
+      "end": 879.48,
+      "text": "because if you subtract the beginner"
+    },
+    {
+      "start": 878.4,
+      "end": 881.4,
+      "text": "iterator"
+    },
+    {
+      "start": 879.48,
+      "end": 883.14,
+      "text": "the beginner iterator"
+    },
+    {
+      "start": 881.4,
+      "end": 885.84,
+      "text": "and wherever the load bound is you'll"
+    },
+    {
+      "start": 883.14,
+      "end": 888.9,
+      "text": "get the index you'll get the index so"
+    },
+    {
+      "start": 885.84,
+      "end": 891.06,
+      "text": "this is how you can easily do it in C"
+    },
+    {
+      "start": 888.9,
+      "end": 894.42,
+      "text": "plus plus if it's an array you write"
+    },
+    {
+      "start": 891.06,
+      "end": 897.6,
+      "text": "array comma array plus n imagine I ask"
+    },
+    {
+      "start": 894.42,
+      "end": 900.12,
+      "text": "you that the array is given from here to"
+    },
+    {
+      "start": 897.6,
+      "end": 901.8,
+      "text": "here which is basically this much and I"
+    },
+    {
+      "start": 900.12,
+      "end": 903.72,
+      "text": "ask you to find the low bond in this"
+    },
+    {
+      "start": 901.8,
+      "end": 905.76,
+      "text": "portion of the array not the entire"
+    },
+    {
+      "start": 903.72,
+      "end": 907.62,
+      "text": "array in that case what you will write"
+    },
+    {
+      "start": 905.76,
+      "end": 910.08,
+      "text": "is this is the second Index this is"
+    },
+    {
+      "start": 907.62,
+      "end": 912.72,
+      "text": "sixth index so you write add a plus"
+    },
+    {
+      "start": 910.08,
+      "end": 914.88,
+      "text": "second index array plus seventh index"
+    },
+    {
+      "start": 912.72,
+      "end": 917.28,
+      "text": "seven means the next one so it will go"
+    },
+    {
+      "start": 914.88,
+      "end": 919.32,
+      "text": "till six so this will go till 2 comma"
+    },
+    {
+      "start": 917.28,
+      "end": 922.2,
+      "text": "six and it will do a low Bound in this"
+    },
+    {
+      "start": 919.32,
+      "end": 925.26,
+      "text": "correct so this is how you can easily do"
+    },
+    {
+      "start": 922.2,
+      "end": 927.96,
+      "text": "it using the lower bound C plus plus STL"
+    },
+    {
+      "start": 925.26,
+      "end": 930.36,
+      "text": "in Java there is I I don't I'm not aware"
+    },
+    {
+      "start": 927.96,
+      "end": 931.38,
+      "text": "of such equivalent but yeah for Java"
+    },
+    {
+      "start": 930.36,
+      "end": 932.76,
+      "text": "people you can always write the"
+    },
+    {
+      "start": 931.38,
+      "end": 934.8,
+      "text": "pseudocode yourself"
+    },
+    {
+      "start": 932.76,
+      "end": 937.14,
+      "text": "so what is the time complexity of the"
+    },
+    {
+      "start": 934.8,
+      "end": 940.08,
+      "text": "lower bound algorithm obviously the same"
+    },
+    {
+      "start": 937.14,
+      "end": 943.74,
+      "text": "as binary search hence the time"
+    },
+    {
+      "start": 940.08,
+      "end": 946.38,
+      "text": "complexity is Big go of logarithmic base"
+    },
+    {
+      "start": 943.74,
+      "end": 949.56,
+      "text": "to n so we're done with low bound now we"
+    },
+    {
+      "start": 946.38,
+      "end": 952.26,
+      "text": "will be moving to Upper bound what is"
+    },
+    {
+      "start": 949.56,
+      "end": 955.38,
+      "text": "upper Bond same concept the only"
+    },
+    {
+      "start": 952.26,
+      "end": 957.72,
+      "text": "difference is it's a smallest index but"
+    },
+    {
+      "start": 955.38,
+      "end": 960.42,
+      "text": "there's just the greatest symbol the"
+    },
+    {
+      "start": 957.72,
+      "end": 962.82,
+      "text": "number at that index must be greater"
+    },
+    {
+      "start": 960.42,
+      "end": 966.18,
+      "text": "than x there's no equal to any further"
+    },
+    {
+      "start": 962.82,
+      "end": 968.52,
+      "text": "so to find me the smallest index such"
+    },
+    {
+      "start": 966.18,
+      "end": 971.58,
+      "text": "that the number that index is greater"
+    },
+    {
+      "start": 968.52,
+      "end": 975.24,
+      "text": "than x is what is the definition of"
+    },
+    {
+      "start": 971.58,
+      "end": 978.24,
+      "text": "upper bound imagine I give you X as 6"
+    },
+    {
+      "start": 975.24,
+      "end": 982.2,
+      "text": "what is the upper bound of 6 so if I"
+    },
+    {
+      "start": 978.24,
+      "end": 986.34,
+      "text": "write down the index is 0 1 2 3 4 5 6 7"
+    },
+    {
+      "start": 982.2,
+      "end": 989.22,
+      "text": "8 9 so n is over here 10. so for 6 I"
+    },
+    {
+      "start": 986.34,
+      "end": 991.74,
+      "text": "know 6 is there but 6 cannot be said as"
+    },
+    {
+      "start": 989.22,
+      "end": 995.34,
+      "text": "greater than 6 so thereby the upper"
+    },
+    {
+      "start": 991.74,
+      "end": 998.7,
+      "text": "bound will be index equal to 3y because"
+    },
+    {
+      "start": 995.34,
+      "end": 1001.34,
+      "text": "at 3 you have 7 and 7 is greater than 6"
+    },
+    {
+      "start": 998.7,
+      "end": 1004.7,
+      "text": "thereby it is your upper bound imagine I"
+    },
+    {
+      "start": 1001.34,
+      "end": 1005.54,
+      "text": "give you something as X as 11. in that"
+    },
+    {
+      "start": 1004.7,
+      "end": 1007.7,
+      "text": "case"
+    },
+    {
+      "start": 1005.54,
+      "end": 1009.98,
+      "text": "11 will be a low Ball but it's not a"
+    },
+    {
+      "start": 1007.7,
+      "end": 1012.74,
+      "text": "upper Bond the upper bound is 12. so it"
+    },
+    {
+      "start": 1009.98,
+      "end": 1015.02,
+      "text": "will be like index equal to 9. imagine I"
+    },
+    {
+      "start": 1012.74,
+      "end": 1017.54,
+      "text": "give you X as 12. imagine I give you X"
+    },
+    {
+      "start": 1015.02,
+      "end": 1019.22,
+      "text": "is 12. in that case there is no one"
+    },
+    {
+      "start": 1017.54,
+      "end": 1021.92,
+      "text": "greater than 12 there's no one greater"
+    },
+    {
+      "start": 1019.22,
+      "end": 1023.66,
+      "text": "than 12. so this in that case the index"
+    },
+    {
+      "start": 1021.92,
+      "end": 1028.1,
+      "text": "will be the hypothetical scenario which"
+    },
+    {
+      "start": 1023.66,
+      "end": 1029.84,
+      "text": "is n imagine I give you X as 13 Even In"
+    },
+    {
+      "start": 1028.1,
+      "end": 1033.32,
+      "text": "this case the hypothetical scenario 10"
+    },
+    {
+      "start": 1029.84,
+      "end": 1036.44,
+      "text": "imagine I give you X as 0 so the first"
+    },
+    {
+      "start": 1033.32,
+      "end": 1038.48,
+      "text": "element is 2 which is greater than 0 so"
+    },
+    {
+      "start": 1036.44,
+      "end": 1041.6,
+      "text": "the index will be"
+    },
+    {
+      "start": 1038.48,
+      "end": 1044.54,
+      "text": "0 got the definition of upper bound but"
+    },
+    {
+      "start": 1041.6,
+      "end": 1048.44,
+      "text": "find the greater so how can you do it"
+    },
+    {
+      "start": 1044.54,
+      "end": 1051.5,
+      "text": "isn't it similar to the lower bound it"
+    },
+    {
+      "start": 1048.44,
+      "end": 1054.86,
+      "text": "is what is the difference that we will"
+    },
+    {
+      "start": 1051.5,
+      "end": 1058.04,
+      "text": "do you we will kind of in in log on what"
+    },
+    {
+      "start": 1054.86,
+      "end": 1060.2,
+      "text": "did we do we will like arr[mid] if"
+    },
+    {
+      "start": 1058.04,
+      "end": 1063.14,
+      "text": "you remember the low bound greater than"
+    },
+    {
+      "start": 1060.2,
+      "end": 1066.44,
+      "text": "equal to X or yeah greater than equal to"
+    },
+    {
+      "start": 1063.14,
+      "end": 1070.1,
+      "text": "X you are my probable answer you may be"
+    },
+    {
+      "start": 1066.44,
+      "end": 1072.38,
+      "text": "my probable answer and go and look at"
+    },
+    {
+      "start": 1070.1,
+      "end": 1075.8,
+      "text": "the"
+    },
+    {
+      "start": 1072.38,
+      "end": 1077.6,
+      "text": "left for smallest or else"
+    },
+    {
+      "start": 1075.8,
+      "end": 1079.1,
+      "text": "this was the binary search code that he"
+    },
+    {
+      "start": 1077.6,
+      "end": 1081.38,
+      "text": "wrote or else"
+    },
+    {
+      "start": 1079.1,
+      "end": 1084.62,
+      "text": "go on the ride and look for someone who"
+    },
+    {
+      "start": 1081.38,
+      "end": 1086.72,
+      "text": "can be an answer for upper bound can I"
+    },
+    {
+      "start": 1084.62,
+      "end": 1090.8,
+      "text": "say I'll try to perform a similar search"
+    },
+    {
+      "start": 1086.72,
+      "end": 1093.86,
+      "text": "and I will say if array of mate is"
+    },
+    {
+      "start": 1090.8,
+      "end": 1096.44,
+      "text": "greater than x you can be my probable"
+    },
+    {
+      "start": 1093.86,
+      "end": 1098.72,
+      "text": "answer or"
+    },
+    {
+      "start": 1096.44,
+      "end": 1102.2,
+      "text": "if you are my probable answer I need I"
+    },
+    {
+      "start": 1098.72,
+      "end": 1106.3,
+      "text": "need smallest I need smaller index go on"
+    },
+    {
+      "start": 1102.2,
+      "end": 1106.3,
+      "text": "the left and find me out or else"
+    },
+    {
+      "start": 1106.7,
+      "end": 1112.28,
+      "text": "go on the right and figure out because"
+    },
+    {
+      "start": 1109.46,
+      "end": 1114.32,
+      "text": "if at this index I'm not getting go on"
+    },
+    {
+      "start": 1112.28,
+      "end": 1116.18,
+      "text": "the right direction go from greater"
+    },
+    {
+      "start": 1114.32,
+      "end": 1117.86,
+      "text": "indexes and find me out so the only"
+    },
+    {
+      "start": 1116.18,
+      "end": 1120.2,
+      "text": "difference is this greater than equal to"
+    },
+    {
+      "start": 1117.86,
+      "end": 1122.42,
+      "text": "gets converted into greater you can"
+    },
+    {
+      "start": 1120.2,
+      "end": 1124.16,
+      "text": "again do the dry run for this and not be"
+    },
+    {
+      "start": 1122.42,
+      "end": 1127.16,
+      "text": "going into depth because there's just a"
+    },
+    {
+      "start": 1124.16,
+      "end": 1129.02,
+      "text": "sign change because if I go into depth"
+    },
+    {
+      "start": 1127.16,
+      "end": 1130.82,
+      "text": "about all of these smaller smaller"
+    },
+    {
+      "start": 1129.02,
+      "end": 1132.62,
+      "text": "things we'll end up making a playlist of"
+    },
+    {
+      "start": 1130.82,
+      "end": 1134.9,
+      "text": "100 hours and that's not possible okay"
+    },
+    {
+      "start": 1132.62,
+      "end": 1137.48,
+      "text": "so I am expecting you to understand the"
+    },
+    {
+      "start": 1134.9,
+      "end": 1139.76,
+      "text": "slight change after the code editor what"
+    },
+    {
+      "start": 1137.48,
+      "end": 1142.34,
+      "text": "I'll do is I'll copy paste this I'll go"
+    },
+    {
+      "start": 1139.76,
+      "end": 1144.44,
+      "text": "to Upper bound I'll paste this and I'll"
+    },
+    {
+      "start": 1142.34,
+      "end": 1145.94,
+      "text": "just remove the equal to and I'll go"
+    },
+    {
+      "start": 1144.44,
+      "end": 1148.4,
+      "text": "ahead and submit this and see if it is"
+    },
+    {
+      "start": 1145.94,
+      "end": 1150.62,
+      "text": "running fine as I said you it should be"
+    },
+    {
+      "start": 1148.4,
+      "end": 1153.2,
+      "text": "yeah it does so that's the only change"
+    },
+    {
+      "start": 1150.62,
+      "end": 1154.88,
+      "text": "that you have to do in Upper bound so"
+    },
+    {
+      "start": 1153.2,
+      "end": 1157.36,
+      "text": "what is the time complexity the time"
+    },
+    {
+      "start": 1154.88,
+      "end": 1160.22,
+      "text": "complexity is again we go off"
+    },
+    {
+      "start": 1157.36,
+      "end": 1163.28,
+      "text": "logarithmic based one and if you're"
+    },
+    {
+      "start": 1160.22,
+      "end": 1165.74,
+      "text": "using something as C plus plus just"
+    },
+    {
+      "start": 1163.28,
+      "end": 1167.96,
+      "text": "change this low to Upper and you have a"
+    },
+    {
+      "start": 1165.74,
+      "end": 1169.4,
+      "text": "C plus plus still does it so this is"
+    },
+    {
+      "start": 1167.96,
+      "end": 1170.72,
+      "text": "very very important if you are going for"
+    },
+    {
+      "start": 1169.4,
+      "end": 1172.88,
+      "text": "coding nouns you don't have to write"
+    },
+    {
+      "start": 1170.72,
+      "end": 1173.96,
+      "text": "longer codes this will help you"
+    },
+    {
+      "start": 1172.88,
+      "end": 1176.72,
+      "text": "immensely"
+    },
+    {
+      "start": 1173.96,
+      "end": 1179.0,
+      "text": "so this is for C plus plus users so"
+    },
+    {
+      "start": 1176.72,
+      "end": 1182.06,
+      "text": "let's go ahead uh second go back to the"
+    },
+    {
+      "start": 1179.0,
+      "end": 1183.8,
+      "text": "sheet and let's see what we have done"
+    },
+    {
+      "start": 1182.06,
+      "end": 1186.08,
+      "text": "let's go to the binary search section"
+    },
+    {
+      "start": 1183.8,
+      "end": 1188.98,
+      "text": "and I can say that this is done and this"
+    },
+    {
+      "start": 1186.08,
+      "end": 1191.78,
+      "text": "is done what is the next question search"
+    },
+    {
+      "start": 1188.98,
+      "end": 1194.84,
+      "text": "insert position let's read the question"
+    },
+    {
+      "start": 1191.78,
+      "end": 1196.52,
+      "text": "you're given a sorted array of distinct"
+    },
+    {
+      "start": 1194.84,
+      "end": 1199.46,
+      "text": "values very important distinct values"
+    },
+    {
+      "start": 1196.52,
+      "end": 1201.26,
+      "text": "and a Target value M you need to search"
+    },
+    {
+      "start": 1199.46,
+      "end": 1202.16,
+      "text": "for the index of the target value in the"
+    },
+    {
+      "start": 1201.26,
+      "end": 1203.96,
+      "text": "array"
+    },
+    {
+      "start": 1202.16,
+      "end": 1206.36,
+      "text": "if the value is present in the array"
+    },
+    {
+      "start": 1203.96,
+      "end": 1209.66,
+      "text": "then it's very simple return its index"
+    },
+    {
+      "start": 1206.36,
+      "end": 1212.42,
+      "text": "if the value is not present determine"
+    },
+    {
+      "start": 1209.66,
+      "end": 1214.64,
+      "text": "the index where it would be inserted in"
+    },
+    {
+      "start": 1212.42,
+      "end": 1216.8,
+      "text": "the array while maintaining the sorted"
+    },
+    {
+      "start": 1214.64,
+      "end": 1218.54,
+      "text": "order let's take this example and"
+    },
+    {
+      "start": 1216.8,
+      "end": 1222.8,
+      "text": "understand this problem"
+    },
+    {
+      "start": 1218.54,
+      "end": 1225.44,
+      "text": "it's kind of saying array is given as 1"
+    },
+    {
+      "start": 1222.8,
+      "end": 1230.06,
+      "text": "2 4 7"
+    },
+    {
+      "start": 1225.44,
+      "end": 1232.4,
+      "text": "and the number is given as 6 so this is"
+    },
+    {
+      "start": 1230.06,
+      "end": 1234.68,
+      "text": "a sorted array and this number has to be"
+    },
+    {
+      "start": 1232.4,
+      "end": 1236.66,
+      "text": "inserted in the sorted array what they"
+    },
+    {
+      "start": 1234.68,
+      "end": 1239.9,
+      "text": "are asking is where should this number"
+    },
+    {
+      "start": 1236.66,
+      "end": 1242.0,
+      "text": "be ideally inserted so if I just write"
+    },
+    {
+      "start": 1239.9,
+      "end": 1244.76,
+      "text": "down the indexes 0 1 2 3 will be the"
+    },
+    {
+      "start": 1242.0,
+      "end": 1248.36,
+      "text": "indexes right so ideally can I say if I"
+    },
+    {
+      "start": 1244.76,
+      "end": 1250.52,
+      "text": "have to insert 6 it'll be like 1 2 4 and"
+    },
+    {
+      "start": 1248.36,
+      "end": 1253.58,
+      "text": "6 will go here and 7 will go in can I"
+    },
+    {
+      "start": 1250.52,
+      "end": 1257.18,
+      "text": "say this I can because that is what will"
+    },
+    {
+      "start": 1253.58,
+      "end": 1259.34,
+      "text": "happen so 6 will go at index 3 and that"
+    },
+    {
+      "start": 1257.18,
+      "end": 1263.6,
+      "text": "is what they want you have to return the"
+    },
+    {
+      "start": 1259.34,
+      "end": 1266.72,
+      "text": "index where the 6 will be inserted what"
+    },
+    {
+      "start": 1263.6,
+      "end": 1267.68,
+      "text": "if for this example only I would have"
+    },
+    {
+      "start": 1266.72,
+      "end": 1271.94,
+      "text": "given you"
+    },
+    {
+      "start": 1267.68,
+      "end": 1275.3,
+      "text": "x equal to 2. in that case we have to"
+    },
+    {
+      "start": 1271.94,
+      "end": 1277.34,
+      "text": "insert 2 that 2 will go here and then"
+    },
+    {
+      "start": 1275.3,
+      "end": 1280.22,
+      "text": "the rest of the array can follow"
+    },
+    {
+      "start": 1277.34,
+      "end": 1281.78,
+      "text": "so in this case 2 was inserted at the"
+    },
+    {
+      "start": 1280.22,
+      "end": 1283.64,
+      "text": "first index"
+    },
+    {
+      "start": 1281.78,
+      "end": 1285.44,
+      "text": "so what will be your answer how can you"
+    },
+    {
+      "start": 1283.64,
+      "end": 1288.5,
+      "text": "find the search"
+    },
+    {
+      "start": 1285.44,
+      "end": 1292.34,
+      "text": "position isn't it similar to saying"
+    },
+    {
+      "start": 1288.5,
+      "end": 1294.62,
+      "text": "finding the low bond isn't it just for a"
+    },
+    {
+      "start": 1292.34,
+      "end": 1297.32,
+      "text": "second think isn't it because if there"
+    },
+    {
+      "start": 1294.62,
+      "end": 1301.48,
+      "text": "is two if there is two you just insert"
+    },
+    {
+      "start": 1297.32,
+      "end": 1301.48,
+      "text": "it wherever 2s and if there is"
+    },
+    {
+      "start": 1302.06,
+      "end": 1306.32,
+      "text": "no two like if there is no 6 and you go"
+    },
+    {
+      "start": 1304.82,
+      "end": 1309.32,
+      "text": "to the next"
+    },
+    {
+      "start": 1306.32,
+      "end": 1312.98,
+      "text": "guy isn't it equivalent to saying"
+    },
+    {
+      "start": 1309.32,
+      "end": 1314.42,
+      "text": "find the index where the value is either"
+    },
+    {
+      "start": 1312.98,
+      "end": 1318.22,
+      "text": "equal to because then I'm going to"
+    },
+    {
+      "start": 1314.42,
+      "end": 1321.44,
+      "text": "insert it or else greater"
+    },
+    {
+      "start": 1318.22,
+      "end": 1323.6,
+      "text": "if it's there I go and insert it at the"
+    },
+    {
+      "start": 1321.44,
+      "end": 1325.94,
+      "text": "smallest index wherever it is or else I"
+    },
+    {
+      "start": 1323.6,
+      "end": 1328.22,
+      "text": "go and insert it right at the Creator"
+    },
+    {
+      "start": 1325.94,
+      "end": 1329.96,
+      "text": "element which is in this case seven so I"
+    },
+    {
+      "start": 1328.22,
+      "end": 1332.3,
+      "text": "just have to figure out the low bound"
+    },
+    {
+      "start": 1329.96,
+      "end": 1334.7,
+      "text": "and my job will be done so I'll quickly"
+    },
+    {
+      "start": 1332.3,
+      "end": 1336.62,
+      "text": "go ahead and probably copy paste the"
+    },
+    {
+      "start": 1334.7,
+      "end": 1338.96,
+      "text": "same code"
+    },
+    {
+      "start": 1336.62,
+      "end": 1341.18,
+      "text": "and let's see if it works I'll go here"
+    },
+    {
+      "start": 1338.96,
+      "end": 1344.78,
+      "text": "and I'll try to copy paste the same code"
+    },
+    {
+      "start": 1341.18,
+      "end": 1346.46,
+      "text": "I'll hit a run let's see if it works"
+    },
+    {
+      "start": 1344.78,
+      "end": 1349.58,
+      "text": "okay there's some compilation errors"
+    },
+    {
+      "start": 1346.46,
+      "end": 1353.78,
+      "text": "okay I'm assuming uh okay this is given"
+    },
+    {
+      "start": 1349.58,
+      "end": 1357.74,
+      "text": "as m so let's quickly replace this as X"
+    },
+    {
+      "start": 1353.78,
+      "end": 1359.18,
+      "text": "now let's quickly Take n as array dot"
+    },
+    {
+      "start": 1357.74,
+      "end": 1361.22,
+      "text": "size"
+    },
+    {
+      "start": 1359.18,
+      "end": 1364.4,
+      "text": "and now let's quickly submit it and see"
+    },
+    {
+      "start": 1361.22,
+      "end": 1366.44,
+      "text": "if it is running fine it does so as I"
+    },
+    {
+      "start": 1364.4,
+      "end": 1368.36,
+      "text": "said if you know low bound that will"
+    },
+    {
+      "start": 1366.44,
+      "end": 1370.52,
+      "text": "actually solve so many of your problems"
+    },
+    {
+      "start": 1368.36,
+      "end": 1372.62,
+      "text": "going back to the sheet I can say that"
+    },
+    {
+      "start": 1370.52,
+      "end": 1373.88,
+      "text": "this one is done as well I will be"
+    },
+    {
+      "start": 1372.62,
+      "end": 1377.12,
+      "text": "completing the next problem as well"
+    },
+    {
+      "start": 1373.88,
+      "end": 1378.8,
+      "text": "which is floor and seal in sorted array"
+    },
+    {
+      "start": 1377.12,
+      "end": 1380.78,
+      "text": "so if you"
+    },
+    {
+      "start": 1378.8,
+      "end": 1383.12,
+      "text": "ask me the definition of flow it's very"
+    },
+    {
+      "start": 1380.78,
+      "end": 1386.0,
+      "text": "simple the largest number in the array"
+    },
+    {
+      "start": 1383.12,
+      "end": 1388.64,
+      "text": "that is either equal or lesser than x"
+    },
+    {
+      "start": 1386.0,
+      "end": 1390.5,
+      "text": "and what is the definition of seal I"
+    },
+    {
+      "start": 1388.64,
+      "end": 1391.82,
+      "text": "think everyone knows the smallest number"
+    },
+    {
+      "start": 1390.5,
+      "end": 1394.58,
+      "text": "in the array"
+    },
+    {
+      "start": 1391.82,
+      "end": 1397.34,
+      "text": "which is either equal or greater than x"
+    },
+    {
+      "start": 1394.58,
+      "end": 1401.12,
+      "text": "so if I give you X as 25"
+    },
+    {
+      "start": 1397.34,
+      "end": 1403.28,
+      "text": "can I say for x 25 the floor will be 20"
+    },
+    {
+      "start": 1401.12,
+      "end": 1407.3,
+      "text": "because that is that is the largest like"
+    },
+    {
+      "start": 1403.28,
+      "end": 1409.64,
+      "text": "10 is definitely smaller than 25 but 20"
+    },
+    {
+      "start": 1407.3,
+      "end": 1411.5,
+      "text": "is smaller than 25 as well and we need"
+    },
+    {
+      "start": 1409.64,
+      "end": 1414.68,
+      "text": "the largest number so the largest number"
+    },
+    {
+      "start": 1411.5,
+      "end": 1417.62,
+      "text": "is 20. the floor is 20 it cannot be 30"
+    },
+    {
+      "start": 1414.68,
+      "end": 1419.6,
+      "text": "because we need smaller than equal to"
+    },
+    {
+      "start": 1417.62,
+      "end": 1422.24,
+      "text": "okay what is the seal"
+    },
+    {
+      "start": 1419.6,
+      "end": 1424.46,
+      "text": "if I ask you the scene that's 34 sure"
+    },
+    {
+      "start": 1422.24,
+      "end": 1426.62,
+      "text": "why because"
+    },
+    {
+      "start": 1424.46,
+      "end": 1429.74,
+      "text": "50 is definitely"
+    },
+    {
+      "start": 1426.62,
+      "end": 1432.02,
+      "text": "less greater than equal to 25 40 is"
+    },
+    {
+      "start": 1429.74,
+      "end": 1433.88,
+      "text": "greater than equal to 25 30 is greater"
+    },
+    {
+      "start": 1432.02,
+      "end": 1437.0,
+      "text": "than equal to 25 and I need the smallest"
+    },
+    {
+      "start": 1433.88,
+      "end": 1440.24,
+      "text": "number so the smallest is 30. so they"
+    },
+    {
+      "start": 1437.0,
+      "end": 1442.22,
+      "text": "are by the floor uh C is 30. what if I"
+    },
+    {
+      "start": 1440.24,
+      "end": 1445.28,
+      "text": "change the array I just changed the"
+    },
+    {
+      "start": 1442.22,
+      "end": 1446.68,
+      "text": "added step I say 10 20"
+    },
+    {
+      "start": 1445.28,
+      "end": 1452.0,
+      "text": "25"
+    },
+    {
+      "start": 1446.68,
+      "end": 1455.24,
+      "text": "30 40 and I give X as 25 so can I say in"
+    },
+    {
+      "start": 1452.0,
+      "end": 1458.72,
+      "text": "that case the floor will be 25 and the"
+    },
+    {
+      "start": 1455.24,
+      "end": 1462.68,
+      "text": "seal will also be 25 because we have the"
+    },
+    {
+      "start": 1458.72,
+      "end": 1464.36,
+      "text": "number itself so how do we solve this"
+    },
+    {
+      "start": 1462.68,
+      "end": 1467.48,
+      "text": "do you have any idea on how to solve"
+    },
+    {
+      "start": 1464.36,
+      "end": 1470.84,
+      "text": "this something I know for sure is what"
+    },
+    {
+      "start": 1467.48,
+      "end": 1473.54,
+      "text": "is this smallest number in an array"
+    },
+    {
+      "start": 1470.84,
+      "end": 1476.3,
+      "text": "greater than or equal to S I think"
+    },
+    {
+      "start": 1473.54,
+      "end": 1479.24,
+      "text": "everyone knows this this is nothing but"
+    },
+    {
+      "start": 1476.3,
+      "end": 1482.24,
+      "text": "lower bound we have done it we have done"
+    },
+    {
+      "start": 1479.24,
+      "end": 1484.64,
+      "text": "it this is nothing but low Bond because"
+    },
+    {
+      "start": 1482.24,
+      "end": 1488.54,
+      "text": "we know for sure that it is low Bond why"
+    },
+    {
+      "start": 1484.64,
+      "end": 1490.76,
+      "text": "because if x was 25 25 is the answer and"
+    },
+    {
+      "start": 1488.54,
+      "end": 1496.88,
+      "text": "if I just trim it down to something like"
+    },
+    {
+      "start": 1490.76,
+      "end": 1500.42,
+      "text": "30 40 50 in that case for 25 the seal"
+    },
+    {
+      "start": 1496.88,
+      "end": 1503.72,
+      "text": "instead of 25 will this time become"
+    },
+    {
+      "start": 1500.42,
+      "end": 1506.48,
+      "text": "30 and the floor will be 20 why because"
+    },
+    {
+      "start": 1503.72,
+      "end": 1509.36,
+      "text": "25 was not there so it figured out the"
+    },
+    {
+      "start": 1506.48,
+      "end": 1511.64,
+      "text": "next small element and this is what was"
+    },
+    {
+      "start": 1509.36,
+      "end": 1513.32,
+      "text": "the definition of flow bar figure out"
+    },
+    {
+      "start": 1511.64,
+      "end": 1515.3,
+      "text": "the element that's greater than or equal"
+    },
+    {
+      "start": 1513.32,
+      "end": 1519.08,
+      "text": "to X and that is exactly the definition"
+    },
+    {
+      "start": 1515.3,
+      "end": 1521.36,
+      "text": "of seal so I know how to find C you just"
+    },
+    {
+      "start": 1519.08,
+      "end": 1523.46,
+      "text": "Implement what we have implemented in"
+    },
+    {
+      "start": 1521.36,
+      "end": 1526.82,
+      "text": "lower bound we just have to be careful"
+    },
+    {
+      "start": 1523.46,
+      "end": 1529.4,
+      "text": "about a certain thing in this case"
+    },
+    {
+      "start": 1526.82,
+      "end": 1531.32,
+      "text": "they might ask you if that doesn't exist"
+    },
+    {
+      "start": 1529.4,
+      "end": 1533.36,
+      "text": "any number in that case you have to"
+    },
+    {
+      "start": 1531.32,
+      "end": 1535.22,
+      "text": "probably return -1 or something so you"
+    },
+    {
+      "start": 1533.36,
+      "end": 1537.92,
+      "text": "have to be careful about that case but"
+    },
+    {
+      "start": 1535.22,
+      "end": 1540.32,
+      "text": "yeah it is quite similar to what you do"
+    },
+    {
+      "start": 1537.92,
+      "end": 1543.8,
+      "text": "in low Bar Road is this this is"
+    },
+    {
+      "start": 1540.32,
+      "end": 1546.14,
+      "text": "different the condition now changes"
+    },
+    {
+      "start": 1543.8,
+      "end": 1549.44,
+      "text": "and if the condition changes you know"
+    },
+    {
+      "start": 1546.14,
+      "end": 1551.18,
+      "text": "how to implement it just do some tweak"
+    },
+    {
+      "start": 1549.44,
+      "end": 1554.0,
+      "text": "to your implementations and that should"
+    },
+    {
+      "start": 1551.18,
+      "end": 1555.38,
+      "text": "be done so how do we tweak our"
+    },
+    {
+      "start": 1554.0,
+      "end": 1556.88,
+      "text": "implementation let's quickly check it"
+    },
+    {
+      "start": 1555.38,
+      "end": 1559.64,
+      "text": "out so you have seen how we have"
+    },
+    {
+      "start": 1556.88,
+      "end": 1562.1,
+      "text": "implemented the low bar it's pretty"
+    },
+    {
+      "start": 1559.64,
+      "end": 1564.08,
+      "text": "similar it's just a reversal of sign"
+    },
+    {
+      "start": 1562.1,
+      "end": 1565.76,
+      "text": "it's pretty much similar so can I write"
+    },
+    {
+      "start": 1564.08,
+      "end": 1567.98,
+      "text": "probably the pseudo code for floor"
+    },
+    {
+      "start": 1565.76,
+      "end": 1571.76,
+      "text": "something as like uh probably let's"
+    },
+    {
+      "start": 1567.98,
+      "end": 1573.98,
+      "text": "write it here floor array is given and"
+    },
+    {
+      "start": 1571.76,
+      "end": 1575.6,
+      "text": "the number X is given probably you can"
+    },
+    {
+      "start": 1573.98,
+      "end": 1578.06,
+      "text": "keep the answer as minus one to start"
+    },
+    {
+      "start": 1575.6,
+      "end": 1580.7,
+      "text": "off it because in case there is no one"
+    },
+    {
+      "start": 1578.06,
+      "end": 1584.18,
+      "text": "we will have minus one we will have low"
+    },
+    {
+      "start": 1580.7,
+      "end": 1586.4,
+      "text": "as 0 and the high as n minus 1. remember"
+    },
+    {
+      "start": 1584.18,
+      "end": 1588.26,
+      "text": "we need the number we do not need the"
+    },
+    {
+      "start": 1586.4,
+      "end": 1590.9,
+      "text": "index we need the number so over here"
+    },
+    {
+      "start": 1588.26,
+      "end": 1592.88,
+      "text": "also whenever you find the low bound"
+    },
+    {
+      "start": 1590.9,
+      "end": 1596.0,
+      "text": "send the number and that index don't"
+    },
+    {
+      "start": 1592.88,
+      "end": 1599.96,
+      "text": "send the index okay so what can I write"
+    },
+    {
+      "start": 1596.0,
+      "end": 1601.94,
+      "text": "can I write while low lesser than equal"
+    },
+    {
+      "start": 1599.96,
+      "end": 1604.64,
+      "text": "to high again the pattern will be"
+    },
+    {
+      "start": 1601.94,
+      "end": 1607.94,
+      "text": "similar the pattern will be similar mid"
+    },
+    {
+      "start": 1604.64,
+      "end": 1610.58,
+      "text": "will be figured out low plus High by 2."
+    },
+    {
+      "start": 1607.94,
+      "end": 1612.38,
+      "text": "I'm repeating the pattern is going to be"
+    },
+    {
+      "start": 1610.58,
+      "end": 1616.22,
+      "text": "very much similar throughout the binary"
+    },
+    {
+      "start": 1612.38,
+      "end": 1620.36,
+      "text": "research so can I say I'm looking out at"
+    },
+    {
+      "start": 1616.22,
+      "end": 1622.4,
+      "text": "if this is smaller than equal to Mid if"
+    },
+    {
+      "start": 1620.36,
+      "end": 1625.94,
+      "text": "this is smaller than equal to Mid"
+    },
+    {
+      "start": 1622.4,
+      "end": 1627.86,
+      "text": "then this can be by answer whatever is"
+    },
+    {
+      "start": 1625.94,
+      "end": 1630.38,
+      "text": "I'm not looking for index I'm looking"
+    },
+    {
+      "start": 1627.86,
+      "end": 1633.68,
+      "text": "for the values and keep it and now I'll"
+    },
+    {
+      "start": 1630.38,
+      "end": 1636.26,
+      "text": "be like this might be my answer so I"
+    },
+    {
+      "start": 1633.68,
+      "end": 1639.26,
+      "text": "just have it and then I'll move the low"
+    },
+    {
+      "start": 1636.26,
+      "end": 1641.84,
+      "text": "to mid plus one so remember I am going"
+    },
+    {
+      "start": 1639.26,
+      "end": 1644.6,
+      "text": "to the right I'm going to the right so"
+    },
+    {
+      "start": 1641.84,
+      "end": 1646.7,
+      "text": "whatever value you always get here will"
+    },
+    {
+      "start": 1644.6,
+      "end": 1648.38,
+      "text": "always be greater because you're going"
+    },
+    {
+      "start": 1646.7,
+      "end": 1650.84,
+      "text": "to the right so when you move to the"
+    },
+    {
+      "start": 1648.38,
+      "end": 1653.3,
+      "text": "right whatever value you get will always"
+    },
+    {
+      "start": 1650.84,
+      "end": 1655.88,
+      "text": "be greater that is why I am not"
+    },
+    {
+      "start": 1653.3,
+      "end": 1658.82,
+      "text": "comparing for largest that is why I'm"
+    },
+    {
+      "start": 1655.88,
+      "end": 1662.0,
+      "text": "not comparing for largest because binary"
+    },
+    {
+      "start": 1658.82,
+      "end": 1664.4,
+      "text": "search since it eliminates the left so"
+    },
+    {
+      "start": 1662.0,
+      "end": 1667.22,
+      "text": "space since it eliminates the left so"
+    },
+    {
+      "start": 1664.4,
+      "end": 1669.5,
+      "text": "space whatever I'm getting is going to"
+    },
+    {
+      "start": 1667.22,
+      "end": 1671.42,
+      "text": "be big is going to be big so there is"
+    },
+    {
+      "start": 1669.5,
+      "end": 1673.4,
+      "text": "thereby no need to compare for largest"
+    },
+    {
+      "start": 1671.42,
+      "end": 1675.56,
+      "text": "no need to compare for latches whatever"
+    },
+    {
+      "start": 1673.4,
+      "end": 1679.7,
+      "text": "you get will always be bigger than the"
+    },
+    {
+      "start": 1675.56,
+      "end": 1682.22,
+      "text": "previous one got it very simple or else"
+    },
+    {
+      "start": 1679.7,
+      "end": 1685.64,
+      "text": "you go to the left hand you figure out"
+    },
+    {
+      "start": 1682.22,
+      "end": 1687.92,
+      "text": "that's as easy as it can get it's just a"
+    },
+    {
+      "start": 1685.64,
+      "end": 1689.42,
+      "text": "playing around with the symbols that is"
+    },
+    {
+      "start": 1687.92,
+      "end": 1691.58,
+      "text": "why I was telling if you understand"
+    },
+    {
+      "start": 1689.42,
+      "end": 1693.86,
+      "text": "lower Bound in depth you will be able to"
+    },
+    {
+      "start": 1691.58,
+      "end": 1695.24,
+      "text": "solve so many questions"
+    },
+    {
+      "start": 1693.86,
+      "end": 1697.4,
+      "text": "so you can find the problem link for"
+    },
+    {
+      "start": 1695.24,
+      "end": 1699.08,
+      "text": "floor and seal in the description please"
+    },
+    {
+      "start": 1697.4,
+      "end": 1702.08,
+      "text": "make sure that you submit these problems"
+    },
+    {
+      "start": 1699.08,
+      "end": 1705.98,
+      "text": "so that you gain confidence so a quick"
+    },
+    {
+      "start": 1702.08,
+      "end": 1707.84,
+      "text": "note over here we had to return the"
+    },
+    {
+      "start": 1705.98,
+      "end": 1709.34,
+      "text": "element that is why I'm returning in a"
+    },
+    {
+      "start": 1707.84,
+      "end": 1711.44,
+      "text": "lot of places they might ask you for"
+    },
+    {
+      "start": 1709.34,
+      "end": 1715.04,
+      "text": "index as well so make sure you read the"
+    },
+    {
+      "start": 1711.44,
+      "end": 1717.02,
+      "text": "problem properly before submitting so uh"
+    },
+    {
+      "start": 1715.04,
+      "end": 1718.4,
+      "text": "we're pretty much done with low bound"
+    },
+    {
+      "start": 1717.02,
+      "end": 1720.32,
+      "text": "upper bound and we have done some"
+    },
+    {
+      "start": 1718.4,
+      "end": 1721.7,
+      "text": "implementations of it and the next set"
+    },
+    {
+      "start": 1720.32,
+      "end": 1723.32,
+      "text": "of the lectures I'll be doing more"
+    },
+    {
+      "start": 1721.7,
+      "end": 1725.6,
+      "text": "problems based on low Bond and upper"
+    },
+    {
+      "start": 1723.32,
+      "end": 1728.12,
+      "text": "Bond but as of now I know you might have"
+    },
+    {
+      "start": 1725.6,
+      "end": 1730.58,
+      "text": "a small doubt how is binary search"
+    },
+    {
+      "start": 1728.12,
+      "end": 1733.46,
+      "text": "making sure that we get the smallest"
+    },
+    {
+      "start": 1730.58,
+      "end": 1736.82,
+      "text": "index or something like that so as I"
+    },
+    {
+      "start": 1733.46,
+      "end": 1738.68,
+      "text": "said binary search eliminates whenever I"
+    },
+    {
+      "start": 1736.82,
+      "end": 1740.54,
+      "text": "am saying smaller syntax by research"
+    },
+    {
+      "start": 1738.68,
+      "end": 1742.94,
+      "text": "eliminates the left half or the right"
+    },
+    {
+      "start": 1740.54,
+      "end": 1745.76,
+      "text": "half so you always move in a direction"
+    },
+    {
+      "start": 1742.94,
+      "end": 1748.04,
+      "text": "to find the smallest over here whenever"
+    },
+    {
+      "start": 1745.76,
+      "end": 1749.72,
+      "text": "you're trying to move a small list you"
+    },
+    {
+      "start": 1748.04,
+      "end": 1751.94,
+      "text": "always move in the left Direction you"
+    },
+    {
+      "start": 1749.72,
+      "end": 1753.98,
+      "text": "always eliminate you always eliminate so"
+    },
+    {
+      "start": 1751.94,
+      "end": 1756.2,
+      "text": "you're always moving on the left right"
+    },
+    {
+      "start": 1753.98,
+      "end": 1757.82,
+      "text": "so that is why whatever is stored"
+    },
+    {
+      "start": 1756.2,
+      "end": 1759.02,
+      "text": "whatever is stored if you remember in"
+    },
+    {
+      "start": 1757.82,
+      "end": 1760.76,
+      "text": "the example"
+    },
+    {
+      "start": 1759.02,
+      "end": 1763.1,
+      "text": "at where was the example if you remember"
+    },
+    {
+      "start": 1760.76,
+      "end": 1764.78,
+      "text": "this example we took some example where"
+    },
+    {
+      "start": 1763.1,
+      "end": 1766.34,
+      "text": "we started with 10 it boiled down to"
+    },
+    {
+      "start": 1764.78,
+      "end": 1768.26,
+      "text": "seven then boiled down to four then boil"
+    },
+    {
+      "start": 1766.34,
+      "end": 1770.66,
+      "text": "down to one remember it is always"
+    },
+    {
+      "start": 1768.26,
+      "end": 1772.34,
+      "text": "decreasing so binary search because the"
+    },
+    {
+      "start": 1770.66,
+      "end": 1775.04,
+      "text": "search space is eliminated in such a"
+    },
+    {
+      "start": 1772.34,
+      "end": 1778.34,
+      "text": "technique that it makes sure that if"
+    },
+    {
+      "start": 1775.04,
+      "end": 1780.62,
+      "text": "you're replacing it it gets replaced by"
+    },
+    {
+      "start": 1778.34,
+      "end": 1783.88,
+      "text": "smallest or largest depending on your"
+    },
+    {
+      "start": 1780.62,
+      "end": 1787.16,
+      "text": "conditional so by research by default"
+    },
+    {
+      "start": 1783.88,
+      "end": 1789.74,
+      "text": "takes care of the smallest or in this"
+    },
+    {
+      "start": 1787.16,
+      "end": 1791.6,
+      "text": "case the largest number or in this case"
+    },
+    {
+      "start": 1789.74,
+      "end": 1793.88,
+      "text": "the smallest number it does it for you"
+    },
+    {
+      "start": 1791.6,
+      "end": 1795.92,
+      "text": "because you're eliminating search spaces"
+    },
+    {
+      "start": 1793.88,
+      "end": 1798.56,
+      "text": "you're moving in a Direction so that you"
+    },
+    {
+      "start": 1795.92,
+      "end": 1800.18,
+      "text": "can find the largest over here"
+    },
+    {
+      "start": 1798.56,
+      "end": 1802.04,
+      "text": "when he is moving in this direction"
+    },
+    {
+      "start": 1800.18,
+      "end": 1804.08,
+      "text": "you're moving to find the largest that"
+    },
+    {
+      "start": 1802.04,
+      "end": 1806.24,
+      "text": "is why whatever you replace will always"
+    },
+    {
+      "start": 1804.08,
+      "end": 1808.4,
+      "text": "be pick up don't have that doubt and if"
+    },
+    {
+      "start": 1806.24,
+      "end": 1810.5,
+      "text": "you are still having a doubt take longer"
+    },
+    {
+      "start": 1808.4,
+      "end": 1812.48,
+      "text": "example so in order to understand binary"
+    },
+    {
+      "start": 1810.5,
+      "end": 1815.3,
+      "text": "search in depth during my college days"
+    },
+    {
+      "start": 1812.48,
+      "end": 1818.3,
+      "text": "the degree that I used was I took a lot"
+    },
+    {
+      "start": 1815.3,
+      "end": 1819.98,
+      "text": "of examples and I used to do a dry run I"
+    },
+    {
+      "start": 1818.3,
+      "end": 1822.5,
+      "text": "used to write everything I used to do"
+    },
+    {
+      "start": 1819.98,
+      "end": 1824.84,
+      "text": "dry run on pen and paper and then the"
+    },
+    {
+      "start": 1822.5,
+      "end": 1827.12,
+      "text": "understanding got much better and better"
+    },
+    {
+      "start": 1824.84,
+      "end": 1829.46,
+      "text": "with time it's just not about watching"
+    },
+    {
+      "start": 1827.12,
+      "end": 1831.5,
+      "text": "the lecture or it's just not about copy"
+    },
+    {
+      "start": 1829.46,
+      "end": 1833.96,
+      "text": "pasting the code that I'm writing try to"
+    },
+    {
+      "start": 1831.5,
+      "end": 1836.66,
+      "text": "take examples by yourself try to take"
+    },
+    {
+      "start": 1833.96,
+      "end": 1838.16,
+      "text": "the value of x by yourself try to do a"
+    },
+    {
+      "start": 1836.66,
+      "end": 1841.04,
+      "text": "dry run on the code so that the"
+    },
+    {
+      "start": 1838.16,
+      "end": 1843.38,
+      "text": "understanding goes better now in a lot"
+    },
+    {
+      "start": 1841.04,
+      "end": 1845.48,
+      "text": "of places you will find that this"
+    },
+    {
+      "start": 1843.38,
+      "end": 1847.64,
+      "text": "particular answer variable is not used"
+    },
+    {
+      "start": 1845.48,
+      "end": 1849.32,
+      "text": "they kind of return the low or high as"
+    },
+    {
+      "start": 1847.64,
+      "end": 1852.26,
+      "text": "the answer and I'll not go into that"
+    },
+    {
+      "start": 1849.32,
+      "end": 1854.72,
+      "text": "that is super complicated but once you"
+    },
+    {
+      "start": 1852.26,
+      "end": 1857.24,
+      "text": "get to that expert level in binary"
+    },
+    {
+      "start": 1854.72,
+      "end": 1859.28,
+      "text": "search you will figure this out that you"
+    },
+    {
+      "start": 1857.24,
+      "end": 1862.04,
+      "text": "don't have to store the answer you don't"
+    },
+    {
+      "start": 1859.28,
+      "end": 1865.04,
+      "text": "have to store the answer either of law"
+    },
+    {
+      "start": 1862.04,
+      "end": 1867.56,
+      "text": "or either of high will always be your"
+    },
+    {
+      "start": 1865.04,
+      "end": 1871.1,
+      "text": "answer again these things I'll dive deep"
+    },
+    {
+      "start": 1867.56,
+      "end": 1872.96,
+      "text": "as we move forward but as of now use the"
+    },
+    {
+      "start": 1871.1,
+      "end": 1875.78,
+      "text": "technique of answer when we are starting"
+    },
+    {
+      "start": 1872.96,
+      "end": 1878.48,
+      "text": "off use the technique of answer use"
+    },
+    {
+      "start": 1875.78,
+      "end": 1881.06,
+      "text": "another variable to store it as you gain"
+    },
+    {
+      "start": 1878.48,
+      "end": 1883.46,
+      "text": "confidence and as you become an expert"
+    },
+    {
+      "start": 1881.06,
+      "end": 1886.64,
+      "text": "you will notice that you don't need this"
+    },
+    {
+      "start": 1883.46,
+      "end": 1889.46,
+      "text": "answer the slow or this High either of"
+    },
+    {
+      "start": 1886.64,
+      "end": 1891.74,
+      "text": "these indexes will be pointing to your"
+    },
+    {
+      "start": 1889.46,
+      "end": 1893.96,
+      "text": "answer you will notice this you can take"
+    },
+    {
+      "start": 1891.74,
+      "end": 1895.76,
+      "text": "examples and you will see when you run"
+    },
+    {
+      "start": 1893.96,
+      "end": 1898.34,
+      "text": "out of when you run out of search space"
+    },
+    {
+      "start": 1895.76,
+      "end": 1899.78,
+      "text": "low and high one of them will be"
+    },
+    {
+      "start": 1898.34,
+      "end": 1901.76,
+      "text": "pointing to your answer just haven't"
+    },
+    {
+      "start": 1899.78,
+      "end": 1903.92,
+      "text": "noticed this again this we will discuss"
+    },
+    {
+      "start": 1901.76,
+      "end": 1905.48,
+      "text": "in depth as we move forward but for this"
+    },
+    {
+      "start": 1903.92,
+      "end": 1907.28,
+      "text": "video I think we have discussed a lot of"
+    },
+    {
+      "start": 1905.48,
+      "end": 1909.62,
+      "text": "things going back to the sheet I can"
+    },
+    {
+      "start": 1907.28,
+      "end": 1911.72,
+      "text": "mark this one as done as well"
+    },
+    {
+      "start": 1909.62,
+      "end": 1913.34,
+      "text": "so I hope you have understood everything"
+    },
+    {
+      "start": 1911.72,
+      "end": 1915.08,
+      "text": "about low bound and upper bound because"
+    },
+    {
+      "start": 1913.34,
+      "end": 1917.0,
+      "text": "it is going to be very very important as"
+    },
+    {
+      "start": 1915.08,
+      "end": 1919.1,
+      "text": "we move forward it is very important for"
+    },
+    {
+      "start": 1917.0,
+      "end": 1921.56,
+      "text": "coding rounds as well in case you have"
+    },
+    {
+      "start": 1919.1,
+      "end": 1923.42,
+      "text": "understood everything please please do"
+    },
+    {
+      "start": 1921.56,
+      "end": 1925.34,
+      "text": "give that like because that is very very"
+    },
+    {
+      "start": 1923.42,
+      "end": 1927.02,
+      "text": "uh important for me it keeps me"
+    },
+    {
+      "start": 1925.34,
+      "end": 1928.82,
+      "text": "motivated if you're new to our Channel"
+    },
+    {
+      "start": 1927.02,
+      "end": 1930.92,
+      "text": "please please please do consider"
+    },
+    {
+      "start": 1928.82,
+      "end": 1931.7,
+      "text": "subscribing to us and yes sir if you"
+    },
+    {
+      "start": 1930.92,
+      "end": 1933.14,
+      "text": "haven't followed me on Instagram"
+    },
+    {
+      "start": 1931.7,
+      "end": 1934.7,
+      "text": "LinkedIn and Twitter all the links will"
+    },
+    {
+      "start": 1933.14,
+      "end": 1935.78,
+      "text": "be in the description with this I'll be"
+    },
+    {
+      "start": 1934.7,
+      "end": 1937.64,
+      "text": "wrapping up this video let's fill in"
+    },
+    {
+      "start": 1935.78,
+      "end": 1941.78,
+      "text": "some other video tell them about"
+    },
+    {
+      "start": 1937.64,
+      "end": 1944.3,
+      "text": "whenever your heart is broken don't ever"
+    },
+    {
+      "start": 1941.78,
+      "end": 1947.44,
+      "text": "forget you're golden"
+    },
+    {
+      "start": 1944.3,
+      "end": 1947.44,
+      "text": "will find the lightning"
+    }
+  ]
+}

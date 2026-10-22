@@ -1,0 +1,2108 @@
+{
+  "video_id": "73sneFXuTEg",
+  "title": "G-22. Kahn's Algorithm | Topological Sort Algorithm | BFS",
+  "duration_sec": 830,
+  "num_segments": 350,
+  "segments": [
+    {
+      "start": 3.16,
+      "end": 5.36,
+      "duration": 2.2,
+      "text": "Hey everyone, welcome back to the"
+    },
+    {
+      "start": 4.2,
+      "end": 7.08,
+      "duration": 2.88,
+      "text": "channel. I hope you guys are doing"
+    },
+    {
+      "start": 5.36,
+      "end": 9.08,
+      "duration": 3.72,
+      "text": "extremely well. So in this video we are"
+    },
+    {
+      "start": 7.08,
+      "end": 10.92,
+      "duration": 3.84,
+      "text": "going to learn about topological sorting"
+    },
+    {
+      "start": 9.08,
+      "end": 12.68,
+      "duration": 3.6,
+      "text": "and we are going to use the BFS"
+    },
+    {
+      "start": 10.92,
+      "end": 15.44,
+      "duration": 4.52,
+      "text": "algorithm. We have done the DFS"
+    },
+    {
+      "start": 12.68,
+      "end": 17.4,
+      "duration": 4.72,
+      "text": "algorithm in the previous video and this"
+    },
+    {
+      "start": 15.44,
+      "end": 19.6,
+      "duration": 4.16,
+      "text": "algorithm is famously known as the"
+    },
+    {
+      "start": 17.4,
+      "end": 22.12,
+      "duration": 4.72,
+      "text": "Kahn's algorithm."
+    },
+    {
+      "start": 19.6,
+      "end": 24.72,
+      "duration": 5.12,
+      "text": "Kahn, Kahn, whatever you can call it. So"
+    },
+    {
+      "start": 22.12,
+      "end": 27.68,
+      "duration": 5.56,
+      "text": "what is topological sorting? So it's"
+    },
+    {
+      "start": 24.72,
+      "end": 30.16,
+      "duration": 5.44,
+      "text": "basically a linear ordering of vertices"
+    },
+    {
+      "start": 27.68,
+      "end": 34.12,
+      "duration": 6.44,
+      "text": "such that if there is an edge between U"
+    },
+    {
+      "start": 30.16,
+      "end": 37.04,
+      "duration": 6.88,
+      "text": "and V, U always appears before V in that"
+    },
+    {
+      "start": 34.12,
+      "end": 40.16,
+      "duration": 6.04,
+      "text": "ordering. So let me give you an example."
+    },
+    {
+      "start": 37.04,
+      "end": 42.64,
+      "duration": 5.6,
+      "text": "So if I write 5 4 then I can write"
+    },
+    {
+      "start": 40.16,
+      "end": 48.0,
+      "duration": 7.84,
+      "text": "something like 0"
+    },
+    {
+      "start": 42.64,
+      "end": 50.2,
+      "duration": 7.56,
+      "text": "2 3 1. Okay. Now this is a valid linear"
+    },
+    {
+      "start": 48.0,
+      "end": 52.12,
+      "duration": 4.12,
+      "text": "ordering of the graph."
+    },
+    {
+      "start": 50.2,
+      "end": 54.08,
+      "duration": 3.88,
+      "text": "What I can do is I can write down all"
+    },
+    {
+      "start": 52.12,
+      "end": 58.12,
+      "duration": 6.0,
+      "text": "the edges. So let's write down all the"
+    },
+    {
+      "start": 54.08,
+      "end": 64.6,
+      "duration": 10.52,
+      "text": "edges. So the first edge is"
+    },
+    {
+      "start": 58.12,
+      "end": 67.32,
+      "duration": 9.2,
+      "text": "5 0 then 4 0 then 5 2 then 4 1 then 2 3"
+    },
+    {
+      "start": 64.6,
+      "end": 70.2,
+      "duration": 5.6,
+      "text": "and then 3 1. So these are all the six"
+    },
+    {
+      "start": 67.32,
+      "end": 71.8,
+      "duration": 4.48,
+      "text": "edges of that given graph. Okay, so we"
+    },
+    {
+      "start": 70.2,
+      "end": 75.36,
+      "duration": 5.16,
+      "text": "have six edges."
+    },
+    {
+      "start": 71.8,
+      "end": 79.04,
+      "duration": 7.24,
+      "text": "Let's check out 5 0. So if you see 5 0,"
+    },
+    {
+      "start": 75.36,
+      "end": 82.64,
+      "duration": 7.28,
+      "text": "5 appears before 0. So this is perfect."
+    },
+    {
+      "start": 79.04,
+      "end": 86.52,
+      "duration": 7.48,
+      "text": "4 0, 4 appears before 0 and that is what"
+    },
+    {
+      "start": 82.64,
+      "end": 87.44,
+      "duration": 4.8,
+      "text": "the lining stated. 5 2, 5 appears before"
+    },
+    {
+      "start": 86.52,
+      "end": 92.48,
+      "duration": 5.96,
+      "text": "2."
+    },
+    {
+      "start": 87.44,
+      "end": 97.12,
+      "duration": 9.68,
+      "text": "4 1, 4 appears before 1. 2 3, 2 appears"
+    },
+    {
+      "start": 92.48,
+      "end": 100.6,
+      "duration": 8.12,
+      "text": "before 3. 3 1, 3 appears before 1. Even"
+    },
+    {
+      "start": 97.12,
+      "end": 103.28,
+      "duration": 6.16,
+      "text": "I can have something like 4 5 2 3 1 0."
+    },
+    {
+      "start": 100.6,
+      "end": 105.52,
+      "duration": 4.92,
+      "text": "This is also a valid linear ordering."
+    },
+    {
+      "start": 103.28,
+      "end": 110.0,
+      "duration": 6.72,
+      "text": "Let's check it out. 5 0, 5 appears"
+    },
+    {
+      "start": 105.52,
+      "end": 113.12,
+      "duration": 7.6,
+      "text": "before 0. 4 0, 4 appears before 0. 5 2,"
+    },
+    {
+      "start": 110.0,
+      "end": 117.52,
+      "duration": 7.52,
+      "text": "5 appears before 2. 4 1, 4 appears"
+    },
+    {
+      "start": 113.12,
+      "end": 120.04,
+      "duration": 6.92,
+      "text": "before 1. 2 3, 2 appears before 3. 3 1,"
+    },
+    {
+      "start": 117.52,
+      "end": 123.44,
+      "duration": 5.92,
+      "text": "3 appears before one. So, there can be"
+    },
+    {
+      "start": 120.04,
+      "end": 126.28,
+      "duration": 6.24,
+      "text": "multiple such linear ordering of"
+    },
+    {
+      "start": 123.44,
+      "end": 129.12,
+      "duration": 5.68,
+      "text": "vertices as long as all the edges"
+    },
+    {
+      "start": 126.28,
+      "end": 132.04,
+      "duration": 5.76,
+      "text": "satisfy this particular condition, I can"
+    },
+    {
+      "start": 129.12,
+      "end": 134.6,
+      "duration": 5.48,
+      "text": "say any of that linear ordering to be a"
+    },
+    {
+      "start": 132.04,
+      "end": 138.84,
+      "duration": 6.8,
+      "text": "topological sort. Now, our task is to"
+    },
+    {
+      "start": 134.6,
+      "end": 141.92,
+      "duration": 7.32,
+      "text": "print any such topological sort. So,"
+    },
+    {
+      "start": 138.84,
+      "end": 146.44,
+      "duration": 7.6,
+      "text": "remember one thing, topological sort or"
+    },
+    {
+      "start": 141.92,
+      "end": 149.84,
+      "duration": 7.92,
+      "text": "topo sort is only valid in DAGs. It is"
+    },
+    {
+      "start": 146.44,
+      "end": 152.8,
+      "duration": 6.36,
+      "text": "is only valid in DAGs. What is DAG? It"
+    },
+    {
+      "start": 149.84,
+      "end": 154.44,
+      "duration": 4.6,
+      "text": "is nothing but directed"
+    },
+    {
+      "start": 152.8,
+      "end": 156.32,
+      "duration": 3.52,
+      "text": "acyclic,"
+    },
+    {
+      "start": 154.44,
+      "end": 159.8,
+      "duration": 5.36,
+      "text": "which means does not have a cycle."
+    },
+    {
+      "start": 156.32,
+      "end": 161.6,
+      "duration": 5.28,
+      "text": "Directed acyclic graph. Why a directed?"
+    },
+    {
+      "start": 159.8,
+      "end": 163.76,
+      "duration": 3.96,
+      "text": "Assume I'm saying you to take an"
+    },
+    {
+      "start": 161.6,
+      "end": 166.04,
+      "duration": 4.44,
+      "text": "undirected vertex,"
+    },
+    {
+      "start": 163.76,
+      "end": 168.56,
+      "duration": 4.8,
+      "text": "something like one to two. So, this is"
+    },
+    {
+      "start": 166.04,
+      "end": 170.32,
+      "duration": 4.28,
+      "text": "an undirected edge between a node one"
+    },
+    {
+      "start": 168.56,
+      "end": 175.28,
+      "duration": 6.72,
+      "text": "and between a node two. So, if you"
+    },
+    {
+      "start": 170.32,
+      "end": 177.48,
+      "duration": 7.16,
+      "text": "carefully see, this is from one to two"
+    },
+    {
+      "start": 175.28,
+      "end": 179.56,
+      "duration": 4.28,
+      "text": "and from two to one. So, in the linear"
+    },
+    {
+      "start": 177.48,
+      "end": 181.08,
+      "duration": 3.6,
+      "text": "ordering, you can't have such a linear"
+    },
+    {
+      "start": 179.56,
+      "end": 183.28,
+      "duration": 3.72,
+      "text": "ordering such that one appears before"
+    },
+    {
+      "start": 181.08,
+      "end": 186.2,
+      "duration": 5.12,
+      "text": "two, at the same time two appears before"
+    },
+    {
+      "start": 183.28,
+      "end": 189.08,
+      "duration": 5.8,
+      "text": "one because the edge is bidirectional if"
+    },
+    {
+      "start": 186.2,
+      "end": 191.24,
+      "duration": 5.04,
+      "text": "we call it a undirected graph. Thereby,"
+    },
+    {
+      "start": 189.08,
+      "end": 193.8,
+      "duration": 4.72,
+      "text": "it has to be a directed graph. What"
+    },
+    {
+      "start": 191.24,
+      "end": 195.96,
+      "duration": 4.72,
+      "text": "about acyclic? Let's understand. So,"
+    },
+    {
+      "start": 193.8,
+      "end": 198.6,
+      "duration": 4.8,
+      "text": "imagine I draw one, then I go to two,"
+    },
+    {
+      "start": 195.96,
+      "end": 200.72,
+      "duration": 4.76,
+      "text": "then I go to three, and then I go to one"
+    },
+    {
+      "start": 198.6,
+      "end": 202.04,
+      "duration": 3.44,
+      "text": "back again. So, there's an edge between"
+    },
+    {
+      "start": 200.72,
+      "end": 203.44,
+      "duration": 2.72,
+      "text": "one to two, there's an edge between two"
+    },
+    {
+      "start": 202.04,
+      "end": 205.32,
+      "duration": 3.28,
+      "text": "to three, there's an edge between three"
+    },
+    {
+      "start": 203.44,
+      "end": 207.2,
+      "duration": 3.76,
+      "text": "to one. So, what I'm saying is in the"
+    },
+    {
+      "start": 205.32,
+      "end": 208.64,
+      "duration": 3.32,
+      "text": "linear ordering, one should be before"
+    },
+    {
+      "start": 207.2,
+      "end": 210.84,
+      "duration": 3.64,
+      "text": "two."
+    },
+    {
+      "start": 208.64,
+      "end": 213.64,
+      "duration": 5.0,
+      "text": "Two should be before three."
+    },
+    {
+      "start": 210.84,
+      "end": 215.96,
+      "duration": 5.12,
+      "text": "Three should be before one. So, a cyclic"
+    },
+    {
+      "start": 213.64,
+      "end": 217.68,
+      "duration": 4.04,
+      "text": "dependency is there. So, thereby, you"
+    },
+    {
+      "start": 215.96,
+      "end": 220.2,
+      "duration": 4.24,
+      "text": "cannot have"
+    },
+    {
+      "start": 217.68,
+      "end": 222.56,
+      "duration": 4.88,
+      "text": "one at both the places. You cannot have"
+    },
+    {
+      "start": 220.2,
+      "end": 225.28,
+      "duration": 5.08,
+      "text": "one before three, or you cannot have one"
+    },
+    {
+      "start": 222.56,
+      "end": 227.96,
+      "duration": 5.4,
+      "text": "after three. You cannot satisfy it."
+    },
+    {
+      "start": 225.28,
+      "end": 230.64,
+      "duration": 5.36,
+      "text": "Thereby, we have to have a graph which"
+    },
+    {
+      "start": 227.96,
+      "end": 234.92,
+      "duration": 6.96,
+      "text": "does not contain a cycle. So, directed"
+    },
+    {
+      "start": 230.64,
+      "end": 237.56,
+      "duration": 6.92,
+      "text": "acyclic graph is where a topological"
+    },
+    {
+      "start": 234.92,
+      "end": 238.84,
+      "duration": 3.92,
+      "text": "sort is valid."
+    },
+    {
+      "start": 237.56,
+      "end": 241.12,
+      "duration": 3.56,
+      "text": "Now, previously we have solved a"
+    },
+    {
+      "start": 238.84,
+      "end": 242.84,
+      "duration": 4.0,
+      "text": "topological sorting using the DFS. Now,"
+    },
+    {
+      "start": 241.12,
+      "end": 244.68,
+      "duration": 3.56,
+      "text": "since we are using BFS over here, we"
+    },
+    {
+      "start": 242.84,
+      "end": 246.28,
+      "duration": 3.44,
+      "text": "know what we need. We need a queue data"
+    },
+    {
+      "start": 244.68,
+      "end": 248.24,
+      "duration": 3.56,
+      "text": "structure. This is nothing but the"
+    },
+    {
+      "start": 246.28,
+      "end": 250.4,
+      "duration": 4.12,
+      "text": "first-in-first-out data structure. This"
+    },
+    {
+      "start": 248.24,
+      "end": 252.48,
+      "duration": 4.24,
+      "text": "is the particular adjacency list. And"
+    },
+    {
+      "start": 250.4,
+      "end": 254.76,
+      "duration": 4.36,
+      "text": "this is a new thing that we will"
+    },
+    {
+      "start": 252.48,
+      "end": 256.84,
+      "duration": 4.36,
+      "text": "introduce because it is not exactly the"
+    },
+    {
+      "start": 254.76,
+      "end": 259.04,
+      "duration": 4.28,
+      "text": "BFS algorithm, a slightly modified"
+    },
+    {
+      "start": 256.84,
+      "end": 260.88,
+      "duration": 4.04,
+      "text": "version of it. So, we're going to use an"
+    },
+    {
+      "start": 259.04,
+      "end": 264.0,
+      "duration": 4.96,
+      "text": "in-degree. What is the definition of an"
+    },
+    {
+      "start": 260.88,
+      "end": 266.64,
+      "duration": 5.76,
+      "text": "in-degree? Number of incoming edges to a"
+    },
+    {
+      "start": 264.0,
+      "end": 269.08,
+      "duration": 5.08,
+      "text": "node. Yes, very important. Number of"
+    },
+    {
+      "start": 266.64,
+      "end": 270.52,
+      "duration": 3.88,
+      "text": "incoming edges to a node. I have already"
+    },
+    {
+      "start": 269.08,
+      "end": 273.96,
+      "duration": 4.88,
+      "text": "taught you about this in the first"
+    },
+    {
+      "start": 270.52,
+      "end": 275.92,
+      "duration": 5.4,
+      "text": "video. So, if I ask you for zero, what"
+    },
+    {
+      "start": 273.96,
+      "end": 278.16,
+      "duration": 4.2,
+      "text": "is the number of incoming edges? Can I"
+    },
+    {
+      "start": 275.92,
+      "end": 281.44,
+      "duration": 5.52,
+      "text": "say it is two? So, I will say the number"
+    },
+    {
+      "start": 278.16,
+      "end": 283.96,
+      "duration": 5.8,
+      "text": "of incoming edges for zero is two. For"
+    },
+    {
+      "start": 281.44,
+      "end": 286.44,
+      "duration": 5.0,
+      "text": "one, how much is it? It is again two"
+    },
+    {
+      "start": 283.96,
+      "end": 289.2,
+      "duration": 5.24,
+      "text": "because there are two incoming edges to"
+    },
+    {
+      "start": 286.44,
+      "end": 291.08,
+      "duration": 4.64,
+      "text": "one as well. So, two. Now, if I ask you,"
+    },
+    {
+      "start": 289.2,
+      "end": 293.36,
+      "duration": 4.16,
+      "text": "what is for three? There's just one"
+    },
+    {
+      "start": 291.08,
+      "end": 296.64,
+      "duration": 5.56,
+      "text": "incoming edge. This is outgoing, so"
+    },
+    {
+      "start": 293.36,
+      "end": 298.96,
+      "duration": 5.6,
+      "text": "in-degree is just one. So, this is"
+    },
+    {
+      "start": 296.64,
+      "end": 300.64,
+      "duration": 4.0,
+      "text": "Sorry, for two it is actually one"
+    },
+    {
+      "start": 298.96,
+      "end": 302.84,
+      "duration": 3.88,
+      "text": "because there is one. For three also,"
+    },
+    {
+      "start": 300.64,
+      "end": 305.28,
+      "duration": 4.64,
+      "text": "there is one. And now, for four, are"
+    },
+    {
+      "start": 302.84,
+      "end": 307.4,
+      "duration": 4.56,
+      "text": "there any incoming edges? Do you see any"
+    },
+    {
+      "start": 305.28,
+      "end": 309.64,
+      "duration": 4.36,
+      "text": "incoming edges? No. So, you'll be like"
+    },
+    {
+      "start": 307.4,
+      "end": 311.48,
+      "duration": 4.08,
+      "text": "zero. And for five, are there any"
+    },
+    {
+      "start": 309.64,
+      "end": 313.24,
+      "duration": 3.6,
+      "text": "incoming edges? No. So, you'll be like"
+    },
+    {
+      "start": 311.48,
+      "end": 315.24,
+      "duration": 3.76,
+      "text": "zero. Now, what is What was the"
+    },
+    {
+      "start": 313.24,
+      "end": 317.28,
+      "duration": 4.04,
+      "text": "definition of topological sort? If there"
+    },
+    {
+      "start": 315.24,
+      "end": 320.68,
+      "duration": 5.44,
+      "text": "is an edge between U and V,"
+    },
+    {
+      "start": 317.28,
+      "end": 322.56,
+      "duration": 5.28,
+      "text": "U appears before V in the linear"
+    },
+    {
+      "start": 320.68,
+      "end": 325.4,
+      "duration": 4.72,
+      "text": "ordering. That was the definition of"
+    },
+    {
+      "start": 322.56,
+      "end": 329.56,
+      "duration": 7.0,
+      "text": "topological sort, right? So, can I say"
+    },
+    {
+      "start": 325.4,
+      "end": 332.92,
+      "duration": 7.52,
+      "text": "since five and four do not have any of"
+    },
+    {
+      "start": 329.56,
+      "end": 334.88,
+      "duration": 5.32,
+      "text": "the incoming edges, so"
+    },
+    {
+      "start": 332.92,
+      "end": 337.44,
+      "duration": 4.52,
+      "text": "you can place five or four at the"
+    },
+    {
+      "start": 334.88,
+      "end": 338.92,
+      "duration": 4.04,
+      "text": "starting. You can place either five or"
+    },
+    {
+      "start": 337.44,
+      "end": 340.8,
+      "duration": 3.36,
+      "text": "four at the starting of your linear"
+    },
+    {
+      "start": 338.92,
+      "end": 342.6,
+      "duration": 3.68,
+      "text": "ordering because there has to be no one"
+    },
+    {
+      "start": 340.8,
+      "end": 344.32,
+      "duration": 3.52,
+      "text": "before five because there is the"
+    },
+    {
+      "start": 342.6,
+      "end": 346.36,
+      "duration": 3.76,
+      "text": "in-degree is zero. There is no one"
+    },
+    {
+      "start": 344.32,
+      "end": 348.08,
+      "duration": 3.76,
+      "text": "before five or four. You can place them"
+    },
+    {
+      "start": 346.36,
+      "end": 349.36,
+      "duration": 3.0,
+      "text": "at the starting. So, what do you do is"
+    },
+    {
+      "start": 348.08,
+      "end": 352.12,
+      "duration": 4.04,
+      "text": "you say, \"Okay,"
+    },
+    {
+      "start": 349.36,
+      "end": 354.2,
+      "duration": 4.84,
+      "text": "initially, there will always be a node"
+    },
+    {
+      "start": 352.12,
+      "end": 356.68,
+      "duration": 4.56,
+      "text": "there will a minimum of one node whose"
+    },
+    {
+      "start": 354.2,
+      "end": 360.48,
+      "duration": 6.28,
+      "text": "in-degree is zero.\" So, the step one is"
+    },
+    {
+      "start": 356.68,
+      "end": 362.24,
+      "duration": 5.56,
+      "text": "very clear. Insert all nodes with"
+    },
+    {
+      "start": 360.48,
+      "end": 366.4,
+      "duration": 5.92,
+      "text": "in-degree zero."
+    },
+    {
+      "start": 362.24,
+      "end": 369.24,
+      "duration": 7.0,
+      "text": "With in-degree zero. So, can I say I'll"
+    },
+    {
+      "start": 366.4,
+      "end": 371.76,
+      "duration": 5.36,
+      "text": "insert four and five? You can You can do"
+    },
+    {
+      "start": 369.24,
+      "end": 374.72,
+      "duration": 5.48,
+      "text": "five and four as well. So, I've inserted"
+    },
+    {
+      "start": 371.76,
+      "end": 376.88,
+      "duration": 5.12,
+      "text": "four and five. Okay. Now,"
+    },
+    {
+      "start": 374.72,
+      "end": 379.52,
+      "duration": 4.8,
+      "text": "the ordering can have four and five."
+    },
+    {
+      "start": 376.88,
+      "end": 381.92,
+      "duration": 5.04,
+      "text": "Now, four and five would be having the"
+    },
+    {
+      "start": 379.52,
+      "end": 384.16,
+      "duration": 4.64,
+      "text": "incoming edge to someone."
+    },
+    {
+      "start": 381.92,
+      "end": 386.44,
+      "duration": 4.52,
+      "text": "Right? So, they were getting into"
+    },
+    {
+      "start": 384.16,
+      "end": 389.12,
+      "duration": 4.96,
+      "text": "someone. So, what I'll do is I'll take"
+    },
+    {
+      "start": 386.44,
+      "end": 390.88,
+      "duration": 4.44,
+      "text": "four out at first. I took four out. Now,"
+    },
+    {
+      "start": 389.12,
+      "end": 392.2,
+      "duration": 3.08,
+      "text": "four was into someone. Let's see. Four"
+    },
+    {
+      "start": 390.88,
+      "end": 394.4,
+      "duration": 3.52,
+      "text": "was into"
+    },
+    {
+      "start": 392.2,
+      "end": 396.04,
+      "duration": 3.84,
+      "text": "zero and four was into one. So, I'll be"
+    },
+    {
+      "start": 394.4,
+      "end": 397.92,
+      "duration": 3.52,
+      "text": "like, let's take it off because I"
+    },
+    {
+      "start": 396.04,
+      "end": 400.24,
+      "duration": 4.2,
+      "text": "already have four before it. I already"
+    },
+    {
+      "start": 397.92,
+      "end": 402.2,
+      "duration": 4.28,
+      "text": "have four before it. So, I've placed in"
+    },
+    {
+      "start": 400.24,
+      "end": 403.84,
+      "duration": 3.6,
+      "text": "my ordering four. I've placed in my"
+    },
+    {
+      "start": 402.2,
+      "end": 406.52,
+      "duration": 4.32,
+      "text": "ordering four. So, I have four before"
+    },
+    {
+      "start": 403.84,
+      "end": 408.68,
+      "duration": 4.84,
+      "text": "it. So, from zero,"
+    },
+    {
+      "start": 406.52,
+      "end": 411.6,
+      "duration": 5.08,
+      "text": "take out four. So, the"
+    },
+    {
+      "start": 408.68,
+      "end": 413.28,
+      "duration": 4.6,
+      "text": "in-degree will reduce to one."
+    },
+    {
+      "start": 411.6,
+      "end": 414.96,
+      "duration": 3.36,
+      "text": "And from one also take out four. So, the"
+    },
+    {
+      "start": 413.28,
+      "end": 416.92,
+      "duration": 3.64,
+      "text": "in-degree will reduce to one. So, what I"
+    },
+    {
+      "start": 414.96,
+      "end": 419.12,
+      "duration": 4.16,
+      "text": "did was I said, \"Let's take it out.\""
+    },
+    {
+      "start": 416.92,
+      "end": 421.8,
+      "duration": 4.88,
+      "text": "Yes, let's take it out. So, kind of you"
+    },
+    {
+      "start": 419.12,
+      "end": 424.2,
+      "duration": 5.08,
+      "text": "can say I removed these edges. I kind of"
+    },
+    {
+      "start": 421.8,
+      "end": 425.92,
+      "duration": 4.12,
+      "text": "removed these edges. I'm saying, \"Take"
+    },
+    {
+      "start": 424.2,
+      "end": 428.36,
+      "duration": 4.16,
+      "text": "them out. Take them out because they're"
+    },
+    {
+      "start": 425.92,
+      "end": 430.92,
+      "duration": 5.0,
+      "text": "no more into consideration.\" Okay,"
+    },
+    {
+      "start": 428.36,
+      "end": 434.44,
+      "duration": 6.08,
+      "text": "perfect. So, I've taken them out, right?"
+    },
+    {
+      "start": 430.92,
+      "end": 436.24,
+      "duration": 5.32,
+      "text": "After taking four out, is the zero"
+    },
+    {
+      "start": 434.44,
+      "end": 439.04,
+      "duration": 4.6,
+      "text": "having any in-degree zero? No. There are"
+    },
+    {
+      "start": 436.24,
+      "end": 444.0,
+      "duration": 7.76,
+      "text": "still a lot of edges which are into it"
+    },
+    {
+      "start": 439.04,
+      "end": 446.36,
+      "duration": 7.32,
+      "text": "and are not yet in my direction or in my"
+    },
+    {
+      "start": 444.0,
+      "end": 448.8,
+      "duration": 4.8,
+      "text": "linear ordering. Okay, fine. So, I've"
+    },
+    {
+      "start": 446.36,
+      "end": 450.16,
+      "duration": 3.8,
+      "text": "done the work for four. Next, take out"
+    },
+    {
+      "start": 448.8,
+      "end": 451.88,
+      "duration": 3.08,
+      "text": "five."
+    },
+    {
+      "start": 450.16,
+      "end": 452.68,
+      "duration": 2.52,
+      "text": "So, five will be in my linear ordering"
+    },
+    {
+      "start": 451.88,
+      "end": 453.76,
+      "duration": 1.88,
+      "text": "now."
+    },
+    {
+      "start": 452.68,
+      "end": 457.0,
+      "duration": 4.32,
+      "text": "Who"
+    },
+    {
+      "start": 453.76,
+      "end": 459.16,
+      "duration": 5.4,
+      "text": "like five if you see is entering two and"
+    },
+    {
+      "start": 457.0,
+      "end": 461.64,
+      "duration": 4.64,
+      "text": "is entering zero. So, if I take it out"
+    },
+    {
+      "start": 459.16,
+      "end": 463.08,
+      "duration": 3.92,
+      "text": "from zero, the in-degree will become"
+    },
+    {
+      "start": 461.64,
+      "end": 465.6,
+      "duration": 3.96,
+      "text": "zero."
+    },
+    {
+      "start": 463.08,
+      "end": 467.76,
+      "duration": 4.68,
+      "text": "So, the in-degree of zero now becomes"
+    },
+    {
+      "start": 465.6,
+      "end": 469.68,
+      "duration": 4.08,
+      "text": "zero. So, you can take that zero and put"
+    },
+    {
+      "start": 467.76,
+      "end": 471.48,
+      "duration": 3.72,
+      "text": "it into the queue. And from two also"
+    },
+    {
+      "start": 469.68,
+      "end": 472.96,
+      "duration": 3.28,
+      "text": "you'll take it out. So, the in-degree of"
+    },
+    {
+      "start": 471.48,
+      "end": 475.12,
+      "duration": 3.64,
+      "text": "two will also become zero. So, you can"
+    },
+    {
+      "start": 472.96,
+      "end": 476.0,
+      "duration": 3.04,
+      "text": "put that out as well."
+    },
+    {
+      "start": 475.12,
+      "end": 478.56,
+      "duration": 3.44,
+      "text": "Perfect."
+    },
+    {
+      "start": 476.0,
+      "end": 480.48,
+      "duration": 4.48,
+      "text": "Now, can I say since you took four and"
+    },
+    {
+      "start": 478.56,
+      "end": 482.36,
+      "duration": 3.8,
+      "text": "five out,"
+    },
+    {
+      "start": 480.48,
+      "end": 484.28,
+      "duration": 3.8,
+      "text": "since you took four and five out, four"
+    },
+    {
+      "start": 482.36,
+      "end": 486.72,
+      "duration": 4.36,
+      "text": "and five was already entering zero."
+    },
+    {
+      "start": 484.28,
+      "end": 488.12,
+      "duration": 3.84,
+      "text": "Thereby, the in-degree becomes zero. So,"
+    },
+    {
+      "start": 486.72,
+      "end": 490.48,
+      "duration": 3.76,
+      "text": "you're very sure that you have placed"
+    },
+    {
+      "start": 488.12,
+      "end": 492.28,
+      "duration": 4.16,
+      "text": "four and five before."
+    },
+    {
+      "start": 490.48,
+      "end": 493.64,
+      "duration": 3.16,
+      "text": "Right? Now,"
+    },
+    {
+      "start": 492.28,
+      "end": 496.4,
+      "duration": 4.12,
+      "text": "when you take the next element out of"
+    },
+    {
+      "start": 493.64,
+      "end": 498.28,
+      "duration": 4.64,
+      "text": "the queue, it is zero. And you can place"
+    },
+    {
+      "start": 496.4,
+      "end": 500.04,
+      "duration": 3.64,
+      "text": "that into the linear ordering."
+    },
+    {
+      "start": 498.28,
+      "end": 501.48,
+      "duration": 3.2,
+      "text": "Because it is now an in-degree of zero"
+    },
+    {
+      "start": 500.04,
+      "end": 504.84,
+      "duration": 4.8,
+      "text": "because four and five have been taken"
+    },
+    {
+      "start": 501.48,
+      "end": 508.0,
+      "duration": 6.52,
+      "text": "out. Got it? Perfect. For zero, you will"
+    },
+    {
+      "start": 504.84,
+      "end": 510.56,
+      "duration": 5.72,
+      "text": "see does it have any in- like anywhere"
+    },
+    {
+      "start": 508.0,
+      "end": 513.0,
+      "duration": 5.0,
+      "text": "any adjacent nodes? No. So, nothing to"
+    },
+    {
+      "start": 510.56,
+      "end": 515.08,
+      "duration": 4.52,
+      "text": "be done. Next, you take out two."
+    },
+    {
+      "start": 513.0,
+      "end": 517.48,
+      "duration": 4.48,
+      "text": "Where is two heading to?"
+    },
+    {
+      "start": 515.08,
+      "end": 520.16,
+      "duration": 5.08,
+      "text": "Two is heading to three. The adjacent"
+    },
+    {
+      "start": 517.48,
+      "end": 522.88,
+      "duration": 5.4,
+      "text": "node of two is three. So, you reduce the"
+    },
+    {
+      "start": 520.16,
+      "end": 524.84,
+      "duration": 4.68,
+      "text": "in-degree of three by one and become"
+    },
+    {
+      "start": 522.88,
+      "end": 526.64,
+      "duration": 3.76,
+      "text": "zero. So, now you can take three and put"
+    },
+    {
+      "start": 524.84,
+      "end": 529.8,
+      "duration": 4.96,
+      "text": "it into the queue."
+    },
+    {
+      "start": 526.64,
+      "end": 531.2,
+      "duration": 4.56,
+      "text": "Perfect. Next, you take out three."
+    },
+    {
+      "start": 529.8,
+      "end": 533.88,
+      "duration": 4.08,
+      "text": "Now, you have three. Now, three is"
+    },
+    {
+      "start": 531.2,
+      "end": 536.32,
+      "duration": 5.12,
+      "text": "saying, \"Who am I?\" Like you can take"
+    },
+    {
+      "start": 533.88,
+      "end": 538.64,
+      "duration": 4.76,
+      "text": "out three and three was getting into"
+    },
+    {
+      "start": 536.32,
+      "end": 540.2,
+      "duration": 3.88,
+      "text": "one. So, one will now reduce its"
+    },
+    {
+      "start": 538.64,
+      "end": 542.56,
+      "duration": 3.92,
+      "text": "in-degree to zero. So, now you can take"
+    },
+    {
+      "start": 540.2,
+      "end": 544.12,
+      "duration": 3.92,
+      "text": "out one. Perfect. Now, you can remove"
+    },
+    {
+      "start": 542.56,
+      "end": 546.12,
+      "duration": 3.56,
+      "text": "it. Suddenly, this in-degree will become"
+    },
+    {
+      "start": 544.12,
+      "end": 547.92,
+      "duration": 3.8,
+      "text": "zero and this will be done."
+    },
+    {
+      "start": 546.12,
+      "end": 549.48,
+      "duration": 3.36,
+      "text": "So, apparently now you have one. So, you"
+    },
+    {
+      "start": 547.92,
+      "end": 551.32,
+      "duration": 3.4,
+      "text": "can take out one."
+    },
+    {
+      "start": 549.48,
+      "end": 554.32,
+      "duration": 4.84,
+      "text": "And over here, you can place out one."
+    },
+    {
+      "start": 551.32,
+      "end": 556.28,
+      "duration": 4.96,
+      "text": "So, does one have any adjacent node? No."
+    },
+    {
+      "start": 554.32,
+      "end": 560.4,
+      "duration": 6.08,
+      "text": "So, I can say at the end of the day,"
+    },
+    {
+      "start": 556.28,
+      "end": 563.28,
+      "duration": 7.0,
+      "text": "we have 4 5 0 2 3 1 as a valid"
+    },
+    {
+      "start": 560.4,
+      "end": 565.96,
+      "duration": 5.56,
+      "text": "topological sort. So, what I did was"
+    },
+    {
+      "start": 563.28,
+      "end": 567.92,
+      "duration": 4.64,
+      "text": "super simple. I insert all the nodes"
+    },
+    {
+      "start": 565.96,
+      "end": 571.16,
+      "duration": 5.2,
+      "text": "with in-degree zero,"
+    },
+    {
+      "start": 567.92,
+      "end": 571.16,
+      "duration": 3.24,
+      "text": "take them out of the queue,"
+    },
+    {
+      "start": 571.24,
+      "end": 576.24,
+      "duration": 5.0,
+      "text": "take them out of the queue, and just"
+    },
+    {
+      "start": 574.12,
+      "end": 578.28,
+      "duration": 4.16,
+      "text": "remove the adjacent like just reduce the"
+    },
+    {
+      "start": 576.24,
+      "end": 580.08,
+      "duration": 3.84,
+      "text": "in-degree of the adjacent nodes. And if"
+    },
+    {
+      "start": 578.28,
+      "end": 581.84,
+      "duration": 3.56,
+      "text": "the adjacent nodes have the in degree"
+    },
+    {
+      "start": 580.08,
+      "end": 584.2,
+      "duration": 4.12,
+      "text": "zero, I say that"
+    },
+    {
+      "start": 581.84,
+      "end": 586.08,
+      "duration": 4.24,
+      "text": "you have your guys set before, so you"
+    },
+    {
+      "start": 584.2,
+      "end": 588.16,
+      "duration": 3.96,
+      "text": "can now go to the queue because you will"
+    },
+    {
+      "start": 586.08,
+      "end": 589.8,
+      "duration": 3.72,
+      "text": "be a part of the topo sort. Got it? So,"
+    },
+    {
+      "start": 588.16,
+      "end": 591.92,
+      "duration": 3.76,
+      "text": "quite simple uh"
+    },
+    {
+      "start": 589.8,
+      "end": 593.64,
+      "duration": 3.84,
+      "text": "Quick question, how do you figure out uh"
+    },
+    {
+      "start": 591.92,
+      "end": 596.84,
+      "duration": 4.92,
+      "text": "the in degree? How do you figure out the"
+    },
+    {
+      "start": 593.64,
+      "end": 600.0,
+      "duration": 6.36,
+      "text": "in degree? Very simple. If I'm saying"
+    },
+    {
+      "start": 596.84,
+      "end": 602.92,
+      "duration": 6.08,
+      "text": "two is having an adjacent node to three,"
+    },
+    {
+      "start": 600.0,
+      "end": 604.36,
+      "duration": 4.36,
+      "text": "which means two is directed to three."
+    },
+    {
+      "start": 602.92,
+      "end": 606.56,
+      "duration": 3.64,
+      "text": "So, can I say the in degree of three"
+    },
+    {
+      "start": 604.36,
+      "end": 609.36,
+      "duration": 5.0,
+      "text": "will increase by plus one? So, what I do"
+    },
+    {
+      "start": 606.56,
+      "end": 611.48,
+      "duration": 4.92,
+      "text": "is I traverse in the adjacent node and"
+    },
+    {
+      "start": 609.36,
+      "end": 612.32,
+      "duration": 2.96,
+      "text": "whatever is there, whatever is there, I"
+    },
+    {
+      "start": 611.48,
+      "end": 615.32,
+      "duration": 3.84,
+      "text": "say"
+    },
+    {
+      "start": 612.32,
+      "end": 617.68,
+      "duration": 5.36,
+      "text": "in degree of three can do a plus plus."
+    },
+    {
+      "start": 615.32,
+      "end": 619.92,
+      "duration": 4.6,
+      "text": "If there is zero, I can say in degree of"
+    },
+    {
+      "start": 617.68,
+      "end": 621.92,
+      "duration": 4.24,
+      "text": "zero will do a plus plus. If there is"
+    },
+    {
+      "start": 619.92,
+      "end": 624.08,
+      "duration": 4.16,
+      "text": "one, I can say in degree of one will do"
+    },
+    {
+      "start": 621.92,
+      "end": 626.56,
+      "duration": 4.64,
+      "text": "a plus plus because if I'm saying three"
+    },
+    {
+      "start": 624.08,
+      "end": 628.44,
+      "duration": 4.36,
+      "text": "to one, it means there is an inner edge"
+    },
+    {
+      "start": 626.56,
+      "end": 630.96,
+      "duration": 4.4,
+      "text": "to one, there is an incoming edge to"
+    },
+    {
+      "start": 628.44,
+      "end": 632.56,
+      "duration": 4.12,
+      "text": "one. So, very simple, you traverse in"
+    },
+    {
+      "start": 630.96,
+      "end": 634.12,
+      "duration": 3.16,
+      "text": "the adjacent node and you can increase"
+    },
+    {
+      "start": 632.56,
+      "end": 636.44,
+      "duration": 3.88,
+      "text": "the in degree."
+    },
+    {
+      "start": 634.12,
+      "end": 637.48,
+      "duration": 3.36,
+      "text": "So, we will now go back to the code"
+    },
+    {
+      "start": 636.44,
+      "end": 640.08,
+      "duration": 3.64,
+      "text": "editor."
+    },
+    {
+      "start": 637.48,
+      "end": 642.68,
+      "duration": 5.2,
+      "text": "As usual, the C++ code is on the right"
+    },
+    {
+      "start": 640.08,
+      "end": 644.12,
+      "duration": 4.04,
+      "text": "and the Java code will be on the left."
+    },
+    {
+      "start": 642.68,
+      "end": 646.16,
+      "duration": 3.48,
+      "text": "So, what's the first thing that you'll"
+    },
+    {
+      "start": 644.12,
+      "end": 648.6,
+      "duration": 4.48,
+      "text": "do? You'll obviously have an in degree."
+    },
+    {
+      "start": 646.16,
+      "end": 650.6,
+      "duration": 4.44,
+      "text": "Yes. And since it's a zero-based"
+    },
+    {
+      "start": 648.6,
+      "end": 654.04,
+      "duration": 5.44,
+      "text": "indexing, you can keep it like this."
+    },
+    {
+      "start": 650.6,
+      "end": 656.64,
+      "duration": 6.04,
+      "text": "Let's traverse in the adjacency node."
+    },
+    {
+      "start": 654.04,
+      "end": 658.96,
+      "duration": 4.92,
+      "text": "In the adjacency matrix, my bad. So,"
+    },
+    {
+      "start": 656.64,
+      "end": 660.52,
+      "duration": 3.88,
+      "text": "it'll be like, you know, there are"
+    },
+    {
+      "start": 658.96,
+      "end": 662.72,
+      "duration": 3.76,
+      "text": "these many guys."
+    },
+    {
+      "start": 660.52,
+      "end": 665.16,
+      "duration": 4.64,
+      "text": "So, let's traverse for all these guys."
+    },
+    {
+      "start": 662.72,
+      "end": 667.64,
+      "duration": 4.92,
+      "text": "Auto of ID adjacency of I. Now, you"
+    },
+    {
+      "start": 665.16,
+      "end": 669.52,
+      "duration": 4.36,
+      "text": "know, on in degree, what you will do is"
+    },
+    {
+      "start": 667.64,
+      "end": 670.88,
+      "duration": 3.24,
+      "text": "these nodes will be plus plus. The in"
+    },
+    {
+      "start": 669.52,
+      "end": 672.88,
+      "duration": 3.36,
+      "text": "degree is ready."
+    },
+    {
+      "start": 670.88,
+      "end": 674.88,
+      "duration": 4.0,
+      "text": "Right after this, you go to all the"
+    },
+    {
+      "start": 672.88,
+      "end": 678.48,
+      "duration": 5.6,
+      "text": "nodes and you say, \"Hey, listen. Who is"
+    },
+    {
+      "start": 674.88,
+      "end": 682.0,
+      "duration": 7.12,
+      "text": "the guy who is having an in degree of"
+    },
+    {
+      "start": 678.48,
+      "end": 682.0,
+      "duration": 3.52,
+      "text": "zero?\" In degree"
+    },
+    {
+      "start": 682.36,
+      "end": 689.24,
+      "duration": 6.88,
+      "text": "of zero. If you have an in degree of"
+    },
+    {
+      "start": 684.96,
+      "end": 690.88,
+      "duration": 5.92,
+      "text": "zero, I can say Q of int Q, can you just"
+    },
+    {
+      "start": 689.24,
+      "end": 693.28,
+      "duration": 4.04,
+      "text": "take it into the queue? Like, fine, I'll"
+    },
+    {
+      "start": 690.88,
+      "end": 695.0,
+      "duration": 4.12,
+      "text": "take it into the queue."
+    },
+    {
+      "start": 693.28,
+      "end": 696.72,
+      "duration": 3.44,
+      "text": "You have the queue ready. Someone will"
+    },
+    {
+      "start": 695.0,
+      "end": 699.4,
+      "duration": 4.4,
+      "text": "always be there with an in-degree zero"
+    },
+    {
+      "start": 696.72,
+      "end": 701.16,
+      "duration": 4.44,
+      "text": "because it is an directed acyclic graph."
+    },
+    {
+      "start": 699.4,
+      "end": 703.48,
+      "duration": 4.08,
+      "text": "So, you get the first node saying"
+    },
+    {
+      "start": 701.16,
+      "end": 705.68,
+      "duration": 4.52,
+      "text": "queue.front and you can always do a"
+    },
+    {
+      "start": 703.48,
+      "end": 707.44,
+      "duration": 3.96,
+      "text": "queue.pop."
+    },
+    {
+      "start": 705.68,
+      "end": 708.96,
+      "duration": 3.28,
+      "text": "Perfect. And since you need to store the"
+    },
+    {
+      "start": 707.44,
+      "end": 711.64,
+      "duration": 4.2,
+      "text": "topo sort, probably you can do a vector"
+    },
+    {
+      "start": 708.96,
+      "end": 714.8,
+      "duration": 5.84,
+      "text": "of int or topo."
+    },
+    {
+      "start": 711.64,
+      "end": 717.4,
+      "duration": 5.76,
+      "text": "And over here you can say topo.push_back"
+    },
+    {
+      "start": 714.8,
+      "end": 718.72,
+      "duration": 3.92,
+      "text": "of the node. So, to store the topo sort."
+    },
+    {
+      "start": 717.4,
+      "end": 720.4,
+      "duration": 3.0,
+      "text": "And now you need to traverse for all its"
+    },
+    {
+      "start": 718.72,
+      "end": 722.6,
+      "duration": 3.88,
+      "text": "adjacent nodes, which is something like"
+    },
+    {
+      "start": 720.4,
+      "end": 724.52,
+      "duration": 4.12,
+      "text": "this. And you know one thing for sure,"
+    },
+    {
+      "start": 722.6,
+      "end": 726.96,
+      "duration": 4.36,
+      "text": "you have to take it off. So, in-degree"
+    },
+    {
+      "start": 724.52,
+      "end": 728.88,
+      "duration": 4.36,
+      "text": "of that node because node is done now."
+    },
+    {
+      "start": 726.96,
+      "end": 732.28,
+      "duration": 5.32,
+      "text": "Node is removed or node is in your topo"
+    },
+    {
+      "start": 728.88,
+      "end": 737.6,
+      "duration": 8.72,
+      "text": "sort. So, something I can write, node is"
+    },
+    {
+      "start": 732.28,
+      "end": 742.08,
+      "duration": 9.8,
+      "text": "in your topo sort, so please remove it"
+    },
+    {
+      "start": 737.6,
+      "end": 744.84,
+      "duration": 7.24,
+      "text": "from the in-degree because the node is"
+    },
+    {
+      "start": 742.08,
+      "end": 747.32,
+      "duration": 5.24,
+      "text": "already there. So, if I have removed"
+    },
+    {
+      "start": 744.84,
+      "end": 749.68,
+      "duration": 4.84,
+      "text": "from the in-degree and if after removing"
+    },
+    {
+      "start": 747.32,
+      "end": 751.84,
+      "duration": 4.52,
+      "text": "the in-degree of ID of that node becomes"
+    },
+    {
+      "start": 749.68,
+      "end": 753.76,
+      "duration": 4.08,
+      "text": "zero, I can say I have one more element"
+    },
+    {
+      "start": 751.84,
+      "end": 755.52,
+      "duration": 3.68,
+      "text": "and I can put that into the topo sort."
+    },
+    {
+      "start": 753.76,
+      "end": 758.96,
+      "duration": 5.2,
+      "text": "Once I've done this, I can simply return"
+    },
+    {
+      "start": 755.52,
+      "end": 761.88,
+      "duration": 6.36,
+      "text": "the topo and that will be my answer."
+    },
+    {
+      "start": 758.96,
+      "end": 763.8,
+      "duration": 4.84,
+      "text": "Perfect. This is how easily I can write"
+    },
+    {
+      "start": 761.88,
+      "end": 766.24,
+      "duration": 4.36,
+      "text": "the topo sort. Now, let's quickly run"
+    },
+    {
+      "start": 763.8,
+      "end": 768.68,
+      "duration": 4.88,
+      "text": "this off and see if it is running fine."
+    },
+    {
+      "start": 766.24,
+      "end": 770.76,
+      "duration": 4.52,
+      "text": "Okay, it is. Let's quickly submit this."
+    },
+    {
+      "start": 768.68,
+      "end": 772.8,
+      "duration": 4.12,
+      "text": "Remember, any of the topological sort"
+    },
+    {
+      "start": 770.76,
+      "end": 774.32,
+      "duration": 3.56,
+      "text": "will be accepted if you see over here,"
+    },
+    {
+      "start": 772.8,
+      "end": 777.12,
+      "duration": 4.32,
+      "text": "you can find any of the topological"
+    },
+    {
+      "start": 774.32,
+      "end": 778.88,
+      "duration": 4.56,
+      "text": "sort. It is absolutely okay. So, this is"
+    },
+    {
+      "start": 777.12,
+      "end": 781.04,
+      "duration": 3.92,
+      "text": "how you can easily do it. Again, which"
+    },
+    {
+      "start": 778.88,
+      "end": 782.76,
+      "duration": 3.88,
+      "text": "of the What is the space complexity?"
+    },
+    {
+      "start": 781.04,
+      "end": 784.24,
+      "duration": 3.2,
+      "text": "We're using an in-degree of big O of N."
+    },
+    {
+      "start": 782.76,
+      "end": 787.0,
+      "duration": 4.24,
+      "text": "We're using a queue again, which can"
+    },
+    {
+      "start": 784.24,
+      "end": 788.72,
+      "duration": 4.48,
+      "text": "take a big O of N. And then"
+    },
+    {
+      "start": 787.0,
+      "end": 791.48,
+      "duration": 4.48,
+      "text": "it's a simple BFS algorithm that we are"
+    },
+    {
+      "start": 788.72,
+      "end": 793.32,
+      "duration": 4.6,
+      "text": "doing, which is going to take a big O of"
+    },
+    {
+      "start": 791.48,
+      "end": 796.4,
+      "duration": 4.92,
+      "text": "It's a directed graph, so V plus E"
+    },
+    {
+      "start": 793.32,
+      "end": 799.28,
+      "duration": 5.96,
+      "text": "because every edge will only have like"
+    },
+    {
+      "start": 796.4,
+      "end": 801.04,
+      "duration": 4.64,
+      "text": "It's considered like once. So, V plus E"
+    },
+    {
+      "start": 799.28,
+      "end": 803.04,
+      "duration": 3.76,
+      "text": "is the"
+    },
+    {
+      "start": 801.04,
+      "end": 804.52,
+      "duration": 3.48,
+      "text": "time complexity."
+    },
+    {
+      "start": 803.04,
+      "end": 806.0,
+      "duration": 2.96,
+      "text": "So, guys, I hope I was able to explain"
+    },
+    {
+      "start": 804.52,
+      "end": 808.12,
+      "duration": 3.6,
+      "text": "you this particular algorithm. So, just"
+    },
+    {
+      "start": 806.0,
+      "end": 809.2,
+      "duration": 3.2,
+      "text": "in case I was, please make sure you like"
+    },
+    {
+      "start": 808.12,
+      "end": 811.36,
+      "duration": 3.24,
+      "text": "this video. And if you're new to our"
+    },
+    {
+      "start": 809.2,
+      "end": 812.84,
+      "duration": 3.64,
+      "text": "channel, what are you waiting for? Hit"
+    },
+    {
+      "start": 811.36,
+      "end": 814.64,
+      "duration": 3.28,
+      "text": "that subscribe button right away. And if"
+    },
+    {
+      "start": 812.84,
+      "end": 816.08,
+      "duration": 3.24,
+      "text": "you haven't checked out our DP series"
+    },
+    {
+      "start": 814.64,
+      "end": 817.92,
+      "duration": 3.28,
+      "text": "and the SDC, the links are in the"
+    },
+    {
+      "start": 816.08,
+      "end": 819.04,
+      "duration": 2.96,
+      "text": "description. And yeah, with this I'll be"
+    },
+    {
+      "start": 817.92,
+      "end": 820.28,
+      "duration": 2.36,
+      "text": "wrapping up this video. Let's meet in"
+    },
+    {
+      "start": 819.04,
+      "end": 821.56,
+      "duration": 2.52,
+      "text": "some other video. Till then, bye-bye."
+    },
+    {
+      "start": 820.28,
+      "end": 824.8,
+      "duration": 4.52,
+      "text": "Take care."
+    },
+    {
+      "start": 821.56,
+      "end": 828.08,
+      "duration": 6.52,
+      "text": "Whenever your heart is broken,"
+    },
+    {
+      "start": 824.8,
+      "end": 830.88,
+      "duration": 6.08,
+      "text": "don't ever forget you're golden."
+    },
+    {
+      "start": 828.08,
+      "end": 830.88,
+      "duration": 2.8,
+      "text": "I will find a light"
+    }
+  ]
+}

@@ -1,0 +1,3740 @@
+{
+  "video_id": "mO8XpGoJwuo",
+  "title": "DP 24. Rod Cutting Problem | 1D Array Space Optimised Approach",
+  "duration_sec": 1374,
+  "num_segments": 622,
+  "segments": [
+    {
+      "start": 0.08,
+      "end": 3.84,
+      "duration": 3.76,
+      "text": "hey everyone welcome back to take you"
+    },
+    {
+      "start": 1.28,
+      "end": 4.8,
+      "duration": 3.52,
+      "text": "forward today we will be doing the last"
+    },
+    {
+      "start": 3.84,
+      "end": 7.76,
+      "duration": 3.92,
+      "text": "problem"
+    },
+    {
+      "start": 4.8,
+      "end": 10.32,
+      "duration": 5.52,
+      "text": "on the dp on subsequences series and i'm"
+    },
+    {
+      "start": 7.76,
+      "end": 12.8,
+      "duration": 5.04,
+      "text": "definitely sure that after doing 11"
+    },
+    {
+      "start": 10.32,
+      "end": 15.36,
+      "duration": 5.04,
+      "text": "problems on dpn subsequences you can"
+    },
+    {
+      "start": 12.8,
+      "end": 17.84,
+      "duration": 5.04,
+      "text": "solve any problem that has been given on"
+    },
+    {
+      "start": 15.36,
+      "end": 20.88,
+      "duration": 5.52,
+      "text": "the dp on subsequences so today's"
+    },
+    {
+      "start": 17.84,
+      "end": 23.04,
+      "duration": 5.2,
+      "text": "problem will be a rod cutting problem"
+    },
+    {
+      "start": 20.88,
+      "end": 24.96,
+      "duration": 4.08,
+      "text": "and it's the 24th lecture of the ongoing"
+    },
+    {
+      "start": 23.04,
+      "end": 26.8,
+      "duration": 3.76,
+      "text": "dynamic programming playlist"
+    },
+    {
+      "start": 24.96,
+      "end": 28.72,
+      "duration": 3.76,
+      "text": "so what does the problem state the"
+    },
+    {
+      "start": 26.8,
+      "end": 32.16,
+      "duration": 5.36,
+      "text": "problem state you will be given a"
+    },
+    {
+      "start": 28.72,
+      "end": 34.96,
+      "duration": 6.24,
+      "text": "particular n so assume over here we take"
+    },
+    {
+      "start": 32.16,
+      "end": 37.44,
+      "duration": 5.28,
+      "text": "n equal to five okay and for every"
+    },
+    {
+      "start": 34.96,
+      "end": 39.92,
+      "duration": 4.96,
+      "text": "length for ev every length you'll also"
+    },
+    {
+      "start": 37.44,
+      "end": 42.8,
+      "duration": 5.36,
+      "text": "be given in price so let's write the"
+    },
+    {
+      "start": 39.92,
+      "end": 46.0,
+      "duration": 6.08,
+      "text": "price array as 2 5 7 8"
+    },
+    {
+      "start": 42.8,
+      "end": 49.68,
+      "duration": 6.88,
+      "text": "10 okay so this is what"
+    },
+    {
+      "start": 46.0,
+      "end": 49.68,
+      "duration": 3.68,
+      "text": "the price array looks like"
+    },
+    {
+      "start": 51.04,
+      "end": 54.8,
+      "duration": 3.76,
+      "text": "now the question states"
+    },
+    {
+      "start": 52.88,
+      "end": 56.4,
+      "duration": 3.52,
+      "text": "you're given n equal to five right so"
+    },
+    {
+      "start": 54.8,
+      "end": 59.84,
+      "duration": 5.04,
+      "text": "that's the rod length"
+    },
+    {
+      "start": 56.4,
+      "end": 59.84,
+      "duration": 3.44,
+      "text": "this is the rod length"
+    },
+    {
+      "start": 61.2,
+      "end": 65.2,
+      "duration": 4.0,
+      "text": "now what you need to do is you need to"
+    },
+    {
+      "start": 62.72,
+      "end": 67.44,
+      "duration": 4.72,
+      "text": "cut the rod into pieces cutting rod"
+    },
+    {
+      "start": 65.2,
+      "end": 69.84,
+      "duration": 4.64,
+      "text": "cutting cut the rod into pieces you can"
+    },
+    {
+      "start": 67.44,
+      "end": 73.04,
+      "duration": 5.6,
+      "text": "be like haste driver i can cut the five"
+    },
+    {
+      "start": 69.84,
+      "end": 76.24,
+      "duration": 6.4,
+      "text": "rod into a length one a length one a"
+    },
+    {
+      "start": 73.04,
+      "end": 77.52,
+      "duration": 4.48,
+      "text": "length one a length one a length one"
+    },
+    {
+      "start": 76.24,
+      "end": 79.2,
+      "duration": 2.96,
+      "text": "possible"
+    },
+    {
+      "start": 77.52,
+      "end": 80.88,
+      "duration": 3.36,
+      "text": "and for length one"
+    },
+    {
+      "start": 79.2,
+      "end": 83.28,
+      "duration": 4.08,
+      "text": "for length two length three length four"
+    },
+    {
+      "start": 80.88,
+      "end": 86.08,
+      "duration": 5.2,
+      "text": "length five for length one the price"
+    },
+    {
+      "start": 83.28,
+      "end": 87.36,
+      "duration": 4.08,
+      "text": "that you will get in the market is two"
+    },
+    {
+      "start": 86.08,
+      "end": 88.88,
+      "duration": 2.8,
+      "text": "so the pricing that you'll get in the"
+    },
+    {
+      "start": 87.36,
+      "end": 91.2,
+      "duration": 3.84,
+      "text": "market is two"
+    },
+    {
+      "start": 88.88,
+      "end": 92.96,
+      "duration": 4.08,
+      "text": "for every length of rot because you will"
+    },
+    {
+      "start": 91.2,
+      "end": 94.88,
+      "duration": 3.68,
+      "text": "cut the rod into pieces and you'll sell"
+    },
+    {
+      "start": 92.96,
+      "end": 97.12,
+      "duration": 4.16,
+      "text": "them in the market so the total price"
+    },
+    {
+      "start": 94.88,
+      "end": 98.24,
+      "duration": 3.36,
+      "text": "that you'll get in the market is ten"
+    },
+    {
+      "start": 97.12,
+      "end": 100.16,
+      "duration": 3.04,
+      "text": "okay"
+    },
+    {
+      "start": 98.24,
+      "end": 102.08,
+      "duration": 3.84,
+      "text": "can we cut it in some different way you"
+    },
+    {
+      "start": 100.16,
+      "end": 104.08,
+      "duration": 3.92,
+      "text": "can be like yes driver i will cut it"
+    },
+    {
+      "start": 102.08,
+      "end": 106.88,
+      "duration": 4.8,
+      "text": "into a piece of one"
+    },
+    {
+      "start": 104.08,
+      "end": 108.56,
+      "duration": 4.48,
+      "text": "a piece of two another piece of two and"
+    },
+    {
+      "start": 106.88,
+      "end": 109.92,
+      "duration": 3.04,
+      "text": "if i cut it into a piece of one i'll get"
+    },
+    {
+      "start": 108.56,
+      "end": 111.44,
+      "duration": 2.88,
+      "text": "a price too"
+    },
+    {
+      "start": 109.92,
+      "end": 112.88,
+      "duration": 2.96,
+      "text": "if i cut it into piece of two i'll get a"
+    },
+    {
+      "start": 111.44,
+      "end": 115.76,
+      "duration": 4.32,
+      "text": "price five"
+    },
+    {
+      "start": 112.88,
+      "end": 116.72,
+      "duration": 3.84,
+      "text": "and a 5 and the total cost will be 12"
+    },
+    {
+      "start": 115.76,
+      "end": 119.2,
+      "duration": 3.44,
+      "text": "which is"
+    },
+    {
+      "start": 116.72,
+      "end": 122.32,
+      "duration": 5.6,
+      "text": "greater so in this way you can actually"
+    },
+    {
+      "start": 119.2,
+      "end": 123.6,
+      "duration": 4.4,
+      "text": "cut this into several other ways like 1"
+    },
+    {
+      "start": 122.32,
+      "end": 124.8,
+      "duration": 2.48,
+      "text": "4"
+    },
+    {
+      "start": 123.6,
+      "end": 125.92,
+      "duration": 2.32,
+      "text": "probably"
+    },
+    {
+      "start": 124.8,
+      "end": 127.6,
+      "duration": 2.8,
+      "text": "2 3"
+    },
+    {
+      "start": 125.92,
+      "end": 129.76,
+      "duration": 3.84,
+      "text": "then"
+    },
+    {
+      "start": 127.6,
+      "end": 131.84,
+      "duration": 4.24,
+      "text": "it can be it can be a lot of lot of lot"
+    },
+    {
+      "start": 129.76,
+      "end": 133.76,
+      "duration": 4.0,
+      "text": "of ways one comma two comma two there"
+    },
+    {
+      "start": 131.84,
+      "end": 135.84,
+      "duration": 4.0,
+      "text": "can be a lot of ways so you need to tell"
+    },
+    {
+      "start": 133.76,
+      "end": 138.64,
+      "duration": 4.88,
+      "text": "me what is the maximum cost that you can"
+    },
+    {
+      "start": 135.84,
+      "end": 140.96,
+      "duration": 5.12,
+      "text": "get so this cost you have to maximize it"
+    },
+    {
+      "start": 138.64,
+      "end": 142.64,
+      "duration": 4.0,
+      "text": "and you can try every possible way and"
+    },
+    {
+      "start": 140.96,
+      "end": 145.04,
+      "duration": 4.08,
+      "text": "you will see that this is the maximal"
+    },
+    {
+      "start": 142.64,
+      "end": 147.04,
+      "duration": 4.4,
+      "text": "cost even if you take like two and a"
+    },
+    {
+      "start": 145.04,
+      "end": 148.72,
+      "duration": 3.68,
+      "text": "three the cost that two will give is"
+    },
+    {
+      "start": 147.04,
+      "end": 151.2,
+      "duration": 4.16,
+      "text": "five three will give us seven that is"
+    },
+    {
+      "start": 148.72,
+      "end": 152.88,
+      "duration": 4.16,
+      "text": "also twelve so the maximum cost that"
+    },
+    {
+      "start": 151.2,
+      "end": 155.12,
+      "duration": 3.92,
+      "text": "you'll get is"
+    },
+    {
+      "start": 152.88,
+      "end": 156.96,
+      "duration": 4.08,
+      "text": "twelve again and"
+    },
+    {
+      "start": 155.12,
+      "end": 159.52,
+      "duration": 4.4,
+      "text": "this is what the problem states you have"
+    },
+    {
+      "start": 156.96,
+      "end": 161.52,
+      "duration": 4.56,
+      "text": "to cut the rod into pieces"
+    },
+    {
+      "start": 159.52,
+      "end": 163.92,
+      "duration": 4.4,
+      "text": "and you have to sell that in the market"
+    },
+    {
+      "start": 161.52,
+      "end": 165.6,
+      "duration": 4.08,
+      "text": "and you have to make sure that the cost"
+    },
+    {
+      "start": 163.92,
+      "end": 168.0,
+      "duration": 4.08,
+      "text": "that you get from the market"
+    },
+    {
+      "start": 165.6,
+      "end": 171.28,
+      "duration": 5.68,
+      "text": "is the maximum cost and you need to"
+    },
+    {
+      "start": 168.0,
+      "end": 172.48,
+      "duration": 4.48,
+      "text": "print this particular value 12."
+    },
+    {
+      "start": 171.28,
+      "end": 175.2,
+      "duration": 3.92,
+      "text": "so"
+    },
+    {
+      "start": 172.48,
+      "end": 176.64,
+      "duration": 4.16,
+      "text": "now the question is given and break it"
+    },
+    {
+      "start": 175.2,
+      "end": 179.12,
+      "duration": 3.92,
+      "text": "right so"
+    },
+    {
+      "start": 176.64,
+      "end": 181.68,
+      "duration": 5.04,
+      "text": "you might get confused but just try to"
+    },
+    {
+      "start": 179.12,
+      "end": 183.76,
+      "duration": 4.64,
+      "text": "think it in the other fashion"
+    },
+    {
+      "start": 181.68,
+      "end": 185.36,
+      "duration": 3.68,
+      "text": "try to think it in the other fashion"
+    },
+    {
+      "start": 183.76,
+      "end": 187.28,
+      "duration": 3.52,
+      "text": "what fashion"
+    },
+    {
+      "start": 185.36,
+      "end": 188.56,
+      "duration": 3.2,
+      "text": "can i say this"
+    },
+    {
+      "start": 187.28,
+      "end": 191.28,
+      "duration": 4.0,
+      "text": "you have"
+    },
+    {
+      "start": 188.56,
+      "end": 192.56,
+      "duration": 4.0,
+      "text": "a lot of lengths because if n is equal"
+    },
+    {
+      "start": 191.28,
+      "end": 194.8,
+      "duration": 3.52,
+      "text": "to five"
+    },
+    {
+      "start": 192.56,
+      "end": 196.8,
+      "duration": 4.24,
+      "text": "you know the rod lengths are like the"
+    },
+    {
+      "start": 194.8,
+      "end": 199.28,
+      "duration": 4.48,
+      "text": "rod lens can be"
+    },
+    {
+      "start": 196.8,
+      "end": 202.16,
+      "duration": 5.36,
+      "text": "one can be two"
+    },
+    {
+      "start": 199.28,
+      "end": 204.72,
+      "duration": 5.44,
+      "text": "can be three can be four can be five we"
+    },
+    {
+      "start": 202.16,
+      "end": 207.52,
+      "duration": 5.36,
+      "text": "can have five different rod lengths one"
+    },
+    {
+      "start": 204.72,
+      "end": 209.6,
+      "duration": 4.88,
+      "text": "of a length one one over length two one"
+    },
+    {
+      "start": 207.52,
+      "end": 211.2,
+      "duration": 3.68,
+      "text": "of a length three one over length four"
+    },
+    {
+      "start": 209.6,
+      "end": 213.68,
+      "duration": 4.08,
+      "text": "and one of a length five"
+    },
+    {
+      "start": 211.2,
+      "end": 216.48,
+      "duration": 5.28,
+      "text": "so can i say"
+    },
+    {
+      "start": 213.68,
+      "end": 217.76,
+      "duration": 4.08,
+      "text": "how do you collect rod lengths can i"
+    },
+    {
+      "start": 216.48,
+      "end": 220.96,
+      "duration": 4.48,
+      "text": "write this"
+    },
+    {
+      "start": 217.76,
+      "end": 220.96,
+      "duration": 3.2,
+      "text": "collect rod lengths"
+    },
+    {
+      "start": 223.36,
+      "end": 228.24,
+      "duration": 4.88,
+      "text": "to make"
+    },
+    {
+      "start": 225.12,
+      "end": 231.84,
+      "duration": 6.72,
+      "text": "n and while collecting raw lengths"
+    },
+    {
+      "start": 228.24,
+      "end": 234.0,
+      "duration": 5.76,
+      "text": "maximize the price can i say can i think"
+    },
+    {
+      "start": 231.84,
+      "end": 237.12,
+      "duration": 5.28,
+      "text": "the problem in the opposite fashion"
+    },
+    {
+      "start": 234.0,
+      "end": 238.8,
+      "duration": 4.8,
+      "text": "instead of saying break n into pieces of"
+    },
+    {
+      "start": 237.12,
+      "end": 240.48,
+      "duration": 3.36,
+      "text": "rod and cell can i say"
+    },
+    {
+      "start": 238.8,
+      "end": 242.08,
+      "duration": 3.28,
+      "text": "collect rod lengths"
+    },
+    {
+      "start": 240.48,
+      "end": 244.72,
+      "duration": 4.24,
+      "text": "and make it 10 and make sure it is"
+    },
+    {
+      "start": 242.08,
+      "end": 247.52,
+      "duration": 5.44,
+      "text": "maximized you'll be like yes river makes"
+    },
+    {
+      "start": 244.72,
+      "end": 249.52,
+      "duration": 4.8,
+      "text": "sense and this problem is quite of quite"
+    },
+    {
+      "start": 247.52,
+      "end": 252.72,
+      "duration": 5.2,
+      "text": "less similar to the knapsack kind of"
+    },
+    {
+      "start": 249.52,
+      "end": 256.72,
+      "duration": 7.2,
+      "text": "problems where we are given"
+    },
+    {
+      "start": 252.72,
+      "end": 260.24,
+      "duration": 7.52,
+      "text": "an array with values and weights and we"
+    },
+    {
+      "start": 256.72,
+      "end": 262.88,
+      "duration": 6.16,
+      "text": "collect weights and we try to form the n"
+    },
+    {
+      "start": 260.24,
+      "end": 265.44,
+      "duration": 5.2,
+      "text": "so this problem now becomes similar"
+    },
+    {
+      "start": 262.88,
+      "end": 267.2,
+      "duration": 4.32,
+      "text": "correct so can i say this can i say this"
+    },
+    {
+      "start": 265.44,
+      "end": 269.84,
+      "duration": 4.4,
+      "text": "for this particular example like if i"
+    },
+    {
+      "start": 267.2,
+      "end": 270.72,
+      "duration": 3.52,
+      "text": "just take this particular example 2 5"
+    },
+    {
+      "start": 269.84,
+      "end": 272.4,
+      "duration": 2.56,
+      "text": "7"
+    },
+    {
+      "start": 270.72,
+      "end": 274.24,
+      "duration": 3.52,
+      "text": "8"
+    },
+    {
+      "start": 272.4,
+      "end": 276.32,
+      "duration": 3.92,
+      "text": "10"
+    },
+    {
+      "start": 274.24,
+      "end": 279.36,
+      "duration": 5.12,
+      "text": "can i say this if i write down the index"
+    },
+    {
+      "start": 276.32,
+      "end": 280.8,
+      "duration": 4.48,
+      "text": "number 0 1 2 3 4"
+    },
+    {
+      "start": 279.36,
+      "end": 283.52,
+      "duration": 4.16,
+      "text": "i know"
+    },
+    {
+      "start": 280.8,
+      "end": 285.84,
+      "duration": 5.04,
+      "text": "index four means a length five i know"
+    },
+    {
+      "start": 283.52,
+      "end": 288.0,
+      "duration": 4.48,
+      "text": "index three means a length four i know"
+    },
+    {
+      "start": 285.84,
+      "end": 290.08,
+      "duration": 4.24,
+      "text": "index two means a length three i know"
+    },
+    {
+      "start": 288.0,
+      "end": 292.4,
+      "duration": 4.4,
+      "text": "index one means a length two i know"
+    },
+    {
+      "start": 290.08,
+      "end": 295.28,
+      "duration": 5.2,
+      "text": "index zero means a length one"
+    },
+    {
+      "start": 292.4,
+      "end": 299.6,
+      "duration": 7.2,
+      "text": "so can i do can i solve the problem in a"
+    },
+    {
+      "start": 295.28,
+      "end": 300.48,
+      "duration": 5.2,
+      "text": "similar way to knapsack i think i can"
+    },
+    {
+      "start": 299.6,
+      "end": 302.24,
+      "duration": 2.64,
+      "text": "so"
+    },
+    {
+      "start": 300.48,
+      "end": 305.2,
+      "duration": 4.72,
+      "text": "what i'll do is"
+    },
+    {
+      "start": 302.24,
+      "end": 307.36,
+      "duration": 5.12,
+      "text": "i will try to pick lengths"
+    },
+    {
+      "start": 305.2,
+      "end": 308.64,
+      "duration": 3.44,
+      "text": "try to pick lengths"
+    },
+    {
+      "start": 307.36,
+      "end": 311.84,
+      "duration": 4.48,
+      "text": "and"
+    },
+    {
+      "start": 308.64,
+      "end": 311.84,
+      "duration": 3.2,
+      "text": "sum them up"
+    },
+    {
+      "start": 312.8,
+      "end": 317.12,
+      "duration": 4.32,
+      "text": "to make"
+    },
+    {
+      "start": 314.32,
+      "end": 318.56,
+      "duration": 4.24,
+      "text": "the given n"
+    },
+    {
+      "start": 317.12,
+      "end": 320.8,
+      "duration": 3.68,
+      "text": "this is my"
+    },
+    {
+      "start": 318.56,
+      "end": 321.68,
+      "duration": 3.12,
+      "text": "funda i'll try to pick them in various"
+    },
+    {
+      "start": 320.8,
+      "end": 324.56,
+      "duration": 3.76,
+      "text": "ways"
+    },
+    {
+      "start": 321.68,
+      "end": 326.64,
+      "duration": 4.96,
+      "text": "i'll try to pick length in all possible"
+    },
+    {
+      "start": 324.56,
+      "end": 329.76,
+      "duration": 5.2,
+      "text": "ways"
+    },
+    {
+      "start": 326.64,
+      "end": 331.92,
+      "duration": 5.28,
+      "text": "and whenever i say in all possible ways"
+    },
+    {
+      "start": 329.76,
+      "end": 334.72,
+      "duration": 4.96,
+      "text": "what comes to your brain your brain"
+    },
+    {
+      "start": 331.92,
+      "end": 337.2,
+      "duration": 5.28,
+      "text": "immediately starts saying okay"
+    },
+    {
+      "start": 334.72,
+      "end": 339.92,
+      "duration": 5.2,
+      "text": "best way is to draw"
+    },
+    {
+      "start": 337.2,
+      "end": 341.76,
+      "duration": 4.56,
+      "text": "right recurrence right recursion rather"
+    },
+    {
+      "start": 339.92,
+      "end": 345.36,
+      "duration": 5.44,
+      "text": "and how do you write recurrence i have"
+    },
+    {
+      "start": 341.76,
+      "end": 346.72,
+      "duration": 4.96,
+      "text": "taught you that fonda how do you write"
+    },
+    {
+      "start": 345.36,
+      "end": 349.12,
+      "duration": 3.76,
+      "text": "recurrence"
+    },
+    {
+      "start": 346.72,
+      "end": 350.24,
+      "duration": 3.52,
+      "text": "i have clearly stated you"
+    },
+    {
+      "start": 349.12,
+      "end": 353.36,
+      "duration": 4.24,
+      "text": "first"
+    },
+    {
+      "start": 350.24,
+      "end": 355.76,
+      "duration": 5.52,
+      "text": "express in terms of index obviously you"
+    },
+    {
+      "start": 353.36,
+      "end": 357.92,
+      "duration": 4.56,
+      "text": "can express in terms of index because"
+    },
+    {
+      "start": 355.76,
+      "end": 360.0,
+      "duration": 4.24,
+      "text": "you're given an array you're given an"
+    },
+    {
+      "start": 357.92,
+      "end": 361.84,
+      "duration": 3.92,
+      "text": "array of rod lengths and prices so"
+    },
+    {
+      "start": 360.0,
+      "end": 363.12,
+      "duration": 3.12,
+      "text": "you'll take a rod length so you'll take"
+    },
+    {
+      "start": 361.84,
+      "end": 364.4,
+      "duration": 2.56,
+      "text": "an odd length"
+    },
+    {
+      "start": 363.12,
+      "end": 366.32,
+      "duration": 3.2,
+      "text": "and you're looking to form this"
+    },
+    {
+      "start": 364.4,
+      "end": 368.72,
+      "duration": 4.32,
+      "text": "particular n you're looking to form this"
+    },
+    {
+      "start": 366.32,
+      "end": 372.88,
+      "duration": 6.56,
+      "text": "capital n which is initially 5 so that's"
+    },
+    {
+      "start": 368.72,
+      "end": 372.88,
+      "duration": 4.16,
+      "text": "what explore all possibilities"
+    },
+    {
+      "start": 377.28,
+      "end": 381.6,
+      "duration": 4.32,
+      "text": "so you know what are the possibilities"
+    },
+    {
+      "start": 378.8,
+      "end": 385.12,
+      "duration": 6.32,
+      "text": "on dp on subsequences it's"
+    },
+    {
+      "start": 381.6,
+      "end": 387.28,
+      "duration": 5.68,
+      "text": "not take and at stake and it is being"
+    },
+    {
+      "start": 385.12,
+      "end": 390.0,
+      "duration": 4.88,
+      "text": "given you have to maximize the price"
+    },
+    {
+      "start": 387.28,
+      "end": 392.4,
+      "duration": 5.12,
+      "text": "so maximize the price maximal"
+    },
+    {
+      "start": 390.0,
+      "end": 394.4,
+      "duration": 4.4,
+      "text": "maximal of all the possibilities i can"
+    },
+    {
+      "start": 392.4,
+      "end": 395.28,
+      "duration": 2.88,
+      "text": "say is what you will have to"
+    },
+    {
+      "start": 394.4,
+      "end": 397.12,
+      "duration": 2.72,
+      "text": "write"
+    },
+    {
+      "start": 395.28,
+      "end": 400.24,
+      "duration": 4.96,
+      "text": "so the question is pretty much similar"
+    },
+    {
+      "start": 397.12,
+      "end": 402.48,
+      "duration": 5.36,
+      "text": "to what we did in unbounded knapsack why"
+    },
+    {
+      "start": 400.24,
+      "end": 405.12,
+      "duration": 4.88,
+      "text": "because over here what are you looking"
+    },
+    {
+      "start": 402.48,
+      "end": 405.84,
+      "duration": 3.36,
+      "text": "you're looking to format this particular"
+    },
+    {
+      "start": 405.12,
+      "end": 408.96,
+      "duration": 3.84,
+      "text": "n"
+    },
+    {
+      "start": 405.84,
+      "end": 411.28,
+      "duration": 5.44,
+      "text": "right and you're trying to maximize"
+    },
+    {
+      "start": 408.96,
+      "end": 413.76,
+      "duration": 4.8,
+      "text": "all the possibilities so can i say this"
+    },
+    {
+      "start": 411.28,
+      "end": 416.16,
+      "duration": 4.88,
+      "text": "can i say this i will start off with"
+    },
+    {
+      "start": 413.76,
+      "end": 417.36,
+      "duration": 3.6,
+      "text": "index and a capital n"
+    },
+    {
+      "start": 416.16,
+      "end": 421.76,
+      "duration": 5.6,
+      "text": "now"
+    },
+    {
+      "start": 417.36,
+      "end": 423.92,
+      "duration": 6.56,
+      "text": "2 5 7 8 10 this was"
+    },
+    {
+      "start": 421.76,
+      "end": 427.44,
+      "duration": 5.68,
+      "text": "the pricing of rodnets"
+    },
+    {
+      "start": 423.92,
+      "end": 430.4,
+      "duration": 6.48,
+      "text": "can i say this if i'm writing 0 1 2 3 4"
+    },
+    {
+      "start": 427.44,
+      "end": 431.84,
+      "duration": 4.4,
+      "text": "if i'm writing f of 4 which is f of n"
+    },
+    {
+      "start": 430.4,
+      "end": 433.6,
+      "duration": 3.2,
+      "text": "minus 1"
+    },
+    {
+      "start": 431.84,
+      "end": 435.2,
+      "duration": 3.36,
+      "text": "comma a capital n"
+    },
+    {
+      "start": 433.6,
+      "end": 436.96,
+      "duration": 3.36,
+      "text": "can i say this"
+    },
+    {
+      "start": 435.2,
+      "end": 438.64,
+      "duration": 3.44,
+      "text": "what i'm asking is"
+    },
+    {
+      "start": 436.96,
+      "end": 440.4,
+      "duration": 3.44,
+      "text": "ill here"
+    },
+    {
+      "start": 438.64,
+      "end": 441.84,
+      "duration": 3.2,
+      "text": "what is the maximal cost that you can"
+    },
+    {
+      "start": 440.4,
+      "end": 443.84,
+      "duration": 3.44,
+      "text": "formate and"
+    },
+    {
+      "start": 441.84,
+      "end": 446.32,
+      "duration": 4.48,
+      "text": "till here what is the maximal cost that"
+    },
+    {
+      "start": 443.84,
+      "end": 448.84,
+      "duration": 5.0,
+      "text": "you can format and"
+    },
+    {
+      "start": 446.32,
+      "end": 451.52,
+      "duration": 5.2,
+      "text": "ill index"
+    },
+    {
+      "start": 448.84,
+      "end": 454.48,
+      "duration": 5.64,
+      "text": "four what is"
+    },
+    {
+      "start": 451.52,
+      "end": 458.4,
+      "duration": 6.88,
+      "text": "the maximum price you can obtain"
+    },
+    {
+      "start": 454.48,
+      "end": 460.64,
+      "duration": 6.16,
+      "text": "maximum price you obtain correct"
+    },
+    {
+      "start": 458.4,
+      "end": 462.8,
+      "duration": 4.4,
+      "text": "that is what the question states so can"
+    },
+    {
+      "start": 460.64,
+      "end": 465.36,
+      "duration": 4.72,
+      "text": "i say let's forget about the base case"
+    },
+    {
+      "start": 462.8,
+      "end": 468.48,
+      "duration": 5.68,
+      "text": "can i say i will be like okay i will"
+    },
+    {
+      "start": 465.36,
+      "end": 471.04,
+      "duration": 5.68,
+      "text": "have a not take case and if i not take"
+    },
+    {
+      "start": 468.48,
+      "end": 473.44,
+      "duration": 4.96,
+      "text": "if i do not take that"
+    },
+    {
+      "start": 471.04,
+      "end": 475.84,
+      "duration": 4.8,
+      "text": "rod length then the value added or the"
+    },
+    {
+      "start": 473.44,
+      "end": 478.4,
+      "duration": 4.96,
+      "text": "price added will be zero"
+    },
+    {
+      "start": 475.84,
+      "end": 481.2,
+      "duration": 5.36,
+      "text": "and i'll move to the previous index"
+    },
+    {
+      "start": 478.4,
+      "end": 482.08,
+      "duration": 3.68,
+      "text": "and the weight or the n remains"
+    },
+    {
+      "start": 481.2,
+      "end": 484.96,
+      "duration": 3.76,
+      "text": "same"
+    },
+    {
+      "start": 482.08,
+      "end": 487.36,
+      "duration": 5.28,
+      "text": "now when can you cut it"
+    },
+    {
+      "start": 484.96,
+      "end": 490.8,
+      "duration": 5.84,
+      "text": "can i say the take"
+    },
+    {
+      "start": 487.36,
+      "end": 492.72,
+      "duration": 5.36,
+      "text": "since i am looking for maximum pricing"
+    },
+    {
+      "start": 490.8,
+      "end": 493.68,
+      "duration": 2.88,
+      "text": "it will be initially intervene very"
+    },
+    {
+      "start": 492.72,
+      "end": 496.72,
+      "duration": 4.0,
+      "text": "obvious"
+    },
+    {
+      "start": 493.68,
+      "end": 499.12,
+      "duration": 5.44,
+      "text": "and can i say i can only cut"
+    },
+    {
+      "start": 496.72,
+      "end": 500.8,
+      "duration": 4.08,
+      "text": "because if i'm looking to form"
+    },
+    {
+      "start": 499.12,
+      "end": 503.76,
+      "duration": 4.64,
+      "text": "n"
+    },
+    {
+      "start": 500.8,
+      "end": 506.32,
+      "duration": 5.52,
+      "text": "that rod length has to be because if if"
+    },
+    {
+      "start": 503.76,
+      "end": 508.08,
+      "duration": 4.32,
+      "text": "you're coming up with a value as three"
+    },
+    {
+      "start": 506.32,
+      "end": 510.0,
+      "duration": 3.68,
+      "text": "and the rod length is having like"
+    },
+    {
+      "start": 508.08,
+      "end": 512.72,
+      "duration": 4.64,
+      "text": "something like three or four so how do"
+    },
+    {
+      "start": 510.0,
+      "end": 514.96,
+      "duration": 4.96,
+      "text": "you know the rod length i told you"
+    },
+    {
+      "start": 512.72,
+      "end": 517.2,
+      "duration": 4.48,
+      "text": "what is the rod length for this guy it's"
+    },
+    {
+      "start": 514.96,
+      "end": 519.6,
+      "duration": 4.64,
+      "text": "five what's the rod length for this guy"
+    },
+    {
+      "start": 517.2,
+      "end": 521.28,
+      "duration": 4.08,
+      "text": "it's two because the rod length is one"
+    },
+    {
+      "start": 519.6,
+      "end": 523.84,
+      "duration": 4.24,
+      "text": "two three four five"
+    },
+    {
+      "start": 521.28,
+      "end": 525.68,
+      "duration": 4.4,
+      "text": "so can i say this can i say this"
+    },
+    {
+      "start": 523.84,
+      "end": 528.32,
+      "duration": 4.48,
+      "text": "if the rod length like if i try to write"
+    },
+    {
+      "start": 525.68,
+      "end": 530.48,
+      "duration": 4.8,
+      "text": "it in a very sophisticated way"
+    },
+    {
+      "start": 528.32,
+      "end": 531.92,
+      "duration": 3.6,
+      "text": "can i say the rod length"
+    },
+    {
+      "start": 530.48,
+      "end": 534.48,
+      "duration": 4.0,
+      "text": "is nothing but"
+    },
+    {
+      "start": 531.92,
+      "end": 536.8,
+      "duration": 4.88,
+      "text": "index plus one again make sense the rod"
+    },
+    {
+      "start": 534.48,
+      "end": 538.0,
+      "duration": 3.52,
+      "text": "length is index plus one every time"
+    },
+    {
+      "start": 536.8,
+      "end": 539.76,
+      "duration": 2.96,
+      "text": "can i say"
+    },
+    {
+      "start": 538.0,
+      "end": 542.4,
+      "duration": 4.4,
+      "text": "the rod length"
+    },
+    {
+      "start": 539.76,
+      "end": 544.8,
+      "duration": 5.04,
+      "text": "has to be lesser than equal to the"
+    },
+    {
+      "start": 542.4,
+      "end": 546.16,
+      "duration": 3.76,
+      "text": "length that i'm looking for makes sense"
+    },
+    {
+      "start": 544.8,
+      "end": 548.4,
+      "duration": 3.6,
+      "text": "and if it is"
+    },
+    {
+      "start": 546.16,
+      "end": 550.88,
+      "duration": 4.72,
+      "text": "then i can take this rod length"
+    },
+    {
+      "start": 548.4,
+      "end": 554.24,
+      "duration": 5.84,
+      "text": "and the price added will be price of"
+    },
+    {
+      "start": 550.88,
+      "end": 557.04,
+      "duration": 6.16,
+      "text": "index plus function of index"
+    },
+    {
+      "start": 554.24,
+      "end": 559.68,
+      "duration": 5.44,
+      "text": "n minus the rod length because"
+    },
+    {
+      "start": 557.04,
+      "end": 561.36,
+      "duration": 4.32,
+      "text": "this much rod length will go off"
+    },
+    {
+      "start": 559.68,
+      "end": 563.92,
+      "duration": 4.24,
+      "text": "the rod length will go off"
+    },
+    {
+      "start": 561.36,
+      "end": 565.28,
+      "duration": 3.92,
+      "text": "now question arises do you stand at the"
+    },
+    {
+      "start": 563.92,
+      "end": 567.76,
+      "duration": 3.84,
+      "text": "same index"
+    },
+    {
+      "start": 565.28,
+      "end": 568.72,
+      "duration": 3.44,
+      "text": "yes baba yes you stand at the same index"
+    },
+    {
+      "start": 567.76,
+      "end": 570.32,
+      "duration": 2.56,
+      "text": "why"
+    },
+    {
+      "start": 568.72,
+      "end": 571.92,
+      "duration": 3.2,
+      "text": "because because if you carefully"
+    },
+    {
+      "start": 570.32,
+      "end": 573.92,
+      "duration": 3.6,
+      "text": "remember"
+    },
+    {
+      "start": 571.92,
+      "end": 575.36,
+      "duration": 3.44,
+      "text": "you can actually pick up one as many"
+    },
+    {
+      "start": 573.92,
+      "end": 576.96,
+      "duration": 3.04,
+      "text": "times as you want"
+    },
+    {
+      "start": 575.36,
+      "end": 579.92,
+      "duration": 4.56,
+      "text": "which case"
+    },
+    {
+      "start": 576.96,
+      "end": 582.96,
+      "duration": 6.0,
+      "text": "in finite supply of rods"
+    },
+    {
+      "start": 579.92,
+      "end": 585.52,
+      "duration": 5.6,
+      "text": "infinite supply of rods and whenever"
+    },
+    {
+      "start": 582.96,
+      "end": 586.64,
+      "duration": 3.68,
+      "text": "there is an infinite supply of rods what"
+    },
+    {
+      "start": 585.52,
+      "end": 587.84,
+      "duration": 2.32,
+      "text": "do you do"
+    },
+    {
+      "start": 586.64,
+      "end": 590.24,
+      "duration": 3.6,
+      "text": "i have already taught this in the"
+    },
+    {
+      "start": 587.84,
+      "end": 593.12,
+      "duration": 5.28,
+      "text": "previous lectures you stand at the same"
+    },
+    {
+      "start": 590.24,
+      "end": 594.8,
+      "duration": 4.56,
+      "text": "index you stand at the same index and"
+    },
+    {
+      "start": 593.12,
+      "end": 595.76,
+      "duration": 2.64,
+      "text": "right at the end of the day you can"
+    },
+    {
+      "start": 594.8,
+      "end": 597.04,
+      "duration": 2.24,
+      "text": "return"
+    },
+    {
+      "start": 595.76,
+      "end": 598.24,
+      "duration": 2.48,
+      "text": "the max"
+    },
+    {
+      "start": 597.04,
+      "end": 599.36,
+      "duration": 2.32,
+      "text": "of take"
+    },
+    {
+      "start": 598.24,
+      "end": 600.32,
+      "duration": 2.08,
+      "text": "and"
+    },
+    {
+      "start": 599.36,
+      "end": 601.2,
+      "duration": 1.84,
+      "text": "not"
+    },
+    {
+      "start": 600.32,
+      "end": 602.64,
+      "duration": 2.32,
+      "text": "take"
+    },
+    {
+      "start": 601.2,
+      "end": 604.4,
+      "duration": 3.2,
+      "text": "that's it"
+    },
+    {
+      "start": 602.64,
+      "end": 606.48,
+      "duration": 3.84,
+      "text": "what about the base case"
+    },
+    {
+      "start": 604.4,
+      "end": 608.48,
+      "duration": 4.08,
+      "text": "write the base case we definitely know"
+    },
+    {
+      "start": 606.48,
+      "end": 610.8,
+      "duration": 4.32,
+      "text": "the base case will be at index equal to"
+    },
+    {
+      "start": 608.48,
+      "end": 612.88,
+      "duration": 4.4,
+      "text": "equal to zero but we need to"
+    },
+    {
+      "start": 610.8,
+      "end": 614.96,
+      "duration": 4.16,
+      "text": "think on this base case as a single"
+    },
+    {
+      "start": 612.88,
+      "end": 617.52,
+      "duration": 4.64,
+      "text": "element now so what is the initial"
+    },
+    {
+      "start": 614.96,
+      "end": 619.92,
+      "duration": 4.96,
+      "text": "starting the initial starting that i"
+    },
+    {
+      "start": 617.52,
+      "end": 622.08,
+      "duration": 4.56,
+      "text": "started was n minus one so you will go"
+    },
+    {
+      "start": 619.92,
+      "end": 625.28,
+      "duration": 5.36,
+      "text": "on zero so zero is the base case"
+    },
+    {
+      "start": 622.08,
+      "end": 627.44,
+      "duration": 5.36,
+      "text": "let's just think it as a single element"
+    },
+    {
+      "start": 625.28,
+      "end": 629.68,
+      "duration": 4.4,
+      "text": "so we are the zeroth index"
+    },
+    {
+      "start": 627.44,
+      "end": 630.72,
+      "duration": 3.28,
+      "text": "we know the rod length for zero index is"
+    },
+    {
+      "start": 629.68,
+      "end": 632.64,
+      "duration": 2.96,
+      "text": "one"
+    },
+    {
+      "start": 630.72,
+      "end": 633.92,
+      "duration": 3.2,
+      "text": "and it will have a price assume it has a"
+    },
+    {
+      "start": 632.64,
+      "end": 636.56,
+      "duration": 3.92,
+      "text": "price of six"
+    },
+    {
+      "start": 633.92,
+      "end": 638.32,
+      "duration": 4.4,
+      "text": "and i'm coming up with a rod length yes"
+    },
+    {
+      "start": 636.56,
+      "end": 639.52,
+      "duration": 2.96,
+      "text": "i'm coming up with a rod length"
+    },
+    {
+      "start": 638.32,
+      "end": 642.16,
+      "duration": 3.84,
+      "text": "12."
+    },
+    {
+      "start": 639.52,
+      "end": 643.92,
+      "duration": 4.4,
+      "text": "this is the remaining rod length that"
+    },
+    {
+      "start": 642.16,
+      "end": 645.76,
+      "duration": 3.6,
+      "text": "i'm looking to make"
+    },
+    {
+      "start": 643.92,
+      "end": 647.76,
+      "duration": 3.84,
+      "text": "initially whatever it is this is the"
+    },
+    {
+      "start": 645.76,
+      "end": 648.56,
+      "duration": 2.8,
+      "text": "remaining lot rod length i'm looking to"
+    },
+    {
+      "start": 647.76,
+      "end": 650.08,
+      "duration": 2.32,
+      "text": "make"
+    },
+    {
+      "start": 648.56,
+      "end": 651.68,
+      "duration": 3.12,
+      "text": "looking to make this"
+    },
+    {
+      "start": 650.08,
+      "end": 653.04,
+      "duration": 2.96,
+      "text": "because that is what the recurrence was"
+    },
+    {
+      "start": 651.68,
+      "end": 655.28,
+      "duration": 3.6,
+      "text": "stating right because that is what the"
+    },
+    {
+      "start": 653.04,
+      "end": 657.6,
+      "duration": 4.56,
+      "text": "recurrence was stating"
+    },
+    {
+      "start": 655.28,
+      "end": 660.08,
+      "duration": 4.8,
+      "text": "till index four what is the maximum"
+    },
+    {
+      "start": 657.6,
+      "end": 662.48,
+      "duration": 4.88,
+      "text": "price you can obtain in order to make n"
+    },
+    {
+      "start": 660.08,
+      "end": 665.28,
+      "duration": 5.2,
+      "text": "right so whatever n comes"
+    },
+    {
+      "start": 662.48,
+      "end": 667.6,
+      "duration": 5.12,
+      "text": "if at the last index n is 12"
+    },
+    {
+      "start": 665.28,
+      "end": 670.24,
+      "duration": 4.96,
+      "text": "how can you make this 12 is the question"
+    },
+    {
+      "start": 667.6,
+      "end": 671.76,
+      "duration": 4.16,
+      "text": "so the question is how can you make this"
+    },
+    {
+      "start": 670.24,
+      "end": 674.48,
+      "duration": 4.24,
+      "text": "rod length 12"
+    },
+    {
+      "start": 671.76,
+      "end": 677.76,
+      "duration": 6.0,
+      "text": "because over here it's a rod length one"
+    },
+    {
+      "start": 674.48,
+      "end": 679.76,
+      "duration": 5.28,
+      "text": "so if if you can take one one one one"
+    },
+    {
+      "start": 677.76,
+      "end": 681.68,
+      "duration": 3.92,
+      "text": "dot or dot one"
+    },
+    {
+      "start": 679.76,
+      "end": 682.88,
+      "duration": 3.12,
+      "text": "12 times"
+    },
+    {
+      "start": 681.68,
+      "end": 685.52,
+      "duration": 3.84,
+      "text": "can i say"
+    },
+    {
+      "start": 682.88,
+      "end": 688.64,
+      "duration": 5.76,
+      "text": "that will make this remaining length 12"
+    },
+    {
+      "start": 685.52,
+      "end": 690.24,
+      "duration": 4.72,
+      "text": "like yes yes it will it will"
+    },
+    {
+      "start": 688.64,
+      "end": 693.44,
+      "duration": 4.8,
+      "text": "so"
+    },
+    {
+      "start": 690.24,
+      "end": 695.84,
+      "duration": 5.6,
+      "text": "whatever n is left at the end of the day"
+    },
+    {
+      "start": 693.44,
+      "end": 697.68,
+      "duration": 4.24,
+      "text": "at index 0"
+    },
+    {
+      "start": 695.84,
+      "end": 700.0,
+      "duration": 4.16,
+      "text": "can i say"
+    },
+    {
+      "start": 697.68,
+      "end": 701.76,
+      "duration": 4.08,
+      "text": "the pricing will be because the rod"
+    },
+    {
+      "start": 700.0,
+      "end": 703.68,
+      "duration": 3.68,
+      "text": "length is 1"
+    },
+    {
+      "start": 701.76,
+      "end": 705.6,
+      "duration": 3.84,
+      "text": "i can make that"
+    },
+    {
+      "start": 703.68,
+      "end": 708.4,
+      "duration": 4.72,
+      "text": "rod length"
+    },
+    {
+      "start": 705.6,
+      "end": 711.92,
+      "duration": 6.32,
+      "text": "because if the remaining length is n it"
+    },
+    {
+      "start": 708.4,
+      "end": 713.76,
+      "duration": 5.36,
+      "text": "will require n rods n rods of length one"
+    },
+    {
+      "start": 711.92,
+      "end": 714.96,
+      "duration": 3.04,
+      "text": "n rods of length one is what it will"
+    },
+    {
+      "start": 713.76,
+      "end": 716.56,
+      "duration": 2.8,
+      "text": "require"
+    },
+    {
+      "start": 714.96,
+      "end": 719.44,
+      "duration": 4.48,
+      "text": "and if it requires"
+    },
+    {
+      "start": 716.56,
+      "end": 723.68,
+      "duration": 7.12,
+      "text": "n rod of length 1 what will be the price"
+    },
+    {
+      "start": 719.44,
+      "end": 725.6,
+      "duration": 6.16,
+      "text": "n into price of 0 perfect perfect so"
+    },
+    {
+      "start": 723.68,
+      "end": 727.28,
+      "duration": 3.6,
+      "text": "that's what you'll return"
+    },
+    {
+      "start": 725.6,
+      "end": 730.64,
+      "duration": 5.04,
+      "text": "you will say"
+    },
+    {
+      "start": 727.28,
+      "end": 733.2,
+      "duration": 5.92,
+      "text": "n into price of zero is what i'll return"
+    },
+    {
+      "start": 730.64,
+      "end": 736.08,
+      "duration": 5.44,
+      "text": "because because the last guy is of"
+    },
+    {
+      "start": 733.2,
+      "end": 739.12,
+      "duration": 5.92,
+      "text": "length one and if it is of length one i"
+    },
+    {
+      "start": 736.08,
+      "end": 740.96,
+      "duration": 4.88,
+      "text": "know i will require n rods of length one"
+    },
+    {
+      "start": 739.12,
+      "end": 743.76,
+      "duration": 4.64,
+      "text": "and the pricing will be into price of"
+    },
+    {
+      "start": 740.96,
+      "end": 745.52,
+      "duration": 4.56,
+      "text": "zero that's the base case super simple"
+    },
+    {
+      "start": 743.76,
+      "end": 747.68,
+      "duration": 3.92,
+      "text": "so once i've written the base case"
+    },
+    {
+      "start": 745.52,
+      "end": 748.8,
+      "duration": 3.28,
+      "text": "what's the next step it's a recursion"
+    },
+    {
+      "start": 747.68,
+      "end": 750.56,
+      "duration": 2.88,
+      "text": "code right"
+    },
+    {
+      "start": 748.8,
+      "end": 752.0,
+      "duration": 3.2,
+      "text": "so you have to convert the recursion"
+    },
+    {
+      "start": 750.56,
+      "end": 755.12,
+      "duration": 4.56,
+      "text": "into"
+    },
+    {
+      "start": 752.0,
+      "end": 757.04,
+      "duration": 5.04,
+      "text": "memo i action"
+    },
+    {
+      "start": 755.12,
+      "end": 759.52,
+      "duration": 4.4,
+      "text": "so overlapping sub problems will be"
+    },
+    {
+      "start": 757.04,
+      "end": 761.04,
+      "duration": 4.0,
+      "text": "there what's the time complexity of"
+    },
+    {
+      "start": 759.52,
+      "end": 763.44,
+      "duration": 3.92,
+      "text": "recursion"
+    },
+    {
+      "start": 761.04,
+      "end": 765.76,
+      "duration": 4.72,
+      "text": "obviously not not 2 to the power n it is"
+    },
+    {
+      "start": 763.44,
+      "end": 768.4,
+      "duration": 4.96,
+      "text": "exponential it's greater than 2 to the"
+    },
+    {
+      "start": 765.76,
+      "end": 769.84,
+      "duration": 4.08,
+      "text": "power n we have already discussed why"
+    },
+    {
+      "start": 768.4,
+      "end": 772.0,
+      "duration": 3.6,
+      "text": "because of"
+    },
+    {
+      "start": 769.84,
+      "end": 773.52,
+      "duration": 3.68,
+      "text": "staying at the same index you're staying"
+    },
+    {
+      "start": 772.0,
+      "end": 775.2,
+      "duration": 3.2,
+      "text": "at the same index we have already"
+    },
+    {
+      "start": 773.52,
+      "end": 778.0,
+      "duration": 4.48,
+      "text": "discussed this what is the space"
+    },
+    {
+      "start": 775.2,
+      "end": 780.96,
+      "duration": 5.76,
+      "text": "complexity the auxiliary stack space is"
+    },
+    {
+      "start": 778.0,
+      "end": 785.2,
+      "duration": 7.2,
+      "text": "the recursion depth and"
+    },
+    {
+      "start": 780.96,
+      "end": 786.8,
+      "duration": 5.84,
+      "text": "it can go on till we go off target"
+    },
+    {
+      "start": 785.2,
+      "end": 788.0,
+      "duration": 2.8,
+      "text": "whatever target is because you're taking"
+    },
+    {
+      "start": 786.8,
+      "end": 789.28,
+      "duration": 2.48,
+      "text": "the target you're taking the target"
+    },
+    {
+      "start": 788.0,
+      "end": 792.56,
+      "duration": 4.56,
+      "text": "again and again"
+    },
+    {
+      "start": 789.28,
+      "end": 794.48,
+      "duration": 5.2,
+      "text": "so we go off target it can go as if you"
+    },
+    {
+      "start": 792.56,
+      "end": 796.56,
+      "duration": 4.0,
+      "text": "do memoize"
+    },
+    {
+      "start": 794.48,
+      "end": 797.68,
+      "duration": 3.2,
+      "text": "index and then couple of changing"
+    },
+    {
+      "start": 796.56,
+      "end": 799.44,
+      "duration": 2.88,
+      "text": "parameters"
+    },
+    {
+      "start": 797.68,
+      "end": 802.63,
+      "duration": 4.95,
+      "text": "index is n"
+    },
+    {
+      "start": 799.44,
+      "end": 803.84,
+      "duration": 4.4,
+      "text": "n is also n so n into n plus 1 will do"
+    },
+    {
+      "start": 802.63,
+      "end": 807.28,
+      "duration": 4.65,
+      "text": "[Music]"
+    },
+    {
+      "start": 803.84,
+      "end": 809.52,
+      "duration": 5.68,
+      "text": "and the time complexity will be b go off"
+    },
+    {
+      "start": 807.28,
+      "end": 811.36,
+      "duration": 4.08,
+      "text": "n into n the space complexity will be"
+    },
+    {
+      "start": 809.52,
+      "end": 813.68,
+      "duration": 4.16,
+      "text": "big o of n into n"
+    },
+    {
+      "start": 811.36,
+      "end": 816.16,
+      "duration": 4.8,
+      "text": "plus b go off the target as the"
+    },
+    {
+      "start": 813.68,
+      "end": 818.96,
+      "duration": 5.28,
+      "text": "auxiliary stack space"
+    },
+    {
+      "start": 816.16,
+      "end": 821.36,
+      "duration": 5.2,
+      "text": "and as usual i'm not a big fan of"
+    },
+    {
+      "start": 818.96,
+      "end": 823.04,
+      "duration": 4.08,
+      "text": "auxiliary stack spaces and if i'm not a"
+    },
+    {
+      "start": 821.36,
+      "end": 824.48,
+      "duration": 3.12,
+      "text": "big fan of auxiliary stack spaces what"
+    },
+    {
+      "start": 823.04,
+      "end": 827.2,
+      "duration": 4.16,
+      "text": "do i do"
+    },
+    {
+      "start": 824.48,
+      "end": 828.4,
+      "duration": 3.92,
+      "text": "i convert this into a tabulation code"
+    },
+    {
+      "start": 827.2,
+      "end": 830.56,
+      "duration": 3.36,
+      "text": "what are the rules"
+    },
+    {
+      "start": 828.4,
+      "end": 832.96,
+      "duration": 4.56,
+      "text": "rules rules"
+    },
+    {
+      "start": 830.56,
+      "end": 835.52,
+      "duration": 4.96,
+      "text": "write the base case"
+    },
+    {
+      "start": 832.96,
+      "end": 837.28,
+      "duration": 4.32,
+      "text": "write the two changing parameters"
+    },
+    {
+      "start": 835.52,
+      "end": 838.96,
+      "duration": 3.44,
+      "text": "copy the recurrence"
+    },
+    {
+      "start": 837.28,
+      "end": 841.2,
+      "duration": 3.92,
+      "text": "as simple as that"
+    },
+    {
+      "start": 838.96,
+      "end": 843.44,
+      "duration": 4.48,
+      "text": "as simple as it can get let's write the"
+    },
+    {
+      "start": 841.2,
+      "end": 844.88,
+      "duration": 3.68,
+      "text": "base case at first"
+    },
+    {
+      "start": 843.44,
+      "end": 846.32,
+      "duration": 2.88,
+      "text": "let's go back"
+    },
+    {
+      "start": 844.88,
+      "end": 848.16,
+      "duration": 3.28,
+      "text": "to the recreates"
+    },
+    {
+      "start": 846.32,
+      "end": 850.72,
+      "duration": 4.4,
+      "text": "by the way in order to convert it into a"
+    },
+    {
+      "start": 848.16,
+      "end": 852.4,
+      "duration": 4.24,
+      "text": "memoration just make sure you write dp"
+    },
+    {
+      "start": 850.72,
+      "end": 856.56,
+      "duration": 5.84,
+      "text": "of index"
+    },
+    {
+      "start": 852.4,
+      "end": 857.36,
+      "duration": 4.96,
+      "text": "n equal to and over here dp of index"
+    },
+    {
+      "start": 856.56,
+      "end": 859.52,
+      "duration": 2.96,
+      "text": "n"
+    },
+    {
+      "start": 857.36,
+      "end": 862.56,
+      "duration": 5.2,
+      "text": "not equal to minus 1 and you try to"
+    },
+    {
+      "start": 859.52,
+      "end": 864.72,
+      "duration": 5.2,
+      "text": "return simple as that so"
+    },
+    {
+      "start": 862.56,
+      "end": 866.56,
+      "duration": 4.0,
+      "text": "let's look at the base case it states"
+    },
+    {
+      "start": 864.72,
+      "end": 867.44,
+      "duration": 2.72,
+      "text": "index equal to 0"
+    },
+    {
+      "start": 866.56,
+      "end": 870.16,
+      "duration": 3.6,
+      "text": "does it"
+    },
+    {
+      "start": 867.44,
+      "end": 872.08,
+      "duration": 4.64,
+      "text": "does it have a boundary on n does it"
+    },
+    {
+      "start": 870.16,
+      "end": 874.16,
+      "duration": 4.0,
+      "text": "have a boundary on n and the answer to"
+    },
+    {
+      "start": 872.08,
+      "end": 876.88,
+      "duration": 4.8,
+      "text": "that is it does not have a boundary on"
+    },
+    {
+      "start": 874.16,
+      "end": 878.96,
+      "duration": 4.8,
+      "text": "it so n can be anything it can be one it"
+    },
+    {
+      "start": 876.88,
+      "end": 880.64,
+      "duration": 3.76,
+      "text": "can be two it can be three it can be"
+    },
+    {
+      "start": 878.96,
+      "end": 882.24,
+      "duration": 3.28,
+      "text": "four in fact it can be zero as well it"
+    },
+    {
+      "start": 880.64,
+      "end": 883.28,
+      "duration": 2.64,
+      "text": "can be five it can be six it can be"
+    },
+    {
+      "start": 882.24,
+      "end": 886.56,
+      "duration": 4.32,
+      "text": "anything"
+    },
+    {
+      "start": 883.28,
+      "end": 888.72,
+      "duration": 5.44,
+      "text": "in the largest n so thereby i know index"
+    },
+    {
+      "start": 886.56,
+      "end": 891.2,
+      "duration": 4.64,
+      "text": "is set as 0"
+    },
+    {
+      "start": 888.72,
+      "end": 893.04,
+      "duration": 4.32,
+      "text": "so i will be declaring dp of n and n"
+    },
+    {
+      "start": 891.2,
+      "end": 894.48,
+      "duration": 3.28,
+      "text": "plus 1 for sure"
+    },
+    {
+      "start": 893.04,
+      "end": 898.32,
+      "duration": 5.28,
+      "text": "so can i say"
+    },
+    {
+      "start": 894.48,
+      "end": 900.72,
+      "duration": 6.24,
+      "text": "the value of n can be from 0 to whatever"
+    },
+    {
+      "start": 898.32,
+      "end": 903.2,
+      "duration": 4.88,
+      "text": "the original ns"
+    },
+    {
+      "start": 900.72,
+      "end": 905.76,
+      "duration": 5.04,
+      "text": "thereby i can write dp of 0"
+    },
+    {
+      "start": 903.2,
+      "end": 906.88,
+      "duration": 3.68,
+      "text": "n is nothing but whatever i wrote in the"
+    },
+    {
+      "start": 905.76,
+      "end": 908.24,
+      "duration": 2.48,
+      "text": "base case"
+    },
+    {
+      "start": 906.88,
+      "end": 910.48,
+      "duration": 3.6,
+      "text": "n into"
+    },
+    {
+      "start": 908.24,
+      "end": 913.2,
+      "duration": 4.96,
+      "text": "price of 0 perfect"
+    },
+    {
+      "start": 910.48,
+      "end": 915.36,
+      "duration": 4.88,
+      "text": "this is the base case i exactly copy"
+    },
+    {
+      "start": 913.2,
+      "end": 918.0,
+      "duration": 4.8,
+      "text": "pasted the same thing but i did it for"
+    },
+    {
+      "start": 915.36,
+      "end": 920.8,
+      "duration": 5.44,
+      "text": "every n i did it for every n because n"
+    },
+    {
+      "start": 918.0,
+      "end": 922.0,
+      "duration": 4.0,
+      "text": "can be anything perfect superb what"
+    },
+    {
+      "start": 920.8,
+      "end": 924.0,
+      "duration": 3.2,
+      "text": "about this"
+    },
+    {
+      "start": 922.0,
+      "end": 927.44,
+      "duration": 5.44,
+      "text": "what did you do in the recursion in the"
+    },
+    {
+      "start": 924.0,
+      "end": 929.92,
+      "duration": 5.92,
+      "text": "recursion it went from n minus 1 to 0"
+    },
+    {
+      "start": 927.44,
+      "end": 931.76,
+      "duration": 4.32,
+      "text": "by 0 being the base case"
+    },
+    {
+      "start": 929.92,
+      "end": 935.2,
+      "duration": 5.28,
+      "text": "what is tabulation"
+    },
+    {
+      "start": 931.76,
+      "end": 937.84,
+      "duration": 6.08,
+      "text": "bottom up what is tabulation bottom up"
+    },
+    {
+      "start": 935.2,
+      "end": 939.76,
+      "duration": 4.56,
+      "text": "so from base case you go till the"
+    },
+    {
+      "start": 937.84,
+      "end": 942.24,
+      "duration": 4.4,
+      "text": "ultimate so"
+    },
+    {
+      "start": 939.76,
+      "end": 944.48,
+      "duration": 4.72,
+      "text": "base case is done so you start from one"
+    },
+    {
+      "start": 942.24,
+      "end": 945.92,
+      "duration": 3.68,
+      "text": "n minus one what about n you do it in"
+    },
+    {
+      "start": 944.48,
+      "end": 948.0,
+      "duration": 3.52,
+      "text": "the opposite"
+    },
+    {
+      "start": 945.92,
+      "end": 950.08,
+      "duration": 4.16,
+      "text": "done and now you just need to copy the"
+    },
+    {
+      "start": 948.0,
+      "end": 952.16,
+      "duration": 4.16,
+      "text": "records so here without without actually"
+    },
+    {
+      "start": 950.08,
+      "end": 955.52,
+      "duration": 5.44,
+      "text": "wasting any time let's"
+    },
+    {
+      "start": 952.16,
+      "end": 957.84,
+      "duration": 5.68,
+      "text": "super quickly code this up so given the"
+    },
+    {
+      "start": 955.52,
+      "end": 959.68,
+      "duration": 4.16,
+      "text": "price and you're given the n right so"
+    },
+    {
+      "start": 957.84,
+      "end": 961.12,
+      "duration": 3.28,
+      "text": "what i can do is i can write the"
+    },
+    {
+      "start": 959.68,
+      "end": 963.52,
+      "duration": 3.84,
+      "text": "function with"
+    },
+    {
+      "start": 961.12,
+      "end": 966.08,
+      "duration": 4.96,
+      "text": "index and the capital n and we can take"
+    },
+    {
+      "start": 963.52,
+      "end": 966.08,
+      "duration": 2.56,
+      "text": "the vector"
+    },
+    {
+      "start": 966.84,
+      "end": 972.72,
+      "duration": 5.88,
+      "text": "into and the price correct so that's"
+    },
+    {
+      "start": 969.68,
+      "end": 972.72,
+      "duration": 3.04,
+      "text": "what i will be taking"
+    },
+    {
+      "start": 973.28,
+      "end": 976.96,
+      "duration": 3.68,
+      "text": "can i say if index is equal to equal to"
+    },
+    {
+      "start": 974.96,
+      "end": 979.12,
+      "duration": 4.16,
+      "text": "zero i need to return the"
+    },
+    {
+      "start": 976.96,
+      "end": 981.44,
+      "duration": 4.48,
+      "text": "n into price of zero perfect"
+    },
+    {
+      "start": 979.12,
+      "end": 984.32,
+      "duration": 5.2,
+      "text": "and uh there will be other cases of not"
+    },
+    {
+      "start": 981.44,
+      "end": 984.32,
+      "duration": 2.88,
+      "text": "take antique right"
+    },
+    {
+      "start": 985.28,
+      "end": 990.56,
+      "duration": 5.28,
+      "text": "so not tick case will be zero value"
+    },
+    {
+      "start": 988.0,
+      "end": 993.44,
+      "duration": 5.44,
+      "text": "plus f of index minus one"
+    },
+    {
+      "start": 990.56,
+      "end": 997.04,
+      "duration": 6.48,
+      "text": "you move back to n and take a price"
+    },
+    {
+      "start": 993.44,
+      "end": 998.8,
+      "duration": 5.36,
+      "text": "but the take case will be having in"
+    },
+    {
+      "start": 997.04,
+      "end": 1000.08,
+      "duration": 3.04,
+      "text": "uh you're looking for maximum right so"
+    },
+    {
+      "start": 998.8,
+      "end": 1001.76,
+      "duration": 2.96,
+      "text": "intervene"
+    },
+    {
+      "start": 1000.08,
+      "end": 1004.24,
+      "duration": 4.16,
+      "text": "and what is the rod length the rod"
+    },
+    {
+      "start": 1001.76,
+      "end": 1006.72,
+      "duration": 4.96,
+      "text": "length is nothing but as of now at the"
+    },
+    {
+      "start": 1004.24,
+      "end": 1008.64,
+      "duration": 4.4,
+      "text": "index it's index plus one so i need to"
+    },
+    {
+      "start": 1006.72,
+      "end": 1011.76,
+      "duration": 5.04,
+      "text": "check if the rod length"
+    },
+    {
+      "start": 1008.64,
+      "end": 1014.32,
+      "duration": 5.68,
+      "text": "is lesser than the required n if that's"
+    },
+    {
+      "start": 1011.76,
+      "end": 1016.0,
+      "duration": 4.24,
+      "text": "the case i can definitely take it and if"
+    },
+    {
+      "start": 1014.32,
+      "end": 1018.0,
+      "duration": 3.68,
+      "text": "i take it it'll be price of index plus"
+    },
+    {
+      "start": 1016.0,
+      "end": 1020.16,
+      "duration": 4.16,
+      "text": "function of you stay at the same index"
+    },
+    {
+      "start": 1018.0,
+      "end": 1022.08,
+      "duration": 4.08,
+      "text": "and the rod length that you are looking"
+    },
+    {
+      "start": 1020.16,
+      "end": 1023.12,
+      "duration": 2.96,
+      "text": "for will reduce by the rod length"
+    },
+    {
+      "start": 1022.08,
+      "end": 1025.44,
+      "duration": 3.36,
+      "text": "perfect"
+    },
+    {
+      "start": 1023.12,
+      "end": 1027.12,
+      "duration": 4.0,
+      "text": "and you just pass on the price and over"
+    },
+    {
+      "start": 1025.44,
+      "end": 1030.08,
+      "duration": 4.64,
+      "text": "here you can return"
+    },
+    {
+      "start": 1027.12,
+      "end": 1033.68,
+      "duration": 6.56,
+      "text": "the max of take and not take"
+    },
+    {
+      "start": 1030.08,
+      "end": 1035.6,
+      "duration": 5.52,
+      "text": "and right here you can say return f off"
+    },
+    {
+      "start": 1033.68,
+      "end": 1037.2,
+      "duration": 3.52,
+      "text": "you start from the last index which is n"
+    },
+    {
+      "start": 1035.6,
+      "end": 1039.36,
+      "duration": 3.76,
+      "text": "minus one you look for the end rod"
+    },
+    {
+      "start": 1037.2,
+      "end": 1042.16,
+      "duration": 4.96,
+      "text": "length and you pass on the price"
+    },
+    {
+      "start": 1039.36,
+      "end": 1043.6,
+      "duration": 4.24,
+      "text": "so that's what you will have to write so"
+    },
+    {
+      "start": 1042.16,
+      "end": 1045.04,
+      "duration": 2.88,
+      "text": "you see it is giving correct answer"
+    },
+    {
+      "start": 1043.6,
+      "end": 1047.04,
+      "duration": 3.44,
+      "text": "what's the next step you know it will be"
+    },
+    {
+      "start": 1045.04,
+      "end": 1048.48,
+      "duration": 3.44,
+      "text": "giving you tle so please make sure you"
+    },
+    {
+      "start": 1047.04,
+      "end": 1050.24,
+      "duration": 3.2,
+      "text": "memoize this"
+    },
+    {
+      "start": 1048.48,
+      "end": 1052.48,
+      "duration": 4.0,
+      "text": "so create a dp array"
+    },
+    {
+      "start": 1050.24,
+      "end": 1056.16,
+      "duration": 5.92,
+      "text": "and try to memorize this into n into"
+    },
+    {
+      "start": 1052.48,
+      "end": 1058.96,
+      "duration": 6.48,
+      "text": "vector of int n plus 1 comma minus 1"
+    },
+    {
+      "start": 1056.16,
+      "end": 1061.84,
+      "duration": 5.68,
+      "text": "once you memoize this this will go as dp"
+    },
+    {
+      "start": 1058.96,
+      "end": 1063.28,
+      "duration": 4.32,
+      "text": "obviously this will go as vector"
+    },
+    {
+      "start": 1061.84,
+      "end": 1064.08,
+      "duration": 2.24,
+      "text": "vector"
+    },
+    {
+      "start": 1063.28,
+      "end": 1065.76,
+      "duration": 2.48,
+      "text": "in"
+    },
+    {
+      "start": 1064.08,
+      "end": 1068.0,
+      "duration": 3.92,
+      "text": "dp"
+    },
+    {
+      "start": 1065.76,
+      "end": 1069.2,
+      "duration": 3.44,
+      "text": "this will be dp of index"
+    },
+    {
+      "start": 1068.0,
+      "end": 1072.24,
+      "duration": 4.24,
+      "text": "n"
+    },
+    {
+      "start": 1069.2,
+      "end": 1074.64,
+      "duration": 5.44,
+      "text": "this you can say fdp of index"
+    },
+    {
+      "start": 1072.24,
+      "end": 1076.8,
+      "duration": 4.56,
+      "text": "n not equal to minus 1 you can say"
+    },
+    {
+      "start": 1074.64,
+      "end": 1079.36,
+      "duration": 4.72,
+      "text": "return dp of index"
+    },
+    {
+      "start": 1076.8,
+      "end": 1081.36,
+      "duration": 4.56,
+      "text": "n perfect and just make sure you pass"
+    },
+    {
+      "start": 1079.36,
+      "end": 1083.52,
+      "duration": 4.16,
+      "text": "the dp here make sure you pass the dp"
+    },
+    {
+      "start": 1081.36,
+      "end": 1086.24,
+      "duration": 4.88,
+      "text": "here once you've done this super really"
+    },
+    {
+      "start": 1083.52,
+      "end": 1086.24,
+      "duration": 2.72,
+      "text": "run this off"
+    },
+    {
+      "start": 1086.4,
+      "end": 1091.36,
+      "duration": 4.96,
+      "text": "it is running let's quickly submit this"
+    },
+    {
+      "start": 1088.0,
+      "end": 1091.36,
+      "duration": 3.36,
+      "text": "and see if this is running fine"
+    },
+    {
+      "start": 1092.4,
+      "end": 1096.32,
+      "duration": 3.92,
+      "text": "it does it does give me 100 marks what's"
+    },
+    {
+      "start": 1094.48,
+      "end": 1098.72,
+      "duration": 4.24,
+      "text": "the next step the next step is to"
+    },
+    {
+      "start": 1096.32,
+      "end": 1102.4,
+      "duration": 6.08,
+      "text": "convert this into a tabulation"
+    },
+    {
+      "start": 1098.72,
+      "end": 1104.56,
+      "duration": 5.84,
+      "text": "step one make it zero step two oh sorry"
+    },
+    {
+      "start": 1102.4,
+      "end": 1106.72,
+      "duration": 4.32,
+      "text": "step one write the base cases it goes"
+    },
+    {
+      "start": 1104.56,
+      "end": 1109.28,
+      "duration": 4.72,
+      "text": "from zero goes until n"
+    },
+    {
+      "start": 1106.72,
+      "end": 1111.84,
+      "duration": 5.12,
+      "text": "n plus plus and you write dp of zero and"
+    },
+    {
+      "start": 1109.28,
+      "end": 1113.36,
+      "duration": 4.08,
+      "text": "the n equal to the base case whatever is"
+    },
+    {
+      "start": 1111.84,
+      "end": 1114.32,
+      "duration": 2.48,
+      "text": "the base keys just make sure you copy"
+    },
+    {
+      "start": 1113.36,
+      "end": 1117.04,
+      "duration": 3.68,
+      "text": "paste"
+    },
+    {
+      "start": 1114.32,
+      "end": 1120.32,
+      "duration": 6.0,
+      "text": "done what's the next step for int index"
+    },
+    {
+      "start": 1117.04,
+      "end": 1122.8,
+      "duration": 5.76,
+      "text": "equal to one index lesser than n"
+    },
+    {
+      "start": 1120.32,
+      "end": 1125.68,
+      "duration": 5.36,
+      "text": "index plus plus and you can just go on"
+    },
+    {
+      "start": 1122.8,
+      "end": 1128.48,
+      "duration": 5.68,
+      "text": "from 4 int w equal to"
+    },
+    {
+      "start": 1125.68,
+      "end": 1131.12,
+      "duration": 5.44,
+      "text": "sorry rather n equal to 0 n goes lesser"
+    },
+    {
+      "start": 1128.48,
+      "end": 1132.88,
+      "duration": 4.4,
+      "text": "than n and you can do capital n plus"
+    },
+    {
+      "start": 1131.12,
+      "end": 1134.84,
+      "duration": 3.72,
+      "text": "plus just make sure you copy paste this"
+    },
+    {
+      "start": 1132.88,
+      "end": 1137.44,
+      "duration": 4.56,
+      "text": "entire stuff"
+    },
+    {
+      "start": 1134.84,
+      "end": 1139.76,
+      "duration": 4.92,
+      "text": "perfect uh copy paste this entire stuff"
+    },
+    {
+      "start": 1137.44,
+      "end": 1141.68,
+      "duration": 4.24,
+      "text": "do some dabbing spacing okay cool done"
+    },
+    {
+      "start": 1139.76,
+      "end": 1145.84,
+      "duration": 6.08,
+      "text": "what's the next step over here instead"
+    },
+    {
+      "start": 1141.68,
+      "end": 1149.2,
+      "duration": 7.52,
+      "text": "of f you write dp of index minus one"
+    },
+    {
+      "start": 1145.84,
+      "end": 1150.88,
+      "duration": 5.04,
+      "text": "you say this"
+    },
+    {
+      "start": 1149.2,
+      "end": 1153.36,
+      "duration": 4.16,
+      "text": "just make sure you do this"
+    },
+    {
+      "start": 1150.88,
+      "end": 1155.76,
+      "duration": 4.88,
+      "text": "and over here what will be this dp of"
+    },
+    {
+      "start": 1153.36,
+      "end": 1155.76,
+      "duration": 2.4,
+      "text": "index"
+    },
+    {
+      "start": 1156.4,
+      "end": 1159.92,
+      "duration": 3.52,
+      "text": "for about this n minus rod length"
+    },
+    {
+      "start": 1158.16,
+      "end": 1161.92,
+      "duration": 3.76,
+      "text": "perfect"
+    },
+    {
+      "start": 1159.92,
+      "end": 1162.96,
+      "duration": 3.04,
+      "text": "and over here you can just remove the"
+    },
+    {
+      "start": 1161.92,
+      "end": 1165.04,
+      "duration": 3.12,
+      "text": "return"
+    },
+    {
+      "start": 1162.96,
+      "end": 1167.44,
+      "duration": 4.48,
+      "text": "and over here instead of this you can"
+    },
+    {
+      "start": 1165.04,
+      "end": 1169.36,
+      "duration": 4.32,
+      "text": "just start you can write the return"
+    },
+    {
+      "start": 1167.44,
+      "end": 1170.43,
+      "duration": 2.99,
+      "text": "instead of this you can write the dp"
+    },
+    {
+      "start": 1169.36,
+      "end": 1171.6,
+      "duration": 2.24,
+      "text": "n minus 1"
+    },
+    {
+      "start": 1170.43,
+      "end": 1174.32,
+      "duration": 3.89,
+      "text": "[Music]"
+    },
+    {
+      "start": 1171.6,
+      "end": 1176.88,
+      "duration": 5.28,
+      "text": "and the n perfect and you can just erase"
+    },
+    {
+      "start": 1174.32,
+      "end": 1178.72,
+      "duration": 4.4,
+      "text": "this off so this is let me quickly check"
+    },
+    {
+      "start": 1176.88,
+      "end": 1182.0,
+      "duration": 5.12,
+      "text": "it this is perfect now this looks"
+    },
+    {
+      "start": 1178.72,
+      "end": 1183.92,
+      "duration": 5.2,
+      "text": "perfect to me let's quickly run this off"
+    },
+    {
+      "start": 1182.0,
+      "end": 1185.6,
+      "duration": 3.6,
+      "text": "so that's how you write the tabulation"
+    },
+    {
+      "start": 1183.92,
+      "end": 1187.52,
+      "duration": 3.6,
+      "text": "and now let's quickly summit this off"
+    },
+    {
+      "start": 1185.6,
+      "end": 1189.6,
+      "duration": 4.0,
+      "text": "right does run what's the next step"
+    },
+    {
+      "start": 1187.52,
+      "end": 1190.8,
+      "duration": 3.28,
+      "text": "space optimization"
+    },
+    {
+      "start": 1189.6,
+      "end": 1193.68,
+      "duration": 4.08,
+      "text": "again"
+    },
+    {
+      "start": 1190.8,
+      "end": 1196.56,
+      "duration": 5.76,
+      "text": "in x minus 1 index"
+    },
+    {
+      "start": 1193.68,
+      "end": 1198.4,
+      "duration": 4.72,
+      "text": "previous previous current now now space"
+    },
+    {
+      "start": 1196.56,
+      "end": 1200.24,
+      "duration": 3.68,
+      "text": "optimization is so easy right when you"
+    },
+    {
+      "start": 1198.4,
+      "end": 1202.8,
+      "duration": 4.4,
+      "text": "started you were like oh my stop it is"
+    },
+    {
+      "start": 1200.24,
+      "end": 1205.76,
+      "duration": 5.52,
+      "text": "so tough but now it looks easy isn't it"
+    },
+    {
+      "start": 1202.8,
+      "end": 1207.36,
+      "duration": 4.56,
+      "text": "so vector of int previous"
+    },
+    {
+      "start": 1205.76,
+      "end": 1209.04,
+      "duration": 3.28,
+      "text": "n comma"
+    },
+    {
+      "start": 1207.36,
+      "end": 1211.68,
+      "duration": 4.32,
+      "text": "at the n plus one because"
+    },
+    {
+      "start": 1209.04,
+      "end": 1212.56,
+      "duration": 3.52,
+      "text": "a row is what you're taking"
+    },
+    {
+      "start": 1211.68,
+      "end": 1215.84,
+      "duration": 4.16,
+      "text": "curve"
+    },
+    {
+      "start": 1212.56,
+      "end": 1217.84,
+      "duration": 5.28,
+      "text": "n plus one comma zero so instead of this"
+    },
+    {
+      "start": 1215.84,
+      "end": 1219.6,
+      "duration": 3.76,
+      "text": "you can be like let's write previous"
+    },
+    {
+      "start": 1217.84,
+      "end": 1221.84,
+      "duration": 4.0,
+      "text": "instead of dp of index minus one why"
+    },
+    {
+      "start": 1219.6,
+      "end": 1224.08,
+      "duration": 4.48,
+      "text": "don't i write previous instead of dp of"
+    },
+    {
+      "start": 1221.84,
+      "end": 1226.72,
+      "duration": 4.88,
+      "text": "index why don't i write car instead of"
+    },
+    {
+      "start": 1224.08,
+      "end": 1228.8,
+      "duration": 4.72,
+      "text": "dpf index why don't i write car over"
+    },
+    {
+      "start": 1226.72,
+      "end": 1231.68,
+      "duration": 4.96,
+      "text": "here why don't i do it previous equal to"
+    },
+    {
+      "start": 1228.8,
+      "end": 1233.6,
+      "duration": 4.8,
+      "text": "car over here why don't you do it"
+    },
+    {
+      "start": 1231.68,
+      "end": 1235.92,
+      "duration": 4.24,
+      "text": "three years and i'll quickly run this"
+    },
+    {
+      "start": 1233.6,
+      "end": 1238.4,
+      "duration": 4.8,
+      "text": "off indeed it does run let's quickly"
+    },
+    {
+      "start": 1235.92,
+      "end": 1240.48,
+      "duration": 4.56,
+      "text": "submit this as well 100"
+    },
+    {
+      "start": 1238.4,
+      "end": 1243.52,
+      "duration": 5.12,
+      "text": "a so this was"
+    },
+    {
+      "start": 1240.48,
+      "end": 1246.32,
+      "duration": 5.84,
+      "text": "to array space optimization can we space"
+    },
+    {
+      "start": 1243.52,
+      "end": 1248.56,
+      "duration": 5.04,
+      "text": "optimize this into a 1d array and answer"
+    },
+    {
+      "start": 1246.32,
+      "end": 1250.72,
+      "duration": 4.4,
+      "text": "that is yes we can"
+    },
+    {
+      "start": 1248.56,
+      "end": 1252.64,
+      "duration": 4.08,
+      "text": "previous video"
+    },
+    {
+      "start": 1250.72,
+      "end": 1254.72,
+      "duration": 4.0,
+      "text": "unbounded knapsack"
+    },
+    {
+      "start": 1252.64,
+      "end": 1256.8,
+      "duration": 4.16,
+      "text": "so over there you saw"
+    },
+    {
+      "start": 1254.72,
+      "end": 1259.52,
+      "duration": 4.8,
+      "text": "we were using a state"
+    },
+    {
+      "start": 1256.8,
+      "end": 1262.4,
+      "duration": 5.6,
+      "text": "right above because n is the column"
+    },
+    {
+      "start": 1259.52,
+      "end": 1263.92,
+      "duration": 4.4,
+      "text": "number previous n is the right above and"
+    },
+    {
+      "start": 1262.4,
+      "end": 1265.52,
+      "duration": 3.12,
+      "text": "n minus is"
+    },
+    {
+      "start": 1263.92,
+      "end": 1266.64,
+      "duration": 2.72,
+      "text": "like if yes if you're trying to compute"
+    },
+    {
+      "start": 1265.52,
+      "end": 1268.32,
+      "duration": 2.8,
+      "text": "this"
+    },
+    {
+      "start": 1266.64,
+      "end": 1270.96,
+      "duration": 4.32,
+      "text": "you're trying to use the"
+    },
+    {
+      "start": 1268.32,
+      "end": 1272.24,
+      "duration": 3.92,
+      "text": "previous computed values and this guy"
+    },
+    {
+      "start": 1270.96,
+      "end": 1275.68,
+      "duration": 4.72,
+      "text": "this guy and the previous computed"
+    },
+    {
+      "start": 1272.24,
+      "end": 1276.48,
+      "duration": 4.24,
+      "text": "values so these guys have"
+    },
+    {
+      "start": 1275.68,
+      "end": 1279.2,
+      "duration": 3.52,
+      "text": "no"
+    },
+    {
+      "start": 1276.48,
+      "end": 1281.04,
+      "duration": 4.56,
+      "text": "no significance in the previous column"
+    },
+    {
+      "start": 1279.2,
+      "end": 1282.64,
+      "duration": 3.44,
+      "text": "this guy has like the crossfit guy have"
+    },
+    {
+      "start": 1281.04,
+      "end": 1283.92,
+      "duration": 2.88,
+      "text": "no significance so there's no need to"
+    },
+    {
+      "start": 1282.64,
+      "end": 1285.84,
+      "duration": 3.2,
+      "text": "store it"
+    },
+    {
+      "start": 1283.92,
+      "end": 1287.2,
+      "duration": 3.28,
+      "text": "whenever you're computing this current"
+    },
+    {
+      "start": 1285.84,
+      "end": 1289.12,
+      "duration": 3.28,
+      "text": "just rewrite over here whenever you're"
+    },
+    {
+      "start": 1287.2,
+      "end": 1290.4,
+      "duration": 3.2,
+      "text": "computing this current read over here"
+    },
+    {
+      "start": 1289.12,
+      "end": 1291.76,
+      "duration": 2.64,
+      "text": "whenever you're computing this current"
+    },
+    {
+      "start": 1290.4,
+      "end": 1293.52,
+      "duration": 3.12,
+      "text": "rewrite over here"
+    },
+    {
+      "start": 1291.76,
+      "end": 1296.16,
+      "duration": 4.4,
+      "text": "whenever you're computing this current"
+    },
+    {
+      "start": 1293.52,
+      "end": 1297.92,
+      "duration": 4.4,
+      "text": "rewrite over here use this"
+    },
+    {
+      "start": 1296.16,
+      "end": 1299.6,
+      "duration": 3.44,
+      "text": "compute this and try to rewrite over"
+    },
+    {
+      "start": 1297.92,
+      "end": 1301.6,
+      "duration": 3.68,
+      "text": "here that's it so you can easily use the"
+    },
+    {
+      "start": 1299.6,
+      "end": 1302.8,
+      "duration": 3.2,
+      "text": "single one yes"
+    },
+    {
+      "start": 1301.6,
+      "end": 1305.84,
+      "duration": 4.24,
+      "text": "so"
+    },
+    {
+      "start": 1302.8,
+      "end": 1305.84,
+      "duration": 3.04,
+      "text": "just use a single one"
+    },
+    {
+      "start": 1307.04,
+      "end": 1311.52,
+      "duration": 4.48,
+      "text": "no need to do previous equal to current"
+    },
+    {
+      "start": 1309.36,
+      "end": 1313.04,
+      "duration": 3.68,
+      "text": "no no need of this current one because"
+    },
+    {
+      "start": 1311.52,
+      "end": 1314.96,
+      "duration": 3.44,
+      "text": "just rewrite it because you're using the"
+    },
+    {
+      "start": 1313.04,
+      "end": 1317.92,
+      "duration": 4.88,
+      "text": "previous guys and the"
+    },
+    {
+      "start": 1314.96,
+      "end": 1319.12,
+      "duration": 4.16,
+      "text": "right above guy so done let's really run"
+    },
+    {
+      "start": 1317.92,
+      "end": 1321.68,
+      "duration": 3.76,
+      "text": "this off"
+    },
+    {
+      "start": 1319.12,
+      "end": 1324.48,
+      "duration": 5.36,
+      "text": "so one d array yeah single array and"
+    },
+    {
+      "start": 1321.68,
+      "end": 1326.96,
+      "duration": 5.28,
+      "text": "we're able to space optimize this so"
+    },
+    {
+      "start": 1324.48,
+      "end": 1328.56,
+      "duration": 4.08,
+      "text": "guys dp on subsequences is done we have"
+    },
+    {
+      "start": 1326.96,
+      "end": 1330.64,
+      "duration": 3.68,
+      "text": "done all the patterns on dpn"
+    },
+    {
+      "start": 1328.56,
+      "end": 1333.04,
+      "duration": 4.48,
+      "text": "subsequences now you tell me in the"
+    },
+    {
+      "start": 1330.64,
+      "end": 1335.6,
+      "duration": 4.96,
+      "text": "comment section can you solve any"
+    },
+    {
+      "start": 1333.04,
+      "end": 1337.36,
+      "duration": 4.32,
+      "text": "problem on dpn subsequences now if you"
+    },
+    {
+      "start": 1335.6,
+      "end": 1339.04,
+      "duration": 3.44,
+      "text": "can please please tell me in the comment"
+    },
+    {
+      "start": 1337.36,
+      "end": 1341.36,
+      "duration": 4.0,
+      "text": "section how did you like this dp on"
+    },
+    {
+      "start": 1339.04,
+      "end": 1343.6,
+      "duration": 4.56,
+      "text": "subsequences pattern where we solved a"
+    },
+    {
+      "start": 1341.36,
+      "end": 1345.68,
+      "duration": 4.32,
+      "text": "bunch of problems please please do that"
+    },
+    {
+      "start": 1343.6,
+      "end": 1347.6,
+      "duration": 4.0,
+      "text": "because that will highly motivate me and"
+    },
+    {
+      "start": 1345.68,
+      "end": 1349.84,
+      "duration": 4.16,
+      "text": "yes if you watch this video till now we"
+    },
+    {
+      "start": 1347.6,
+      "end": 1351.04,
+      "duration": 3.44,
+      "text": "have learned recursion memoration"
+    },
+    {
+      "start": 1349.84,
+      "end": 1352.72,
+      "duration": 2.88,
+      "text": "tabulation"
+    },
+    {
+      "start": 1351.04,
+      "end": 1354.64,
+      "duration": 3.6,
+      "text": "two space optimization one space"
+    },
+    {
+      "start": 1352.72,
+      "end": 1355.92,
+      "duration": 3.2,
+      "text": "optimization and you've understood"
+    },
+    {
+      "start": 1354.64,
+      "end": 1357.44,
+      "duration": 2.8,
+      "text": "everything so just in case you did"
+    },
+    {
+      "start": 1355.92,
+      "end": 1358.48,
+      "duration": 2.56,
+      "text": "please make sure you like this video and"
+    },
+    {
+      "start": 1357.44,
+      "end": 1360.16,
+      "duration": 2.72,
+      "text": "if you're new to this channel please"
+    },
+    {
+      "start": 1358.48,
+      "end": 1361.84,
+      "duration": 3.36,
+      "text": "please please do consider subscribing to"
+    },
+    {
+      "start": 1360.16,
+      "end": 1363.52,
+      "duration": 3.36,
+      "text": "us and here with this let's wrap up this"
+    },
+    {
+      "start": 1361.84,
+      "end": 1366.24,
+      "duration": 4.4,
+      "text": "video let's read in the next one till"
+    },
+    {
+      "start": 1363.52,
+      "end": 1369.24,
+      "duration": 5.72,
+      "text": "then bye take care whenever your heart"
+    },
+    {
+      "start": 1366.24,
+      "end": 1374.89,
+      "duration": 8.65,
+      "text": "is broken"
+    },
+    {
+      "start": 1369.24,
+      "end": 1374.89,
+      "duration": 5.65,
+      "text": "[Music]"
+    }
+  ]
+}

@@ -1,0 +1,4447 @@
+{
+  "video_id": "DhFh8Kw7ymk",
+  "title": "3 Sum | Brute -  Better - Optimal with Codes",
+  "duration_sec": 2305,
+  "segments": [
+    {
+      "start": 3.08,
+      "end": 6.2,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.32,
+      "end": 7.44,
+      "text": "I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.2,
+      "end": 9.72,
+      "text": "so this is another lecture from the"
+    },
+    {
+      "start": 7.44,
+      "end": 11.12,
+      "text": "Straus a toz DSA course just in case you"
+    },
+    {
+      "start": 9.72,
+      "end": 12.64,
+      "text": "for the first time here this is world's"
+    },
+    {
+      "start": 11.12,
+      "end": 14.92,
+      "text": "most in-depth course when you talk about"
+    },
+    {
+      "start": 12.64,
+      "end": 17.4,
+      "text": "DS algo why do I say that because this"
+    },
+    {
+      "start": 14.92,
+      "end": 19.36,
+      "text": "course has 4 55 modules by the end of"
+    },
+    {
+      "start": 17.4,
+      "end": 20.96,
+      "text": "the course you have soled more than 400"
+    },
+    {
+      "start": 19.36,
+      "end": 22.48,
+      "text": "plus problems already when it comes to"
+    },
+    {
+      "start": 20.96,
+      "end": 23.76,
+      "text": "DS algo you can go over the entire"
+    },
+    {
+      "start": 22.48,
+      "end": 25.24,
+      "text": "internet you can buy any of the paid"
+    },
+    {
+      "start": 23.76,
+      "end": 27.2,
+      "text": "courses none of them will be teaching"
+    },
+    {
+      "start": 25.24,
+      "end": 29.08,
+      "text": "you DS I'll go in such step something"
+    },
+    {
+      "start": 27.2,
+      "end": 30.64,
+      "text": "that I can give you as Assurance is once"
+    },
+    {
+      "start": 29.08,
+      "end": 32.16,
+      "text": "you complete this end enre course you'll"
+    },
+    {
+      "start": 30.64,
+      "end": 33.72,
+      "text": "be able to clear any of the DS"
+    },
+    {
+      "start": 32.16,
+      "end": 35.92,
+      "text": "algorithms in any of the companies in"
+    },
+    {
+      "start": 33.72,
+      "end": 37.52,
+      "text": "any part of the world so till now we"
+    },
+    {
+      "start": 35.92,
+      "end": 39.04,
+      "text": "have covered up till this particular"
+    },
+    {
+      "start": 37.52,
+      "end": 41.28,
+      "text": "problem and this video I'll be covering"
+    },
+    {
+      "start": 39.04,
+      "end": 43.04,
+      "text": "up the problem three sum so what does"
+    },
+    {
+      "start": 41.28,
+      "end": 44.48,
+      "text": "the problem actually state it states"
+    },
+    {
+      "start": 43.04,
+      "end": 47.2,
+      "text": "that you'll be given an array of"
+    },
+    {
+      "start": 44.48,
+      "end": 49.88,
+      "text": "integers and your task is to find out"
+    },
+    {
+      "start": 47.2,
+      "end": 52.64,
+      "text": "all the triplets that sum up to give you"
+    },
+    {
+      "start": 49.88,
+      "end": 54.36,
+      "text": "a value of zero so basically in a"
+    },
+    {
+      "start": 52.64,
+      "end": 56.36,
+      "text": "triplet there are three elements so if"
+    },
+    {
+      "start": 54.36,
+      "end": 58.44,
+      "text": "you sum up those three elements the"
+    },
+    {
+      "start": 56.36,
+      "end": 61.2,
+      "text": "summation should be zero and there's a"
+    },
+    {
+      "start": 58.44,
+      "end": 63.56,
+      "text": "critical point over here you cannot take"
+    },
+    {
+      "start": 61.2,
+      "end": 66.32,
+      "text": "same elements more than once what does"
+    },
+    {
+      "start": 63.56,
+      "end": 69.16,
+      "text": "it mean it means see over here I've"
+    },
+    {
+      "start": 66.32,
+      "end": 71.16,
+      "text": "taken minus one I've taken two and I've"
+    },
+    {
+      "start": 69.16,
+      "end": 73.2,
+      "text": "taken minus one so there are three"
+    },
+    {
+      "start": 71.16,
+      "end": 76.12,
+      "text": "different elements and over here I've"
+    },
+    {
+      "start": 73.2,
+      "end": 78.96,
+      "text": "taken zero I've taken one I've taken"
+    },
+    {
+      "start": 76.12,
+      "end": 81.56,
+      "text": "minus1 again three different elements"
+    },
+    {
+      "start": 78.96,
+      "end": 84.92,
+      "text": "what I cannot take is I cannot take two"
+    },
+    {
+      "start": 81.56,
+      "end": 86.8,
+      "text": "twice even if this on summation is"
+    },
+    {
+      "start": 84.92,
+      "end": 89.08,
+      "text": "giving me zero but I cannot take it"
+    },
+    {
+      "start": 86.8,
+      "end": 91.36,
+      "text": "because two has been taken twice and"
+    },
+    {
+      "start": 89.08,
+      "end": 94.24,
+      "text": "minus 4 has been been taken once I can"
+    },
+    {
+      "start": 91.36,
+      "end": 96.96,
+      "text": "take an element only once that is the"
+    },
+    {
+      "start": 94.24,
+      "end": 99.2,
+      "text": "meaning of I not equal to J and J not"
+    },
+    {
+      "start": 96.96,
+      "end": 101.88,
+      "text": "equal to K now I have to return me all"
+    },
+    {
+      "start": 99.2,
+      "end": 104.2,
+      "text": "the triplets that sum up to give you"
+    },
+    {
+      "start": 101.88,
+      "end": 106.48,
+      "text": "zero so in what order will you return"
+    },
+    {
+      "start": 104.2,
+      "end": 108.48,
+      "text": "all the triplets the order can be"
+    },
+    {
+      "start": 106.48,
+      "end": 111.2,
+      "text": "anything but the critical thing over"
+    },
+    {
+      "start": 108.48,
+      "end": 113.04,
+      "text": "here is you should not return duplicate"
+    },
+    {
+      "start": 111.2,
+      "end": 116.48,
+      "text": "triplets what do you mean by duplicate"
+    },
+    {
+      "start": 113.04,
+      "end": 119.92,
+      "text": "triplets you have a -1 2 -1 can I write"
+    },
+    {
+      "start": 116.48,
+      "end": 122.12,
+      "text": "this as -1 -1 2 I can and that will also"
+    },
+    {
+      "start": 119.92,
+      "end": 124.64,
+      "text": "Al give me the summation as zero but"
+    },
+    {
+      "start": 122.12,
+      "end": 126.64,
+      "text": "this is something similar to this so"
+    },
+    {
+      "start": 124.64,
+      "end": 130.16,
+      "text": "it's a duplicate triplet you only have"
+    },
+    {
+      "start": 126.64,
+      "end": 132.08,
+      "text": "to return unique triplets if I have to"
+    },
+    {
+      "start": 130.16,
+      "end": 134.24,
+      "text": "give you an example let let me just add"
+    },
+    {
+      "start": 132.08,
+      "end": 136.48,
+      "text": "a two over here what if I add a two over"
+    },
+    {
+      "start": 134.24,
+      "end": 139.92,
+      "text": "here I can say this triplet is generated"
+    },
+    {
+      "start": 136.48,
+      "end": 142.04,
+      "text": "by taking minus1 this two and this minus"
+    },
+    {
+      "start": 139.92,
+      "end": 144.84,
+      "text": "one and I can take another triplet which"
+    },
+    {
+      "start": 142.04,
+      "end": 147.48,
+      "text": "is like Min -1 2 and min-1 and I can say"
+    },
+    {
+      "start": 144.84,
+      "end": 150.12,
+      "text": "minus one is taken this time this two is"
+    },
+    {
+      "start": 147.48,
+      "end": 153.44,
+      "text": "taken this two and then minus one does"
+    },
+    {
+      "start": 150.12,
+      "end": 155.8,
+      "text": "it make it a different triplet no so you"
+    },
+    {
+      "start": 153.44,
+      "end": 158.8,
+      "text": "have to return all the unique triplets"
+    },
+    {
+      "start": 155.8,
+      "end": 161.84,
+      "text": "so the best way is if you just sort them"
+    },
+    {
+      "start": 158.8,
+      "end": 164.52,
+      "text": "up you'll get min-1 -1 and two so you"
+    },
+    {
+      "start": 161.84,
+      "end": 167.44,
+      "text": "cannot take any other triplet which is"
+    },
+    {
+      "start": 164.52,
+      "end": 170.32,
+      "text": "similar to Min -1 minus one and two you"
+    },
+    {
+      "start": 167.44,
+      "end": 173.36,
+      "text": "just have to return down all the unique"
+    },
+    {
+      "start": 170.32,
+      "end": 175.48,
+      "text": "triplets and they cannot be repetitive"
+    },
+    {
+      "start": 173.36,
+      "end": 177.24,
+      "text": "and it can be in any order that is the"
+    },
+    {
+      "start": 175.48,
+      "end": 178.68,
+      "text": "question so this question comes up in"
+    },
+    {
+      "start": 177.24,
+      "end": 180.04,
+      "text": "the interview what is the first solution"
+    },
+    {
+      "start": 178.68,
+      "end": 181.96,
+      "text": "that you'll give to the interviewer that"
+    },
+    {
+      "start": 180.04,
+      "end": 183.48,
+      "text": "is definitely the Brute Force solution"
+    },
+    {
+      "start": 181.96,
+      "end": 185.48,
+      "text": "and what is the most extreme nice"
+    },
+    {
+      "start": 183.48,
+      "end": 187.76,
+      "text": "solution that comes to your brain it's"
+    },
+    {
+      "start": 185.48,
+      "end": 190.48,
+      "text": "like why not try out all the driplets"
+    },
+    {
+      "start": 187.76,
+      "end": 192.6,
+      "text": "and the driplets that gives us the sum"
+    },
+    {
+      "start": 190.48,
+      "end": 194.08,
+      "text": "zero that is what we will return and"
+    },
+    {
+      "start": 192.6,
+      "end": 196.6,
+      "text": "probably will just return the unique"
+    },
+    {
+      "start": 194.08,
+      "end": 199.56,
+      "text": "ones so how do I try out all the"
+    },
+    {
+      "start": 196.6,
+      "end": 201.8,
+      "text": "triplets so the triplets have three"
+    },
+    {
+      "start": 199.56,
+      "end": 203.52,
+      "text": "positions in them that you have to fill"
+    },
+    {
+      "start": 201.8,
+      "end": 205.56,
+      "text": "the first element the second element and"
+    },
+    {
+      "start": 203.52,
+      "end": 209.0,
+      "text": "the third element so if I have to ask"
+    },
+    {
+      "start": 205.56,
+      "end": 211.16,
+      "text": "you can I say this is my first element"
+    },
+    {
+      "start": 209.0,
+      "end": 212.96,
+      "text": "and then if I ask you what can be my"
+    },
+    {
+      "start": 211.16,
+      "end": 215.08,
+      "text": "second element you you'll be like this"
+    },
+    {
+      "start": 212.96,
+      "end": 216.88,
+      "text": "can be my second this can be my second"
+    },
+    {
+      "start": 215.08,
+      "end": 220.36,
+      "text": "this can be my second this can be my"
+    },
+    {
+      "start": 216.88,
+      "end": 222.68,
+      "text": "second this can be my second right so"
+    },
+    {
+      "start": 220.36,
+      "end": 224.92,
+      "text": "for an example let's say this is my"
+    },
+    {
+      "start": 222.68,
+      "end": 228.44,
+      "text": "first element and this is my second"
+    },
+    {
+      "start": 224.92,
+      "end": 230.52,
+      "text": "element so which element can be my third"
+    },
+    {
+      "start": 228.44,
+      "end": 233.12,
+      "text": "this can be my third this can be my"
+    },
+    {
+      "start": 230.52,
+      "end": 236.2,
+      "text": "third this can be my third this can be"
+    },
+    {
+      "start": 233.12,
+      "end": 238.64,
+      "text": "my third in this way I've tried out all"
+    },
+    {
+      "start": 236.2,
+      "end": 241.16,
+      "text": "the triplets where this is the first and"
+    },
+    {
+      "start": 238.64,
+      "end": 244.0,
+      "text": "this is the second now what if I say"
+    },
+    {
+      "start": 241.16,
+      "end": 246.16,
+      "text": "let's keep this as the first and this as"
+    },
+    {
+      "start": 244.0,
+      "end": 248.36,
+      "text": "the second and probably this will be my"
+    },
+    {
+      "start": 246.16,
+      "end": 251.12,
+      "text": "third or probably this will be my third"
+    },
+    {
+      "start": 248.36,
+      "end": 253.64,
+      "text": "or probably this will be my third yes or"
+    },
+    {
+      "start": 251.12,
+      "end": 256.4,
+      "text": "I can tell keep this is first this is"
+    },
+    {
+      "start": 253.64,
+      "end": 258.48,
+      "text": "second probably this will be my third or"
+    },
+    {
+      "start": 256.4,
+      "end": 261.08,
+      "text": "probably this will be my third or I can"
+    },
+    {
+      "start": 258.48,
+      "end": 263.24,
+      "text": "say keep this as first this is second"
+    },
+    {
+      "start": 261.08,
+      "end": 265.8,
+      "text": "and this will definitely be my third and"
+    },
+    {
+      "start": 263.24,
+      "end": 268.64,
+      "text": "then I can say that this might be my"
+    },
+    {
+      "start": 265.8,
+      "end": 270.32,
+      "text": "first and this might be my second this"
+    },
+    {
+      "start": 268.64,
+      "end": 272.48,
+      "text": "can be third this can be be third this"
+    },
+    {
+      "start": 270.32,
+      "end": 274.64,
+      "text": "can be third or I can say this will be"
+    },
+    {
+      "start": 272.48,
+      "end": 276.32,
+      "text": "my first this will be my second this"
+    },
+    {
+      "start": 274.64,
+      "end": 277.92,
+      "text": "will be my third this will be my third"
+    },
+    {
+      "start": 276.32,
+      "end": 280.08,
+      "text": "or I can say this will be my first this"
+    },
+    {
+      "start": 277.92,
+      "end": 282.36,
+      "text": "will be my second and this will be my"
+    },
+    {
+      "start": 280.08,
+      "end": 285.52,
+      "text": "third so I can do it in this particular"
+    },
+    {
+      "start": 282.36,
+      "end": 288.44,
+      "text": "way so can I say the first so there are"
+    },
+    {
+      "start": 285.52,
+      "end": 291.44,
+      "text": "three elements first second third so can"
+    },
+    {
+      "start": 288.44,
+      "end": 295.04,
+      "text": "I for sure say the first can be this or"
+    },
+    {
+      "start": 291.44,
+      "end": 297.76,
+      "text": "this or this or this or so on till then"
+    },
+    {
+      "start": 295.04,
+      "end": 300.76,
+      "text": "so I know one thing for sure the for"
+    },
+    {
+      "start": 297.76,
+      "end": 303.48,
+      "text": "Loop starts from zero and it will go on"
+    },
+    {
+      "start": 300.76,
+      "end": 307.16,
+      "text": "till let's run it till end and it will"
+    },
+    {
+      "start": 303.48,
+      "end": 309.44,
+      "text": "take care of itself perfect so whenever"
+    },
+    {
+      "start": 307.16,
+      "end": 312.12,
+      "text": "I is at zero which means this this is"
+    },
+    {
+      "start": 309.44,
+      "end": 314.88,
+      "text": "considered as my first which element"
+    },
+    {
+      "start": 312.12,
+      "end": 317.2,
+      "text": "will be my second this one or this one"
+    },
+    {
+      "start": 314.88,
+      "end": 319.36,
+      "text": "or this one or this or this so we know"
+    },
+    {
+      "start": 317.2,
+      "end": 321.68,
+      "text": "something for sure if I is here the"
+    },
+    {
+      "start": 319.36,
+      "end": 324.2,
+      "text": "second will start after that there's no"
+    },
+    {
+      "start": 321.68,
+      "end": 326.92,
+      "text": "point in going back after that make"
+    },
+    {
+      "start": 324.2,
+      "end": 329.88,
+      "text": "sense when I will be one which is this"
+    },
+    {
+      "start": 326.92,
+      "end": 332.04,
+      "text": "where will the second element be this or"
+    },
+    {
+      "start": 329.88,
+      "end": 335.6,
+      "text": "this or this so I know something for"
+    },
+    {
+      "start": 332.04,
+      "end": 339.64,
+      "text": "sure the second element will start from"
+    },
+    {
+      "start": 335.6,
+      "end": 343.6,
+      "text": "I + 1 and it will go to that very sure"
+    },
+    {
+      "start": 339.64,
+      "end": 345.32,
+      "text": "what about G so two elements are done"
+    },
+    {
+      "start": 343.6,
+      "end": 349.72,
+      "text": "what about the third the third can be"
+    },
+    {
+      "start": 345.32,
+      "end": 351.48,
+      "text": "this this this this and if I is this J"
+    },
+    {
+      "start": 349.72,
+      "end": 353.68,
+      "text": "is this which is the first and second"
+    },
+    {
+      "start": 351.48,
+      "end": 357.64,
+      "text": "the third can be this this this do You"
+    },
+    {
+      "start": 353.68,
+      "end": 362.64,
+      "text": "observe the third always starts after J"
+    },
+    {
+      "start": 357.64,
+      "end": 366.96,
+      "text": "so very simple you say k = to J + 1 till"
+    },
+    {
+      "start": 362.64,
+      "end": 371.8,
+      "text": "n and what you say is herey listen if"
+    },
+    {
+      "start": 366.96,
+      "end": 375.64,
+      "text": "arr[i] plus area of G Plus area of"
+    },
+    {
+      "start": 371.8,
+      "end": 378.88,
+      "text": "K gives me something as zero and this is"
+    },
+    {
+      "start": 375.64,
+      "end": 381.08,
+      "text": "definitely my triplet simple as that how"
+    },
+    {
+      "start": 378.88,
+      "end": 383.2,
+      "text": "do you store unique that's a very easy"
+    },
+    {
+      "start": 381.08,
+      "end": 385.56,
+      "text": "job I'll show you in the code but can I"
+    },
+    {
+      "start": 383.2,
+      "end": 388.36,
+      "text": "say these three Loops will make sure"
+    },
+    {
+      "start": 385.56,
+      "end": 390.84,
+      "text": "that I generate all the triplets and the"
+    },
+    {
+      "start": 388.36,
+      "end": 393.96,
+      "text": "triplets will be at arr[i] array of"
+    },
+    {
+      "start": 390.84,
+      "end": 397.04,
+      "text": "J and array of K now the task is to make"
+    },
+    {
+      "start": 393.96,
+      "end": 399.44,
+      "text": "sure that we do not have any duplicate"
+    },
+    {
+      "start": 397.04,
+      "end": 401.68,
+      "text": "triplets how can we do that so we did"
+    },
+    {
+      "start": 399.44,
+      "end": 404.64,
+      "text": "see something like that something like"
+    },
+    {
+      "start": 401.68,
+      "end": 407.8,
+      "text": "if there's a minus one probably a two"
+    },
+    {
+      "start": 404.64,
+      "end": 410.76,
+      "text": "and probably a minus one so in order to"
+    },
+    {
+      "start": 407.8,
+      "end": 413.28,
+      "text": "make sure we do not store any duplicates"
+    },
+    {
+      "start": 410.76,
+      "end": 416.56,
+      "text": "what we can do is we can sort them out"
+    },
+    {
+      "start": 413.28,
+      "end": 419.36,
+      "text": "and we on sorting we will have Min -1 -1"
+    },
+    {
+      "start": 416.56,
+      "end": 421.16,
+      "text": "and 2 so once we have sorted them if I"
+    },
+    {
+      "start": 419.36,
+      "end": 424.64,
+      "text": "get any other triplet which is something"
+    },
+    {
+      "start": 421.16,
+      "end": 428.44,
+      "text": "like -1 -1 2 I can actually compare or"
+    },
+    {
+      "start": 424.64,
+      "end": 431.2,
+      "text": "even if I get like 2 -1 - one I can sort"
+    },
+    {
+      "start": 428.44,
+      "end": 433.28,
+      "text": "them and after sorting they will always"
+    },
+    {
+      "start": 431.2,
+      "end": 436.16,
+      "text": "be equivalent to this one which I have"
+    },
+    {
+      "start": 433.28,
+      "end": 438.6,
+      "text": "taken so what I'll do is I'll sort this"
+    },
+    {
+      "start": 436.16,
+      "end": 441.2,
+      "text": "particular triplet and I know if I have"
+    },
+    {
+      "start": 438.6,
+      "end": 444.6,
+      "text": "to store unique the data structure that"
+    },
+    {
+      "start": 441.2,
+      "end": 447.72,
+      "text": "we will use is set I put that thing into"
+    },
+    {
+      "start": 444.6,
+      "end": 449.72,
+      "text": "the set and any time A Triplet comes"
+    },
+    {
+      "start": 447.72,
+      "end": 452.08,
+      "text": "I'll always check are you in the set if"
+    },
+    {
+      "start": 449.72,
+      "end": 454.68,
+      "text": "you are no I'll not so this is how we"
+    },
+    {
+      "start": 452.08,
+      "end": 456.36,
+      "text": "can easily store all the unique triplets"
+    },
+    {
+      "start": 454.68,
+      "end": 458.32,
+      "text": "I'll show you the code now so let's"
+    },
+    {
+      "start": 456.36,
+      "end": 460.52,
+      "text": "quickly go into the code Ed and show you"
+    },
+    {
+      "start": 458.32,
+      "end": 462.64,
+      "text": "the Brute Force code so we know that we"
+    },
+    {
+      "start": 460.52,
+      "end": 464.6,
+      "text": "have to run three loops and all the"
+    },
+    {
+      "start": 462.64,
+      "end": 466.8,
+      "text": "driplets that give you the sum as zero"
+    },
+    {
+      "start": 464.6,
+      "end": 469.28,
+      "text": "that is what you have to store and the"
+    },
+    {
+      "start": 466.8,
+      "end": 472.16,
+      "text": "answer that we have to return should be"
+    },
+    {
+      "start": 469.28,
+      "end": 473.8,
+      "text": "a list of list so I'll probably store"
+    },
+    {
+      "start": 472.16,
+      "end": 476.08,
+      "text": "something like this okay now what I'll"
+    },
+    {
+      "start": 473.8,
+      "end": 478.6,
+      "text": "do is I have to store unique now"
+    },
+    {
+      "start": 476.08,
+      "end": 480.36,
+      "text": "probably I will store all the triplets"
+    },
+    {
+      "start": 478.6,
+      "end": 482.96,
+      "text": "in the form of VOR"
+    },
+    {
+      "start": 480.36,
+      "end": 485.6,
+      "text": "in a form of list so this is what I've"
+    },
+    {
+      "start": 482.96,
+      "end": 488.72,
+      "text": "done so I'll store everything in form of"
+    },
+    {
+      "start": 485.6,
+      "end": 492.76,
+      "text": "list so what I've done is if the triplet"
+    },
+    {
+      "start": 488.72,
+      "end": 496.2,
+      "text": "is min-1 -1 2 I will store them in a set"
+    },
+    {
+      "start": 492.76,
+      "end": 498.56,
+      "text": "data structure in a sorted fashion so"
+    },
+    {
+      "start": 496.2,
+      "end": 503.88,
+      "text": "probably I I'll do something like vector"
+    },
+    {
+      "start": 498.56,
+      "end": 507.08,
+      "text": "i d 10 equal to nums[i] nums[j] and"
+    },
+    {
+      "start": 503.88,
+      "end": 510.24,
+      "text": "num of K and then I can just sort this"
+    },
+    {
+      "start": 507.08,
+      "end": 512.76,
+      "text": "particular thing sort temp"
+    },
+    {
+      "start": 510.24,
+      "end": 517.0,
+      "text": "so I'll sort this particular list and"
+    },
+    {
+      "start": 512.76,
+      "end": 519.24,
+      "text": "once it is sorted I can say cool I know"
+    },
+    {
+      "start": 517.0,
+      "end": 521.6,
+      "text": "whatever is this like in whatever format"
+    },
+    {
+      "start": 519.24,
+      "end": 525.48,
+      "text": "is this this will always be in minus1"
+    },
+    {
+      "start": 521.6,
+      "end": 527.84,
+      "text": "minus1 2 now I'll say set can you please"
+    },
+    {
+      "start": 525.48,
+      "end": 529.88,
+      "text": "store it and it will always store all"
+    },
+    {
+      "start": 527.84,
+      "end": 531.84,
+      "text": "the unique ones so these three lines"
+    },
+    {
+      "start": 529.88,
+      "end": 534.36,
+      "text": "will make sure that every time the"
+    },
+    {
+      "start": 531.84,
+      "end": 536.72,
+      "text": "unique things are stored and then at the"
+    },
+    {
+      "start": 534.36,
+      "end": 539.84,
+      "text": "end I can say probably instead of"
+    },
+    {
+      "start": 536.72,
+      "end": 542.96,
+      "text": "declaring this here I just pick up this"
+    },
+    {
+      "start": 539.84,
+      "end": 546.52,
+      "text": "and I can say answer can you store in"
+    },
+    {
+      "start": 542.96,
+      "end": 550.12,
+      "text": "yourself everything from the set"
+    },
+    {
+      "start": 546.52,
+      "end": 553.64,
+      "text": "starting point to the set's ending point"
+    },
+    {
+      "start": 550.12,
+      "end": 556.48,
+      "text": "so since the this is this is list of"
+    },
+    {
+      "start": 553.64,
+      "end": 559.56,
+      "text": "list and the set is just containing the"
+    },
+    {
+      "start": 556.48,
+      "end": 562.0,
+      "text": "list all the list from the starting to"
+    },
+    {
+      "start": 559.56,
+      "end": 564.64,
+      "text": "the end will go to this answer then we"
+    },
+    {
+      "start": 562.0,
+      "end": 566.24,
+      "text": "can easily return this answer so this is"
+    },
+    {
+      "start": 564.64,
+      "end": 567.64,
+      "text": "how easily you can write the Brute Force"
+    },
+    {
+      "start": 566.24,
+      "end": 569.96,
+      "text": "code so if you try to submit this Brute"
+    },
+    {
+      "start": 567.64,
+      "end": 572.2,
+      "text": "Force code you'll get a time limit it"
+    },
+    {
+      "start": 569.96,
+      "end": 574.44,
+      "text": "why because the time complexity is"
+    },
+    {
+      "start": 572.2,
+      "end": 576.2,
+      "text": "somewhere near about B of n Cube cuz"
+    },
+    {
+      "start": 574.44,
+      "end": 579.88,
+      "text": "you're running three loops and"
+    },
+    {
+      "start": 576.2,
+      "end": 582.44,
+      "text": "logarithmic of number of unique triplets"
+    },
+    {
+      "start": 579.88,
+      "end": 584.44,
+      "text": "because we're using a set data structure"
+    },
+    {
+      "start": 582.44,
+      "end": 586.96,
+      "text": "in order to store all the unique Ones"
+    },
+    {
+      "start": 584.44,
+      "end": 589.48,
+      "text": "Will I consider this sorting we should"
+    },
+    {
+      "start": 586.96,
+      "end": 592.24,
+      "text": "not because it is hardly three elements"
+    },
+    {
+      "start": 589.48,
+      "end": 595.04,
+      "text": "and the time will be as good as constant"
+    },
+    {
+      "start": 592.24,
+      "end": 597.92,
+      "text": "so log if the set is taking logarithmic"
+    },
+    {
+      "start": 595.04,
+      "end": 600.28,
+      "text": "you can use unordered set as well what"
+    },
+    {
+      "start": 597.92,
+      "end": 602.84,
+      "text": "about the space complexity we are using"
+    },
+    {
+      "start": 600.28,
+      "end": 604.6,
+      "text": "a set in order to store all the triplets"
+    },
+    {
+      "start": 602.84,
+      "end": 606.48,
+      "text": "and we're using an answer array to store"
+    },
+    {
+      "start": 604.6,
+      "end": 609.2,
+      "text": "all the triplets right so it's like 2"
+    },
+    {
+      "start": 606.48,
+      "end": 610.84,
+      "text": "into B go of number of triplets again"
+    },
+    {
+      "start": 609.2,
+      "end": 613.16,
+      "text": "number of triplets is something which"
+    },
+    {
+      "start": 610.84,
+      "end": 614.88,
+      "text": "will vary on inputs and this is what you"
+    },
+    {
+      "start": 613.16,
+      "end": 616.28,
+      "text": "have to tell to the interviewer got it"
+    },
+    {
+      "start": 614.88,
+      "end": 618.16,
+      "text": "so with the Brute Force we using"
+    },
+    {
+      "start": 616.28,
+      "end": 620.08,
+      "text": "something like an N Cube and we also"
+    },
+    {
+      "start": 618.16,
+      "end": 621.72,
+      "text": "using an extra space of the set data"
+    },
+    {
+      "start": 620.08,
+      "end": 623.6,
+      "text": "structure for which the interview will"
+    },
+    {
+      "start": 621.72,
+      "end": 625.16,
+      "text": "not be happy this is where we will try"
+    },
+    {
+      "start": 623.6,
+      "end": 628.68,
+      "text": "to optimize The Brute to a better"
+    },
+    {
+      "start": 625.16,
+      "end": 630.92,
+      "text": "solution so n Cube has to be optimized"
+    },
+    {
+      "start": 628.68,
+      "end": 634.2,
+      "text": "and what can we optimize NQ we can"
+    },
+    {
+      "start": 630.92,
+      "end": 636.76,
+      "text": "probably optimize that to n² and if you"
+    },
+    {
+      "start": 634.2,
+      "end": 639.76,
+      "text": "remember we were having three Loops for"
+    },
+    {
+      "start": 636.76,
+      "end": 642.28,
+      "text": "i j and k that is why the complexity was"
+    },
+    {
+      "start": 639.76,
+      "end": 644.28,
+      "text": "NQ so if I have to do it somewhere near"
+    },
+    {
+      "start": 642.28,
+      "end": 646.4,
+      "text": "about n squ somewhere near about n"
+    },
+    {
+      "start": 644.28,
+      "end": 648.56,
+      "text": "Square how can we do that we have to get"
+    },
+    {
+      "start": 646.4,
+      "end": 650.28,
+      "text": "rid of this third Loop and that is where"
+    },
+    {
+      "start": 648.56,
+      "end": 652.36,
+      "text": "the thought process starts for the"
+    },
+    {
+      "start": 650.28,
+      "end": 653.92,
+      "text": "better solution so what I'll try to do"
+    },
+    {
+      "start": 652.36,
+      "end": 656.8,
+      "text": "is I'll try to get rid of this"
+    },
+    {
+      "start": 653.92,
+      "end": 659.48,
+      "text": "particular third Loop can I write this"
+    },
+    {
+      "start": 656.8,
+      "end": 662.48,
+      "text": "statement as the third element that I'm"
+    },
+    {
+      "start": 659.48,
+      "end": 666.2,
+      "text": "looking for is definitely AR of K and"
+    },
+    {
+      "start": 662.48,
+      "end": 668.76,
+      "text": "that's equivalent to minus of arr[i]"
+    },
+    {
+      "start": 666.2,
+      "end": 671.92,
+      "text": "plus array of G can I see this simple"
+    },
+    {
+      "start": 668.76,
+      "end": 674.36,
+      "text": "mathematics if I take this to the other"
+    },
+    {
+      "start": 671.92,
+      "end": 676.96,
+      "text": "side it will be minus of this if I take"
+    },
+    {
+      "start": 674.36,
+      "end": 678.96,
+      "text": "the minus common because this is plus"
+    },
+    {
+      "start": 676.96,
+      "end": 680.88,
+      "text": "this is plus so both of them will be"
+    },
+    {
+      "start": 678.96,
+      "end": 683.48,
+      "text": "minus and I take the minus common so"
+    },
+    {
+      "start": 680.88,
+      "end": 685.72,
+      "text": "what I'm looking for is if I can run a"
+    },
+    {
+      "start": 683.48,
+      "end": 688.44,
+      "text": "loop for I and J if I can run a loop for"
+    },
+    {
+      "start": 685.72,
+      "end": 691.72,
+      "text": "I and J let me give you an example so if"
+    },
+    {
+      "start": 688.44,
+      "end": 695.24,
+      "text": "I is this as of now which is"
+    },
+    {
+      "start": 691.72,
+      "end": 698.0,
+      "text": "-1 and imagine if you're taking this"
+    },
+    {
+      "start": 695.24,
+      "end": 699.72,
+      "text": "minus one so that's minus1 for any of J"
+    },
+    {
+      "start": 698.0,
+      "end": 703.4,
+      "text": "so I know the third element that I'm"
+    },
+    {
+      "start": 699.72,
+      "end": 705.92,
+      "text": "looking for is minus of arr[i] which"
+    },
+    {
+      "start": 703.4,
+      "end": 709.8,
+      "text": "is minus and array of G which is minus1"
+    },
+    {
+      "start": 705.92,
+      "end": 712.6,
+      "text": "so that gives me minus of min-2 that's"
+    },
+    {
+      "start": 709.8,
+      "end": 715.04,
+      "text": "+2 so I'm actually looking for + two if"
+    },
+    {
+      "start": 712.6,
+      "end": 716.88,
+      "text": "I'm standing here and I'm standing here"
+    },
+    {
+      "start": 715.04,
+      "end": 719.56,
+      "text": "I'm looking for is there a plus two in"
+    },
+    {
+      "start": 716.88,
+      "end": 722.44,
+      "text": "the array and I know there is one so I"
+    },
+    {
+      "start": 719.56,
+      "end": 724.52,
+      "text": "say yes we can form a triplet but in"
+    },
+    {
+      "start": 722.44,
+      "end": 727.8,
+      "text": "order to look for this plus two in the"
+    },
+    {
+      "start": 724.52,
+      "end": 729.96,
+      "text": "array what technique yes the better"
+    },
+    {
+      "start": 727.8,
+      "end": 732.52,
+      "text": "solution will be using the technique"
+    },
+    {
+      "start": 729.96,
+      "end": 734.96,
+      "text": "hashing so the best way to look up for"
+    },
+    {
+      "start": 732.52,
+      "end": 737.24,
+      "text": "this plus two in this array without"
+    },
+    {
+      "start": 734.96,
+      "end": 740.56,
+      "text": "traving is definitely hashing because it"
+    },
+    {
+      "start": 737.24,
+      "end": 742.32,
+      "text": "does it in logarithmic or constant time"
+    },
+    {
+      "start": 740.56,
+      "end": 744.08,
+      "text": "so this is why the better solution will"
+    },
+    {
+      "start": 742.32,
+      "end": 746.0,
+      "text": "be using hashing now let's quickly do a"
+    },
+    {
+      "start": 744.08,
+      "end": 747.96,
+      "text": "dry down of the hashing solution that I"
+    },
+    {
+      "start": 746.0,
+      "end": 749.6,
+      "text": "am talking about so while writing the"
+    },
+    {
+      "start": 747.96,
+      "end": 751.72,
+      "text": "algorithm or code for this one we have"
+    },
+    {
+      "start": 749.6,
+      "end": 754.48,
+      "text": "to be critical about one thing all the"
+    },
+    {
+      "start": 751.72,
+      "end": 756.72,
+      "text": "three elements are different so while"
+    },
+    {
+      "start": 754.48,
+      "end": 759.48,
+      "text": "implementing hashing we cannot just"
+    },
+    {
+      "start": 756.72,
+      "end": 762.48,
+      "text": "implement the entire array into a set or"
+    },
+    {
+      "start": 759.48,
+      "end": 765.16,
+      "text": "a map data structure why imagine you"
+    },
+    {
+      "start": 762.48,
+      "end": 768.0,
+      "text": "have taken this to as arr[i] and"
+    },
+    {
+      "start": 765.16,
+      "end": 770.8,
+      "text": "you've taken this minus 4 as array of J"
+    },
+    {
+      "start": 768.0,
+      "end": 773.48,
+      "text": "so apparently if you remember the"
+    },
+    {
+      "start": 770.8,
+      "end": 777.48,
+      "text": "formula it was minus of arr[i] plus"
+    },
+    {
+      "start": 773.48,
+      "end": 779.72,
+      "text": "array of J so what you look for is this"
+    },
+    {
+      "start": 777.48,
+      "end": 781.88,
+      "text": "you look for plus two in the array and"
+    },
+    {
+      "start": 779.72,
+      "end": 784.28,
+      "text": "you'll get that plus two over here which"
+    },
+    {
+      "start": 781.88,
+      "end": 787.24,
+      "text": "is wrong because you cannot pick up one"
+    },
+    {
+      "start": 784.28,
+      "end": 789.64,
+      "text": "element twice so you have to be mindful"
+    },
+    {
+      "start": 787.24,
+      "end": 792.2,
+      "text": "that if you're looking for plus two in"
+    },
+    {
+      "start": 789.64,
+      "end": 795.0,
+      "text": "the in the array then we have to be sure"
+    },
+    {
+      "start": 792.2,
+      "end": 797.56,
+      "text": "that it is not the current two and"
+    },
+    {
+      "start": 795.0,
+      "end": 800.76,
+      "text": "current minus 4 that you have taken for"
+    },
+    {
+      "start": 797.56,
+      "end": 802.76,
+      "text": "arr[i] and array of J it has to be"
+    },
+    {
+      "start": 800.76,
+      "end": 805.24,
+      "text": "someone different from that that has to"
+    },
+    {
+      "start": 802.76,
+      "end": 808.4,
+      "text": "be kept in mind how can we do that that"
+    },
+    {
+      "start": 805.24,
+      "end": 810.6,
+      "text": "is very simple imagine you are at minus1"
+    },
+    {
+      "start": 808.4,
+      "end": 813.32,
+      "text": "imagine you at minus one so what you"
+    },
+    {
+      "start": 810.6,
+      "end": 817.32,
+      "text": "will do is you'll just keep these"
+    },
+    {
+      "start": 813.32,
+      "end": 819.24,
+      "text": "elements in the hash map yes you'll just"
+    },
+    {
+      "start": 817.32,
+      "end": 821.16,
+      "text": "keep these elements in the hash map and"
+    },
+    {
+      "start": 819.24,
+      "end": 823.84,
+      "text": "you'll say minus one okay you'll say"
+    },
+    {
+      "start": 821.16,
+      "end": 827.92,
+      "text": "minus one okay and then a minus of it so"
+    },
+    {
+      "start": 823.84,
+      "end": 830.68,
+      "text": "minus of this -2 is +2 now you look for"
+    },
+    {
+      "start": 827.92,
+      "end": 833.88,
+      "text": "plus two and you'll find it so you will"
+    },
+    {
+      "start": 830.68,
+      "end": 836.56,
+      "text": "avoid duplication how to do this let me"
+    },
+    {
+      "start": 833.88,
+      "end": 840.28,
+      "text": "show you Dr so what I'll do is at first"
+    },
+    {
+      "start": 836.56,
+      "end": 842.88,
+      "text": "I'll take a hash set okay"
+    },
+    {
+      "start": 840.28,
+      "end": 846.56,
+      "text": "and I'll start my I and G Loop first I"
+    },
+    {
+      "start": 842.88,
+      "end": 849.2,
+      "text": "will be here and G will be here okay"
+    },
+    {
+      "start": 846.56,
+      "end": 852.4,
+      "text": "this time the hash set is empty but I'll"
+    },
+    {
+      "start": 849.2,
+      "end": 855.12,
+      "text": "take if you remember the formula for the"
+    },
+    {
+      "start": 852.4,
+      "end": 857.6,
+      "text": "third element it's arr[i] plus array"
+    },
+    {
+      "start": 855.12,
+      "end": 859.44,
+      "text": "of G this is what the third element was"
+    },
+    {
+      "start": 857.6,
+      "end": 863.64,
+      "text": "if you remember so I'm looking for the"
+    },
+    {
+      "start": 859.44,
+      "end": 867.28,
+      "text": "third element so what is AR of I -1 plus"
+    },
+    {
+      "start": 863.64,
+      "end": 870.96,
+      "text": "0 minus so this is min-1 and this is +"
+    },
+    {
+      "start": 867.28,
+      "end": 872.88,
+      "text": "one is + one in the said no so what"
+    },
+    {
+      "start": 870.96,
+      "end": 874.08,
+      "text": "you'll do is you'll go ahead and you'll"
+    },
+    {
+      "start": 872.88,
+      "end": 878.12,
+      "text": "move this"
+    },
+    {
+      "start": 874.08,
+      "end": 880.64,
+      "text": "J but before moving just take this zero"
+    },
+    {
+      "start": 878.12,
+      "end": 883.48,
+      "text": "and put it into your hashm done this"
+    },
+    {
+      "start": 880.64,
+      "end": 886.76,
+      "text": "time when you try you'll get minus one +"
+    },
+    {
+      "start": 883.48,
+      "end": 889.56,
+      "text": "one and a minus of it so -1 + 1 is 0 so"
+    },
+    {
+      "start": 886.76,
+      "end": 893.0,
+      "text": "you get zero and the hash said there is"
+    },
+    {
+      "start": 889.56,
+      "end": 896.28,
+      "text": "a zero so apply I got a triplet as minus"
+    },
+    {
+      "start": 893.0,
+      "end": 898.48,
+      "text": "one one and zero from the hash set I can"
+    },
+    {
+      "start": 896.28,
+      "end": 902.24,
+      "text": "sort it then I can store it again"
+    },
+    {
+      "start": 898.48,
+      "end": 905.44,
+      "text": "something like like -1 0 and 1 so this"
+    },
+    {
+      "start": 902.24,
+      "end": 907.88,
+      "text": "is one of my answers perfect next I'll"
+    },
+    {
+      "start": 905.44,
+      "end": 909.8,
+      "text": "move but before that please put on one"
+    },
+    {
+      "start": 907.88,
+      "end": 912.24,
+      "text": "and then move let's"
+    },
+    {
+      "start": 909.8,
+      "end": 913.76,
+      "text": "move so if you carefully see what I'm"
+    },
+    {
+      "start": 912.24,
+      "end": 916.36,
+      "text": "doing is I'm standing at here I'm"
+    },
+    {
+      "start": 913.76,
+      "end": 918.8,
+      "text": "standing at here everything on this"
+    },
+    {
+      "start": 916.36,
+      "end": 921.16,
+      "text": "thing is in the Cent this time I have a"
+    },
+    {
+      "start": 918.8,
+      "end": 923.96,
+      "text": "minus one and a two so I'll say okay"
+    },
+    {
+      "start": 921.16,
+      "end": 927.28,
+      "text": "let's take minus one let's take + two"
+    },
+    {
+      "start": 923.96,
+      "end": 929.32,
+      "text": "which makes it how much uh that's + one"
+    },
+    {
+      "start": 927.28,
+      "end": 932.48,
+      "text": "and a minus to it will be minus one is"
+    },
+    {
+      "start": 929.32,
+      "end": 934.68,
+      "text": "minus one in the set no so I'll move but"
+    },
+    {
+      "start": 932.48,
+      "end": 938.48,
+      "text": "before that please put up two and then"
+    },
+    {
+      "start": 934.68,
+      "end": 940.4,
+      "text": "you can move let's move this time again"
+    },
+    {
+      "start": 938.48,
+      "end": 943.12,
+      "text": "let's carefully observe you have a minus"
+    },
+    {
+      "start": 940.4,
+      "end": 946.56,
+      "text": "one and you have a minus one so how much"
+    },
+    {
+      "start": 943.12,
+      "end": 949.16,
+      "text": "does this give min-2 and a minus outside"
+    },
+    {
+      "start": 946.56,
+      "end": 951.52,
+      "text": "+ two is there a minus two there is"
+    },
+    {
+      "start": 949.16,
+      "end": 953.6,
+      "text": "there is so one more created again"
+    },
+    {
+      "start": 951.52,
+      "end": 955.92,
+      "text": "carefully observe all the three elements"
+    },
+    {
+      "start": 953.6,
+      "end": 957.8,
+      "text": "are in the set so what you'll do is you"
+    },
+    {
+      "start": 955.92,
+      "end": 960.04,
+      "text": "will say there is one more and you can"
+    },
+    {
+      "start": 957.8,
+      "end": 962.6,
+      "text": "again write it in a sorting order in a"
+    },
+    {
+      "start": 960.04,
+      "end": 965.96,
+      "text": "set perfect that next I'll put this"
+    },
+    {
+      "start": 962.6,
+      "end": 968.8,
+      "text": "minus one in the set and I'll move the J"
+    },
+    {
+      "start": 965.96,
+      "end": 973.68,
+      "text": "this time when I move the J I'm at 4 - 4"
+    },
+    {
+      "start": 968.8,
+      "end": 977.96,
+      "text": "so -1 and -4 is - 5 or minus of that is"
+    },
+    {
+      "start": 973.68,
+      "end": 980.2,
+      "text": "+ 5 is the + 5 no so once the J reaches"
+    },
+    {
+      "start": 977.96,
+      "end": 984.16,
+      "text": "over here can I say one thing for sure"
+    },
+    {
+      "start": 980.2,
+      "end": 985.84,
+      "text": "all the triplets with minus one as I are"
+    },
+    {
+      "start": 984.16,
+      "end": 987.68,
+      "text": "done because I've tried out all the"
+    },
+    {
+      "start": 985.84,
+      "end": 990.68,
+      "text": "second elements I've got kind of the"
+    },
+    {
+      "start": 987.68,
+      "end": 993.08,
+      "text": "third element so done so this time I can"
+    },
+    {
+      "start": 990.68,
+      "end": 995.68,
+      "text": "say the journey is over but probably"
+    },
+    {
+      "start": 993.08,
+      "end": 998.2,
+      "text": "this element can be my first maybe"
+    },
+    {
+      "start": 995.68,
+      "end": 1002.16,
+      "text": "therefore will be my second this this"
+    },
+    {
+      "start": 998.2,
+      "end": 1004.32,
+      "text": "this this maybe so but if I keep"
+    },
+    {
+      "start": 1002.16,
+      "end": 1006.92,
+      "text": "everything in the haset it'll be a raw"
+    },
+    {
+      "start": 1004.32,
+      "end": 1009.2,
+      "text": "so what I'll do is I'll M along with"
+    },
+    {
+      "start": 1006.92,
+      "end": 1011.92,
+      "text": "everything and I'll start the J from"
+    },
+    {
+      "start": 1009.2,
+      "end": 1014.28,
+      "text": "here again the set is empty so we'll"
+    },
+    {
+      "start": 1011.92,
+      "end": 1017.2,
+      "text": "again start with 01 0 + 1 and we'll"
+    },
+    {
+      "start": 1014.28,
+      "end": 1019.64,
+      "text": "again find no one and then we move but"
+    },
+    {
+      "start": 1017.2,
+      "end": 1022.8,
+      "text": "before moving take this one and this"
+    },
+    {
+      "start": 1019.64,
+      "end": 1026.96,
+      "text": "time have this this time what you get is"
+    },
+    {
+      "start": 1022.8,
+      "end": 1030.68,
+      "text": "0 + 2 which is min-2 and that's not in"
+    },
+    {
+      "start": 1026.96,
+      "end": 1032.6,
+      "text": "the set just put up two and move and"
+    },
+    {
+      "start": 1030.68,
+      "end": 1035.0,
+      "text": "when you move you will be here which is"
+    },
+    {
+      "start": 1032.6,
+      "end": 1037.24,
+      "text": "nothing but minus one so this time"
+    },
+    {
+      "start": 1035.0,
+      "end": 1039.16,
+      "text": "carefully see you are at zero you are at"
+    },
+    {
+      "start": 1037.24,
+      "end": 1044.0,
+      "text": "minus one and you have a minus so what"
+    },
+    {
+      "start": 1039.16,
+      "end": 1047.68,
+      "text": "you get is + one and + one is in the set"
+    },
+    {
+      "start": 1044.0,
+      "end": 1051.68,
+      "text": "but that will be a triplet of"
+    },
+    {
+      "start": 1047.68,
+      "end": 1054.36,
+      "text": "one see Z Sorry by the way I'm mistaken"
+    },
+    {
+      "start": 1051.68,
+      "end": 1056.08,
+      "text": "it's Zer for this it's minus one for the"
+    },
+    {
+      "start": 1054.36,
+      "end": 1058.04,
+      "text": "second the third one comes from here"
+    },
+    {
+      "start": 1056.08,
+      "end": 1059.68,
+      "text": "which is one so basically this one this"
+    },
+    {
+      "start": 1058.04,
+      "end": 1062.08,
+      "text": "one and this one have been written but"
+    },
+    {
+      "start": 1059.68,
+      "end": 1065.64,
+      "text": "if you sort them up you'll get min -1 0"
+    },
+    {
+      "start": 1062.08,
+      "end": 1067.28,
+      "text": "1 which is already there so the set will"
+    },
+    {
+      "start": 1065.64,
+      "end": 1069.52,
+      "text": "make sure you only stored the unique"
+    },
+    {
+      "start": 1067.28,
+      "end": 1071.44,
+      "text": "ones the answer set will make sure all"
+    },
+    {
+      "start": 1069.52,
+      "end": 1073.24,
+      "text": "right and similarly you can move ahead"
+    },
+    {
+      "start": 1071.44,
+      "end": 1074.96,
+      "text": "and in the next step I will move here in"
+    },
+    {
+      "start": 1073.24,
+      "end": 1077.08,
+      "text": "the next step I will move here and you"
+    },
+    {
+      "start": 1074.96,
+      "end": 1079.6,
+      "text": "can keep on doing this till I doesn't"
+    },
+    {
+      "start": 1077.08,
+      "end": 1080.92,
+      "text": "reaches the end and this is a how easily"
+    },
+    {
+      "start": 1079.6,
+      "end": 1083.72,
+      "text": "you can do this so this is how the"
+    },
+    {
+      "start": 1080.92,
+      "end": 1085.64,
+      "text": "algorithm will be I will use just two"
+    },
+    {
+      "start": 1083.72,
+      "end": 1088.08,
+      "text": "Loops for I and J and for the third"
+    },
+    {
+      "start": 1085.64,
+      "end": 1089.72,
+      "text": "element which is this I try to find it"
+    },
+    {
+      "start": 1088.08,
+      "end": 1091.28,
+      "text": "in the set data structure I'll show you"
+    },
+    {
+      "start": 1089.72,
+      "end": 1092.92,
+      "text": "the code let's quickly jump into the"
+    },
+    {
+      "start": 1091.28,
+      "end": 1096.0,
+      "text": "code editor and as you can see I've"
+    },
+    {
+      "start": 1092.92,
+      "end": 1098.2,
+      "text": "written some pre code so initially I'll"
+    },
+    {
+      "start": 1096.0,
+      "end": 1099.6,
+      "text": "declare a set of list because we have to"
+    },
+    {
+      "start": 1098.2,
+      "end": 1102.04,
+      "text": "store all the triplets and we have to"
+    },
+    {
+      "start": 1099.6,
+      "end": 1103.48,
+      "text": "make sure that those all are unique and"
+    },
+    {
+      "start": 1102.04,
+      "end": 1105.64,
+      "text": "then we know we have to run a loop for"
+    },
+    {
+      "start": 1103.48,
+      "end": 1108.04,
+      "text": "the first and then for the second and at"
+    },
+    {
+      "start": 1105.64,
+      "end": 1109.28,
+      "text": "the end uh all the all those lists will"
+    },
+    {
+      "start": 1108.04,
+      "end": 1111.2,
+      "text": "be converted"
+    },
+    {
+      "start": 1109.28,
+      "end": 1113.52,
+      "text": "and put into a list of list and that is"
+    },
+    {
+      "start": 1111.2,
+      "end": 1115.76,
+      "text": "what we will return so running two Loops"
+    },
+    {
+      "start": 1113.52,
+      "end": 1118.6,
+      "text": "so if you remember something initially I"
+    },
+    {
+      "start": 1115.76,
+      "end": 1121.4,
+      "text": "was over here and J was over here and"
+    },
+    {
+      "start": 1118.6,
+      "end": 1123.84,
+      "text": "the set this set did not have anything"
+    },
+    {
+      "start": 1121.4,
+      "end": 1126.4,
+      "text": "right and then when J moved here it just"
+    },
+    {
+      "start": 1123.84,
+      "end": 1127.84,
+      "text": "picked up this and stored and then"
+    },
+    {
+      "start": 1126.4,
+      "end": 1129.68,
+      "text": "eventually When J moved here it picked"
+    },
+    {
+      "start": 1127.84,
+      "end": 1132.8,
+      "text": "up this and stored and it kept on"
+    },
+    {
+      "start": 1129.68,
+      "end": 1135.44,
+      "text": "storing and after that when I moved here"
+    },
+    {
+      "start": 1132.8,
+      "end": 1138.0,
+      "text": "the set was again empty so I know one"
+    },
+    {
+      "start": 1135.44,
+      "end": 1140.92,
+      "text": "thing whenever I starts whenever I"
+    },
+    {
+      "start": 1138.0,
+      "end": 1143.12,
+      "text": "change the first position the set has to"
+    },
+    {
+      "start": 1140.92,
+      "end": 1145.28,
+      "text": "start from an empty one that is why I'm"
+    },
+    {
+      "start": 1143.12,
+      "end": 1147.84,
+      "text": "declaring it after the form Loop so"
+    },
+    {
+      "start": 1145.28,
+      "end": 1151.36,
+      "text": "every time it reinitializes whenever I"
+    },
+    {
+      "start": 1147.84,
+      "end": 1152.96,
+      "text": "is incremented and every time G moves I"
+    },
+    {
+      "start": 1151.36,
+      "end": 1155.88,
+      "text": "have to accumulate yes I have to"
+    },
+    {
+      "start": 1152.96,
+      "end": 1157.48,
+      "text": "accumulate that element into my set"
+    },
+    {
+      "start": 1155.88,
+      "end": 1159.68,
+      "text": "perfect this is something I know for"
+    },
+    {
+      "start": 1157.48,
+      "end": 1161.6,
+      "text": "sure now I know one thing for sure what"
+    },
+    {
+      "start": 1159.68,
+      "end": 1165.2,
+      "text": "is the third element third element is"
+    },
+    {
+      "start": 1161.6,
+      "end": 1168.2,
+      "text": "nothing but minus of nums[i] plus num"
+    },
+    {
+      "start": 1165.2,
+      "end": 1169.44,
+      "text": "of J correct I have to find that in this"
+    },
+    {
+      "start": 1168.2,
+      "end": 1171.8,
+      "text": "particular hash"
+    },
+    {
+      "start": 1169.44,
+      "end": 1176.76,
+      "text": "I and J in between them yes so what I'll"
+    },
+    {
+      "start": 1171.8,
+      "end": 1178.6,
+      "text": "do is if has set. find third is not"
+    },
+    {
+      "start": 1176.76,
+      "end": 1180.32,
+      "text": "equal to because if it is not pointing"
+    },
+    {
+      "start": 1178.6,
+      "end": 1184.76,
+      "text": "to the end it means it is there in the"
+    },
+    {
+      "start": 1180.32,
+      "end": 1186.84,
+      "text": "set if it is can I say this is a triplet"
+    },
+    {
+      "start": 1184.76,
+      "end": 1190.36,
+      "text": "and what is the triplet triplet is n of"
+    },
+    {
+      "start": 1186.84,
+      "end": 1192.4,
+      "text": "i n of J and third I can definitely say"
+    },
+    {
+      "start": 1190.36,
+      "end": 1195.24,
+      "text": "that and then I just need to sort it so"
+    },
+    {
+      "start": 1192.4,
+      "end": 1197.64,
+      "text": "let's quickly sort"
+    },
+    {
+      "start": 1195.24,
+      "end": 1200.44,
+      "text": "it once I sorted it what's the next"
+    },
+    {
+      "start": 1197.64,
+      "end": 1203.2,
+      "text": "thing let's put that in the answer of"
+    },
+    {
+      "start": 1200.44,
+      "end": 1205.92,
+      "text": "set and that will make sure it s unique"
+    },
+    {
+      "start": 1203.2,
+      "end": 1207.88,
+      "text": "and then I can easily return it so"
+    },
+    {
+      "start": 1205.92,
+      "end": 1209.24,
+      "text": "probably this is a spelling typo and"
+    },
+    {
+      "start": 1207.88,
+      "end": 1210.8,
+      "text": "everything is fine let's quickly run it"
+    },
+    {
+      "start": 1209.24,
+      "end": 1212.88,
+      "text": "off and see if it is running fine so"
+    },
+    {
+      "start": 1210.8,
+      "end": 1214.56,
+      "text": "you'll see that this is getting accepted"
+    },
+    {
+      "start": 1212.88,
+      "end": 1217.68,
+      "text": "and a lot of compilers it might give you"
+    },
+    {
+      "start": 1214.56,
+      "end": 1220.08,
+      "text": "D but I'll just analyze the time goity"
+    },
+    {
+      "start": 1217.68,
+      "end": 1222.52,
+      "text": "is somewhere about n squ because of"
+    },
+    {
+      "start": 1220.08,
+      "end": 1224.88,
+      "text": "these couple of Loops because n and n"
+    },
+    {
+      "start": 1222.52,
+      "end": 1228.2,
+      "text": "and not exactly n squ somewhere about n"
+    },
+    {
+      "start": 1224.88,
+      "end": 1232.24,
+      "text": "squ and we're using a set data structure"
+    },
+    {
+      "start": 1228.2,
+      "end": 1235.4,
+      "text": "to find every time so it is it is kind"
+    },
+    {
+      "start": 1232.24,
+      "end": 1238.32,
+      "text": "of similar to n s login can I say this"
+    },
+    {
+      "start": 1235.4,
+      "end": 1242.48,
+      "text": "so the time complexity will be n s near"
+    },
+    {
+      "start": 1238.32,
+      "end": 1244.0,
+      "text": "V and logarithmic of size of the set"
+    },
+    {
+      "start": 1242.48,
+      "end": 1247.36,
+      "text": "initially the size of the set can be"
+    },
+    {
+      "start": 1244.0,
+      "end": 1249.92,
+      "text": "just one and then it becomes two then it"
+    },
+    {
+      "start": 1247.36,
+      "end": 1252.4,
+      "text": "has three elements then it has four so"
+    },
+    {
+      "start": 1249.92,
+      "end": 1255.6,
+      "text": "this log I write it write it as M it's"
+    },
+    {
+      "start": 1252.4,
+      "end": 1257.52,
+      "text": "not exactly it it is M which is variable"
+    },
+    {
+      "start": 1255.6,
+      "end": 1260.2,
+      "text": "for the first time it just has zero then"
+    },
+    {
+      "start": 1257.52,
+      "end": 1262.68,
+      "text": "it will have one so size of the set is"
+    },
+    {
+      "start": 1260.2,
+      "end": 1264.72,
+      "text": "varying again this logarithmic can be"
+    },
+    {
+      "start": 1262.68,
+      "end": 1267.36,
+      "text": "treated as constant if you're using"
+    },
+    {
+      "start": 1264.72,
+      "end": 1269.84,
+      "text": "something like an unordered set so I can"
+    },
+    {
+      "start": 1267.36,
+      "end": 1271.72,
+      "text": "say near n Square yes what about the"
+    },
+    {
+      "start": 1269.84,
+      "end": 1275.32,
+      "text": "space complexity I'm using this"
+    },
+    {
+      "start": 1271.72,
+      "end": 1278.56,
+      "text": "particular hash set every time for the"
+    },
+    {
+      "start": 1275.32,
+      "end": 1281.52,
+      "text": "first time it might end up storing 1 2 3"
+    },
+    {
+      "start": 1278.56,
+      "end": 1283.68,
+      "text": "4 four or five elements next time it"
+    },
+    {
+      "start": 1281.52,
+      "end": 1287.36,
+      "text": "will store 1 2 3 4 next time it will"
+    },
+    {
+      "start": 1283.68,
+      "end": 1291.48,
+      "text": "store 1 2 but at the max at the max it"
+    },
+    {
+      "start": 1287.36,
+      "end": 1293.56,
+      "text": "will store 1 2 3 4 5 when I is here and"
+    },
+    {
+      "start": 1291.48,
+      "end": 1295.8,
+      "text": "J is here at the max it will store all"
+    },
+    {
+      "start": 1293.56,
+      "end": 1297.92,
+      "text": "the elements which is near about all the"
+    },
+    {
+      "start": 1295.8,
+      "end": 1300.28,
+      "text": "elements of the array so I can say we"
+    },
+    {
+      "start": 1297.92,
+      "end": 1304.08,
+      "text": "are using a b go of N and we repeatedly"
+    },
+    {
+      "start": 1300.28,
+      "end": 1307.48,
+      "text": "using the same hash set and also we"
+    },
+    {
+      "start": 1304.08,
+      "end": 1310.56,
+      "text": "using our set to store all the answers"
+    },
+    {
+      "start": 1307.48,
+      "end": 1313.16,
+      "text": "which is again number of unique triplets"
+    },
+    {
+      "start": 1310.56,
+      "end": 1315.96,
+      "text": "into two why because we also using a"
+    },
+    {
+      "start": 1313.16,
+      "end": 1318.8,
+      "text": "list of list which returns all the"
+    },
+    {
+      "start": 1315.96,
+      "end": 1321.96,
+      "text": "answer so twice off this because we're"
+    },
+    {
+      "start": 1318.8,
+      "end": 1325.0,
+      "text": "using still a external data structure in"
+    },
+    {
+      "start": 1321.96,
+      "end": 1327.04,
+      "text": "order to get all the unique triplets"
+    },
+    {
+      "start": 1325.0,
+      "end": 1329.84,
+      "text": "this external data structure is what the"
+    },
+    {
+      "start": 1327.04,
+      "end": 1331.72,
+      "text": "interview might not like might be okay"
+    },
+    {
+      "start": 1329.84,
+      "end": 1334.24,
+      "text": "with the time complexity because n"
+    },
+    {
+      "start": 1331.72,
+      "end": 1336.36,
+      "text": "square is somewhere what he might have"
+    },
+    {
+      "start": 1334.24,
+      "end": 1338.12,
+      "text": "expected so you have got it nearly but I"
+    },
+    {
+      "start": 1336.36,
+      "end": 1340.48,
+      "text": "might still now ask you to get rid of"
+    },
+    {
+      "start": 1338.12,
+      "end": 1342.32,
+      "text": "this external data structure and this is"
+    },
+    {
+      "start": 1340.48,
+      "end": 1343.8,
+      "text": "where the optimal solution comes in so"
+    },
+    {
+      "start": 1342.32,
+      "end": 1345.28,
+      "text": "in both the brute and better solution we"
+    },
+    {
+      "start": 1343.8,
+      "end": 1347.56,
+      "text": "were using something like a set data"
+    },
+    {
+      "start": 1345.28,
+      "end": 1349.88,
+      "text": "structure which was helping us to get"
+    },
+    {
+      "start": 1347.56,
+      "end": 1352.88,
+      "text": "all the unique triplets because it was"
+    },
+    {
+      "start": 1349.88,
+      "end": 1355.16,
+      "text": "filtering out all the duplicates and how"
+    },
+    {
+      "start": 1352.88,
+      "end": 1358.76,
+      "text": "are we doing it basically if the triplet"
+    },
+    {
+      "start": 1355.16,
+      "end": 1361.64,
+      "text": "generated was something like 0 -1 1 we"
+    },
+    {
+      "start": 1358.76,
+      "end": 1364.24,
+      "text": "were trying to sort it and that gave us"
+    },
+    {
+      "start": 1361.64,
+      "end": 1366.52,
+      "text": "min-1 0 and 1 and then we were putting"
+    },
+    {
+      "start": 1364.24,
+      "end": 1368.8,
+      "text": "that into a set data structure now we"
+    },
+    {
+      "start": 1366.52,
+      "end": 1371.8,
+      "text": "have to get rid of this set data"
+    },
+    {
+      "start": 1368.8,
+      "end": 1376.24,
+      "text": "structure so we will try to do the"
+    },
+    {
+      "start": 1371.8,
+      "end": 1378.84,
+      "text": "reverse we were sorting the triplet and"
+    },
+    {
+      "start": 1376.24,
+      "end": 1381.72,
+      "text": "then storing it into the set what what I"
+    },
+    {
+      "start": 1378.84,
+      "end": 1384.2,
+      "text": "will try to do is I will the same try to"
+    },
+    {
+      "start": 1381.72,
+      "end": 1386.36,
+      "text": "sort this particular array yes I'll try"
+    },
+    {
+      "start": 1384.2,
+      "end": 1389.72,
+      "text": "to sort this particular"
+    },
+    {
+      "start": 1386.36,
+      "end": 1392.04,
+      "text": "array and then I'll try to formulate"
+    },
+    {
+      "start": 1389.72,
+      "end": 1394.12,
+      "text": "algorithm so that I just get all the"
+    },
+    {
+      "start": 1392.04,
+      "end": 1396.28,
+      "text": "unique triplets and I do not require an"
+    },
+    {
+      "start": 1394.12,
+      "end": 1398.48,
+      "text": "external data structure to filter out"
+    },
+    {
+      "start": 1396.28,
+      "end": 1400.36,
+      "text": "the duplicates so the Sorting of the"
+    },
+    {
+      "start": 1398.48,
+      "end": 1401.92,
+      "text": "array is something that I'll do at first"
+    },
+    {
+      "start": 1400.36,
+      "end": 1404.6,
+      "text": "in order to explain you the algorithm"
+    },
+    {
+      "start": 1401.92,
+      "end": 1407.04,
+      "text": "I've taken an bigger example and this is"
+    },
+    {
+      "start": 1404.6,
+      "end": 1409.28,
+      "text": "a sorted array why do we require a"
+    },
+    {
+      "start": 1407.04,
+      "end": 1411.24,
+      "text": "sorted array as I about the algorithm"
+    },
+    {
+      "start": 1409.28,
+      "end": 1414.44,
+      "text": "you'll understand it so the algorithm"
+    },
+    {
+      "start": 1411.24,
+      "end": 1415.8,
+      "text": "will be a two-pointer approach a very"
+    },
+    {
+      "start": 1414.44,
+      "end": 1418.88,
+      "text": "very straightforward two-pointer"
+    },
+    {
+      "start": 1415.8,
+      "end": 1423.76,
+      "text": "approach so what am I looking for I'm"
+    },
+    {
+      "start": 1418.88,
+      "end": 1426.04,
+      "text": "looking for arr[i] plus array of J"
+    },
+    {
+      "start": 1423.76,
+      "end": 1428.2,
+      "text": "plus array of K okay this is what I'm"
+    },
+    {
+      "start": 1426.04,
+      "end": 1431.2,
+      "text": "looking for this time what I'll do is"
+    },
+    {
+      "start": 1428.2,
+      "end": 1434.48,
+      "text": "I'll say Hey listen I'll probably fix"
+    },
+    {
+      "start": 1431.2,
+      "end": 1437.36,
+      "text": "the eye so what I do is I fix the I over"
+    },
+    {
+      "start": 1434.48,
+      "end": 1440.24,
+      "text": "here okay and now I'm at I'm looking for"
+    },
+    {
+      "start": 1437.36,
+      "end": 1444.52,
+      "text": "J and I'm looking looking for K what I"
+    },
+    {
+      "start": 1440.24,
+      "end": 1447.0,
+      "text": "know for sure is this is entirely in a"
+    },
+    {
+      "start": 1444.52,
+      "end": 1449.32,
+      "text": "sorted order this is in done in a"
+    },
+    {
+      "start": 1447.0,
+      "end": 1452.56,
+      "text": "software order so I'll probably keep the"
+    },
+    {
+      "start": 1449.32,
+      "end": 1455.4,
+      "text": "J here and I'll probably keep the K here"
+    },
+    {
+      "start": 1452.56,
+      "end": 1457.92,
+      "text": "okay this is what I'll do initially I"
+    },
+    {
+      "start": 1455.4,
+      "end": 1461.32,
+      "text": "will be fixed here and J will be kep"
+    },
+    {
+      "start": 1457.92,
+      "end": 1464.12,
+      "text": "kept at 1 after I and K will be kept"
+    },
+    {
+      "start": 1461.32,
+      "end": 1466.72,
+      "text": "always at the end perfect now what I try"
+    },
+    {
+      "start": 1464.12,
+      "end": 1471.2,
+      "text": "to do is add up these three elements"
+    },
+    {
+      "start": 1466.72,
+      "end": 1473.92,
+      "text": "let's try to add it up my - 2 - 2 and 2"
+    },
+    {
+      "start": 1471.2,
+      "end": 1477.08,
+      "text": "so if I add it up what will I get I'll"
+    },
+    {
+      "start": 1473.92,
+      "end": 1479.68,
+      "text": "get a minus 2 and what was I looking for"
+    },
+    {
+      "start": 1477.08,
+      "end": 1482.4,
+      "text": "if you remember I was looking for zero"
+    },
+    {
+      "start": 1479.68,
+      "end": 1485.72,
+      "text": "so I'm getting a value which is lesser"
+    },
+    {
+      "start": 1482.4,
+      "end": 1488.44,
+      "text": "than zero so if something is lesser than"
+    },
+    {
+      "start": 1485.72,
+      "end": 1491.6,
+      "text": "zero what do I need to do remember I"
+    },
+    {
+      "start": 1488.44,
+      "end": 1493.36,
+      "text": "will always be constant I will not move"
+    },
+    {
+      "start": 1491.6,
+      "end": 1495.44,
+      "text": "what do I need to do in order to get"
+    },
+    {
+      "start": 1493.36,
+      "end": 1496.8,
+      "text": "near to zero I have to increase the"
+    },
+    {
+      "start": 1495.44,
+      "end": 1498.76,
+      "text": "value I have to going to increase"
+    },
+    {
+      "start": 1496.8,
+      "end": 1502.04,
+      "text": "someone's value and if this this is"
+    },
+    {
+      "start": 1498.76,
+      "end": 1504.68,
+      "text": "constant and these two can move how can"
+    },
+    {
+      "start": 1502.04,
+      "end": 1506.6,
+      "text": "I increase the value if I go this way"
+    },
+    {
+      "start": 1504.68,
+      "end": 1509.0,
+      "text": "since the array is sorted hear me"
+    },
+    {
+      "start": 1506.6,
+      "end": 1511.12,
+      "text": "properly since the array is sorted the"
+    },
+    {
+      "start": 1509.0,
+      "end": 1513.28,
+      "text": "values will decrease the values will"
+    },
+    {
+      "start": 1511.12,
+      "end": 1515.28,
+      "text": "decrease and the minus two will go down"
+    },
+    {
+      "start": 1513.28,
+      "end": 1517.6,
+      "text": "I need to increase min -2 I need to"
+    },
+    {
+      "start": 1515.28,
+      "end": 1521.6,
+      "text": "increase the value of min-2 so what I"
+    },
+    {
+      "start": 1517.6,
+      "end": 1524.16,
+      "text": "will do is I will move this element yes"
+    },
+    {
+      "start": 1521.6,
+      "end": 1526.32,
+      "text": "I'll move here and even if I move here"
+    },
+    {
+      "start": 1524.16,
+      "end": 1528.36,
+      "text": "it is still minus 2 I'm like I still"
+    },
+    {
+      "start": 1526.32,
+      "end": 1530.28,
+      "text": "need to increase it more I like okay"
+    },
+    {
+      "start": 1528.36,
+      "end": 1532.52,
+      "text": "okay you need to increase it more let's"
+    },
+    {
+      "start": 1530.28,
+      "end": 1535.08,
+      "text": "go to minus one this time when you try"
+    },
+    {
+      "start": 1532.52,
+      "end": 1537.92,
+      "text": "to add minus one what happens let me"
+    },
+    {
+      "start": 1535.08,
+      "end": 1541.84,
+      "text": "show you just a second yeah if I try to"
+    },
+    {
+      "start": 1537.92,
+      "end": 1545.16,
+      "text": "add minus one this time this min-2 will"
+    },
+    {
+      "start": 1541.84,
+      "end": 1547.24,
+      "text": "become minus1 slightly increased and"
+    },
+    {
+      "start": 1545.16,
+      "end": 1549.76,
+      "text": "still not near zero so I'll say let's"
+    },
+    {
+      "start": 1547.24,
+      "end": 1552.64,
+      "text": "move a bit further so I move a bit"
+    },
+    {
+      "start": 1549.76,
+      "end": 1555.08,
+      "text": "further it still stays the same I move a"
+    },
+    {
+      "start": 1552.64,
+      "end": 1557.4,
+      "text": "bit further still stays the same I move"
+    },
+    {
+      "start": 1555.08,
+      "end": 1562.32,
+      "text": "a bit further this time and I have a"
+    },
+    {
+      "start": 1557.4,
+      "end": 1565.84,
+      "text": "zero I get a zero Min - 2 0 + 2 I'm"
+    },
+    {
+      "start": 1562.32,
+      "end": 1568.52,
+      "text": "getting a zero so what I did was I just"
+    },
+    {
+      "start": 1565.84,
+      "end": 1571.32,
+      "text": "kept on moving and I Tred to reach near"
+    },
+    {
+      "start": 1568.52,
+      "end": 1575.04,
+      "text": "zero and apparently at this moment I"
+    },
+    {
+      "start": 1571.32,
+      "end": 1577.0,
+      "text": "have one sorry I have one I I have 1 G"
+    },
+    {
+      "start": 1575.04,
+      "end": 1578.8,
+      "text": "and I have 1 K and that is one of my"
+    },
+    {
+      "start": 1577.0,
+      "end": 1583.32,
+      "text": "triplets I'll probably store it and I"
+    },
+    {
+      "start": 1578.8,
+      "end": 1583.32,
+      "text": "know the triplet is very simple it's -2"
+    },
+    {
+      "start": 1583.88,
+      "end": 1587.96,
+      "text": "02 it's already in the sorted order if"
+    },
+    {
+      "start": 1586.36,
+      "end": 1588.8,
+      "text": "you carefully see it's already in the"
+    },
+    {
+      "start": 1587.96,
+      "end": 1591.4,
+      "text": "sort"
+    },
+    {
+      "start": 1588.8,
+      "end": 1593.76,
+      "text": "because you took a sorted array you had"
+    },
+    {
+      "start": 1591.4,
+      "end": 1596.56,
+      "text": "I at the left you had J in the middle"
+    },
+    {
+      "start": 1593.76,
+      "end": 1600.08,
+      "text": "you had k at the right so it is already"
+    },
+    {
+      "start": 1596.56,
+      "end": 1603.24,
+      "text": "in the sorted order got it next you are"
+    },
+    {
+      "start": 1600.08,
+      "end": 1606.04,
+      "text": "at zero what can you do you know this"
+    },
+    {
+      "start": 1603.24,
+      "end": 1608.6,
+      "text": "cannot be taken this cannot be taken any"
+    },
+    {
+      "start": 1606.04,
+      "end": 1610.92,
+      "text": "further so what you will do is you will"
+    },
+    {
+      "start": 1608.6,
+      "end": 1613.6,
+      "text": "simply move both of them and the moment"
+    },
+    {
+      "start": 1610.92,
+      "end": 1616.64,
+      "text": "you move both of them it will come over"
+    },
+    {
+      "start": 1613.6,
+      "end": 1618.84,
+      "text": "here and this time this K will come over"
+    },
+    {
+      "start": 1616.64,
+      "end": 1621.52,
+      "text": "here"
+    },
+    {
+      "start": 1618.84,
+      "end": 1624.32,
+      "text": "a careful thing if you just move it by"
+    },
+    {
+      "start": 1621.52,
+      "end": 1628.72,
+      "text": "one place what will happen is you will"
+    },
+    {
+      "start": 1624.32,
+      "end": 1631.52,
+      "text": "again end up taking minus 2 0 and plus"
+    },
+    {
+      "start": 1628.72,
+      "end": 1633.24,
+      "text": "two you need to you need to avoid this"
+    },
+    {
+      "start": 1631.52,
+      "end": 1634.96,
+      "text": "because we need to make sure we just"
+    },
+    {
+      "start": 1633.24,
+      "end": 1638.04,
+      "text": "stored the unique tripletes we avoid"
+    },
+    {
+      "start": 1634.96,
+      "end": 1640.48,
+      "text": "duplicates so what you will see is I"
+    },
+    {
+      "start": 1638.04,
+      "end": 1642.28,
+      "text": "moved it one place but I should not move"
+    },
+    {
+      "start": 1640.48,
+      "end": 1645.4,
+      "text": "it one place I should actually move it"
+    },
+    {
+      "start": 1642.28,
+      "end": 1647.48,
+      "text": "more I should just move it out of zero I"
+    },
+    {
+      "start": 1645.4,
+      "end": 1649.88,
+      "text": "I'll not think zero no further zero I'll"
+    },
+    {
+      "start": 1647.48,
+      "end": 1652.64,
+      "text": "not think zero I'll move it out I be"
+    },
+    {
+      "start": 1649.88,
+      "end": 1655.6,
+      "text": "like okay let's move what is the place"
+    },
+    {
+      "start": 1652.64,
+      "end": 1658.88,
+      "text": "where there is no zero that's this"
+    },
+    {
+      "start": 1655.6,
+      "end": 1661.0,
+      "text": "place perfect I'll move it and for K"
+    },
+    {
+      "start": 1658.88,
+      "end": 1662.68,
+      "text": "I'll be like I was here now that was two"
+    },
+    {
+      "start": 1661.0,
+      "end": 1665.68,
+      "text": "I'll no more take two I'll no more take"
+    },
+    {
+      "start": 1662.68,
+      "end": 1667.8,
+      "text": "two move it move it so I will move it"
+    },
+    {
+      "start": 1665.68,
+      "end": 1668.88,
+      "text": "and if I try to move it what will happen"
+    },
+    {
+      "start": 1667.8,
+      "end": 1672.48,
+      "text": "where will"
+    },
+    {
+      "start": 1668.88,
+      "end": 1675.72,
+      "text": "k k will be here and the moment J and K"
+    },
+    {
+      "start": 1672.48,
+      "end": 1678.4,
+      "text": "cross what happened he firstly assumed I"
+    },
+    {
+      "start": 1675.72,
+      "end": 1680.56,
+      "text": "to be your left G to be your mid and to"
+    },
+    {
+      "start": 1678.4,
+      "end": 1683.92,
+      "text": "be your right so that they always are in"
+    },
+    {
+      "start": 1680.56,
+      "end": 1686.32,
+      "text": "sorted order if K has moved it's no more"
+    },
+    {
+      "start": 1683.92,
+      "end": 1688.96,
+      "text": "in the sorted order so you stop Yes you"
+    },
+    {
+      "start": 1686.32,
+      "end": 1691.52,
+      "text": "stop"
+    },
+    {
+      "start": 1688.96,
+      "end": 1694.88,
+      "text": "perfect stop"
+    },
+    {
+      "start": 1691.52,
+      "end": 1697.4,
+      "text": "next this I which is constant will try"
+    },
+    {
+      "start": 1694.88,
+      "end": 1699.72,
+      "text": "to move again there's a catch if this is"
+    },
+    {
+      "start": 1697.4,
+      "end": 1701.4,
+      "text": "minus two you again don't take minus two"
+    },
+    {
+      "start": 1699.72,
+      "end": 1704.36,
+      "text": "because it again generate the same"
+    },
+    {
+      "start": 1701.4,
+      "end": 1706.4,
+      "text": "triplets so you move to the element"
+    },
+    {
+      "start": 1704.36,
+      "end": 1709.36,
+      "text": "which was not minus two so the moment"
+    },
+    {
+      "start": 1706.4,
+      "end": 1713.24,
+      "text": "you try to move to the next"
+    },
+    {
+      "start": 1709.36,
+      "end": 1715.2,
+      "text": "you'll be like hey wait wait wait you wa"
+    },
+    {
+      "start": 1713.24,
+      "end": 1718.48,
+      "text": "equivalent to the previous no no go"
+    },
+    {
+      "start": 1715.2,
+      "end": 1720.16,
+      "text": "ahead I've already done I move here I"
+    },
+    {
+      "start": 1718.48,
+      "end": 1721.52,
+      "text": "like hey you're equivalent to the"
+    },
+    {
+      "start": 1720.16,
+      "end": 1724.8,
+      "text": "previous no no go"
+    },
+    {
+      "start": 1721.52,
+      "end": 1726.96,
+      "text": "ahead and then I stop at minus one which"
+    },
+    {
+      "start": 1724.8,
+      "end": 1729.36,
+      "text": "is not equivalent to my previous I'm"
+    },
+    {
+      "start": 1726.96,
+      "end": 1732.28,
+      "text": "stop at minus one so this is my as of"
+    },
+    {
+      "start": 1729.36,
+      "end": 1735.24,
+      "text": "now I perfect I this time start at J"
+    },
+    {
+      "start": 1732.28,
+      "end": 1739.64,
+      "text": "which is here and K will again be here"
+    },
+    {
+      "start": 1735.24,
+      "end": 1741.6,
+      "text": "amazing so -1 -1 and plus two this is"
+    },
+    {
+      "start": 1739.64,
+      "end": 1744.24,
+      "text": "where I start so I got a minus one I got"
+    },
+    {
+      "start": 1741.6,
+      "end": 1746.52,
+      "text": "a minus one and I got a plus so what I'm"
+    },
+    {
+      "start": 1744.24,
+      "end": 1748.96,
+      "text": "saying is are they giving me zero they"
+    },
+    {
+      "start": 1746.52,
+      "end": 1752.32,
+      "text": "AR they are giving me zero so this is"
+    },
+    {
+      "start": 1748.96,
+      "end": 1754.96,
+      "text": "one more triplet minus one - one 2 so I"
+    },
+    {
+      "start": 1752.32,
+      "end": 1757.0,
+      "text": "take this triplet and logically"
+    },
+    {
+      "start": 1754.96,
+      "end": 1759.64,
+      "text": "logically I should have moved this by"
+    },
+    {
+      "start": 1757.0,
+      "end": 1761.64,
+      "text": "one pleas because I cannot take these"
+    },
+    {
+      "start": 1759.64,
+      "end": 1763.76,
+      "text": "guys anymore and I should have moved the"
+    },
+    {
+      "start": 1761.64,
+      "end": 1767.28,
+      "text": "k by1 please logically I should have"
+    },
+    {
+      "start": 1763.76,
+      "end": 1769.24,
+      "text": "done this but but I know one thing I"
+    },
+    {
+      "start": 1767.28,
+      "end": 1772.4,
+      "text": "cannot take any the minus so I'll be"
+    },
+    {
+      "start": 1769.24,
+      "end": 1772.4,
+      "text": "like oh you are still"
+    },
+    {
+      "start": 1773.04,
+      "end": 1779.84,
+      "text": "equivalent and it'll stop here and I'll"
+    },
+    {
+      "start": 1776.44,
+      "end": 1779.84,
+      "text": "say it's still two"
+    },
+    {
+      "start": 1779.88,
+      "end": 1785.88,
+      "text": "move it stays"
+    },
+    {
+      "start": 1782.2,
+      "end": 1788.72,
+      "text": "here perfect now what"
+    },
+    {
+      "start": 1785.88,
+      "end": 1793.48,
+      "text": "happens where are we"
+    },
+    {
+      "start": 1788.72,
+      "end": 1795.6,
+      "text": "-1 0 0 what's the value min-1 it's"
+    },
+    {
+      "start": 1793.48,
+      "end": 1797.64,
+      "text": "lesser than zero what do I need to do I"
+    },
+    {
+      "start": 1795.6,
+      "end": 1800.76,
+      "text": "need to increase I need to increase so I"
+    },
+    {
+      "start": 1797.64,
+      "end": 1803.16,
+      "text": "try to in increase I'll try to"
+    },
+    {
+      "start": 1800.76,
+      "end": 1806.4,
+      "text": "increase still the same so I'll still"
+    },
+    {
+      "start": 1803.16,
+      "end": 1808.72,
+      "text": "try to increase and the moment I reach"
+    },
+    {
+      "start": 1806.4,
+      "end": 1812.0,
+      "text": "same elements"
+    },
+    {
+      "start": 1808.72,
+      "end": 1815.04,
+      "text": "stop done understood"
+    },
+    {
+      "start": 1812.0,
+      "end": 1817.2,
+      "text": "next at minus one that was the iOS"
+    },
+    {
+      "start": 1815.04,
+      "end": 1819.76,
+      "text": "constant I'll try to move it the when I"
+    },
+    {
+      "start": 1817.2,
+      "end": 1821.04,
+      "text": "Tred to move it it says hey you're still"
+    },
+    {
+      "start": 1819.76,
+      "end": 1823.08,
+      "text": "equivalent to the previous still"
+    },
+    {
+      "start": 1821.04,
+      "end": 1825.4,
+      "text": "equivalent to the previous I've already"
+    },
+    {
+      "start": 1823.08,
+      "end": 1830.72,
+      "text": "done for you move move"
+    },
+    {
+      "start": 1825.4,
+      "end": 1830.72,
+      "text": "move I'm like hey stay equivalent"
+    },
+    {
+      "start": 1831.04,
+      "end": 1836.72,
+      "text": "move oh you're not equivalent oh we can"
+    },
+    {
+      "start": 1833.56,
+      "end": 1839.36,
+      "text": "probably do so this time I start start J"
+    },
+    {
+      "start": 1836.72,
+      "end": 1844.2,
+      "text": "here I have K here again very critical"
+    },
+    {
+      "start": 1839.36,
+      "end": 1846.88,
+      "text": "to observe 0 + 0 + 2 what's the value 2"
+    },
+    {
+      "start": 1844.2,
+      "end": 1848.56,
+      "text": "greater than zero reduce reduce greater"
+    },
+    {
+      "start": 1846.88,
+      "end": 1850.6,
+      "text": "than zero because it's greater than Z"
+    },
+    {
+      "start": 1848.56,
+      "end": 1854.16,
+      "text": "reduce so you'll move this because if"
+    },
+    {
+      "start": 1850.6,
+      "end": 1856.6,
+      "text": "you move left the values will reduce two"
+    },
+    {
+      "start": 1854.16,
+      "end": 1859.08,
+      "text": "pointers usually work like"
+    },
+    {
+      "start": 1856.6,
+      "end": 1861.36,
+      "text": "this St"
+    },
+    {
+      "start": 1859.08,
+      "end": 1865.48,
+      "text": "Still"
+    },
+    {
+      "start": 1861.36,
+      "end": 1868.24,
+      "text": "Still Still greater than uh zero and you"
+    },
+    {
+      "start": 1865.48,
+      "end": 1872.8,
+      "text": "reach here so you get another triplet"
+    },
+    {
+      "start": 1868.24,
+      "end": 1872.8,
+      "text": "very very careful sorry very very"
+    },
+    {
+      "start": 1873.16,
+      "end": 1880.28,
+      "text": "important you get another driet will you"
+    },
+    {
+      "start": 1876.24,
+      "end": 1882.68,
+      "text": "consider this you will because the three"
+    },
+    {
+      "start": 1880.28,
+      "end": 1886.6,
+      "text": "zeros are from different so you will"
+    },
+    {
+      "start": 1882.68,
+      "end": 1888.04,
+      "text": "take another triplet perfect next you"
+    },
+    {
+      "start": 1886.6,
+      "end": 1890.76,
+      "text": "know this zero is there so you you will"
+    },
+    {
+      "start": 1888.04,
+      "end": 1892.96,
+      "text": "move K after this K moves J moves so"
+    },
+    {
+      "start": 1890.76,
+      "end": 1896.4,
+      "text": "it's over so in this way you can keep on"
+    },
+    {
+      "start": 1892.96,
+      "end": 1899.92,
+      "text": "doing and eventually you'll get all your"
+    },
+    {
+      "start": 1896.4,
+      "end": 1902.48,
+      "text": "triplets when I moves when it moves here"
+    },
+    {
+      "start": 1899.92,
+      "end": 1904.28,
+      "text": "pre same as previous same as previous so"
+    },
+    {
+      "start": 1902.48,
+      "end": 1906.32,
+      "text": "I will again Start From Here So"
+    },
+    {
+      "start": 1904.28,
+      "end": 1908.16,
+      "text": "eventually you will keep on doing and"
+    },
+    {
+      "start": 1906.32,
+      "end": 1910.16,
+      "text": "you will ultimately get just three"
+    },
+    {
+      "start": 1908.16,
+      "end": 1911.72,
+      "text": "driplets for this one all it so I'll get"
+    },
+    {
+      "start": 1910.16,
+      "end": 1913.76,
+      "text": "back to the code editor and try to code"
+    },
+    {
+      "start": 1911.72,
+      "end": 1915.04,
+      "text": "it please please make sure that you try"
+    },
+    {
+      "start": 1913.76,
+      "end": 1917.32,
+      "text": "out the problem from the link in the"
+    },
+    {
+      "start": 1915.04,
+      "end": 1920.12,
+      "text": "description itself that will help me a"
+    },
+    {
+      "start": 1917.32,
+      "end": 1921.84,
+      "text": "lot so what I'll do is I I know that I"
+    },
+    {
+      "start": 1920.12,
+      "end": 1924.52,
+      "text": "have to return a list of list as the"
+    },
+    {
+      "start": 1921.84,
+      "end": 1926.16,
+      "text": "answer so this is what I'll initially do"
+    },
+    {
+      "start": 1924.52,
+      "end": 1929.84,
+      "text": "and I know one thing for sure I will"
+    },
+    {
+      "start": 1926.16,
+      "end": 1931.96,
+      "text": "always be constant so prob me yeah"
+    },
+    {
+      "start": 1929.84,
+      "end": 1933.32,
+      "text": "something I know for sure is if it's"
+    },
+    {
+      "start": 1931.96,
+      "end": 1936.84,
+      "text": "equivalent to the previous if you"
+    },
+    {
+      "start": 1933.32,
+      "end": 1938.76,
+      "text": "remember whenever I was imagine standing"
+    },
+    {
+      "start": 1936.84,
+      "end": 1941.0,
+      "text": "here it is equivalent to the previous so"
+    },
+    {
+      "start": 1938.76,
+      "end": 1942.88,
+      "text": "you'll not do this was also equivalent"
+    },
+    {
+      "start": 1941.0,
+      "end": 1945.04,
+      "text": "to the previous you will not only for"
+    },
+    {
+      "start": 1942.88,
+      "end": 1947.12,
+      "text": "the first element there is no previous"
+    },
+    {
+      "start": 1945.04,
+      "end": 1950.8,
+      "text": "so I'm I'm like one thing for sure if it"
+    },
+    {
+      "start": 1947.12,
+      "end": 1955.64,
+      "text": "is not the first element and then num of"
+    },
+    {
+      "start": 1950.8,
+      "end": 1959.44,
+      "text": "I is not equal to n of or you can say"
+    },
+    {
+      "start": 1955.64,
+      "end": 1961.76,
+      "text": "equal to n of IUS one that means it's"
+    },
+    {
+      "start": 1959.44,
+      "end": 1964.16,
+      "text": "equivalent so you'll say please go ahead"
+    },
+    {
+      "start": 1961.76,
+      "end": 1966.52,
+      "text": "and continue continue means it will not"
+    },
+    {
+      "start": 1964.16,
+      "end": 1969.2,
+      "text": "go down it will just go here and do the"
+    },
+    {
+      "start": 1966.52,
+      "end": 1970.76,
+      "text": "next step and if it is not then I go"
+    },
+    {
+      "start": 1969.2,
+      "end": 1974.36,
+      "text": "down and do all the steps continue"
+    },
+    {
+      "start": 1970.76,
+      "end": 1976.08,
+      "text": "clearly states do not go down go back to"
+    },
+    {
+      "start": 1974.36,
+      "end": 1978.16,
+      "text": "your full loop increase I and do the"
+    },
+    {
+      "start": 1976.08,
+      "end": 1980.32,
+      "text": "next step so I know if it is equivalent"
+    },
+    {
+      "start": 1978.16,
+      "end": 1984.24,
+      "text": "I not do if it is not then I'll do and"
+    },
+    {
+      "start": 1980.32,
+      "end": 1988.88,
+      "text": "I'll probably say J is equivalent to I +"
+    },
+    {
+      "start": 1984.24,
+      "end": 1992.8,
+      "text": "1 and I'll say k is equivalent to the"
+    },
+    {
+      "start": 1988.88,
+      "end": 1994.96,
+      "text": "last element which is n minus 1 done I"
+    },
+    {
+      "start": 1992.8,
+      "end": 1997.44,
+      "text": "know one thing I'll keep moving the J if"
+    },
+    {
+      "start": 1994.96,
+      "end": 2000.56,
+      "text": "you remember J was here K was here and"
+    },
+    {
+      "start": 1997.44,
+      "end": 2005.0,
+      "text": "we kept on moving and they did not cross"
+    },
+    {
+      "start": 2000.56,
+      "end": 2006.72,
+      "text": "that is what I'll do while G this will"
+    },
+    {
+      "start": 2005.0,
+      "end": 2008.24,
+      "text": "just keep them moving and I know there"
+    },
+    {
+      "start": 2006.72,
+      "end": 2010.88,
+      "text": "will be three conditions what will be"
+    },
+    {
+      "start": 2008.24,
+      "end": 2013.28,
+      "text": "the three condition it to add them all"
+    },
+    {
+      "start": 2010.88,
+      "end": 2016.08,
+      "text": "so it'll be like numbery or maybe since"
+    },
+    {
+      "start": 2013.28,
+      "end": 2019.64,
+      "text": "I'm going to use this everywhere some n"
+    },
+    {
+      "start": 2016.08,
+      "end": 2023.2,
+      "text": "of I plus num of G Plus what is the"
+    },
+    {
+      "start": 2019.64,
+      "end": 2026.0,
+      "text": "third uh element num of K I know one"
+    },
+    {
+      "start": 2023.2,
+      "end": 2030.2,
+      "text": "thing if sum is lesser than Z is"
+    },
+    {
+      "start": 2026.0,
+      "end": 2032.92,
+      "text": "one else if sum is greater than zero is"
+    },
+    {
+      "start": 2030.2,
+      "end": 2035.4,
+      "text": "other and the else is less so I know if"
+    },
+    {
+      "start": 2032.92,
+      "end": 2037.88,
+      "text": "it is lesser than zero I need to"
+    },
+    {
+      "start": 2035.4,
+      "end": 2040.4,
+      "text": "increase in order to increase it's a"
+    },
+    {
+      "start": 2037.88,
+      "end": 2042.4,
+      "text": "sorted element it's a sorted array so"
+    },
+    {
+      "start": 2040.4,
+      "end": 2044.64,
+      "text": "please make sure you sort the entire"
+    },
+    {
+      "start": 2042.4,
+      "end": 2046.4,
+      "text": "array otherwise it will be an issue"
+    },
+    {
+      "start": 2044.64,
+      "end": 2049.56,
+      "text": "please go ahead and sort the"
+    },
+    {
+      "start": 2046.4,
+      "end": 2052.44,
+      "text": "entire perfect and now I'll do I need to"
+    },
+    {
+      "start": 2049.56,
+      "end": 2055.36,
+      "text": "move this G so that it increases if it"
+    },
+    {
+      "start": 2052.44,
+      "end": 2059.0,
+      "text": "is greater I need to decrease so K"
+    },
+    {
+      "start": 2055.36,
+      "end": 2062.28,
+      "text": "minus if not that means it's equal this"
+    },
+    {
+      "start": 2059.0,
+      "end": 2064.72,
+      "text": "is one of my triplet for sure so what"
+    },
+    {
+      "start": 2062.28,
+      "end": 2067.0,
+      "text": "now I will do is I'll take Vector of in"
+    },
+    {
+      "start": 2064.72,
+      "end": 2069.36,
+      "text": "this is one of my triplet for sure and"
+    },
+    {
+      "start": 2067.0,
+      "end": 2072.2,
+      "text": "I'll put them in"
+    },
+    {
+      "start": 2069.36,
+      "end": 2075.56,
+      "text": "amazing nums[j] and number of"
+    },
+    {
+      "start": 2072.2,
+      "end": 2078.36,
+      "text": "K and once I put them up I know they"
+    },
+    {
+      "start": 2075.56,
+      "end": 2080.6,
+      "text": "will directly go into this answer do I"
+    },
+    {
+      "start": 2078.36,
+      "end": 2082.8,
+      "text": "need to sort the thing on that no it's"
+    },
+    {
+      "start": 2080.6,
+      "end": 2088.56,
+      "text": "already in the sorted order so I'll just"
+    },
+    {
+      "start": 2082.8,
+      "end": 2091.4,
+      "text": "go and say push back temp amazing now"
+    },
+    {
+      "start": 2088.56,
+      "end": 2093.04,
+      "text": "what is the next job I I know J and K"
+    },
+    {
+      "start": 2091.4,
+      "end": 2096.92,
+      "text": "cannot be same so I'll just move them"
+    },
+    {
+      "start": 2093.04,
+      "end": 2098.44,
+      "text": "onee and I'll also move this one back if"
+    },
+    {
+      "start": 2096.92,
+      "end": 2102.04,
+      "text": "you remember well enough"
+    },
+    {
+      "start": 2098.44,
+      "end": 2104.64,
+      "text": "we had a minus two as the I we had this"
+    },
+    {
+      "start": 2102.04,
+      "end": 2107.12,
+      "text": "one as the J and we had this one as the"
+    },
+    {
+      "start": 2104.64,
+      "end": 2109.96,
+      "text": "K and after that what we did was we"
+    },
+    {
+      "start": 2107.12,
+      "end": 2112.32,
+      "text": "moved J by one step and we moved K by"
+    },
+    {
+      "start": 2109.96,
+      "end": 2114.8,
+      "text": "one step but if we do this what will"
+    },
+    {
+      "start": 2112.32,
+      "end": 2117.76,
+      "text": "happen is in the next step this zero and"
+    },
+    {
+      "start": 2114.8,
+      "end": 2119.68,
+      "text": "this two will again form another triplet"
+    },
+    {
+      "start": 2117.76,
+      "end": 2122.04,
+      "text": "which is wrong I don't want that so what"
+    },
+    {
+      "start": 2119.68,
+      "end": 2123.8,
+      "text": "I'll do is I'll move it by one step then"
+    },
+    {
+      "start": 2122.04,
+      "end": 2126.96,
+      "text": "I'll check is it equivalent to the"
+    },
+    {
+      "start": 2123.8,
+      "end": 2128.4,
+      "text": "previous it is so move it by one step is"
+    },
+    {
+      "start": 2126.96,
+      "end": 2131.08,
+      "text": "it still equivalent to the previous let"
+    },
+    {
+      "start": 2128.4,
+      "end": 2133.04,
+      "text": "move it by one more step keep moving"
+    },
+    {
+      "start": 2131.08,
+      "end": 2135.08,
+      "text": "till it is equivalent to the previous"
+    },
+    {
+      "start": 2133.04,
+      "end": 2138.8,
+      "text": "because it matched so I'll keep it"
+    },
+    {
+      "start": 2135.08,
+      "end": 2143.48,
+      "text": "moving till num of"
+    },
+    {
+      "start": 2138.8,
+      "end": 2146.8,
+      "text": "J is equivalent to its previous keep"
+    },
+    {
+      "start": 2143.48,
+      "end": 2150.56,
+      "text": "moving and at the same time I'll say Hey"
+    },
+    {
+      "start": 2146.8,
+      "end": 2154.2,
+      "text": "listen num of"
+    },
+    {
+      "start": 2150.56,
+      "end": 2157.32,
+      "text": "what K is equivalent to it's so over"
+    },
+    {
+      "start": 2154.2,
+      "end": 2159.48,
+      "text": "here K is at this and it's still"
+    },
+    {
+      "start": 2157.32,
+      "end": 2160.68,
+      "text": "equivalent to it say so I'll move it and"
+    },
+    {
+      "start": 2159.48,
+      "end": 2162.2,
+      "text": "it's still equivalent to this so I'll"
+    },
+    {
+      "start": 2160.68,
+      "end": 2164.16,
+      "text": "move it and it's still equivalent to"
+    },
+    {
+      "start": 2162.2,
+      "end": 2166.52,
+      "text": "this so I'll move it for one ahead it's"
+    },
+    {
+      "start": 2164.16,
+      "end": 2170.0,
+      "text": "like n of k +"
+    },
+    {
+      "start": 2166.52,
+      "end": 2172.72,
+      "text": "1 and K minus minus do we just keep on"
+    },
+    {
+      "start": 2170.0,
+      "end": 2175.0,
+      "text": "doing this because it might out of it"
+    },
+    {
+      "start": 2172.72,
+      "end": 2177.44,
+      "text": "might run out of boundary so this is why"
+    },
+    {
+      "start": 2175.0,
+      "end": 2180.12,
+      "text": "just make sure there is a simple case"
+    },
+    {
+      "start": 2177.44,
+      "end": 2183.04,
+      "text": "which states just keep on doing till it"
+    },
+    {
+      "start": 2180.12,
+      "end": 2184.72,
+      "text": "doesn't crosses the key because if it"
+    },
+    {
+      "start": 2183.04,
+      "end": 2187.4,
+      "text": "crosses we're done and dusted there's no"
+    },
+    {
+      "start": 2184.72,
+      "end": 2189.6,
+      "text": "need to do it as long as it is something"
+    },
+    {
+      "start": 2187.4,
+      "end": 2192.92,
+      "text": "like like this keep on"
+    },
+    {
+      "start": 2189.6,
+      "end": 2194.68,
+      "text": "doing and if it somehow crosses we know"
+    },
+    {
+      "start": 2192.92,
+      "end": 2196.4,
+      "text": "we have cross there's no point in doing"
+    },
+    {
+      "start": 2194.68,
+      "end": 2197.76,
+      "text": "more and this is how the while loop will"
+    },
+    {
+      "start": 2196.4,
+      "end": 2199.84,
+      "text": "look like and now we can go ahead and"
+    },
+    {
+      "start": 2197.76,
+      "end": 2202.8,
+      "text": "run this and see if it is running"
+    },
+    {
+      "start": 2199.84,
+      "end": 2206.52,
+      "text": "fine so what about the time complexity"
+    },
+    {
+      "start": 2202.8,
+      "end": 2208.96,
+      "text": "and login to sort it so I can say an N"
+    },
+    {
+      "start": 2206.52,
+      "end": 2211.84,
+      "text": "logarithmic of n to sort the array and"
+    },
+    {
+      "start": 2208.96,
+      "end": 2215.0,
+      "text": "then we running an external n Loop so"
+    },
+    {
+      "start": 2211.84,
+      "end": 2217.2,
+      "text": "that's a b go of N and then the while"
+    },
+    {
+      "start": 2215.0,
+      "end": 2219.52,
+      "text": "loop how many times will the while loop"
+    },
+    {
+      "start": 2217.2,
+      "end": 2219.52,
+      "text": "run it"
+    },
+    {
+      "start": 2219.92,
+      "end": 2227.4,
+      "text": "first nus one time"
+    },
+    {
+      "start": 2223.8,
+      "end": 2230.6,
+      "text": "next N - 2 time"
+    },
+    {
+      "start": 2227.4,
+      "end": 2233.76,
+      "text": "next n minus 3 so it's kind of running"
+    },
+    {
+      "start": 2230.6,
+      "end": 2236.72,
+      "text": "every time for n near about 10 so n into"
+    },
+    {
+      "start": 2233.76,
+      "end": 2240.64,
+      "text": "when near about so n log n Plus near"
+    },
+    {
+      "start": 2236.72,
+      "end": 2242.84,
+      "text": "about n² will be my time complexity what"
+    },
+    {
+      "start": 2240.64,
+      "end": 2245.56,
+      "text": "about the space complexity we're not"
+    },
+    {
+      "start": 2242.84,
+      "end": 2247.6,
+      "text": "using anything to solve the AR in like"
+    },
+    {
+      "start": 2245.56,
+      "end": 2251.84,
+      "text": "we're just using a big of three space"
+    },
+    {
+      "start": 2247.6,
+      "end": 2253.44,
+      "text": "but yes we are using a answer list in"
+    },
+    {
+      "start": 2251.84,
+      "end": 2256.12,
+      "text": "order to return the answer so that is"
+    },
+    {
+      "start": 2253.44,
+      "end": 2258.56,
+      "text": "for returning not in our algorithm so be"
+    },
+    {
+      "start": 2256.12,
+      "end": 2261.4,
+      "text": "of number of unique triplets we will not"
+    },
+    {
+      "start": 2258.56,
+      "end": 2263.24,
+      "text": "be counting the St because it's just"
+    },
+    {
+      "start": 2261.4,
+      "end": 2265.52,
+      "text": "three elements this is the time"
+    },
+    {
+      "start": 2263.24,
+      "end": 2267.96,
+      "text": "complexity and space complexity for the"
+    },
+    {
+      "start": 2265.52,
+      "end": 2270.08,
+      "text": "most optimal solution now I'll go back"
+    },
+    {
+      "start": 2267.96,
+      "end": 2272.36,
+      "text": "to the sheet and I'll mark this as done"
+    },
+    {
+      "start": 2270.08,
+      "end": 2273.88,
+      "text": "and completed I hope I've understood all"
+    },
+    {
+      "start": 2272.36,
+      "end": 2276.16,
+      "text": "the three approaches all the three"
+    },
+    {
+      "start": 2273.88,
+      "end": 2277.8,
+      "text": "quotes just in case you did please"
+    },
+    {
+      "start": 2276.16,
+      "end": 2279.44,
+      "text": "please do give us a like because won't"
+    },
+    {
+      "start": 2277.8,
+      "end": 2280.88,
+      "text": "cost you anything but that will do me a"
+    },
+    {
+      "start": 2279.44,
+      "end": 2282.4,
+      "text": "world of good and if you haven't"
+    },
+    {
+      "start": 2280.88,
+      "end": 2284.96,
+      "text": "followed me on Instagram you're missing"
+    },
+    {
+      "start": 2282.4,
+      "end": 2287.36,
+      "text": "out on a lot of informative content so"
+    },
+    {
+      "start": 2284.96,
+      "end": 2289.24,
+      "text": "stbe on disco79 is what I go by on"
+    },
+    {
+      "start": 2287.36,
+      "end": 2290.32,
+      "text": "Instagram please do follow me over there"
+    },
+    {
+      "start": 2289.24,
+      "end": 2292.16,
+      "text": "and if you're new to our Channel what"
+    },
+    {
+      "start": 2290.32,
+      "end": 2293.88,
+      "text": "are you waiting for hit that subscribe"
+    },
+    {
+      "start": 2292.16,
+      "end": 2295.36,
+      "text": "button and is with this I'll be wrapping"
+    },
+    {
+      "start": 2293.88,
+      "end": 2296.47,
+      "text": "up this video let's speak some other"
+    },
+    {
+      "start": 2295.36,
+      "end": 2299.64,
+      "text": "video then bye-bye take"
+    },
+    {
+      "start": 2296.47,
+      "end": 2299.64,
+      "text": "[Music]"
+    },
+    {
+      "start": 2300.76,
+      "end": 2306.44,
+      "text": "careen"
+    },
+    {
+      "start": 2302.32,
+      "end": 2306.44,
+      "text": "golden I will"
+    }
+  ]
+}

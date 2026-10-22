@@ -1,0 +1,1376 @@
+{
+  "video_id": "b3GD8263-PQ",
+  "title": "DP 21. Target Sum | DP on Subsequences",
+  "duration_sec": 544,
+  "num_segments": 228,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.36,
+      "duration": 3.36,
+      "text": "Hey everyone, welcome back to Take You"
+    },
+    {
+      "start": 1.48,
+      "end": 5.6,
+      "duration": 4.12,
+      "text": "Forward. Today we will be solving the"
+    },
+    {
+      "start": 3.36,
+      "end": 8.68,
+      "duration": 5.32,
+      "text": "21st problem from the dynamic"
+    },
+    {
+      "start": 5.6,
+      "end": 11.4,
+      "duration": 5.8,
+      "text": "programming playlist and the problem is"
+    },
+    {
+      "start": 8.68,
+      "end": 13.08,
+      "duration": 4.4,
+      "text": "target sum. So, let's understand the"
+    },
+    {
+      "start": 11.4,
+      "end": 14.92,
+      "duration": 3.52,
+      "text": "problem first and then we will see how"
+    },
+    {
+      "start": 13.08,
+      "end": 17.04,
+      "duration": 3.96,
+      "text": "can we solve this problem. So, the"
+    },
+    {
+      "start": 14.92,
+      "end": 20.4,
+      "duration": 5.48,
+      "text": "problem states you're given an array,"
+    },
+    {
+      "start": 17.04,
+      "end": 23.6,
+      "duration": 6.56,
+      "text": "okay, and the array consists of 1 2 3 1"
+    },
+    {
+      "start": 20.4,
+      "end": 28.36,
+      "duration": 7.96,
+      "text": "and you're also given a target 3, okay."
+    },
+    {
+      "start": 23.6,
+      "end": 30.64,
+      "duration": 7.04,
+      "text": "Now, your task is to assign signs either"
+    },
+    {
+      "start": 28.36,
+      "end": 33.4,
+      "duration": 5.04,
+      "text": "positive or negative to the array"
+    },
+    {
+      "start": 30.64,
+      "end": 35.44,
+      "duration": 4.8,
+      "text": "elements. For an example, if I assign"
+    },
+    {
+      "start": 33.4,
+      "end": 39.2,
+      "duration": 5.8,
+      "text": "positive to 1,"
+    },
+    {
+      "start": 35.44,
+      "end": 44.16,
+      "duration": 8.72,
+      "text": "positive to 2, negative to 3, negative"
+    },
+    {
+      "start": 39.2,
+      "end": 46.4,
+      "duration": 7.2,
+      "text": "to 1, and if I sum it up, so +1"
+    },
+    {
+      "start": 44.16,
+      "end": 52.08,
+      "duration": 7.92,
+      "text": "+2 is 3,"
+    },
+    {
+      "start": 46.4,
+      "end": 55.12,
+      "duration": 8.72,
+      "text": "-3 is 0, -1 is -1. So, you get -1."
+    },
+    {
+      "start": 52.08,
+      "end": 56.48,
+      "duration": 4.4,
+      "text": "Similarly, if I assign something as"
+    },
+    {
+      "start": 55.12,
+      "end": 58.4,
+      "duration": 3.28,
+      "text": "assume"
+    },
+    {
+      "start": 56.48,
+      "end": 63.64,
+      "duration": 7.16,
+      "text": "minus"
+    },
+    {
+      "start": 58.4,
+      "end": 70.0,
+      "duration": 11.6,
+      "text": "plus plus minus, then -1"
+    },
+    {
+      "start": 63.64,
+      "end": 74.4,
+      "duration": 10.76,
+      "text": "+2 is 1, 1 + 3 is 4, 4 -1 is 3. So, you"
+    },
+    {
+      "start": 70.0,
+      "end": 77.04,
+      "duration": 7.04,
+      "text": "get 3. So, you have to assign signs"
+    },
+    {
+      "start": 74.4,
+      "end": 80.4,
+      "duration": 6.0,
+      "text": "either positive or negative and by"
+    },
+    {
+      "start": 77.04,
+      "end": 82.24,
+      "duration": 5.2,
+      "text": "assigning signs, you have to tell us how"
+    },
+    {
+      "start": 80.4,
+      "end": 86.76,
+      "duration": 6.36,
+      "text": "many ways"
+    },
+    {
+      "start": 82.24,
+      "end": 90.4,
+      "duration": 8.16,
+      "text": "how many ways can you assign signs"
+    },
+    {
+      "start": 86.76,
+      "end": 93.56,
+      "duration": 6.8,
+      "text": "such that you get the given target. For"
+    },
+    {
+      "start": 90.4,
+      "end": 97.68,
+      "duration": 7.28,
+      "text": "an example over here, if I assign this"
+    },
+    {
+      "start": 93.56,
+      "end": 101.12,
+      "duration": 7.56,
+      "text": "as one like 1 2 3 1, if I assign minus"
+    },
+    {
+      "start": 97.68,
+      "end": 103.2,
+      "duration": 5.52,
+      "text": "plus plus minus, this is the first way"
+    },
+    {
+      "start": 101.12,
+      "end": 106.0,
+      "duration": 4.88,
+      "text": "in which I can assign signs such that I"
+    },
+    {
+      "start": 103.2,
+      "end": 109.16,
+      "duration": 5.96,
+      "text": "get the summation as 3. Or the other way"
+    },
+    {
+      "start": 106.0,
+      "end": 111.32,
+      "duration": 5.32,
+      "text": "is I can say what if I assign like let's"
+    },
+    {
+      "start": 109.16,
+      "end": 113.16,
+      "duration": 4.0,
+      "text": "remove this once. What if I assign"
+    },
+    {
+      "start": 111.32,
+      "end": 115.52,
+      "duration": 4.2,
+      "text": "something as uh"
+    },
+    {
+      "start": 113.16,
+      "end": 116.8,
+      "duration": 3.64,
+      "text": "plus minus"
+    },
+    {
+      "start": 115.52,
+      "end": 122.44,
+      "duration": 6.92,
+      "text": "plus"
+    },
+    {
+      "start": 116.8,
+      "end": 124.6,
+      "duration": 7.8,
+      "text": "uh plus. So, 3 + 4 + 5 - 2 3. So, there"
+    },
+    {
+      "start": 122.44,
+      "end": 127.16,
+      "duration": 4.72,
+      "text": "are two ways. Yes, there are two ways."
+    },
+    {
+      "start": 124.6,
+      "end": 130.08,
+      "duration": 5.48,
+      "text": "One is plus minus plus plus, while the"
+    },
+    {
+      "start": 127.16,
+      "end": 131.28,
+      "duration": 4.12,
+      "text": "other one is minus plus plus"
+    },
+    {
+      "start": 130.08,
+      "end": 133.32,
+      "duration": 3.24,
+      "text": "So, if"
+    },
+    {
+      "start": 131.28,
+      "end": 135.92,
+      "duration": 4.64,
+      "text": "if you assign signs in these couple of"
+    },
+    {
+      "start": 133.32,
+      "end": 137.72,
+      "duration": 4.4,
+      "text": "ways, one is this, the other is this,"
+    },
+    {
+      "start": 135.92,
+      "end": 139.8,
+      "duration": 3.88,
+      "text": "you will end up getting the sum of"
+    },
+    {
+      "start": 137.72,
+      "end": 142.48,
+      "duration": 4.76,
+      "text": "three. So, that is what they're asking"
+    },
+    {
+      "start": 139.8,
+      "end": 144.8,
+      "duration": 5.0,
+      "text": "you. In how many ways can you assign?"
+    },
+    {
+      "start": 142.48,
+      "end": 147.16,
+      "duration": 4.68,
+      "text": "So, there are two ways. So, the question"
+    },
+    {
+      "start": 144.8,
+      "end": 149.08,
+      "duration": 4.28,
+      "text": "is uh pretty much clear to you, right?"
+    },
+    {
+      "start": 147.16,
+      "end": 150.48,
+      "duration": 3.32,
+      "text": "Now, if this question comes up,"
+    },
+    {
+      "start": 149.08,
+      "end": 152.52,
+      "duration": 3.44,
+      "text": "obviously straightforward since you've"
+    },
+    {
+      "start": 150.48,
+      "end": 154.16,
+      "duration": 3.68,
+      "text": "been doing DP on subsequences, your"
+    },
+    {
+      "start": 152.52,
+      "end": 157.68,
+      "duration": 5.16,
+      "text": "brain will start saying \"Let's try Let's"
+    },
+    {
+      "start": 154.16,
+      "end": 159.64,
+      "duration": 5.48,
+      "text": "apply recursion. Let's write f of index"
+    },
+    {
+      "start": 157.68,
+      "end": 161.56,
+      "duration": 3.88,
+      "text": "target.\" And there will be couple of"
+    },
+    {
+      "start": 159.64,
+      "end": 163.64,
+      "duration": 4.0,
+      "text": "possibilities, either assigning like"
+    },
+    {
+      "start": 161.56,
+      "end": 165.36,
+      "duration": 3.8,
+      "text": "everyone would be like \"Either assign"
+    },
+    {
+      "start": 163.64,
+      "end": 167.36,
+      "duration": 3.72,
+      "text": "positive, either assign negative, and"
+    },
+    {
+      "start": 165.36,
+      "end": 169.44,
+      "duration": 4.08,
+      "text": "keep on doing the recursion.\""
+    },
+    {
+      "start": 167.36,
+      "end": 171.04,
+      "duration": 3.68,
+      "text": "That is correct. That is correct. But,"
+    },
+    {
+      "start": 169.44,
+      "end": 172.56,
+      "duration": 3.12,
+      "text": "can we do a"
+    },
+    {
+      "start": 171.04,
+      "end": 174.08,
+      "duration": 3.04,
+      "text": "in something better?"
+    },
+    {
+      "start": 172.56,
+      "end": 176.44,
+      "duration": 3.88,
+      "text": "Because, yeah, you can definitely write"
+    },
+    {
+      "start": 174.08,
+      "end": 177.84,
+      "duration": 3.76,
+      "text": "a recursion which is uh like you take"
+    },
+    {
+      "start": 176.44,
+      "end": 179.92,
+      "duration": 3.48,
+      "text": "couple of ways basically saying"
+    },
+    {
+      "start": 177.84,
+      "end": 182.24,
+      "duration": 4.4,
+      "text": "something like this, where you say f of"
+    },
+    {
+      "start": 179.92,
+      "end": 183.76,
+      "duration": 3.84,
+      "text": "index, f of target, and there will be a"
+    },
+    {
+      "start": 182.24,
+      "end": 185.84,
+      "duration": 3.6,
+      "text": "couple of ways where you assign the plus"
+    },
+    {
+      "start": 183.76,
+      "end": 188.04,
+      "duration": 4.28,
+      "text": "sign, the negative sign. And since the"
+    },
+    {
+      "start": 185.84,
+      "end": 191.44,
+      "duration": 5.6,
+      "text": "question says count the number of ways,"
+    },
+    {
+      "start": 188.04,
+      "end": 193.2,
+      "duration": 5.16,
+      "text": "you return uh plus plus uh negative."
+    },
+    {
+      "start": 191.44,
+      "end": 195.28,
+      "duration": 3.84,
+      "text": "That That is the common uh the"
+    },
+    {
+      "start": 193.2,
+      "end": 197.16,
+      "duration": 3.96,
+      "text": "recurrence that you can do. But, can we"
+    },
+    {
+      "start": 195.28,
+      "end": 199.28,
+      "duration": 4.0,
+      "text": "solve this using any of the problems"
+    },
+    {
+      "start": 197.16,
+      "end": 200.8,
+      "duration": 3.64,
+      "text": "that we have solved previously? Because,"
+    },
+    {
+      "start": 199.28,
+      "end": 202.84,
+      "duration": 3.56,
+      "text": "if we can solve like what have we"
+    },
+    {
+      "start": 200.8,
+      "end": 205.6,
+      "duration": 4.8,
+      "text": "learned uh till now? We have learned"
+    },
+    {
+      "start": 202.84,
+      "end": 207.68,
+      "duration": 4.84,
+      "text": "problems like subset sum."
+    },
+    {
+      "start": 205.6,
+      "end": 210.76,
+      "duration": 5.16,
+      "text": "We have also done a problem uh which"
+    },
+    {
+      "start": 207.68,
+      "end": 213.16,
+      "duration": 5.48,
+      "text": "says uh count"
+    },
+    {
+      "start": 210.76,
+      "end": 215.92,
+      "duration": 5.16,
+      "text": "like partition uh subsets into two such"
+    },
+    {
+      "start": 213.16,
+      "end": 220.48,
+      "duration": 7.32,
+      "text": "that uh you have to count how many have"
+    },
+    {
+      "start": 215.92,
+      "end": 221.84,
+      "duration": 5.92,
+      "text": "S1 - S2 is equal to D. So,"
+    },
+    {
+      "start": 220.48,
+      "end": 223.2,
+      "duration": 2.72,
+      "text": "you can see that this is the problem"
+    },
+    {
+      "start": 221.84,
+      "end": 225.68,
+      "duration": 3.84,
+      "text": "that I was talking about, count"
+    },
+    {
+      "start": 223.2,
+      "end": 228.2,
+      "duration": 5.0,
+      "text": "partitions with a given difference S1 -"
+    },
+    {
+      "start": 225.68,
+      "end": 229.6,
+      "duration": 3.92,
+      "text": "S2 equal to So,"
+    },
+    {
+      "start": 228.2,
+      "end": 231.12,
+      "duration": 2.92,
+      "text": "you must have done these couple of"
+    },
+    {
+      "start": 229.6,
+      "end": 232.92,
+      "duration": 3.32,
+      "text": "problems in order to solve this"
+    },
+    {
+      "start": 231.12,
+      "end": 233.88,
+      "duration": 2.76,
+      "text": "particular problem. Now, let's let's"
+    },
+    {
+      "start": 232.92,
+      "end": 236.64,
+      "duration": 3.72,
+      "text": "see."
+    },
+    {
+      "start": 233.88,
+      "end": 239.8,
+      "duration": 5.92,
+      "text": "So, what was I given? I was given 1 2 3"
+    },
+    {
+      "start": 236.64,
+      "end": 242.36,
+      "duration": 5.72,
+      "text": "and 1. Okay. So, can I say what am I"
+    },
+    {
+      "start": 239.8,
+      "end": 244.04,
+      "duration": 4.24,
+      "text": "doing specifically? If I'm assigning"
+    },
+    {
+      "start": 242.36,
+      "end": 246.08,
+      "duration": 3.72,
+      "text": "minus over here, I'm assigning minus,"
+    },
+    {
+      "start": 244.04,
+      "end": 249.28,
+      "duration": 5.24,
+      "text": "I'm assigning positive positive, I'm"
+    },
+    {
+      "start": 246.08,
+      "end": 252.64,
+      "duration": 6.56,
+      "text": "basically doing 3 + 2 - 1 - 1 and that"
+    },
+    {
+      "start": 249.28,
+      "end": 256.68,
+      "duration": 7.4,
+      "text": "gives me three. Right? So, can I say I"
+    },
+    {
+      "start": 252.64,
+      "end": 258.64,
+      "duration": 6.0,
+      "text": "am assigning some portion to a subset S1"
+    },
+    {
+      "start": 256.68,
+      "end": 260.76,
+      "duration": 4.08,
+      "text": "which is three and two."
+    },
+    {
+      "start": 258.64,
+      "end": 262.8,
+      "duration": 4.16,
+      "text": "And then if I take a negative common,"
+    },
+    {
+      "start": 260.76,
+      "end": 265.92,
+      "duration": 5.16,
+      "text": "I'm assigning one and one."
+    },
+    {
+      "start": 262.8,
+      "end": 267.64,
+      "duration": 4.84,
+      "text": "Right? Thereby this summation is five."
+    },
+    {
+      "start": 265.92,
+      "end": 269.36,
+      "duration": 3.44,
+      "text": "This summation is two, which gives you"
+    },
+    {
+      "start": 267.64,
+      "end": 271.6,
+      "duration": 3.96,
+      "text": "three."
+    },
+    {
+      "start": 269.36,
+      "end": 273.08,
+      "duration": 3.72,
+      "text": "Is this question uh done?"
+    },
+    {
+      "start": 271.6,
+      "end": 274.88,
+      "duration": 3.28,
+      "text": "Yes, this is done."
+    },
+    {
+      "start": 273.08,
+      "end": 278.24,
+      "duration": 5.16,
+      "text": "We have already done a problem where we"
+    },
+    {
+      "start": 274.88,
+      "end": 282.12,
+      "duration": 7.24,
+      "text": "say that given an array, divide them"
+    },
+    {
+      "start": 278.24,
+      "end": 284.0,
+      "duration": 5.76,
+      "text": "into two subsets such that this subset"
+    },
+    {
+      "start": 282.12,
+      "end": 287.0,
+      "duration": 4.88,
+      "text": "like the first partition has subset sum"
+    },
+    {
+      "start": 284.0,
+      "end": 290.88,
+      "duration": 6.88,
+      "text": "S1. The second partition has subset sum"
+    },
+    {
+      "start": 287.0,
+      "end": 292.44,
+      "duration": 5.44,
+      "text": "S2. And if you subtract the"
+    },
+    {
+      "start": 290.88,
+      "end": 294.64,
+      "duration": 3.76,
+      "text": "You have to count these many guys. You"
+    },
+    {
+      "start": 292.44,
+      "end": 296.52,
+      "duration": 4.08,
+      "text": "have to count these many guys. Uh we"
+    },
+    {
+      "start": 294.64,
+      "end": 298.52,
+      "duration": 3.88,
+      "text": "have already done this problem. And if I"
+    },
+    {
+      "start": 296.52,
+      "end": 300.6,
+      "duration": 4.08,
+      "text": "say this problem is pretty much similar"
+    },
+    {
+      "start": 298.52,
+      "end": 302.6,
+      "duration": 4.08,
+      "text": "to that, I won't be wrong because this"
+    },
+    {
+      "start": 300.6,
+      "end": 304.2,
+      "duration": 3.6,
+      "text": "is one of the ways. Now, if I just erase"
+    },
+    {
+      "start": 302.6,
+      "end": 306.08,
+      "duration": 3.48,
+      "text": "this,"
+    },
+    {
+      "start": 304.2,
+      "end": 308.2,
+      "duration": 4.0,
+      "text": "if I erase this and I say I'll I'll"
+    },
+    {
+      "start": 306.08,
+      "end": 311.92,
+      "duration": 5.84,
+      "text": "apply the signs in the opposite fashion,"
+    },
+    {
+      "start": 308.2,
+      "end": 314.56,
+      "duration": 6.36,
+      "text": "minus plus plus minus, then three one"
+    },
+    {
+      "start": 311.92,
+      "end": 316.4,
+      "duration": 4.48,
+      "text": "one go to one subset and the other"
+    },
+    {
+      "start": 314.56,
+      "end": 318.92,
+      "duration": 4.36,
+      "text": "subset will just have two. So, this is"
+    },
+    {
+      "start": 316.4,
+      "end": 320.4,
+      "duration": 4.0,
+      "text": "basically five. This is basically two"
+    },
+    {
+      "start": 318.92,
+      "end": 323.88,
+      "duration": 4.96,
+      "text": "again gives you three."
+    },
+    {
+      "start": 320.4,
+      "end": 326.48,
+      "duration": 6.08,
+      "text": "So, the question is exactly the similar."
+    },
+    {
+      "start": 323.88,
+      "end": 328.68,
+      "duration": 4.8,
+      "text": "They've just changed the language. Yes,"
+    },
+    {
+      "start": 326.48,
+      "end": 331.6,
+      "duration": 5.12,
+      "text": "they've just changed the language. The"
+    },
+    {
+      "start": 328.68,
+      "end": 334.76,
+      "duration": 6.08,
+      "text": "question is very much similar. Divide"
+    },
+    {
+      "start": 331.6,
+      "end": 338.32,
+      "duration": 6.72,
+      "text": "them into two partitions. Divide them"
+    },
+    {
+      "start": 334.76,
+      "end": 338.32,
+      "duration": 3.56,
+      "text": "into two subsets."
+    },
+    {
+      "start": 339.48,
+      "end": 345.4,
+      "duration": 5.92,
+      "text": "Such that S1 is a subset S1 is the sum"
+    },
+    {
+      "start": 342.72,
+      "end": 348.56,
+      "duration": 5.84,
+      "text": "of the subset one. S2 is the sum of the"
+    },
+    {
+      "start": 345.4,
+      "end": 350.68,
+      "duration": 5.28,
+      "text": "subset two. And the difference is the"
+    },
+    {
+      "start": 348.56,
+      "end": 352.52,
+      "duration": 3.96,
+      "text": "target that you're looking for because"
+    },
+    {
+      "start": 350.68,
+      "end": 355.08,
+      "duration": 4.4,
+      "text": "that is what you have been doing. This"
+    },
+    {
+      "start": 352.52,
+      "end": 356.84,
+      "duration": 4.32,
+      "text": "is the target, right?"
+    },
+    {
+      "start": 355.08,
+      "end": 358.72,
+      "duration": 3.64,
+      "text": "This is the negative elements you can"
+    },
+    {
+      "start": 356.84,
+      "end": 360.92,
+      "duration": 4.08,
+      "text": "say. These are the positive elements you"
+    },
+    {
+      "start": 358.72,
+      "end": 363.2,
+      "duration": 4.48,
+      "text": "can say or can be vice versa as well."
+    },
+    {
+      "start": 360.92,
+      "end": 365.36,
+      "duration": 4.44,
+      "text": "So, we have actually"
+    },
+    {
+      "start": 363.2,
+      "end": 367.16,
+      "duration": 3.96,
+      "text": "boiled down the problem into dividing"
+    },
+    {
+      "start": 365.36,
+      "end": 368.84,
+      "duration": 3.48,
+      "text": "them into two subsets"
+    },
+    {
+      "start": 367.16,
+      "end": 371.32,
+      "duration": 4.16,
+      "text": "such that uh the difference between"
+    },
+    {
+      "start": 368.84,
+      "end": 373.24,
+      "duration": 4.4,
+      "text": "those subsets are target because I know"
+    },
+    {
+      "start": 371.32,
+      "end": 375.48,
+      "duration": 4.16,
+      "text": "one of the subset will have all the"
+    },
+    {
+      "start": 373.24,
+      "end": 377.8,
+      "duration": 4.56,
+      "text": "positive elements or the negative and"
+    },
+    {
+      "start": 375.48,
+      "end": 380.16,
+      "duration": 4.68,
+      "text": "the other will always have all the"
+    },
+    {
+      "start": 377.8,
+      "end": 381.84,
+      "duration": 4.04,
+      "text": "negative elements. So, if I'm able to do"
+    },
+    {
+      "start": 380.16,
+      "end": 384.04,
+      "duration": 3.88,
+      "text": "that, I think"
+    },
+    {
+      "start": 381.84,
+      "end": 386.12,
+      "duration": 4.28,
+      "text": "we will be able to solve this particular"
+    },
+    {
+      "start": 384.04,
+      "end": 387.48,
+      "duration": 3.44,
+      "text": "problem. So, yeah, let's uh without"
+    },
+    {
+      "start": 386.12,
+      "end": 388.96,
+      "duration": 2.84,
+      "text": "wasting any time, let's get into the"
+    },
+    {
+      "start": 387.48,
+      "end": 390.6,
+      "duration": 3.12,
+      "text": "code now."
+    },
+    {
+      "start": 388.96,
+      "end": 392.16,
+      "duration": 3.2,
+      "text": "So, in the code you're given n which is"
+    },
+    {
+      "start": 390.6,
+      "end": 394.44,
+      "duration": 3.84,
+      "text": "the size of the array, the target and"
+    },
+    {
+      "start": 392.16,
+      "end": 396.0,
+      "duration": 3.84,
+      "text": "the array, right? So, let's get back to"
+    },
+    {
+      "start": 394.44,
+      "end": 398.2,
+      "duration": 3.76,
+      "text": "the question partitions with a given"
+    },
+    {
+      "start": 396.0,
+      "end": 400.28,
+      "duration": 4.28,
+      "text": "difference where you were given an"
+    },
+    {
+      "start": 398.2,
+      "end": 403.0,
+      "duration": 4.8,
+      "text": "array, you were given a d and you had to"
+    },
+    {
+      "start": 400.28,
+      "end": 405.84,
+      "duration": 5.56,
+      "text": "find how many subsets are there where s1"
+    },
+    {
+      "start": 403.0,
+      "end": 408.28,
+      "duration": 5.28,
+      "text": "minus s2 was equal to d. We have already"
+    },
+    {
+      "start": 405.84,
+      "end": 410.92,
+      "duration": 5.08,
+      "text": "solved this problem in I think dp 18, so"
+    },
+    {
+      "start": 408.28,
+      "end": 413.24,
+      "duration": 4.96,
+      "text": "you can definitely check that out. So,"
+    },
+    {
+      "start": 410.92,
+      "end": 415.76,
+      "duration": 4.84,
+      "text": "can I say let's copy paste this entire"
+    },
+    {
+      "start": 413.24,
+      "end": 417.52,
+      "duration": 4.28,
+      "text": "portion of code? Yes, this is"
+    },
+    {
+      "start": 415.76,
+      "end": 420.36,
+      "duration": 4.6,
+      "text": "uh this is the portion of code which"
+    },
+    {
+      "start": 417.52,
+      "end": 422.52,
+      "duration": 5.0,
+      "text": "I'll copy paste apart like the tabulated"
+    },
+    {
+      "start": 420.36,
+      "end": 424.36,
+      "duration": 4.0,
+      "text": "format. So, I've copy pasted the"
+    },
+    {
+      "start": 422.52,
+      "end": 427.48,
+      "duration": 4.96,
+      "text": "tabulated one, okay. Now, this is the"
+    },
+    {
+      "start": 424.36,
+      "end": 431.0,
+      "duration": 6.64,
+      "text": "count partitions. What I require is I"
+    },
+    {
+      "start": 427.48,
+      "end": 433.88,
+      "duration": 6.4,
+      "text": "will just call the same portion."
+    },
+    {
+      "start": 431.0,
+      "end": 436.72,
+      "duration": 5.72,
+      "text": "Count partitions"
+    },
+    {
+      "start": 433.88,
+      "end": 438.52,
+      "duration": 4.64,
+      "text": "and I'll pass n and I'll pass target and"
+    },
+    {
+      "start": 436.72,
+      "end": 440.04,
+      "duration": 3.32,
+      "text": "I'll pass array."
+    },
+    {
+      "start": 438.52,
+      "end": 443.56,
+      "duration": 5.04,
+      "text": "And I'll try to run this. Let's see if"
+    },
+    {
+      "start": 440.04,
+      "end": 445.04,
+      "duration": 5.0,
+      "text": "this runs or not. So, so uh there So,"
+    },
+    {
+      "start": 443.56,
+      "end": 447.76,
+      "duration": 4.2,
+      "text": "there are some mods that you have to"
+    },
+    {
+      "start": 445.04,
+      "end": 450.24,
+      "duration": 5.2,
+      "text": "remove because in the previous question"
+    },
+    {
+      "start": 447.76,
+      "end": 452.64,
+      "duration": 4.88,
+      "text": "uh there was mention of mod. Let's"
+    },
+    {
+      "start": 450.24,
+      "end": 455.4,
+      "duration": 5.16,
+      "text": "remove that mod and now try to run this."
+    },
+    {
+      "start": 452.64,
+      "end": 456.52,
+      "duration": 3.88,
+      "text": "Now, it does run. So, you see"
+    },
+    {
+      "start": 455.4,
+      "end": 458.72,
+      "duration": 3.32,
+      "text": "So, you saw"
+    },
+    {
+      "start": 456.52,
+      "end": 461.6,
+      "duration": 5.08,
+      "text": "it's exactly the same problem. I did not"
+    },
+    {
+      "start": 458.72,
+      "end": 464.56,
+      "duration": 5.84,
+      "text": "do anything. I called the same code and"
+    },
+    {
+      "start": 461.6,
+      "end": 466.56,
+      "duration": 4.96,
+      "text": "it did run. What did they do? They just"
+    },
+    {
+      "start": 464.56,
+      "end": 469.8,
+      "duration": 5.24,
+      "text": "confused you. They change They changed"
+    },
+    {
+      "start": 466.56,
+      "end": 474.16,
+      "duration": 7.6,
+      "text": "the language from S1 - S2 = D"
+    },
+    {
+      "start": 469.8,
+      "end": 477.16,
+      "duration": 7.36,
+      "text": "from S1 - S2 = D they changed it to plus"
+    },
+    {
+      "start": 474.16,
+      "end": 478.56,
+      "duration": 4.4,
+      "text": "minus. So, you have to figure out these"
+    },
+    {
+      "start": 477.16,
+      "end": 480.2,
+      "duration": 3.04,
+      "text": "kind of patterns and if you're able to"
+    },
+    {
+      "start": 478.56,
+      "end": 482.88,
+      "duration": 4.32,
+      "text": "figure out, I think you will be able to"
+    },
+    {
+      "start": 480.2,
+      "end": 485.48,
+      "duration": 5.28,
+      "text": "do every bit of DP problem. Be it on be"
+    },
+    {
+      "start": 482.88,
+      "end": 488.04,
+      "duration": 5.16,
+      "text": "it on DP on grids, 1D DP, DP on"
+    },
+    {
+      "start": 485.48,
+      "end": 490.04,
+      "duration": 4.56,
+      "text": "subsequences or going forward any DP. If"
+    },
+    {
+      "start": 488.04,
+      "end": 492.24,
+      "duration": 4.2,
+      "text": "you can figure out the patterns,"
+    },
+    {
+      "start": 490.04,
+      "end": 493.36,
+      "duration": 3.32,
+      "text": "you will be able to do it, right? By the"
+    },
+    {
+      "start": 492.24,
+      "end": 495.48,
+      "duration": 3.24,
+      "text": "way, you can definitely solve this"
+    },
+    {
+      "start": 493.36,
+      "end": 497.8,
+      "duration": 4.44,
+      "text": "problem by a couple of probabilities of"
+    },
+    {
+      "start": 495.48,
+      "end": 500.16,
+      "duration": 4.68,
+      "text": "plus minus, but I'll I'll recommend you"
+    },
+    {
+      "start": 497.8,
+      "end": 502.92,
+      "duration": 5.12,
+      "text": "to not go that path instead of going"
+    },
+    {
+      "start": 500.16,
+      "end": 505.36,
+      "duration": 5.2,
+      "text": "this path because because if you go in"
+    },
+    {
+      "start": 502.92,
+      "end": 507.28,
+      "duration": 4.36,
+      "text": "that path, the target because you're"
+    },
+    {
+      "start": 505.36,
+      "end": 509.64,
+      "duration": 4.28,
+      "text": "doing positive negative, the target"
+    },
+    {
+      "start": 507.28,
+      "end": 511.96,
+      "duration": 4.68,
+      "text": "might go into negative and you might"
+    },
+    {
+      "start": 509.64,
+      "end": 513.76,
+      "duration": 4.12,
+      "text": "face space complexity issues. But over"
+    },
+    {
+      "start": 511.96,
+      "end": 515.96,
+      "duration": 4.0,
+      "text": "here, it's very straightforward. You"
+    },
+    {
+      "start": 513.76,
+      "end": 517.56,
+      "duration": 3.8,
+      "text": "should definitely convert this problem"
+    },
+    {
+      "start": 515.96,
+      "end": 519.4,
+      "duration": 3.44,
+      "text": "into the previous problem and try to"
+    },
+    {
+      "start": 517.56,
+      "end": 521.28,
+      "duration": 3.72,
+      "text": "solve this. This should be the best way"
+    },
+    {
+      "start": 519.4,
+      "end": 522.68,
+      "duration": 3.28,
+      "text": "going forward. So, guys, I hope you've"
+    },
+    {
+      "start": 521.28,
+      "end": 524.36,
+      "duration": 3.08,
+      "text": "understood the entire problem. So, just"
+    },
+    {
+      "start": 522.68,
+      "end": 525.72,
+      "duration": 3.04,
+      "text": "in case you didn't, please please please"
+    },
+    {
+      "start": 524.36,
+      "end": 526.68,
+      "duration": 2.32,
+      "text": "make sure you like this video and if"
+    },
+    {
+      "start": 525.72,
+      "end": 528.88,
+      "duration": 3.16,
+      "text": "you're new to this channel, please do"
+    },
+    {
+      "start": 526.68,
+      "end": 530.32,
+      "duration": 3.64,
+      "text": "consider subscribing and to continue our"
+    },
+    {
+      "start": 528.88,
+      "end": 532.16,
+      "duration": 3.28,
+      "text": "tradition, make sure you write"
+    },
+    {
+      "start": 530.32,
+      "end": 533.4,
+      "duration": 3.08,
+      "text": "understood in the comment section. And"
+    },
+    {
+      "start": 532.16,
+      "end": 534.56,
+      "duration": 2.4,
+      "text": "yeah, with this, let's wrap up this"
+    },
+    {
+      "start": 533.4,
+      "end": 535.68,
+      "duration": 2.28,
+      "text": "video and meet in the next one. Till"
+    },
+    {
+      "start": 534.56,
+      "end": 538.84,
+      "duration": 4.28,
+      "text": "then, bye-bye. Take care."
+    },
+    {
+      "start": 535.68,
+      "end": 542.12,
+      "duration": 6.44,
+      "text": "Whenever your heart is broken,"
+    },
+    {
+      "start": 538.84,
+      "end": 545.44,
+      "duration": 6.6,
+      "text": "don't ever forget you're golden."
+    },
+    {
+      "start": 542.12,
+      "end": 545.44,
+      "duration": 3.32,
+      "text": "I will find a light in the darkness."
+    }
+  ]
+}

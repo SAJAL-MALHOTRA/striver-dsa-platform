@@ -1,0 +1,3530 @@
+{
+  "video_id": "8ocB7a_c-Cc",
+  "title": "L26. Sort a Linked List | Merge Sort and Brute Force",
+  "duration_sec": 1331,
+  "num_segments": 587,
+  "segments": [
+    {
+      "start": 3.08,
+      "end": 5.84,
+      "duration": 2.76,
+      "text": "So, we will be continuing with our"
+    },
+    {
+      "start": 4.32,
+      "end": 7.2,
+      "duration": 2.88,
+      "text": "playlist. Before that, hey, we welcome"
+    },
+    {
+      "start": 5.84,
+      "end": 9.0,
+      "duration": 3.16,
+      "text": "back to the channel. I hope you guys are"
+    },
+    {
+      "start": 7.2,
+      "end": 11.76,
+      "duration": 4.56,
+      "text": "doing extremely well. So, the problem"
+    },
+    {
+      "start": 9.0,
+      "end": 14.12,
+      "duration": 5.12,
+      "text": "that we will be solving today is sorting"
+    },
+    {
+      "start": 11.76,
+      "end": 16.0,
+      "duration": 4.24,
+      "text": "a list. So, what is the problem exactly"
+    },
+    {
+      "start": 14.12,
+      "end": 17.96,
+      "duration": 3.84,
+      "text": "stating? It's stating that you'll be"
+    },
+    {
+      "start": 16.0,
+      "end": 20.16,
+      "duration": 4.16,
+      "text": "given a linked list. That basically"
+    },
+    {
+      "start": 17.96,
+      "end": 22.8,
+      "duration": 4.84,
+      "text": "means that you'll be given the head of"
+    },
+    {
+      "start": 20.16,
+      "end": 25.72,
+      "duration": 5.56,
+      "text": "the linked list. And every node will be"
+    },
+    {
+      "start": 22.8,
+      "end": 28.96,
+      "duration": 6.16,
+      "text": "containing an integer. And your task is"
+    },
+    {
+      "start": 25.72,
+      "end": 31.24,
+      "duration": 5.52,
+      "text": "to sort all the integers. Once you have"
+    },
+    {
+      "start": 28.96,
+      "end": 32.96,
+      "duration": 4.0,
+      "text": "done that, you'll have the updated"
+    },
+    {
+      "start": 31.24,
+      "end": 35.16,
+      "duration": 3.92,
+      "text": "linked list as"
+    },
+    {
+      "start": 32.96,
+      "end": 36.92,
+      "duration": 3.96,
+      "text": "this. So, once you have the updated"
+    },
+    {
+      "start": 35.16,
+      "end": 39.48,
+      "duration": 4.32,
+      "text": "linked list, you'll have to return me"
+    },
+    {
+      "start": 36.92,
+      "end": 41.64,
+      "duration": 4.72,
+      "text": "the head of that updated linked list."
+    },
+    {
+      "start": 39.48,
+      "end": 42.92,
+      "duration": 3.44,
+      "text": "Now, this is what the problem is. What"
+    },
+    {
+      "start": 41.64,
+      "end": 45.36,
+      "duration": 3.72,
+      "text": "if this problem comes up in an"
+    },
+    {
+      "start": 42.92,
+      "end": 47.96,
+      "duration": 5.04,
+      "text": "interview? The extreme naive solution"
+    },
+    {
+      "start": 45.36,
+      "end": 49.2,
+      "duration": 3.84,
+      "text": "that I can think of is I'll take all the"
+    },
+    {
+      "start": 47.96,
+      "end": 51.0,
+      "duration": 3.04,
+      "text": "elements,"
+    },
+    {
+      "start": 49.2,
+      "end": 53.68,
+      "duration": 4.48,
+      "text": "put it into an array, and then do"
+    },
+    {
+      "start": 51.0,
+      "end": 56.52,
+      "duration": 5.52,
+      "text": "something. So, what I will do is"
+    },
+    {
+      "start": 53.68,
+      "end": 58.84,
+      "duration": 5.16,
+      "text": "I will take a temporary and place it at"
+    },
+    {
+      "start": 56.52,
+      "end": 61.68,
+      "duration": 5.16,
+      "text": "the head. And I'll take the first"
+    },
+    {
+      "start": 58.84,
+      "end": 64.4,
+      "duration": 5.56,
+      "text": "element that is three and put it into an"
+    },
+    {
+      "start": 61.68,
+      "end": 66.24,
+      "duration": 4.56,
+      "text": "array. It can be a list as well."
+    },
+    {
+      "start": 64.4,
+      "end": 69.28,
+      "duration": 4.88,
+      "text": "Once I've done that, I'll move the"
+    },
+    {
+      "start": 66.24,
+      "end": 71.88,
+      "duration": 5.64,
+      "text": "temporary to the next, and the element"
+    },
+    {
+      "start": 69.28,
+      "end": 73.96,
+      "duration": 4.68,
+      "text": "is four. So, I'll pick up the four, and"
+    },
+    {
+      "start": 71.88,
+      "end": 76.0,
+      "duration": 4.12,
+      "text": "I'll put it into the array. I'll again"
+    },
+    {
+      "start": 73.96,
+      "end": 78.36,
+      "duration": 4.4,
+      "text": "move the temporary, and this time the"
+    },
+    {
+      "start": 76.0,
+      "end": 80.76,
+      "duration": 4.76,
+      "text": "element is two. So, I'll pick it up and"
+    },
+    {
+      "start": 78.36,
+      "end": 83.08,
+      "duration": 4.72,
+      "text": "put it into the array."
+    },
+    {
+      "start": 80.76,
+      "end": 85.48,
+      "duration": 4.72,
+      "text": "Temporary moves. This time the element"
+    },
+    {
+      "start": 83.08,
+      "end": 88.2,
+      "duration": 5.12,
+      "text": "is one. I'll pick it up and put it into"
+    },
+    {
+      "start": 85.48,
+      "end": 90.4,
+      "duration": 4.92,
+      "text": "the array. Temporary again moves. This"
+    },
+    {
+      "start": 88.2,
+      "end": 92.68,
+      "duration": 4.48,
+      "text": "time the element is five. I'll put it"
+    },
+    {
+      "start": 90.4,
+      "end": 95.04,
+      "duration": 4.64,
+      "text": "into the array, and I'll move."
+    },
+    {
+      "start": 92.68,
+      "end": 97.24,
+      "duration": 4.56,
+      "text": "Right at the end, when temporary reaches"
+    },
+    {
+      "start": 95.04,
+      "end": 99.52,
+      "duration": 4.48,
+      "text": "null, that's when you stop. So, the"
+    },
+    {
+      "start": 97.24,
+      "end": 102.44,
+      "duration": 5.2,
+      "text": "traversal is completed. I've taken every"
+    },
+    {
+      "start": 99.52,
+      "end": 105.2,
+      "duration": 5.68,
+      "text": "element, and it's inside the array. Now,"
+    },
+    {
+      "start": 102.44,
+      "end": 107.0,
+      "duration": 4.56,
+      "text": "what is my next job? The next job is I"
+    },
+    {
+      "start": 105.2,
+      "end": 109.28,
+      "duration": 4.08,
+      "text": "can probably apply any sorting"
+    },
+    {
+      "start": 107.0,
+      "end": 111.2,
+      "duration": 4.2,
+      "text": "algorithm, merge sort, quick sort,"
+    },
+    {
+      "start": 109.28,
+      "end": 113.32,
+      "duration": 4.04,
+      "text": "anything you can apply. Once you have"
+    },
+    {
+      "start": 111.2,
+      "end": 116.16,
+      "duration": 4.96,
+      "text": "sorted down this array, you'll have an"
+    },
+    {
+      "start": 113.32,
+      "end": 117.72,
+      "duration": 4.4,
+      "text": "array which has all the integers in the"
+    },
+    {
+      "start": 116.16,
+      "end": 122.12,
+      "duration": 5.96,
+      "text": "sorted manner."
+    },
+    {
+      "start": 117.72,
+      "end": 124.16,
+      "duration": 6.44,
+      "text": "So, it will look like 1 2 3 4 5. Once"
+    },
+    {
+      "start": 122.12,
+      "end": 126.28,
+      "duration": 4.16,
+      "text": "you have the numbers in the sorted"
+    },
+    {
+      "start": 124.16,
+      "end": 128.4,
+      "duration": 4.24,
+      "text": "manner, what you can do is you can call"
+    },
+    {
+      "start": 126.28,
+      "end": 130.28,
+      "duration": 4.0,
+      "text": "the convert function."
+    },
+    {
+      "start": 128.4,
+      "end": 132.6,
+      "duration": 4.2,
+      "text": "We've already done this. You can call"
+    },
+    {
+      "start": 130.28,
+      "end": 135.96,
+      "duration": 5.68,
+      "text": "the convert function which can give you"
+    },
+    {
+      "start": 132.6,
+      "end": 138.64,
+      "duration": 6.04,
+      "text": "a new linked list or what you can do is"
+    },
+    {
+      "start": 135.96,
+      "end": 141.12,
+      "duration": 5.16,
+      "text": "instead of calling the convert function,"
+    },
+    {
+      "start": 138.64,
+      "end": 143.24,
+      "duration": 4.6,
+      "text": "I will be reusing the given linked list."
+    },
+    {
+      "start": 141.12,
+      "end": 145.64,
+      "duration": 4.52,
+      "text": "Let's see how I can do that. So, I'll be"
+    },
+    {
+      "start": 143.24,
+      "end": 147.48,
+      "duration": 4.24,
+      "text": "erasing this temp."
+    },
+    {
+      "start": 145.64,
+      "end": 151.08,
+      "duration": 5.44,
+      "text": "I'll be placing the temp again at the"
+    },
+    {
+      "start": 147.48,
+      "end": 153.24,
+      "duration": 5.76,
+      "text": "head. I'll be taking an index I and this"
+    },
+    {
+      "start": 151.08,
+      "end": 155.72,
+      "duration": 4.64,
+      "text": "time index I will be placed at the"
+    },
+    {
+      "start": 153.24,
+      "end": 157.08,
+      "duration": 3.84,
+      "text": "zeroth index."
+    },
+    {
+      "start": 155.72,
+      "end": 159.88,
+      "duration": 4.16,
+      "text": "So, what is the value at the zeroth"
+    },
+    {
+      "start": 157.08,
+      "end": 162.28,
+      "duration": 5.2,
+      "text": "index? 1. So, I'll take this one and"
+    },
+    {
+      "start": 159.88,
+      "end": 165.12,
+      "duration": 5.24,
+      "text": "I'll place it at the temp."
+    },
+    {
+      "start": 162.28,
+      "end": 167.16,
+      "duration": 4.88,
+      "text": "Once that is done, I'll be moving temp"
+    },
+    {
+      "start": 165.12,
+      "end": 169.68,
+      "duration": 4.56,
+      "text": "and I'll be moving I as well. Now, what"
+    },
+    {
+      "start": 167.16,
+      "end": 172.24,
+      "duration": 5.08,
+      "text": "is the value at the index I? 2. So, I'll"
+    },
+    {
+      "start": 169.68,
+      "end": 174.72,
+      "duration": 5.04,
+      "text": "be placing 2 and I'll be moving temp to"
+    },
+    {
+      "start": 172.24,
+      "end": 177.4,
+      "duration": 5.16,
+      "text": "the next. I'll be moving I to the next."
+    },
+    {
+      "start": 174.72,
+      "end": 179.8,
+      "duration": 5.08,
+      "text": "So, 2 is taken. What is the next? 3. So,"
+    },
+    {
+      "start": 177.4,
+      "end": 183.04,
+      "duration": 5.64,
+      "text": "I'll be placing 3, moving temporary to"
+    },
+    {
+      "start": 179.8,
+      "end": 185.36,
+      "duration": 5.56,
+      "text": "the next and once I've done that, I will"
+    },
+    {
+      "start": 183.04,
+      "end": 187.92,
+      "duration": 4.88,
+      "text": "be moving as well. Next is 4, so"
+    },
+    {
+      "start": 185.36,
+      "end": 189.32,
+      "duration": 3.96,
+      "text": "temporary and I will go to the next."
+    },
+    {
+      "start": 187.92,
+      "end": 191.92,
+      "duration": 4.0,
+      "text": "Next is"
+    },
+    {
+      "start": 189.32,
+      "end": 194.44,
+      "duration": 5.12,
+      "text": "5. So, 5 is taken and temporary goes to"
+    },
+    {
+      "start": 191.92,
+      "end": 197.0,
+      "duration": 5.08,
+      "text": "the next and I goes"
+    },
+    {
+      "start": 194.44,
+      "end": 199.96,
+      "duration": 5.52,
+      "text": "out of the boundary. So, the moment I"
+    },
+    {
+      "start": 197.0,
+      "end": 202.48,
+      "duration": 5.48,
+      "text": "reaches out of the boundary or temporary"
+    },
+    {
+      "start": 199.96,
+      "end": 204.36,
+      "duration": 4.4,
+      "text": "reaches null, that's when you stop. So,"
+    },
+    {
+      "start": 202.48,
+      "end": 205.64,
+      "duration": 3.16,
+      "text": "technically what you've done is you've"
+    },
+    {
+      "start": 204.36,
+      "end": 208.4,
+      "duration": 4.04,
+      "text": "taken down all the elements in the"
+    },
+    {
+      "start": 205.64,
+      "end": 210.76,
+      "duration": 5.12,
+      "text": "array, sorted them, and put them back"
+    },
+    {
+      "start": 208.4,
+      "end": 212.64,
+      "duration": 4.24,
+      "text": "into the linked list. Once that is done,"
+    },
+    {
+      "start": 210.76,
+      "end": 214.36,
+      "duration": 3.6,
+      "text": "you can return the head of that linked"
+    },
+    {
+      "start": 212.64,
+      "end": 216.48,
+      "duration": 3.84,
+      "text": "list and that will be the same head"
+    },
+    {
+      "start": 214.36,
+      "end": 218.0,
+      "duration": 3.64,
+      "text": "because you're replacing the integers."
+    },
+    {
+      "start": 216.48,
+      "end": 219.68,
+      "duration": 3.2,
+      "text": "So, this will be the extreme naive"
+    },
+    {
+      "start": 218.0,
+      "end": 221.44,
+      "duration": 3.44,
+      "text": "solution. If I have to write down the"
+    },
+    {
+      "start": 219.68,
+      "end": 222.84,
+      "duration": 3.16,
+      "text": "pseudo code, it's going to be super"
+    },
+    {
+      "start": 221.44,
+      "end": 226.24,
+      "duration": 4.8,
+      "text": "simple."
+    },
+    {
+      "start": 222.84,
+      "end": 227.8,
+      "duration": 4.96,
+      "text": "I'll be writing down a function"
+    },
+    {
+      "start": 226.24,
+      "end": 230.68,
+      "duration": 4.44,
+      "text": "which will be taking a head. Now, what"
+    },
+    {
+      "start": 227.8,
+      "end": 232.64,
+      "duration": 4.84,
+      "text": "is my first job? The first job is to"
+    },
+    {
+      "start": 230.68,
+      "end": 235.4,
+      "duration": 4.72,
+      "text": "initialize an array. So, I can take an"
+    },
+    {
+      "start": 232.64,
+      "end": 237.04,
+      "duration": 4.4,
+      "text": "array or a list which is empty. After"
+    },
+    {
+      "start": 235.4,
+      "end": 239.6,
+      "duration": 4.2,
+      "text": "that, I'll have to take a temporary"
+    },
+    {
+      "start": 237.04,
+      "end": 240.92,
+      "duration": 3.88,
+      "text": "which is pointing to head. Then, I'll"
+    },
+    {
+      "start": 239.6,
+      "end": 242.6,
+      "duration": 3.0,
+      "text": "have to traverse through the linked"
+    },
+    {
+      "start": 240.92,
+      "end": 244.8,
+      "duration": 3.88,
+      "text": "list. So, I'll be traversing till"
+    },
+    {
+      "start": 242.6,
+      "end": 246.04,
+      "duration": 3.44,
+      "text": "temporary reaches"
+    },
+    {
+      "start": 244.8,
+      "end": 247.2,
+      "duration": 2.4,
+      "text": "null."
+    },
+    {
+      "start": 246.04,
+      "end": 248.04,
+      "duration": 2.0,
+      "text": "Now, what is my first thing that I'll"
+    },
+    {
+      "start": 247.2,
+      "end": 250.84,
+      "duration": 3.64,
+      "text": "do?"
+    },
+    {
+      "start": 248.04,
+      "end": 254.44,
+      "duration": 6.4,
+      "text": "I'll take the integer, put it into an"
+    },
+    {
+      "start": 250.84,
+      "end": 257.08,
+      "duration": 6.24,
+      "text": "array. So, I can say array.add"
+    },
+    {
+      "start": 254.44,
+      "end": 258.6,
+      "duration": 4.16,
+      "text": "and I can say temporary data or value,"
+    },
+    {
+      "start": 257.08,
+      "end": 260.2,
+      "duration": 3.12,
+      "text": "whatever it is."
+    },
+    {
+      "start": 258.6,
+      "end": 262.16,
+      "duration": 3.56,
+      "text": "Once that is done, I can say temporary,"
+    },
+    {
+      "start": 260.2,
+      "end": 265.2,
+      "duration": 5.0,
+      "text": "can you move to the next? So, temporary"
+    },
+    {
+      "start": 262.16,
+      "end": 265.2,
+      "duration": 3.04,
+      "text": "will go to the next."
+    },
+    {
+      "start": 267.56,
+      "end": 270.76,
+      "duration": 3.2,
+      "text": "Done?"
+    },
+    {
+      "start": 268.72,
+      "end": 272.96,
+      "duration": 4.24,
+      "text": "Once that is done, I can apply quick"
+    },
+    {
+      "start": 270.76,
+      "end": 275.04,
+      "duration": 4.28,
+      "text": "sort or merge sort depending on your"
+    },
+    {
+      "start": 272.96,
+      "end": 277.0,
+      "duration": 4.04,
+      "text": "preference. So,"
+    },
+    {
+      "start": 275.04,
+      "end": 279.04,
+      "duration": 4.0,
+      "text": "you can apply the sorting algorithm on"
+    },
+    {
+      "start": 277.0,
+      "end": 281.52,
+      "duration": 4.52,
+      "text": "the array."
+    },
+    {
+      "start": 279.04,
+      "end": 284.64,
+      "duration": 5.6,
+      "text": "Once the sorting algorithm is applied,"
+    },
+    {
+      "start": 281.52,
+      "end": 288.28,
+      "duration": 6.76,
+      "text": "the next job is to take I equal to zero"
+    },
+    {
+      "start": 284.64,
+      "end": 290.08,
+      "duration": 5.44,
+      "text": "and reinitialize temporary to head."
+    },
+    {
+      "start": 288.28,
+      "end": 292.12,
+      "duration": 3.84,
+      "text": "We have to replace the integers. So,"
+    },
+    {
+      "start": 290.08,
+      "end": 294.08,
+      "duration": 4.0,
+      "text": "maybe we can again do the traversal. So,"
+    },
+    {
+      "start": 292.12,
+      "end": 298.48,
+      "duration": 6.36,
+      "text": "the traversal will be simple. I'll be"
+    },
+    {
+      "start": 294.08,
+      "end": 300.72,
+      "duration": 6.64,
+      "text": "traversing till temporary is not null."
+    },
+    {
+      "start": 298.48,
+      "end": 305.08,
+      "duration": 6.6,
+      "text": "And we will say temporary"
+    },
+    {
+      "start": 300.72,
+      "end": 306.96,
+      "duration": 6.24,
+      "text": "value or data will be array of I. Once"
+    },
+    {
+      "start": 305.08,
+      "end": 309.64,
+      "duration": 4.56,
+      "text": "that is done, what is my next job? I"
+    },
+    {
+      "start": 306.96,
+      "end": 312.72,
+      "duration": 5.76,
+      "text": "will be saying, my bad, I will be saying"
+    },
+    {
+      "start": 309.64,
+      "end": 316.08,
+      "duration": 6.44,
+      "text": "I equal to I plus one. I'll be saying"
+    },
+    {
+      "start": 312.72,
+      "end": 318.12,
+      "duration": 5.4,
+      "text": "temporary, can you move to your next?"
+    },
+    {
+      "start": 316.08,
+      "end": 320.28,
+      "duration": 4.2,
+      "text": "So, temporary will go to my next. So,"
+    },
+    {
+      "start": 318.12,
+      "end": 322.96,
+      "duration": 4.84,
+      "text": "the while loop is completed. Once that"
+    },
+    {
+      "start": 320.28,
+      "end": 325.44,
+      "duration": 5.16,
+      "text": "is completed, I can return down the same"
+    },
+    {
+      "start": 322.96,
+      "end": 328.08,
+      "duration": 5.12,
+      "text": "head because that will be my head of the"
+    },
+    {
+      "start": 325.44,
+      "end": 330.04,
+      "duration": 4.6,
+      "text": "updated linked list. Done and dusted. To"
+    },
+    {
+      "start": 328.08,
+      "end": 331.8,
+      "duration": 3.72,
+      "text": "ask you the time complexity, it's going"
+    },
+    {
+      "start": 330.04,
+      "end": 334.48,
+      "duration": 4.44,
+      "text": "to be super simple."
+    },
+    {
+      "start": 331.8,
+      "end": 336.92,
+      "duration": 5.12,
+      "text": "This will be taking a big O of"
+    },
+    {
+      "start": 334.48,
+      "end": 339.88,
+      "duration": 5.4,
+      "text": "n. Very simple."
+    },
+    {
+      "start": 336.92,
+      "end": 342.68,
+      "duration": 5.76,
+      "text": "This will be taking a n log n because"
+    },
+    {
+      "start": 339.88,
+      "end": 344.48,
+      "duration": 4.6,
+      "text": "merge sort or quick sort takes n log n."
+    },
+    {
+      "start": 342.68,
+      "end": 347.08,
+      "duration": 4.4,
+      "text": "And again, a re-traversal will be taking"
+    },
+    {
+      "start": 344.48,
+      "end": 349.96,
+      "duration": 5.48,
+      "text": "a big O of n. So, the overall time"
+    },
+    {
+      "start": 347.08,
+      "end": 351.0,
+      "duration": 3.92,
+      "text": "complexity will be"
+    },
+    {
+      "start": 349.96,
+      "end": 353.04,
+      "duration": 3.08,
+      "text": "n"
+    },
+    {
+      "start": 351.0,
+      "end": 356.16,
+      "duration": 5.16,
+      "text": "+ n log n"
+    },
+    {
+      "start": 353.04,
+      "end": 358.64,
+      "duration": 5.6,
+      "text": "+ n. And the overall space complexity"
+    },
+    {
+      "start": 356.16,
+      "end": 361.08,
+      "duration": 4.92,
+      "text": "will be big O of n because you're using"
+    },
+    {
+      "start": 358.64,
+      "end": 362.8,
+      "duration": 4.16,
+      "text": "an extra array to store all the"
+    },
+    {
+      "start": 361.08,
+      "end": 364.96,
+      "duration": 3.88,
+      "text": "elements. So, this will be the time"
+    },
+    {
+      "start": 362.8,
+      "end": 366.56,
+      "duration": 3.76,
+      "text": "complexity and the space complexity."
+    },
+    {
+      "start": 364.96,
+      "end": 368.76,
+      "duration": 3.8,
+      "text": "Now, this is where the interviewer will"
+    },
+    {
+      "start": 366.56,
+      "end": 370.08,
+      "duration": 3.52,
+      "text": "not be happy with the extra space that"
+    },
+    {
+      "start": 368.76,
+      "end": 371.96,
+      "duration": 3.2,
+      "text": "you're using and he'll ask you to"
+    },
+    {
+      "start": 370.08,
+      "end": 374.64,
+      "duration": 4.56,
+      "text": "optimize it. So, the brute force"
+    },
+    {
+      "start": 371.96,
+      "end": 377.24,
+      "duration": 5.28,
+      "text": "algorithm was taking a space complexity"
+    },
+    {
+      "start": 374.64,
+      "end": 379.64,
+      "duration": 5.0,
+      "text": "of big O of n. Now, we're not allowed to"
+    },
+    {
+      "start": 377.24,
+      "end": 382.0,
+      "duration": 4.76,
+      "text": "use any external space. That itself"
+    },
+    {
+      "start": 379.64,
+      "end": 382.88,
+      "duration": 3.24,
+      "text": "gives us a hint that whatever we need to"
+    },
+    {
+      "start": 382.0,
+      "end": 384.4,
+      "duration": 2.4,
+      "text": "do,"
+    },
+    {
+      "start": 382.88,
+      "end": 387.0,
+      "duration": 4.12,
+      "text": "we need to do within the linked list"
+    },
+    {
+      "start": 384.4,
+      "end": 389.04,
+      "duration": 4.64,
+      "text": "itself. Right? So, what are the sorting"
+    },
+    {
+      "start": 387.0,
+      "end": 390.92,
+      "duration": 3.92,
+      "text": "algorithms that you know of? The most"
+    },
+    {
+      "start": 389.04,
+      "end": 395.16,
+      "duration": 6.12,
+      "text": "optimized ones are"
+    },
+    {
+      "start": 390.92,
+      "end": 396.6,
+      "duration": 5.68,
+      "text": "one is merge sort, while the other is"
+    },
+    {
+      "start": 395.16,
+      "end": 398.72,
+      "duration": 3.56,
+      "text": "quick sort."
+    },
+    {
+      "start": 396.6,
+      "end": 400.52,
+      "duration": 3.92,
+      "text": "In case you don't know about them,"
+    },
+    {
+      "start": 398.72,
+      "end": 402.68,
+      "duration": 3.96,
+      "text": "please go back and watch it. I have"
+    },
+    {
+      "start": 400.52,
+      "end": 404.64,
+      "duration": 4.12,
+      "text": "videos on both of them. Please, please"
+    },
+    {
+      "start": 402.68,
+      "end": 406.6,
+      "duration": 3.92,
+      "text": "go back and watch it. You should be"
+    },
+    {
+      "start": 404.64,
+      "end": 408.64,
+      "duration": 4.0,
+      "text": "knowing it in depth. Once you know both"
+    },
+    {
+      "start": 406.6,
+      "end": 410.0,
+      "duration": 3.4,
+      "text": "these algorithms in depth, you will"
+    },
+    {
+      "start": 408.64,
+      "end": 413.08,
+      "duration": 4.44,
+      "text": "realize that"
+    },
+    {
+      "start": 410.0,
+      "end": 414.76,
+      "duration": 4.76,
+      "text": "this one is easier to implement, while"
+    },
+    {
+      "start": 413.08,
+      "end": 416.92,
+      "duration": 3.84,
+      "text": "quick sort is slightly tough to"
+    },
+    {
+      "start": 414.76,
+      "end": 419.64,
+      "duration": 4.88,
+      "text": "implement. So, what I will do is I'll"
+    },
+    {
+      "start": 416.92,
+      "end": 422.4,
+      "duration": 5.48,
+      "text": "try to implement merge sort within the"
+    },
+    {
+      "start": 419.64,
+      "end": 425.04,
+      "duration": 5.4,
+      "text": "linked list itself. Got it? A quick"
+    },
+    {
+      "start": 422.4,
+      "end": 426.28,
+      "duration": 3.88,
+      "text": "recap about merge sort. You always take"
+    },
+    {
+      "start": 425.04,
+      "end": 428.2,
+      "duration": 3.16,
+      "text": "an array."
+    },
+    {
+      "start": 426.28,
+      "end": 430.6,
+      "duration": 4.32,
+      "text": "You break it down into"
+    },
+    {
+      "start": 428.2,
+      "end": 432.08,
+      "duration": 3.88,
+      "text": "two parts. One is the left"
+    },
+    {
+      "start": 430.6,
+      "end": 434.36,
+      "duration": 3.76,
+      "text": "and one is the right. And you always"
+    },
+    {
+      "start": 432.08,
+      "end": 435.92,
+      "duration": 3.84,
+      "text": "break it down from the middle. After"
+    },
+    {
+      "start": 434.36,
+      "end": 438.4,
+      "duration": 4.04,
+      "text": "that, you again break it down into two"
+    },
+    {
+      "start": 435.92,
+      "end": 439.76,
+      "duration": 3.84,
+      "text": "parts. Again, from the middle. After"
+    },
+    {
+      "start": 438.4,
+      "end": 442.08,
+      "duration": 3.68,
+      "text": "that, you again break it down into two"
+    },
+    {
+      "start": 439.76,
+      "end": 445.4,
+      "duration": 5.64,
+      "text": "parts. Again, from the middle."
+    },
+    {
+      "start": 442.08,
+      "end": 447.8,
+      "duration": 5.72,
+      "text": "Once you reach single elements, you try"
+    },
+    {
+      "start": 445.4,
+      "end": 452.2,
+      "duration": 6.8,
+      "text": "merging them back. And you merge them"
+    },
+    {
+      "start": 447.8,
+      "end": 454.12,
+      "duration": 6.32,
+      "text": "into sorted. You merge them into sorted."
+    },
+    {
+      "start": 452.2,
+      "end": 456.84,
+      "duration": 4.64,
+      "text": "And after that, you again merge them and"
+    },
+    {
+      "start": 454.12,
+      "end": 459.28,
+      "duration": 5.16,
+      "text": "eventually you get a sorted array. This"
+    },
+    {
+      "start": 456.84,
+      "end": 460.96,
+      "duration": 4.12,
+      "text": "was a quick recap about merge sort. In"
+    },
+    {
+      "start": 459.28,
+      "end": 463.52,
+      "duration": 4.24,
+      "text": "case you don't know about it, please"
+    },
+    {
+      "start": 460.96,
+      "end": 464.6,
+      "duration": 3.64,
+      "text": "pause this one, go back and watch it."
+    },
+    {
+      "start": 463.52,
+      "end": 466.2,
+      "duration": 2.68,
+      "text": "Got it?"
+    },
+    {
+      "start": 464.6,
+      "end": 468.12,
+      "duration": 3.52,
+      "text": "Okay, fine."
+    },
+    {
+      "start": 466.2,
+      "end": 469.92,
+      "duration": 3.72,
+      "text": "How do I implement merge sort in a"
+    },
+    {
+      "start": 468.12,
+      "end": 472.88,
+      "duration": 4.76,
+      "text": "linked list? It's going to be super"
+    },
+    {
+      "start": 469.92,
+      "end": 475.32,
+      "duration": 5.4,
+      "text": "simple. What was the first step? The"
+    },
+    {
+      "start": 472.88,
+      "end": 477.72,
+      "duration": 4.84,
+      "text": "first step was breaking them down from"
+    },
+    {
+      "start": 475.32,
+      "end": 479.08,
+      "duration": 3.76,
+      "text": "the middle. Now, you have five elements."
+    },
+    {
+      "start": 477.72,
+      "end": 481.8,
+      "duration": 4.08,
+      "text": "So, obviously, if I'm breaking them down"
+    },
+    {
+      "start": 479.08,
+      "end": 482.96,
+      "duration": 3.88,
+      "text": "into middle, I cannot do 2.5 and 2.5."
+    },
+    {
+      "start": 481.8,
+      "end": 484.96,
+      "duration": 3.16,
+      "text": "So, what I'll do is I'll take three"
+    },
+    {
+      "start": 482.96,
+      "end": 486.92,
+      "duration": 3.96,
+      "text": "elements on the left. I can take two"
+    },
+    {
+      "start": 484.96,
+      "end": 489.52,
+      "duration": 4.56,
+      "text": "elements on the right. You can do the"
+    },
+    {
+      "start": 486.92,
+      "end": 491.88,
+      "duration": 4.96,
+      "text": "other way as well, two and three. That's"
+    },
+    {
+      "start": 489.52,
+      "end": 493.6,
+      "duration": 4.08,
+      "text": "your choice. So, what I'll do is I'll"
+    },
+    {
+      "start": 491.88,
+      "end": 495.2,
+      "duration": 3.32,
+      "text": "take three"
+    },
+    {
+      "start": 493.6,
+      "end": 497.76,
+      "duration": 4.16,
+      "text": "pointing to four"
+    },
+    {
+      "start": 495.2,
+      "end": 500.24,
+      "duration": 5.04,
+      "text": "pointing to two. So, so this is a linked"
+    },
+    {
+      "start": 497.76,
+      "end": 501.76,
+      "duration": 4.0,
+      "text": "list. And this will be pointing to null."
+    },
+    {
+      "start": 500.24,
+      "end": 502.8,
+      "duration": 2.56,
+      "text": "And the right linked list will be from"
+    },
+    {
+      "start": 501.76,
+      "end": 504.08,
+      "duration": 2.32,
+      "text": "one"
+    },
+    {
+      "start": 502.8,
+      "end": 506.48,
+      "duration": 3.68,
+      "text": "to five"
+    },
+    {
+      "start": 504.08,
+      "end": 508.52,
+      "duration": 4.44,
+      "text": "to null. What I've done is I've broken"
+    },
+    {
+      "start": 506.48,
+      "end": 510.72,
+      "duration": 4.24,
+      "text": "them down here, and I made sure that"
+    },
+    {
+      "start": 508.52,
+      "end": 512.32,
+      "duration": 3.8,
+      "text": "this is pointing to null."
+    },
+    {
+      "start": 510.72,
+      "end": 514.88,
+      "duration": 4.16,
+      "text": "Please make sure you do this so that it"
+    },
+    {
+      "start": 512.32,
+      "end": 517.24,
+      "duration": 4.92,
+      "text": "is an individual linked list. Now, this"
+    },
+    {
+      "start": 514.88,
+      "end": 519.24,
+      "duration": 4.36,
+      "text": "is an individual linked list. It needs"
+    },
+    {
+      "start": 517.24,
+      "end": 521.0,
+      "duration": 3.76,
+      "text": "to be sorted. I'll again apply merge"
+    },
+    {
+      "start": 519.24,
+      "end": 523.36,
+      "duration": 4.12,
+      "text": "sort in it. So, this will again be"
+    },
+    {
+      "start": 521.0,
+      "end": 525.16,
+      "duration": 4.16,
+      "text": "broken down into two parts."
+    },
+    {
+      "start": 523.36,
+      "end": 527.48,
+      "duration": 4.12,
+      "text": "This time from here."
+    },
+    {
+      "start": 525.16,
+      "end": 529.0,
+      "duration": 3.84,
+      "text": "So, it'll be three"
+    },
+    {
+      "start": 527.48,
+      "end": 530.96,
+      "duration": 3.48,
+      "text": "pointing to four"
+    },
+    {
+      "start": 529.0,
+      "end": 533.56,
+      "duration": 4.56,
+      "text": "pointing to null. And the right one will"
+    },
+    {
+      "start": 530.96,
+      "end": 535.12,
+      "duration": 4.16,
+      "text": "be just two pointing to null."
+    },
+    {
+      "start": 533.56,
+      "end": 537.04,
+      "duration": 3.48,
+      "text": "So, this is how the left part will look"
+    },
+    {
+      "start": 535.12,
+      "end": 539.52,
+      "duration": 4.4,
+      "text": "like. And you know, in recursion, the"
+    },
+    {
+      "start": 537.04,
+      "end": 541.48,
+      "duration": 4.44,
+      "text": "left part gets executed at first. So,"
+    },
+    {
+      "start": 539.52,
+      "end": 543.2,
+      "duration": 3.68,
+      "text": "let's do it. Again, this one will be"
+    },
+    {
+      "start": 541.48,
+      "end": 546.08,
+      "duration": 4.6,
+      "text": "broken down. So, this time it'll be"
+    },
+    {
+      "start": 543.2,
+      "end": 548.64,
+      "duration": 5.44,
+      "text": "three and this will be four. And both of"
+    },
+    {
+      "start": 546.08,
+      "end": 550.36,
+      "duration": 4.28,
+      "text": "them will be pointing to null."
+    },
+    {
+      "start": 548.64,
+      "end": 552.88,
+      "duration": 4.24,
+      "text": "So, the left recursion will go ahead,"
+    },
+    {
+      "start": 550.36,
+      "end": 554.84,
+      "duration": 4.48,
+      "text": "right? So, you have single elements. You"
+    },
+    {
+      "start": 552.88,
+      "end": 557.04,
+      "duration": 4.16,
+      "text": "have single elements. Now, this will be"
+    },
+    {
+      "start": 554.84,
+      "end": 559.08,
+      "duration": 4.24,
+      "text": "your base case. Whenever you have single"
+    },
+    {
+      "start": 557.04,
+      "end": 560.72,
+      "duration": 3.68,
+      "text": "elements, you stop then and there."
+    },
+    {
+      "start": 559.08,
+      "end": 562.76,
+      "duration": 3.68,
+      "text": "Whenever you have single elements, you"
+    },
+    {
+      "start": 560.72,
+      "end": 563.92,
+      "duration": 3.2,
+      "text": "stop then and there. So, you have three,"
+    },
+    {
+      "start": 562.76,
+      "end": 565.92,
+      "duration": 3.16,
+      "text": "you have four."
+    },
+    {
+      "start": 563.92,
+      "end": 567.32,
+      "duration": 3.4,
+      "text": "Let's merge them back. Let's merge them"
+    },
+    {
+      "start": 565.92,
+      "end": 569.08,
+      "duration": 3.16,
+      "text": "back."
+    },
+    {
+      "start": 567.32,
+      "end": 571.36,
+      "duration": 4.04,
+      "text": "So, I'll try to merge them back."
+    },
+    {
+      "start": 569.08,
+      "end": 572.28,
+      "duration": 3.2,
+      "text": "So, when I try to merge them back can I"
+    },
+    {
+      "start": 571.36,
+      "end": 573.44,
+      "duration": 2.08,
+      "text": "say"
+    },
+    {
+      "start": 572.28,
+      "end": 574.96,
+      "duration": 2.68,
+      "text": "that"
+    },
+    {
+      "start": 573.44,
+      "end": 577.44,
+      "duration": 4.0,
+      "text": "they'll still stay as three and four"
+    },
+    {
+      "start": 574.96,
+      "end": 579.68,
+      "duration": 4.72,
+      "text": "because three and four are sorted in"
+    },
+    {
+      "start": 577.44,
+      "end": 582.64,
+      "duration": 5.2,
+      "text": "itself. Perfect."
+    },
+    {
+      "start": 579.68,
+      "end": 584.8,
+      "duration": 5.12,
+      "text": "Now you have three, four. You have two."
+    },
+    {
+      "start": 582.64,
+      "end": 587.48,
+      "duration": 4.84,
+      "text": "I've already done a previous video and"
+    },
+    {
+      "start": 584.8,
+      "end": 589.76,
+      "duration": 4.96,
+      "text": "I've told you how to merge two sorted"
+    },
+    {
+      "start": 587.48,
+      "end": 592.4,
+      "duration": 4.92,
+      "text": "list. I've told you how to merge two"
+    },
+    {
+      "start": 589.76,
+      "end": 595.76,
+      "duration": 6.0,
+      "text": "sorted list. Go back and watch it. So,"
+    },
+    {
+      "start": 592.4,
+      "end": 598.6,
+      "duration": 6.2,
+      "text": "can you merge this list one and list two"
+    },
+    {
+      "start": 595.76,
+      "end": 601.8,
+      "duration": 6.04,
+      "text": "because both of them are sorted? Can you"
+    },
+    {
+      "start": 598.6,
+      "end": 604.28,
+      "duration": 5.68,
+      "text": "merge them? Yes, you can. So, please"
+    },
+    {
+      "start": 601.8,
+      "end": 605.96,
+      "duration": 4.16,
+      "text": "merge them back. So, once you merge them"
+    },
+    {
+      "start": 604.28,
+      "end": 607.28,
+      "duration": 3.0,
+      "text": "back, it will be having two, three,"
+    },
+    {
+      "start": 605.96,
+      "end": 609.64,
+      "duration": 3.68,
+      "text": "four."
+    },
+    {
+      "start": 607.28,
+      "end": 612.24,
+      "duration": 4.96,
+      "text": "Perfect. Now we will go to the right"
+    },
+    {
+      "start": 609.64,
+      "end": 614.6,
+      "duration": 4.96,
+      "text": "part. Now we will go to the right part"
+    },
+    {
+      "start": 612.24,
+      "end": 616.6,
+      "duration": 4.36,
+      "text": "because the left part is completed. The"
+    },
+    {
+      "start": 614.6,
+      "end": 618.64,
+      "duration": 4.04,
+      "text": "left part is completed. So, we'll go to"
+    },
+    {
+      "start": 616.6,
+      "end": 620.92,
+      "duration": 4.32,
+      "text": "the right part. I'll I'll give you the"
+    },
+    {
+      "start": 618.64,
+      "end": 623.24,
+      "duration": 4.6,
+      "text": "dry run as well. Don't worry about that."
+    },
+    {
+      "start": 620.92,
+      "end": 625.24,
+      "duration": 4.32,
+      "text": "So, you'll have one"
+    },
+    {
+      "start": 623.24,
+      "end": 626.72,
+      "duration": 3.48,
+      "text": "You'll have one"
+    },
+    {
+      "start": 625.24,
+      "end": 628.36,
+      "duration": 3.12,
+      "text": "pointing to null"
+    },
+    {
+      "start": 626.72,
+      "end": 630.2,
+      "duration": 3.48,
+      "text": "and you'll have five"
+    },
+    {
+      "start": 628.36,
+      "end": 632.0,
+      "duration": 3.64,
+      "text": "pointing to null."
+    },
+    {
+      "start": 630.2,
+      "end": 634.2,
+      "duration": 4.0,
+      "text": "Again, base case because you have one"
+    },
+    {
+      "start": 632.0,
+      "end": 636.36,
+      "duration": 4.36,
+      "text": "element. So, let's return. So, when you"
+    },
+    {
+      "start": 634.2,
+      "end": 638.8,
+      "duration": 4.6,
+      "text": "return, you'll still have one and five."
+    },
+    {
+      "start": 636.36,
+      "end": 641.0,
+      "duration": 4.64,
+      "text": "So, I can say that the right portion is"
+    },
+    {
+      "start": 638.8,
+      "end": 642.64,
+      "duration": 3.84,
+      "text": "done as well. So, the right portion is"
+    },
+    {
+      "start": 641.0,
+      "end": 644.64,
+      "duration": 3.64,
+      "text": "completed. So, what will happen is the"
+    },
+    {
+      "start": 642.64,
+      "end": 646.52,
+      "duration": 3.88,
+      "text": "right portion will try to return and the"
+    },
+    {
+      "start": 644.64,
+      "end": 649.08,
+      "duration": 4.44,
+      "text": "left has already returned. So, what do"
+    },
+    {
+      "start": 646.52,
+      "end": 652.16,
+      "duration": 5.64,
+      "text": "you have? You have a list L1 on the"
+    },
+    {
+      "start": 649.08,
+      "end": 654.24,
+      "duration": 5.16,
+      "text": "left. You have a list L2 on the right."
+    },
+    {
+      "start": 652.16,
+      "end": 656.48,
+      "duration": 4.32,
+      "text": "Left and right. Now you can merge them."
+    },
+    {
+      "start": 654.24,
+      "end": 658.32,
+      "duration": 4.08,
+      "text": "You know how to merge two sorted list."
+    },
+    {
+      "start": 656.48,
+      "end": 659.92,
+      "duration": 3.44,
+      "text": "You know it, right? We already did it."
+    },
+    {
+      "start": 658.32,
+      "end": 662.4,
+      "duration": 4.08,
+      "text": "So, try to merge them. So, when you try"
+    },
+    {
+      "start": 659.92,
+      "end": 666.4,
+      "duration": 6.48,
+      "text": "to merge them, you will eventually get"
+    },
+    {
+      "start": 662.4,
+      "end": 670.28,
+      "duration": 7.88,
+      "text": "one, two, three, four, five. So, what do"
+    },
+    {
+      "start": 666.4,
+      "end": 672.44,
+      "duration": 6.04,
+      "text": "you have is a merge sorted list rather,"
+    },
+    {
+      "start": 670.28,
+      "end": 675.56,
+      "duration": 5.28,
+      "text": "what you have is a sorted list after"
+    },
+    {
+      "start": 672.44,
+      "end": 677.8,
+      "duration": 5.36,
+      "text": "performing merge sort. So, the dry run"
+    },
+    {
+      "start": 675.56,
+      "end": 679.56,
+      "duration": 4.0,
+      "text": "was very simple because you already know"
+    },
+    {
+      "start": 677.8,
+      "end": 681.28,
+      "duration": 3.48,
+      "text": "about merge sort. Now, what I'll try to"
+    },
+    {
+      "start": 679.56,
+      "end": 683.04,
+      "duration": 3.48,
+      "text": "do is I'll try to write down the pseudo"
+    },
+    {
+      "start": 681.28,
+      "end": 685.96,
+      "duration": 4.68,
+      "text": "code. Again, it won't be language"
+    },
+    {
+      "start": 683.04,
+      "end": 687.8,
+      "duration": 4.76,
+      "text": "specific. In case you want codes in C++,"
+    },
+    {
+      "start": 685.96,
+      "end": 689.76,
+      "duration": 3.8,
+      "text": "Java, Python, or JavaScript, it will be"
+    },
+    {
+      "start": 687.8,
+      "end": 691.36,
+      "duration": 3.56,
+      "text": "given in the description. So, before I"
+    },
+    {
+      "start": 689.76,
+      "end": 694.52,
+      "duration": 4.76,
+      "text": "write down the code,"
+    },
+    {
+      "start": 691.36,
+      "end": 696.36,
+      "duration": 5.0,
+      "text": "please remember this code snippet. This"
+    },
+    {
+      "start": 694.52,
+      "end": 698.8,
+      "duration": 4.28,
+      "text": "is directly from the merge sort of"
+    },
+    {
+      "start": 696.36,
+      "end": 700.52,
+      "duration": 4.16,
+      "text": "arrays. Remember this code snippet. You"
+    },
+    {
+      "start": 698.8,
+      "end": 702.88,
+      "duration": 4.08,
+      "text": "always take an array,"
+    },
+    {
+      "start": 700.52,
+      "end": 705.28,
+      "duration": 4.76,
+      "text": "low and high. This is the left point and"
+    },
+    {
+      "start": 702.88,
+      "end": 707.84,
+      "duration": 4.96,
+      "text": "the right point, right? After that, if"
+    },
+    {
+      "start": 705.28,
+      "end": 709.88,
+      "duration": 4.6,
+      "text": "it is a single element, if the left and"
+    },
+    {
+      "start": 707.84,
+      "end": 713.24,
+      "duration": 5.4,
+      "text": "the right point are same, it means it is"
+    },
+    {
+      "start": 709.88,
+      "end": 714.76,
+      "duration": 4.88,
+      "text": "a single element. You return. Otherwise,"
+    },
+    {
+      "start": 713.24,
+      "end": 716.44,
+      "duration": 3.2,
+      "text": "you find the middle"
+    },
+    {
+      "start": 714.76,
+      "end": 718.92,
+      "duration": 4.16,
+      "text": "and you break them down."
+    },
+    {
+      "start": 716.44,
+      "end": 721.12,
+      "duration": 4.68,
+      "text": "So, there's low, there's high. You find"
+    },
+    {
+      "start": 718.92,
+      "end": 724.12,
+      "duration": 5.2,
+      "text": "the middle and then you break them down"
+    },
+    {
+      "start": 721.12,
+      "end": 726.48,
+      "duration": 5.36,
+      "text": "to low to mid, to low to mid, and mid"
+    },
+    {
+      "start": 724.12,
+      "end": 728.2,
+      "duration": 4.08,
+      "text": "plus one to high, mid plus one to high."
+    },
+    {
+      "start": 726.48,
+      "end": 729.16,
+      "duration": 2.68,
+      "text": "And then you call merge sort, merge"
+    },
+    {
+      "start": 728.2,
+      "end": 731.16,
+      "duration": 2.96,
+      "text": "sort."
+    },
+    {
+      "start": 729.16,
+      "end": 732.56,
+      "duration": 3.4,
+      "text": "You call it, it comes back. You call it,"
+    },
+    {
+      "start": 731.16,
+      "end": 734.88,
+      "duration": 3.72,
+      "text": "it comes back."
+    },
+    {
+      "start": 732.56,
+      "end": 737.08,
+      "duration": 4.52,
+      "text": "And once that is done, you call the"
+    },
+    {
+      "start": 734.88,
+      "end": 739.64,
+      "duration": 4.76,
+      "text": "merge function in order to merge the"
+    },
+    {
+      "start": 737.08,
+      "end": 742.0,
+      "duration": 4.92,
+      "text": "left half and the right half."
+    },
+    {
+      "start": 739.64,
+      "end": 743.92,
+      "duration": 4.28,
+      "text": "Remember this code snippet because"
+    },
+    {
+      "start": 742.0,
+      "end": 746.44,
+      "duration": 4.44,
+      "text": "I'll write the exact same code, but I'll"
+    },
+    {
+      "start": 743.92,
+      "end": 748.08,
+      "duration": 4.16,
+      "text": "write in terms of linked list. Let's"
+    },
+    {
+      "start": 746.44,
+      "end": 749.68,
+      "duration": 3.24,
+      "text": "ready to write it. So, I'll be writing"
+    },
+    {
+      "start": 748.08,
+      "end": 752.16,
+      "duration": 4.08,
+      "text": "down the function, and this function"
+    },
+    {
+      "start": 749.68,
+      "end": 753.76,
+      "duration": 4.08,
+      "text": "will be taking the linked list. Now,"
+    },
+    {
+      "start": 752.16,
+      "end": 755.92,
+      "duration": 3.76,
+      "text": "when I say linked list, it basically"
+    },
+    {
+      "start": 753.76,
+      "end": 758.96,
+      "duration": 5.2,
+      "text": "means I'll be taking the head because"
+    },
+    {
+      "start": 755.92,
+      "end": 761.16,
+      "duration": 5.24,
+      "text": "the head denotes the entire linked list."
+    },
+    {
+      "start": 758.96,
+      "end": 763.52,
+      "duration": 4.56,
+      "text": "I know earlier snippet of code, we"
+    },
+    {
+      "start": 761.16,
+      "end": 766.12,
+      "duration": 4.96,
+      "text": "always took down the array in terms of"
+    },
+    {
+      "start": 763.52,
+      "end": 768.6,
+      "duration": 5.08,
+      "text": "merge sort in arrays, and then low and"
+    },
+    {
+      "start": 766.12,
+      "end": 771.08,
+      "duration": 4.96,
+      "text": "high was used to figure out which"
+    },
+    {
+      "start": 768.6,
+      "end": 773.72,
+      "duration": 5.12,
+      "text": "portion of array was being sorted. Got"
+    },
+    {
+      "start": 771.08,
+      "end": 776.84,
+      "duration": 5.76,
+      "text": "it? But, in our function, we'll just be"
+    },
+    {
+      "start": 773.72,
+      "end": 778.44,
+      "duration": 4.72,
+      "text": "taking down the head of the linked list."
+    },
+    {
+      "start": 776.84,
+      "end": 780.2,
+      "duration": 3.36,
+      "text": "What is my first"
+    },
+    {
+      "start": 778.44,
+      "end": 781.16,
+      "duration": 2.72,
+      "text": "thing that I have to write? The base"
+    },
+    {
+      "start": 780.2,
+      "end": 783.08,
+      "duration": 2.88,
+      "text": "case."
+    },
+    {
+      "start": 781.16,
+      "end": 785.52,
+      "duration": 4.36,
+      "text": "Can I say if"
+    },
+    {
+      "start": 783.08,
+      "end": 788.12,
+      "duration": 5.04,
+      "text": "the head is empty? What if the linked"
+    },
+    {
+      "start": 785.52,
+      "end": 792.44,
+      "duration": 6.92,
+      "text": "list is empty? That might be a case."
+    },
+    {
+      "start": 788.12,
+      "end": 795.36,
+      "duration": 7.24,
+      "text": "That might be a case. Or or what if"
+    },
+    {
+      "start": 792.44,
+      "end": 797.68,
+      "duration": 5.24,
+      "text": "it's of a single element? If it's of a"
+    },
+    {
+      "start": 795.36,
+      "end": 799.8,
+      "duration": 4.44,
+      "text": "single element, I don't need to sort it."
+    },
+    {
+      "start": 797.68,
+      "end": 802.2,
+      "duration": 4.52,
+      "text": "It's already sorted. So, I can straight"
+    },
+    {
+      "start": 799.8,
+      "end": 804.68,
+      "duration": 4.88,
+      "text": "away return the head. I can straight"
+    },
+    {
+      "start": 802.2,
+      "end": 806.4,
+      "duration": 4.2,
+      "text": "away return the head. Perfect."
+    },
+    {
+      "start": 804.68,
+      "end": 809.72,
+      "duration": 5.04,
+      "text": "What after this?"
+    },
+    {
+      "start": 806.4,
+      "end": 812.36,
+      "duration": 5.96,
+      "text": "After this, I'll to make sure"
+    },
+    {
+      "start": 809.72,
+      "end": 814.44,
+      "duration": 4.72,
+      "text": "that if I've been given a single linked"
+    },
+    {
+      "start": 812.36,
+      "end": 816.56,
+      "duration": 4.2,
+      "text": "list, I need to break it down."
+    },
+    {
+      "start": 814.44,
+      "end": 819.08,
+      "duration": 4.64,
+      "text": "The first step is to figure out the"
+    },
+    {
+      "start": 816.56,
+      "end": 820.8,
+      "duration": 4.24,
+      "text": "middle. How can I do that? My tortoise"
+    },
+    {
+      "start": 819.08,
+      "end": 823.0,
+      "duration": 3.92,
+      "text": "and the hair algorithm. I've already"
+    },
+    {
+      "start": 820.8,
+      "end": 825.68,
+      "duration": 4.88,
+      "text": "done that in my previous videos. Go back"
+    },
+    {
+      "start": 823.0,
+      "end": 828.28,
+      "duration": 5.28,
+      "text": "and watch it. So, what I'll do is"
+    },
+    {
+      "start": 825.68,
+      "end": 831.08,
+      "duration": 5.4,
+      "text": "I will be calling"
+    },
+    {
+      "start": 828.28,
+      "end": 831.08,
+      "duration": 2.8,
+      "text": "find middle."
+    },
+    {
+      "start": 831.28,
+      "end": 836.0,
+      "duration": 4.72,
+      "text": "Find middle. I'll be passing on the head"
+    },
+    {
+      "start": 834.52,
+      "end": 838.64,
+      "duration": 4.12,
+      "text": "of the linked list."
+    },
+    {
+      "start": 836.0,
+      "end": 840.4,
+      "duration": 4.4,
+      "text": "And this will be giving me the middle."
+    },
+    {
+      "start": 838.64,
+      "end": 842.0,
+      "duration": 3.36,
+      "text": "So, which one will be the middle?"
+    },
+    {
+      "start": 840.4,
+      "end": 843.6,
+      "duration": 3.2,
+      "text": "This one will be the middle."
+    },
+    {
+      "start": 842.0,
+      "end": 845.16,
+      "duration": 3.16,
+      "text": "If I ask you, which is the left linked"
+    },
+    {
+      "start": 843.6,
+      "end": 847.04,
+      "duration": 3.44,
+      "text": "list? You'll be like, this one is the"
+    },
+    {
+      "start": 845.16,
+      "end": 849.08,
+      "duration": 3.92,
+      "text": "left linked list."
+    },
+    {
+      "start": 847.04,
+      "end": 850.48,
+      "duration": 3.44,
+      "text": "Can I say the head? Can I say the head"
+    },
+    {
+      "start": 849.08,
+      "end": 852.8,
+      "duration": 3.72,
+      "text": "denotes the"
+    },
+    {
+      "start": 850.48,
+      "end": 855.36,
+      "duration": 4.88,
+      "text": "left linked list? It denotes But, which"
+    },
+    {
+      "start": 852.8,
+      "end": 860.12,
+      "duration": 7.32,
+      "text": "one is the right linked list?"
+    },
+    {
+      "start": 855.36,
+      "end": 862.36,
+      "duration": 7.0,
+      "text": "Middle dot next. Middle dot next denotes"
+    },
+    {
+      "start": 860.12,
+      "end": 864.28,
+      "duration": 4.16,
+      "text": "the right linked list. Perfect. So, I"
+    },
+    {
+      "start": 862.36,
+      "end": 869.0,
+      "duration": 6.64,
+      "text": "can say, okay,"
+    },
+    {
+      "start": 864.28,
+      "end": 871.84,
+      "duration": 7.56,
+      "text": "I know one thing, left head is my head."
+    },
+    {
+      "start": 869.0,
+      "end": 875.04,
+      "duration": 6.04,
+      "text": "And I know one thing, right head is"
+    },
+    {
+      "start": 871.84,
+      "end": 876.8,
+      "duration": 4.96,
+      "text": "nothing but middle"
+    },
+    {
+      "start": 875.04,
+      "end": 880.04,
+      "duration": 5.0,
+      "text": "dot next."
+    },
+    {
+      "start": 876.8,
+      "end": 881.8,
+      "duration": 5.0,
+      "text": "Perfect. So, I know now the left portion"
+    },
+    {
+      "start": 880.04,
+      "end": 884.56,
+      "duration": 4.52,
+      "text": "and the right portion. What is my next"
+    },
+    {
+      "start": 881.8,
+      "end": 887.2,
+      "duration": 5.4,
+      "text": "job? My next job is to make sure"
+    },
+    {
+      "start": 884.56,
+      "end": 889.04,
+      "duration": 4.48,
+      "text": "this linked list is separated from this"
+    },
+    {
+      "start": 887.2,
+      "end": 891.64,
+      "duration": 4.44,
+      "text": "one. So, I'll be making sure that the"
+    },
+    {
+      "start": 889.04,
+      "end": 893.88,
+      "duration": 4.84,
+      "text": "middle points to null."
+    },
+    {
+      "start": 891.64,
+      "end": 896.76,
+      "duration": 5.12,
+      "text": "So, I'll be doing that."
+    },
+    {
+      "start": 893.88,
+      "end": 899.88,
+      "duration": 6.0,
+      "text": "My middle"
+    },
+    {
+      "start": 896.76,
+      "end": 900.88,
+      "duration": 4.12,
+      "text": "next will be pointing to"
+    },
+    {
+      "start": 899.88,
+      "end": 902.36,
+      "duration": 2.48,
+      "text": "null."
+    },
+    {
+      "start": 900.88,
+      "end": 904.4,
+      "duration": 3.52,
+      "text": "Null, I understood it."
+    },
+    {
+      "start": 902.36,
+      "end": 906.16,
+      "duration": 3.8,
+      "text": "So, what have I done? I've made sure"
+    },
+    {
+      "start": 904.4,
+      "end": 908.4,
+      "duration": 4.0,
+      "text": "that this is pointing to null. So, I"
+    },
+    {
+      "start": 906.16,
+      "end": 910.52,
+      "duration": 4.36,
+      "text": "have a left, I have a right. I need to"
+    },
+    {
+      "start": 908.4,
+      "end": 913.08,
+      "duration": 4.68,
+      "text": "call them. I need to call the merge sort"
+    },
+    {
+      "start": 910.52,
+      "end": 914.96,
+      "duration": 4.44,
+      "text": "again. So, I'll be going ahead and"
+    },
+    {
+      "start": 913.08,
+      "end": 915.92,
+      "duration": 2.84,
+      "text": "calling this function that is merge sort"
+    },
+    {
+      "start": 914.96,
+      "end": 917.48,
+      "duration": 2.52,
+      "text": "again."
+    },
+    {
+      "start": 915.92,
+      "end": 918.76,
+      "duration": 2.84,
+      "text": "So, I'll be calling merge sort with the"
+    },
+    {
+      "start": 917.48,
+      "end": 920.76,
+      "duration": 3.28,
+      "text": "left."
+    },
+    {
+      "start": 918.76,
+      "end": 922.52,
+      "duration": 3.76,
+      "text": "So, the left will be left head."
+    },
+    {
+      "start": 920.76,
+      "end": 926.12,
+      "duration": 5.36,
+      "text": "I'll be calling with the right. and the"
+    },
+    {
+      "start": 922.52,
+      "end": 926.12,
+      "duration": 3.6,
+      "text": "right will be right head."
+    },
+    {
+      "start": 926.92,
+      "end": 930.48,
+      "duration": 3.56,
+      "text": "Perfect."
+    },
+    {
+      "start": 927.96,
+      "end": 933.56,
+      "duration": 5.6,
+      "text": "But, when I call this,"
+    },
+    {
+      "start": 930.48,
+      "end": 935.84,
+      "duration": 5.36,
+      "text": "it will be returning me a sorted head,"
+    },
+    {
+      "start": 933.56,
+      "end": 938.92,
+      "duration": 5.36,
+      "text": "which contains the left portion. So, I"
+    },
+    {
+      "start": 935.84,
+      "end": 941.68,
+      "duration": 5.84,
+      "text": "can say that the sorted head can be"
+    },
+    {
+      "start": 938.92,
+      "end": 944.48,
+      "duration": 5.56,
+      "text": "reinitialized to the left head, and the"
+    },
+    {
+      "start": 941.68,
+      "end": 946.08,
+      "duration": 4.4,
+      "text": "right sorted head can be reinitialized"
+    },
+    {
+      "start": 944.48,
+      "end": 947.88,
+      "duration": 3.4,
+      "text": "to the right head, because this one will"
+    },
+    {
+      "start": 946.08,
+      "end": 948.96,
+      "duration": 2.88,
+      "text": "also call and come back."
+    },
+    {
+      "start": 947.88,
+      "end": 950.96,
+      "duration": 3.08,
+      "text": "Done."
+    },
+    {
+      "start": 948.96,
+      "end": 953.28,
+      "duration": 4.32,
+      "text": "If you look at the snippet,"
+    },
+    {
+      "start": 950.96,
+      "end": 955.8,
+      "duration": 4.84,
+      "text": "we've already done up till this. The"
+    },
+    {
+      "start": 953.28,
+      "end": 957.2,
+      "duration": 3.92,
+      "text": "middle was done by finding the middle."
+    },
+    {
+      "start": 955.8,
+      "end": 959.04,
+      "duration": 3.24,
+      "text": "After that,"
+    },
+    {
+      "start": 957.2,
+      "end": 961.48,
+      "duration": 4.28,
+      "text": "it's a similar snippet."
+    },
+    {
+      "start": 959.04,
+      "end": 964.08,
+      "duration": 5.04,
+      "text": "What is the last step?"
+    },
+    {
+      "start": 961.48,
+      "end": 966.4,
+      "duration": 4.92,
+      "text": "To combine the left and the right. To"
+    },
+    {
+      "start": 964.08,
+      "end": 968.68,
+      "duration": 4.6,
+      "text": "combine the left and the right. So, this"
+    },
+    {
+      "start": 966.4,
+      "end": 972.4,
+      "duration": 6.0,
+      "text": "is what we will do. We will go ahead and"
+    },
+    {
+      "start": 968.68,
+      "end": 975.28,
+      "duration": 6.6,
+      "text": "say, \"Hey, merge two.\""
+    },
+    {
+      "start": 972.4,
+      "end": 977.12,
+      "duration": 4.72,
+      "text": "And we've already done how to combine"
+    },
+    {
+      "start": 975.28,
+      "end": 980.52,
+      "duration": 5.24,
+      "text": "two sorted list. So, please go back and"
+    },
+    {
+      "start": 977.12,
+      "end": 984.96,
+      "duration": 7.84,
+      "text": "watch it. So, merge two,"
+    },
+    {
+      "start": 980.52,
+      "end": 986.84,
+      "duration": 6.32,
+      "text": "left head and right head."
+    },
+    {
+      "start": 984.96,
+      "end": 989.44,
+      "duration": 4.48,
+      "text": "I'll again be calling it."
+    },
+    {
+      "start": 986.84,
+      "end": 992.64,
+      "duration": 5.8,
+      "text": "This will be returning me a head. So,"
+    },
+    {
+      "start": 989.44,
+      "end": 992.64,
+      "duration": 3.2,
+      "text": "I'll be returning this one."
+    },
+    {
+      "start": 993.68,
+      "end": 999.8,
+      "duration": 6.12,
+      "text": "Remember one thing, in linked list, you"
+    },
+    {
+      "start": 996.96,
+      "end": 1001.36,
+      "duration": 4.4,
+      "text": "will have to write return."
+    },
+    {
+      "start": 999.8,
+      "end": 1004.0,
+      "duration": 4.2,
+      "text": "In your array,"
+    },
+    {
+      "start": 1001.36,
+      "end": 1006.84,
+      "duration": 5.48,
+      "text": "you never did write return. Why? Because"
+    },
+    {
+      "start": 1004.0,
+      "end": 1009.08,
+      "duration": 5.08,
+      "text": "the array was reference based. So,"
+    },
+    {
+      "start": 1006.84,
+      "end": 1011.2,
+      "duration": 4.36,
+      "text": "whatever changes you did, it was done on"
+    },
+    {
+      "start": 1009.08,
+      "end": 1013.76,
+      "duration": 4.68,
+      "text": "the memory location itself."
+    },
+    {
+      "start": 1011.2,
+      "end": 1014.68,
+      "duration": 3.48,
+      "text": "In the In the merge sort for linked"
+    },
+    {
+      "start": 1013.76,
+      "end": 1016.4,
+      "duration": 2.64,
+      "text": "list,"
+    },
+    {
+      "start": 1014.68,
+      "end": 1018.44,
+      "duration": 3.76,
+      "text": "you need to return the head of the"
+    },
+    {
+      "start": 1016.4,
+      "end": 1021.52,
+      "duration": 5.12,
+      "text": "updated linked list. That is why you"
+    },
+    {
+      "start": 1018.44,
+      "end": 1023.88,
+      "duration": 5.44,
+      "text": "will be returning whatever is returned."
+    },
+    {
+      "start": 1021.52,
+      "end": 1026.4,
+      "duration": 4.88,
+      "text": "So, please make sure you do it. In case"
+    },
+    {
+      "start": 1023.88,
+      "end": 1028.56,
+      "duration": 4.68,
+      "text": "you want to understand the dry run for"
+    },
+    {
+      "start": 1026.4,
+      "end": 1030.8,
+      "duration": 4.4,
+      "text": "this code, please go back to my merge"
+    },
+    {
+      "start": 1028.56,
+      "end": 1032.92,
+      "duration": 4.36,
+      "text": "sort video and watch the dry run on"
+    },
+    {
+      "start": 1030.8,
+      "end": 1035.36,
+      "duration": 4.56,
+      "text": "merge sort. You'll understand that in"
+    },
+    {
+      "start": 1032.92,
+      "end": 1037.68,
+      "duration": 4.76,
+      "text": "depth. If you understand that, you will"
+    },
+    {
+      "start": 1035.36,
+      "end": 1040.36,
+      "duration": 5.0,
+      "text": "be understanding this as well. Take a"
+    },
+    {
+      "start": 1037.68,
+      "end": 1042.52,
+      "duration": 4.84,
+      "text": "pen and paper, do a dry run, this will"
+    },
+    {
+      "start": 1040.36,
+      "end": 1044.52,
+      "duration": 4.16,
+      "text": "get into your head. So before I move on"
+    },
+    {
+      "start": 1042.52,
+      "end": 1046.64,
+      "duration": 4.12,
+      "text": "to the code editor, there's one slight"
+    },
+    {
+      "start": 1044.52,
+      "end": 1048.84,
+      "duration": 4.32,
+      "text": "edge case that I will be talking about."
+    },
+    {
+      "start": 1046.64,
+      "end": 1052.04,
+      "duration": 5.4,
+      "text": "Now we are using find middle in order to"
+    },
+    {
+      "start": 1048.84,
+      "end": 1054.0,
+      "duration": 5.16,
+      "text": "find the middle. Now on the back it uses"
+    },
+    {
+      "start": 1052.04,
+      "end": 1056.28,
+      "duration": 4.24,
+      "text": "tortoise and the hare algorithm. The"
+    },
+    {
+      "start": 1054.0,
+      "end": 1058.72,
+      "duration": 4.72,
+      "text": "tortoise and hare algorithm, whenever"
+    },
+    {
+      "start": 1056.28,
+      "end": 1061.92,
+      "duration": 5.64,
+      "text": "the length of the linked list is even,"
+    },
+    {
+      "start": 1058.72,
+      "end": 1063.76,
+      "duration": 5.04,
+      "text": "it always returns the second middle and"
+    },
+    {
+      "start": 1061.92,
+      "end": 1066.36,
+      "duration": 4.44,
+      "text": "not the first middle."
+    },
+    {
+      "start": 1063.76,
+      "end": 1067.12,
+      "duration": 3.36,
+      "text": "But in terms of merge sort, I'm asking"
+    },
+    {
+      "start": 1066.36,
+      "end": 1068.84,
+      "duration": 2.48,
+      "text": "you"
+    },
+    {
+      "start": 1067.12,
+      "end": 1070.56,
+      "duration": 3.44,
+      "text": "which one is the middle? You'll be like,"
+    },
+    {
+      "start": 1068.84,
+      "end": 1072.8,
+      "duration": 3.96,
+      "text": "you need to break it over here."
+    },
+    {
+      "start": 1070.56,
+      "end": 1074.6,
+      "duration": 4.04,
+      "text": "So you need middle to be pointing here."
+    },
+    {
+      "start": 1072.8,
+      "end": 1076.24,
+      "duration": 3.44,
+      "text": "So that you can straight away point this"
+    },
+    {
+      "start": 1074.6,
+      "end": 1078.08,
+      "duration": 3.48,
+      "text": "to null and this will be your left"
+    },
+    {
+      "start": 1076.24,
+      "end": 1080.76,
+      "duration": 4.52,
+      "text": "portion, this will be your right"
+    },
+    {
+      "start": 1078.08,
+      "end": 1082.16,
+      "duration": 4.08,
+      "text": "portion. Correct? Please make sure that"
+    },
+    {
+      "start": 1080.76,
+      "end": 1084.6,
+      "duration": 3.84,
+      "text": "you modify the tortoise and hare"
+    },
+    {
+      "start": 1082.16,
+      "end": 1087.36,
+      "duration": 5.2,
+      "text": "algorithm slightly so that you get the"
+    },
+    {
+      "start": 1084.6,
+      "end": 1089.04,
+      "duration": 4.44,
+      "text": "first middle and not the second middle."
+    },
+    {
+      "start": 1087.36,
+      "end": 1090.28,
+      "duration": 2.92,
+      "text": "Super simple, I'll be showing you in the"
+    },
+    {
+      "start": 1089.04,
+      "end": 1092.08,
+      "duration": 3.04,
+      "text": "code editor."
+    },
+    {
+      "start": 1090.28,
+      "end": 1094.68,
+      "duration": 4.4,
+      "text": "So time to get back into the code editor"
+    },
+    {
+      "start": 1092.08,
+      "end": 1097.4,
+      "duration": 5.32,
+      "text": "and check out the code. So if you look"
+    },
+    {
+      "start": 1094.68,
+      "end": 1099.76,
+      "duration": 5.08,
+      "text": "on the first line, very simple."
+    },
+    {
+      "start": 1097.4,
+      "end": 1101.56,
+      "duration": 4.16,
+      "text": "After this, you're finding the middle."
+    },
+    {
+      "start": 1099.76,
+      "end": 1104.28,
+      "duration": 4.52,
+      "text": "Now this is the tortoise and the hare"
+    },
+    {
+      "start": 1101.56,
+      "end": 1105.96,
+      "duration": 4.4,
+      "text": "algorithm, but there's a slight change."
+    },
+    {
+      "start": 1104.28,
+      "end": 1107.88,
+      "duration": 3.6,
+      "text": "If you look at this,"
+    },
+    {
+      "start": 1105.96,
+      "end": 1110.64,
+      "duration": 4.68,
+      "text": "in tortoise and hare algorithm, slow"
+    },
+    {
+      "start": 1107.88,
+      "end": 1113.36,
+      "duration": 5.48,
+      "text": "pointer and fast pointer always stand at"
+    },
+    {
+      "start": 1110.64,
+      "end": 1115.44,
+      "duration": 4.8,
+      "text": "the head. What I've done is I made sure"
+    },
+    {
+      "start": 1113.36,
+      "end": 1119.32,
+      "duration": 5.96,
+      "text": "that the fast pointer is standing one"
+    },
+    {
+      "start": 1115.44,
+      "end": 1121.24,
+      "duration": 5.8,
+      "text": "place ahead, that is at head.next. Why"
+    },
+    {
+      "start": 1119.32,
+      "end": 1123.96,
+      "duration": 4.64,
+      "text": "have I done that? I was talking about an"
+    },
+    {
+      "start": 1121.24,
+      "end": 1126.36,
+      "duration": 5.12,
+      "text": "edge case, right? I want the middle to"
+    },
+    {
+      "start": 1123.96,
+      "end": 1128.36,
+      "duration": 4.4,
+      "text": "stop at the first middle. I want middle"
+    },
+    {
+      "start": 1126.36,
+      "end": 1129.8,
+      "duration": 3.44,
+      "text": "to stop"
+    },
+    {
+      "start": 1128.36,
+      "end": 1131.92,
+      "duration": 3.56,
+      "text": "over here."
+    },
+    {
+      "start": 1129.8,
+      "end": 1133.6,
+      "duration": 3.8,
+      "text": "Right? I want middle to stop over here."
+    },
+    {
+      "start": 1131.92,
+      "end": 1136.6,
+      "duration": 4.68,
+      "text": "That is why I've made sure that the fast"
+    },
+    {
+      "start": 1133.6,
+      "end": 1139.8,
+      "duration": 6.2,
+      "text": "pointer is one place ahead so that it"
+    },
+    {
+      "start": 1136.6,
+      "end": 1141.8,
+      "duration": 5.2,
+      "text": "stops one place behind. You might think,"
+    },
+    {
+      "start": 1139.8,
+      "end": 1144.04,
+      "duration": 4.24,
+      "text": "will it work for odd length? It will"
+    },
+    {
+      "start": 1141.8,
+      "end": 1146.28,
+      "duration": 4.48,
+      "text": "work. You can take some examples and do"
+    },
+    {
+      "start": 1144.04,
+      "end": 1148.4,
+      "duration": 4.36,
+      "text": "a bit of dry run, it will work. So this"
+    },
+    {
+      "start": 1146.28,
+      "end": 1150.04,
+      "duration": 3.76,
+      "text": "is the only change you need to do. And"
+    },
+    {
+      "start": 1148.4,
+      "end": 1152.44,
+      "duration": 4.04,
+      "text": "apart from that,"
+    },
+    {
+      "start": 1150.04,
+      "end": 1154.52,
+      "duration": 4.48,
+      "text": "it is the same thing and the left, the"
+    },
+    {
+      "start": 1152.44,
+      "end": 1156.76,
+      "duration": 4.32,
+      "text": "right, and then you call the merge two"
+    },
+    {
+      "start": 1154.52,
+      "end": 1158.48,
+      "duration": 3.96,
+      "text": "lists. Again, uh I've done this in the"
+    },
+    {
+      "start": 1156.76,
+      "end": 1160.52,
+      "duration": 3.76,
+      "text": "previous video. Go back and watch it in"
+    },
+    {
+      "start": 1158.48,
+      "end": 1162.44,
+      "duration": 3.96,
+      "text": "case you haven't seen it. So, this is"
+    },
+    {
+      "start": 1160.52,
+      "end": 1165.16,
+      "duration": 4.64,
+      "text": "the entire code. If I go ahead and click"
+    },
+    {
+      "start": 1162.44,
+      "end": 1166.92,
+      "duration": 4.48,
+      "text": "submit, it will be submitted. So, this"
+    },
+    {
+      "start": 1165.16,
+      "end": 1168.84,
+      "duration": 3.68,
+      "text": "time to discuss the time complexity."
+    },
+    {
+      "start": 1166.92,
+      "end": 1170.64,
+      "duration": 3.72,
+      "text": "But, before I move on to that, let's"
+    },
+    {
+      "start": 1168.84,
+      "end": 1175.76,
+      "duration": 6.92,
+      "text": "understand the time complexity of merge"
+    },
+    {
+      "start": 1170.64,
+      "end": 1175.76,
+      "duration": 5.12,
+      "text": "sort in arrays. It was n log n."
+    },
+    {
+      "start": 1175.8,
+      "end": 1180.2,
+      "duration": 4.4,
+      "text": "And the space complexity was big O of n,"
+    },
+    {
+      "start": 1177.84,
+      "end": 1183.36,
+      "duration": 5.52,
+      "text": "which was an external space that we were"
+    },
+    {
+      "start": 1180.2,
+      "end": 1186.68,
+      "duration": 6.48,
+      "text": "using, right? The time complexity n log"
+    },
+    {
+      "start": 1183.36,
+      "end": 1187.6,
+      "duration": 4.24,
+      "text": "n was because the height of the tree or"
+    },
+    {
+      "start": 1186.68,
+      "end": 1191.16,
+      "duration": 4.48,
+      "text": "the"
+    },
+    {
+      "start": 1187.6,
+      "end": 1194.04,
+      "duration": 6.44,
+      "text": "recursion depth was logarithmic of n,"
+    },
+    {
+      "start": 1191.16,
+      "end": 1196.12,
+      "duration": 4.96,
+      "text": "right? And at every step, we're doing a"
+    },
+    {
+      "start": 1194.04,
+      "end": 1198.32,
+      "duration": 4.28,
+      "text": "merge operation that was taking a big O"
+    },
+    {
+      "start": 1196.12,
+      "end": 1201.32,
+      "duration": 5.2,
+      "text": "of n. So, thereby the overall time"
+    },
+    {
+      "start": 1198.32,
+      "end": 1204.32,
+      "duration": 6.0,
+      "text": "complexity was n log n. Over here,"
+    },
+    {
+      "start": 1201.32,
+      "end": 1206.48,
+      "duration": 5.16,
+      "text": "remember, the mid was not taking any"
+    },
+    {
+      "start": 1204.32,
+      "end": 1208.64,
+      "duration": 4.32,
+      "text": "time. The mid was not taking any time,"
+    },
+    {
+      "start": 1206.48,
+      "end": 1211.12,
+      "duration": 4.64,
+      "text": "right? And the extra space was because"
+    },
+    {
+      "start": 1208.64,
+      "end": 1214.0,
+      "duration": 5.36,
+      "text": "we we were using a third array in order"
+    },
+    {
+      "start": 1211.12,
+      "end": 1216.0,
+      "duration": 4.88,
+      "text": "to merge two left and right arrays,"
+    },
+    {
+      "start": 1214.0,
+      "end": 1218.56,
+      "duration": 4.56,
+      "text": "right? That was the time complexity and"
+    },
+    {
+      "start": 1216.0,
+      "end": 1220.0,
+      "duration": 4.0,
+      "text": "space complexity. Over here, what will"
+    },
+    {
+      "start": 1218.56,
+      "end": 1222.28,
+      "duration": 3.72,
+      "text": "be the time complexity and space"
+    },
+    {
+      "start": 1220.0,
+      "end": 1223.32,
+      "duration": 3.32,
+      "text": "complexity? One thing we know for sure"
+    },
+    {
+      "start": 1222.28,
+      "end": 1225.44,
+      "duration": 3.16,
+      "text": "is"
+    },
+    {
+      "start": 1223.32,
+      "end": 1227.92,
+      "duration": 4.6,
+      "text": "the height or the recursion depth will"
+    },
+    {
+      "start": 1225.44,
+      "end": 1229.8,
+      "duration": 4.36,
+      "text": "be logarithmic of n."
+    },
+    {
+      "start": 1227.92,
+      "end": 1231.52,
+      "duration": 3.6,
+      "text": "That's very sure."
+    },
+    {
+      "start": 1229.8,
+      "end": 1234.2,
+      "duration": 4.4,
+      "text": "Basically, this depth will be"
+    },
+    {
+      "start": 1231.52,
+      "end": 1236.52,
+      "duration": 5.0,
+      "text": "logarithmic of n. We know that for sure."
+    },
+    {
+      "start": 1234.2,
+      "end": 1240.08,
+      "duration": 5.88,
+      "text": "We know one thing for sure, the merge"
+    },
+    {
+      "start": 1236.52,
+      "end": 1241.36,
+      "duration": 4.84,
+      "text": "two is also taking big O of n1 + n2,"
+    },
+    {
+      "start": 1240.08,
+      "end": 1245.56,
+      "duration": 5.48,
+      "text": "near about n."
+    },
+    {
+      "start": 1241.36,
+      "end": 1248.36,
+      "duration": 7.0,
+      "text": "So, I can say that logarithmic of n"
+    },
+    {
+      "start": 1245.56,
+      "end": 1251.36,
+      "duration": 5.8,
+      "text": "into n is something I'm very sure about,"
+    },
+    {
+      "start": 1248.36,
+      "end": 1253.2,
+      "duration": 4.84,
+      "text": "right? Why n? Because at every step, I'm"
+    },
+    {
+      "start": 1251.36,
+      "end": 1255.32,
+      "duration": 3.96,
+      "text": "doing a merge two. But, am I doing"
+    },
+    {
+      "start": 1253.2,
+      "end": 1257.36,
+      "duration": 4.16,
+      "text": "something extra? I think I'm doing. I'm"
+    },
+    {
+      "start": 1255.32,
+      "end": 1259.76,
+      "duration": 4.44,
+      "text": "doing finding the middle."
+    },
+    {
+      "start": 1257.36,
+      "end": 1262.24,
+      "duration": 4.88,
+      "text": "Now, over here, finding the middle is"
+    },
+    {
+      "start": 1259.76,
+      "end": 1264.84,
+      "duration": 5.08,
+      "text": "not done in constant time. It's taking a"
+    },
+    {
+      "start": 1262.24,
+      "end": 1266.64,
+      "duration": 4.4,
+      "text": "big O of n by two time. So, what I can"
+    },
+    {
+      "start": 1264.84,
+      "end": 1267.8,
+      "duration": 2.96,
+      "text": "say that the time complexity over here"
+    },
+    {
+      "start": 1266.64,
+      "end": 1269.64,
+      "duration": 3.0,
+      "text": "is"
+    },
+    {
+      "start": 1267.8,
+      "end": 1272.92,
+      "duration": 5.12,
+      "text": "logarithmic of n"
+    },
+    {
+      "start": 1269.64,
+      "end": 1275.72,
+      "duration": 6.08,
+      "text": "into n plus n by two because at every"
+    },
+    {
+      "start": 1272.92,
+      "end": 1277.48,
+      "duration": 4.56,
+      "text": "step you're applying n by two and a big"
+    },
+    {
+      "start": 1275.72,
+      "end": 1279.52,
+      "duration": 3.8,
+      "text": "O of n for this one."
+    },
+    {
+      "start": 1277.48,
+      "end": 1281.36,
+      "duration": 3.88,
+      "text": "Right? And logarithmic of n"
+    },
+    {
+      "start": 1279.52,
+      "end": 1284.64,
+      "duration": 5.12,
+      "text": "is the recursion depth. So, I can say"
+    },
+    {
+      "start": 1281.36,
+      "end": 1287.48,
+      "duration": 6.12,
+      "text": "that the time complexity is near about"
+    },
+    {
+      "start": 1284.64,
+      "end": 1291.36,
+      "duration": 6.72,
+      "text": "logarithmic of n into n plus n by two."
+    },
+    {
+      "start": 1287.48,
+      "end": 1294.28,
+      "duration": 6.8,
+      "text": "That's n log n. That's around n log n."
+    },
+    {
+      "start": 1291.36,
+      "end": 1296.52,
+      "duration": 5.16,
+      "text": "But the extra space is big O of one."
+    },
+    {
+      "start": 1294.28,
+      "end": 1299.4,
+      "duration": 5.12,
+      "text": "Why? Because I'm not using any extra"
+    },
+    {
+      "start": 1296.52,
+      "end": 1302.0,
+      "duration": 5.48,
+      "text": "space. We know we can merge two sorted"
+    },
+    {
+      "start": 1299.4,
+      "end": 1304.12,
+      "duration": 4.72,
+      "text": "list in place. We know that. We've done"
+    },
+    {
+      "start": 1302.0,
+      "end": 1306.4,
+      "duration": 4.4,
+      "text": "that in our previous videos. So, the"
+    },
+    {
+      "start": 1304.12,
+      "end": 1308.12,
+      "duration": 4.0,
+      "text": "time complexity and the space complexity"
+    },
+    {
+      "start": 1306.4,
+      "end": 1309.72,
+      "duration": 3.32,
+      "text": "will be this one. So, that will be it"
+    },
+    {
+      "start": 1308.12,
+      "end": 1311.36,
+      "duration": 3.24,
+      "text": "for this one. I hope you have understood"
+    },
+    {
+      "start": 1309.72,
+      "end": 1313.08,
+      "duration": 3.36,
+      "text": "everything. And if that is the case,"
+    },
+    {
+      "start": 1311.36,
+      "end": 1314.68,
+      "duration": 3.32,
+      "text": "please please do consider giving us a"
+    },
+    {
+      "start": 1313.08,
+      "end": 1316.2,
+      "duration": 3.12,
+      "text": "like. And if you're new to our channel,"
+    },
+    {
+      "start": 1314.68,
+      "end": 1317.72,
+      "duration": 3.04,
+      "text": "what are you waiting for? Hit that"
+    },
+    {
+      "start": 1316.2,
+      "end": 1318.92,
+      "duration": 2.72,
+      "text": "subscribe button. And with this I'll be"
+    },
+    {
+      "start": 1317.72,
+      "end": 1320.32,
+      "duration": 2.6,
+      "text": "wrapping up this video. Let's meet in"
+    },
+    {
+      "start": 1318.92,
+      "end": 1321.88,
+      "duration": 2.96,
+      "text": "some other video. Till then, bye-bye."
+    },
+    {
+      "start": 1320.32,
+      "end": 1325.04,
+      "duration": 4.72,
+      "text": "Take care."
+    },
+    {
+      "start": 1321.88,
+      "end": 1328.32,
+      "duration": 6.44,
+      "text": "Whenever your heart is broken,"
+    },
+    {
+      "start": 1325.04,
+      "end": 1331.4,
+      "duration": 6.36,
+      "text": "don't ever forget you're golden."
+    },
+    {
+      "start": 1328.32,
+      "end": 1331.4,
+      "duration": 3.08,
+      "text": "I will find a light and"
+    }
+  ]
+}

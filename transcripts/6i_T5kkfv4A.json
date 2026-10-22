@@ -1,0 +1,1610 @@
+{
+  "video_id": "6i_T5kkfv4A",
+  "title": "DP 28. Longest Palindromic Subsequence",
+  "duration_sec": 578,
+  "num_segments": 267,
+  "segments": [
+    {
+      "start": 0.24,
+      "end": 3.44,
+      "duration": 3.2,
+      "text": "hey everyone welcome back to take you"
+    },
+    {
+      "start": 1.68,
+      "end": 6.8,
+      "duration": 5.12,
+      "text": "forward today we will be solving the"
+    },
+    {
+      "start": 3.44,
+      "end": 8.4,
+      "duration": 4.96,
+      "text": "problem longest palindromic subsequence"
+    },
+    {
+      "start": 6.8,
+      "end": 10.96,
+      "duration": 4.16,
+      "text": "so let's understand what does the"
+    },
+    {
+      "start": 8.4,
+      "end": 13.68,
+      "duration": 5.28,
+      "text": "problem state the problem states assume"
+    },
+    {
+      "start": 10.96,
+      "end": 15.84,
+      "duration": 4.88,
+      "text": "you're given a string okay so let's take"
+    },
+    {
+      "start": 13.68,
+      "end": 18.32,
+      "duration": 4.64,
+      "text": "the string b b a b"
+    },
+    {
+      "start": 15.84,
+      "end": 20.8,
+      "duration": 4.96,
+      "text": "so in the string if i ask you what are"
+    },
+    {
+      "start": 18.32,
+      "end": 23.2,
+      "duration": 4.88,
+      "text": "subsequences you know the definition of"
+    },
+    {
+      "start": 20.8,
+      "end": 26.4,
+      "duration": 5.6,
+      "text": "subsequences i have already taught uh"
+    },
+    {
+      "start": 23.2,
+      "end": 28.88,
+      "duration": 5.68,
+      "text": "taught you that in the lecture lcs so"
+    },
+    {
+      "start": 26.4,
+      "end": 31.44,
+      "duration": 5.04,
+      "text": "remember the predicate for this one is"
+    },
+    {
+      "start": 28.88,
+      "end": 33.76,
+      "duration": 4.88,
+      "text": "this lecture please watch out the lcs"
+    },
+    {
+      "start": 31.44,
+      "end": 35.36,
+      "duration": 3.92,
+      "text": "lecture before coming across and solving"
+    },
+    {
+      "start": 33.76,
+      "end": 37.68,
+      "duration": 3.92,
+      "text": "this problem because if you don't know"
+    },
+    {
+      "start": 35.36,
+      "end": 39.04,
+      "duration": 3.68,
+      "text": "how to solve lcs uh this"
+    },
+    {
+      "start": 37.68,
+      "end": 41.28,
+      "duration": 3.6,
+      "text": "you cannot because this is nothing but"
+    },
+    {
+      "start": 39.04,
+      "end": 44.4,
+      "duration": 5.36,
+      "text": "an extension of that problem"
+    },
+    {
+      "start": 41.28,
+      "end": 47.44,
+      "duration": 6.16,
+      "text": "so what are subsequences so if i write"
+    },
+    {
+      "start": 44.4,
+      "end": 49.76,
+      "duration": 5.36,
+      "text": "something as a b that's a subsequence if"
+    },
+    {
+      "start": 47.44,
+      "end": 51.44,
+      "duration": 4.0,
+      "text": "i write something as bb it's a"
+    },
+    {
+      "start": 49.76,
+      "end": 54.08,
+      "duration": 4.32,
+      "text": "subsequence and if i write something as"
+    },
+    {
+      "start": 51.44,
+      "end": 56.4,
+      "duration": 4.96,
+      "text": "bbb that's a subsequence if i write"
+    },
+    {
+      "start": 54.08,
+      "end": 59.76,
+      "duration": 5.68,
+      "text": "something as bb bb so that's a"
+    },
+    {
+      "start": 56.4,
+      "end": 62.8,
+      "duration": 6.4,
+      "text": "subsequence if i write something as a b"
+    },
+    {
+      "start": 59.76,
+      "end": 65.76,
+      "duration": 6.0,
+      "text": "b which is b a b that's a subsequence so"
+    },
+    {
+      "start": 62.8,
+      "end": 67.28,
+      "duration": 4.48,
+      "text": "there can be a lot of subsequences right"
+    },
+    {
+      "start": 65.76,
+      "end": 69.44,
+      "duration": 3.68,
+      "text": "and you know it is"
+    },
+    {
+      "start": 67.28,
+      "end": 72.24,
+      "duration": 4.96,
+      "text": "it is it can be contagious it cannot be"
+    },
+    {
+      "start": 69.44,
+      "end": 73.84,
+      "duration": 4.4,
+      "text": "contagious but the important part about"
+    },
+    {
+      "start": 72.24,
+      "end": 75.12,
+      "duration": 2.88,
+      "text": "this is it should maintain the order"
+    },
+    {
+      "start": 73.84,
+      "end": 77.68,
+      "duration": 3.84,
+      "text": "like b a b"
+    },
+    {
+      "start": 75.12,
+      "end": 80.0,
+      "duration": 4.88,
+      "text": "b a b it should maintain the order"
+    },
+    {
+      "start": 77.68,
+      "end": 81.2,
+      "duration": 3.52,
+      "text": "now among all of these subsequences if"
+    },
+    {
+      "start": 80.0,
+      "end": 83.04,
+      "duration": 3.04,
+      "text": "you if you try to write down all of"
+    },
+    {
+      "start": 81.2,
+      "end": 84.8,
+      "duration": 3.6,
+      "text": "these subsequences you have to tell me"
+    },
+    {
+      "start": 83.04,
+      "end": 86.0,
+      "duration": 2.96,
+      "text": "which is which are parent drops so"
+    },
+    {
+      "start": 84.8,
+      "end": 87.36,
+      "duration": 2.56,
+      "text": "basket"
+    },
+    {
+      "start": 86.0,
+      "end": 88.96,
+      "duration": 2.96,
+      "text": "you'll say this is palindrome this is"
+    },
+    {
+      "start": 87.36,
+      "end": 90.88,
+      "duration": 3.52,
+      "text": "palindrome this is palindrome this is"
+    },
+    {
+      "start": 88.96,
+      "end": 93.36,
+      "duration": 4.4,
+      "text": "palindrome you know what is palindrome"
+    },
+    {
+      "start": 90.88,
+      "end": 95.28,
+      "duration": 4.4,
+      "text": "right a palindrome is nothing but if you"
+    },
+    {
+      "start": 93.36,
+      "end": 96.88,
+      "duration": 3.52,
+      "text": "write a string in the reverse"
+    },
+    {
+      "start": 95.28,
+      "end": 99.68,
+      "duration": 4.4,
+      "text": "like if you write vab in the reverse"
+    },
+    {
+      "start": 96.88,
+      "end": 101.6,
+      "duration": 4.72,
+      "text": "order it'll still be bab so that's that"
+    },
+    {
+      "start": 99.68,
+      "end": 104.4,
+      "duration": 4.72,
+      "text": "is the definition of pile and drop so i"
+    },
+    {
+      "start": 101.6,
+      "end": 106.48,
+      "duration": 4.88,
+      "text": "can see these strings are palindrome now"
+    },
+    {
+      "start": 104.4,
+      "end": 109.2,
+      "duration": 4.8,
+      "text": "the next thing comes as longest which"
+    },
+    {
+      "start": 106.48,
+      "end": 113.44,
+      "duration": 6.96,
+      "text": "one is the longest among these i see uh"
+    },
+    {
+      "start": 109.2,
+      "end": 116.0,
+      "duration": 6.8,
+      "text": "this being the longest one so for us"
+    },
+    {
+      "start": 113.44,
+      "end": 119.2,
+      "duration": 5.76,
+      "text": "this is the answer and what is the"
+    },
+    {
+      "start": 116.0,
+      "end": 120.96,
+      "duration": 4.96,
+      "text": "length of this 4 so this is the question"
+    },
+    {
+      "start": 119.2,
+      "end": 123.2,
+      "duration": 4.0,
+      "text": "give me the length of the longest"
+    },
+    {
+      "start": 120.96,
+      "end": 125.44,
+      "duration": 4.48,
+      "text": "palindromic subsequence so i'll tell you"
+    },
+    {
+      "start": 123.2,
+      "end": 127.92,
+      "duration": 4.72,
+      "text": "how to print it but as of now give me"
+    },
+    {
+      "start": 125.44,
+      "end": 130.24,
+      "duration": 4.8,
+      "text": "the length of the longest palindromic"
+    },
+    {
+      "start": 127.92,
+      "end": 130.96,
+      "duration": 3.04,
+      "text": "subsequence is the question"
+    },
+    {
+      "start": 130.24,
+      "end": 133.04,
+      "duration": 2.8,
+      "text": "now"
+    },
+    {
+      "start": 130.96,
+      "end": 135.2,
+      "duration": 4.24,
+      "text": "to start off with you might think okay"
+    },
+    {
+      "start": 133.04,
+      "end": 137.04,
+      "duration": 4.0,
+      "text": "schreiber how are we going to solve this"
+    },
+    {
+      "start": 135.2,
+      "end": 140.0,
+      "duration": 4.8,
+      "text": "uh the first method that comes to my"
+    },
+    {
+      "start": 137.04,
+      "end": 140.96,
+      "duration": 3.92,
+      "text": "mind is definitely a generic way"
+    },
+    {
+      "start": 140.0,
+      "end": 142.4,
+      "duration": 2.4,
+      "text": "that's"
+    },
+    {
+      "start": 140.96,
+      "end": 143.92,
+      "duration": 2.96,
+      "text": "you will say generate all the"
+    },
+    {
+      "start": 142.4,
+      "end": 145.2,
+      "duration": 2.8,
+      "text": "subsequence"
+    },
+    {
+      "start": 143.92,
+      "end": 146.64,
+      "duration": 2.72,
+      "text": "again how can you generate all the"
+    },
+    {
+      "start": 145.2,
+      "end": 148.8,
+      "duration": 3.6,
+      "text": "subsequences"
+    },
+    {
+      "start": 146.64,
+      "end": 150.0,
+      "duration": 3.36,
+      "text": "by using two methods one is the"
+    },
+    {
+      "start": 148.8,
+      "end": 152.08,
+      "duration": 3.28,
+      "text": "recursive"
+    },
+    {
+      "start": 150.0,
+      "end": 153.68,
+      "duration": 3.68,
+      "text": "method while the other one is the power"
+    },
+    {
+      "start": 152.08,
+      "end": 155.68,
+      "duration": 3.6,
+      "text": "set method that i've already discussed"
+    },
+    {
+      "start": 153.68,
+      "end": 158.88,
+      "duration": 5.2,
+      "text": "in another videos generate all the"
+    },
+    {
+      "start": 155.68,
+      "end": 162.0,
+      "duration": 6.32,
+      "text": "subsequences check for palindrome"
+    },
+    {
+      "start": 158.88,
+      "end": 164.72,
+      "duration": 5.84,
+      "text": "and pick up the longest one that's uh"
+    },
+    {
+      "start": 162.0,
+      "end": 165.84,
+      "duration": 3.84,
+      "text": "and pick the longest and pick"
+    },
+    {
+      "start": 164.72,
+      "end": 169.12,
+      "duration": 4.4,
+      "text": "the"
+    },
+    {
+      "start": 165.84,
+      "end": 170.56,
+      "duration": 4.72,
+      "text": "longest i think this is what"
+    },
+    {
+      "start": 169.12,
+      "end": 173.2,
+      "duration": 4.08,
+      "text": "the"
+    },
+    {
+      "start": 170.56,
+      "end": 174.64,
+      "duration": 4.08,
+      "text": "like generic brute forces and if you try"
+    },
+    {
+      "start": 173.2,
+      "end": 176.16,
+      "duration": 2.96,
+      "text": "to optimize those brute force then you"
+    },
+    {
+      "start": 174.64,
+      "end": 178.64,
+      "duration": 4.0,
+      "text": "have to write a recursive solution you"
+    },
+    {
+      "start": 176.16,
+      "end": 180.24,
+      "duration": 4.08,
+      "text": "have to think of something but can i"
+    },
+    {
+      "start": 178.64,
+      "end": 181.28,
+      "duration": 2.64,
+      "text": "solve this using something that i've"
+    },
+    {
+      "start": 180.24,
+      "end": 185.36,
+      "duration": 5.12,
+      "text": "learned"
+    },
+    {
+      "start": 181.28,
+      "end": 188.4,
+      "duration": 7.12,
+      "text": "that is lcs because i will try to try to"
+    },
+    {
+      "start": 185.36,
+      "end": 190.4,
+      "duration": 5.04,
+      "text": "take this problem into that arena so"
+    },
+    {
+      "start": 188.4,
+      "end": 191.84,
+      "duration": 3.44,
+      "text": "how will i try to like i know that this"
+    },
+    {
+      "start": 190.4,
+      "end": 194.4,
+      "duration": 4.0,
+      "text": "can be solved using lcs but if you don't"
+    },
+    {
+      "start": 191.84,
+      "end": 197.12,
+      "duration": 5.28,
+      "text": "know how will you so try to see what"
+    },
+    {
+      "start": 194.4,
+      "end": 200.64,
+      "duration": 6.24,
+      "text": "does the problem actually mean so for"
+    },
+    {
+      "start": 197.12,
+      "end": 201.76,
+      "duration": 4.64,
+      "text": "that example let's take a bigger string"
+    },
+    {
+      "start": 200.64,
+      "end": 202.56,
+      "duration": 1.92,
+      "text": "b"
+    },
+    {
+      "start": 201.76,
+      "end": 204.56,
+      "duration": 2.8,
+      "text": "b"
+    },
+    {
+      "start": 202.56,
+      "end": 207.6,
+      "duration": 5.04,
+      "text": "a b c"
+    },
+    {
+      "start": 204.56,
+      "end": 210.24,
+      "duration": 5.68,
+      "text": "b c a b okay so if i ask you which is"
+    },
+    {
+      "start": 207.6,
+      "end": 214.16,
+      "duration": 6.56,
+      "text": "the longest palindromic among this"
+    },
+    {
+      "start": 210.24,
+      "end": 215.2,
+      "duration": 4.96,
+      "text": "you'll find b b"
+    },
+    {
+      "start": 214.16,
+      "end": 217.68,
+      "duration": 3.52,
+      "text": "i think"
+    },
+    {
+      "start": 215.2,
+      "end": 218.96,
+      "duration": 3.76,
+      "text": "not not b you will find the"
+    },
+    {
+      "start": 217.68,
+      "end": 221.36,
+      "duration": 3.68,
+      "text": "b a"
+    },
+    {
+      "start": 218.96,
+      "end": 222.8,
+      "duration": 3.84,
+      "text": "b c b a b"
+    },
+    {
+      "start": 221.36,
+      "end": 223.76,
+      "duration": 2.4,
+      "text": "basically b"
+    },
+    {
+      "start": 222.8,
+      "end": 224.48,
+      "duration": 1.68,
+      "text": "a"
+    },
+    {
+      "start": 223.76,
+      "end": 226.72,
+      "duration": 2.96,
+      "text": "b"
+    },
+    {
+      "start": 224.48,
+      "end": 229.2,
+      "duration": 4.72,
+      "text": "c p a b"
+    },
+    {
+      "start": 226.72,
+      "end": 233.04,
+      "duration": 6.32,
+      "text": "so this is a palindrome"
+    },
+    {
+      "start": 229.2,
+      "end": 233.04,
+      "duration": 3.84,
+      "text": "now something to observe"
+    },
+    {
+      "start": 233.12,
+      "end": 237.04,
+      "duration": 3.92,
+      "text": "this v is equivalent to this b"
+    },
+    {
+      "start": 237.12,
+      "end": 243.92,
+      "duration": 6.8,
+      "text": "this a is equivalent to the same"
+    },
+    {
+      "start": 240.8,
+      "end": 246.4,
+      "duration": 5.6,
+      "text": "this b is equivalent to this b and there"
+    },
+    {
+      "start": 243.92,
+      "end": 248.88,
+      "duration": 4.96,
+      "text": "is someone in between"
+    },
+    {
+      "start": 246.4,
+      "end": 250.16,
+      "duration": 3.76,
+      "text": "so it matches from the front"
+    },
+    {
+      "start": 248.88,
+      "end": 252.08,
+      "duration": 3.2,
+      "text": "and from the back"
+    },
+    {
+      "start": 250.16,
+      "end": 253.52,
+      "duration": 3.36,
+      "text": "it matches from the front"
+    },
+    {
+      "start": 252.08,
+      "end": 256.4,
+      "duration": 4.32,
+      "text": "and from the back"
+    },
+    {
+      "start": 253.52,
+      "end": 258.8,
+      "duration": 5.28,
+      "text": "so can i say this can i say this"
+    },
+    {
+      "start": 256.4,
+      "end": 261.28,
+      "duration": 4.88,
+      "text": "if i try to write the string yes if i"
+    },
+    {
+      "start": 258.8,
+      "end": 263.92,
+      "duration": 5.12,
+      "text": "try to write the string in the reverse"
+    },
+    {
+      "start": 261.28,
+      "end": 265.2,
+      "duration": 3.92,
+      "text": "order let's assume this is string one"
+    },
+    {
+      "start": 263.92,
+      "end": 268.24,
+      "duration": 4.32,
+      "text": "and i'm saying i'm gonna write the"
+    },
+    {
+      "start": 265.2,
+      "end": 269.28,
+      "duration": 4.08,
+      "text": "string in the reverse order and reverses"
+    },
+    {
+      "start": 268.24,
+      "end": 270.8,
+      "duration": 2.56,
+      "text": "b"
+    },
+    {
+      "start": 269.28,
+      "end": 273.84,
+      "duration": 4.56,
+      "text": "a c"
+    },
+    {
+      "start": 270.8,
+      "end": 276.64,
+      "duration": 5.84,
+      "text": "b c b a b b"
+    },
+    {
+      "start": 273.84,
+      "end": 278.88,
+      "duration": 5.04,
+      "text": "i wrote the string in the reverse order"
+    },
+    {
+      "start": 276.64,
+      "end": 281.44,
+      "duration": 4.8,
+      "text": "so if i try to write"
+    },
+    {
+      "start": 278.88,
+      "end": 282.88,
+      "duration": 4.0,
+      "text": "down the string in the reverse order"
+    },
+    {
+      "start": 281.44,
+      "end": 288.56,
+      "duration": 7.12,
+      "text": "can i say this"
+    },
+    {
+      "start": 282.88,
+      "end": 289.84,
+      "duration": 6.96,
+      "text": "b a b c b a b b a oh sorry b a b c"
+    },
+    {
+      "start": 288.56,
+      "end": 292.16,
+      "duration": 3.6,
+      "text": "b a b"
+    },
+    {
+      "start": 289.84,
+      "end": 293.04,
+      "duration": 3.2,
+      "text": "or it can be the other one as well"
+    },
+    {
+      "start": 292.16,
+      "end": 296.96,
+      "duration": 4.8,
+      "text": "this"
+    },
+    {
+      "start": 293.04,
+      "end": 298.4,
+      "duration": 5.36,
+      "text": "is somewhere similar to b a"
+    },
+    {
+      "start": 296.96,
+      "end": 299.92,
+      "duration": 2.96,
+      "text": "b c"
+    },
+    {
+      "start": 298.4,
+      "end": 301.76,
+      "duration": 3.36,
+      "text": "b a b"
+    },
+    {
+      "start": 299.92,
+      "end": 303.04,
+      "duration": 3.12,
+      "text": "right so"
+    },
+    {
+      "start": 301.76,
+      "end": 305.84,
+      "duration": 4.08,
+      "text": "can i say this"
+    },
+    {
+      "start": 303.04,
+      "end": 308.08,
+      "duration": 5.04,
+      "text": "if you have got this string in the"
+    },
+    {
+      "start": 305.84,
+      "end": 309.12,
+      "duration": 3.28,
+      "text": "straight fashion and in the opposite"
+    },
+    {
+      "start": 308.08,
+      "end": 312.32,
+      "duration": 4.24,
+      "text": "fashion"
+    },
+    {
+      "start": 309.12,
+      "end": 314.16,
+      "duration": 5.04,
+      "text": "then you know one thing for sure"
+    },
+    {
+      "start": 312.32,
+      "end": 316.16,
+      "duration": 3.84,
+      "text": "if i just try to mark it"
+    },
+    {
+      "start": 314.16,
+      "end": 317.68,
+      "duration": 3.52,
+      "text": "b a b c"
+    },
+    {
+      "start": 316.16,
+      "end": 320.32,
+      "duration": 4.16,
+      "text": "b a b"
+    },
+    {
+      "start": 317.68,
+      "end": 321.84,
+      "duration": 4.16,
+      "text": "so this is what it looks like and over"
+    },
+    {
+      "start": 320.32,
+      "end": 323.36,
+      "duration": 3.04,
+      "text": "here it's like"
+    },
+    {
+      "start": 321.84,
+      "end": 325.76,
+      "duration": 3.92,
+      "text": "okay b e"
+    },
+    {
+      "start": 323.36,
+      "end": 327.28,
+      "duration": 3.92,
+      "text": "b c b a b"
+    },
+    {
+      "start": 325.76,
+      "end": 329.2,
+      "duration": 3.44,
+      "text": "right so"
+    },
+    {
+      "start": 327.28,
+      "end": 331.36,
+      "duration": 4.08,
+      "text": "can i see"
+    },
+    {
+      "start": 329.2,
+      "end": 333.92,
+      "duration": 4.72,
+      "text": "can you try to connect this to lcs can"
+    },
+    {
+      "start": 331.36,
+      "end": 335.52,
+      "duration": 4.16,
+      "text": "you you can you'll be like strive if i"
+    },
+    {
+      "start": 333.92,
+      "end": 338.96,
+      "duration": 5.04,
+      "text": "take the string one and if i take the"
+    },
+    {
+      "start": 335.52,
+      "end": 340.88,
+      "duration": 5.36,
+      "text": "string two and if i try to find the lcs"
+    },
+    {
+      "start": 338.96,
+      "end": 343.12,
+      "duration": 4.16,
+      "text": "of both the strings yes if i try to find"
+    },
+    {
+      "start": 340.88,
+      "end": 344.16,
+      "duration": 3.28,
+      "text": "the lcs of both the strings because"
+    },
+    {
+      "start": 343.12,
+      "end": 347.04,
+      "duration": 3.92,
+      "text": "since i've written the string in the"
+    },
+    {
+      "start": 344.16,
+      "end": 349.76,
+      "duration": 5.6,
+      "text": "reverse order you will find these exact"
+    },
+    {
+      "start": 347.04,
+      "end": 351.6,
+      "duration": 4.56,
+      "text": "same string over here as well you'll"
+    },
+    {
+      "start": 349.76,
+      "end": 353.28,
+      "duration": 3.52,
+      "text": "find the exact same string over here as"
+    },
+    {
+      "start": 351.6,
+      "end": 355.84,
+      "duration": 4.24,
+      "text": "well because you've written that in the"
+    },
+    {
+      "start": 353.28,
+      "end": 357.52,
+      "duration": 4.24,
+      "text": "reverse order that's what palindrome is"
+    },
+    {
+      "start": 355.84,
+      "end": 359.92,
+      "duration": 4.08,
+      "text": "so what i can say is"
+    },
+    {
+      "start": 357.52,
+      "end": 362.8,
+      "duration": 5.28,
+      "text": "instead of thinking of any other way to"
+    },
+    {
+      "start": 359.92,
+      "end": 365.44,
+      "duration": 5.52,
+      "text": "solve it i'll be very plain and simple"
+    },
+    {
+      "start": 362.8,
+      "end": 366.88,
+      "duration": 4.08,
+      "text": "i'd be like okay let's let's take the"
+    },
+    {
+      "start": 365.44,
+      "end": 370.0,
+      "duration": 4.56,
+      "text": "string one"
+    },
+    {
+      "start": 366.88,
+      "end": 372.8,
+      "duration": 5.92,
+      "text": "and since i can intuitively see"
+    },
+    {
+      "start": 370.0,
+      "end": 375.28,
+      "duration": 5.28,
+      "text": "that what is palindrome it's the reverse"
+    },
+    {
+      "start": 372.8,
+      "end": 376.4,
+      "duration": 3.6,
+      "text": "the reverse is same so why don't i write"
+    },
+    {
+      "start": 375.28,
+      "end": 378.64,
+      "duration": 3.36,
+      "text": "reverse"
+    },
+    {
+      "start": 376.4,
+      "end": 380.88,
+      "duration": 4.48,
+      "text": "and if the reverse is same so some"
+    },
+    {
+      "start": 378.64,
+      "end": 383.36,
+      "duration": 4.72,
+      "text": "portion which is same and when you write"
+    },
+    {
+      "start": 380.88,
+      "end": 385.28,
+      "duration": 4.4,
+      "text": "them reverse should also be same"
+    },
+    {
+      "start": 383.36,
+      "end": 386.88,
+      "duration": 3.52,
+      "text": "i hope you're getting this"
+    },
+    {
+      "start": 385.28,
+      "end": 388.88,
+      "duration": 3.6,
+      "text": "right i hope you're getting this it's"
+    },
+    {
+      "start": 386.88,
+      "end": 390.0,
+      "duration": 3.12,
+      "text": "exactly the same"
+    },
+    {
+      "start": 388.88,
+      "end": 392.8,
+      "duration": 3.92,
+      "text": "and if"
+    },
+    {
+      "start": 390.0,
+      "end": 395.68,
+      "duration": 5.68,
+      "text": "there is a portion of string which is"
+    },
+    {
+      "start": 392.8,
+      "end": 398.56,
+      "duration": 5.76,
+      "text": "present in s1 as well and is present in"
+    },
+    {
+      "start": 395.68,
+      "end": 399.76,
+      "duration": 4.08,
+      "text": "s2 as well what do we call that we call"
+    },
+    {
+      "start": 398.56,
+      "end": 402.0,
+      "duration": 3.44,
+      "text": "that as"
+    },
+    {
+      "start": 399.76,
+      "end": 404.08,
+      "duration": 4.32,
+      "text": "common subsequence"
+    },
+    {
+      "start": 402.0,
+      "end": 406.64,
+      "duration": 4.64,
+      "text": "if there is a portion of string"
+    },
+    {
+      "start": 404.08,
+      "end": 409.68,
+      "duration": 5.6,
+      "text": "which is present in both the strings we"
+    },
+    {
+      "start": 406.64,
+      "end": 410.48,
+      "duration": 3.84,
+      "text": "call that as the common subsequence"
+    },
+    {
+      "start": 409.68,
+      "end": 412.64,
+      "duration": 2.96,
+      "text": "right"
+    },
+    {
+      "start": 410.48,
+      "end": 414.32,
+      "duration": 3.84,
+      "text": "and what do we require we require the"
+    },
+    {
+      "start": 412.64,
+      "end": 415.68,
+      "duration": 3.04,
+      "text": "longest common"
+    },
+    {
+      "start": 414.32,
+      "end": 417.44,
+      "duration": 3.12,
+      "text": "subsequence"
+    },
+    {
+      "start": 415.68,
+      "end": 419.52,
+      "duration": 3.84,
+      "text": "so can i say"
+    },
+    {
+      "start": 417.44,
+      "end": 422.48,
+      "duration": 5.04,
+      "text": "i know one thing for sure"
+    },
+    {
+      "start": 419.52,
+      "end": 425.52,
+      "duration": 6.0,
+      "text": "if i just attach the longest term"
+    },
+    {
+      "start": 422.48,
+      "end": 427.76,
+      "duration": 5.28,
+      "text": "to these couple of guys then the longest"
+    },
+    {
+      "start": 425.52,
+      "end": 429.28,
+      "duration": 3.76,
+      "text": "is bound to be the longest palindromic"
+    },
+    {
+      "start": 427.76,
+      "end": 431.6,
+      "duration": 3.84,
+      "text": "sub sequence because"
+    },
+    {
+      "start": 429.28,
+      "end": 433.2,
+      "duration": 3.92,
+      "text": "this string is written"
+    },
+    {
+      "start": 431.6,
+      "end": 435.44,
+      "duration": 3.84,
+      "text": "in the reverse order it's not in the"
+    },
+    {
+      "start": 433.2,
+      "end": 437.84,
+      "duration": 4.64,
+      "text": "same order it's in the reverse order"
+    },
+    {
+      "start": 435.44,
+      "end": 439.28,
+      "duration": 3.84,
+      "text": "so whichever string will match it's"
+    },
+    {
+      "start": 437.84,
+      "end": 442.16,
+      "duration": 4.32,
+      "text": "since it's the reverse"
+    },
+    {
+      "start": 439.28,
+      "end": 443.28,
+      "duration": 4.0,
+      "text": "hereby you can call them as palindromes"
+    },
+    {
+      "start": 442.16,
+      "end": 445.84,
+      "duration": 3.68,
+      "text": "because"
+    },
+    {
+      "start": 443.28,
+      "end": 447.6,
+      "duration": 4.32,
+      "text": "a string which is in a normal way and"
+    },
+    {
+      "start": 445.84,
+      "end": 449.2,
+      "duration": 3.36,
+      "text": "string which is in the reverse way if"
+    },
+    {
+      "start": 447.6,
+      "end": 451.84,
+      "duration": 4.24,
+      "text": "they are matching you know what is that"
+    },
+    {
+      "start": 449.2,
+      "end": 452.56,
+      "duration": 3.36,
+      "text": "called as palindrome so basically if you"
+    },
+    {
+      "start": 451.84,
+      "end": 454.8,
+      "duration": 2.96,
+      "text": "get"
+    },
+    {
+      "start": 452.56,
+      "end": 457.52,
+      "duration": 4.96,
+      "text": "the lcs of both the strings which is"
+    },
+    {
+      "start": 454.8,
+      "end": 460.24,
+      "duration": 5.44,
+      "text": "longest common subsequence it is"
+    },
+    {
+      "start": 457.52,
+      "end": 461.92,
+      "duration": 4.4,
+      "text": "bound to be a palindrome because"
+    },
+    {
+      "start": 460.24,
+      "end": 462.72,
+      "duration": 2.48,
+      "text": "s2 is nothing"
+    },
+    {
+      "start": 461.92,
+      "end": 464.56,
+      "duration": 2.64,
+      "text": "but"
+    },
+    {
+      "start": 462.72,
+      "end": 467.36,
+      "duration": 4.64,
+      "text": "the reverse of"
+    },
+    {
+      "start": 464.56,
+      "end": 470.0,
+      "duration": 5.44,
+      "text": "s1 so the common string that you'll get"
+    },
+    {
+      "start": 467.36,
+      "end": 471.68,
+      "duration": 4.32,
+      "text": "will be the reverse thereby you can say"
+    },
+    {
+      "start": 470.0,
+      "end": 474.32,
+      "duration": 4.32,
+      "text": "it's a palindrome so you don't need to"
+    },
+    {
+      "start": 471.68,
+      "end": 476.72,
+      "duration": 5.04,
+      "text": "do anything you know how to find lcs you"
+    },
+    {
+      "start": 474.32,
+      "end": 479.36,
+      "duration": 5.04,
+      "text": "just call the lcs function"
+    },
+    {
+      "start": 476.72,
+      "end": 480.72,
+      "duration": 4.0,
+      "text": "using the string s1 and you pass the"
+    },
+    {
+      "start": 479.36,
+      "end": 483.52,
+      "duration": 4.16,
+      "text": "reverse of"
+    },
+    {
+      "start": 480.72,
+      "end": 484.64,
+      "duration": 3.92,
+      "text": "s1 so if you just call the lcs function"
+    },
+    {
+      "start": 483.52,
+      "end": 486.8,
+      "duration": 3.28,
+      "text": "using this"
+    },
+    {
+      "start": 484.64,
+      "end": 489.12,
+      "duration": 4.48,
+      "text": "you will get your answer and i've"
+    },
+    {
+      "start": 486.8,
+      "end": 491.28,
+      "duration": 4.48,
+      "text": "already taught you how to print the lcs"
+    },
+    {
+      "start": 489.12,
+      "end": 493.2,
+      "duration": 4.08,
+      "text": "so you can again use the print function"
+    },
+    {
+      "start": 491.28,
+      "end": 496.16,
+      "duration": 4.88,
+      "text": "to get the longest palindromic"
+    },
+    {
+      "start": 493.2,
+      "end": 498.16,
+      "duration": 4.96,
+      "text": "subsequence as well"
+    },
+    {
+      "start": 496.16,
+      "end": 499.84,
+      "duration": 3.68,
+      "text": "so here's the question uh what we will"
+    },
+    {
+      "start": 498.16,
+      "end": 501.12,
+      "duration": 2.96,
+      "text": "do is we'll go to longest common"
+    },
+    {
+      "start": 499.84,
+      "end": 503.44,
+      "duration": 3.6,
+      "text": "subsequence"
+    },
+    {
+      "start": 501.12,
+      "end": 506.16,
+      "duration": 5.04,
+      "text": "let's copy paste the code which was used"
+    },
+    {
+      "start": 503.44,
+      "end": 507.76,
+      "duration": 4.32,
+      "text": "in lcs let's copy them and probably"
+    },
+    {
+      "start": 506.16,
+      "end": 510.24,
+      "duration": 4.08,
+      "text": "print it over here"
+    },
+    {
+      "start": 507.76,
+      "end": 512.72,
+      "duration": 4.96,
+      "text": "i printed it let's do one thing let's"
+    },
+    {
+      "start": 510.24,
+      "end": 516.32,
+      "duration": 6.08,
+      "text": "keep string t equal to s"
+    },
+    {
+      "start": 512.72,
+      "end": 518.64,
+      "duration": 5.92,
+      "text": "and we can say reverse of t dot begin"
+    },
+    {
+      "start": 516.32,
+      "end": 520.96,
+      "duration": 4.64,
+      "text": "and t dot n yeah so just make sure you"
+    },
+    {
+      "start": 518.64,
+      "end": 524.56,
+      "duration": 5.92,
+      "text": "reverse it and once you have reversed it"
+    },
+    {
+      "start": 520.96,
+      "end": 526.0,
+      "duration": 5.04,
+      "text": "it shows the return of lcs s comma t i"
+    },
+    {
+      "start": 524.56,
+      "end": 527.52,
+      "duration": 2.96,
+      "text": "think this should be fine"
+    },
+    {
+      "start": 526.0,
+      "end": 529.2,
+      "duration": 3.2,
+      "text": "okay we got some wrong answers because"
+    },
+    {
+      "start": 527.52,
+      "end": 532.72,
+      "duration": 5.2,
+      "text": "we are printing over here so let's erase"
+    },
+    {
+      "start": 529.2,
+      "end": 534.56,
+      "duration": 5.36,
+      "text": "this we need to print the dp array"
+    },
+    {
+      "start": 532.72,
+      "end": 536.56,
+      "duration": 3.84,
+      "text": "here it comes the correct answer now if"
+    },
+    {
+      "start": 534.56,
+      "end": 538.88,
+      "duration": 4.32,
+      "text": "i just give it a submit you will see"
+    },
+    {
+      "start": 536.56,
+      "end": 540.0,
+      "duration": 3.44,
+      "text": "that this is running absolutely fine"
+    },
+    {
+      "start": 538.88,
+      "end": 540.8,
+      "duration": 1.92,
+      "text": "yeah it is"
+    },
+    {
+      "start": 540.0,
+      "end": 542.16,
+      "duration": 2.16,
+      "text": "so"
+    },
+    {
+      "start": 540.8,
+      "end": 544.56,
+      "duration": 3.76,
+      "text": "we have"
+    },
+    {
+      "start": 542.16,
+      "end": 547.04,
+      "duration": 4.88,
+      "text": "done this problem very easily using a"
+    },
+    {
+      "start": 544.56,
+      "end": 548.8,
+      "duration": 4.24,
+      "text": "concept that we have learned so guys uh"
+    },
+    {
+      "start": 547.04,
+      "end": 550.72,
+      "duration": 3.68,
+      "text": "i hope uh just make sure you can space"
+    },
+    {
+      "start": 548.8,
+      "end": 552.4,
+      "duration": 3.6,
+      "text": "optimize this as well i've already"
+    },
+    {
+      "start": 550.72,
+      "end": 554.64,
+      "duration": 3.92,
+      "text": "taught that in lcs so you can just go"
+    },
+    {
+      "start": 552.4,
+      "end": 556.96,
+      "duration": 4.56,
+      "text": "across and space optimize this as well"
+    },
+    {
+      "start": 554.64,
+      "end": 558.72,
+      "duration": 4.08,
+      "text": "so guys i hope you have understood uh"
+    },
+    {
+      "start": 556.96,
+      "end": 561.04,
+      "duration": 4.08,
+      "text": "this problem just an extension of the"
+    },
+    {
+      "start": 558.72,
+      "end": 562.56,
+      "duration": 3.84,
+      "text": "lcs just in case you did please please"
+    },
+    {
+      "start": 561.04,
+      "end": 563.92,
+      "duration": 2.88,
+      "text": "please make sure you like this video and"
+    },
+    {
+      "start": 562.56,
+      "end": 566.24,
+      "duration": 3.68,
+      "text": "if you're new to this channel please do"
+    },
+    {
+      "start": 563.92,
+      "end": 567.52,
+      "duration": 3.6,
+      "text": "consider subscribing to us now with this"
+    },
+    {
+      "start": 566.24,
+      "end": 569.76,
+      "duration": 3.52,
+      "text": "let's wrap up this video and meet in the"
+    },
+    {
+      "start": 567.52,
+      "end": 572.88,
+      "duration": 5.36,
+      "text": "next one then"
+    },
+    {
+      "start": 569.76,
+      "end": 576.16,
+      "duration": 6.4,
+      "text": "whenever your heart is broken"
+    },
+    {
+      "start": 572.88,
+      "end": 579.4,
+      "duration": 6.52,
+      "text": "don't ever forget your golden"
+    },
+    {
+      "start": 576.16,
+      "end": 579.4,
+      "duration": 3.24,
+      "text": "i will"
+    }
+  ]
+}

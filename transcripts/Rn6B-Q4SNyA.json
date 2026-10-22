@@ -1,0 +1,3764 @@
+{
+  "video_id": "Rn6B-Q4SNyA",
+  "title": "G-51. Number of Islands - II - Online Queries - DSU",
+  "duration_sec": 1532,
+  "num_segments": 626,
+  "segments": [
+    {
+      "start": 3.24,
+      "end": 6.24,
+      "duration": 3.0,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.68,
+      "end": 8.1,
+      "duration": 3.42,
+      "text": "I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.24,
+      "end": 11.28,
+      "duration": 5.04,
+      "text": "so today we will be solving the problem"
+    },
+    {
+      "start": 8.1,
+      "end": 13.74,
+      "duration": 5.64,
+      "text": "number of islands too and it's a problem"
+    },
+    {
+      "start": 11.28,
+      "end": 16.2,
+      "duration": 4.92,
+      "text": "which is kind of an online query problem"
+    },
+    {
+      "start": 13.74,
+      "end": 18.24,
+      "duration": 4.5,
+      "text": "what do you mean by online query I give"
+    },
+    {
+      "start": 16.2,
+      "end": 19.74,
+      "duration": 3.54,
+      "text": "you a query you tell me the answer I"
+    },
+    {
+      "start": 18.24,
+      "end": 21.12,
+      "duration": 2.88,
+      "text": "give you a query you tell me the answer"
+    },
+    {
+      "start": 19.74,
+      "end": 23.28,
+      "duration": 3.54,
+      "text": "I give you a query you tell me the"
+    },
+    {
+      "start": 21.12,
+      "end": 25.02,
+      "duration": 3.9,
+      "text": "answer I give you something you do some"
+    },
+    {
+      "start": 23.28,
+      "end": 26.7,
+      "duration": 3.42,
+      "text": "changes you tell me the answer the"
+    },
+    {
+      "start": 25.02,
+      "end": 28.86,
+      "duration": 3.84,
+      "text": "changes what you need to do I will tell"
+    },
+    {
+      "start": 26.7,
+      "end": 30.9,
+      "duration": 4.2,
+      "text": "you okay so every time I'll give you"
+    },
+    {
+      "start": 28.86,
+      "end": 32.64,
+      "duration": 3.78,
+      "text": "something you do the changes as"
+    },
+    {
+      "start": 30.9,
+      "end": 35.64,
+      "duration": 4.74,
+      "text": "according to the question and then you"
+    },
+    {
+      "start": 32.64,
+      "end": 37.92,
+      "duration": 5.28,
+      "text": "return the answer so give answer give"
+    },
+    {
+      "start": 35.64,
+      "end": 40.62,
+      "duration": 4.98,
+      "text": "answer give answer that's what you call"
+    },
+    {
+      "start": 37.92,
+      "end": 42.36,
+      "duration": 4.44,
+      "text": "as online queries okay so this is the"
+    },
+    {
+      "start": 40.62,
+      "end": 44.16,
+      "duration": 3.54,
+      "text": "part two of this problem I've already"
+    },
+    {
+      "start": 42.36,
+      "end": 46.38,
+      "duration": 4.02,
+      "text": "solved part one in this particular"
+    },
+    {
+      "start": 44.16,
+      "end": 49.02,
+      "duration": 4.86,
+      "text": "series you can go back and watch it as"
+    },
+    {
+      "start": 46.38,
+      "end": 53.4,
+      "duration": 7.02,
+      "text": "well so the prerequisite for this video"
+    },
+    {
+      "start": 49.02,
+      "end": 55.02,
+      "duration": 6.0,
+      "text": "is disjoint set data structure I've"
+    },
+    {
+      "start": 53.4,
+      "end": 56.52,
+      "duration": 3.12,
+      "text": "already discussed this in the previous"
+    },
+    {
+      "start": 55.02,
+      "end": 58.44,
+      "duration": 3.42,
+      "text": "video in this particular graph series"
+    },
+    {
+      "start": 56.52,
+      "end": 60.54,
+      "duration": 4.02,
+      "text": "just in case you don't know about it go"
+    },
+    {
+      "start": 58.44,
+      "end": 62.46,
+      "duration": 4.02,
+      "text": "back and watch it the reason I'm asking"
+    },
+    {
+      "start": 60.54,
+      "end": 64.2,
+      "duration": 3.66,
+      "text": "you to go back and watch it is because"
+    },
+    {
+      "start": 62.46,
+      "end": 66.18,
+      "duration": 3.72,
+      "text": "I'm going to reuse the snippet of the"
+    },
+    {
+      "start": 64.2,
+      "end": 68.28,
+      "duration": 4.08,
+      "text": "code that I've coded in the disjoint set"
+    },
+    {
+      "start": 66.18,
+      "end": 73.56,
+      "duration": 7.38,
+      "text": "video okay so let's understand the"
+    },
+    {
+      "start": 68.28,
+      "end": 77.46,
+      "duration": 9.18,
+      "text": "question 0 is c one is I'll keep it in"
+    },
+    {
+      "start": 73.56,
+      "end": 79.8,
+      "duration": 6.24,
+      "text": "mind okay initially all uh like we have"
+    },
+    {
+      "start": 77.46,
+      "end": 82.8,
+      "duration": 5.34,
+      "text": "an entire seat someone comes up and says"
+    },
+    {
+      "start": 79.8,
+      "end": 84.72,
+      "duration": 4.92,
+      "text": "hey can you create an island at zero"
+    },
+    {
+      "start": 82.8,
+      "end": 86.82,
+      "duration": 4.02,
+      "text": "comma zero I'll be like okay let me"
+    },
+    {
+      "start": 84.72,
+      "end": 88.32,
+      "duration": 3.6,
+      "text": "create an island at zero comma zero so"
+    },
+    {
+      "start": 86.82,
+      "end": 91.2,
+      "duration": 4.38,
+      "text": "you just create an island at this"
+    },
+    {
+      "start": 88.32,
+      "end": 93.26,
+      "duration": 4.94,
+      "text": "position okay now remember"
+    },
+    {
+      "start": 91.2,
+      "end": 96.48,
+      "duration": 5.28,
+      "text": "what do we mean by"
+    },
+    {
+      "start": 93.26,
+      "end": 99.42,
+      "duration": 6.16,
+      "text": "components kind of this so if I have one"
+    },
+    {
+      "start": 96.48,
+      "end": 101.64,
+      "duration": 5.16,
+      "text": "one one it's a component if the share a"
+    },
+    {
+      "start": 99.42,
+      "end": 104.76,
+      "duration": 5.34,
+      "text": "similar side they can share a similar"
+    },
+    {
+      "start": 101.64,
+      "end": 107.52,
+      "duration": 5.88,
+      "text": "this side this side this side this side"
+    },
+    {
+      "start": 104.76,
+      "end": 109.32,
+      "duration": 4.56,
+      "text": "you can't see these two be connected"
+    },
+    {
+      "start": 107.52,
+      "end": 111.84,
+      "duration": 4.32,
+      "text": "because they are sharing a diagonal low"
+    },
+    {
+      "start": 109.32,
+      "end": 114.0,
+      "duration": 4.68,
+      "text": "they have to share a side okay you'll"
+    },
+    {
+      "start": 111.84,
+      "end": 116.88,
+      "duration": 5.04,
+      "text": "understand as we move so as of now we"
+    },
+    {
+      "start": 114.0,
+      "end": 119.34,
+      "duration": 5.34,
+      "text": "have a single component so after the"
+    },
+    {
+      "start": 116.88,
+      "end": 122.22,
+      "duration": 5.34,
+      "text": "placement of the first guy the answer is"
+    },
+    {
+      "start": 119.34,
+      "end": 124.2,
+      "duration": 4.86,
+      "text": "one because I just have a single group"
+    },
+    {
+      "start": 122.22,
+      "end": 126.66,
+      "duration": 4.44,
+      "text": "of islands a single group of violence"
+    },
+    {
+      "start": 124.2,
+      "end": 129.36,
+      "duration": 5.16,
+      "text": "okay the next guy is zero comma zero but"
+    },
+    {
+      "start": 126.66,
+      "end": 130.5,
+      "duration": 3.84,
+      "text": "wait we already have an island there so"
+    },
+    {
+      "start": 129.36,
+      "end": 134.4,
+      "duration": 5.04,
+      "text": "there's no need to place the island"
+    },
+    {
+      "start": 130.5,
+      "end": 135.84,
+      "duration": 5.34,
+      "text": "again thereby we still have one alley so"
+    },
+    {
+      "start": 134.4,
+      "end": 138.06,
+      "duration": 3.66,
+      "text": "remember this if there is an island"
+    },
+    {
+      "start": 135.84,
+      "end": 139.98,
+      "duration": 4.14,
+      "text": "already you do not Place Another Island"
+    },
+    {
+      "start": 138.06,
+      "end": 142.2,
+      "duration": 4.14,
+      "text": "okay next"
+    },
+    {
+      "start": 139.98,
+      "end": 145.74,
+      "duration": 5.76,
+      "text": "1 comma one so let's place an island"
+    },
+    {
+      "start": 142.2,
+      "end": 147.66,
+      "duration": 5.46,
+      "text": "there one comma one can I call this as a"
+    },
+    {
+      "start": 145.74,
+      "end": 149.82,
+      "duration": 4.08,
+      "text": "group of islands I said you know there"
+    },
+    {
+      "start": 147.66,
+      "end": 152.34,
+      "duration": 4.68,
+      "text": "are individual groups the individual"
+    },
+    {
+      "start": 149.82,
+      "end": 154.5,
+      "duration": 4.68,
+      "text": "groups so we have two groups after this"
+    },
+    {
+      "start": 152.34,
+      "end": 156.96,
+      "duration": 4.62,
+      "text": "placement so we have two groups after"
+    },
+    {
+      "start": 154.5,
+      "end": 158.94,
+      "duration": 4.44,
+      "text": "this placement perfect next one comma"
+    },
+    {
+      "start": 156.96,
+      "end": 162.54,
+      "duration": 5.58,
+      "text": "zero has one comma zero here let's"
+    },
+    {
+      "start": 158.94,
+      "end": 166.44,
+      "duration": 7.5,
+      "text": "quickly place it now this and this here"
+    },
+    {
+      "start": 162.54,
+      "end": 169.56,
+      "duration": 7.02,
+      "text": "aside this and this share aside so this"
+    },
+    {
+      "start": 166.44,
+      "end": 172.76,
+      "duration": 6.32,
+      "text": "is a single group so after the placement"
+    },
+    {
+      "start": 169.56,
+      "end": 175.62,
+      "duration": 6.06,
+      "text": "of this you have one group nice next"
+    },
+    {
+      "start": 172.76,
+      "end": 177.48,
+      "duration": 4.72,
+      "text": "zero one where zero one yeah so you can"
+    },
+    {
+      "start": 175.62,
+      "end": 180.06,
+      "duration": 4.44,
+      "text": "place it over here now if you see this"
+    },
+    {
+      "start": 177.48,
+      "end": 182.22,
+      "duration": 4.74,
+      "text": "it's a single group so you still have a"
+    },
+    {
+      "start": 180.06,
+      "end": 184.56,
+      "duration": 4.5,
+      "text": "single group amazing what's the next"
+    },
+    {
+      "start": 182.22,
+      "end": 187.32,
+      "duration": 5.1,
+      "text": "zero comma three go ahead and put it"
+    },
+    {
+      "start": 184.56,
+      "end": 189.36,
+      "duration": 4.8,
+      "text": "over here so this time can I say I have"
+    },
+    {
+      "start": 187.32,
+      "end": 191.4,
+      "duration": 4.08,
+      "text": "one group over here one group over here"
+    },
+    {
+      "start": 189.36,
+      "end": 192.9,
+      "duration": 3.54,
+      "text": "because in between there are C's you"
+    },
+    {
+      "start": 191.4,
+      "end": 195.66,
+      "duration": 4.26,
+      "text": "cannot connect them because they need to"
+    },
+    {
+      "start": 192.9,
+      "end": 198.36,
+      "duration": 5.46,
+      "text": "share a side thereby we have now again"
+    },
+    {
+      "start": 195.66,
+      "end": 200.28,
+      "duration": 4.62,
+      "text": "to next we have one comma three where's"
+    },
+    {
+      "start": 198.36,
+      "end": 202.32,
+      "duration": 3.96,
+      "text": "One comma three yeah so can I see even"
+    },
+    {
+      "start": 200.28,
+      "end": 204.3,
+      "duration": 4.02,
+      "text": "if I put it here it's still going to be"
+    },
+    {
+      "start": 202.32,
+      "end": 207.06,
+      "duration": 4.74,
+      "text": "the same it's still going to be the same"
+    },
+    {
+      "start": 204.3,
+      "end": 210.3,
+      "duration": 6.0,
+      "text": "so thereby I can say A Plus"
+    },
+    {
+      "start": 207.06,
+      "end": 213.12,
+      "duration": 6.06,
+      "text": "it's still having two triple files which"
+    },
+    {
+      "start": 210.3,
+      "end": 215.4,
+      "duration": 5.1,
+      "text": "is pretty decent zero comma four whereas"
+    },
+    {
+      "start": 213.12,
+      "end": 217.56,
+      "duration": 4.44,
+      "text": "zero comma four which is here so even if"
+    },
+    {
+      "start": 215.4,
+      "end": 219.36,
+      "duration": 3.96,
+      "text": "I place it here whatever this even if I"
+    },
+    {
+      "start": 217.56,
+      "end": 220.08,
+      "duration": 2.52,
+      "text": "place it here it's still going to be in"
+    },
+    {
+      "start": 219.36,
+      "end": 223.62,
+      "duration": 4.26,
+      "text": "the"
+    },
+    {
+      "start": 220.08,
+      "end": 226.5,
+      "duration": 6.42,
+      "text": "same group if it is still in the same"
+    },
+    {
+      "start": 223.62,
+      "end": 229.44,
+      "duration": 5.82,
+      "text": "group can I say it doesn't matter to us"
+    },
+    {
+      "start": 226.5,
+      "end": 231.6,
+      "duration": 5.1,
+      "text": "is still in the same group so thereby I"
+    },
+    {
+      "start": 229.44,
+      "end": 233.52,
+      "duration": 4.08,
+      "text": "still have two perfect x what three"
+    },
+    {
+      "start": 231.6,
+      "end": 236.22,
+      "duration": 4.62,
+      "text": "comma two plus three comma two here"
+    },
+    {
+      "start": 233.52,
+      "end": 237.96,
+      "duration": 4.44,
+      "text": "let's quickly place it I place it the"
+    },
+    {
+      "start": 236.22,
+      "end": 241.38,
+      "duration": 5.16,
+      "text": "moment I place it there can I say I have"
+    },
+    {
+      "start": 237.96,
+      "end": 244.14,
+      "duration": 6.18,
+      "text": "not three one here one here and one here"
+    },
+    {
+      "start": 241.38,
+      "end": 246.18,
+      "duration": 4.8,
+      "text": "yes next I have two comma two let's"
+    },
+    {
+      "start": 244.14,
+      "end": 248.28,
+      "duration": 4.14,
+      "text": "place it the moment I place two comma"
+    },
+    {
+      "start": 246.18,
+      "end": 250.38,
+      "duration": 4.2,
+      "text": "two again this is separate this is"
+    },
+    {
+      "start": 248.28,
+      "end": 252.06,
+      "duration": 3.78,
+      "text": "separate this is separate be very"
+    },
+    {
+      "start": 250.38,
+      "end": 253.38,
+      "duration": 3.0,
+      "text": "careful because you cannot connect them"
+    },
+    {
+      "start": 252.06,
+      "end": 256.44,
+      "duration": 4.38,
+      "text": "diagonally"
+    },
+    {
+      "start": 253.38,
+      "end": 259.86,
+      "duration": 6.48,
+      "text": "they still have three next one comma two"
+    },
+    {
+      "start": 256.44,
+      "end": 263.34,
+      "duration": 6.9,
+      "text": "okay now is the point the moment you"
+    },
+    {
+      "start": 259.86,
+      "end": 265.08,
+      "duration": 5.22,
+      "text": "place it here everyone is an individual"
+    },
+    {
+      "start": 263.34,
+      "end": 268.02,
+      "duration": 4.68,
+      "text": "group now"
+    },
+    {
+      "start": 265.08,
+      "end": 270.18,
+      "duration": 5.1,
+      "text": "so it's one right from three you boil"
+    },
+    {
+      "start": 268.02,
+      "end": 272.4,
+      "duration": 4.38,
+      "text": "down to one right from three you boil"
+    },
+    {
+      "start": 270.18,
+      "end": 274.68,
+      "duration": 4.5,
+      "text": "down to one next we have at zero comma"
+    },
+    {
+      "start": 272.4,
+      "end": 277.56,
+      "duration": 5.16,
+      "text": "two where is zero comma two here even if"
+    },
+    {
+      "start": 274.68,
+      "end": 279.72,
+      "duration": 5.04,
+      "text": "you place it here it still stays as a"
+    },
+    {
+      "start": 277.56,
+      "end": 281.7,
+      "duration": 4.14,
+      "text": "single thing so you still have a single"
+    },
+    {
+      "start": 279.72,
+      "end": 284.16,
+      "duration": 4.44,
+      "text": "thing so I can say I still have a single"
+    },
+    {
+      "start": 281.7,
+      "end": 287.28,
+      "duration": 5.58,
+      "text": "thing so ultimately you need to return"
+    },
+    {
+      "start": 284.16,
+      "end": 291.18,
+      "duration": 7.02,
+      "text": "R2 first query answer is one one two one"
+    },
+    {
+      "start": 287.28,
+      "end": 292.32,
+      "duration": 5.04,
+      "text": "one we can put them into a list and this"
+    },
+    {
+      "start": 291.18,
+      "end": 294.9,
+      "duration": 3.72,
+      "text": "is the list"
+    },
+    {
+      "start": 292.32,
+      "end": 296.88,
+      "duration": 4.56,
+      "text": "you have to return the online query list"
+    },
+    {
+      "start": 294.9,
+      "end": 298.92,
+      "duration": 4.02,
+      "text": "this is what you have to return right"
+    },
+    {
+      "start": 296.88,
+      "end": 300.96,
+      "duration": 4.08,
+      "text": "understood the question so how will you"
+    },
+    {
+      "start": 298.92,
+      "end": 303.12,
+      "duration": 4.2,
+      "text": "solve this problem which algorithm to"
+    },
+    {
+      "start": 300.96,
+      "end": 305.04,
+      "duration": 4.08,
+      "text": "use can I say what are you doing you're"
+    },
+    {
+      "start": 303.12,
+      "end": 306.72,
+      "duration": 3.6,
+      "text": "first placing here then maybe you're"
+    },
+    {
+      "start": 305.04,
+      "end": 307.86,
+      "duration": 2.82,
+      "text": "placing then you're placing here and"
+    },
+    {
+      "start": 306.72,
+      "end": 310.02,
+      "duration": 3.3,
+      "text": "when you're placing somewhere here"
+    },
+    {
+      "start": 307.86,
+      "end": 311.28,
+      "duration": 3.42,
+      "text": "you're connecting you're connecting"
+    },
+    {
+      "start": 310.02,
+      "end": 312.78,
+      "duration": 2.76,
+      "text": "right and then you're placing here"
+    },
+    {
+      "start": 311.28,
+      "end": 313.68,
+      "duration": 2.4,
+      "text": "you're connecting then you're placing"
+    },
+    {
+      "start": 312.78,
+      "end": 314.88,
+      "duration": 2.1,
+      "text": "here then you're pleasing you're"
+    },
+    {
+      "start": 313.68,
+      "end": 316.2,
+      "duration": 2.52,
+      "text": "connecting then you're pleasing you're"
+    },
+    {
+      "start": 314.88,
+      "end": 317.64,
+      "duration": 2.76,
+      "text": "connecting then you're pleasing here"
+    },
+    {
+      "start": 316.2,
+      "end": 319.38,
+      "duration": 3.18,
+      "text": "when you're placing here connecting"
+    },
+    {
+      "start": 317.64,
+      "end": 321.6,
+      "duration": 3.96,
+      "text": "you're connecting people you're"
+    },
+    {
+      "start": 319.38,
+      "end": 323.76,
+      "duration": 4.38,
+      "text": "connecting cells you're connecting notes"
+    },
+    {
+      "start": 321.6,
+      "end": 326.88,
+      "duration": 5.28,
+      "text": "which algorithm"
+    },
+    {
+      "start": 323.76,
+      "end": 328.74,
+      "duration": 4.98,
+      "text": "you got it right this joints and data"
+    },
+    {
+      "start": 326.88,
+      "end": 331.08,
+      "duration": 4.2,
+      "text": "structure is the algorithm which will be"
+    },
+    {
+      "start": 328.74,
+      "end": 333.24,
+      "duration": 4.5,
+      "text": "used why because that is the only"
+    },
+    {
+      "start": 331.08,
+      "end": 336.66,
+      "duration": 5.58,
+      "text": "algorithm which connects connects"
+    },
+    {
+      "start": 333.24,
+      "end": 338.82,
+      "duration": 5.58,
+      "text": "connects and is used in dynamic graphs"
+    },
+    {
+      "start": 336.66,
+      "end": 341.36,
+      "duration": 4.7,
+      "text": "it's a dynamic graph it is changing"
+    },
+    {
+      "start": 338.82,
+      "end": 343.92,
+      "duration": 5.1,
+      "text": "every now and then so Dynamic graph"
+    },
+    {
+      "start": 341.36,
+      "end": 346.5,
+      "duration": 5.14,
+      "text": "connections there's only one data"
+    },
+    {
+      "start": 343.92,
+      "end": 348.42,
+      "duration": 4.5,
+      "text": "structure that is the disjoint set data"
+    },
+    {
+      "start": 346.5,
+      "end": 350.4,
+      "duration": 3.9,
+      "text": "structure so you know in disjoints and"
+    },
+    {
+      "start": 348.42,
+      "end": 351.78,
+      "duration": 3.36,
+      "text": "data structure we have nodes the zeroth"
+    },
+    {
+      "start": 350.4,
+      "end": 352.98,
+      "duration": 2.58,
+      "text": "node will be dependent of himself the"
+    },
+    {
+      "start": 351.78,
+      "end": 354.06,
+      "duration": 2.28,
+      "text": "first node will be the parent of himself"
+    },
+    {
+      "start": 352.98,
+      "end": 356.76,
+      "duration": 3.78,
+      "text": "the second node will be the parallel"
+    },
+    {
+      "start": 354.06,
+      "end": 359.7,
+      "duration": 5.64,
+      "text": "himself so until nodes so if we are"
+    },
+    {
+      "start": 356.76,
+      "end": 361.74,
+      "duration": 4.98,
+      "text": "representing every cell as a node you"
+    },
+    {
+      "start": 359.7,
+      "end": 364.2,
+      "duration": 4.5,
+      "text": "have to give every cell a number which"
+    },
+    {
+      "start": 361.74,
+      "end": 367.56,
+      "duration": 5.82,
+      "text": "will be represented in this joint set so"
+    },
+    {
+      "start": 364.2,
+      "end": 370.14,
+      "duration": 5.94,
+      "text": "can I see cell zero cell one cell two"
+    },
+    {
+      "start": 367.56,
+      "end": 374.66,
+      "duration": 7.1,
+      "text": "cell three cell five cells Excel seven"
+    },
+    {
+      "start": 370.14,
+      "end": 374.66,
+      "duration": 4.52,
+      "text": "cell eight cell line 10 11 12."
+    },
+    {
+      "start": 374.96,
+      "end": 382.14,
+      "duration": 7.18,
+      "text": "can I say I can go until 19 which is"
+    },
+    {
+      "start": 379.32,
+      "end": 386.52,
+      "duration": 7.2,
+      "text": "kind of like four this was four which is"
+    },
+    {
+      "start": 382.14,
+      "end": 389.46,
+      "duration": 7.32,
+      "text": "m equal to 5 this was 3 n equal to 4 5"
+    },
+    {
+      "start": 386.52,
+      "end": 391.92,
+      "duration": 5.4,
+      "text": "into 4 like we need 20 positions because"
+    },
+    {
+      "start": 389.46,
+      "end": 395.94,
+      "duration": 6.48,
+      "text": "0 to 90 is 20 position can I say it's"
+    },
+    {
+      "start": 391.92,
+      "end": 400.44,
+      "duration": 8.52,
+      "text": "like n cross M but how do I figure out"
+    },
+    {
+      "start": 395.94,
+      "end": 404.28,
+      "duration": 8.34,
+      "text": "because this is 0 1 2 3 4 5 6 7 8 9 10"
+    },
+    {
+      "start": 400.44,
+      "end": 407.1,
+      "duration": 6.66,
+      "text": "11 how do I figure it 11 is representing"
+    },
+    {
+      "start": 404.28,
+      "end": 411.12,
+      "duration": 6.84,
+      "text": "2 comma one how do I figure this out or"
+    },
+    {
+      "start": 407.1,
+      "end": 413.04,
+      "duration": 5.94,
+      "text": "vice versa 2 comma 1 means 11th note how"
+    },
+    {
+      "start": 411.12,
+      "end": 413.88,
+      "duration": 2.76,
+      "text": "will you figure this out no very very"
+    },
+    {
+      "start": 413.04,
+      "end": 419.7,
+      "duration": 6.66,
+      "text": "easy"
+    },
+    {
+      "start": 413.88,
+      "end": 422.7,
+      "duration": 8.82,
+      "text": "you know every column has five notes"
+    },
+    {
+      "start": 419.7,
+      "end": 425.34,
+      "duration": 5.64,
+      "text": "this column has again five so five plus"
+    },
+    {
+      "start": 422.7,
+      "end": 427.98,
+      "duration": 5.28,
+      "text": "five till here will be 10 nodes because"
+    },
+    {
+      "start": 425.34,
+      "end": 430.38,
+      "duration": 5.04,
+      "text": "First Column will consume five nodes"
+    },
+    {
+      "start": 427.98,
+      "end": 432.3,
+      "duration": 4.32,
+      "text": "second column will consume five notes"
+    },
+    {
+      "start": 430.38,
+      "end": 435.48,
+      "duration": 5.1,
+      "text": "again so when you add the third column"
+    },
+    {
+      "start": 432.3,
+      "end": 437.88,
+      "duration": 5.58,
+      "text": "which is the second index can I say"
+    },
+    {
+      "start": 435.48,
+      "end": 440.22,
+      "duration": 4.74,
+      "text": "2 into 5 the previous two columns would"
+    },
+    {
+      "start": 437.88,
+      "end": 442.44,
+      "duration": 4.56,
+      "text": "have consumed till here 10 nodes which"
+    },
+    {
+      "start": 440.22,
+      "end": 444.72,
+      "duration": 4.5,
+      "text": "is very obvious which is very obvious"
+    },
+    {
+      "start": 442.44,
+      "end": 446.7,
+      "duration": 4.26,
+      "text": "they would have already consumed 10"
+    },
+    {
+      "start": 444.72,
+      "end": 449.58,
+      "duration": 4.86,
+      "text": "nodes which is nothing but two into five"
+    },
+    {
+      "start": 446.7,
+      "end": 451.38,
+      "duration": 4.68,
+      "text": "two is the row number because it is zero"
+    },
+    {
+      "start": 449.58,
+      "end": 453.84,
+      "duration": 4.26,
+      "text": "based indexing previously there was two"
+    },
+    {
+      "start": 451.38,
+      "end": 455.94,
+      "duration": 4.56,
+      "text": "rows so two into five ten nodes have"
+    },
+    {
+      "start": 453.84,
+      "end": 458.28,
+      "duration": 4.44,
+      "text": "been consumed now I'm looking for the"
+    },
+    {
+      "start": 455.94,
+      "end": 459.48,
+      "duration": 3.54,
+      "text": "first position which means"
+    },
+    {
+      "start": 458.28,
+      "end": 462.36,
+      "duration": 4.08,
+      "text": "it's"
+    },
+    {
+      "start": 459.48,
+      "end": 465.54,
+      "duration": 6.06,
+      "text": "you got it which means two into five"
+    },
+    {
+      "start": 462.36,
+      "end": 467.88,
+      "duration": 5.52,
+      "text": "plus one will give you 11 because if"
+    },
+    {
+      "start": 465.54,
+      "end": 469.32,
+      "duration": 3.78,
+      "text": "you're like 9 this will be 10 right"
+    },
+    {
+      "start": 467.88,
+      "end": 471.84,
+      "duration": 3.96,
+      "text": "because"
+    },
+    {
+      "start": 469.32,
+      "end": 473.76,
+      "duration": 4.44,
+      "text": "very simple and this will be 11. so you"
+    },
+    {
+      "start": 471.84,
+      "end": 475.2,
+      "duration": 3.36,
+      "text": "just because if you're looking at this"
+    },
+    {
+      "start": 473.76,
+      "end": 477.54,
+      "duration": 3.78,
+      "text": "it's a plus two if you're looking at"
+    },
+    {
+      "start": 475.2,
+      "end": 479.04,
+      "duration": 3.84,
+      "text": "this as a plus three it's a plus four so"
+    },
+    {
+      "start": 477.54,
+      "end": 481.98,
+      "duration": 4.44,
+      "text": "can I see"
+    },
+    {
+      "start": 479.04,
+      "end": 484.56,
+      "duration": 5.52,
+      "text": "the formula to compute the note the"
+    },
+    {
+      "start": 481.98,
+      "end": 489.0,
+      "duration": 7.02,
+      "text": "formula is very simple any row column"
+    },
+    {
+      "start": 484.56,
+      "end": 492.42,
+      "duration": 7.86,
+      "text": "can be said as rho into m y m because"
+    },
+    {
+      "start": 489.0,
+      "end": 495.3,
+      "duration": 6.3,
+      "text": "every column sorry every row has Five"
+    },
+    {
+      "start": 492.42,
+      "end": 497.64,
+      "duration": 5.22,
+      "text": "Guys which is nothing but the"
+    },
+    {
+      "start": 495.3,
+      "end": 500.64,
+      "duration": 5.34,
+      "text": "column length right so can I say row"
+    },
+    {
+      "start": 497.64,
+      "end": 504.6,
+      "duration": 6.96,
+      "text": "into M plus the column number is what"
+    },
+    {
+      "start": 500.64,
+      "end": 506.82,
+      "duration": 6.18,
+      "text": "the node ID will be signified or the"
+    },
+    {
+      "start": 504.6,
+      "end": 509.22,
+      "duration": 4.62,
+      "text": "node number will be signified so you"
+    },
+    {
+      "start": 506.82,
+      "end": 510.72,
+      "duration": 3.9,
+      "text": "figure this out very simple right before"
+    },
+    {
+      "start": 509.22,
+      "end": 512.34,
+      "duration": 3.12,
+      "text": "implementing this joint cell data"
+    },
+    {
+      "start": 510.72,
+      "end": 516.54,
+      "duration": 5.82,
+      "text": "structure remember one thing"
+    },
+    {
+      "start": 512.34,
+      "end": 519.3,
+      "duration": 6.96,
+      "text": "if there are multiple same cell numbers"
+    },
+    {
+      "start": 516.54,
+      "end": 521.64,
+      "duration": 5.1,
+      "text": "you don't mark it again and again"
+    },
+    {
+      "start": 519.3,
+      "end": 523.44,
+      "duration": 4.14,
+      "text": "remember so what you can do is you'll"
+    },
+    {
+      "start": 521.64,
+      "end": 526.2,
+      "duration": 4.56,
+      "text": "maybe use a visited array to keep a"
+    },
+    {
+      "start": 523.44,
+      "end": 528.0,
+      "duration": 4.56,
+      "text": "track that you do not reuse a cell"
+    },
+    {
+      "start": 526.2,
+      "end": 531.3,
+      "duration": 5.1,
+      "text": "number because if you're getting twice"
+    },
+    {
+      "start": 528.0,
+      "end": 533.52,
+      "duration": 5.52,
+      "text": "it doesn't make sense Okay so first"
+    },
+    {
+      "start": 531.3,
+      "end": 537.12,
+      "duration": 5.82,
+      "text": "thing when you're starting off can I see"
+    },
+    {
+      "start": 533.52,
+      "end": 541.32,
+      "duration": 7.8,
+      "text": "the initial number of"
+    },
+    {
+      "start": 537.12,
+      "end": 542.88,
+      "duration": 5.76,
+      "text": "islands are zero I can right so the"
+    },
+    {
+      "start": 541.32,
+      "end": 545.58,
+      "duration": 4.26,
+      "text": "moment I have the first step"
+    },
+    {
+      "start": 542.88,
+      "end": 548.1,
+      "duration": 5.22,
+      "text": "I see is it marked in the visited array"
+    },
+    {
+      "start": 545.58,
+      "end": 551.52,
+      "duration": 5.94,
+      "text": "it's not so I'll pray maybe mark it as"
+    },
+    {
+      "start": 548.1,
+      "end": 554.34,
+      "duration": 6.24,
+      "text": "true it's quickly mark it as true so I"
+    },
+    {
+      "start": 551.52,
+      "end": 556.2,
+      "duration": 4.68,
+      "text": "marked the zeroth as true what is my"
+    },
+    {
+      "start": 554.34,
+      "end": 558.78,
+      "duration": 4.44,
+      "text": "next thing once I Mark the zeroth cast"
+    },
+    {
+      "start": 556.2,
+      "end": 562.92,
+      "duration": 6.72,
+      "text": "true my next thing will be to take this"
+    },
+    {
+      "start": 558.78,
+      "end": 565.98,
+      "duration": 7.2,
+      "text": "node 0 right take this node 0 and see if"
+    },
+    {
+      "start": 562.92,
+      "end": 568.02,
+      "duration": 5.1,
+      "text": "there is an island on the right no if"
+    },
+    {
+      "start": 565.98,
+      "end": 569.58,
+      "duration": 3.6,
+      "text": "there is an island on the bottom no on"
+    },
+    {
+      "start": 568.02,
+      "end": 572.9,
+      "duration": 4.88,
+      "text": "the left and the upper guys are not"
+    },
+    {
+      "start": 569.58,
+      "end": 575.94,
+      "duration": 6.36,
+      "text": "there so apparently this guy himself"
+    },
+    {
+      "start": 572.9,
+      "end": 578.28,
+      "duration": 5.38,
+      "text": "will contribute to the island so the"
+    },
+    {
+      "start": 575.94,
+      "end": 580.62,
+      "duration": 4.68,
+      "text": "count will increase and it did not have"
+    },
+    {
+      "start": 578.28,
+      "end": 583.56,
+      "duration": 5.28,
+      "text": "anyone on the right or on the bottom so"
+    },
+    {
+      "start": 580.62,
+      "end": 586.62,
+      "duration": 6.0,
+      "text": "it could not get connected to the other"
+    },
+    {
+      "start": 583.56,
+      "end": 589.2,
+      "duration": 5.64,
+      "text": "Islands perfect next I have zero comma"
+    },
+    {
+      "start": 586.62,
+      "end": 591.42,
+      "duration": 4.8,
+      "text": "zero I see this is already visited so"
+    },
+    {
+      "start": 589.2,
+      "end": 593.94,
+      "duration": 4.74,
+      "text": "I'll say hey the count will still be one"
+    },
+    {
+      "start": 591.42,
+      "end": 596.52,
+      "duration": 5.1,
+      "text": "so see first we got one now the count"
+    },
+    {
+      "start": 593.94,
+      "end": 598.98,
+      "duration": 5.04,
+      "text": "still stays as well next we'll go to one"
+    },
+    {
+      "start": 596.52,
+      "end": 601.14,
+      "duration": 4.62,
+      "text": "comma one the moment we go to 1 comma"
+    },
+    {
+      "start": 598.98,
+      "end": 603.84,
+      "duration": 4.86,
+      "text": "one we are like it's not visited so"
+    },
+    {
+      "start": 601.14,
+      "end": 607.14,
+      "duration": 6.0,
+      "text": "let's mark it as visitor and now let's"
+    },
+    {
+      "start": 603.84,
+      "end": 609.48,
+      "duration": 5.64,
+      "text": "look at its is there an island no let's"
+    },
+    {
+      "start": 607.14,
+      "end": 612.3,
+      "duration": 5.16,
+      "text": "look at it is there an island no is"
+    },
+    {
+      "start": 609.48,
+      "end": 615.72,
+      "duration": 6.24,
+      "text": "there an island no is there an alley no"
+    },
+    {
+      "start": 612.3,
+      "end": 619.38,
+      "duration": 7.08,
+      "text": "so Noel so this guy himself himself"
+    },
+    {
+      "start": 615.72,
+      "end": 621.3,
+      "duration": 5.58,
+      "text": "contributes one to that so so I increase"
+    },
+    {
+      "start": 619.38,
+      "end": 622.86,
+      "duration": 3.48,
+      "text": "the contribution to two and I can say"
+    },
+    {
+      "start": 621.3,
+      "end": 624.48,
+      "duration": 3.18,
+      "text": "the answer till here will be two and"
+    },
+    {
+      "start": 622.86,
+      "end": 627.12,
+      "duration": 4.26,
+      "text": "I'll mark it as visited perfect next"
+    },
+    {
+      "start": 624.48,
+      "end": 629.58,
+      "duration": 5.1,
+      "text": "will be 1 comma zero this is where the"
+    },
+    {
+      "start": 627.12,
+      "end": 631.5,
+      "duration": 4.38,
+      "text": "twist comes one comma 0 is this which is"
+    },
+    {
+      "start": 629.58,
+      "end": 634.02,
+      "duration": 4.44,
+      "text": "unvisited so first"
+    },
+    {
+      "start": 631.5,
+      "end": 635.28,
+      "duration": 3.78,
+      "text": "Market is visited right that means it's"
+    },
+    {
+      "start": 634.02,
+      "end": 638.04,
+      "duration": 4.02,
+      "text": "an island"
+    },
+    {
+      "start": 635.28,
+      "end": 639.6,
+      "duration": 4.32,
+      "text": "so we have an island here right"
+    },
+    {
+      "start": 638.04,
+      "end": 642.18,
+      "duration": 4.14,
+      "text": "imagine"
+    },
+    {
+      "start": 639.6,
+      "end": 644.28,
+      "duration": 4.68,
+      "text": "this one comma 0 would have contributed"
+    },
+    {
+      "start": 642.18,
+      "end": 646.5,
+      "duration": 4.32,
+      "text": "1 to the answer just imagine it would"
+    },
+    {
+      "start": 644.28,
+      "end": 649.38,
+      "duration": 5.1,
+      "text": "have contributed one to the answer if it"
+    },
+    {
+      "start": 646.5,
+      "end": 651.0,
+      "duration": 4.5,
+      "text": "was not surrounded by anywhere but now"
+    },
+    {
+      "start": 649.38,
+      "end": 653.4,
+      "duration": 4.02,
+      "text": "I'll look at this around I'll be like"
+    },
+    {
+      "start": 651.0,
+      "end": 657.3,
+      "duration": 6.3,
+      "text": "okay the answer is three till now"
+    },
+    {
+      "start": 653.4,
+      "end": 660.42,
+      "duration": 7.02,
+      "text": "because it was not surrounded by anyone"
+    },
+    {
+      "start": 657.3,
+      "end": 662.82,
+      "duration": 5.52,
+      "text": "I imagined when I got the salad now this"
+    },
+    {
+      "start": 660.42,
+      "end": 665.82,
+      "duration": 5.4,
+      "text": "guy looked at the front top and said hey"
+    },
+    {
+      "start": 662.82,
+      "end": 667.62,
+      "duration": 4.8,
+      "text": "I can go and connect with you if I can"
+    },
+    {
+      "start": 665.82,
+      "end": 671.34,
+      "duration": 5.52,
+      "text": "go and connect with you"
+    },
+    {
+      "start": 667.62,
+      "end": 673.5,
+      "duration": 5.88,
+      "text": "I myself will know movie an answer I"
+    },
+    {
+      "start": 671.34,
+      "end": 676.74,
+      "duration": 5.4,
+      "text": "myself will no more be a single"
+    },
+    {
+      "start": 673.5,
+      "end": 680.46,
+      "duration": 6.96,
+      "text": "individual Island so maybe reduce"
+    },
+    {
+      "start": 676.74,
+      "end": 682.38,
+      "duration": 5.64,
+      "text": "like okay reduce fine so I'll now have"
+    },
+    {
+      "start": 680.46,
+      "end": 684.42,
+      "duration": 3.96,
+      "text": "the connection between 0 and 5 in the"
+    },
+    {
+      "start": 682.38,
+      "end": 686.28,
+      "duration": 3.9,
+      "text": "disjoint set I'll just ask them to"
+    },
+    {
+      "start": 684.42,
+      "end": 688.62,
+      "duration": 4.2,
+      "text": "connect zero and five and they'll get"
+    },
+    {
+      "start": 686.28,
+      "end": 691.26,
+      "duration": 4.98,
+      "text": "connected right next"
+    },
+    {
+      "start": 688.62,
+      "end": 693.48,
+      "duration": 4.86,
+      "text": "I will look at the right and I'll have a"
+    },
+    {
+      "start": 691.26,
+      "end": 696.24,
+      "duration": 4.98,
+      "text": "another guy I have another Island"
+    },
+    {
+      "start": 693.48,
+      "end": 698.66,
+      "duration": 5.18,
+      "text": "okay I'll also connect with this guy so"
+    },
+    {
+      "start": 696.24,
+      "end": 701.16,
+      "duration": 4.92,
+      "text": "the this will also reduce to one why"
+    },
+    {
+      "start": 698.66,
+      "end": 703.92,
+      "duration": 5.26,
+      "text": "previously it was two individual guys"
+    },
+    {
+      "start": 701.16,
+      "end": 705.96,
+      "duration": 4.8,
+      "text": "this guy connected to this reduce them"
+    },
+    {
+      "start": 703.92,
+      "end": 708.78,
+      "duration": 4.86,
+      "text": "by one again connected to by reduced by"
+    },
+    {
+      "start": 705.96,
+      "end": 711.18,
+      "duration": 5.22,
+      "text": "one set eventually connected two guys so"
+    },
+    {
+      "start": 708.78,
+      "end": 713.64,
+      "duration": 4.86,
+      "text": "the reduction will be two"
+    },
+    {
+      "start": 711.18,
+      "end": 715.86,
+      "duration": 4.68,
+      "text": "he himself got plus one but he actually"
+    },
+    {
+      "start": 713.64,
+      "end": 718.44,
+      "duration": 4.8,
+      "text": "reduced two guys and made them connected"
+    },
+    {
+      "start": 715.86,
+      "end": 721.8,
+      "duration": 5.94,
+      "text": "got it simple so the answer is one"
+    },
+    {
+      "start": 718.44,
+      "end": 724.68,
+      "duration": 6.24,
+      "text": "ancestors to be one one comma zero next"
+    },
+    {
+      "start": 721.8,
+      "end": 727.38,
+      "duration": 5.58,
+      "text": "zero comma one is this guy let's mark it"
+    },
+    {
+      "start": 724.68,
+      "end": 729.36,
+      "duration": 4.68,
+      "text": "as visited and imagine it is alone and"
+    },
+    {
+      "start": 727.38,
+      "end": 731.94,
+      "duration": 4.56,
+      "text": "increase the value by plus one to two"
+    },
+    {
+      "start": 729.36,
+      "end": 734.34,
+      "duration": 4.98,
+      "text": "now let's see this guy says there's no"
+    },
+    {
+      "start": 731.94,
+      "end": 737.34,
+      "duration": 5.4,
+      "text": "one on the top like okay there's no one"
+    },
+    {
+      "start": 734.34,
+      "end": 738.9,
+      "duration": 4.56,
+      "text": "on them right okay and there's someone"
+    },
+    {
+      "start": 737.34,
+      "end": 740.7,
+      "duration": 3.36,
+      "text": "on the bottom remember this there's"
+    },
+    {
+      "start": 738.9,
+      "end": 743.34,
+      "duration": 4.44,
+      "text": "someone on the water so I'll be like can"
+    },
+    {
+      "start": 740.7,
+      "end": 745.62,
+      "duration": 4.92,
+      "text": "I go and get connected with this guy I"
+    },
+    {
+      "start": 743.34,
+      "end": 747.24,
+      "duration": 3.9,
+      "text": "can because we were not connected"
+    },
+    {
+      "start": 745.62,
+      "end": 748.86,
+      "duration": 3.24,
+      "text": "previously we were not connected"
+    },
+    {
+      "start": 747.24,
+      "end": 751.62,
+      "duration": 4.38,
+      "text": "previously so if I go and connect with"
+    },
+    {
+      "start": 748.86,
+      "end": 753.48,
+      "duration": 4.62,
+      "text": "themselves I'll reduce my answer to my"
+    },
+    {
+      "start": 751.62,
+      "end": 756.84,
+      "duration": 5.22,
+      "text": "one right next"
+    },
+    {
+      "start": 753.48,
+      "end": 758.28,
+      "duration": 4.8,
+      "text": "this done this done this done this okay"
+    },
+    {
+      "start": 756.84,
+      "end": 760.56,
+      "duration": 3.72,
+      "text": "wait"
+    },
+    {
+      "start": 758.28,
+      "end": 761.52,
+      "duration": 3.24,
+      "text": "I can connect but will it make sense to"
+    },
+    {
+      "start": 760.56,
+      "end": 764.1,
+      "duration": 3.54,
+      "text": "connect"
+    },
+    {
+      "start": 761.52,
+      "end": 766.68,
+      "duration": 5.16,
+      "text": "aren't they already connected and the"
+    },
+    {
+      "start": 764.1,
+      "end": 769.02,
+      "duration": 4.92,
+      "text": "disjoint set will say yes"
+    },
+    {
+      "start": 766.68,
+      "end": 770.88,
+      "duration": 4.2,
+      "text": "you guys are already connected so what's"
+    },
+    {
+      "start": 769.02,
+      "end": 772.44,
+      "duration": 3.42,
+      "text": "the point of connecting here what's the"
+    },
+    {
+      "start": 770.88,
+      "end": 774.6,
+      "duration": 3.72,
+      "text": "point of connecting yeah you're already"
+    },
+    {
+      "start": 772.44,
+      "end": 776.88,
+      "duration": 4.44,
+      "text": "connected via this and if you find the"
+    },
+    {
+      "start": 774.6,
+      "end": 779.52,
+      "duration": 4.92,
+      "text": "ultimate boss you'll find the boss to be"
+    },
+    {
+      "start": 776.88,
+      "end": 781.44,
+      "duration": 4.56,
+      "text": "zero for this as well as zero for this"
+    },
+    {
+      "start": 779.52,
+      "end": 783.6,
+      "duration": 4.08,
+      "text": "so there's no point in connecting so"
+    },
+    {
+      "start": 781.44,
+      "end": 785.04,
+      "duration": 3.6,
+      "text": "I'll not connect thereby it still stays"
+    },
+    {
+      "start": 783.6,
+      "end": 786.66,
+      "duration": 3.06,
+      "text": "as one"
+    },
+    {
+      "start": 785.04,
+      "end": 790.02,
+      "duration": 4.98,
+      "text": "if you're not connecting keep the answer"
+    },
+    {
+      "start": 786.66,
+      "end": 792.98,
+      "duration": 6.32,
+      "text": "as it is perfect next 0 comma three"
+    },
+    {
+      "start": 790.02,
+      "end": 792.98,
+      "duration": 2.96,
+      "text": "where's zero comma three"
+    },
+    {
+      "start": 793.64,
+      "end": 798.36,
+      "duration": 4.72,
+      "text": "does it and increase the answer by plus"
+    },
+    {
+      "start": 796.32,
+      "end": 801.0,
+      "duration": 4.68,
+      "text": "one increase the answer by plus one why"
+    },
+    {
+      "start": 798.36,
+      "end": 803.28,
+      "duration": 4.92,
+      "text": "imagine itself to be alone imagine"
+    },
+    {
+      "start": 801.0,
+      "end": 805.38,
+      "duration": 4.38,
+      "text": "itself to be alone does it have anyone"
+    },
+    {
+      "start": 803.28,
+      "end": 807.66,
+      "duration": 4.38,
+      "text": "on the top no does it have anyone here"
+    },
+    {
+      "start": 805.38,
+      "end": 810.6,
+      "duration": 5.22,
+      "text": "no does it have anyone here no does it"
+    },
+    {
+      "start": 807.66,
+      "end": 811.92,
+      "duration": 4.26,
+      "text": "have anyone here no so the you consider"
+    },
+    {
+      "start": 810.6,
+      "end": 814.86,
+      "duration": 4.26,
+      "text": "himself to be alone"
+    },
+    {
+      "start": 811.92,
+      "end": 816.78,
+      "duration": 4.86,
+      "text": "yeah that plus one worked if you would"
+    },
+    {
+      "start": 814.86,
+      "end": 819.48,
+      "duration": 4.62,
+      "text": "have got connected to someone minus what"
+    },
+    {
+      "start": 816.78,
+      "end": 820.14,
+      "duration": 3.36,
+      "text": "would have been done but since it has no"
+    },
+    {
+      "start": 819.48,
+      "end": 822.48,
+      "duration": 3.0,
+      "text": "one"
+    },
+    {
+      "start": 820.14,
+      "end": 826.62,
+      "duration": 6.48,
+      "text": "the plus one stayed and he got an answer"
+    },
+    {
+      "start": 822.48,
+      "end": 828.9,
+      "duration": 6.42,
+      "text": "as two perfect next one comma three"
+    },
+    {
+      "start": 826.62,
+      "end": 831.18,
+      "duration": 4.56,
+      "text": "where's that here Market is visited"
+    },
+    {
+      "start": 828.9,
+      "end": 835.14,
+      "duration": 6.24,
+      "text": "increase the answer by plus one"
+    },
+    {
+      "start": 831.18,
+      "end": 839.64,
+      "duration": 8.46,
+      "text": "so eventually like initially individual"
+    },
+    {
+      "start": 835.14,
+      "end": 841.14,
+      "duration": 6.0,
+      "text": "connected we can we can go and cry"
+    },
+    {
+      "start": 839.64,
+      "end": 842.34,
+      "duration": 2.7,
+      "text": "the moment you connect"
+    },
+    {
+      "start": 841.14,
+      "end": 843.84,
+      "duration": 2.7,
+      "text": "reduce"
+    },
+    {
+      "start": 842.34,
+      "end": 846.18,
+      "duration": 3.84,
+      "text": "can you connect to the right now can you"
+    },
+    {
+      "start": 843.84,
+      "end": 848.94,
+      "duration": 5.1,
+      "text": "connect to the water no no so the answer"
+    },
+    {
+      "start": 846.18,
+      "end": 852.12,
+      "duration": 5.94,
+      "text": "is two it actually makes sense"
+    },
+    {
+      "start": 848.94,
+      "end": 854.52,
+      "duration": 5.58,
+      "text": "next zero comma four so let's analyze"
+    },
+    {
+      "start": 852.12,
+      "end": 856.8,
+      "duration": 4.68,
+      "text": "zero four it's here again do the same"
+    },
+    {
+      "start": 854.52,
+      "end": 860.58,
+      "duration": 6.06,
+      "text": "thing increase the answer by one"
+    },
+    {
+      "start": 856.8,
+      "end": 864.18,
+      "duration": 7.38,
+      "text": "and Mark it as visited now top no no no"
+    },
+    {
+      "start": 860.58,
+      "end": 865.92,
+      "duration": 5.34,
+      "text": "can I correct yes they're not connected"
+    },
+    {
+      "start": 864.18,
+      "end": 869.58,
+      "duration": 5.4,
+      "text": "the moment you connect reduce the answer"
+    },
+    {
+      "start": 865.92,
+      "end": 871.86,
+      "duration": 5.94,
+      "text": "by one two perfect next three comma two"
+    },
+    {
+      "start": 869.58,
+      "end": 873.42,
+      "duration": 3.84,
+      "text": "so next is three comma two so let's go"
+    },
+    {
+      "start": 871.86,
+      "end": 875.58,
+      "duration": 3.72,
+      "text": "to three comma two unmarked it again"
+    },
+    {
+      "start": 873.42,
+      "end": 877.8,
+      "duration": 4.38,
+      "text": "increase the answer by one considering"
+    },
+    {
+      "start": 875.58,
+      "end": 880.68,
+      "duration": 5.1,
+      "text": "itself as individual when it came"
+    },
+    {
+      "start": 877.8,
+      "end": 882.96,
+      "duration": 5.16,
+      "text": "does it have anyone at the top no does"
+    },
+    {
+      "start": 880.68,
+      "end": 886.08,
+      "duration": 5.4,
+      "text": "it have anyone under this no on this no"
+    },
+    {
+      "start": 882.96,
+      "end": 888.96,
+      "duration": 6.0,
+      "text": "on the snow on the snow so we consider"
+    },
+    {
+      "start": 886.08,
+      "end": 890.64,
+      "duration": 4.56,
+      "text": "itself as a low that worked thereby the"
+    },
+    {
+      "start": 888.96,
+      "end": 893.82,
+      "duration": 4.86,
+      "text": "answer for this will be three perfect"
+    },
+    {
+      "start": 890.64,
+      "end": 894.84,
+      "duration": 4.2,
+      "text": "next two comma two which is this"
+    },
+    {
+      "start": 893.82,
+      "end": 896.88,
+      "duration": 3.06,
+      "text": "so"
+    },
+    {
+      "start": 894.84,
+      "end": 900.5,
+      "duration": 5.66,
+      "text": "consider itself to be alone"
+    },
+    {
+      "start": 896.88,
+      "end": 904.02,
+      "duration": 7.14,
+      "text": "increased but the moment it saw no no no"
+    },
+    {
+      "start": 900.5,
+      "end": 906.18,
+      "duration": 5.68,
+      "text": "but the moment is saw it downwards it"
+    },
+    {
+      "start": 904.02,
+      "end": 908.64,
+      "duration": 4.62,
+      "text": "found someone to be connected to already"
+    },
+    {
+      "start": 906.18,
+      "end": 911.76,
+      "duration": 5.58,
+      "text": "an existing guy so it got gets connected"
+    },
+    {
+      "start": 908.64,
+      "end": 913.74,
+      "duration": 5.1,
+      "text": "and reduces the answer makes sense gets"
+    },
+    {
+      "start": 911.76,
+      "end": 916.38,
+      "duration": 4.62,
+      "text": "connected to another Island so why will"
+    },
+    {
+      "start": 913.74,
+      "end": 919.44,
+      "duration": 5.7,
+      "text": "it be considered individual right what's"
+    },
+    {
+      "start": 916.38,
+      "end": 921.12,
+      "duration": 4.74,
+      "text": "next one comma two very very very"
+    },
+    {
+      "start": 919.44,
+      "end": 922.56,
+      "duration": 3.12,
+      "text": "important you have to understand this"
+    },
+    {
+      "start": 921.12,
+      "end": 925.14,
+      "duration": 4.02,
+      "text": "once you understand this you understand"
+    },
+    {
+      "start": 922.56,
+      "end": 925.92,
+      "duration": 3.36,
+      "text": "everything okay one comma two where is"
+    },
+    {
+      "start": 925.14,
+      "end": 928.56,
+      "duration": 3.42,
+      "text": "that"
+    },
+    {
+      "start": 925.92,
+      "end": 930.24,
+      "duration": 4.32,
+      "text": "this is somewhere here right so what I"
+    },
+    {
+      "start": 928.56,
+      "end": 932.28,
+      "duration": 3.72,
+      "text": "do is I'll be like okay let's consider"
+    },
+    {
+      "start": 930.24,
+      "end": 933.96,
+      "duration": 3.72,
+      "text": "this as an individual let's consider"
+    },
+    {
+      "start": 932.28,
+      "end": 936.3,
+      "duration": 4.02,
+      "text": "this as an individual so the answer"
+    },
+    {
+      "start": 933.96,
+      "end": 938.82,
+      "duration": 4.86,
+      "text": "should be four answer should be four if"
+    },
+    {
+      "start": 936.3,
+      "end": 940.98,
+      "duration": 4.68,
+      "text": "individuals should have been considered"
+    },
+    {
+      "start": 938.82,
+      "end": 942.6,
+      "duration": 3.78,
+      "text": "should happen but we will now start"
+    },
+    {
+      "start": 940.98,
+      "end": 945.3,
+      "duration": 4.32,
+      "text": "connecting"
+    },
+    {
+      "start": 942.6,
+      "end": 947.76,
+      "duration": 5.16,
+      "text": "can it connect to the top no can I come"
+    },
+    {
+      "start": 945.3,
+      "end": 949.98,
+      "duration": 4.68,
+      "text": "to the right yes go and connect"
+    },
+    {
+      "start": 947.76,
+      "end": 952.08,
+      "duration": 4.32,
+      "text": "connected answer reduced by one"
+    },
+    {
+      "start": 949.98,
+      "end": 954.6,
+      "duration": 4.62,
+      "text": "can it connect to the bottom yes they're"
+    },
+    {
+      "start": 952.08,
+      "end": 957.24,
+      "duration": 5.16,
+      "text": "not connected by any means"
+    },
+    {
+      "start": 954.6,
+      "end": 959.22,
+      "duration": 4.62,
+      "text": "nice answer is one more can you"
+    },
+    {
+      "start": 957.24,
+      "end": 961.44,
+      "duration": 4.2,
+      "text": "calculate the left yes go and connect it"
+    },
+    {
+      "start": 959.22,
+      "end": 963.96,
+      "duration": 4.74,
+      "text": "to the left which is this answer is by"
+    },
+    {
+      "start": 961.44,
+      "end": 964.92,
+      "duration": 3.48,
+      "text": "one more the answer is one and Market is"
+    },
+    {
+      "start": 963.96,
+      "end": 967.8,
+      "duration": 3.84,
+      "text": "visited"
+    },
+    {
+      "start": 964.92,
+      "end": 970.14,
+      "duration": 5.22,
+      "text": "nice so if you see everyone got"
+    },
+    {
+      "start": 967.8,
+      "end": 973.74,
+      "duration": 5.94,
+      "text": "connected and"
+    },
+    {
+      "start": 970.14,
+      "end": 975.78,
+      "duration": 5.64,
+      "text": "it reduced three and it got it just did"
+    },
+    {
+      "start": 973.74,
+      "end": 978.84,
+      "duration": 5.1,
+      "text": "a plus one for himself So eventually"
+    },
+    {
+      "start": 975.78,
+      "end": 981.18,
+      "duration": 5.4,
+      "text": "it's a plus one got it nice so we have"
+    },
+    {
+      "start": 978.84,
+      "end": 984.36,
+      "duration": 5.52,
+      "text": "one as the answer next is zero comma two"
+    },
+    {
+      "start": 981.18,
+      "end": 986.1,
+      "duration": 4.92,
+      "text": "this is this so you see visit it and you"
+    },
+    {
+      "start": 984.36,
+      "end": 988.02,
+      "duration": 3.66,
+      "text": "increase the answer by one because for"
+    },
+    {
+      "start": 986.1,
+      "end": 991.08,
+      "duration": 4.98,
+      "text": "himself just in case it doesn't gets"
+    },
+    {
+      "start": 988.02,
+      "end": 993.42,
+      "duration": 5.4,
+      "text": "connected to anyone no no"
+    },
+    {
+      "start": 991.08,
+      "end": 996.9,
+      "duration": 5.82,
+      "text": "it gets connected to this guy"
+    },
+    {
+      "start": 993.42,
+      "end": 999.24,
+      "duration": 5.82,
+      "text": "and says I've reduced Myself by one next"
+    },
+    {
+      "start": 996.9,
+      "end": 1001.52,
+      "duration": 4.62,
+      "text": "the moment it stress to get here"
+    },
+    {
+      "start": 999.24,
+      "end": 1003.38,
+      "duration": 4.14,
+      "text": "it is already connected finds it's"
+    },
+    {
+      "start": 1001.52,
+      "end": 1005.3,
+      "duration": 3.78,
+      "text": "already connected so there's no point in"
+    },
+    {
+      "start": 1003.38,
+      "end": 1007.64,
+      "duration": 4.26,
+      "text": "connecting here it's already connected"
+    },
+    {
+      "start": 1005.3,
+      "end": 1009.5,
+      "duration": 4.2,
+      "text": "so there's no point in Connect here so"
+    },
+    {
+      "start": 1007.64,
+      "end": 1013.64,
+      "duration": 6.0,
+      "text": "the answer is one"
+    },
+    {
+      "start": 1009.5,
+      "end": 1017.12,
+      "duration": 7.62,
+      "text": "over and this is the list that you can"
+    },
+    {
+      "start": 1013.64,
+      "end": 1020.08,
+      "duration": 6.44,
+      "text": "easily return pretty simple four"
+    },
+    {
+      "start": 1017.12,
+      "end": 1022.58,
+      "duration": 5.46,
+      "text": "directions travels just connect connect"
+    },
+    {
+      "start": 1020.08,
+      "end": 1024.56,
+      "duration": 4.48,
+      "text": "and whenever you're connecting to"
+    },
+    {
+      "start": 1022.58,
+      "end": 1026.18,
+      "duration": 3.6,
+      "text": "someone reduce minus one that's it"
+    },
+    {
+      "start": 1024.56,
+      "end": 1027.98,
+      "duration": 3.42,
+      "text": "pretty simple"
+    },
+    {
+      "start": 1026.18,
+      "end": 1029.72,
+      "duration": 3.54,
+      "text": "I hope you have understood the entire"
+    },
+    {
+      "start": 1027.98,
+      "end": 1031.34,
+      "duration": 3.36,
+      "text": "explanation it's time to code it up so"
+    },
+    {
+      "start": 1029.72,
+      "end": 1033.08,
+      "duration": 3.36,
+      "text": "as usual recording the C plus plus"
+    },
+    {
+      "start": 1031.34,
+      "end": 1035.3,
+      "duration": 3.96,
+      "text": "Solution on the right and you can figure"
+    },
+    {
+      "start": 1033.08,
+      "end": 1038.06,
+      "duration": 4.98,
+      "text": "out the exact similar Java code on the"
+    },
+    {
+      "start": 1035.3,
+      "end": 1040.52,
+      "duration": 5.22,
+      "text": "left what do you require obviously the"
+    },
+    {
+      "start": 1038.06,
+      "end": 1044.3,
+      "duration": 6.24,
+      "text": "disjoint set data structure so let's"
+    },
+    {
+      "start": 1040.52,
+      "end": 1046.58,
+      "duration": 6.06,
+      "text": "quickly take it off okay we will just uh"
+    },
+    {
+      "start": 1044.3,
+      "end": 1049.22,
+      "duration": 4.92,
+      "text": "get rid of all the functions okay so"
+    },
+    {
+      "start": 1046.58,
+      "end": 1051.26,
+      "duration": 4.68,
+      "text": "this joins it now I need the size what"
+    },
+    {
+      "start": 1049.22,
+      "end": 1053.12,
+      "duration": 3.9,
+      "text": "was the size if you remember yes and"
+    },
+    {
+      "start": 1051.26,
+      "end": 1054.14,
+      "duration": 2.88,
+      "text": "into M those were the total number of"
+    },
+    {
+      "start": 1053.12,
+      "end": 1056.36,
+      "duration": 3.24,
+      "text": "notes"
+    },
+    {
+      "start": 1054.14,
+      "end": 1058.76,
+      "duration": 4.62,
+      "text": "quickly let's have it what's the next"
+    },
+    {
+      "start": 1056.36,
+      "end": 1060.8,
+      "duration": 4.44,
+      "text": "thing we require we require a visited so"
+    },
+    {
+      "start": 1058.76,
+      "end": 1064.28,
+      "duration": 5.52,
+      "text": "maybe we can keep it as this and we can"
+    },
+    {
+      "start": 1060.8,
+      "end": 1066.38,
+      "duration": 5.58,
+      "text": "use the mem set like visited 0 and sorry"
+    },
+    {
+      "start": 1064.28,
+      "end": 1069.74,
+      "duration": 5.46,
+      "text": "size of visited this will make sure"
+    },
+    {
+      "start": 1066.38,
+      "end": 1071.72,
+      "duration": 5.34,
+      "text": "everything is marked as zero initial"
+    },
+    {
+      "start": 1069.74,
+      "end": 1074.24,
+      "duration": 4.5,
+      "text": "number of count maybe we can keep it as"
+    },
+    {
+      "start": 1071.72,
+      "end": 1076.58,
+      "duration": 4.86,
+      "text": "0 saying that initial number of count of"
+    },
+    {
+      "start": 1074.24,
+      "end": 1078.8,
+      "duration": 4.56,
+      "text": "islands is zero and we can have a list"
+    },
+    {
+      "start": 1076.58,
+      "end": 1080.78,
+      "duration": 4.2,
+      "text": "which will store all the answers and at"
+    },
+    {
+      "start": 1078.8,
+      "end": 1082.7,
+      "duration": 3.9,
+      "text": "the end of the day after performing the"
+    },
+    {
+      "start": 1080.78,
+      "end": 1086.18,
+      "duration": 5.4,
+      "text": "operations we can return this particular"
+    },
+    {
+      "start": 1082.7,
+      "end": 1088.16,
+      "duration": 5.46,
+      "text": "answer now I'll be like okay fine I got"
+    },
+    {
+      "start": 1086.18,
+      "end": 1091.04,
+      "duration": 4.86,
+      "text": "it what's the step you have to go"
+    },
+    {
+      "start": 1088.16,
+      "end": 1092.66,
+      "duration": 4.5,
+      "text": "through all these queries so let's go"
+    },
+    {
+      "start": 1091.04,
+      "end": 1093.74,
+      "duration": 2.7,
+      "text": "through all these queries"
+    },
+    {
+      "start": 1092.66,
+      "end": 1096.32,
+      "duration": 3.66,
+      "text": "no"
+    },
+    {
+      "start": 1093.74,
+      "end": 1098.24,
+      "duration": 4.5,
+      "text": "I know one thing the row will be i t of"
+    },
+    {
+      "start": 1096.32,
+      "end": 1100.24,
+      "duration": 3.92,
+      "text": "zero right I know one thing the column"
+    },
+    {
+      "start": 1098.24,
+      "end": 1103.46,
+      "duration": 5.22,
+      "text": "will be i t of"
+    },
+    {
+      "start": 1100.24,
+      "end": 1106.46,
+      "duration": 6.22,
+      "text": "1. and something I know for sure is a"
+    },
+    {
+      "start": 1103.46,
+      "end": 1110.3,
+      "duration": 6.84,
+      "text": "visited like if this guy has previously"
+    },
+    {
+      "start": 1106.46,
+      "end": 1112.4,
+      "duration": 5.94,
+      "text": "been visited like it's it's already an"
+    },
+    {
+      "start": 1110.3,
+      "end": 1113.96,
+      "duration": 3.66,
+      "text": "island so it's not gonna add up or"
+    },
+    {
+      "start": 1112.4,
+      "end": 1115.64,
+      "duration": 3.24,
+      "text": "delete anything from the answer if it's"
+    },
+    {
+      "start": 1113.96,
+      "end": 1117.56,
+      "duration": 3.6,
+      "text": "already an island because everything"
+    },
+    {
+      "start": 1115.64,
+      "end": 1119.66,
+      "duration": 4.02,
+      "text": "would have been previously computed"
+    },
+    {
+      "start": 1117.56,
+      "end": 1122.84,
+      "duration": 5.28,
+      "text": "correct so what I can say is Hey listen"
+    },
+    {
+      "start": 1119.66,
+      "end": 1124.76,
+      "duration": 5.1,
+      "text": "there's going to be no change whatsoever"
+    },
+    {
+      "start": 1122.84,
+      "end": 1126.92,
+      "duration": 4.08,
+      "text": "in the count of islands so you can just"
+    },
+    {
+      "start": 1124.76,
+      "end": 1129.32,
+      "duration": 4.56,
+      "text": "do it and go to the next query perfect"
+    },
+    {
+      "start": 1126.92,
+      "end": 1131.96,
+      "duration": 5.04,
+      "text": "but if it is not then I'll be like okay"
+    },
+    {
+      "start": 1129.32,
+      "end": 1133.94,
+      "duration": 4.62,
+      "text": "let's mark this as visited and at the"
+    },
+    {
+      "start": 1131.96,
+      "end": 1135.98,
+      "duration": 4.02,
+      "text": "same time say let's count it as an"
+    },
+    {
+      "start": 1133.94,
+      "end": 1138.86,
+      "duration": 4.92,
+      "text": "individuality then we can do the"
+    },
+    {
+      "start": 1135.98,
+      "end": 1142.16,
+      "duration": 6.18,
+      "text": "subtractions up right and everything so"
+    },
+    {
+      "start": 1138.86,
+      "end": 1144.14,
+      "duration": 5.28,
+      "text": "can I say the upward guy will be row"
+    },
+    {
+      "start": 1142.16,
+      "end": 1146.6,
+      "duration": 4.44,
+      "text": "minus one call can I say upward guy will"
+    },
+    {
+      "start": 1144.14,
+      "end": 1150.56,
+      "duration": 6.42,
+      "text": "be row minus one column I can row minus"
+    },
+    {
+      "start": 1146.6,
+      "end": 1152.6,
+      "duration": 6.0,
+      "text": "one call right so and then can I say the"
+    },
+    {
+      "start": 1150.56,
+      "end": 1155.06,
+      "duration": 4.5,
+      "text": "right guy will be row comma column plus"
+    },
+    {
+      "start": 1152.6,
+      "end": 1157.46,
+      "duration": 4.86,
+      "text": "one I can can I say the bottom guy will"
+    },
+    {
+      "start": 1155.06,
+      "end": 1159.44,
+      "duration": 4.38,
+      "text": "be row plus one and there'll be no"
+    },
+    {
+      "start": 1157.46,
+      "end": 1162.92,
+      "duration": 5.46,
+      "text": "change in the column right and can I see"
+    },
+    {
+      "start": 1159.44,
+      "end": 1166.22,
+      "duration": 6.78,
+      "text": "the left guy will be row comma column"
+    },
+    {
+      "start": 1162.92,
+      "end": 1167.6,
+      "duration": 4.68,
+      "text": "minus 1. I can so if you see"
+    },
+    {
+      "start": 1166.22,
+      "end": 1170.66,
+      "duration": 4.44,
+      "text": "I can either write four different"
+    },
+    {
+      "start": 1167.6,
+      "end": 1171.74,
+      "duration": 4.14,
+      "text": "statements or I can combine them into a"
+    },
+    {
+      "start": 1170.66,
+      "end": 1174.86,
+      "duration": 4.2,
+      "text": "DX"
+    },
+    {
+      "start": 1171.74,
+      "end": 1177.74,
+      "duration": 6.0,
+      "text": "on a d y where or you can say Dr which"
+    },
+    {
+      "start": 1174.86,
+      "end": 1180.32,
+      "duration": 5.46,
+      "text": "is the change in the rows and the change"
+    },
+    {
+      "start": 1177.74,
+      "end": 1182.84,
+      "duration": 5.1,
+      "text": "in the columns now how do you figure"
+    },
+    {
+      "start": 1180.32,
+      "end": 1184.94,
+      "duration": 4.62,
+      "text": "this out so if you see it's a minus one"
+    },
+    {
+      "start": 1182.84,
+      "end": 1186.92,
+      "duration": 4.08,
+      "text": "on the row for the first time it's a"
+    },
+    {
+      "start": 1184.94,
+      "end": 1190.7,
+      "duration": 5.76,
+      "text": "plus zero it's a plus one it's a plus"
+    },
+    {
+      "start": 1186.92,
+      "end": 1194.24,
+      "duration": 7.32,
+      "text": "zero so it's like minus one zero"
+    },
+    {
+      "start": 1190.7,
+      "end": 1195.86,
+      "duration": 5.16,
+      "text": "plus 1 and a zero so I just took the"
+    },
+    {
+      "start": 1194.24,
+      "end": 1197.54,
+      "duration": 3.3,
+      "text": "changes in the row and then there is a"
+    },
+    {
+      "start": 1195.86,
+      "end": 1200.36,
+      "duration": 4.5,
+      "text": "change in column as plus zero for the"
+    },
+    {
+      "start": 1197.54,
+      "end": 1202.7,
+      "duration": 5.16,
+      "text": "first time change as plus one change as"
+    },
+    {
+      "start": 1200.36,
+      "end": 1205.4,
+      "duration": 5.04,
+      "text": "zero changes minus one if you carefully"
+    },
+    {
+      "start": 1202.7,
+      "end": 1207.14,
+      "duration": 4.44,
+      "text": "notice right so if you see column is"
+    },
+    {
+      "start": 1205.4,
+      "end": 1210.5,
+      "duration": 5.1,
+      "text": "minus one and we have a minus one if you"
+    },
+    {
+      "start": 1207.14,
+      "end": 1212.54,
+      "duration": 5.4,
+      "text": "see column is just column and it is uh"
+    },
+    {
+      "start": 1210.5,
+      "end": 1216.44,
+      "duration": 5.94,
+      "text": "zero over here column is plus one plus"
+    },
+    {
+      "start": 1212.54,
+      "end": 1220.7,
+      "duration": 8.16,
+      "text": "one so if you see minus one like this 0"
+    },
+    {
+      "start": 1216.44,
+      "end": 1224.54,
+      "duration": 8.1,
+      "text": "and -1 will be the first guy then zero"
+    },
+    {
+      "start": 1220.7,
+      "end": 1226.28,
+      "duration": 5.58,
+      "text": "plus one plus one zero and 0 minus 1. so"
+    },
+    {
+      "start": 1224.54,
+      "end": 1228.02,
+      "duration": 3.48,
+      "text": "I've already taught this technique"
+    },
+    {
+      "start": 1226.28,
+      "end": 1229.1,
+      "duration": 2.82,
+      "text": "that's why I did not use the iPad so"
+    },
+    {
+      "start": 1228.02,
+      "end": 1232.1,
+      "duration": 4.08,
+      "text": "index"
+    },
+    {
+      "start": 1229.1,
+      "end": 1235.28,
+      "duration": 6.18,
+      "text": "lesser than 4 and index plus can I say"
+    },
+    {
+      "start": 1232.1,
+      "end": 1238.1,
+      "duration": 6.0,
+      "text": "the new row that means that just intro"
+    },
+    {
+      "start": 1235.28,
+      "end": 1241.28,
+      "duration": 6.0,
+      "text": "or maybe you can say adjacent row will"
+    },
+    {
+      "start": 1238.1,
+      "end": 1244.4,
+      "duration": 6.3,
+      "text": "be the current row plus a change in the"
+    },
+    {
+      "start": 1241.28,
+      "end": 1246.14,
+      "duration": 4.86,
+      "text": "Dr which is Dr Index right and can I see"
+    },
+    {
+      "start": 1244.4,
+      "end": 1247.82,
+      "duration": 3.42,
+      "text": "the adjacent column it will be nothing"
+    },
+    {
+      "start": 1246.14,
+      "end": 1251.9,
+      "duration": 5.76,
+      "text": "but column Plus"
+    },
+    {
+      "start": 1247.82,
+      "end": 1254.0,
+      "duration": 6.18,
+      "text": "the DC the change the Delta C right so"
+    },
+    {
+      "start": 1251.9,
+      "end": 1256.76,
+      "duration": 4.86,
+      "text": "this is this is the new ones I need to"
+    },
+    {
+      "start": 1254.0,
+      "end": 1259.94,
+      "duration": 5.94,
+      "text": "check the validity it might be"
+    },
+    {
+      "start": 1256.76,
+      "end": 1262.76,
+      "duration": 6.0,
+      "text": "crossing the grid right so just make"
+    },
+    {
+      "start": 1259.94,
+      "end": 1265.22,
+      "duration": 5.28,
+      "text": "sure you check out the validity of this"
+    },
+    {
+      "start": 1262.76,
+      "end": 1267.56,
+      "duration": 4.8,
+      "text": "thing so first make sure is valid is"
+    },
+    {
+      "start": 1265.22,
+      "end": 1270.8,
+      "duration": 5.58,
+      "text": "what you will call so go across and say"
+    },
+    {
+      "start": 1267.56,
+      "end": 1273.44,
+      "duration": 5.88,
+      "text": "adjacents are adjacent column"
+    },
+    {
+      "start": 1270.8,
+      "end": 1274.76,
+      "duration": 3.96,
+      "text": "and the nnm once you've checked the"
+    },
+    {
+      "start": 1273.44,
+      "end": 1277.52,
+      "duration": 4.08,
+      "text": "validity then you can do the other"
+    },
+    {
+      "start": 1274.76,
+      "end": 1278.66,
+      "duration": 3.9,
+      "text": "things so maybe you can write a private"
+    },
+    {
+      "start": 1277.52,
+      "end": 1281.86,
+      "duration": 4.34,
+      "text": "Boolean function"
+    },
+    {
+      "start": 1278.66,
+      "end": 1285.8,
+      "duration": 7.14,
+      "text": "yeah that's what I will do private"
+    },
+    {
+      "start": 1281.86,
+      "end": 1288.26,
+      "duration": 6.4,
+      "text": "Boolean check or rather is valid and I"
+    },
+    {
+      "start": 1285.8,
+      "end": 1292.46,
+      "duration": 6.66,
+      "text": "will say Okay India are just intro Indy"
+    },
+    {
+      "start": 1288.26,
+      "end": 1296.54,
+      "duration": 8.28,
+      "text": "adjacent column IND okay and I can say"
+    },
+    {
+      "start": 1292.46,
+      "end": 1302.18,
+      "duration": 9.72,
+      "text": "when will it be valid if it is this"
+    },
+    {
+      "start": 1296.54,
+      "end": 1304.3,
+      "duration": 7.76,
+      "text": "if it is this if it is sorry adjacent oh"
+    },
+    {
+      "start": 1302.18,
+      "end": 1306.68,
+      "duration": 4.5,
+      "text": "I am editing"
+    },
+    {
+      "start": 1304.3,
+      "end": 1308.24,
+      "duration": 3.94,
+      "text": "and then it will be for column addition"
+    },
+    {
+      "start": 1306.68,
+      "end": 1310.52,
+      "duration": 3.84,
+      "text": "column"
+    },
+    {
+      "start": 1308.24,
+      "end": 1312.32,
+      "duration": 4.08,
+      "text": "and an adjacent"
+    },
+    {
+      "start": 1310.52,
+      "end": 1314.36,
+      "duration": 3.84,
+      "text": "column is less than the name can I see"
+    },
+    {
+      "start": 1312.32,
+      "end": 1317.06,
+      "duration": 4.74,
+      "text": "It'll be valid for this so let's return"
+    },
+    {
+      "start": 1314.36,
+      "end": 1318.56,
+      "duration": 4.2,
+      "text": "it if this is true it'll go as true if"
+    },
+    {
+      "start": 1317.06,
+      "end": 1321.08,
+      "duration": 4.02,
+      "text": "any of the conditions are false it will"
+    },
+    {
+      "start": 1318.56,
+      "end": 1323.12,
+      "duration": 4.56,
+      "text": "go as false so is valid will be checked"
+    },
+    {
+      "start": 1321.08,
+      "end": 1325.28,
+      "duration": 4.2,
+      "text": "by others once this wallet is checked"
+    },
+    {
+      "start": 1323.12,
+      "end": 1327.32,
+      "duration": 4.2,
+      "text": "the other thing I need to check is is"
+    },
+    {
+      "start": 1325.28,
+      "end": 1329.48,
+      "duration": 4.2,
+      "text": "the adjacent guy actually an island then"
+    },
+    {
+      "start": 1327.32,
+      "end": 1332.6,
+      "duration": 5.28,
+      "text": "only I'll connect so it has to be an"
+    },
+    {
+      "start": 1329.48,
+      "end": 1335.96,
+      "duration": 6.48,
+      "text": "island so on visited on adjacent row an"
+    },
+    {
+      "start": 1332.6,
+      "end": 1337.22,
+      "duration": 4.62,
+      "text": "adjacent column it has to be another if"
+    },
+    {
+      "start": 1335.96,
+      "end": 1339.5,
+      "duration": 3.54,
+      "text": "it is not an added there's no point in"
+    },
+    {
+      "start": 1337.22,
+      "end": 1341.66,
+      "duration": 4.44,
+      "text": "connecting understood so it has to be an"
+    },
+    {
+      "start": 1339.5,
+      "end": 1344.42,
+      "duration": 4.92,
+      "text": "added if it is not an island then I do"
+    },
+    {
+      "start": 1341.66,
+      "end": 1347.54,
+      "duration": 5.88,
+      "text": "not do anything what after this check"
+    },
+    {
+      "start": 1344.42,
+      "end": 1348.44,
+      "duration": 4.02,
+      "text": "for validity checked for eyelid I need"
+    },
+    {
+      "start": 1347.54,
+      "end": 1350.72,
+      "duration": 3.18,
+      "text": "to connect"
+    },
+    {
+      "start": 1348.44,
+      "end": 1352.7,
+      "duration": 4.26,
+      "text": "but will you connect if they're already"
+    },
+    {
+      "start": 1350.72,
+      "end": 1355.34,
+      "duration": 4.62,
+      "text": "connected I'll be like no let's check"
+    },
+    {
+      "start": 1352.7,
+      "end": 1356.84,
+      "duration": 4.14,
+      "text": "for connectivity as well DS dot how do"
+    },
+    {
+      "start": 1355.34,
+      "end": 1358.7,
+      "duration": 3.36,
+      "text": "you check for connectivity if their"
+    },
+    {
+      "start": 1356.84,
+      "end": 1360.92,
+      "duration": 4.08,
+      "text": "parents are same or not right find"
+    },
+    {
+      "start": 1358.7,
+      "end": 1363.98,
+      "duration": 5.28,
+      "text": "parent of whom you have to find the node"
+    },
+    {
+      "start": 1360.92,
+      "end": 1366.74,
+      "duration": 5.82,
+      "text": "numbers now so can I say"
+    },
+    {
+      "start": 1363.98,
+      "end": 1369.2,
+      "duration": 5.22,
+      "text": "the node number right"
+    },
+    {
+      "start": 1366.74,
+      "end": 1371.0,
+      "duration": 4.26,
+      "text": "the current node number will be row"
+    },
+    {
+      "start": 1369.2,
+      "end": 1375.92,
+      "duration": 6.72,
+      "text": "into"
+    },
+    {
+      "start": 1371.0,
+      "end": 1379.16,
+      "duration": 8.16,
+      "text": "M plus column I can and can I say the"
+    },
+    {
+      "start": 1375.92,
+      "end": 1383.36,
+      "duration": 7.44,
+      "text": "adjacent node number will be adjacent"
+    },
+    {
+      "start": 1379.16,
+      "end": 1385.64,
+      "duration": 6.48,
+      "text": "row into M right plus adjacent column"
+    },
+    {
+      "start": 1383.36,
+      "end": 1389.06,
+      "duration": 5.7,
+      "text": "very simple so I need to connect these"
+    },
+    {
+      "start": 1385.64,
+      "end": 1391.52,
+      "duration": 5.88,
+      "text": "two guys so node number"
+    },
+    {
+      "start": 1389.06,
+      "end": 1393.98,
+      "duration": 4.92,
+      "text": "if the find parents are not equal very"
+    },
+    {
+      "start": 1391.52,
+      "end": 1397.72,
+      "duration": 6.2,
+      "text": "very important if the find parents are"
+    },
+    {
+      "start": 1393.98,
+      "end": 1397.72,
+      "duration": 3.74,
+      "text": "not equal so you can just write this"
+    },
+    {
+      "start": 1398.5,
+      "end": 1404.54,
+      "duration": 6.04,
+      "text": "take that number if they are not equal"
+    },
+    {
+      "start": 1401.42,
+      "end": 1406.34,
+      "duration": 4.92,
+      "text": "can I say okay they're not equal so we"
+    },
+    {
+      "start": 1404.54,
+      "end": 1408.86,
+      "duration": 4.32,
+      "text": "are connecting reduce minus one if you"
+    },
+    {
+      "start": 1406.34,
+      "end": 1412.1,
+      "duration": 5.76,
+      "text": "remember and say d s dot call the union"
+    },
+    {
+      "start": 1408.86,
+      "end": 1414.5,
+      "duration": 5.64,
+      "text": "let's do some connections hidden by size"
+    },
+    {
+      "start": 1412.1,
+      "end": 1416.72,
+      "duration": 4.62,
+      "text": "whom will you connect one is the node"
+    },
+    {
+      "start": 1414.5,
+      "end": 1418.76,
+      "duration": 4.26,
+      "text": "number right what's the other one is the"
+    },
+    {
+      "start": 1416.72,
+      "end": 1422.0,
+      "duration": 5.28,
+      "text": "adjacent node number so go ahead and"
+    },
+    {
+      "start": 1418.76,
+      "end": 1424.52,
+      "duration": 5.76,
+      "text": "connect these guys so once this entire"
+    },
+    {
+      "start": 1422.0,
+      "end": 1426.26,
+      "duration": 4.26,
+      "text": "for Loop has been computed can you see"
+    },
+    {
+      "start": 1424.52,
+      "end": 1428.72,
+      "duration": 4.2,
+      "text": "it the answer will be stored"
+    },
+    {
+      "start": 1426.26,
+      "end": 1430.64,
+      "duration": 4.38,
+      "text": "because you will have the number of"
+    },
+    {
+      "start": 1428.72,
+      "end": 1434.42,
+      "duration": 5.7,
+      "text": "parents and then you can go ahead and"
+    },
+    {
+      "start": 1430.64,
+      "end": 1436.76,
+      "duration": 6.12,
+      "text": "return it this is how simple it was make"
+    },
+    {
+      "start": 1434.42,
+      "end": 1439.28,
+      "duration": 4.86,
+      "text": "sure you uh end the disjoint set and end"
+    },
+    {
+      "start": 1436.76,
+      "end": 1441.56,
+      "duration": 4.8,
+      "text": "it with a semicolon so if you see the"
+    },
+    {
+      "start": 1439.28,
+      "end": 1443.18,
+      "duration": 3.9,
+      "text": "answer is coming fine so let's quickly"
+    },
+    {
+      "start": 1441.56,
+      "end": 1444.14,
+      "duration": 2.58,
+      "text": "submit this and see if it is running"
+    },
+    {
+      "start": 1443.18,
+      "end": 1446.6,
+      "duration": 3.42,
+      "text": "fine"
+    },
+    {
+      "start": 1444.14,
+      "end": 1448.16,
+      "duration": 4.02,
+      "text": "so all the test cases do run but did you"
+    },
+    {
+      "start": 1446.6,
+      "end": 1451.16,
+      "duration": 4.56,
+      "text": "notice something look at the code"
+    },
+    {
+      "start": 1448.16,
+      "end": 1454.22,
+      "duration": 6.06,
+      "text": "quality look at the variable naming and"
+    },
+    {
+      "start": 1451.16,
+      "end": 1456.08,
+      "duration": 4.92,
+      "text": "also see how I wrote like an error free"
+    },
+    {
+      "start": 1454.22,
+      "end": 1457.7,
+      "duration": 3.48,
+      "text": "code so these things are very very"
+    },
+    {
+      "start": 1456.08,
+      "end": 1459.74,
+      "duration": 3.66,
+      "text": "important if you look at all the other"
+    },
+    {
+      "start": 1457.7,
+      "end": 1462.44,
+      "duration": 4.74,
+      "text": "lectures on YouTube there will not be"
+    },
+    {
+      "start": 1459.74,
+      "end": 1464.24,
+      "duration": 4.5,
+      "text": "having this level of code quality will"
+    },
+    {
+      "start": 1462.44,
+      "end": 1466.16,
+      "duration": 3.72,
+      "text": "not be using a class of disjoint set"
+    },
+    {
+      "start": 1464.24,
+      "end": 1469.04,
+      "duration": 4.8,
+      "text": "I'll probably be using a find Union"
+    },
+    {
+      "start": 1466.16,
+      "end": 1470.18,
+      "duration": 4.02,
+      "text": "parent and inside the solution this is"
+    },
+    {
+      "start": 1469.04,
+      "end": 1472.76,
+      "duration": 3.72,
+      "text": "something you should not do in"
+    },
+    {
+      "start": 1470.18,
+      "end": 1475.4,
+      "duration": 5.22,
+      "text": "interviews in interviews these things"
+    },
+    {
+      "start": 1472.76,
+      "end": 1477.74,
+      "duration": 4.98,
+      "text": "stand out make you stand out apart from"
+    },
+    {
+      "start": 1475.4,
+      "end": 1480.14,
+      "duration": 4.74,
+      "text": "the rest of the crowd who watch all"
+    },
+    {
+      "start": 1477.74,
+      "end": 1482.36,
+      "duration": 4.62,
+      "text": "these crab motivational videos this is"
+    },
+    {
+      "start": 1480.14,
+      "end": 1484.88,
+      "duration": 4.74,
+      "text": "where you can actually be like hey you"
+    },
+    {
+      "start": 1482.36,
+      "end": 1487.34,
+      "duration": 4.98,
+      "text": "gotta hire me because my code quality is"
+    },
+    {
+      "start": 1484.88,
+      "end": 1489.38,
+      "duration": 4.5,
+      "text": "of supreme nature got it so make sure"
+    },
+    {
+      "start": 1487.34,
+      "end": 1491.6,
+      "duration": 4.26,
+      "text": "you focus on these small things because"
+    },
+    {
+      "start": 1489.38,
+      "end": 1494.0,
+      "duration": 4.62,
+      "text": "these things do matter when you go for"
+    },
+    {
+      "start": 1491.6,
+      "end": 1495.92,
+      "duration": 4.32,
+      "text": "an interview so before wrapping up this"
+    },
+    {
+      "start": 1494.0,
+      "end": 1498.62,
+      "duration": 4.62,
+      "text": "video I have a very very Earnest request"
+    },
+    {
+      "start": 1495.92,
+      "end": 1501.14,
+      "duration": 5.22,
+      "text": "to me please do consider subscribing to"
+    },
+    {
+      "start": 1498.62,
+      "end": 1502.94,
+      "duration": 4.32,
+      "text": "us I did check out our statistics nearly"
+    },
+    {
+      "start": 1501.14,
+      "end": 1504.56,
+      "duration": 3.42,
+      "text": "50 of the users who watch our video do"
+    },
+    {
+      "start": 1502.94,
+      "end": 1506.48,
+      "duration": 3.54,
+      "text": "not subscribe so please do come consider"
+    },
+    {
+      "start": 1504.56,
+      "end": 1507.8,
+      "duration": 3.24,
+      "text": "subscribing to us because that is the"
+    },
+    {
+      "start": 1506.48,
+      "end": 1510.02,
+      "duration": 3.54,
+      "text": "only thing that keeps you motivated to"
+    },
+    {
+      "start": 1507.8,
+      "end": 1512.42,
+      "duration": 4.62,
+      "text": "make videos at like 3 24 am in the night"
+    },
+    {
+      "start": 1510.02,
+      "end": 1514.4,
+      "duration": 4.38,
+      "text": "so please uh if you have watched the"
+    },
+    {
+      "start": 1512.42,
+      "end": 1515.78,
+      "duration": 3.36,
+      "text": "video till here consider subscribing hit"
+    },
+    {
+      "start": 1514.4,
+      "end": 1518.18,
+      "duration": 3.78,
+      "text": "that like button if you haven't checked"
+    },
+    {
+      "start": 1515.78,
+      "end": 1519.8,
+      "duration": 4.02,
+      "text": "out our DP series and the SDC the links"
+    },
+    {
+      "start": 1518.18,
+      "end": 1520.94,
+      "duration": 2.76,
+      "text": "will be in the description with this"
+    },
+    {
+      "start": 1519.8,
+      "end": 1522.26,
+      "duration": 2.46,
+      "text": "I'll be wrapping up this video let's"
+    },
+    {
+      "start": 1520.94,
+      "end": 1523.1,
+      "duration": 2.16,
+      "text": "spend some other video tell them bye"
+    },
+    {
+      "start": 1522.26,
+      "end": 1533.1,
+      "duration": 10.84,
+      "text": "take care"
+    },
+    {
+      "start": 1523.1,
+      "end": 1533.1,
+      "duration": 10.0,
+      "text": "[Music]"
+    }
+  ]
+}

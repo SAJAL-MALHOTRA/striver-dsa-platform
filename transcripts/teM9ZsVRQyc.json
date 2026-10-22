@@ -1,0 +1,2966 @@
+{
+  "video_id": "teM9ZsVRQyc",
+  "title": "L6. Longest Substring With At Most K Distinct Characters | 2 Pointers and Sliding Window Playlist",
+  "duration_sec": 1292,
+  "num_segments": 493,
+  "segments": [
+    {
+      "start": 3.2,
+      "end": 7.44,
+      "duration": 4.24,
+      "text": "so let's continue with the drivers A to"
+    },
+    {
+      "start": 5.08,
+      "end": 9.72,
+      "duration": 4.64,
+      "text": "Z DSA course and today's problem will be"
+    },
+    {
+      "start": 7.44,
+      "end": 12.52,
+      "duration": 5.08,
+      "text": "involving the concepts of two-pointer"
+    },
+    {
+      "start": 9.72,
+      "end": 13.76,
+      "duration": 4.04,
+      "text": "and the sliding window what starting hey"
+    },
+    {
+      "start": 12.52,
+      "end": 15.72,
+      "duration": 3.2,
+      "text": "welcome back to the channel I hope you"
+    },
+    {
+      "start": 13.76,
+      "end": 18.0,
+      "duration": 4.24,
+      "text": "guys are doing extremely well so the"
+    },
+    {
+      "start": 15.72,
+      "end": 21.28,
+      "duration": 5.56,
+      "text": "problem that we will be solving today is"
+    },
+    {
+      "start": 18.0,
+      "end": 23.24,
+      "duration": 5.24,
+      "text": "longest substring with at most a"
+    },
+    {
+      "start": 21.28,
+      "end": 25.28,
+      "duration": 4.0,
+      "text": "distinct characters so what is the"
+    },
+    {
+      "start": 23.24,
+      "end": 27.8,
+      "duration": 4.56,
+      "text": "problem stating they're stating that"
+    },
+    {
+      "start": 25.28,
+      "end": 30.4,
+      "duration": 5.12,
+      "text": "it'll be given a string it'll be given"
+    },
+    {
+      "start": 27.8,
+      "end": 32.96,
+      "duration": 5.16,
+      "text": "an integer K now your task is to figure"
+    },
+    {
+      "start": 30.4,
+      "end": 35.12,
+      "duration": 4.72,
+      "text": "out the longest substring now what is"
+    },
+    {
+      "start": 32.96,
+      "end": 37.0,
+      "duration": 4.04,
+      "text": "the definition of substring any"
+    },
+    {
+      "start": 35.12,
+      "end": 40.32,
+      "duration": 5.2,
+      "text": "consecutive portion of the string for an"
+    },
+    {
+      "start": 37.0,
+      "end": 42.56,
+      "duration": 5.56,
+      "text": "example this is a substring and the"
+    },
+    {
+      "start": 40.32,
+      "end": 44.72,
+      "duration": 4.4,
+      "text": "length is four how many distinct"
+    },
+    {
+      "start": 42.56,
+      "end": 48.44,
+      "duration": 5.88,
+      "text": "characters does it have it has three"
+    },
+    {
+      "start": 44.72,
+      "end": 51.76,
+      "duration": 7.04,
+      "text": "distinct characters a b c three distinct"
+    },
+    {
+      "start": 48.44,
+      "end": 53.84,
+      "duration": 5.4,
+      "text": "characters is not allowed at most two"
+    },
+    {
+      "start": 51.76,
+      "end": 56.16,
+      "duration": 4.4,
+      "text": "characters so this substring is not a"
+    },
+    {
+      "start": 53.84,
+      "end": 58.88,
+      "duration": 5.04,
+      "text": "valid one your task is to figure out the"
+    },
+    {
+      "start": 56.16,
+      "end": 60.8,
+      "duration": 4.64,
+      "text": "longest one can I say this substring is"
+    },
+    {
+      "start": 58.88,
+      "end": 64.92,
+      "duration": 6.04,
+      "text": "a valid one I can can because the length"
+    },
+    {
+      "start": 60.8,
+      "end": 67.32,
+      "duration": 6.52,
+      "text": "is four and it has two distinct so this"
+    },
+    {
+      "start": 64.92,
+      "end": 70.76,
+      "duration": 5.84,
+      "text": "is a valid one can I figure out a better"
+    },
+    {
+      "start": 67.32,
+      "end": 73.0,
+      "duration": 5.68,
+      "text": "or a longer one yes I can take this one"
+    },
+    {
+      "start": 70.76,
+      "end": 75.2,
+      "duration": 4.44,
+      "text": "this has a length four and it also has"
+    },
+    {
+      "start": 73.0,
+      "end": 76.92,
+      "duration": 3.92,
+      "text": "two distinct characters so this is a"
+    },
+    {
+      "start": 75.2,
+      "end": 80.64,
+      "duration": 5.44,
+      "text": "valid one they'll have to return the"
+    },
+    {
+      "start": 76.92,
+      "end": 82.76,
+      "duration": 5.84,
+      "text": "value five so what is the extreme name"
+    },
+    {
+      "start": 80.64,
+      "end": 85.56,
+      "duration": 4.92,
+      "text": "solution that you can think of explore"
+    },
+    {
+      "start": 82.76,
+      "end": 87.36,
+      "duration": 4.6,
+      "text": "all the substrings correct so you know"
+    },
+    {
+      "start": 85.56,
+      "end": 89.96,
+      "duration": 4.4,
+      "text": "one thing the first"
+    },
+    {
+      "start": 87.36,
+      "end": 92.72,
+      "duration": 5.36,
+      "text": "substring will be this one and then"
+    },
+    {
+      "start": 89.96,
+      "end": 94.28,
+      "duration": 4.32,
+      "text": "eventually you can add this all the"
+    },
+    {
+      "start": 92.72,
+      "end": 97.16,
+      "duration": 4.44,
+      "text": "characters to the right and you can"
+    },
+    {
+      "start": 94.28,
+      "end": 99.48,
+      "duration": 5.2,
+      "text": "generate all the substrings that has the"
+    },
+    {
+      "start": 97.16,
+      "end": 101.28,
+      "duration": 4.12,
+      "text": "starting character as say to get the"
+    },
+    {
+      "start": 99.48,
+      "end": 104.48,
+      "duration": 5.0,
+      "text": "next set of substrings what you can do"
+    },
+    {
+      "start": 101.28,
+      "end": 106.0,
+      "duration": 4.72,
+      "text": "is can start with the next character and"
+    },
+    {
+      "start": 104.48,
+      "end": 107.88,
+      "duration": 3.4,
+      "text": "then again keep on adding the right"
+    },
+    {
+      "start": 106.0,
+      "end": 109.8,
+      "duration": 3.8,
+      "text": "characters to it you'll get all the"
+    },
+    {
+      "start": 107.88,
+      "end": 111.88,
+      "duration": 4.0,
+      "text": "substrings and to get the next set of"
+    },
+    {
+      "start": 109.8,
+      "end": 113.44,
+      "duration": 3.64,
+      "text": "substrings you can again start with this"
+    },
+    {
+      "start": 111.88,
+      "end": 115.96,
+      "duration": 4.08,
+      "text": "and attach so you'll get all the"
+    },
+    {
+      "start": 113.44,
+      "end": 118.72,
+      "duration": 5.28,
+      "text": "substrings starting with this so I can"
+    },
+    {
+      "start": 115.96,
+      "end": 120.36,
+      "duration": 4.4,
+      "text": "generate all the substrings correct now"
+    },
+    {
+      "start": 118.72,
+      "end": 122.76,
+      "duration": 4.04,
+      "text": "when I generate I'll have to keep a"
+    },
+    {
+      "start": 120.36,
+      "end": 124.6,
+      "duration": 4.24,
+      "text": "track of ke distinct characters it's"
+    },
+    {
+      "start": 122.76,
+      "end": 126.32,
+      "duration": 3.56,
+      "text": "going to be very simple so let's say you"
+    },
+    {
+      "start": 124.6,
+      "end": 129.6,
+      "duration": 5.0,
+      "text": "start with the say what you can do is"
+    },
+    {
+      "start": 126.32,
+      "end": 132.6,
+      "duration": 6.28,
+      "text": "you can take a map data structure"
+    },
+    {
+      "start": 129.6,
+      "end": 134.96,
+      "duration": 5.36,
+      "text": "starting with this a you can put that a"
+    },
+    {
+      "start": 132.6,
+      "end": 136.96,
+      "duration": 4.36,
+      "text": "with its frequency in it and after that"
+    },
+    {
+      "start": 134.96,
+      "end": 138.44,
+      "duration": 3.48,
+      "text": "you can go to this a and you can"
+    },
+    {
+      "start": 136.96,
+      "end": 140.56,
+      "duration": 3.6,
+      "text": "increase the frequency after that you"
+    },
+    {
+      "start": 138.44,
+      "end": 142.52,
+      "duration": 4.08,
+      "text": "can go to this a and increase this"
+    },
+    {
+      "start": 140.56,
+      "end": 145.64,
+      "duration": 5.08,
+      "text": "frequency after that you can go to this"
+    },
+    {
+      "start": 142.52,
+      "end": 147.88,
+      "duration": 5.36,
+      "text": "a and put it into the map after that you"
+    },
+    {
+      "start": 145.64,
+      "end": 150.16,
+      "duration": 4.52,
+      "text": "can go to this B and again put it into"
+    },
+    {
+      "start": 147.88,
+      "end": 152.4,
+      "duration": 4.52,
+      "text": "this map after that you go to C and the"
+    },
+    {
+      "start": 150.16,
+      "end": 154.92,
+      "duration": 4.76,
+      "text": "moment you put it into the map what"
+    },
+    {
+      "start": 152.4,
+      "end": 157.12,
+      "duration": 4.72,
+      "text": "happens is the size of the map turns out"
+    },
+    {
+      "start": 154.92,
+      "end": 159.8,
+      "duration": 4.88,
+      "text": "to be three and that is not allowed"
+    },
+    {
+      "start": 157.12,
+      "end": 162.08,
+      "duration": 4.96,
+      "text": "because at most you're allowed two"
+    },
+    {
+      "start": 159.8,
+      "end": 164.6,
+      "duration": 4.8,
+      "text": "distinct characters so you can stop"
+    },
+    {
+      "start": 162.08,
+      "end": 167.24,
+      "duration": 5.16,
+      "text": "attaching and you can break out and"
+    },
+    {
+      "start": 164.6,
+      "end": 169.36,
+      "duration": 4.76,
+      "text": "after that what you can do is you can"
+    },
+    {
+      "start": 167.24,
+      "end": 171.28,
+      "duration": 4.04,
+      "text": "erase the map if this is what you can do"
+    },
+    {
+      "start": 169.36,
+      "end": 173.56,
+      "duration": 4.2,
+      "text": "you can erase the map and you can again"
+    },
+    {
+      "start": 171.28,
+      "end": 175.76,
+      "duration": 4.48,
+      "text": "start with this particular a and again"
+    },
+    {
+      "start": 173.56,
+      "end": 178.8,
+      "duration": 5.24,
+      "text": "you can start attaching till the map"
+    },
+    {
+      "start": 175.76,
+      "end": 181.24,
+      "duration": 5.48,
+      "text": "Size Doesn't exceeds the value K and you"
+    },
+    {
+      "start": 178.8,
+      "end": 184.12,
+      "duration": 5.32,
+      "text": "can keep on doing and in exploring all"
+    },
+    {
+      "start": 181.24,
+      "end": 186.08,
+      "duration": 4.84,
+      "text": "the substrings the longest you get"
+    },
+    {
+      "start": 184.12,
+      "end": 188.56,
+      "duration": 4.44,
+      "text": "that's going to be your answer that is a"
+    },
+    {
+      "start": 186.08,
+      "end": 190.48,
+      "duration": 4.4,
+      "text": "typical Brute Force we have done it a"
+    },
+    {
+      "start": 188.56,
+      "end": 192.72,
+      "duration": 4.16,
+      "text": "lot of times so let's quickly write down"
+    },
+    {
+      "start": 190.48,
+      "end": 194.96,
+      "duration": 4.48,
+      "text": "the pseudo code it'll be given down a"
+    },
+    {
+      "start": 192.72,
+      "end": 198.8,
+      "duration": 6.08,
+      "text": "function it'll be given an S you'll be"
+    },
+    {
+      "start": 194.96,
+      "end": 201.96,
+      "duration": 7.0,
+      "text": "given an K what we do is we start uh or"
+    },
+    {
+      "start": 198.8,
+      "end": 204.32,
+      "duration": 5.52,
+      "text": "maybe we can keep a max length as zero"
+    },
+    {
+      "start": 201.96,
+      "end": 206.12,
+      "duration": 4.16,
+      "text": "and what we can do is we can take a map"
+    },
+    {
+      "start": 204.32,
+      "end": 208.76,
+      "duration": 4.44,
+      "text": "data structure over here and this is"
+    },
+    {
+      "start": 206.12,
+      "end": 210.64,
+      "duration": 4.52,
+      "text": "going to store a character and an"
+    },
+    {
+      "start": 208.76,
+      "end": 213.44,
+      "duration": 4.68,
+      "text": "integer"
+    },
+    {
+      "start": 210.64,
+      "end": 215.68,
+      "duration": 5.04,
+      "text": "very simple after that what I can do is"
+    },
+    {
+      "start": 213.44,
+      "end": 219.0,
+      "duration": 5.56,
+      "text": "I can straight away start from I equal"
+    },
+    {
+      "start": 215.68,
+      "end": 221.48,
+      "duration": 5.8,
+      "text": "to Z and I can iterate till n why do I"
+    },
+    {
+      "start": 219.0,
+      "end": 223.24,
+      "duration": 4.24,
+      "text": "start from zero because this element can"
+    },
+    {
+      "start": 221.48,
+      "end": 225.52,
+      "duration": 4.04,
+      "text": "be considered as my first this can be"
+    },
+    {
+      "start": 223.24,
+      "end": 227.72,
+      "duration": 4.48,
+      "text": "considered and so on till the end so I"
+    },
+    {
+      "start": 225.52,
+      "end": 231.44,
+      "duration": 5.92,
+      "text": "consider every character as my first"
+    },
+    {
+      "start": 227.72,
+      "end": 233.32,
+      "duration": 5.6,
+      "text": "element once after that what I can do is"
+    },
+    {
+      "start": 231.44,
+      "end": 234.0,
+      "duration": 2.56,
+      "text": "if the map has elements I can just clear"
+    },
+    {
+      "start": 233.32,
+      "end": 238.4,
+      "duration": 5.08,
+      "text": "it"
+    },
+    {
+      "start": 234.0,
+      "end": 240.68,
+      "duration": 6.68,
+      "text": "up because I'm starting off a new set of"
+    },
+    {
+      "start": 238.4,
+      "end": 243.32,
+      "duration": 4.92,
+      "text": "substrings perfect after that what I can"
+    },
+    {
+      "start": 240.68,
+      "end": 245.84,
+      "duration": 5.16,
+      "text": "do is rather I'm starting of a new"
+    },
+    {
+      "start": 243.32,
+      "end": 247.8,
+      "duration": 4.48,
+      "text": "substring I can start picking up the"
+    },
+    {
+      "start": 245.84,
+      "end": 250.88,
+      "duration": 5.04,
+      "text": "elements so the first element I pick up"
+    },
+    {
+      "start": 247.8,
+      "end": 254.08,
+      "duration": 6.28,
+      "text": "is itself I itself and I go on picking"
+    },
+    {
+      "start": 250.88,
+      "end": 257.28,
+      "duration": 6.4,
+      "text": "up till the right and what I do is map"
+    },
+    {
+      "start": 254.08,
+      "end": 259.56,
+      "duration": 5.48,
+      "text": "of s of"
+    },
+    {
+      "start": 257.28,
+      "end": 265.56,
+      "duration": 8.28,
+      "text": "g++ and after this what you can simply"
+    },
+    {
+      "start": 259.56,
+      "end": 268.2,
+      "duration": 8.64,
+      "text": "do is Hey listen if map of size is"
+    },
+    {
+      "start": 265.56,
+      "end": 269.72,
+      "duration": 4.16,
+      "text": "lesser than equal to K it's a valid one"
+    },
+    {
+      "start": 268.2,
+      "end": 272.4,
+      "duration": 4.2,
+      "text": "and if it's a valid one you can just"
+    },
+    {
+      "start": 269.72,
+      "end": 274.12,
+      "duration": 4.4,
+      "text": "updated to max length if it exceeds your"
+    },
+    {
+      "start": 272.4,
+      "end": 276.52,
+      "duration": 4.12,
+      "text": "max length so you can write Max of max"
+    },
+    {
+      "start": 274.12,
+      "end": 279.56,
+      "duration": 5.44,
+      "text": "length comma the size will be J minus I"
+    },
+    {
+      "start": 276.52,
+      "end": 282.68,
+      "duration": 6.16,
+      "text": "+ 1 straight for but if it doesn't"
+    },
+    {
+      "start": 279.56,
+      "end": 284.92,
+      "duration": 5.36,
+      "text": "exceeds you can stop attaching because"
+    },
+    {
+      "start": 282.68,
+      "end": 286.2,
+      "duration": 3.52,
+      "text": "you don't have K you have more than G"
+    },
+    {
+      "start": 284.92,
+      "end": 288.08,
+      "duration": 3.16,
+      "text": "there's no point in attaching the"
+    },
+    {
+      "start": 286.2,
+      "end": 290.48,
+      "duration": 4.28,
+      "text": "elements from the right you can straight"
+    },
+    {
+      "start": 288.08,
+      "end": 293.6,
+      "duration": 5.52,
+      "text": "away break the fall Loop can end and you"
+    },
+    {
+      "start": 290.48,
+      "end": 296.16,
+      "duration": 5.68,
+      "text": "can return your max length and the"
+    },
+    {
+      "start": 293.6,
+      "end": 298.68,
+      "duration": 5.08,
+      "text": "function ends this will be your pseudo"
+    },
+    {
+      "start": 296.16,
+      "end": 301.64,
+      "duration": 5.48,
+      "text": "code and I discuss the time complexity"
+    },
+    {
+      "start": 298.68,
+      "end": 305.4,
+      "duration": 6.72,
+      "text": "it's going to be super simple a b of n"
+    },
+    {
+      "start": 301.64,
+      "end": 308.68,
+      "duration": 7.04,
+      "text": "something about a b of n so n square and"
+    },
+    {
+      "start": 305.4,
+      "end": 311.6,
+      "duration": 6.2,
+      "text": "if you consider that the map is taking"
+    },
+    {
+      "start": 308.68,
+      "end": 315.2,
+      "duration": 6.52,
+      "text": "some time complexity and depending on"
+    },
+    {
+      "start": 311.6,
+      "end": 318.04,
+      "duration": 6.44,
+      "text": "what depending on what the string has if"
+    },
+    {
+      "start": 315.2,
+      "end": 320.48,
+      "duration": 5.28,
+      "text": "it has uppercase lower case depending on"
+    },
+    {
+      "start": 318.04,
+      "end": 322.64,
+      "duration": 4.6,
+      "text": "the size of the string at Max you can be"
+    },
+    {
+      "start": 320.48,
+      "end": 324.04,
+      "duration": 3.56,
+      "text": "given all characters in English"
+    },
+    {
+      "start": 322.64,
+      "end": 327.0,
+      "duration": 4.36,
+      "text": "alphabets that's"
+    },
+    {
+      "start": 324.04,
+      "end": 329.88,
+      "duration": 5.84,
+      "text": "256 so if you assume that your map is"
+    },
+    {
+      "start": 327.0,
+      "end": 332.76,
+      "duration": 5.76,
+      "text": "taking logarithmic time so it will be"
+    },
+    {
+      "start": 329.88,
+      "end": 335.04,
+      "duration": 5.16,
+      "text": "logarithmic of 256 because that is the"
+    },
+    {
+      "start": 332.76,
+      "end": 337.36,
+      "duration": 4.6,
+      "text": "maximum size of map that you can have"
+    },
+    {
+      "start": 335.04,
+      "end": 340.8,
+      "duration": 5.76,
+      "text": "because you're storing 256 English"
+    },
+    {
+      "start": 337.36,
+      "end": 342.76,
+      "duration": 5.4,
+      "text": "alphabets not more than it right and if"
+    },
+    {
+      "start": 340.8,
+      "end": 345.96,
+      "duration": 5.16,
+      "text": "it is given that you'll just given low"
+    },
+    {
+      "start": 342.76,
+      "end": 348.64,
+      "duration": 5.88,
+      "text": "case this will boil down to 26 depending"
+    },
+    {
+      "start": 345.96,
+      "end": 350.28,
+      "duration": 4.32,
+      "text": "on what characters you'll be given"
+    },
+    {
+      "start": 348.64,
+      "end": 352.08,
+      "duration": 3.44,
+      "text": "according to the constraint this"
+    },
+    {
+      "start": 350.28,
+      "end": 354.12,
+      "duration": 3.84,
+      "text": "logarithmic will boil down again if"
+    },
+    {
+      "start": 352.08,
+      "end": 358.08,
+      "duration": 6.0,
+      "text": "you're using something like an uned map"
+    },
+    {
+      "start": 354.12,
+      "end": 360.4,
+      "duration": 6.28,
+      "text": "in C++ the map time can be a b of one as"
+    },
+    {
+      "start": 358.08,
+      "end": 364.2,
+      "duration": 6.12,
+      "text": "well what about the space comp lexity"
+    },
+    {
+      "start": 360.4,
+      "end": 366.92,
+      "duration": 6.52,
+      "text": "using a map so 256 at the worst possible"
+    },
+    {
+      "start": 364.2,
+      "end": 368.56,
+      "duration": 4.36,
+      "text": "scenario so this is the brute force and"
+    },
+    {
+      "start": 366.92,
+      "end": 370.32,
+      "duration": 3.4,
+      "text": "obviously the interviewer will not be"
+    },
+    {
+      "start": 368.56,
+      "end": 373.84,
+      "duration": 5.28,
+      "text": "happy with this I'll ask you to optimize"
+    },
+    {
+      "start": 370.32,
+      "end": 375.24,
+      "duration": 4.92,
+      "text": "this one so we need to optimize n s into"
+    },
+    {
+      "start": 373.84,
+      "end": 377.6,
+      "duration": 3.76,
+      "text": "something better now when I say"
+    },
+    {
+      "start": 375.24,
+      "end": 380.08,
+      "duration": 4.84,
+      "text": "something better it typically means"
+    },
+    {
+      "start": 377.6,
+      "end": 384.8,
+      "duration": 7.2,
+      "text": "somewhere around beo of N and the"
+    },
+    {
+      "start": 380.08,
+      "end": 386.72,
+      "duration": 6.64,
+      "text": "question is involving substring so yes"
+    },
+    {
+      "start": 384.8,
+      "end": 388.88,
+      "duration": 4.08,
+      "text": "you guessed it correct we'll be using"
+    },
+    {
+      "start": 386.72,
+      "end": 391.56,
+      "duration": 4.84,
+      "text": "two pointer and sliding window technique"
+    },
+    {
+      "start": 388.88,
+      "end": 395.04,
+      "duration": 6.16,
+      "text": "over here so the typical way to start is"
+    },
+    {
+      "start": 391.56,
+      "end": 397.4,
+      "duration": 5.84,
+      "text": "you all know take a l you take a r and"
+    },
+    {
+      "start": 395.04,
+      "end": 399.56,
+      "duration": 4.52,
+      "text": "you put it at the zeroth index what are"
+    },
+    {
+      "start": 397.4,
+      "end": 401.6,
+      "duration": 4.2,
+      "text": "we looking to count the distinct"
+    },
+    {
+      "start": 399.56,
+      "end": 404.2,
+      "duration": 4.64,
+      "text": "characters so it'll be requiring a"
+    },
+    {
+      "start": 401.6,
+      "end": 406.48,
+      "duration": 4.88,
+      "text": "hashmap as well so maybe take a hash map"
+    },
+    {
+      "start": 404.2,
+      "end": 408.8,
+      "duration": 4.6,
+      "text": "which is going to store a character and"
+    },
+    {
+      "start": 406.48,
+      "end": 410.28,
+      "duration": 3.8,
+      "text": "an integer we need to store the max"
+    },
+    {
+      "start": 408.8,
+      "end": 411.96,
+      "duration": 3.16,
+      "text": "length as well so maybe take a max"
+    },
+    {
+      "start": 410.28,
+      "end": 415.44,
+      "duration": 5.16,
+      "text": "length which is initially going to be"
+    },
+    {
+      "start": 411.96,
+      "end": 418.4,
+      "duration": 6.44,
+      "text": "zero we we are standing at first like"
+    },
+    {
+      "start": 415.44,
+      "end": 421.84,
+      "duration": 6.4,
+      "text": "the zeroth index which is having a take"
+    },
+    {
+      "start": 418.4,
+      "end": 424.48,
+      "duration": 6.08,
+      "text": "that put it your hashmap done the next"
+    },
+    {
+      "start": 421.84,
+      "end": 427.24,
+      "duration": 5.4,
+      "text": "thing is check if this is a valid one or"
+    },
+    {
+      "start": 424.48,
+      "end": 429.56,
+      "duration": 5.08,
+      "text": "not is this a valid window is this a"
+    },
+    {
+      "start": 427.24,
+      "end": 431.72,
+      "duration": 4.48,
+      "text": "valid substring you go to map and you"
+    },
+    {
+      "start": 429.56,
+      "end": 434.0,
+      "duration": 4.44,
+      "text": "ask hey how many distinct characters do"
+    },
+    {
+      "start": 431.72,
+      "end": 436.32,
+      "duration": 4.6,
+      "text": "you have the map says one and I say"
+    },
+    {
+      "start": 434.0,
+      "end": 438.44,
+      "duration": 4.44,
+      "text": "that's allowed and if that's allowed you"
+    },
+    {
+      "start": 436.32,
+      "end": 440.52,
+      "duration": 4.2,
+      "text": "update your max length to one perfect"
+    },
+    {
+      "start": 438.44,
+      "end": 442.88,
+      "duration": 4.44,
+      "text": "what is the next thing you pick up your"
+    },
+    {
+      "start": 440.52,
+      "end": 446.48,
+      "duration": 5.96,
+      "text": "R and you move to the next so a"
+    },
+    {
+      "start": 442.88,
+      "end": 448.24,
+      "duration": 5.36,
+      "text": "increases to two done once youve done it"
+    },
+    {
+      "start": 446.48,
+      "end": 450.32,
+      "duration": 3.84,
+      "text": "you check if this is a valid segment or"
+    },
+    {
+      "start": 448.24,
+      "end": 452.8,
+      "duration": 4.56,
+      "text": "not you ask the map map say is I have"
+    },
+    {
+      "start": 450.32,
+      "end": 454.64,
+      "duration": 4.32,
+      "text": "one distin character that's valid so"
+    },
+    {
+      "start": 452.8,
+      "end": 457.32,
+      "duration": 4.52,
+      "text": "what I'll do I'll update the max Len to"
+    },
+    {
+      "start": 454.64,
+      "end": 460.16,
+      "duration": 5.52,
+      "text": "two next you take the r and you move it"
+    },
+    {
+      "start": 457.32,
+      "end": 463.64,
+      "duration": 6.32,
+      "text": "again so a becomes three this time so"
+    },
+    {
+      "start": 460.16,
+      "end": 466.8,
+      "duration": 6.64,
+      "text": "when maybe I can just erase it so a"
+    },
+    {
+      "start": 463.64,
+      "end": 469.0,
+      "duration": 5.36,
+      "text": "becomes three this time again you ask"
+    },
+    {
+      "start": 466.8,
+      "end": 471.48,
+      "duration": 4.68,
+      "text": "hey is this a valid segment again go"
+    },
+    {
+      "start": 469.0,
+      "end": 473.64,
+      "duration": 4.64,
+      "text": "back to the map map says the size is one"
+    },
+    {
+      "start": 471.48,
+      "end": 476.56,
+      "duration": 5.08,
+      "text": "hence it's a valid one so the length"
+    },
+    {
+      "start": 473.64,
+      "end": 480.92,
+      "duration": 7.28,
+      "text": "gets updated to three next you take the"
+    },
+    {
+      "start": 476.56,
+      "end": 483.8,
+      "duration": 7.24,
+      "text": "r and you move it to B so B will be"
+    },
+    {
+      "start": 480.92,
+      "end": 485.68,
+      "duration": 4.76,
+      "text": "put into the map right again you ask is"
+    },
+    {
+      "start": 483.8,
+      "end": 488.72,
+      "duration": 4.92,
+      "text": "this a valid one you go to the map map"
+    },
+    {
+      "start": 485.68,
+      "end": 492.32,
+      "duration": 6.64,
+      "text": "says my size is two that's allowed so"
+    },
+    {
+      "start": 488.72,
+      "end": 495.24,
+      "duration": 6.52,
+      "text": "you update the max Len to four next you"
+    },
+    {
+      "start": 492.32,
+      "end": 496.92,
+      "duration": 4.6,
+      "text": "take this R and you move it to V again"
+    },
+    {
+      "start": 495.24,
+      "end": 499.0,
+      "duration": 3.76,
+      "text": "this will increase to two and if it"
+    },
+    {
+      "start": 496.92,
+      "end": 501.24,
+      "duration": 4.32,
+      "text": "increases to two the next time you say"
+    },
+    {
+      "start": 499.0,
+      "end": 503.64,
+      "duration": 4.64,
+      "text": "is okay is this a valid one the map says"
+    },
+    {
+      "start": 501.24,
+      "end": 506.04,
+      "duration": 4.8,
+      "text": "two it's a valid one so the length"
+    },
+    {
+      "start": 503.64,
+      "end": 508.56,
+      "duration": 4.92,
+      "text": "increases to five perfect and that's the"
+    },
+    {
+      "start": 506.04,
+      "end": 513.56,
+      "duration": 7.52,
+      "text": "longest one after that the r increases"
+    },
+    {
+      "start": 508.56,
+      "end": 516.56,
+      "duration": 8.0,
+      "text": "to uh the next one which is c c is put"
+    },
+    {
+      "start": 513.56,
+      "end": 519.84,
+      "duration": 6.28,
+      "text": "into the hashmap so when C is put into"
+    },
+    {
+      "start": 516.56,
+      "end": 522.88,
+      "duration": 6.32,
+      "text": "the hashmap what happens is you see okay"
+    },
+    {
+      "start": 519.84,
+      "end": 525.52,
+      "duration": 5.68,
+      "text": "I have a length six is this a valid"
+    },
+    {
+      "start": 522.88,
+      "end": 526.88,
+      "duration": 4.0,
+      "text": "segment and it says the size is three"
+    },
+    {
+      "start": 525.52,
+      "end": 529.56,
+      "duration": 4.04,
+      "text": "which means it has three distinct"
+    },
+    {
+      "start": 526.88,
+      "end": 531.8,
+      "duration": 4.92,
+      "text": "Elements which is not allowed hence it"
+    },
+    {
+      "start": 529.56,
+      "end": 535.16,
+      "duration": 5.6,
+      "text": "is not a valid segment hence max length"
+    },
+    {
+      "start": 531.8,
+      "end": 538.0,
+      "duration": 6.2,
+      "text": "will not be updated this window is no"
+    },
+    {
+      "start": 535.16,
+      "end": 541.64,
+      "duration": 6.48,
+      "text": "more valid so please make sure you make"
+    },
+    {
+      "start": 538.0,
+      "end": 543.84,
+      "duration": 5.84,
+      "text": "it valid how can you make it valid we"
+    },
+    {
+      "start": 541.64,
+      "end": 546.12,
+      "duration": 4.48,
+      "text": "take out one a from it so if you take"
+    },
+    {
+      "start": 543.84,
+      "end": 547.76,
+      "duration": 3.92,
+      "text": "out one a from it what will happen is"
+    },
+    {
+      "start": 546.12,
+      "end": 550.48,
+      "duration": 4.36,
+      "text": "the frequency will increase will"
+    },
+    {
+      "start": 547.76,
+      "end": 553.84,
+      "duration": 6.08,
+      "text": "decrease to two and the L will"
+    },
+    {
+      "start": 550.48,
+      "end": 557.32,
+      "duration": 6.84,
+      "text": "move to the front Okay at this moment"
+    },
+    {
+      "start": 553.84,
+      "end": 559.8,
+      "duration": 5.96,
+      "text": "you again check hey is this a valid"
+    },
+    {
+      "start": 557.32,
+      "end": 562.52,
+      "duration": 5.2,
+      "text": "scenario and again when you look into"
+    },
+    {
+      "start": 559.8,
+      "end": 564.84,
+      "duration": 5.04,
+      "text": "the map it says my size is three I'm"
+    },
+    {
+      "start": 562.52,
+      "end": 567.08,
+      "duration": 4.56,
+      "text": "still not valid so but it's still not"
+    },
+    {
+      "start": 564.84,
+      "end": 569.44,
+      "duration": 4.6,
+      "text": "valid what you'll say is okay maybe"
+    },
+    {
+      "start": 567.08,
+      "end": 573.44,
+      "duration": 6.36,
+      "text": "remove this a as well you're removing"
+    },
+    {
+      "start": 569.44,
+      "end": 575.28,
+      "duration": 5.84,
+      "text": "this a this decreases to one perfect and"
+    },
+    {
+      "start": 573.44,
+      "end": 578.84,
+      "duration": 5.4,
+      "text": "then again you move"
+    },
+    {
+      "start": 575.28,
+      "end": 582.2,
+      "duration": 6.92,
+      "text": "this and again you ask hey is this a"
+    },
+    {
+      "start": 578.84,
+      "end": 584.2,
+      "duration": 5.36,
+      "text": "valid scenario and now you're saying"
+    },
+    {
+      "start": 582.2,
+      "end": 587.2,
+      "duration": 5.0,
+      "text": "let's look look into the map and map"
+    },
+    {
+      "start": 584.2,
+      "end": 589.12,
+      "duration": 4.92,
+      "text": "says no you're not valid perfect let's"
+    },
+    {
+      "start": 587.2,
+      "end": 591.12,
+      "duration": 3.92,
+      "text": "remove one more a so the moment you"
+    },
+    {
+      "start": 589.12,
+      "end": 594.32,
+      "duration": 5.2,
+      "text": "remove one more a now this is very"
+    },
+    {
+      "start": 591.12,
+      "end": 596.8,
+      "duration": 5.68,
+      "text": "important when this turns out to be zero"
+    },
+    {
+      "start": 594.32,
+      "end": 599.72,
+      "duration": 5.4,
+      "text": "when this turns out to be zero and your"
+    },
+    {
+      "start": 596.8,
+      "end": 602.24,
+      "duration": 5.44,
+      "text": "L is moving one place ahead which is to"
+    },
+    {
+      "start": 599.72,
+      "end": 604.8,
+      "duration": 5.08,
+      "text": "here when this turns out to be zero"
+    },
+    {
+      "start": 602.24,
+      "end": 606.48,
+      "duration": 4.24,
+      "text": "please make sure you remove this a from"
+    },
+    {
+      "start": 604.8,
+      "end": 608.8,
+      "duration": 4.0,
+      "text": "the map data structure it shouldn't be"
+    },
+    {
+      "start": 606.48,
+      "end": 611.16,
+      "duration": 4.68,
+      "text": "there in the data structure perfect next"
+    },
+    {
+      "start": 608.8,
+      "end": 613.0,
+      "duration": 4.2,
+      "text": "you ask hey is this a valid segment and"
+    },
+    {
+      "start": 611.16,
+      "end": 614.96,
+      "duration": 3.8,
+      "text": "it says there are two elements we have"
+    },
+    {
+      "start": 613.0,
+      "end": 618.16,
+      "duration": 5.16,
+      "text": "valid but the length is three so you do"
+    },
+    {
+      "start": 614.96,
+      "end": 622.6,
+      "duration": 7.64,
+      "text": "not update the Max L afterwards you move"
+    },
+    {
+      "start": 618.16,
+      "end": 625.08,
+      "duration": 6.92,
+      "text": "the r and that goes to C this increases"
+    },
+    {
+      "start": 622.6,
+      "end": 627.52,
+      "duration": 4.92,
+      "text": "what is the is this a valid one it says"
+    },
+    {
+      "start": 625.08,
+      "end": 629.56,
+      "duration": 4.48,
+      "text": "yes I'm a valid one the length is four"
+    },
+    {
+      "start": 627.52,
+      "end": 632.76,
+      "duration": 5.24,
+      "text": "so you do not update after after that"
+    },
+    {
+      "start": 629.56,
+      "end": 635.28,
+      "duration": 5.72,
+      "text": "you move the r the S goes to d d gets"
+    },
+    {
+      "start": 632.76,
+      "end": 638.12,
+      "duration": 5.36,
+      "text": "into the map and you ask hey is this"
+    },
+    {
+      "start": 635.28,
+      "end": 640.4,
+      "duration": 5.12,
+      "text": "length five valid you go ahead and ask"
+    },
+    {
+      "start": 638.12,
+      "end": 643.16,
+      "duration": 5.04,
+      "text": "and it says no I have three so it's not"
+    },
+    {
+      "start": 640.4,
+      "end": 645.28,
+      "duration": 4.88,
+      "text": "a valid one again you start removing so"
+    },
+    {
+      "start": 643.16,
+      "end": 647.0,
+      "duration": 3.84,
+      "text": "you remove this B if you remove this B"
+    },
+    {
+      "start": 645.28,
+      "end": 651.92,
+      "duration": 6.64,
+      "text": "what happens is this two gets decreased"
+    },
+    {
+      "start": 647.0,
+      "end": 654.12,
+      "duration": 7.12,
+      "text": "to one and the L moves one place ahead"
+    },
+    {
+      "start": 651.92,
+      "end": 656.76,
+      "duration": 4.84,
+      "text": "again you ask is this a valid one it"
+    },
+    {
+      "start": 654.12,
+      "end": 658.24,
+      "duration": 4.12,
+      "text": "states no so again you remove one more B"
+    },
+    {
+      "start": 656.76,
+      "end": 661.6,
+      "duration": 4.84,
+      "text": "so the moment you remove one more B the"
+    },
+    {
+      "start": 658.24,
+      "end": 665.0,
+      "duration": 6.76,
+      "text": "B X to Zero and you erase it if you"
+    },
+    {
+      "start": 661.6,
+      "end": 667.0,
+      "duration": 5.4,
+      "text": "erase it the L goes over here and you"
+    },
+    {
+      "start": 665.0,
+      "end": 669.16,
+      "duration": 4.16,
+      "text": "ask is this a valid one it says yes I'm"
+    },
+    {
+      "start": 667.0,
+      "end": 670.84,
+      "duration": 3.84,
+      "text": "a valid one but the length is three so"
+    },
+    {
+      "start": 669.16,
+      "end": 673.8,
+      "duration": 4.64,
+      "text": "you don't do anything after that you"
+    },
+    {
+      "start": 670.84,
+      "end": 675.92,
+      "duration": 5.08,
+      "text": "move R and R goes out of the boundary so"
+    },
+    {
+      "start": 673.8,
+      "end": 679.04,
+      "duration": 5.24,
+      "text": "you stop then and there the max length"
+    },
+    {
+      "start": 675.92,
+      "end": 682.6,
+      "duration": 6.68,
+      "text": "is five and this is your"
+    },
+    {
+      "start": 679.04,
+      "end": 685.92,
+      "duration": 6.88,
+      "text": "answer this is how you can do it super"
+    },
+    {
+      "start": 682.6,
+      "end": 687.48,
+      "duration": 4.88,
+      "text": "simple so what I'll do is Now quickly"
+    },
+    {
+      "start": 685.92,
+      "end": 688.96,
+      "duration": 3.04,
+      "text": "write down the pseudo code again if you"
+    },
+    {
+      "start": 687.48,
+      "end": 691.08,
+      "duration": 3.6,
+      "text": "want your language specific code you can"
+    },
+    {
+      "start": 688.96,
+      "end": 692.6,
+      "duration": 3.64,
+      "text": "find them below so what I'm going to"
+    },
+    {
+      "start": 691.08,
+      "end": 695.04,
+      "duration": 3.96,
+      "text": "write is a"
+    },
+    {
+      "start": 692.6,
+      "end": 696.56,
+      "duration": 3.96,
+      "text": "function let's write down a function"
+    },
+    {
+      "start": 695.04,
+      "end": 701.56,
+      "duration": 6.52,
+      "text": "which is taking a string which is taking"
+    },
+    {
+      "start": 696.56,
+      "end": 703.08,
+      "duration": 6.52,
+      "text": "a k first thing I need is a max length"
+    },
+    {
+      "start": 701.56,
+      "end": 706.0,
+      "duration": 4.44,
+      "text": "the next thing I need is the window L"
+    },
+    {
+      "start": 703.08,
+      "end": 710.32,
+      "duration": 7.24,
+      "text": "equal to 0 r equal to0 the other thing I"
+    },
+    {
+      "start": 706.0,
+      "end": 714.04,
+      "duration": 8.04,
+      "text": "need is a map with a character and an"
+    },
+    {
+      "start": 710.32,
+      "end": 715.64,
+      "duration": 5.32,
+      "text": "integer do I need anything else I don't"
+    },
+    {
+      "start": 714.04,
+      "end": 720.04,
+      "duration": 6.0,
+      "text": "what I can do is I can start iterating"
+    },
+    {
+      "start": 715.64,
+      "end": 723.16,
+      "duration": 7.52,
+      "text": "so the while loop now goes from R till"
+    },
+    {
+      "start": 720.04,
+      "end": 728.8,
+      "duration": 8.76,
+      "text": "the size of the string which is s do"
+    },
+    {
+      "start": 723.16,
+      "end": 731.76,
+      "duration": 8.6,
+      "text": "size perfect after this bad yeah after"
+    },
+    {
+      "start": 728.8,
+      "end": 733.48,
+      "duration": 4.68,
+      "text": "this what I need is I need to put this"
+    },
+    {
+      "start": 731.76,
+      "end": 737.76,
+      "duration": 6.0,
+      "text": "into the hash map correct that's what I"
+    },
+    {
+      "start": 733.48,
+      "end": 739.24,
+      "duration": 5.76,
+      "text": "was doing I'll be like map s of R can"
+    },
+    {
+      "start": 737.76,
+      "end": 743.0,
+      "duration": 5.24,
+      "text": "you go into the"
+    },
+    {
+      "start": 739.24,
+      "end": 744.56,
+      "duration": 5.32,
+      "text": "hashmap perf right after this what I"
+    },
+    {
+      "start": 743.0,
+      "end": 746.88,
+      "duration": 3.88,
+      "text": "what I have to do is I have to check if"
+    },
+    {
+      "start": 744.56,
+      "end": 749.52,
+      "duration": 4.96,
+      "text": "this is a valid one or not right if this"
+    },
+    {
+      "start": 746.88,
+      "end": 752.36,
+      "duration": 5.48,
+      "text": "segment is a valid one or not and if it"
+    },
+    {
+      "start": 749.52,
+      "end": 754.8,
+      "duration": 5.28,
+      "text": "is not valid I'll have to remove so I'm"
+    },
+    {
+      "start": 752.36,
+      "end": 756.64,
+      "duration": 4.28,
+      "text": "checking and if it is not I'll remove so"
+    },
+    {
+      "start": 754.8,
+      "end": 760.72,
+      "duration": 5.92,
+      "text": "maybe I can write a while"
+    },
+    {
+      "start": 756.64,
+      "end": 764.48,
+      "duration": 7.84,
+      "text": "loop which kind of acts as my uh"
+    },
+    {
+      "start": 760.72,
+      "end": 766.84,
+      "duration": 6.12,
+      "text": "condition check hey if map do size if"
+    },
+    {
+      "start": 764.48,
+      "end": 770.44,
+      "duration": 5.96,
+      "text": "the number of elements are greater than"
+    },
+    {
+      "start": 766.84,
+      "end": 772.68,
+      "duration": 5.84,
+      "text": "K that means it's not a valid if if this"
+    },
+    {
+      "start": 770.44,
+      "end": 774.84,
+      "duration": 4.4,
+      "text": "condition is false doesn't executes the"
+    },
+    {
+      "start": 772.68,
+      "end": 777.64,
+      "duration": 4.96,
+      "text": "while loop so the while loop works as a"
+    },
+    {
+      "start": 774.84,
+      "end": 781.16,
+      "duration": 6.32,
+      "text": "if condition as well okay if it is what"
+    },
+    {
+      "start": 777.64,
+      "end": 784.96,
+      "duration": 7.32,
+      "text": "do I do I remove what do I do I remove I"
+    },
+    {
+      "start": 781.16,
+      "end": 787.2,
+      "duration": 6.04,
+      "text": "say hash of s of L can you just get out"
+    },
+    {
+      "start": 784.96,
+      "end": 792.24,
+      "duration": 7.28,
+      "text": "of the map and once you're out of the"
+    },
+    {
+      "start": 787.2,
+      "end": 797.08,
+      "duration": 9.88,
+      "text": "map please make sure if hash of s of"
+    },
+    {
+      "start": 792.24,
+      "end": 800.44,
+      "duration": 8.2,
+      "text": "L is zero that means also get out of the"
+    },
+    {
+      "start": 797.08,
+      "end": 803.8,
+      "duration": 6.72,
+      "text": "map I reduced one value and I'm saying"
+    },
+    {
+      "start": 800.44,
+      "end": 806.36,
+      "duration": 5.92,
+      "text": "hey map whatever is your value can you"
+    },
+    {
+      "start": 803.8,
+      "end": 808.88,
+      "duration": 5.08,
+      "text": "get out of the map once you are out of"
+    },
+    {
+      "start": 806.36,
+      "end": 812.0,
+      "duration": 5.64,
+      "text": "the map what is my next thing I'll now"
+    },
+    {
+      "start": 808.88,
+      "end": 814.4,
+      "duration": 5.52,
+      "text": "move well l = l + 1 the while loop keeps"
+    },
+    {
+      "start": 812.0,
+      "end": 816.52,
+      "duration": 4.52,
+      "text": "on going till it gets a valid segment"
+    },
+    {
+      "start": 814.4,
+      "end": 820.8,
+      "duration": 6.4,
+      "text": "once it has a valid segment I can"
+    },
+    {
+      "start": 816.52,
+      "end": 823.32,
+      "duration": 6.8,
+      "text": "straight away write hey if uh what's"
+    },
+    {
+      "start": 820.8,
+      "end": 827.2,
+      "duration": 6.4,
+      "text": "what's the length the length is r or"
+    },
+    {
+      "start": 823.32,
+      "end": 829.48,
+      "duration": 6.16,
+      "text": "rather I can say hey if MPP do size if"
+    },
+    {
+      "start": 827.2,
+      "end": 833.2,
+      "duration": 6.0,
+      "text": "it has lesser than equal to K distinct"
+    },
+    {
+      "start": 829.48,
+      "end": 839.16,
+      "duration": 9.68,
+      "text": "characters max length can be updated to"
+    },
+    {
+      "start": 833.2,
+      "end": 843.76,
+      "duration": 10.56,
+      "text": "Max of max length comma J or rather r"
+    },
+    {
+      "start": 839.16,
+      "end": 846.28,
+      "duration": 7.12,
+      "text": "minus L + 1 that's going to be your"
+    },
+    {
+      "start": 843.76,
+      "end": 848.88,
+      "duration": 5.12,
+      "text": "length and after that before finishing"
+    },
+    {
+      "start": 846.28,
+      "end": 851.28,
+      "duration": 5.0,
+      "text": "of the while loop for the next step make"
+    },
+    {
+      "start": 848.88,
+      "end": 855.24,
+      "duration": 6.36,
+      "text": "sure R moves equal to r + 1 and the"
+    },
+    {
+      "start": 851.28,
+      "end": 859.96,
+      "duration": 8.68,
+      "text": "while loop ends and eventually you can"
+    },
+    {
+      "start": 855.24,
+      "end": 861.92,
+      "duration": 6.68,
+      "text": "go ahead and return your max length"
+    },
+    {
+      "start": 859.96,
+      "end": 863.2,
+      "duration": 3.24,
+      "text": "that's done for the function yeah that"
+    },
+    {
+      "start": 861.92,
+      "end": 866.32,
+      "duration": 4.4,
+      "text": "is done in"
+    },
+    {
+      "start": 863.2,
+      "end": 868.4,
+      "duration": 5.2,
+      "text": "dust we have to figure out what is the"
+    },
+    {
+      "start": 866.32,
+      "end": 870.04,
+      "duration": 3.72,
+      "text": "time complexity now what is contributing"
+    },
+    {
+      "start": 868.4,
+      "end": 871.32,
+      "duration": 2.92,
+      "text": "to the time complex"
+    },
+    {
+      "start": 870.04,
+      "end": 873.16,
+      "duration": 3.12,
+      "text": "there is a while loop that is"
+    },
+    {
+      "start": 871.32,
+      "end": 875.48,
+      "duration": 4.16,
+      "text": "contributing to the time complexity"
+    },
+    {
+      "start": 873.16,
+      "end": 880.16,
+      "duration": 7.0,
+      "text": "correct so can I say that the while loop"
+    },
+    {
+      "start": 875.48,
+      "end": 883.0,
+      "duration": 7.52,
+      "text": "is taking a b go of end time I can say"
+    },
+    {
+      "start": 880.16,
+      "end": 884.88,
+      "duration": 4.72,
+      "text": "that correct and there's a inner while"
+    },
+    {
+      "start": 883.0,
+      "end": 888.52,
+      "duration": 5.52,
+      "text": "loop so I'm running an inner while loop"
+    },
+    {
+      "start": 884.88,
+      "end": 891.72,
+      "duration": 6.84,
+      "text": "as well is this in a wild Loop taking"
+    },
+    {
+      "start": 888.52,
+      "end": 895.2,
+      "duration": 6.68,
+      "text": "exactly bin no it is not why do I say"
+    },
+    {
+      "start": 891.72,
+      "end": 898.56,
+      "duration": 6.84,
+      "text": "that because this L it's not that it's"
+    },
+    {
+      "start": 895.2,
+      "end": 900.6,
+      "duration": 5.4,
+      "text": "moving n time every time no it might"
+    },
+    {
+      "start": 898.56,
+      "end": 903.36,
+      "duration": 4.8,
+      "text": "move two time times might move three it"
+    },
+    {
+      "start": 900.6,
+      "end": 906.4,
+      "duration": 5.8,
+      "text": "might move four but eventually at the"
+    },
+    {
+      "start": 903.36,
+      "end": 909.24,
+      "duration": 5.88,
+      "text": "end of the day it will be some segments"
+    },
+    {
+      "start": 906.4,
+      "end": 913.32,
+      "duration": 6.92,
+      "text": "that it is moving and throughout it will"
+    },
+    {
+      "start": 909.24,
+      "end": 916.04,
+      "duration": 6.8,
+      "text": "be moving at Max of end not individually"
+    },
+    {
+      "start": 913.32,
+      "end": 919.56,
+      "duration": 6.24,
+      "text": "end times every time at the end of the"
+    },
+    {
+      "start": 916.04,
+      "end": 922.12,
+      "duration": 6.08,
+      "text": "day if you sum the total iterations of"
+    },
+    {
+      "start": 919.56,
+      "end": 924.96,
+      "duration": 5.4,
+      "text": "the cell it might start from here and it"
+    },
+    {
+      "start": 922.12,
+      "end": 928.52,
+      "duration": 6.4,
+      "text": "might end here at the end throughout it"
+    },
+    {
+      "start": 924.96,
+      "end": 931.72,
+      "duration": 6.76,
+      "text": "might move a pigo of and so I can say"
+    },
+    {
+      "start": 928.52,
+      "end": 934.96,
+      "duration": 6.44,
+      "text": "that's then we go of n I'm using a"
+    },
+    {
+      "start": 931.72,
+      "end": 936.72,
+      "duration": 5.0,
+      "text": "hashmap so again depending on what hash"
+    },
+    {
+      "start": 934.96,
+      "end": 939.64,
+      "duration": 4.68,
+      "text": "map are you using it can take a"
+    },
+    {
+      "start": 936.72,
+      "end": 941.68,
+      "duration": 4.96,
+      "text": "logarithmic 256 a b of one I link that"
+    },
+    {
+      "start": 939.64,
+      "end": 944.96,
+      "duration": 5.32,
+      "text": "on you and the space complexity at the"
+    },
+    {
+      "start": 941.68,
+      "end": 948.12,
+      "duration": 6.44,
+      "text": "worst can go to 256 if the string is"
+    },
+    {
+      "start": 944.96,
+      "end": 951.68,
+      "duration": 6.72,
+      "text": "consisting of all the characters so that"
+    },
+    {
+      "start": 948.12,
+      "end": 954.52,
+      "duration": 6.4,
+      "text": "will be uh one of the approaches so the"
+    },
+    {
+      "start": 951.68,
+      "end": 957.12,
+      "duration": 5.44,
+      "text": "current approach is taking a beo of 2"
+    },
+    {
+      "start": 954.52,
+      "end": 958.76,
+      "duration": 4.24,
+      "text": "and a lot of interviewers will be okay"
+    },
+    {
+      "start": 957.12,
+      "end": 961.96,
+      "duration": 4.84,
+      "text": "with this but some might still ask you"
+    },
+    {
+      "start": 958.76,
+      "end": 964.2,
+      "duration": 5.44,
+      "text": "to optimize it so if as an interviewer"
+    },
+    {
+      "start": 961.96,
+      "end": 966.4,
+      "duration": 4.44,
+      "text": "I'm asking you to optimize a b go of 2N"
+    },
+    {
+      "start": 964.2,
+      "end": 969.04,
+      "duration": 4.84,
+      "text": "that means I have to get rid of this"
+    },
+    {
+      "start": 966.4,
+      "end": 971.28,
+      "duration": 4.88,
+      "text": "extra Bend and that was caused because"
+    },
+    {
+      "start": 969.04,
+      "end": 973.36,
+      "duration": 4.32,
+      "text": "of this inner while loop I'll have to"
+    },
+    {
+      "start": 971.28,
+      "end": 976.56,
+      "duration": 5.28,
+      "text": "get rid of this so if you haven't seen"
+    },
+    {
+      "start": 973.36,
+      "end": 978.88,
+      "duration": 5.52,
+      "text": "my template video on to uh two pointer"
+    },
+    {
+      "start": 976.56,
+      "end": 980.6,
+      "duration": 4.04,
+      "text": "and sliding window go back and watch it"
+    },
+    {
+      "start": 978.88,
+      "end": 982.76,
+      "duration": 3.88,
+      "text": "I have a template video where I've"
+    },
+    {
+      "start": 980.6,
+      "end": 986.28,
+      "duration": 5.68,
+      "text": "explained how do we start with the brute"
+    },
+    {
+      "start": 982.76,
+      "end": 988.28,
+      "duration": 5.52,
+      "text": "force and we go to uh this while loop"
+    },
+    {
+      "start": 986.28,
+      "end": 990.68,
+      "duration": 4.4,
+      "text": "and while loop and then we optimize it"
+    },
+    {
+      "start": 988.28,
+      "end": 993.32,
+      "duration": 5.04,
+      "text": "to be of go back and watch that template"
+    },
+    {
+      "start": 990.68,
+      "end": 995.48,
+      "duration": 4.8,
+      "text": "video that will help you immensely so"
+    },
+    {
+      "start": 993.32,
+      "end": 997.88,
+      "duration": 4.56,
+      "text": "what I will do is I'll follow the same"
+    },
+    {
+      "start": 995.48,
+      "end": 1000.8,
+      "duration": 5.32,
+      "text": "algorithm keep the L andr take a map"
+    },
+    {
+      "start": 997.88,
+      "end": 1003.52,
+      "duration": 5.64,
+      "text": "data structure take a max length to be"
+    },
+    {
+      "start": 1000.8,
+      "end": 1006.88,
+      "duration": 6.08,
+      "text": "zero and I'll start the same algorithm a"
+    },
+    {
+      "start": 1003.52,
+      "end": 1009.24,
+      "duration": 5.72,
+      "text": "gets in max length is updated and then R"
+    },
+    {
+      "start": 1006.88,
+      "end": 1011.92,
+      "duration": 5.04,
+      "text": "moves to the next and then a gets"
+    },
+    {
+      "start": 1009.24,
+      "end": 1012.96,
+      "duration": 3.72,
+      "text": "updated max length is updated then R"
+    },
+    {
+      "start": 1011.92,
+      "end": 1016.04,
+      "duration": 4.12,
+      "text": "moves to the"
+    },
+    {
+      "start": 1012.96,
+      "end": 1018.96,
+      "duration": 6.0,
+      "text": "next again a gets updated max length"
+    },
+    {
+      "start": 1016.04,
+      "end": 1021.56,
+      "duration": 5.52,
+      "text": "gets updated and R moves to the next B"
+    },
+    {
+      "start": 1018.96,
+      "end": 1024.84,
+      "duration": 5.88,
+      "text": "gets updated R gets uh Maxin gets"
+    },
+    {
+      "start": 1021.56,
+      "end": 1027.96,
+      "duration": 6.4,
+      "text": "updated R gets updated I'm going fast b"
+    },
+    {
+      "start": 1024.84,
+      "end": 1031.08,
+      "duration": 6.24,
+      "text": "gets updated R Maxin gets updated then"
+    },
+    {
+      "start": 1027.96,
+      "end": 1034.52,
+      "duration": 6.56,
+      "text": "all gets updated and this is the point"
+    },
+    {
+      "start": 1031.08,
+      "end": 1037.88,
+      "duration": 6.8,
+      "text": "when you reach at C you insert C and you"
+    },
+    {
+      "start": 1034.52,
+      "end": 1039.96,
+      "duration": 5.44,
+      "text": "ask is this a valid segment and it says"
+    },
+    {
+      "start": 1037.88,
+      "end": 1042.68,
+      "duration": 4.8,
+      "text": "it has three it has three unique"
+    },
+    {
+      "start": 1039.96,
+      "end": 1046.4,
+      "duration": 6.44,
+      "text": "elements hence it is not a valid segment"
+    },
+    {
+      "start": 1042.68,
+      "end": 1048.56,
+      "duration": 5.88,
+      "text": "so you do not update the Max L now let's"
+    },
+    {
+      "start": 1046.4,
+      "end": 1051.12,
+      "duration": 4.72,
+      "text": "understand this is your sliding window"
+    },
+    {
+      "start": 1048.56,
+      "end": 1054.2,
+      "duration": 5.64,
+      "text": "which is of length six which is of"
+    },
+    {
+      "start": 1051.12,
+      "end": 1056.76,
+      "duration": 5.64,
+      "text": "length six correct now if you do not"
+    },
+    {
+      "start": 1054.2,
+      "end": 1058.48,
+      "duration": 4.28,
+      "text": "decrease the window from the left and"
+    },
+    {
+      "start": 1056.76,
+      "end": 1061.24,
+      "duration": 4.48,
+      "text": "you move the r to here what will happen"
+    },
+    {
+      "start": 1058.48,
+      "end": 1064.36,
+      "duration": 5.88,
+      "text": "is Will straight away reach the length"
+    },
+    {
+      "start": 1061.24,
+      "end": 1066.84,
+      "duration": 5.6,
+      "text": "seven you don't want that because max"
+    },
+    {
+      "start": 1064.36,
+      "end": 1069.12,
+      "duration": 4.76,
+      "text": "length is five and the next valid max"
+    },
+    {
+      "start": 1066.84,
+      "end": 1070.4,
+      "duration": 3.56,
+      "text": "length should be length six and then"
+    },
+    {
+      "start": 1069.12,
+      "end": 1072.36,
+      "duration": 3.24,
+      "text": "you'll get seven and then you'll get"
+    },
+    {
+      "start": 1070.4,
+      "end": 1074.48,
+      "duration": 4.08,
+      "text": "eight because you're moving the window"
+    },
+    {
+      "start": 1072.36,
+      "end": 1077.32,
+      "duration": 4.96,
+      "text": "the window cannot jump from 5 to 7"
+    },
+    {
+      "start": 1074.48,
+      "end": 1079.08,
+      "duration": 4.6,
+      "text": "window has to Jump by one place so if I"
+    },
+    {
+      "start": 1077.32,
+      "end": 1081.16,
+      "duration": 3.84,
+      "text": "take the arm and move it here the next"
+    },
+    {
+      "start": 1079.08,
+      "end": 1083.84,
+      "duration": 4.76,
+      "text": "length will be seven and I don't want"
+    },
+    {
+      "start": 1081.16,
+      "end": 1086.36,
+      "duration": 5.2,
+      "text": "that for that in the previous algorithm"
+    },
+    {
+      "start": 1083.84,
+      "end": 1089.2,
+      "duration": 5.36,
+      "text": "what I did was I took the say off took"
+    },
+    {
+      "start": 1086.36,
+      "end": 1092.48,
+      "duration": 6.12,
+      "text": "the say off took this a till a was"
+    },
+    {
+      "start": 1089.2,
+      "end": 1095.0,
+      "duration": 5.8,
+      "text": "omitted entirely and the L came here and"
+    },
+    {
+      "start": 1092.48,
+      "end": 1098.56,
+      "duration": 6.08,
+      "text": "this was a valid segment valid segment"
+    },
+    {
+      "start": 1095.0,
+      "end": 1101.28,
+      "duration": 6.28,
+      "text": "of length three correct and after that I"
+    },
+    {
+      "start": 1098.56,
+      "end": 1103.0,
+      "duration": 4.44,
+      "text": "again started increasing R three"
+    },
+    {
+      "start": 1101.28,
+      "end": 1105.4,
+      "duration": 4.12,
+      "text": "increased to four then it will increase"
+    },
+    {
+      "start": 1103.0,
+      "end": 1107.68,
+      "duration": 4.68,
+      "text": "to five then it will increase to six"
+    },
+    {
+      "start": 1105.4,
+      "end": 1110.28,
+      "duration": 4.88,
+      "text": "maybe now what am I doing I'm trimming"
+    },
+    {
+      "start": 1107.68,
+      "end": 1111.6,
+      "duration": 3.92,
+      "text": "it down to length three is it is it"
+    },
+    {
+      "start": 1110.28,
+      "end": 1114.04,
+      "duration": 3.76,
+      "text": "required because from three I'll again"
+    },
+    {
+      "start": 1111.6,
+      "end": 1115.92,
+      "duration": 4.32,
+      "text": "have to go to four but I don't need I"
+    },
+    {
+      "start": 1114.04,
+      "end": 1117.64,
+      "duration": 3.6,
+      "text": "straight away need something Beyond five"
+    },
+    {
+      "start": 1115.92,
+      "end": 1120.12,
+      "duration": 4.2,
+      "text": "something Beyond five cuz I'm looking"
+    },
+    {
+      "start": 1117.64,
+      "end": 1122.0,
+      "duration": 4.36,
+      "text": "for longest this is where I'll do the"
+    },
+    {
+      "start": 1120.12,
+      "end": 1126.28,
+      "duration": 6.16,
+      "text": "optimization I'll say there's no point"
+    },
+    {
+      "start": 1122.0,
+      "end": 1129.28,
+      "duration": 7.28,
+      "text": "in removing all the a just remove one a"
+    },
+    {
+      "start": 1126.28,
+      "end": 1131.96,
+      "duration": 5.68,
+      "text": "and keep it as a length five keep it as"
+    },
+    {
+      "start": 1129.28,
+      "end": 1135.52,
+      "duration": 6.24,
+      "text": "a length five keep it as a length five"
+    },
+    {
+      "start": 1131.96,
+      "end": 1137.36,
+      "duration": 5.4,
+      "text": "and after that when you have removed"
+    },
+    {
+      "start": 1135.52,
+      "end": 1139.92,
+      "duration": 4.4,
+      "text": "keep it as a length five and then move"
+    },
+    {
+      "start": 1137.36,
+      "end": 1143.24,
+      "duration": 5.88,
+      "text": "on and then move on so now when you move"
+    },
+    {
+      "start": 1139.92,
+      "end": 1146.4,
+      "duration": 6.48,
+      "text": "R to the next the length is not seven it"
+    },
+    {
+      "start": 1143.24,
+      "end": 1149.4,
+      "duration": 6.16,
+      "text": "is six I'm checking still for six and"
+    },
+    {
+      "start": 1146.4,
+      "end": 1151.68,
+      "duration": 5.28,
+      "text": "when I check it says no again do the"
+    },
+    {
+      "start": 1149.4,
+      "end": 1155.04,
+      "duration": 5.64,
+      "text": "same thing say I'm going to remove just"
+    },
+    {
+      "start": 1151.68,
+      "end": 1157.8,
+      "duration": 6.12,
+      "text": "one so remove one so what happen as this"
+    },
+    {
+      "start": 1155.04,
+      "end": 1159.84,
+      "duration": 4.8,
+      "text": "two will become one and this L will go"
+    },
+    {
+      "start": 1157.8,
+      "end": 1163.48,
+      "duration": 5.68,
+      "text": "over here and again I'm keeping the"
+    },
+    {
+      "start": 1159.84,
+      "end": 1167.12,
+      "duration": 7.28,
+      "text": "length five after this move on when you"
+    },
+    {
+      "start": 1163.48,
+      "end": 1169.08,
+      "duration": 5.6,
+      "text": "move R it goes over here so this time D"
+    },
+    {
+      "start": 1167.12,
+      "end": 1170.6,
+      "duration": 3.48,
+      "text": "will come across right if imagine"
+    },
+    {
+      "start": 1169.08,
+      "end": 1172.12,
+      "duration": 3.04,
+      "text": "instead of D this"
+    },
+    {
+      "start": 1170.6,
+      "end": 1175.24,
+      "duration": 4.64,
+      "text": "was"
+    },
+    {
+      "start": 1172.12,
+      "end": 1177.4,
+      "duration": 5.28,
+      "text": "C just imagine it was c c will be"
+    },
+    {
+      "start": 1175.24,
+      "end": 1179.2,
+      "duration": 3.96,
+      "text": "increased to two c will be increased to"
+    },
+    {
+      "start": 1177.4,
+      "end": 1181.0,
+      "duration": 3.6,
+      "text": "what will happen it'll be like Hey"
+    },
+    {
+      "start": 1179.2,
+      "end": 1184.52,
+      "duration": 5.32,
+      "text": "listen this"
+    },
+    {
+      "start": 1181.0,
+      "end": 1186.88,
+      "duration": 5.88,
+      "text": "is not a valid segment because we have"
+    },
+    {
+      "start": 1184.52,
+      "end": 1188.52,
+      "duration": 4.0,
+      "text": "three we have three so again we'll do"
+    },
+    {
+      "start": 1186.88,
+      "end": 1190.92,
+      "duration": 4.04,
+      "text": "the same thing we'll just remove one a"
+    },
+    {
+      "start": 1188.52,
+      "end": 1193.84,
+      "duration": 5.32,
+      "text": "so when you remove one a this goes off"
+    },
+    {
+      "start": 1190.92,
+      "end": 1197.4,
+      "duration": 6.48,
+      "text": "and when this goes off the L from here"
+    },
+    {
+      "start": 1193.84,
+      "end": 1199.56,
+      "duration": 5.72,
+      "text": "goes to here now I'm keeping length five"
+    },
+    {
+      "start": 1197.4,
+      "end": 1202.6,
+      "duration": 5.2,
+      "text": "and this is a valid one so what you can"
+    },
+    {
+      "start": 1199.56,
+      "end": 1204.96,
+      "duration": 5.4,
+      "text": "do is you can increase the r and imagine"
+    },
+    {
+      "start": 1202.6,
+      "end": 1206.68,
+      "duration": 4.08,
+      "text": "there was another C there was another C"
+    },
+    {
+      "start": 1204.96,
+      "end": 1210.2,
+      "duration": 5.24,
+      "text": "have increased it and You' have got the"
+    },
+    {
+      "start": 1206.68,
+      "end": 1211.92,
+      "duration": 5.24,
+      "text": "lens six ultimately so what I did was I"
+    },
+    {
+      "start": 1210.2,
+      "end": 1216.68,
+      "duration": 6.48,
+      "text": "never allowed the five to"
+    },
+    {
+      "start": 1211.92,
+      "end": 1219.68,
+      "duration": 7.76,
+      "text": "go beyond five until this it was valid"
+    },
+    {
+      "start": 1216.68,
+      "end": 1222.44,
+      "duration": 5.76,
+      "text": "it was valid at this scenario so I moved"
+    },
+    {
+      "start": 1219.68,
+      "end": 1226.24,
+      "duration": 6.56,
+      "text": "here now at is six now I will not move L"
+    },
+    {
+      "start": 1222.44,
+      "end": 1228.12,
+      "duration": 5.68,
+      "text": "anymore so the whole point is there's no"
+    },
+    {
+      "start": 1226.24,
+      "end": 1230.44,
+      "duration": 4.2,
+      "text": "point in trimming down the window length"
+    },
+    {
+      "start": 1228.12,
+      "end": 1232.48,
+      "duration": 4.36,
+      "text": "from five to three there's no point keep"
+    },
+    {
+      "start": 1230.44,
+      "end": 1236.04,
+      "duration": 5.6,
+      "text": "it now keep in the window L of five now"
+    },
+    {
+      "start": 1232.48,
+      "end": 1237.0,
+      "duration": 4.52,
+      "text": "will help you so this is what I can do"
+    },
+    {
+      "start": 1236.04,
+      "end": 1238.8,
+      "duration": 2.76,
+      "text": "instead"
+    },
+    {
+      "start": 1237.0,
+      "end": 1241.44,
+      "duration": 4.44,
+      "text": "of"
+    },
+    {
+      "start": 1238.8,
+      "end": 1244.2,
+      "duration": 5.4,
+      "text": "removing all like till I get a valid"
+    },
+    {
+      "start": 1241.44,
+      "end": 1247.96,
+      "duration": 6.52,
+      "text": "segment just remove one if it is"
+    },
+    {
+      "start": 1244.2,
+      "end": 1249.88,
+      "duration": 5.68,
+      "text": "exceeding just remove one that would and"
+    },
+    {
+      "start": 1247.96,
+      "end": 1252.2,
+      "duration": 4.24,
+      "text": "then you can have a check if it's a"
+    },
+    {
+      "start": 1249.88,
+      "end": 1255.92,
+      "duration": 6.04,
+      "text": "valid I'll update otherwise I'll go"
+    },
+    {
+      "start": 1252.2,
+      "end": 1259.28,
+      "duration": 7.08,
+      "text": "ahead simple and if I convert this to if"
+    },
+    {
+      "start": 1255.92,
+      "end": 1263.0,
+      "duration": 7.08,
+      "text": "can I say that this B of n"
+    },
+    {
+      "start": 1259.28,
+      "end": 1265.2,
+      "duration": 5.92,
+      "text": "will go off it win and this is going to"
+    },
+    {
+      "start": 1263.0,
+      "end": 1266.84,
+      "duration": 3.84,
+      "text": "be your most optimized solution again"
+    },
+    {
+      "start": 1265.2,
+      "end": 1268.6,
+      "duration": 3.4,
+      "text": "this is the pseudo code in case you want"
+    },
+    {
+      "start": 1266.84,
+      "end": 1271.36,
+      "duration": 4.52,
+      "text": "your language specific code you can find"
+    },
+    {
+      "start": 1268.6,
+      "end": 1272.52,
+      "duration": 3.92,
+      "text": "them below so I hope uh if you're still"
+    },
+    {
+      "start": 1271.36,
+      "end": 1274.12,
+      "duration": 2.76,
+      "text": "now watching you've understood"
+    },
+    {
+      "start": 1272.52,
+      "end": 1275.72,
+      "duration": 3.2,
+      "text": "everything and if that is the case"
+    },
+    {
+      "start": 1274.12,
+      "end": 1277.28,
+      "duration": 3.16,
+      "text": "please please do consider giving us a"
+    },
+    {
+      "start": 1275.72,
+      "end": 1279.48,
+      "duration": 3.76,
+      "text": "like if you're new to our channel do"
+    },
+    {
+      "start": 1277.28,
+      "end": 1280.88,
+      "duration": 3.6,
+      "text": "consider subscribing to us as well with"
+    },
+    {
+      "start": 1279.48,
+      "end": 1282.16,
+      "duration": 2.68,
+      "text": "this I'll be wrapping up this video"
+    },
+    {
+      "start": 1280.88,
+      "end": 1283.32,
+      "duration": 2.44,
+      "text": "let's meet in some other video till then"
+    },
+    {
+      "start": 1282.16,
+      "end": 1285.92,
+      "duration": 3.76,
+      "text": "bye-bye take"
+    },
+    {
+      "start": 1283.32,
+      "end": 1289.2,
+      "duration": 5.88,
+      "text": "care your heart is"
+    },
+    {
+      "start": 1285.92,
+      "end": 1293.6,
+      "duration": 7.68,
+      "text": "broken don't forget your"
+    },
+    {
+      "start": 1289.2,
+      "end": 1293.6,
+      "duration": 4.4,
+      "text": "golden I will find light"
+    }
+  ]
+}

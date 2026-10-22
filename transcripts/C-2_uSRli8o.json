@@ -1,0 +1,3194 @@
+{
+  "video_id": "C-2_uSRli8o",
+  "title": "G-9. Flood Fill Algorithm | C++ | Java",
+  "duration_sec": 1234,
+  "num_segments": 531,
+  "segments": [
+    {
+      "start": 3.12,
+      "end": 6.24,
+      "duration": 3.12,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.48,
+      "end": 7.84,
+      "duration": 3.36,
+      "text": "i hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.24,
+      "end": 9.76,
+      "duration": 3.52,
+      "text": "a lot of you told me that you am a"
+    },
+    {
+      "start": 7.84,
+      "end": 11.36,
+      "duration": 3.52,
+      "text": "single slime so from now onwards we are"
+    },
+    {
+      "start": 9.76,
+      "end": 13.68,
+      "duration": 3.92,
+      "text": "going to start every video with this"
+    },
+    {
+      "start": 11.36,
+      "end": 16.48,
+      "duration": 5.12,
+      "text": "line okay so uh the problem that you're"
+    },
+    {
+      "start": 13.68,
+      "end": 18.88,
+      "duration": 5.2,
+      "text": "going to solve today is uh the flood"
+    },
+    {
+      "start": 16.48,
+      "end": 21.28,
+      "duration": 4.8,
+      "text": "fill algorithm again this can be solved"
+    },
+    {
+      "start": 18.88,
+      "end": 23.6,
+      "duration": 4.72,
+      "text": "using bfs or dfs but you need to"
+    },
+    {
+      "start": 21.28,
+      "end": 25.76,
+      "duration": 4.48,
+      "text": "understand the core concept how are we"
+    },
+    {
+      "start": 23.6,
+      "end": 27.44,
+      "duration": 3.84,
+      "text": "approaching this problem because it is"
+    },
+    {
+      "start": 25.76,
+      "end": 31.36,
+      "duration": 5.6,
+      "text": "again going to be a problem which is"
+    },
+    {
+      "start": 27.44,
+      "end": 34.64,
+      "duration": 7.2,
+      "text": "based on matrix so it states that an"
+    },
+    {
+      "start": 31.36,
+      "end": 37.04,
+      "duration": 5.68,
+      "text": "image is represented by 2d rf integers"
+    },
+    {
+      "start": 34.64,
+      "end": 38.64,
+      "duration": 4.0,
+      "text": "each integer representing the pixel"
+    },
+    {
+      "start": 37.04,
+      "end": 41.36,
+      "duration": 4.32,
+      "text": "value of the image"
+    },
+    {
+      "start": 38.64,
+      "end": 43.36,
+      "duration": 4.72,
+      "text": "given a coordinate srsc"
+    },
+    {
+      "start": 41.36,
+      "end": 45.44,
+      "duration": 4.08,
+      "text": "representing the starting pixel so"
+    },
+    {
+      "start": 43.36,
+      "end": 47.44,
+      "duration": 4.08,
+      "text": "basically sr is the row and sc is the"
+    },
+    {
+      "start": 45.44,
+      "end": 50.16,
+      "duration": 4.72,
+      "text": "column so this is the starting pixel of"
+    },
+    {
+      "start": 47.44,
+      "end": 53.04,
+      "duration": 5.6,
+      "text": "the flat fill and a pixel value new"
+    },
+    {
+      "start": 50.16,
+      "end": 54.96,
+      "duration": 4.8,
+      "text": "color flood fill the image"
+    },
+    {
+      "start": 53.04,
+      "end": 57.04,
+      "duration": 4.0,
+      "text": "now to perform a flat fill consider the"
+    },
+    {
+      "start": 54.96,
+      "end": 58.48,
+      "duration": 3.52,
+      "text": "starting pixel plus any pixels"
+    },
+    {
+      "start": 57.04,
+      "end": 60.16,
+      "duration": 3.12,
+      "text": "connecting four directionally to the"
+    },
+    {
+      "start": 58.48,
+      "end": 63.04,
+      "duration": 4.56,
+      "text": "starting pixel of the same color as the"
+    },
+    {
+      "start": 60.16,
+      "end": 64.8,
+      "duration": 4.64,
+      "text": "starting pixel plus any pixels connected"
+    },
+    {
+      "start": 63.04,
+      "end": 65.92,
+      "duration": 2.88,
+      "text": "four directionally to those pixels and"
+    },
+    {
+      "start": 64.8,
+      "end": 68.56,
+      "duration": 3.76,
+      "text": "so on"
+    },
+    {
+      "start": 65.92,
+      "end": 71.2,
+      "duration": 5.28,
+      "text": "replace the color of all of the uh"
+    },
+    {
+      "start": 68.56,
+      "end": 74.0,
+      "duration": 5.44,
+      "text": "aforementioned pixels with the new color"
+    },
+    {
+      "start": 71.2,
+      "end": 75.68,
+      "duration": 4.48,
+      "text": "a bit confusing right not an issue let's"
+    },
+    {
+      "start": 74.0,
+      "end": 77.6,
+      "duration": 3.6,
+      "text": "come back to the ipad and understand the"
+    },
+    {
+      "start": 75.68,
+      "end": 79.92,
+      "duration": 4.24,
+      "text": "question so the question states you'll"
+    },
+    {
+      "start": 77.6,
+      "end": 82.16,
+      "duration": 4.56,
+      "text": "be given something like this okay and"
+    },
+    {
+      "start": 79.92,
+      "end": 85.52,
+      "duration": 5.6,
+      "text": "this matrix can be filled up filled up"
+    },
+    {
+      "start": 82.16,
+      "end": 86.4,
+      "duration": 4.24,
+      "text": "with anything it can be 0 1 2 3 4 any"
+    },
+    {
+      "start": 85.52,
+      "end": 87.36,
+      "duration": 1.84,
+      "text": "numbers"
+    },
+    {
+      "start": 86.4,
+      "end": 89.12,
+      "duration": 2.72,
+      "text": "okay"
+    },
+    {
+      "start": 87.36,
+      "end": 91.28,
+      "duration": 3.92,
+      "text": "over here they will be giving you a"
+    },
+    {
+      "start": 89.12,
+      "end": 93.2,
+      "duration": 4.08,
+      "text": "starting row and a starting column so"
+    },
+    {
+      "start": 91.28,
+      "end": 94.8,
+      "duration": 3.52,
+      "text": "over here i can say this is the starting"
+    },
+    {
+      "start": 93.2,
+      "end": 97.44,
+      "duration": 4.24,
+      "text": "row and this is the column because if i"
+    },
+    {
+      "start": 94.8,
+      "end": 99.68,
+      "duration": 4.88,
+      "text": "number them it's like 0 1 2. so this is"
+    },
+    {
+      "start": 97.44,
+      "end": 102.48,
+      "duration": 5.04,
+      "text": "the starting row and the column what is"
+    },
+    {
+      "start": 99.68,
+      "end": 104.56,
+      "duration": 4.88,
+      "text": "the color of that starting so i can say"
+    },
+    {
+      "start": 102.48,
+      "end": 107.84,
+      "duration": 5.36,
+      "text": "the initial color is"
+    },
+    {
+      "start": 104.56,
+      "end": 109.36,
+      "duration": 4.8,
+      "text": "one okay now what i want is flat fill"
+    },
+    {
+      "start": 107.84,
+      "end": 112.0,
+      "duration": 4.16,
+      "text": "says okay"
+    },
+    {
+      "start": 109.36,
+      "end": 113.28,
+      "duration": 3.92,
+      "text": "one that's your initial color"
+    },
+    {
+      "start": 112.0,
+      "end": 116.08,
+      "duration": 4.08,
+      "text": "whoever"
+    },
+    {
+      "start": 113.28,
+      "end": 118.16,
+      "duration": 4.88,
+      "text": "is connected to one and has the same"
+    },
+    {
+      "start": 116.08,
+      "end": 120.4,
+      "duration": 4.32,
+      "text": "color so this is connected to one and"
+    },
+    {
+      "start": 118.16,
+      "end": 122.96,
+      "duration": 4.8,
+      "text": "has the same color this is"
+    },
+    {
+      "start": 120.4,
+      "end": 124.72,
+      "duration": 4.32,
+      "text": "not in not in this direction they only"
+    },
+    {
+      "start": 122.96,
+      "end": 126.88,
+      "duration": 3.92,
+      "text": "allow you in four direction so you can"
+    },
+    {
+      "start": 124.72,
+      "end": 128.96,
+      "duration": 4.24,
+      "text": "see this guy is connected to this guy"
+    },
+    {
+      "start": 126.88,
+      "end": 131.6,
+      "duration": 4.72,
+      "text": "and this guy not to this because it is"
+    },
+    {
+      "start": 128.96,
+      "end": 133.2,
+      "duration": 4.24,
+      "text": "zero and this is not allowed so it is"
+    },
+    {
+      "start": 131.6,
+      "end": 134.8,
+      "duration": 3.2,
+      "text": "connected to two guys"
+    },
+    {
+      "start": 133.2,
+      "end": 136.72,
+      "duration": 3.52,
+      "text": "remember this this"
+    },
+    {
+      "start": 134.8,
+      "end": 139.36,
+      "duration": 4.56,
+      "text": "one is connected to two guys"
+    },
+    {
+      "start": 136.72,
+      "end": 142.0,
+      "duration": 5.28,
+      "text": "so what you will do is the first color"
+    },
+    {
+      "start": 139.36,
+      "end": 143.76,
+      "duration": 4.4,
+      "text": "you will color that with two"
+    },
+    {
+      "start": 142.0,
+      "end": 146.24,
+      "duration": 4.24,
+      "text": "because that is what they're asking you"
+    },
+    {
+      "start": 143.76,
+      "end": 148.8,
+      "duration": 5.04,
+      "text": "to color then whoever is connected with"
+    },
+    {
+      "start": 146.24,
+      "end": 151.04,
+      "duration": 4.8,
+      "text": "it you color them with the same color so"
+    },
+    {
+      "start": 148.8,
+      "end": 154.4,
+      "duration": 5.6,
+      "text": "these couple of guys were the same"
+    },
+    {
+      "start": 151.04,
+      "end": 156.56,
+      "duration": 5.52,
+      "text": "pixels pixels same one pixel so you"
+    },
+    {
+      "start": 154.4,
+      "end": 159.6,
+      "duration": 5.2,
+      "text": "colored them with the new color that is"
+    },
+    {
+      "start": 156.56,
+      "end": 162.0,
+      "duration": 5.44,
+      "text": "two right after that these twos"
+    },
+    {
+      "start": 159.6,
+      "end": 164.56,
+      "duration": 4.96,
+      "text": "are connected to these four directions"
+    },
+    {
+      "start": 162.0,
+      "end": 166.8,
+      "duration": 4.8,
+      "text": "so you can color this and this so again"
+    },
+    {
+      "start": 164.56,
+      "end": 169.84,
+      "duration": 5.28,
+      "text": "make sure you color this and this"
+    },
+    {
+      "start": 166.8,
+      "end": 172.56,
+      "duration": 5.76,
+      "text": "this pixel is again connected to these"
+    },
+    {
+      "start": 169.84,
+      "end": 173.76,
+      "duration": 3.92,
+      "text": "so you can color this thereby color this"
+    },
+    {
+      "start": 172.56,
+      "end": 176.72,
+      "duration": 4.16,
+      "text": "as of now"
+    },
+    {
+      "start": 173.76,
+      "end": 179.36,
+      "duration": 5.6,
+      "text": "this is the final configuration we could"
+    },
+    {
+      "start": 176.72,
+      "end": 181.76,
+      "duration": 5.04,
+      "text": "not reach this so we will keep it as it"
+    },
+    {
+      "start": 179.36,
+      "end": 184.48,
+      "duration": 5.12,
+      "text": "is so this is how you flat fill the"
+    },
+    {
+      "start": 181.76,
+      "end": 186.0,
+      "duration": 4.24,
+      "text": "algorithm so let me give you one more"
+    },
+    {
+      "start": 184.48,
+      "end": 187.44,
+      "duration": 2.96,
+      "text": "example so assume you have something"
+    },
+    {
+      "start": 186.0,
+      "end": 190.4,
+      "duration": 4.4,
+      "text": "like one"
+    },
+    {
+      "start": 187.44,
+      "end": 193.52,
+      "duration": 6.08,
+      "text": "one one and you have something like two"
+    },
+    {
+      "start": 190.4,
+      "end": 195.04,
+      "duration": 4.64,
+      "text": "and this was two this was zero assume"
+    },
+    {
+      "start": 193.52,
+      "end": 196.96,
+      "duration": 3.44,
+      "text": "and this was two"
+    },
+    {
+      "start": 195.04,
+      "end": 198.64,
+      "duration": 3.6,
+      "text": "this was two and this was two and they"
+    },
+    {
+      "start": 196.96,
+      "end": 200.64,
+      "duration": 3.68,
+      "text": "said uh the new color that you have to"
+    },
+    {
+      "start": 198.64,
+      "end": 203.76,
+      "duration": 5.12,
+      "text": "pick up the new color rather that you"
+    },
+    {
+      "start": 200.64,
+      "end": 205.84,
+      "duration": 5.2,
+      "text": "have to do is three okay and they're"
+    },
+    {
+      "start": 203.76,
+      "end": 208.24,
+      "duration": 4.48,
+      "text": "saying the starting row to be"
+    },
+    {
+      "start": 205.84,
+      "end": 210.4,
+      "duration": 4.56,
+      "text": "two and the starting column to be zero"
+    },
+    {
+      "start": 208.24,
+      "end": 212.64,
+      "duration": 4.4,
+      "text": "assume that this is the case so if i"
+    },
+    {
+      "start": 210.4,
+      "end": 215.76,
+      "duration": 5.36,
+      "text": "draw the matrix let's draw the matrix so"
+    },
+    {
+      "start": 212.64,
+      "end": 217.12,
+      "duration": 4.48,
+      "text": "this is the matrix right if i"
+    },
+    {
+      "start": 215.76,
+      "end": 218.48,
+      "duration": 2.72,
+      "text": "row number then this will be zero one"
+    },
+    {
+      "start": 217.12,
+      "end": 221.04,
+      "duration": 3.92,
+      "text": "two if i column number then this will be"
+    },
+    {
+      "start": 218.48,
+      "end": 223.28,
+      "duration": 4.8,
+      "text": "zero one two starting root two starting"
+    },
+    {
+      "start": 221.04,
+      "end": 226.8,
+      "duration": 5.76,
+      "text": "column zero which is basically this one"
+    },
+    {
+      "start": 223.28,
+      "end": 229.84,
+      "duration": 6.56,
+      "text": "okay and the initial color is two the"
+    },
+    {
+      "start": 226.8,
+      "end": 231.68,
+      "duration": 4.88,
+      "text": "initial color is two you need to make"
+    },
+    {
+      "start": 229.84,
+      "end": 233.36,
+      "duration": 3.52,
+      "text": "sure everyone"
+    },
+    {
+      "start": 231.68,
+      "end": 236.0,
+      "duration": 4.32,
+      "text": "that is connected to two and has the"
+    },
+    {
+      "start": 233.36,
+      "end": 238.56,
+      "duration": 5.2,
+      "text": "same color is colored with three the"
+    },
+    {
+      "start": 236.0,
+      "end": 240.48,
+      "duration": 4.48,
+      "text": "first of all you color this with three"
+    },
+    {
+      "start": 238.56,
+      "end": 242.08,
+      "duration": 3.52,
+      "text": "because that is what the new color is"
+    },
+    {
+      "start": 240.48,
+      "end": 244.72,
+      "duration": 4.24,
+      "text": "you go to adjacent so this is the"
+    },
+    {
+      "start": 242.08,
+      "end": 247.04,
+      "duration": 4.96,
+      "text": "adjacent you collect them with three"
+    },
+    {
+      "start": 244.72,
+      "end": 249.6,
+      "duration": 4.88,
+      "text": "perfect for this three this is an"
+    },
+    {
+      "start": 247.04,
+      "end": 251.76,
+      "duration": 4.72,
+      "text": "adjacent this is an adjacent this is an"
+    },
+    {
+      "start": 249.6,
+      "end": 254.0,
+      "duration": 4.4,
+      "text": "adjacent this is an adjacent but only"
+    },
+    {
+      "start": 251.76,
+      "end": 256.48,
+      "duration": 4.72,
+      "text": "this guy is having the same initial"
+    },
+    {
+      "start": 254.0,
+      "end": 258.96,
+      "duration": 4.96,
+      "text": "color so thereby you color this with"
+    },
+    {
+      "start": 256.48,
+      "end": 261.04,
+      "duration": 4.56,
+      "text": "three perfect now this three is"
+    },
+    {
+      "start": 258.96,
+      "end": 263.44,
+      "duration": 4.48,
+      "text": "connected to four directions but only"
+    },
+    {
+      "start": 261.04,
+      "end": 266.32,
+      "duration": 5.28,
+      "text": "this guy is having the same initial"
+    },
+    {
+      "start": 263.44,
+      "end": 268.56,
+      "duration": 5.12,
+      "text": "color too so you color this apparently"
+    },
+    {
+      "start": 266.32,
+      "end": 270.32,
+      "duration": 4.0,
+      "text": "this will be the final configuration"
+    },
+    {
+      "start": 268.56,
+      "end": 272.72,
+      "duration": 4.16,
+      "text": "because these guys are connected but"
+    },
+    {
+      "start": 270.32,
+      "end": 274.88,
+      "duration": 4.56,
+      "text": "this is one one one zero so you do not"
+    },
+    {
+      "start": 272.72,
+      "end": 277.84,
+      "duration": 5.12,
+      "text": "color them you only color the guy who's"
+    },
+    {
+      "start": 274.88,
+      "end": 280.4,
+      "duration": 5.52,
+      "text": "collected by the same initial color that"
+    },
+    {
+      "start": 277.84,
+      "end": 281.52,
+      "duration": 3.68,
+      "text": "you're coloring this particular guy this"
+    },
+    {
+      "start": 280.4,
+      "end": 282.48,
+      "duration": 2.08,
+      "text": "is how"
+    },
+    {
+      "start": 281.52,
+      "end": 285.84,
+      "duration": 4.32,
+      "text": "you can"
+    },
+    {
+      "start": 282.48,
+      "end": 288.4,
+      "duration": 5.92,
+      "text": "blood fill any given matrix by starting"
+    },
+    {
+      "start": 285.84,
+      "end": 289.76,
+      "duration": 3.92,
+      "text": "from a row and a column so how do you"
+    },
+    {
+      "start": 288.4,
+      "end": 291.84,
+      "duration": 3.44,
+      "text": "solve this"
+    },
+    {
+      "start": 289.76,
+      "end": 293.52,
+      "duration": 3.76,
+      "text": "so as of now we can see that this is the"
+    },
+    {
+      "start": 291.84,
+      "end": 296.0,
+      "duration": 4.16,
+      "text": "starting row and this is the starting"
+    },
+    {
+      "start": 293.52,
+      "end": 298.0,
+      "duration": 4.48,
+      "text": "column which is this particular guy so"
+    },
+    {
+      "start": 296.0,
+      "end": 301.04,
+      "duration": 5.04,
+      "text": "what are we looking for we are looking"
+    },
+    {
+      "start": 298.0,
+      "end": 302.88,
+      "duration": 4.88,
+      "text": "to basically extend this to these guys"
+    },
+    {
+      "start": 301.04,
+      "end": 305.84,
+      "duration": 4.8,
+      "text": "then to these guys and then to these"
+    },
+    {
+      "start": 302.88,
+      "end": 308.16,
+      "duration": 5.28,
+      "text": "guys that is what we are looking for so"
+    },
+    {
+      "start": 305.84,
+      "end": 311.2,
+      "duration": 5.36,
+      "text": "which algorithm can we follow we can"
+    },
+    {
+      "start": 308.16,
+      "end": 313.36,
+      "duration": 5.2,
+      "text": "follow one kind of algorithm which is"
+    },
+    {
+      "start": 311.2,
+      "end": 314.64,
+      "duration": 3.44,
+      "text": "breadth first search and breadth first"
+    },
+    {
+      "start": 313.36,
+      "end": 317.12,
+      "duration": 3.76,
+      "text": "search says"
+    },
+    {
+      "start": 314.64,
+      "end": 319.92,
+      "duration": 5.28,
+      "text": "that we start at the given point"
+    },
+    {
+      "start": 317.12,
+      "end": 322.48,
+      "duration": 5.36,
+      "text": "we go on level wise"
+    },
+    {
+      "start": 319.92,
+      "end": 324.32,
+      "duration": 4.4,
+      "text": "so first we go to this"
+    },
+    {
+      "start": 322.48,
+      "end": 326.0,
+      "duration": 3.52,
+      "text": "simultaneously and we color them like"
+    },
+    {
+      "start": 324.32,
+      "end": 327.68,
+      "duration": 3.36,
+      "text": "first we color this then we go"
+    },
+    {
+      "start": 326.0,
+      "end": 330.08,
+      "duration": 4.08,
+      "text": "simultaneously"
+    },
+    {
+      "start": 327.68,
+      "end": 332.96,
+      "duration": 5.28,
+      "text": "on the same level and color them"
+    },
+    {
+      "start": 330.08,
+      "end": 335.92,
+      "duration": 5.84,
+      "text": "then we go simultaneously on every level"
+    },
+    {
+      "start": 332.96,
+      "end": 338.08,
+      "duration": 5.12,
+      "text": "and color them so it is level wise we"
+    },
+    {
+      "start": 335.92,
+      "end": 340.16,
+      "duration": 4.24,
+      "text": "can definitely do that and you have done"
+    },
+    {
+      "start": 338.08,
+      "end": 342.8,
+      "duration": 4.72,
+      "text": "that in the previous problem so we can"
+    },
+    {
+      "start": 340.16,
+      "end": 344.4,
+      "duration": 4.24,
+      "text": "definitely use something like a bfs"
+    },
+    {
+      "start": 342.8,
+      "end": 347.84,
+      "duration": 5.04,
+      "text": "algorithm where we go"
+    },
+    {
+      "start": 344.4,
+      "end": 349.92,
+      "duration": 5.52,
+      "text": "simultaneously on all its neighbors or"
+    },
+    {
+      "start": 347.84,
+      "end": 351.28,
+      "duration": 3.44,
+      "text": "what i can do is i can use something"
+    },
+    {
+      "start": 349.92,
+      "end": 353.28,
+      "duration": 3.36,
+      "text": "like a"
+    },
+    {
+      "start": 351.28,
+      "end": 355.76,
+      "duration": 4.48,
+      "text": "dfs algorithm because the previous"
+    },
+    {
+      "start": 353.28,
+      "end": 357.84,
+      "duration": 4.56,
+      "text": "problem we solved using bfs so this"
+    },
+    {
+      "start": 355.76,
+      "end": 360.56,
+      "duration": 4.8,
+      "text": "problem we will be focusing to solve"
+    },
+    {
+      "start": 357.84,
+      "end": 363.44,
+      "duration": 5.6,
+      "text": "using dfs so that you understand that"
+    },
+    {
+      "start": 360.56,
+      "end": 366.08,
+      "duration": 5.52,
+      "text": "why does dfs work over here so over here"
+    },
+    {
+      "start": 363.44,
+      "end": 367.52,
+      "duration": 4.08,
+      "text": "it's nothing like that you have to uh"
+    },
+    {
+      "start": 366.08,
+      "end": 370.08,
+      "duration": 4.0,
+      "text": "color them in a minimum time or"
+    },
+    {
+      "start": 367.52,
+      "end": 372.08,
+      "duration": 4.56,
+      "text": "something like that the question says at"
+    },
+    {
+      "start": 370.08,
+      "end": 375.36,
+      "duration": 5.28,
+      "text": "the end of the day i need the final"
+    },
+    {
+      "start": 372.08,
+      "end": 377.12,
+      "duration": 5.04,
+      "text": "configuration so the the"
+    },
+    {
+      "start": 375.36,
+      "end": 379.44,
+      "duration": 4.08,
+      "text": "so the requirement is at the end of the"
+    },
+    {
+      "start": 377.12,
+      "end": 380.56,
+      "duration": 3.44,
+      "text": "day you just need to make sure"
+    },
+    {
+      "start": 379.44,
+      "end": 381.6,
+      "duration": 2.16,
+      "text": "everything"
+    },
+    {
+      "start": 380.56,
+      "end": 384.08,
+      "duration": 3.52,
+      "text": "that is"
+    },
+    {
+      "start": 381.6,
+      "end": 385.6,
+      "duration": 4.0,
+      "text": "touched to this 2"
+    },
+    {
+      "start": 384.08,
+      "end": 388.0,
+      "duration": 3.92,
+      "text": "and is 2"
+    },
+    {
+      "start": 385.6,
+      "end": 391.68,
+      "duration": 6.08,
+      "text": "is colored"
+    },
+    {
+      "start": 388.0,
+      "end": 394.48,
+      "duration": 6.48,
+      "text": "with 3 that is what you want at the end"
+    },
+    {
+      "start": 391.68,
+      "end": 396.56,
+      "duration": 4.88,
+      "text": "everything that is dust to 2 and is 3"
+    },
+    {
+      "start": 394.48,
+      "end": 398.72,
+      "duration": 4.24,
+      "text": "and is 2 rather should be colored with"
+    },
+    {
+      "start": 396.56,
+      "end": 400.56,
+      "duration": 4.0,
+      "text": "the new color 3. so"
+    },
+    {
+      "start": 398.72,
+      "end": 403.84,
+      "duration": 5.12,
+      "text": "it basically means if i"
+    },
+    {
+      "start": 400.56,
+      "end": 405.44,
+      "duration": 4.88,
+      "text": "start with this and i try to do a dfs"
+    },
+    {
+      "start": 403.84,
+      "end": 407.36,
+      "duration": 3.52,
+      "text": "so basically this guy will have two"
+    },
+    {
+      "start": 405.44,
+      "end": 410.4,
+      "duration": 4.96,
+      "text": "neighbors one is this guy and one is"
+    },
+    {
+      "start": 407.36,
+      "end": 412.72,
+      "duration": 5.36,
+      "text": "this guy so either it can go like this"
+    },
+    {
+      "start": 410.4,
+      "end": 414.48,
+      "duration": 4.08,
+      "text": "and then come back and go like this or"
+    },
+    {
+      "start": 412.72,
+      "end": 415.36,
+      "duration": 2.64,
+      "text": "either it can do the other way it's like"
+    },
+    {
+      "start": 414.48,
+      "end": 418.16,
+      "duration": 3.68,
+      "text": "this"
+    },
+    {
+      "start": 415.36,
+      "end": 421.04,
+      "duration": 5.68,
+      "text": "come back and go like this so you can do"
+    },
+    {
+      "start": 418.16,
+      "end": 422.48,
+      "duration": 4.32,
+      "text": "it both the ways so what i'll do is i"
+    },
+    {
+      "start": 421.04,
+      "end": 424.32,
+      "duration": 3.28,
+      "text": "will try to have the"
+    },
+    {
+      "start": 422.48,
+      "end": 427.6,
+      "duration": 5.12,
+      "text": "tfs so"
+    },
+    {
+      "start": 424.32,
+      "end": 430.16,
+      "duration": 5.84,
+      "text": "i can say the initial dfs i'll start"
+    },
+    {
+      "start": 427.6,
+      "end": 432.16,
+      "duration": 4.56,
+      "text": "from the first guy that is the starting"
+    },
+    {
+      "start": 430.16,
+      "end": 434.56,
+      "duration": 4.4,
+      "text": "row and the starting column and make"
+    },
+    {
+      "start": 432.16,
+      "end": 436.08,
+      "duration": 3.92,
+      "text": "sure you store the initial color as to"
+    },
+    {
+      "start": 434.56,
+      "end": 438.4,
+      "duration": 3.84,
+      "text": "that's the initial color remember this"
+    },
+    {
+      "start": 436.08,
+      "end": 441.12,
+      "duration": 5.04,
+      "text": "that is the initial color too so you say"
+    },
+    {
+      "start": 438.4,
+      "end": 443.44,
+      "duration": 5.04,
+      "text": "dfs of 2 comma 0 is where you start off"
+    },
+    {
+      "start": 441.12,
+      "end": 445.76,
+      "duration": 4.64,
+      "text": "with and when you're starting off you"
+    },
+    {
+      "start": 443.44,
+      "end": 448.16,
+      "duration": 4.72,
+      "text": "need the final color right you need the"
+    },
+    {
+      "start": 445.76,
+      "end": 450.8,
+      "duration": 5.04,
+      "text": "final color so either you can use the"
+    },
+    {
+      "start": 448.16,
+      "end": 453.68,
+      "duration": 5.52,
+      "text": "same matrix but i generally do not"
+    },
+    {
+      "start": 450.8,
+      "end": 455.68,
+      "duration": 4.88,
+      "text": "prefer to alter the input matrix why"
+    },
+    {
+      "start": 453.68,
+      "end": 458.32,
+      "duration": 4.64,
+      "text": "because whenever you go into the"
+    },
+    {
+      "start": 455.68,
+      "end": 460.24,
+      "duration": 4.56,
+      "text": "industry whenever data is given to you"
+    },
+    {
+      "start": 458.32,
+      "end": 462.32,
+      "duration": 4.0,
+      "text": "you work on that data you do not tamper"
+    },
+    {
+      "start": 460.24,
+      "end": 464.64,
+      "duration": 4.4,
+      "text": "with the data because data is very very"
+    },
+    {
+      "start": 462.32,
+      "end": 467.12,
+      "duration": 4.8,
+      "text": "important so we always have to treat the"
+    },
+    {
+      "start": 464.64,
+      "end": 469.28,
+      "duration": 4.64,
+      "text": "data as the data and we do not tamper"
+    },
+    {
+      "start": 467.12,
+      "end": 471.04,
+      "duration": 3.92,
+      "text": "with it something that is given to us we"
+    },
+    {
+      "start": 469.28,
+      "end": 473.52,
+      "duration": 4.24,
+      "text": "should never tamper with it we should"
+    },
+    {
+      "start": 471.04,
+      "end": 475.68,
+      "duration": 4.64,
+      "text": "always solve the problem without"
+    },
+    {
+      "start": 473.52,
+      "end": 477.6,
+      "duration": 4.08,
+      "text": "doing any alteration to that particular"
+    },
+    {
+      "start": 475.68,
+      "end": 480.32,
+      "duration": 4.64,
+      "text": "data that is something which we follow"
+    },
+    {
+      "start": 477.6,
+      "end": 483.12,
+      "duration": 5.52,
+      "text": "in software engineering a lot"
+    },
+    {
+      "start": 480.32,
+      "end": 485.84,
+      "duration": 5.52,
+      "text": "so what we will do is we will create"
+    },
+    {
+      "start": 483.12,
+      "end": 487.68,
+      "duration": 4.56,
+      "text": "a copy of this data okay"
+    },
+    {
+      "start": 485.84,
+      "end": 490.08,
+      "duration": 4.24,
+      "text": "we will create a copy of this data and"
+    },
+    {
+      "start": 487.68,
+      "end": 491.6,
+      "duration": 3.92,
+      "text": "we will just fill up everything with the"
+    },
+    {
+      "start": 490.08,
+      "end": 492.48,
+      "duration": 2.4,
+      "text": "same numbers okay"
+    },
+    {
+      "start": 491.6,
+      "end": 494.88,
+      "duration": 3.28,
+      "text": "perfect"
+    },
+    {
+      "start": 492.48,
+      "end": 497.36,
+      "duration": 4.88,
+      "text": "so we are starting with dfs of 2 0 which"
+    },
+    {
+      "start": 494.88,
+      "end": 500.96,
+      "duration": 6.08,
+      "text": "means at this portion so what you will"
+    },
+    {
+      "start": 497.36,
+      "end": 502.56,
+      "duration": 5.2,
+      "text": "do is when you go inside you say hey can"
+    },
+    {
+      "start": 500.96,
+      "end": 504.48,
+      "duration": 3.52,
+      "text": "you take the new color three and like"
+    },
+    {
+      "start": 502.56,
+      "end": 507.12,
+      "duration": 4.56,
+      "text": "okay i'll take the new color three has"
+    },
+    {
+      "start": 504.48,
+      "end": 508.24,
+      "duration": 3.76,
+      "text": "taken the new color three now he knows"
+    },
+    {
+      "start": 507.12,
+      "end": 510.96,
+      "duration": 3.84,
+      "text": "he has"
+    },
+    {
+      "start": 508.24,
+      "end": 513.12,
+      "duration": 4.88,
+      "text": "two neighbors or two"
+    },
+    {
+      "start": 510.96,
+      "end": 516.88,
+      "duration": 5.92,
+      "text": "people who are connected to him"
+    },
+    {
+      "start": 513.12,
+      "end": 522.0,
+      "duration": 8.88,
+      "text": "one is the dfs of one comma zero the"
+    },
+    {
+      "start": 516.88,
+      "end": 525.2,
+      "duration": 8.32,
+      "text": "other one is the dfs of 2 comma 1 so"
+    },
+    {
+      "start": 522.0,
+      "end": 527.92,
+      "duration": 5.92,
+      "text": "basically 1 comma 0 is this 2 comma 1 is"
+    },
+    {
+      "start": 525.2,
+      "end": 529.76,
+      "duration": 4.56,
+      "text": "this so either it can go here either it"
+    },
+    {
+      "start": 527.92,
+      "end": 531.92,
+      "duration": 4.0,
+      "text": "can go here so if you remember what is"
+    },
+    {
+      "start": 529.76,
+      "end": 534.0,
+      "duration": 4.24,
+      "text": "the dfs algorithm goes first in the"
+    },
+    {
+      "start": 531.92,
+      "end": 536.24,
+      "duration": 4.32,
+      "text": "depth goes first in the depth so we'll"
+    },
+    {
+      "start": 534.0,
+      "end": 538.16,
+      "duration": 4.16,
+      "text": "try to go first in this portion of depth"
+    },
+    {
+      "start": 536.24,
+      "end": 540.32,
+      "duration": 4.08,
+      "text": "it could have gone the either way"
+    },
+    {
+      "start": 538.16,
+      "end": 543.28,
+      "duration": 5.12,
+      "text": "depending on how you are writing the"
+    },
+    {
+      "start": 540.32,
+      "end": 546.24,
+      "duration": 5.92,
+      "text": "code it can go on this or on this so we"
+    },
+    {
+      "start": 543.28,
+      "end": 548.16,
+      "duration": 4.88,
+      "text": "will see that it goes on this dfs of one"
+    },
+    {
+      "start": 546.24,
+      "end": 550.48,
+      "duration": 4.24,
+      "text": "zero so again you go to one zero which"
+    },
+    {
+      "start": 548.16,
+      "end": 554.24,
+      "duration": 6.08,
+      "text": "is this and you color that with the new"
+    },
+    {
+      "start": 550.48,
+      "end": 555.2,
+      "duration": 4.72,
+      "text": "color now this one zero is having one"
+    },
+    {
+      "start": 554.24,
+      "end": 557.52,
+      "duration": 3.28,
+      "text": "children"
+    },
+    {
+      "start": 555.2,
+      "end": 560.72,
+      "duration": 5.52,
+      "text": "and these children are not having the"
+    },
+    {
+      "start": 557.52,
+      "end": 563.44,
+      "duration": 5.92,
+      "text": "same color it's not two and this is"
+    },
+    {
+      "start": 560.72,
+      "end": 565.6,
+      "duration": 4.88,
+      "text": "invalid and this has already been"
+    },
+    {
+      "start": 563.44,
+      "end": 568.08,
+      "duration": 4.64,
+      "text": "visited it is not having the initial"
+    },
+    {
+      "start": 565.6,
+      "end": 570.64,
+      "duration": 5.04,
+      "text": "color too so you only go to this"
+    },
+    {
+      "start": 568.08,
+      "end": 573.12,
+      "duration": 5.04,
+      "text": "direction remember this you only go to"
+    },
+    {
+      "start": 570.64,
+      "end": 577.04,
+      "duration": 6.4,
+      "text": "this direction which is dfs of"
+    },
+    {
+      "start": 573.12,
+      "end": 578.64,
+      "duration": 5.52,
+      "text": "one one so now we will go to dfs of 1 1"
+    },
+    {
+      "start": 577.04,
+      "end": 582.4,
+      "duration": 5.36,
+      "text": "so we add"
+    },
+    {
+      "start": 578.64,
+      "end": 584.32,
+      "duration": 5.68,
+      "text": "dfs of 1 1 which is this guy so this guy"
+    },
+    {
+      "start": 582.4,
+      "end": 586.56,
+      "duration": 4.16,
+      "text": "will be colored with the new color 3 so"
+    },
+    {
+      "start": 584.32,
+      "end": 588.96,
+      "duration": 4.64,
+      "text": "let's color that with the new color 3."
+    },
+    {
+      "start": 586.56,
+      "end": 591.68,
+      "duration": 5.12,
+      "text": "now since it is colored it will look for"
+    },
+    {
+      "start": 588.96,
+      "end": 593.44,
+      "duration": 4.48,
+      "text": "its neighbor no it is one"
+    },
+    {
+      "start": 591.68,
+      "end": 595.52,
+      "duration": 3.84,
+      "text": "no it is zero"
+    },
+    {
+      "start": 593.44,
+      "end": 597.12,
+      "duration": 3.68,
+      "text": "this one already visited"
+    },
+    {
+      "start": 595.52,
+      "end": 598.48,
+      "duration": 2.96,
+      "text": "this one"
+    },
+    {
+      "start": 597.12,
+      "end": 601.92,
+      "duration": 4.8,
+      "text": "yes"
+    },
+    {
+      "start": 598.48,
+      "end": 605.12,
+      "duration": 6.64,
+      "text": "it is two and it has not been visited"
+    },
+    {
+      "start": 601.92,
+      "end": 608.56,
+      "duration": 6.64,
+      "text": "it will be visited but that dfs has not"
+    },
+    {
+      "start": 605.12,
+      "end": 611.12,
+      "duration": 6.0,
+      "text": "been called yet it will be visited but"
+    },
+    {
+      "start": 608.56,
+      "end": 614.8,
+      "duration": 6.24,
+      "text": "it was supposed to take two sides but"
+    },
+    {
+      "start": 611.12,
+      "end": 616.16,
+      "duration": 5.04,
+      "text": "since it is dfs since it is dfs it will"
+    },
+    {
+      "start": 614.8,
+      "end": 618.48,
+      "duration": 3.68,
+      "text": "go like this"
+    },
+    {
+      "start": 616.16,
+      "end": 622.4,
+      "duration": 6.24,
+      "text": "then like this stand like this"
+    },
+    {
+      "start": 618.48,
+      "end": 625.28,
+      "duration": 6.8,
+      "text": "tfs depth first search at first okay so"
+    },
+    {
+      "start": 622.4,
+      "end": 628.8,
+      "duration": 6.4,
+      "text": "what will happen is this dfs of one will"
+    },
+    {
+      "start": 625.28,
+      "end": 632.4,
+      "duration": 7.12,
+      "text": "now call for dfs of two comma one and it"
+    },
+    {
+      "start": 628.8,
+      "end": 633.36,
+      "duration": 4.56,
+      "text": "will mark this as three now this this"
+    },
+    {
+      "start": 632.4,
+      "end": 636.16,
+      "duration": 3.76,
+      "text": "guy"
+    },
+    {
+      "start": 633.36,
+      "end": 639.04,
+      "duration": 5.68,
+      "text": "looks at its neighbor already visited"
+    },
+    {
+      "start": 636.16,
+      "end": 642.32,
+      "duration": 6.16,
+      "text": "looks at it neighbor not visited so it"
+    },
+    {
+      "start": 639.04,
+      "end": 645.2,
+      "duration": 6.16,
+      "text": "does a visit for this which is dfs off"
+    },
+    {
+      "start": 642.32,
+      "end": 647.36,
+      "duration": 5.04,
+      "text": "two comma two goes there and marks it"
+    },
+    {
+      "start": 645.2,
+      "end": 648.24,
+      "duration": 3.04,
+      "text": "now when we go on the dfs of two next"
+    },
+    {
+      "start": 647.36,
+      "end": 650.4,
+      "duration": 3.04,
+      "text": "time"
+    },
+    {
+      "start": 648.24,
+      "end": 651.36,
+      "duration": 3.12,
+      "text": "we see this is"
+    },
+    {
+      "start": 650.4,
+      "end": 654.64,
+      "duration": 4.24,
+      "text": "having"
+    },
+    {
+      "start": 651.36,
+      "end": 658.16,
+      "duration": 6.8,
+      "text": "no one no one no one this guy already"
+    },
+    {
+      "start": 654.64,
+      "end": 660.72,
+      "duration": 6.08,
+      "text": "visited done so what he will do is he"
+    },
+    {
+      "start": 658.16,
+      "end": 661.76,
+      "duration": 3.6,
+      "text": "will say i do not have neighbors please"
+    },
+    {
+      "start": 660.72,
+      "end": 663.36,
+      "duration": 2.64,
+      "text": "go back"
+    },
+    {
+      "start": 661.76,
+      "end": 665.52,
+      "duration": 3.76,
+      "text": "this guy did not have any other"
+    },
+    {
+      "start": 663.36,
+      "end": 666.88,
+      "duration": 3.52,
+      "text": "neighbors it goes back"
+    },
+    {
+      "start": 665.52,
+      "end": 667.92,
+      "duration": 2.4,
+      "text": "this guy did not have any other"
+    },
+    {
+      "start": 666.88,
+      "end": 671.36,
+      "duration": 4.48,
+      "text": "neighbors"
+    },
+    {
+      "start": 667.92,
+      "end": 674.56,
+      "duration": 6.64,
+      "text": "goes back now dfs of one zero says i am"
+    },
+    {
+      "start": 671.36,
+      "end": 675.68,
+      "duration": 4.32,
+      "text": "done so dfs of two which started with"
+    },
+    {
+      "start": 674.56,
+      "end": 677.04,
+      "duration": 2.48,
+      "text": "two guys"
+    },
+    {
+      "start": 675.68,
+      "end": 679.36,
+      "duration": 3.68,
+      "text": "went into one"
+    },
+    {
+      "start": 677.04,
+      "end": 682.56,
+      "duration": 5.52,
+      "text": "came back it's time that it goes to the"
+    },
+    {
+      "start": 679.36,
+      "end": 685.28,
+      "duration": 5.92,
+      "text": "next but before going we will check"
+    },
+    {
+      "start": 682.56,
+      "end": 687.2,
+      "duration": 4.64,
+      "text": "is it worth going no it's already"
+    },
+    {
+      "start": 685.28,
+      "end": 690.48,
+      "duration": 5.2,
+      "text": "colored it is not having the initial"
+    },
+    {
+      "start": 687.2,
+      "end": 691.6,
+      "duration": 4.4,
+      "text": "color too that means someone came and"
+    },
+    {
+      "start": 690.48,
+      "end": 694.56,
+      "duration": 4.08,
+      "text": "colored it"
+    },
+    {
+      "start": 691.6,
+      "end": 695.52,
+      "duration": 3.92,
+      "text": "there's no point in going to this guy"
+    },
+    {
+      "start": 694.56,
+      "end": 697.36,
+      "duration": 2.8,
+      "text": "yes"
+    },
+    {
+      "start": 695.52,
+      "end": 699.92,
+      "duration": 4.4,
+      "text": "again recursion has to be strong"
+    },
+    {
+      "start": 697.36,
+      "end": 703.28,
+      "duration": 5.92,
+      "text": "recursion has to be super strong so we"
+    },
+    {
+      "start": 699.92,
+      "end": 705.2,
+      "duration": 5.28,
+      "text": "apparently went something like this"
+    },
+    {
+      "start": 703.28,
+      "end": 707.36,
+      "duration": 4.08,
+      "text": "and had you done"
+    },
+    {
+      "start": 705.2,
+      "end": 709.28,
+      "duration": 4.08,
+      "text": "something like a dfs on this side what"
+    },
+    {
+      "start": 707.36,
+      "end": 711.2,
+      "duration": 3.84,
+      "text": "would have happened you'd have gone from"
+    },
+    {
+      "start": 709.28,
+      "end": 712.88,
+      "duration": 3.6,
+      "text": "here to here"
+    },
+    {
+      "start": 711.2,
+      "end": 716.0,
+      "duration": 4.8,
+      "text": "then probably here"
+    },
+    {
+      "start": 712.88,
+      "end": 718.8,
+      "duration": 5.92,
+      "text": "came back and then here then here if you"
+    },
+    {
+      "start": 716.0,
+      "end": 722.32,
+      "duration": 6.32,
+      "text": "would have done dfs on this portion"
+    },
+    {
+      "start": 718.8,
+      "end": 725.92,
+      "duration": 7.12,
+      "text": "first so depends how your code works it"
+    },
+    {
+      "start": 722.32,
+      "end": 727.84,
+      "duration": 5.52,
+      "text": "will go and touch it in that manner"
+    },
+    {
+      "start": 725.92,
+      "end": 730.96,
+      "duration": 5.04,
+      "text": "it does not matter how you touch it"
+    },
+    {
+      "start": 727.84,
+      "end": 733.76,
+      "duration": 5.92,
+      "text": "because at the end of the day if all the"
+    },
+    {
+      "start": 730.96,
+      "end": 736.32,
+      "duration": 5.36,
+      "text": "twos that are attached to these this two"
+    },
+    {
+      "start": 733.76,
+      "end": 738.72,
+      "duration": 4.96,
+      "text": "are colored like threes that is what"
+    },
+    {
+      "start": 736.32,
+      "end": 741.76,
+      "duration": 5.44,
+      "text": "matters to me so you can go like bfs or"
+    },
+    {
+      "start": 738.72,
+      "end": 743.44,
+      "duration": 4.72,
+      "text": "dfs that is completely your choice so as"
+    },
+    {
+      "start": 741.76,
+      "end": 745.76,
+      "duration": 4.0,
+      "text": "usual i'll be writing the c plus plus"
+    },
+    {
+      "start": 743.44,
+      "end": 748.48,
+      "duration": 5.04,
+      "text": "code and the java code is on the left so"
+    },
+    {
+      "start": 745.76,
+      "end": 750.88,
+      "duration": 5.12,
+      "text": "you can follow that as well so"
+    },
+    {
+      "start": 748.48,
+      "end": 753.2,
+      "duration": 4.72,
+      "text": "we're given the image we're given the sr"
+    },
+    {
+      "start": 750.88,
+      "end": 754.96,
+      "duration": 4.08,
+      "text": "we're given the starting this so the"
+    },
+    {
+      "start": 753.2,
+      "end": 757.92,
+      "duration": 4.72,
+      "text": "first thing that we do is we keep the"
+    },
+    {
+      "start": 754.96,
+      "end": 760.96,
+      "duration": 6.0,
+      "text": "initial color will be the initial color"
+    },
+    {
+      "start": 757.92,
+      "end": 762.64,
+      "duration": 4.72,
+      "text": "definitely this there's no doubt in this"
+    },
+    {
+      "start": 760.96,
+      "end": 765.2,
+      "duration": 4.24,
+      "text": "what is the next thing that we do we"
+    },
+    {
+      "start": 762.64,
+      "end": 766.96,
+      "duration": 4.32,
+      "text": "copy this particular image"
+    },
+    {
+      "start": 765.2,
+      "end": 769.28,
+      "duration": 4.08,
+      "text": "because we need to"
+    },
+    {
+      "start": 766.96,
+      "end": 771.04,
+      "duration": 4.08,
+      "text": "flat fill it and return it so we will"
+    },
+    {
+      "start": 769.28,
+      "end": 773.84,
+      "duration": 4.56,
+      "text": "copy this"
+    },
+    {
+      "start": 771.04,
+      "end": 775.52,
+      "duration": 4.48,
+      "text": "into some answer okay perfect do we need"
+    },
+    {
+      "start": 773.84,
+      "end": 777.6,
+      "duration": 3.76,
+      "text": "something else really we can think about"
+    },
+    {
+      "start": 775.52,
+      "end": 779.68,
+      "duration": 4.16,
+      "text": "that afterwards let's call the dfs"
+    },
+    {
+      "start": 777.6,
+      "end": 782.88,
+      "duration": 5.28,
+      "text": "starting from the starting row starting"
+    },
+    {
+      "start": 779.68,
+      "end": 784.32,
+      "duration": 4.64,
+      "text": "column given the answer given the image"
+    },
+    {
+      "start": 782.88,
+      "end": 786.96,
+      "duration": 4.08,
+      "text": "and if we require something else we'll"
+    },
+    {
+      "start": 784.32,
+      "end": 788.72,
+      "duration": 4.4,
+      "text": "take that afterwards okay so we write a"
+    },
+    {
+      "start": 786.96,
+      "end": 790.16,
+      "duration": 3.2,
+      "text": "private function and the private"
+    },
+    {
+      "start": 788.72,
+      "end": 793.44,
+      "duration": 4.72,
+      "text": "function will have"
+    },
+    {
+      "start": 790.16,
+      "end": 794.8,
+      "duration": 4.64,
+      "text": "void dx and it knows it has add a row it"
+    },
+    {
+      "start": 793.44,
+      "end": 797.6,
+      "duration": 4.16,
+      "text": "has a column"
+    },
+    {
+      "start": 794.8,
+      "end": 799.28,
+      "duration": 4.48,
+      "text": "and it has this particular"
+    },
+    {
+      "start": 797.6,
+      "end": 801.68,
+      "duration": 4.08,
+      "text": "answer at first"
+    },
+    {
+      "start": 799.28,
+      "end": 804.24,
+      "duration": 4.96,
+      "text": "okay and then it has this particular"
+    },
+    {
+      "start": 801.68,
+      "end": 806.24,
+      "duration": 4.56,
+      "text": "image so that is something which it"
+    },
+    {
+      "start": 804.24,
+      "end": 808.64,
+      "duration": 4.4,
+      "text": "always has initial"
+    },
+    {
+      "start": 806.24,
+      "end": 810.8,
+      "duration": 4.56,
+      "text": "now what we will do is"
+    },
+    {
+      "start": 808.64,
+      "end": 811.84,
+      "duration": 3.2,
+      "text": "if you remember well enough whenever we"
+    },
+    {
+      "start": 810.8,
+      "end": 814.24,
+      "duration": 3.44,
+      "text": "entered"
+    },
+    {
+      "start": 811.84,
+      "end": 817.12,
+      "duration": 5.28,
+      "text": "whenever we entered on this row column"
+    },
+    {
+      "start": 814.24,
+      "end": 818.64,
+      "duration": 4.4,
+      "text": "we always colored it with the new color"
+    },
+    {
+      "start": 817.12,
+      "end": 820.24,
+      "duration": 3.12,
+      "text": "so you need the new color as well so"
+    },
+    {
+      "start": 818.64,
+      "end": 822.88,
+      "duration": 4.24,
+      "text": "please carry the new color as well"
+    },
+    {
+      "start": 820.24,
+      "end": 824.72,
+      "duration": 4.48,
+      "text": "something like int new color and you can"
+    },
+    {
+      "start": 822.88,
+      "end": 827.28,
+      "duration": 4.4,
+      "text": "always pass the new color over here"
+    },
+    {
+      "start": 824.72,
+      "end": 829.68,
+      "duration": 4.96,
+      "text": "perfect colored right after that"
+    },
+    {
+      "start": 827.28,
+      "end": 832.16,
+      "duration": 4.88,
+      "text": "it checks for its neighbor the upper"
+    },
+    {
+      "start": 829.68,
+      "end": 834.48,
+      "duration": 4.8,
+      "text": "neighbor the left the right the town guy"
+    },
+    {
+      "start": 832.16,
+      "end": 836.4,
+      "duration": 4.24,
+      "text": "right so how do how will you check for"
+    },
+    {
+      "start": 834.48,
+      "end": 838.16,
+      "duration": 3.68,
+      "text": "the upper neighbor and all of these so"
+    },
+    {
+      "start": 836.4,
+      "end": 839.92,
+      "duration": 3.52,
+      "text": "if i try to write it properly there is"
+    },
+    {
+      "start": 838.16,
+      "end": 843.68,
+      "duration": 5.52,
+      "text": "like something like row column"
+    },
+    {
+      "start": 839.92,
+      "end": 845.36,
+      "duration": 5.44,
+      "text": "and the upper neighbor is row minus one"
+    },
+    {
+      "start": 843.68,
+      "end": 848.0,
+      "duration": 4.32,
+      "text": "column"
+    },
+    {
+      "start": 845.36,
+      "end": 850.08,
+      "duration": 4.72,
+      "text": "correct and the one on the right is row"
+    },
+    {
+      "start": 848.0,
+      "end": 852.16,
+      "duration": 4.16,
+      "text": "comma column plus one"
+    },
+    {
+      "start": 850.08,
+      "end": 855.44,
+      "duration": 5.36,
+      "text": "the one at the bottom is"
+    },
+    {
+      "start": 852.16,
+      "end": 858.72,
+      "duration": 6.56,
+      "text": "row plus one column the one at the left"
+    },
+    {
+      "start": 855.44,
+      "end": 861.04,
+      "duration": 5.6,
+      "text": "is row comma column minus one so"
+    },
+    {
+      "start": 858.72,
+      "end": 863.2,
+      "duration": 4.48,
+      "text": "apparently these are the"
+    },
+    {
+      "start": 861.04,
+      "end": 865.12,
+      "duration": 4.08,
+      "text": "four neighbors i believe these are the"
+    },
+    {
+      "start": 863.2,
+      "end": 868.16,
+      "duration": 4.96,
+      "text": "four neighbors so"
+    },
+    {
+      "start": 865.12,
+      "end": 872.32,
+      "duration": 7.2,
+      "text": "either you can write four calls"
+    },
+    {
+      "start": 868.16,
+      "end": 875.36,
+      "duration": 7.2,
+      "text": "separately one by one by one but to"
+    },
+    {
+      "start": 872.32,
+      "end": 877.12,
+      "duration": 4.8,
+      "text": "maintain readability what you will do is"
+    },
+    {
+      "start": 875.36,
+      "end": 878.4,
+      "duration": 3.04,
+      "text": "we will try to figure out a way so we"
+    },
+    {
+      "start": 877.12,
+      "end": 880.8,
+      "duration": 3.68,
+      "text": "see there is"
+    },
+    {
+      "start": 878.4,
+      "end": 882.8,
+      "duration": 4.4,
+      "text": "a change of minus one in the row a"
+    },
+    {
+      "start": 880.8,
+      "end": 884.72,
+      "duration": 3.92,
+      "text": "change of plus zero in the row a change"
+    },
+    {
+      "start": 882.8,
+      "end": 887.44,
+      "duration": 4.64,
+      "text": "of plus one in the row a change of plus"
+    },
+    {
+      "start": 884.72,
+      "end": 889.76,
+      "duration": 5.04,
+      "text": "zero in the row so what i can say is"
+    },
+    {
+      "start": 887.44,
+      "end": 891.84,
+      "duration": 4.4,
+      "text": "delta change in row is"
+    },
+    {
+      "start": 889.76,
+      "end": 893.76,
+      "duration": 4.0,
+      "text": "minus one zero"
+    },
+    {
+      "start": 891.84,
+      "end": 895.6,
+      "duration": 3.76,
+      "text": "plus one and zero"
+    },
+    {
+      "start": 893.76,
+      "end": 896.72,
+      "duration": 2.96,
+      "text": "and similarly i can say delta column"
+    },
+    {
+      "start": 895.6,
+      "end": 898.96,
+      "duration": 3.36,
+      "text": "changes"
+    },
+    {
+      "start": 896.72,
+      "end": 901.44,
+      "duration": 4.72,
+      "text": "plus 0"
+    },
+    {
+      "start": 898.96,
+      "end": 901.44,
+      "duration": 2.48,
+      "text": "plus 1"
+    },
+    {
+      "start": 901.52,
+      "end": 906.0,
+      "duration": 4.48,
+      "text": "plus 0"
+    },
+    {
+      "start": 903.44,
+      "end": 908.8,
+      "duration": 5.36,
+      "text": "and minus 1 for this guy so for the"
+    },
+    {
+      "start": 906.0,
+      "end": 910.96,
+      "duration": 4.96,
+      "text": "first time if i add this to row and add"
+    },
+    {
+      "start": 908.8,
+      "end": 913.04,
+      "duration": 4.24,
+      "text": "this to column i will get my upper"
+    },
+    {
+      "start": 910.96,
+      "end": 915.44,
+      "duration": 4.48,
+      "text": "coordinates for the next time if i add"
+    },
+    {
+      "start": 913.04,
+      "end": 917.44,
+      "duration": 4.4,
+      "text": "these guys i'll get the right chord but"
+    },
+    {
+      "start": 915.44,
+      "end": 919.2,
+      "duration": 3.76,
+      "text": "the next time if i add these guys i'll"
+    },
+    {
+      "start": 917.44,
+      "end": 921.04,
+      "duration": 3.6,
+      "text": "get these coordinates for the next time"
+    },
+    {
+      "start": 919.2,
+      "end": 923.84,
+      "duration": 4.64,
+      "text": "if i add these guys i'll get these"
+    },
+    {
+      "start": 921.04,
+      "end": 925.76,
+      "duration": 4.72,
+      "text": "coordinates so this is how we can easily"
+    },
+    {
+      "start": 923.84,
+      "end": 928.32,
+      "duration": 4.48,
+      "text": "do it so what i'll do is i'll create"
+    },
+    {
+      "start": 925.76,
+      "end": 930.96,
+      "duration": 5.2,
+      "text": "something like delta rho okay"
+    },
+    {
+      "start": 928.32,
+      "end": 932.72,
+      "duration": 4.4,
+      "text": "and over here i can just do something"
+    },
+    {
+      "start": 930.96,
+      "end": 937.6,
+      "duration": 6.64,
+      "text": "like"
+    },
+    {
+      "start": 932.72,
+      "end": 939.6,
+      "duration": 6.88,
+      "text": "minus 1 sorry minus 1 0 plus 1 and 0"
+    },
+    {
+      "start": 937.6,
+      "end": 941.68,
+      "duration": 4.08,
+      "text": "this can be done and i can also create"
+    },
+    {
+      "start": 939.6,
+      "end": 944.24,
+      "duration": 4.64,
+      "text": "something like delta column and delta"
+    },
+    {
+      "start": 941.68,
+      "end": 945.84,
+      "duration": 4.16,
+      "text": "column is going to be something like 0"
+    },
+    {
+      "start": 944.24,
+      "end": 948.48,
+      "duration": 4.24,
+      "text": "plus 1"
+    },
+    {
+      "start": 945.84,
+      "end": 949.84,
+      "duration": 4.0,
+      "text": "0 and minus 1 perfect so this is"
+    },
+    {
+      "start": 948.48,
+      "end": 951.92,
+      "duration": 3.44,
+      "text": "something which you have done so we"
+    },
+    {
+      "start": 949.84,
+      "end": 954.08,
+      "duration": 4.24,
+      "text": "definitely need the delta rho"
+    },
+    {
+      "start": 951.92,
+      "end": 954.88,
+      "duration": 2.96,
+      "text": "and the delta column for sure let's take"
+    },
+    {
+      "start": 954.08,
+      "end": 956.4,
+      "duration": 2.32,
+      "text": "it"
+    },
+    {
+      "start": 954.88,
+      "end": 959.6,
+      "duration": 4.72,
+      "text": "again carry them"
+    },
+    {
+      "start": 956.4,
+      "end": 961.12,
+      "duration": 4.72,
+      "text": "delta rho and delta column"
+    },
+    {
+      "start": 959.6,
+      "end": 963.76,
+      "duration": 4.16,
+      "text": "so this is going to be an array so"
+    },
+    {
+      "start": 961.12,
+      "end": 966.08,
+      "duration": 4.96,
+      "text": "please carry out this as an array done"
+    },
+    {
+      "start": 963.76,
+      "end": 968.4,
+      "duration": 4.64,
+      "text": "it drops on all its neighbors how many"
+    },
+    {
+      "start": 966.08,
+      "end": 970.08,
+      "duration": 4.0,
+      "text": "neighbors are there there are exactly"
+    },
+    {
+      "start": 968.4,
+      "end": 971.36,
+      "duration": 2.96,
+      "text": "four neighbors so please"
+    },
+    {
+      "start": 970.08,
+      "end": 972.96,
+      "duration": 2.88,
+      "text": "carry them"
+    },
+    {
+      "start": 971.36,
+      "end": 975.6,
+      "duration": 4.24,
+      "text": "perfect now what is the next thing that"
+    },
+    {
+      "start": 972.96,
+      "end": 977.6,
+      "duration": 4.64,
+      "text": "you will do you need the neighbor row so"
+    },
+    {
+      "start": 975.6,
+      "end": 981.12,
+      "duration": 5.52,
+      "text": "neighbor you know what is that"
+    },
+    {
+      "start": 977.6,
+      "end": 983.12,
+      "duration": 5.52,
+      "text": "row plus del row of i correct and you"
+    },
+    {
+      "start": 981.12,
+      "end": 984.56,
+      "duration": 3.44,
+      "text": "know what is the column it is"
+    },
+    {
+      "start": 983.12,
+      "end": 987.12,
+      "duration": 4.0,
+      "text": "column plus"
+    },
+    {
+      "start": 984.56,
+      "end": 988.72,
+      "duration": 4.16,
+      "text": "del column of i right we know that so"
+    },
+    {
+      "start": 987.12,
+      "end": 990.96,
+      "duration": 3.84,
+      "text": "once you have got the neighbor rule and"
+    },
+    {
+      "start": 988.72,
+      "end": 994.72,
+      "duration": 6.0,
+      "text": "the neighbor column what should be our"
+    },
+    {
+      "start": 990.96,
+      "end": 997.36,
+      "duration": 6.4,
+      "text": "uh main focus the main focus should be"
+    },
+    {
+      "start": 994.72,
+      "end": 998.8,
+      "duration": 4.08,
+      "text": "first of all is this a valid guy because"
+    },
+    {
+      "start": 997.36,
+      "end": 1000.88,
+      "duration": 3.52,
+      "text": "if it is not a valid guy there's no"
+    },
+    {
+      "start": 998.8,
+      "end": 1003.12,
+      "duration": 4.32,
+      "text": "point in doing but the first thing we"
+    },
+    {
+      "start": 1000.88,
+      "end": 1004.64,
+      "duration": 3.76,
+      "text": "need this as a valid guy something you"
+    },
+    {
+      "start": 1003.12,
+      "end": 1006.8,
+      "duration": 3.68,
+      "text": "can do is you can"
+    },
+    {
+      "start": 1004.64,
+      "end": 1009.2,
+      "duration": 4.56,
+      "text": "always compute or you can carry it from"
+    },
+    {
+      "start": 1006.8,
+      "end": 1012.24,
+      "duration": 5.44,
+      "text": "there that is your choice image of zero"
+    },
+    {
+      "start": 1009.2,
+      "end": 1015.12,
+      "duration": 5.92,
+      "text": "dot size okay so over here n row should"
+    },
+    {
+      "start": 1012.24,
+      "end": 1017.76,
+      "duration": 5.52,
+      "text": "be lesser than n and an n column should"
+    },
+    {
+      "start": 1015.12,
+      "end": 1019.6,
+      "duration": 4.48,
+      "text": "be greater than zero and an n column"
+    },
+    {
+      "start": 1017.76,
+      "end": 1021.28,
+      "duration": 3.52,
+      "text": "should be less than m perfect"
+    },
+    {
+      "start": 1019.6,
+      "end": 1023.28,
+      "duration": 3.68,
+      "text": "and that"
+    },
+    {
+      "start": 1021.28,
+      "end": 1024.64,
+      "duration": 3.36,
+      "text": "so once you've checked for validity i"
+    },
+    {
+      "start": 1023.28,
+      "end": 1027.92,
+      "duration": 4.64,
+      "text": "need to check"
+    },
+    {
+      "start": 1024.64,
+      "end": 1030.16,
+      "duration": 5.52,
+      "text": "is this sky yes is this guy having the"
+    },
+    {
+      "start": 1027.92,
+      "end": 1033.2,
+      "duration": 5.28,
+      "text": "same initial color then only they will"
+    },
+    {
+      "start": 1030.16,
+      "end": 1035.04,
+      "duration": 4.88,
+      "text": "be connected at the same time has this"
+    },
+    {
+      "start": 1033.2,
+      "end": 1037.76,
+      "duration": 4.56,
+      "text": "has this previously been"
+    },
+    {
+      "start": 1035.04,
+      "end": 1039.44,
+      "duration": 4.4,
+      "text": "visited and colored if it has"
+    },
+    {
+      "start": 1037.76,
+      "end": 1041.52,
+      "duration": 3.76,
+      "text": "been previously visited then it will"
+    },
+    {
+      "start": 1039.44,
+      "end": 1044.16,
+      "duration": 4.72,
+      "text": "definitely have the new color if it does"
+    },
+    {
+      "start": 1041.52,
+      "end": 1047.44,
+      "duration": 5.92,
+      "text": "not have the new color yet and it is the"
+    },
+    {
+      "start": 1044.16,
+      "end": 1049.52,
+      "duration": 5.36,
+      "text": "same color then i go and just"
+    },
+    {
+      "start": 1047.44,
+      "end": 1052.08,
+      "duration": 4.64,
+      "text": "color it yes"
+    },
+    {
+      "start": 1049.52,
+      "end": 1053.76,
+      "duration": 4.24,
+      "text": "simple it's a new column and then what"
+    },
+    {
+      "start": 1052.08,
+      "end": 1057.36,
+      "duration": 5.28,
+      "text": "we can do is we can pass the answer"
+    },
+    {
+      "start": 1053.76,
+      "end": 1061.04,
+      "duration": 7.28,
+      "text": "image again you color del row"
+    },
+    {
+      "start": 1057.36,
+      "end": 1062.24,
+      "duration": 4.88,
+      "text": "del column and the initial color"
+    },
+    {
+      "start": 1061.04,
+      "end": 1063.92,
+      "duration": 2.88,
+      "text": "perfect"
+    },
+    {
+      "start": 1062.24,
+      "end": 1065.6,
+      "duration": 3.36,
+      "text": "and this should be it and we can return"
+    },
+    {
+      "start": 1063.92,
+      "end": 1067.44,
+      "duration": 3.52,
+      "text": "the answer over here now let's super"
+    },
+    {
+      "start": 1065.6,
+      "end": 1070.0,
+      "duration": 4.4,
+      "text": "quickly compile this and see if this is"
+    },
+    {
+      "start": 1067.44,
+      "end": 1070.0,
+      "duration": 2.56,
+      "text": "running fine"
+    },
+    {
+      "start": 1070.32,
+      "end": 1074.96,
+      "duration": 4.64,
+      "text": "it is having some compilation error in"
+    },
+    {
+      "start": 1073.12,
+      "end": 1078.28,
+      "duration": 5.16,
+      "text": "he was not declared"
+    },
+    {
+      "start": 1074.96,
+      "end": 1078.28,
+      "duration": 3.32,
+      "text": "okay initially"
+    },
+    {
+      "start": 1081.68,
+      "end": 1085.84,
+      "duration": 4.16,
+      "text": "okay it does let's quickly submit this"
+    },
+    {
+      "start": 1084.88,
+      "end": 1088.56,
+      "duration": 3.68,
+      "text": "okay"
+    },
+    {
+      "start": 1085.84,
+      "end": 1092.72,
+      "duration": 6.88,
+      "text": "perfect all the test cases are running"
+    },
+    {
+      "start": 1088.56,
+      "end": 1095.84,
+      "duration": 7.28,
+      "text": "so if i ask what is the time complexity"
+    },
+    {
+      "start": 1092.72,
+      "end": 1097.28,
+      "duration": 4.56,
+      "text": "so you know that the time complexity is"
+    },
+    {
+      "start": 1095.84,
+      "end": 1099.92,
+      "duration": 4.08,
+      "text": "generically"
+    },
+    {
+      "start": 1097.28,
+      "end": 1101.92,
+      "duration": 4.64,
+      "text": "like you have end notes so for n notes"
+    },
+    {
+      "start": 1099.92,
+      "end": 1104.72,
+      "duration": 4.8,
+      "text": "you'll be calling like imagine for the"
+    },
+    {
+      "start": 1101.92,
+      "end": 1107.52,
+      "duration": 5.6,
+      "text": "worst case how many notes will it have"
+    },
+    {
+      "start": 1104.72,
+      "end": 1109.36,
+      "duration": 4.64,
+      "text": "all the matrixes are connected imagine"
+    },
+    {
+      "start": 1107.52,
+      "end": 1111.6,
+      "duration": 4.08,
+      "text": "this is 2 this is 2 this is 2 this is 2"
+    },
+    {
+      "start": 1109.36,
+      "end": 1113.6,
+      "duration": 4.24,
+      "text": "this is 2 this is 2 this is 2. all of"
+    },
+    {
+      "start": 1111.6,
+      "end": 1115.12,
+      "duration": 3.52,
+      "text": "them have same pixel colors"
+    },
+    {
+      "start": 1113.6,
+      "end": 1116.96,
+      "duration": 3.36,
+      "text": "so at the worst case i can say there are"
+    },
+    {
+      "start": 1115.12,
+      "end": 1120.4,
+      "duration": 5.28,
+      "text": "these many uh"
+    },
+    {
+      "start": 1116.96,
+      "end": 1122.4,
+      "duration": 5.44,
+      "text": "like call it as x x number of nodes"
+    },
+    {
+      "start": 1120.4,
+      "end": 1124.56,
+      "duration": 4.16,
+      "text": "so if there are x number of nodes"
+    },
+    {
+      "start": 1122.4,
+      "end": 1127.76,
+      "duration": 5.36,
+      "text": "for every node you're traversing for"
+    },
+    {
+      "start": 1124.56,
+      "end": 1130.56,
+      "duration": 6.0,
+      "text": "four neighbors right"
+    },
+    {
+      "start": 1127.76,
+      "end": 1133.6,
+      "duration": 5.84,
+      "text": "it's into like x into four"
+    },
+    {
+      "start": 1130.56,
+      "end": 1136.16,
+      "duration": 5.6,
+      "text": "is what you are traversing into so i can"
+    },
+    {
+      "start": 1133.6,
+      "end": 1137.44,
+      "duration": 3.84,
+      "text": "say you're calling the code for like x"
+    },
+    {
+      "start": 1136.16,
+      "end": 1139.68,
+      "duration": 3.52,
+      "text": "notes"
+    },
+    {
+      "start": 1137.44,
+      "end": 1141.6,
+      "duration": 4.16,
+      "text": "and for every node you're traversing for"
+    },
+    {
+      "start": 1139.68,
+      "end": 1144.48,
+      "duration": 4.8,
+      "text": "four guys so it's like you're calling"
+    },
+    {
+      "start": 1141.6,
+      "end": 1147.52,
+      "duration": 5.92,
+      "text": "dfs for x times because at max there"
+    },
+    {
+      "start": 1144.48,
+      "end": 1150.32,
+      "duration": 5.84,
+      "text": "will be these many dfs calls and for"
+    },
+    {
+      "start": 1147.52,
+      "end": 1153.36,
+      "duration": 5.84,
+      "text": "every x guy you're calling like four"
+    },
+    {
+      "start": 1150.32,
+      "end": 1154.88,
+      "duration": 4.56,
+      "text": "like you're running a for loop so it can"
+    },
+    {
+      "start": 1153.36,
+      "end": 1158.24,
+      "duration": 4.88,
+      "text": "again be written as"
+    },
+    {
+      "start": 1154.88,
+      "end": 1159.68,
+      "duration": 4.8,
+      "text": "we go of x which is somewhere b co of n"
+    },
+    {
+      "start": 1158.24,
+      "end": 1162.32,
+      "duration": 4.08,
+      "text": "cross m"
+    },
+    {
+      "start": 1159.68,
+      "end": 1164.72,
+      "duration": 5.04,
+      "text": "so this will be the time complexity and"
+    },
+    {
+      "start": 1162.32,
+      "end": 1168.08,
+      "duration": 5.76,
+      "text": "if we discuss about the space complexity"
+    },
+    {
+      "start": 1164.72,
+      "end": 1170.48,
+      "duration": 5.76,
+      "text": "we are using an external uh"
+    },
+    {
+      "start": 1168.08,
+      "end": 1171.84,
+      "duration": 3.76,
+      "text": "matrix to store the answer again you can"
+    },
+    {
+      "start": 1170.48,
+      "end": 1174.88,
+      "duration": 4.4,
+      "text": "say that you will store the answer in"
+    },
+    {
+      "start": 1171.84,
+      "end": 1177.28,
+      "duration": 5.44,
+      "text": "the given matrix only that is your"
+    },
+    {
+      "start": 1174.88,
+      "end": 1179.28,
+      "duration": 4.4,
+      "text": "choice apart from that there is"
+    },
+    {
+      "start": 1177.28,
+      "end": 1182.16,
+      "duration": 4.88,
+      "text": "something as a stack space that you're"
+    },
+    {
+      "start": 1179.28,
+      "end": 1185.12,
+      "duration": 5.84,
+      "text": "using so that is like in the recursive"
+    },
+    {
+      "start": 1182.16,
+      "end": 1187.84,
+      "duration": 5.68,
+      "text": "stack space that is b go of n cross n"
+    },
+    {
+      "start": 1185.12,
+      "end": 1190.16,
+      "duration": 5.04,
+      "text": "imagine you start the dfs from here and"
+    },
+    {
+      "start": 1187.84,
+      "end": 1192.88,
+      "duration": 5.04,
+      "text": "the recursion will go here here here"
+    },
+    {
+      "start": 1190.16,
+      "end": 1194.88,
+      "duration": 4.72,
+      "text": "here here here here here so it'll be the"
+    },
+    {
+      "start": 1192.88,
+      "end": 1197.68,
+      "duration": 4.8,
+      "text": "recursion stack space will be complete"
+    },
+    {
+      "start": 1194.88,
+      "end": 1200.16,
+      "duration": 5.28,
+      "text": "and crossing that is the another"
+    },
+    {
+      "start": 1197.68,
+      "end": 1201.52,
+      "duration": 3.84,
+      "text": "space that you're using and apart from"
+    },
+    {
+      "start": 1200.16,
+      "end": 1203.12,
+      "duration": 2.96,
+      "text": "that you're using this delta row and"
+    },
+    {
+      "start": 1201.52,
+      "end": 1205.76,
+      "duration": 4.24,
+      "text": "delta column so you can compute that"
+    },
+    {
+      "start": 1203.12,
+      "end": 1207.52,
+      "duration": 4.4,
+      "text": "easily so guys i hope i was able to"
+    },
+    {
+      "start": 1205.76,
+      "end": 1209.6,
+      "duration": 3.84,
+      "text": "explain you the flood fill algorithm"
+    },
+    {
+      "start": 1207.52,
+      "end": 1210.88,
+      "duration": 3.36,
+      "text": "just in case i was make sure you hit"
+    },
+    {
+      "start": 1209.6,
+      "end": 1213.52,
+      "duration": 3.92,
+      "text": "that like button and if you're new to"
+    },
+    {
+      "start": 1210.88,
+      "end": 1215.2,
+      "duration": 4.32,
+      "text": "our channel what are you waiting for hit"
+    },
+    {
+      "start": 1213.52,
+      "end": 1216.8,
+      "duration": 3.28,
+      "text": "that subscribe button right away and"
+    },
+    {
+      "start": 1215.2,
+      "end": 1219.12,
+      "duration": 3.92,
+      "text": "yeah if you haven't checked out our dp"
+    },
+    {
+      "start": 1216.8,
+      "end": 1220.24,
+      "duration": 3.44,
+      "text": "series and the hd sheet the links are in"
+    },
+    {
+      "start": 1219.12,
+      "end": 1221.6,
+      "duration": 2.48,
+      "text": "the description please make sure you"
+    },
+    {
+      "start": 1220.24,
+      "end": 1223.04,
+      "duration": 2.8,
+      "text": "check them out and with this i'll be"
+    },
+    {
+      "start": 1221.6,
+      "end": 1227.38,
+      "duration": 5.78,
+      "text": "wrapping up this video let's fit in some"
+    },
+    {
+      "start": 1223.04,
+      "end": 1235.27,
+      "duration": 12.23,
+      "text": "other video till then bye take care"
+    },
+    {
+      "start": 1227.38,
+      "end": 1235.27,
+      "duration": 7.89,
+      "text": "[Music]"
+    }
+  ]
+}

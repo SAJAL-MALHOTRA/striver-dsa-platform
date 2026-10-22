@@ -1,0 +1,7422 @@
+{
+  "video_id": "kMSBvlZ-_HA",
+  "title": "BS-20. Minimise Maximum Distance between Gas Stations | 3 Approaches | Heap | Binary Search",
+  "duration_sec": 3552,
+  "segments": [
+    {
+      "start": 2.94,
+      "end": 6.18,
+      "text": "so let's continue with our binary search"
+    },
+    {
+      "start": 4.74,
+      "end": 7.44,
+      "text": "failures but before that hey everyone"
+    },
+    {
+      "start": 6.18,
+      "end": 9.0,
+      "text": "welcome back to the channel I hope you"
+    },
+    {
+      "start": 7.44,
+      "end": 10.2,
+      "text": "guys are doing extremely well so the"
+    },
+    {
+      "start": 9.0,
+      "end": 13.8,
+      "text": "problem that we're going to solve today"
+    },
+    {
+      "start": 10.2,
+      "end": 15.72,
+      "text": "is minimizing the maximum distance to"
+    },
+    {
+      "start": 13.8,
+      "end": 18.06,
+      "text": "gas stations now what does the problems"
+    },
+    {
+      "start": 15.72,
+      "end": 20.1,
+      "text": "take the problem states that it will be"
+    },
+    {
+      "start": 18.06,
+      "end": 23.4,
+      "text": "given an array which will be containing"
+    },
+    {
+      "start": 20.1,
+      "end": 26.76,
+      "text": "n integers now these n integers will be"
+    },
+    {
+      "start": 23.4,
+      "end": 30.78,
+      "text": "representing the coordinates of n gas"
+    },
+    {
+      "start": 26.76,
+      "end": 32.88,
+      "text": "stations now over here n is 5 so the"
+    },
+    {
+      "start": 30.78,
+      "end": 35.16,
+      "text": "first gas station is at the coordinate"
+    },
+    {
+      "start": 32.88,
+      "end": 36.84,
+      "text": "one the second gas station is at the"
+    },
+    {
+      "start": 35.16,
+      "end": 38.4,
+      "text": "coordinate two the third one is at three"
+    },
+    {
+      "start": 36.84,
+      "end": 41.04,
+      "text": "the fourth one is at four and the fifth"
+    },
+    {
+      "start": 38.4,
+      "end": 44.4,
+      "text": "one is at five now it is not necessary"
+    },
+    {
+      "start": 41.04,
+      "end": 46.62,
+      "text": "that they will be in a consecutive order"
+    },
+    {
+      "start": 44.4,
+      "end": 50.22,
+      "text": "like one two three four five they can be"
+    },
+    {
+      "start": 46.62,
+      "end": 52.2,
+      "text": "something like 1 13 17 23 as well it is"
+    },
+    {
+      "start": 50.22,
+      "end": 54.18,
+      "text": "not necessary like one two three four"
+    },
+    {
+      "start": 52.2,
+      "end": 56.04,
+      "text": "five six seven eight it can be in"
+    },
+    {
+      "start": 54.18,
+      "end": 58.56,
+      "text": "anything like one thirteen hundred"
+    },
+    {
+      "start": 56.04,
+      "end": 61.44,
+      "text": "thousand it can be anything but the only"
+    },
+    {
+      "start": 58.56,
+      "end": 62.76,
+      "text": "thing that is uh given to us is they"
+    },
+    {
+      "start": 61.44,
+      "end": 65.4,
+      "text": "will be in"
+    },
+    {
+      "start": 62.76,
+      "end": 67.56,
+      "text": "sorted order like all the coordinates"
+    },
+    {
+      "start": 65.4,
+      "end": 69.72,
+      "text": "will be in sorted order so you're given"
+    },
+    {
+      "start": 67.56,
+      "end": 71.88,
+      "text": "the coordinates of n different gas"
+    },
+    {
+      "start": 69.72,
+      "end": 74.82,
+      "text": "stations now what is your task your task"
+    },
+    {
+      "start": 71.88,
+      "end": 76.98,
+      "text": "is to place K new gas stations so in"
+    },
+    {
+      "start": 74.82,
+      "end": 79.32,
+      "text": "this example you have to place four new"
+    },
+    {
+      "start": 76.98,
+      "end": 81.42,
+      "text": "gas stations and in placing them what"
+    },
+    {
+      "start": 79.32,
+      "end": 84.66,
+      "text": "you have to do is you have to minimize"
+    },
+    {
+      "start": 81.42,
+      "end": 86.34,
+      "text": "the maximum distance between any two gas"
+    },
+    {
+      "start": 84.66,
+      "end": 90.0,
+      "text": "stations now I can give you examples"
+    },
+    {
+      "start": 86.34,
+      "end": 92.82,
+      "text": "imagine I say that I'll place four new"
+    },
+    {
+      "start": 90.0,
+      "end": 95.58,
+      "text": "gas stations in this manner one two"
+    },
+    {
+      "start": 92.82,
+      "end": 97.74,
+      "text": "three four five they'll stay as it is"
+    },
+    {
+      "start": 95.58,
+      "end": 100.92,
+      "text": "and I'll end up placing them at six"
+    },
+    {
+      "start": 97.74,
+      "end": 103.68,
+      "text": "seven eight nine now this is a way in"
+    },
+    {
+      "start": 100.92,
+      "end": 105.96,
+      "text": "which I can place the gas stations like"
+    },
+    {
+      "start": 103.68,
+      "end": 108.18,
+      "text": "the new four gas stations if I do that"
+    },
+    {
+      "start": 105.96,
+      "end": 110.4,
+      "text": "what will be the difference between any"
+    },
+    {
+      "start": 108.18,
+      "end": 113.4,
+      "text": "two consecutive gas stations it's one"
+    },
+    {
+      "start": 110.4,
+      "end": 116.58,
+      "text": "it's one it's one one one one one one"
+    },
+    {
+      "start": 113.4,
+      "end": 118.92,
+      "text": "one one one any two consecutive gas"
+    },
+    {
+      "start": 116.58,
+      "end": 121.2,
+      "text": "stations has a maximum distance of one"
+    },
+    {
+      "start": 118.92,
+      "end": 123.54,
+      "text": "can I say has a maximum distance of one"
+    },
+    {
+      "start": 121.2,
+      "end": 125.28,
+      "text": "so if I go ahead and play sit like this"
+    },
+    {
+      "start": 123.54,
+      "end": 127.5,
+      "text": "the answer will be one can I do"
+    },
+    {
+      "start": 125.28,
+      "end": 128.94,
+      "text": "something different probably yes what if"
+    },
+    {
+      "start": 127.5,
+      "end": 132.06,
+      "text": "I do something like this"
+    },
+    {
+      "start": 128.94,
+      "end": 135.12,
+      "text": "I placed one like the one will be at one"
+    },
+    {
+      "start": 132.06,
+      "end": 138.18,
+      "text": "and imagine I place it at 1.25 you can"
+    },
+    {
+      "start": 135.12,
+      "end": 141.54,
+      "text": "place it at uh decimal coordinates as"
+    },
+    {
+      "start": 138.18,
+      "end": 146.22,
+      "text": "well imagine I place one more at 1.5 one"
+    },
+    {
+      "start": 141.54,
+      "end": 149.1,
+      "text": "more at 1.75 and then at 2 3 4 and then"
+    },
+    {
+      "start": 146.22,
+      "end": 151.26,
+      "text": "another at 4.5 and another at five so"
+    },
+    {
+      "start": 149.1,
+      "end": 153.12,
+      "text": "I've placed four new coordinates four"
+    },
+    {
+      "start": 151.26,
+      "end": 155.4,
+      "text": "new gas stations one over here one over"
+    },
+    {
+      "start": 153.12,
+      "end": 157.8,
+      "text": "here one over here and one over here and"
+    },
+    {
+      "start": 155.4,
+      "end": 160.02,
+      "text": "the existing five you cannot change them"
+    },
+    {
+      "start": 157.8,
+      "end": 162.3,
+      "text": "you can only determine the coordinates"
+    },
+    {
+      "start": 160.02,
+      "end": 165.0,
+      "text": "of the four gas stations that you have"
+    },
+    {
+      "start": 162.3,
+      "end": 166.98,
+      "text": "to place so if I place them the"
+    },
+    {
+      "start": 165.0,
+      "end": 170.42,
+      "text": "difference is point to five point two"
+    },
+    {
+      "start": 166.98,
+      "end": 170.42,
+      "text": "five point two five"
+    },
+    {
+      "start": 171.98,
+      "end": 177.18,
+      "text": "0.2511.5"
+    },
+    {
+      "start": 173.78,
+      "end": 181.32,
+      "text": "what is the maximum among all the"
+    },
+    {
+      "start": 177.18,
+      "end": 182.88,
+      "text": "maximum is one so the maximum is one the"
+    },
+    {
+      "start": 181.32,
+      "end": 184.98,
+      "text": "answer will be one so you have to find"
+    },
+    {
+      "start": 182.88,
+      "end": 186.96,
+      "text": "out the maximum distance so that will be"
+    },
+    {
+      "start": 184.98,
+      "end": 188.28,
+      "text": "one okay so for this also the answer is"
+    },
+    {
+      "start": 186.96,
+      "end": 190.62,
+      "text": "one can I do something different"
+    },
+    {
+      "start": 188.28,
+      "end": 195.0,
+      "text": "probably yes what if I go ahead and say"
+    },
+    {
+      "start": 190.62,
+      "end": 199.02,
+      "text": "one one point five to two pointers five"
+    },
+    {
+      "start": 195.0,
+      "end": 201.66,
+      "text": "three three point five four four point"
+    },
+    {
+      "start": 199.02,
+      "end": 203.22,
+      "text": "five and five now if I try to figure out"
+    },
+    {
+      "start": 201.66,
+      "end": 206.4,
+      "text": "the difference between two consecutives"
+    },
+    {
+      "start": 203.22,
+      "end": 209.76,
+      "text": "it's point five point five point five"
+    },
+    {
+      "start": 206.4,
+      "end": 211.14,
+      "text": "point five point five point five point"
+    },
+    {
+      "start": 209.76,
+      "end": 213.6,
+      "text": "five point five"
+    },
+    {
+      "start": 211.14,
+      "end": 215.82,
+      "text": "each of the consecutives have a"
+    },
+    {
+      "start": 213.6,
+      "end": 220.08,
+      "text": "difference of 0.5 so what is the maximum"
+    },
+    {
+      "start": 215.82,
+      "end": 222.12,
+      "text": "the maximum is 0.5 can you do better you"
+    },
+    {
+      "start": 220.08,
+      "end": 224.52,
+      "text": "can try out but you cannot do better"
+    },
+    {
+      "start": 222.12,
+      "end": 227.46,
+      "text": "like I tried out over here by making"
+    },
+    {
+      "start": 224.52,
+      "end": 230.16,
+      "text": "sure that the difference is 0.25 but"
+    },
+    {
+      "start": 227.46,
+      "end": 231.78,
+      "text": "eventually the previous ones had a"
+    },
+    {
+      "start": 230.16,
+      "end": 233.88,
+      "text": "difference of one so I have to make sure"
+    },
+    {
+      "start": 231.78,
+      "end": 236.76,
+      "text": "that I have to place it in such a way"
+    },
+    {
+      "start": 233.88,
+      "end": 240.18,
+      "text": "that any two if I pick up any two the"
+    },
+    {
+      "start": 236.76,
+      "end": 243.42,
+      "text": "max distance has to be minimized has to"
+    },
+    {
+      "start": 240.18,
+      "end": 246.12,
+      "text": "be minimized in this case it is 0.5 if I"
+    },
+    {
+      "start": 243.42,
+      "end": 248.82,
+      "text": "place them in between of everyone the"
+    },
+    {
+      "start": 246.12,
+      "end": 251.24,
+      "text": "max distance will be 0.5 and that's the"
+    },
+    {
+      "start": 248.82,
+      "end": 253.86,
+      "text": "minimum I can do I cannot go anything"
+    },
+    {
+      "start": 251.24,
+      "end": 256.26,
+      "text": "beneath 0.5 so what you have to return"
+    },
+    {
+      "start": 253.86,
+      "end": 258.18,
+      "text": "is 0.5 yes that is what you have to"
+    },
+    {
+      "start": 256.26,
+      "end": 260.04,
+      "text": "return so in questions where you have to"
+    },
+    {
+      "start": 258.18,
+      "end": 261.72,
+      "text": "return answers which are in the decimal"
+    },
+    {
+      "start": 260.04,
+      "end": 265.68,
+      "text": "formats they might be asking you to"
+    },
+    {
+      "start": 261.72,
+      "end": 267.54,
+      "text": "return in a long double data type or a"
+    },
+    {
+      "start": 265.68,
+      "end": 269.46,
+      "text": "double data type so these are the couple"
+    },
+    {
+      "start": 267.54,
+      "end": 271.62,
+      "text": "of data types that they will be asking"
+    },
+    {
+      "start": 269.46,
+      "end": 273.48,
+      "text": "you to return within like in the first"
+    },
+    {
+      "start": 271.62,
+      "end": 275.88,
+      "text": "example you saw that the answer was 0.5"
+    },
+    {
+      "start": 273.48,
+      "end": 277.56,
+      "text": "so you definitely cannot store it in an"
+    },
+    {
+      "start": 275.88,
+      "end": 279.54,
+      "text": "integer you have to either store it in a"
+    },
+    {
+      "start": 277.56,
+      "end": 282.3,
+      "text": "long double or a double in order to"
+    },
+    {
+      "start": 279.54,
+      "end": 285.06,
+      "text": "return it or maybe a float as well so"
+    },
+    {
+      "start": 282.3,
+      "end": 287.66,
+      "text": "0.5 was very simple what if the answer"
+    },
+    {
+      "start": 285.06,
+      "end": 287.66,
+      "text": "was something like"
+    },
+    {
+      "start": 287.72,
+      "end": 293.64,
+      "text": "0.67891256 7 such a big number now in"
+    },
+    {
+      "start": 291.54,
+      "end": 297.3,
+      "text": "such cases what they do is they tell you"
+    },
+    {
+      "start": 293.64,
+      "end": 301.08,
+      "text": "note answers within 10 to the power"
+    },
+    {
+      "start": 297.3,
+      "end": 303.12,
+      "text": "minus 6. of the actual answer will be"
+    },
+    {
+      "start": 301.08,
+      "end": 305.64,
+      "text": "accepted what does that mean let me"
+    },
+    {
+      "start": 303.12,
+      "end": 307.56,
+      "text": "explain you so what happens in the"
+    },
+    {
+      "start": 305.64,
+      "end": 309.66,
+      "text": "background whenever you submit a two so"
+    },
+    {
+      "start": 307.56,
+      "end": 313.7,
+      "text": "what happens is there is a server right"
+    },
+    {
+      "start": 309.66,
+      "end": 313.7,
+      "text": "most of us know that there's a server"
+    },
+    {
+      "start": 314.04,
+      "end": 319.92,
+      "text": "some kind of talking in terms of design"
+    },
+    {
+      "start": 317.16,
+      "end": 322.5,
+      "text": "now there's something as test cases"
+    },
+    {
+      "start": 319.92,
+      "end": 324.72,
+      "text": "and there's something as your code"
+    },
+    {
+      "start": 322.5,
+      "end": 326.28,
+      "text": "so there's something as your code and"
+    },
+    {
+      "start": 324.72,
+      "end": 329.16,
+      "text": "then there's something as the problem"
+    },
+    {
+      "start": 326.28,
+      "end": 330.78,
+      "text": "Setter score or the testers code can be"
+    },
+    {
+      "start": 329.16,
+      "end": 334.62,
+      "text": "anything"
+    },
+    {
+      "start": 330.78,
+      "end": 337.26,
+      "text": "so what happens is the Setters code is"
+    },
+    {
+      "start": 334.62,
+      "end": 339.72,
+      "text": "already run against this particular test"
+    },
+    {
+      "start": 337.26,
+      "end": 341.88,
+      "text": "case it is already run against this"
+    },
+    {
+      "start": 339.72,
+      "end": 344.52,
+      "text": "particular test case and it already has"
+    },
+    {
+      "start": 341.88,
+      "end": 347.46,
+      "text": "a output 2. imagine it is called as"
+    },
+    {
+      "start": 344.52,
+      "end": 349.44,
+      "text": "output two so what"
+    },
+    {
+      "start": 347.46,
+      "end": 352.92,
+      "text": "happens when you click the Run Button as"
+    },
+    {
+      "start": 349.44,
+      "end": 355.92,
+      "text": "your code is sent to the server the test"
+    },
+    {
+      "start": 352.92,
+      "end": 358.26,
+      "text": "cases are sent to the server and your"
+    },
+    {
+      "start": 355.92,
+      "end": 361.38,
+      "text": "your code runs on the given test cases"
+    },
+    {
+      "start": 358.26,
+      "end": 363.78,
+      "text": "and an output one is generated and an"
+    },
+    {
+      "start": 361.38,
+      "end": 368.04,
+      "text": "output one is generated now this output"
+    },
+    {
+      "start": 363.78,
+      "end": 371.64,
+      "text": "2 and the output one is compared in the"
+    },
+    {
+      "start": 368.04,
+      "end": 374.52,
+      "text": "output 1 and output 2 is equal they call"
+    },
+    {
+      "start": 371.64,
+      "end": 377.34,
+      "text": "it as an accepted answer if"
+    },
+    {
+      "start": 374.52,
+      "end": 380.7,
+      "text": "the code while running against the test"
+    },
+    {
+      "start": 377.34,
+      "end": 383.1,
+      "text": "cases on the server ends up taking a lot"
+    },
+    {
+      "start": 380.7,
+      "end": 384.84,
+      "text": "of time in that case they will be"
+    },
+    {
+      "start": 383.1,
+      "end": 387.18,
+      "text": "returning something as time limit"
+    },
+    {
+      "start": 384.84,
+      "end": 388.98,
+      "text": "exceeded like if on the server they"
+    },
+    {
+      "start": 387.18,
+      "end": 391.14,
+      "text": "would have sent the server that one"
+    },
+    {
+      "start": 388.98,
+      "end": 392.82,
+      "text": "second is your time limit and your code"
+    },
+    {
+      "start": 391.14,
+      "end": 395.52,
+      "text": "is probably taking more than one second"
+    },
+    {
+      "start": 392.82,
+      "end": 398.76,
+      "text": "while running those test cases it might"
+    },
+    {
+      "start": 395.52,
+      "end": 401.88,
+      "text": "end up returning a time limit exceeded"
+    },
+    {
+      "start": 398.76,
+      "end": 403.92,
+      "text": "and if it doesn't matches like if it is"
+    },
+    {
+      "start": 401.88,
+      "end": 405.54,
+      "text": "not matching in that case it says as a"
+    },
+    {
+      "start": 403.92,
+      "end": 408.36,
+      "text": "wrong answer now this is what happens on"
+    },
+    {
+      "start": 405.54,
+      "end": 409.8,
+      "text": "the background and this one looks very"
+    },
+    {
+      "start": 408.36,
+      "end": 411.42,
+      "text": "simple like okay you just need to"
+    },
+    {
+      "start": 409.8,
+      "end": 413.76,
+      "text": "compare so whatever this is generating"
+    },
+    {
+      "start": 411.42,
+      "end": 415.92,
+      "text": "whatever this is generating go ahead and"
+    },
+    {
+      "start": 413.76,
+      "end": 417.42,
+      "text": "compare but imagine"
+    },
+    {
+      "start": 415.92,
+      "end": 419.76,
+      "text": "in cases where you have to return"
+    },
+    {
+      "start": 417.42,
+      "end": 423.54,
+      "text": "something like long double or a double"
+    },
+    {
+      "start": 419.76,
+      "end": 425.1,
+      "text": "or a float and my program is probably"
+    },
+    {
+      "start": 423.54,
+      "end": 428.46,
+      "text": "printing an answer something like point"
+    },
+    {
+      "start": 425.1,
+      "end": 431.52,
+      "text": "six five four two one six sevens eight"
+    },
+    {
+      "start": 428.46,
+      "end": 435.0,
+      "text": "one two four it's like a huge like a"
+    },
+    {
+      "start": 431.52,
+      "end": 437.34,
+      "text": "long decimal extremely long decimal and"
+    },
+    {
+      "start": 435.0,
+      "end": 439.86,
+      "text": "the settings code probably that I've"
+    },
+    {
+      "start": 437.34,
+      "end": 441.84,
+      "text": "done some optimization probably and"
+    },
+    {
+      "start": 439.86,
+      "end": 443.76,
+      "text": "they're also getting something like this"
+    },
+    {
+      "start": 441.84,
+      "end": 445.32,
+      "text": "but maybe"
+    },
+    {
+      "start": 443.76,
+      "end": 447.54,
+      "text": "something like this"
+    },
+    {
+      "start": 445.32,
+      "end": 450.0,
+      "text": "and you're getting something Beyond this"
+    },
+    {
+      "start": 447.54,
+      "end": 452.1,
+      "text": "again it can be an extremely long one"
+    },
+    {
+      "start": 450.0,
+      "end": 453.84,
+      "text": "what will happen is if you end up"
+    },
+    {
+      "start": 452.1,
+      "end": 456.3,
+      "text": "generating an extremely long one the"
+    },
+    {
+      "start": 453.84,
+      "end": 458.34,
+      "text": "time taken will be huge and you'll end"
+    },
+    {
+      "start": 456.3,
+      "end": 461.46,
+      "text": "up getting a tle because if you're going"
+    },
+    {
+      "start": 458.34,
+      "end": 463.8,
+      "text": "to generate the exact answer in terms of"
+    },
+    {
+      "start": 461.46,
+      "end": 465.9,
+      "text": "long double that might end up taking a"
+    },
+    {
+      "start": 463.8,
+      "end": 469.08,
+      "text": "lot of time and you might get a time"
+    },
+    {
+      "start": 465.9,
+      "end": 471.36,
+      "text": "limit exceeded so that is why the status"
+    },
+    {
+      "start": 469.08,
+      "end": 473.22,
+      "text": "code will always do some optimizations"
+    },
+    {
+      "start": 471.36,
+      "end": 475.14,
+      "text": "and what they will do is they'll"
+    },
+    {
+      "start": 473.22,
+      "end": 478.56,
+      "text": "probably store answers let's say till"
+    },
+    {
+      "start": 475.14,
+      "end": 480.3,
+      "text": "seven decimal places like seven decimal"
+    },
+    {
+      "start": 478.56,
+      "end": 482.16,
+      "text": "places is what they will probably store"
+    },
+    {
+      "start": 480.3,
+      "end": 483.78,
+      "text": "so this is what they would have stored"
+    },
+    {
+      "start": 482.16,
+      "end": 486.12,
+      "text": "like four and four this is like eight"
+    },
+    {
+      "start": 483.78,
+      "end": 487.38,
+      "text": "decimal places for an example now"
+    },
+    {
+      "start": 486.12,
+      "end": 489.54,
+      "text": "imagine"
+    },
+    {
+      "start": 487.38,
+      "end": 491.82,
+      "text": "you are returning something like this"
+    },
+    {
+      "start": 489.54,
+      "end": 494.04,
+      "text": "like a huge long decimal then you will"
+    },
+    {
+      "start": 491.82,
+      "end": 497.64,
+      "text": "get a tle this is the reason they"
+    },
+    {
+      "start": 494.04,
+      "end": 500.1,
+      "text": "clearly tell you please just return up"
+    },
+    {
+      "start": 497.64,
+      "end": 502.02,
+      "text": "till six decimal places do not go beyond"
+    },
+    {
+      "start": 500.1,
+      "end": 504.42,
+      "text": "that do not spend more time in"
+    },
+    {
+      "start": 502.02,
+      "end": 508.02,
+      "text": "calculating so what happens is"
+    },
+    {
+      "start": 504.42,
+      "end": 510.42,
+      "text": "you will kind of stop till here because"
+    },
+    {
+      "start": 508.02,
+      "end": 513.48,
+      "text": "that is six decimal places you will stop"
+    },
+    {
+      "start": 510.42,
+      "end": 516.6,
+      "text": "till there and then what happens on the"
+    },
+    {
+      "start": 513.48,
+      "end": 519.08,
+      "text": "background is they just check equal"
+    },
+    {
+      "start": 516.6,
+      "end": 522.0,
+      "text": "equal equal equal"
+    },
+    {
+      "start": 519.08,
+      "end": 524.16,
+      "text": "L6 decimal places is what they will"
+    },
+    {
+      "start": 522.0,
+      "end": 526.14,
+      "text": "check they don't care what is after it"
+    },
+    {
+      "start": 524.16,
+      "end": 528.54,
+      "text": "they don't care what is after it you can"
+    },
+    {
+      "start": 526.14,
+      "end": 530.7,
+      "text": "send whatever you wish to after six"
+    },
+    {
+      "start": 528.54,
+      "end": 532.74,
+      "text": "decimal places then do not care if the"
+    },
+    {
+      "start": 530.7,
+      "end": 535.08,
+      "text": "first six decimal places are matching"
+    },
+    {
+      "start": 532.74,
+      "end": 537.2,
+      "text": "that is it they will call it as an"
+    },
+    {
+      "start": 535.08,
+      "end": 539.7,
+      "text": "accepted answer and that is the reason"
+    },
+    {
+      "start": 537.2,
+      "end": 541.44,
+      "text": "why you'll always find this line"
+    },
+    {
+      "start": 539.7,
+      "end": 543.6,
+      "text": "whenever the answer has to be returned"
+    },
+    {
+      "start": 541.44,
+      "end": 545.52,
+      "text": "in a long double or a double or a float"
+    },
+    {
+      "start": 543.6,
+      "end": 547.68,
+      "text": "format because they do not want your"
+    },
+    {
+      "start": 545.52,
+      "end": 550.02,
+      "text": "code to run on the test cases forever"
+    },
+    {
+      "start": 547.68,
+      "end": 552.6,
+      "text": "because when we talk about double the"
+    },
+    {
+      "start": 550.02,
+      "end": 554.22,
+      "text": "answer can be extremely long and they"
+    },
+    {
+      "start": 552.6,
+      "end": 555.9,
+      "text": "just don't want that much of time that"
+    },
+    {
+      "start": 554.22,
+      "end": 558.3,
+      "text": "is the reason you will find this in most"
+    },
+    {
+      "start": 555.9,
+      "end": 560.22,
+      "text": "of the problems so we need to think of a"
+    },
+    {
+      "start": 558.3,
+      "end": 562.68,
+      "text": "solution but if I start thinking of a"
+    },
+    {
+      "start": 560.22,
+      "end": 564.42,
+      "text": "solution by taking such a big example at"
+    },
+    {
+      "start": 562.68,
+      "end": 566.58,
+      "text": "the first I think that will be an issue"
+    },
+    {
+      "start": 564.42,
+      "end": 568.68,
+      "text": "so what I will do is I'll try to trim"
+    },
+    {
+      "start": 566.58,
+      "end": 571.08,
+      "text": "down the example and if I trim down the"
+    },
+    {
+      "start": 568.68,
+      "end": 574.08,
+      "text": "example and I take let's say two gas"
+    },
+    {
+      "start": 571.08,
+      "end": 576.36,
+      "text": "stations one at one while the other one"
+    },
+    {
+      "start": 574.08,
+      "end": 578.46,
+      "text": "at seven and I'm asking you to place two"
+    },
+    {
+      "start": 576.36,
+      "end": 580.02,
+      "text": "more so what would be the optimal"
+    },
+    {
+      "start": 578.46,
+      "end": 583.44,
+      "text": "strategy that you will use to place"
+    },
+    {
+      "start": 580.02,
+      "end": 587.04,
+      "text": "these two gas stations into uh the"
+    },
+    {
+      "start": 583.44,
+      "end": 590.28,
+      "text": "existing two such that you minimize the"
+    },
+    {
+      "start": 587.04,
+      "end": 592.5,
+      "text": "maximum distance so probably one of the"
+    },
+    {
+      "start": 590.28,
+      "end": 594.72,
+      "text": "strategies can be I'll say one and seven"
+    },
+    {
+      "start": 592.5,
+      "end": 596.82,
+      "text": "are there and I will place them at eight"
+    },
+    {
+      "start": 594.72,
+      "end": 599.16,
+      "text": "and nine so if I do that the distance"
+    },
+    {
+      "start": 596.82,
+      "end": 601.56,
+      "text": "will be six it'll be one it will be one"
+    },
+    {
+      "start": 599.16,
+      "end": 604.62,
+      "text": "and the consecutive and the maximum is"
+    },
+    {
+      "start": 601.56,
+      "end": 606.96,
+      "text": "six so am I somehow reducing the maximum"
+    },
+    {
+      "start": 604.62,
+      "end": 609.72,
+      "text": "distance between the existing gas"
+    },
+    {
+      "start": 606.96,
+      "end": 613.32,
+      "text": "stations the answer is no so will it"
+    },
+    {
+      "start": 609.72,
+      "end": 617.04,
+      "text": "make sense to place the new gas stations"
+    },
+    {
+      "start": 613.32,
+      "end": 619.14,
+      "text": "outside the extremes like the left"
+    },
+    {
+      "start": 617.04,
+      "end": 620.94,
+      "text": "extreme and the right extreme of the"
+    },
+    {
+      "start": 619.14,
+      "end": 622.94,
+      "text": "given end gas stations it doesn't make"
+    },
+    {
+      "start": 620.94,
+      "end": 626.4,
+      "text": "sense because if I place them outside"
+    },
+    {
+      "start": 622.94,
+      "end": 631.08,
+      "text": "the distance between them will still be"
+    },
+    {
+      "start": 626.4,
+      "end": 633.6,
+      "text": "the same so ideally placing anywhere to"
+    },
+    {
+      "start": 631.08,
+      "end": 636.48,
+      "text": "the right or to the left doesn't make"
+    },
+    {
+      "start": 633.6,
+      "end": 639.3,
+      "text": "sense where is the ideal scenario it's"
+    },
+    {
+      "start": 636.48,
+      "end": 641.94,
+      "text": "pleasing in between because the distance"
+    },
+    {
+      "start": 639.3,
+      "end": 644.94,
+      "text": "is 6 and I will reduce this 6 and reduce"
+    },
+    {
+      "start": 641.94,
+      "end": 647.58,
+      "text": "the maximum so the optimal strategy will"
+    },
+    {
+      "start": 644.94,
+      "end": 649.26,
+      "text": "be to place in between the given and gas"
+    },
+    {
+      "start": 647.58,
+      "end": 651.6,
+      "text": "stations so that is something we have"
+    },
+    {
+      "start": 649.26,
+      "end": 653.88,
+      "text": "figured out so you have one and we have"
+    },
+    {
+      "start": 651.6,
+      "end": 656.4,
+      "text": "seven if I have to place it"
+    },
+    {
+      "start": 653.88,
+      "end": 658.14,
+      "text": "and I say let's place it at 2 and 4."
+    },
+    {
+      "start": 656.4,
+      "end": 660.66,
+      "text": "because I have to place two new gas"
+    },
+    {
+      "start": 658.14,
+      "end": 662.6,
+      "text": "stations and this is the distance this"
+    },
+    {
+      "start": 660.66,
+      "end": 665.52,
+      "text": "is the distance and this is the distance"
+    },
+    {
+      "start": 662.6,
+      "end": 667.2,
+      "text": "does it make sense we still have three"
+    },
+    {
+      "start": 665.52,
+      "end": 669.66,
+      "text": "I'll be like no it doesn't make sense"
+    },
+    {
+      "start": 667.2,
+      "end": 671.76,
+      "text": "because you still have three so what is"
+    },
+    {
+      "start": 669.66,
+      "end": 673.8,
+      "text": "the ideal scenario if I give you like"
+    },
+    {
+      "start": 671.76,
+      "end": 676.86,
+      "text": "two gas stations and you have something"
+    },
+    {
+      "start": 673.8,
+      "end": 679.38,
+      "text": "like this I'll be like hey striver"
+    },
+    {
+      "start": 676.86,
+      "end": 680.28,
+      "text": "I have one seven and I know I have to"
+    },
+    {
+      "start": 679.38,
+      "end": 682.74,
+      "text": "place"
+    },
+    {
+      "start": 680.28,
+      "end": 685.08,
+      "text": "two gas stations if I place two gas"
+    },
+    {
+      "start": 682.74,
+      "end": 687.3,
+      "text": "stations this will be one consecutive"
+    },
+    {
+      "start": 685.08,
+      "end": 688.98,
+      "text": "distance this will be another and this"
+    },
+    {
+      "start": 687.3,
+      "end": 690.96,
+      "text": "will be another so there will be three"
+    },
+    {
+      "start": 688.98,
+      "end": 694.56,
+      "text": "consecutive distance that I have to make"
+    },
+    {
+      "start": 690.96,
+      "end": 696.96,
+      "text": "sure is minimized because if I just let"
+    },
+    {
+      "start": 694.56,
+      "end": 699.0,
+      "text": "go one that will be like three is very"
+    },
+    {
+      "start": 696.96,
+      "end": 701.52,
+      "text": "high three is very high I cannot let go"
+    },
+    {
+      "start": 699.0,
+      "end": 703.44,
+      "text": "one because that one mine will be very"
+    },
+    {
+      "start": 701.52,
+      "end": 705.42,
+      "text": "maximum and I want to minimize everyone"
+    },
+    {
+      "start": 703.44,
+      "end": 707.22,
+      "text": "so"
+    },
+    {
+      "start": 705.42,
+      "end": 709.56,
+      "text": "I'll have to minimize three consecutive"
+    },
+    {
+      "start": 707.22,
+      "end": 712.86,
+      "text": "distances and how much is the three"
+    },
+    {
+      "start": 709.56,
+      "end": 716.4,
+      "text": "distance it's six and I have to split it"
+    },
+    {
+      "start": 712.86,
+      "end": 718.68,
+      "text": "into kind of three equal three equals so"
+    },
+    {
+      "start": 716.4,
+      "end": 721.92,
+      "text": "that's like two two so if I just split"
+    },
+    {
+      "start": 718.68,
+      "end": 724.8,
+      "text": "it into uh three equals of two and place"
+    },
+    {
+      "start": 721.92,
+      "end": 726.54,
+      "text": "it at three and place it at five then"
+    },
+    {
+      "start": 724.8,
+      "end": 727.92,
+      "text": "the distance will be two then the"
+    },
+    {
+      "start": 726.54,
+      "end": 730.74,
+      "text": "distance will be due and then the"
+    },
+    {
+      "start": 727.92,
+      "end": 732.3,
+      "text": "distance will be two does make sense so"
+    },
+    {
+      "start": 730.74,
+      "end": 735.6,
+      "text": "what I have to do is if I've been given"
+    },
+    {
+      "start": 732.3,
+      "end": 737.7,
+      "text": "two gas stations I will try to"
+    },
+    {
+      "start": 735.6,
+      "end": 741.96,
+      "text": "place them"
+    },
+    {
+      "start": 737.7,
+      "end": 746.1,
+      "text": "between them in equal sectors in equal"
+    },
+    {
+      "start": 741.96,
+      "end": 748.68,
+      "text": "sectors of length two so that the max"
+    },
+    {
+      "start": 746.1,
+      "end": 751.68,
+      "text": "distance is minimized and the answer is"
+    },
+    {
+      "start": 748.68,
+      "end": 753.72,
+      "text": "two got this so this is the thought"
+    },
+    {
+      "start": 751.68,
+      "end": 755.04,
+      "text": "process under which we will be solving"
+    },
+    {
+      "start": 753.72,
+      "end": 756.36,
+      "text": "the entire problem"
+    },
+    {
+      "start": 755.04,
+      "end": 758.28,
+      "text": "so let's now take this particular"
+    },
+    {
+      "start": 756.36,
+      "end": 760.68,
+      "text": "example where we are given four gas"
+    },
+    {
+      "start": 758.28,
+      "end": 762.9,
+      "text": "stations and we have to place five new"
+    },
+    {
+      "start": 760.68,
+      "end": 764.34,
+      "text": "gas stations in between them we know one"
+    },
+    {
+      "start": 762.9,
+      "end": 766.8,
+      "text": "thing for sure we cannot Place anything"
+    },
+    {
+      "start": 764.34,
+      "end": 768.36,
+      "text": "to the right or anything to the left so"
+    },
+    {
+      "start": 766.8,
+      "end": 770.76,
+      "text": "what we will do is we'll Place five"
+    },
+    {
+      "start": 768.36,
+      "end": 773.52,
+      "text": "probably somewhere between this and this"
+    },
+    {
+      "start": 770.76,
+      "end": 775.98,
+      "text": "so there are like three sectors three"
+    },
+    {
+      "start": 773.52,
+      "end": 778.44,
+      "text": "sections where I have to place"
+    },
+    {
+      "start": 775.98,
+      "end": 781.14,
+      "text": "can I say if I start thinking by taking"
+    },
+    {
+      "start": 778.44,
+      "end": 783.36,
+      "text": "like all the five at at a time that will"
+    },
+    {
+      "start": 781.14,
+      "end": 785.58,
+      "text": "be an issue so what I will do is let's"
+    },
+    {
+      "start": 783.36,
+      "end": 788.28,
+      "text": "quickly start off with one so if I take"
+    },
+    {
+      "start": 785.58,
+      "end": 792.0,
+      "text": "one where will you place I'll be like"
+    },
+    {
+      "start": 788.28,
+      "end": 794.94,
+      "text": "hey stravo over here the distance is 12"
+    },
+    {
+      "start": 792.0,
+      "end": 797.46,
+      "text": "over here the distance is 4 over here"
+    },
+    {
+      "start": 794.94,
+      "end": 800.58,
+      "text": "the distance is 6 which is the maximum"
+    },
+    {
+      "start": 797.46,
+      "end": 803.4,
+      "text": "12 is the maximum so if I have to place"
+    },
+    {
+      "start": 800.58,
+      "end": 806.64,
+      "text": "one I'll try to place somewhere in"
+    },
+    {
+      "start": 803.4,
+      "end": 808.5,
+      "text": "between 1 and 13 so that this 12 is"
+    },
+    {
+      "start": 806.64,
+      "end": 811.44,
+      "text": "reduced because ultimately I am trying"
+    },
+    {
+      "start": 808.5,
+      "end": 814.5,
+      "text": "to minimize got it so what I'll do is"
+    },
+    {
+      "start": 811.44,
+      "end": 816.36,
+      "text": "I'll try to place one between 1 and 30."
+    },
+    {
+      "start": 814.5,
+      "end": 818.16,
+      "text": "maybe I can store it where I'm placing"
+    },
+    {
+      "start": 816.36,
+      "end": 820.44,
+      "text": "so what I'll do is I know there are"
+    },
+    {
+      "start": 818.16,
+      "end": 821.58,
+      "text": "three sections one section two section"
+    },
+    {
+      "start": 820.44,
+      "end": 823.86,
+      "text": "three section"
+    },
+    {
+      "start": 821.58,
+      "end": 825.42,
+      "text": "so I'll see how many are placed in each"
+    },
+    {
+      "start": 823.86,
+      "end": 827.34,
+      "text": "of this so this is the zeroth section"
+    },
+    {
+      "start": 825.42,
+      "end": 830.22,
+      "text": "first section one sec second section"
+    },
+    {
+      "start": 827.34,
+      "end": 834.36,
+      "text": "zeroth first and second so I'm saying"
+    },
+    {
+      "start": 830.22,
+      "end": 836.34,
+      "text": "one is placed here perfect one is placed"
+    },
+    {
+      "start": 834.36,
+      "end": 837.54,
+      "text": "over here"
+    },
+    {
+      "start": 836.34,
+      "end": 838.86,
+      "text": "amazing"
+    },
+    {
+      "start": 837.54,
+      "end": 841.56,
+      "text": "next"
+    },
+    {
+      "start": 838.86,
+      "end": 844.68,
+      "text": "is the second one when the second gas"
+    },
+    {
+      "start": 841.56,
+      "end": 847.38,
+      "text": "station is in picture so ideally ideally"
+    },
+    {
+      "start": 844.68,
+      "end": 849.06,
+      "text": "if you have placed one where would where"
+    },
+    {
+      "start": 847.38,
+      "end": 852.9,
+      "text": "would have you placed it you would have"
+    },
+    {
+      "start": 849.06,
+      "end": 854.76,
+      "text": "placed it at 1 7 and 13 and then 1723"
+    },
+    {
+      "start": 852.9,
+      "end": 857.22,
+      "text": "this is where you would have placed it"
+    },
+    {
+      "start": 854.76,
+      "end": 858.9,
+      "text": "because the ultimate distance was 12 so"
+    },
+    {
+      "start": 857.22,
+      "end": 860.34,
+      "text": "you'll keep a distance of 6 and keep a"
+    },
+    {
+      "start": 858.9,
+      "end": 863.22,
+      "text": "distance of six this is where you'll"
+    },
+    {
+      "start": 860.34,
+      "end": 867.78,
+      "text": "place it right so after placing one"
+    },
+    {
+      "start": 863.22,
+      "end": 870.96,
+      "text": "let's look at the distance six six four"
+    },
+    {
+      "start": 867.78,
+      "end": 873.9,
+      "text": "and six so apparently as of now after"
+    },
+    {
+      "start": 870.96,
+      "end": 875.82,
+      "text": "placing one the maximum distance is six"
+    },
+    {
+      "start": 873.9,
+      "end": 877.68,
+      "text": "so you're gonna kind of get rid of this"
+    },
+    {
+      "start": 875.82,
+      "end": 880.08,
+      "text": "six you want to reduce it you know"
+    },
+    {
+      "start": 877.68,
+      "end": 882.72,
+      "text": "reduce the six so maybe"
+    },
+    {
+      "start": 880.08,
+      "end": 884.64,
+      "text": "I can place in either of these sectors"
+    },
+    {
+      "start": 882.72,
+      "end": 887.76,
+      "text": "because I already have one at seven"
+    },
+    {
+      "start": 884.64,
+      "end": 889.38,
+      "text": "second place either of this or either of"
+    },
+    {
+      "start": 887.76,
+      "end": 892.2,
+      "text": "this so maybe let's go ahead and place"
+    },
+    {
+      "start": 889.38,
+      "end": 895.08,
+      "text": "in between so go ahead and say one is"
+    },
+    {
+      "start": 892.2,
+      "end": 897.66,
+      "text": "there placed now let's come up with the"
+    },
+    {
+      "start": 895.08,
+      "end": 900.42,
+      "text": "third gas station so when these two are"
+    },
+    {
+      "start": 897.66,
+      "end": 902.46,
+      "text": "placed hypothetically if you only have"
+    },
+    {
+      "start": 900.42,
+      "end": 906.18,
+      "text": "to place two hypothetically you have to"
+    },
+    {
+      "start": 902.46,
+      "end": 911.16,
+      "text": "only place two there will be like 1 7 13"
+    },
+    {
+      "start": 906.18,
+      "end": 914.1,
+      "text": "17 20 and 23 where 20 and 7 is the new"
+    },
+    {
+      "start": 911.16,
+      "end": 916.98,
+      "text": "one and now the distance is six six four"
+    },
+    {
+      "start": 914.1,
+      "end": 919.44,
+      "text": "three and three right and how did you"
+    },
+    {
+      "start": 916.98,
+      "end": 923.16,
+      "text": "know that the distance is 3 is very easy"
+    },
+    {
+      "start": 919.44,
+      "end": 925.32,
+      "text": "if you're placing one over here that"
+    },
+    {
+      "start": 923.16,
+      "end": 928.14,
+      "text": "means it is broken down into two sectors"
+    },
+    {
+      "start": 925.32,
+      "end": 930.12,
+      "text": "it is broken down into two sectors and"
+    },
+    {
+      "start": 928.14,
+      "end": 932.46,
+      "text": "if it is broken down into two sectors"
+    },
+    {
+      "start": 930.12,
+      "end": 934.68,
+      "text": "how much is the distance over here"
+    },
+    {
+      "start": 932.46,
+      "end": 938.28,
+      "text": "because each of the sectors will be of"
+    },
+    {
+      "start": 934.68,
+      "end": 941.16,
+      "text": "equal distance the it will be 23 minus"
+    },
+    {
+      "start": 938.28,
+      "end": 944.1,
+      "text": "17 by the number of sectors which is the"
+    },
+    {
+      "start": 941.16,
+      "end": 946.26,
+      "text": "number of placed plus one this is X six"
+    },
+    {
+      "start": 944.1,
+      "end": 948.48,
+      "text": "by two that's three the difference is"
+    },
+    {
+      "start": 946.26,
+      "end": 951.06,
+      "text": "three very simple over here the same"
+    },
+    {
+      "start": 948.48,
+      "end": 953.4,
+      "text": "thing 13 minus one by the number of"
+    },
+    {
+      "start": 951.06,
+      "end": 956.94,
+      "text": "Place Plus One will be the sector 12 by"
+    },
+    {
+      "start": 953.4,
+      "end": 959.16,
+      "text": "2 is 6 6 and 6. so you know one thing"
+    },
+    {
+      "start": 956.94,
+      "end": 961.26,
+      "text": "this is six this is six this is four"
+    },
+    {
+      "start": 959.16,
+      "end": 962.94,
+      "text": "this is three and this is three so where"
+    },
+    {
+      "start": 961.26,
+      "end": 964.68,
+      "text": "will you place the three you'll try to"
+    },
+    {
+      "start": 962.94,
+      "end": 968.04,
+      "text": "reduce this six because the six is"
+    },
+    {
+      "start": 964.68,
+      "end": 971.34,
+      "text": "creating an issue now let's think"
+    },
+    {
+      "start": 968.04,
+      "end": 973.08,
+      "text": "if I say 113 and 7 is here this is 6 and"
+    },
+    {
+      "start": 971.34,
+      "end": 975.6,
+      "text": "this is 6."
+    },
+    {
+      "start": 973.08,
+      "end": 977.64,
+      "text": "what will you do will you take this"
+    },
+    {
+      "start": 975.6,
+      "end": 979.98,
+      "text": "third gas station and place it maybe"
+    },
+    {
+      "start": 977.64,
+      "end": 982.86,
+      "text": "somewhere in between"
+    },
+    {
+      "start": 979.98,
+      "end": 985.2,
+      "text": "will you do this will you do this will"
+    },
+    {
+      "start": 982.86,
+      "end": 987.24,
+      "text": "you place it somewhere like poor or will"
+    },
+    {
+      "start": 985.2,
+      "end": 989.28,
+      "text": "you place it somewhere like 10 doesn't"
+    },
+    {
+      "start": 987.24,
+      "end": 992.46,
+      "text": "make sense because even if you place it"
+    },
+    {
+      "start": 989.28,
+      "end": 995.1,
+      "text": "at four this will still be six and"
+    },
+    {
+      "start": 992.46,
+      "end": 998.46,
+      "text": "realize the initial configuration had"
+    },
+    {
+      "start": 995.1,
+      "end": 1000.2,
+      "text": "113 you are at Liberty to place the"
+    },
+    {
+      "start": 998.46,
+      "end": 1002.54,
+      "text": "first and the third gas station you can"
+    },
+    {
+      "start": 1000.2,
+      "end": 1005.9,
+      "text": "do it do move you can move them anywhere"
+    },
+    {
+      "start": 1002.54,
+      "end": 1008.3,
+      "text": "so ideally what I'll do is instead of"
+    },
+    {
+      "start": 1005.9,
+      "end": 1010.76,
+      "text": "placing the first one at seven which I"
+    },
+    {
+      "start": 1008.3,
+      "end": 1015.56,
+      "text": "did I'll try to take the entire distance"
+    },
+    {
+      "start": 1010.76,
+      "end": 1017.84,
+      "text": "12 and I know there was already one one"
+    },
+    {
+      "start": 1015.56,
+      "end": 1019.34,
+      "text": "in between them I'll have one more in"
+    },
+    {
+      "start": 1017.84,
+      "end": 1020.78,
+      "text": "between then so I'll have two more in"
+    },
+    {
+      "start": 1019.34,
+      "end": 1022.88,
+      "text": "between them which means I'll have to"
+    },
+    {
+      "start": 1020.78,
+      "end": 1026.24,
+      "text": "place two which divides it into three"
+    },
+    {
+      "start": 1022.88,
+      "end": 1028.1,
+      "text": "equal sectors so 12 by 3 will be four so"
+    },
+    {
+      "start": 1026.24,
+      "end": 1031.22,
+      "text": "now I'll place them at a distance of"
+    },
+    {
+      "start": 1028.1,
+      "end": 1033.98,
+      "text": "four four got it so what I'll do is I'll"
+    },
+    {
+      "start": 1031.22,
+      "end": 1037.16,
+      "text": "place them probably at one five nine so"
+    },
+    {
+      "start": 1033.98,
+      "end": 1040.64,
+      "text": "this will be like four four and four so"
+    },
+    {
+      "start": 1037.16,
+      "end": 1043.46,
+      "text": "what I've done is I placed one mole in"
+    },
+    {
+      "start": 1040.64,
+      "end": 1045.98,
+      "text": "between 1 and 13 so the number increases"
+    },
+    {
+      "start": 1043.46,
+      "end": 1047.66,
+      "text": "to two so the number increases to two so"
+    },
+    {
+      "start": 1045.98,
+      "end": 1049.82,
+      "text": "tell me one thing if there are two"
+    },
+    {
+      "start": 1047.66,
+      "end": 1052.22,
+      "text": "players in between one and thirteen what"
+    },
+    {
+      "start": 1049.82,
+      "end": 1055.1,
+      "text": "will be every individual sector's length"
+    },
+    {
+      "start": 1052.22,
+      "end": 1057.2,
+      "text": "it's one in thirteen the total is twelve"
+    },
+    {
+      "start": 1055.1,
+      "end": 1059.18,
+      "text": "and if there are two placed that means"
+    },
+    {
+      "start": 1057.2,
+      "end": 1061.04,
+      "text": "there are three sectors so it'll be like"
+    },
+    {
+      "start": 1059.18,
+      "end": 1062.78,
+      "text": "four the individual length will be four"
+    },
+    {
+      "start": 1061.04,
+      "end": 1065.36,
+      "text": "the individual consecutive differences"
+    },
+    {
+      "start": 1062.78,
+      "end": 1067.7,
+      "text": "will be four got it"
+    },
+    {
+      "start": 1065.36,
+      "end": 1070.1,
+      "text": "so the third one is also placed let's"
+    },
+    {
+      "start": 1067.7,
+      "end": 1072.14,
+      "text": "talk about the fourth one so I know one"
+    },
+    {
+      "start": 1070.1,
+      "end": 1074.66,
+      "text": "thing this has an individual length of"
+    },
+    {
+      "start": 1072.14,
+      "end": 1076.88,
+      "text": "four this has an individual length of"
+    },
+    {
+      "start": 1074.66,
+      "end": 1080.12,
+      "text": "four this has an individual length of 3"
+    },
+    {
+      "start": 1076.88,
+      "end": 1082.22,
+      "text": "because 6 by 2 right so where will you"
+    },
+    {
+      "start": 1080.12,
+      "end": 1084.5,
+      "text": "what will you try to minimize you try to"
+    },
+    {
+      "start": 1082.22,
+      "end": 1086.72,
+      "text": "minimize four and four so maybe let's"
+    },
+    {
+      "start": 1084.5,
+      "end": 1088.58,
+      "text": "take this four and place it here so what"
+    },
+    {
+      "start": 1086.72,
+      "end": 1089.96,
+      "text": "I've done is I've placed it here so"
+    },
+    {
+      "start": 1088.58,
+      "end": 1092.36,
+      "text": "there will be like two sectors of two"
+    },
+    {
+      "start": 1089.96,
+      "end": 1094.88,
+      "text": "and two each and go at fifteen quite"
+    },
+    {
+      "start": 1092.36,
+      "end": 1096.74,
+      "text": "obvious so the fourth one is placed time"
+    },
+    {
+      "start": 1094.88,
+      "end": 1098.54,
+      "text": "for the fifth one time for the fifth one"
+    },
+    {
+      "start": 1096.74,
+      "end": 1099.8,
+      "text": "so when I try to place fifth one what"
+    },
+    {
+      "start": 1098.54,
+      "end": 1101.6,
+      "text": "happens is"
+    },
+    {
+      "start": 1099.8,
+      "end": 1104.3,
+      "text": "I have 130"
+    },
+    {
+      "start": 1101.6,
+      "end": 1106.82,
+      "text": "I won 13 there is already two there so"
+    },
+    {
+      "start": 1104.3,
+      "end": 1109.58,
+      "text": "between 113 there's already two which is"
+    },
+    {
+      "start": 1106.82,
+      "end": 1111.74,
+      "text": "at um five and nine"
+    },
+    {
+      "start": 1109.58,
+      "end": 1114.26,
+      "text": "but I need to place one more so the"
+    },
+    {
+      "start": 1111.74,
+      "end": 1117.5,
+      "text": "distance is four four how did you figure"
+    },
+    {
+      "start": 1114.26,
+      "end": 1120.8,
+      "text": "it out difference twelve how many placed"
+    },
+    {
+      "start": 1117.5,
+      "end": 1124.64,
+      "text": "two how many sections three so that's"
+    },
+    {
+      "start": 1120.8,
+      "end": 1126.98,
+      "text": "like four over here so for this"
+    },
+    {
+      "start": 1124.64,
+      "end": 1129.32,
+      "text": "the difference is 4 for this the"
+    },
+    {
+      "start": 1126.98,
+      "end": 1131.18,
+      "text": "difference is 4"
+    },
+    {
+      "start": 1129.32,
+      "end": 1134.3,
+      "text": "by"
+    },
+    {
+      "start": 1131.18,
+      "end": 1136.7,
+      "text": "two sectors so two"
+    },
+    {
+      "start": 1134.3,
+      "end": 1138.68,
+      "text": "over here the difference is three so"
+    },
+    {
+      "start": 1136.7,
+      "end": 1141.14,
+      "text": "which is the highest the highest is here"
+    },
+    {
+      "start": 1138.68,
+      "end": 1143.18,
+      "text": "so where will you place here because you"
+    },
+    {
+      "start": 1141.14,
+      "end": 1145.66,
+      "text": "wanna reduce that highest length so"
+    },
+    {
+      "start": 1143.18,
+      "end": 1145.66,
+      "text": "let's reduce"
+    },
+    {
+      "start": 1146.3,
+      "end": 1152.72,
+      "text": "so can I see I'll place it here"
+    },
+    {
+      "start": 1150.02,
+      "end": 1155.06,
+      "text": "done what I've done is I made sure I've"
+    },
+    {
+      "start": 1152.72,
+      "end": 1156.92,
+      "text": "placed five of the new gas stations and"
+    },
+    {
+      "start": 1155.06,
+      "end": 1159.44,
+      "text": "made sure that I've placed five of the"
+    },
+    {
+      "start": 1156.92,
+      "end": 1161.18,
+      "text": "new gas stations once I've done that can"
+    },
+    {
+      "start": 1159.44,
+      "end": 1163.34,
+      "text": "I figure out the"
+    },
+    {
+      "start": 1161.18,
+      "end": 1166.16,
+      "text": "equal section length between this"
+    },
+    {
+      "start": 1163.34,
+      "end": 1169.1,
+      "text": "between this between this yes let's do"
+    },
+    {
+      "start": 1166.16,
+      "end": 1171.08,
+      "text": "it how many are there between this I'm"
+    },
+    {
+      "start": 1169.1,
+      "end": 1173.48,
+      "text": "saying there are three placed between"
+    },
+    {
+      "start": 1171.08,
+      "end": 1175.52,
+      "text": "this so it's like 1 and 13 there are"
+    },
+    {
+      "start": 1173.48,
+      "end": 1177.14,
+      "text": "three placed so if there are three"
+    },
+    {
+      "start": 1175.52,
+      "end": 1179.66,
+      "text": "placed"
+    },
+    {
+      "start": 1177.14,
+      "end": 1183.08,
+      "text": "there'll be four sectors of equal length"
+    },
+    {
+      "start": 1179.66,
+      "end": 1185.66,
+      "text": "the total this uh difference is twelve"
+    },
+    {
+      "start": 1183.08,
+      "end": 1188.0,
+      "text": "four sectors means three so first one"
+    },
+    {
+      "start": 1185.66,
+      "end": 1191.24,
+      "text": "will be placed at four then seven then"
+    },
+    {
+      "start": 1188.0,
+      "end": 1195.44,
+      "text": "ten the distance will be three three"
+    },
+    {
+      "start": 1191.24,
+      "end": 1198.14,
+      "text": "three perfect now you have 17 I'm saying"
+    },
+    {
+      "start": 1195.44,
+      "end": 1201.5,
+      "text": "one is placed so one is place means two"
+    },
+    {
+      "start": 1198.14,
+      "end": 1203.9,
+      "text": "sectors and it will be at fifteen so the"
+    },
+    {
+      "start": 1201.5,
+      "end": 1208.52,
+      "text": "difference will be 2 2 how did you find"
+    },
+    {
+      "start": 1203.9,
+      "end": 1210.5,
+      "text": "out 17 minus 13 by one place means two"
+    },
+    {
+      "start": 1208.52,
+      "end": 1214.46,
+      "text": "sectors that means a difference of two"
+    },
+    {
+      "start": 1210.5,
+      "end": 1216.32,
+      "text": "whereas the next 23 how many placed one"
+    },
+    {
+      "start": 1214.46,
+      "end": 1219.38,
+      "text": "so if one you're placing that means two"
+    },
+    {
+      "start": 1216.32,
+      "end": 1222.26,
+      "text": "sectors 23 minus Seventeen by two is"
+    },
+    {
+      "start": 1219.38,
+      "end": 1224.36,
+      "text": "three so three three placed at twenty"
+    },
+    {
+      "start": 1222.26,
+      "end": 1226.7,
+      "text": "what I've done is I made sure to figure"
+    },
+    {
+      "start": 1224.36,
+      "end": 1229.46,
+      "text": "out what is the distance between each"
+    },
+    {
+      "start": 1226.7,
+      "end": 1232.04,
+      "text": "consecutive and what is the max the max"
+    },
+    {
+      "start": 1229.46,
+      "end": 1233.96,
+      "text": "that I can see is three how did you find"
+    },
+    {
+      "start": 1232.04,
+      "end": 1237.2,
+      "text": "out the max you don't need to place them"
+    },
+    {
+      "start": 1233.96,
+      "end": 1240.02,
+      "text": "you don't need to please them 13 minus 1"
+    },
+    {
+      "start": 1237.2,
+      "end": 1242.24,
+      "text": "by 2 3 each sector is of 3 each sector"
+    },
+    {
+      "start": 1240.02,
+      "end": 1244.34,
+      "text": "is of two each sector is of three so"
+    },
+    {
+      "start": 1242.24,
+      "end": 1246.2,
+      "text": "three two three which is the max 3"
+    },
+    {
+      "start": 1244.34,
+      "end": 1248.9,
+      "text": "that's your answer this is the Brute"
+    },
+    {
+      "start": 1246.2,
+      "end": 1250.16,
+      "text": "Force might look tough but when I try to"
+    },
+    {
+      "start": 1248.9,
+      "end": 1252.08,
+      "text": "write the code it's going to be super"
+    },
+    {
+      "start": 1250.16,
+      "end": 1253.64,
+      "text": "simple don't worry about that so we need"
+    },
+    {
+      "start": 1252.08,
+      "end": 1255.8,
+      "text": "to write the code you might think it's"
+    },
+    {
+      "start": 1253.64,
+      "end": 1258.8,
+      "text": "going to be complex no it's not that"
+    },
+    {
+      "start": 1255.8,
+      "end": 1260.42,
+      "text": "complex what are we keeping track of a"
+    },
+    {
+      "start": 1258.8,
+      "end": 1263.06,
+      "text": "kind of keeping track of how many were"
+    },
+    {
+      "start": 1260.42,
+      "end": 1265.52,
+      "text": "placed between them and we were trying"
+    },
+    {
+      "start": 1263.06,
+      "end": 1267.62,
+      "text": "to place one by one so the first thing I"
+    },
+    {
+      "start": 1265.52,
+      "end": 1269.78,
+      "text": "will do is I'll try to go one by one so"
+    },
+    {
+      "start": 1267.62,
+      "end": 1272.24,
+      "text": "gas stations will start from 1 and will"
+    },
+    {
+      "start": 1269.78,
+      "end": 1274.04,
+      "text": "go till K that's the first thing I'll do"
+    },
+    {
+      "start": 1272.24,
+      "end": 1276.2,
+      "text": "quite simple what I've done is I've"
+    },
+    {
+      "start": 1274.04,
+      "end": 1278.0,
+      "text": "basically gone from one to K now I have"
+    },
+    {
+      "start": 1276.2,
+      "end": 1279.8,
+      "text": "to keep a track of how many have been"
+    },
+    {
+      "start": 1278.0,
+      "end": 1282.08,
+      "text": "placed maybe again"
+    },
+    {
+      "start": 1279.8,
+      "end": 1283.88,
+      "text": "take something in like a how many array"
+    },
+    {
+      "start": 1282.08,
+      "end": 1286.76,
+      "text": "so tell me what would be the length of"
+    },
+    {
+      "start": 1283.88,
+      "end": 1289.34,
+      "text": "this how many array so initially uh it's"
+    },
+    {
+      "start": 1286.76,
+      "end": 1290.96,
+      "text": "like one two three the three sections"
+    },
+    {
+      "start": 1289.34,
+      "end": 1292.88,
+      "text": "where you can put in the gas station so"
+    },
+    {
+      "start": 1290.96,
+      "end": 1294.38,
+      "text": "they're like three and you know the"
+    },
+    {
+      "start": 1292.88,
+      "end": 1297.14,
+      "text": "indexing will go by"
+    },
+    {
+      "start": 1294.38,
+      "end": 1300.26,
+      "text": "zero beasts initially there are zero gas"
+    },
+    {
+      "start": 1297.14,
+      "end": 1302.54,
+      "text": "stations at every consecutive existing"
+    },
+    {
+      "start": 1300.26,
+      "end": 1304.04,
+      "text": "gas stations so what we need to do is we"
+    },
+    {
+      "start": 1302.54,
+      "end": 1306.62,
+      "text": "need to figure out where will this first"
+    },
+    {
+      "start": 1304.04,
+      "end": 1308.66,
+      "text": "gas station go where will it go I'll"
+    },
+    {
+      "start": 1306.62,
+      "end": 1311.24,
+      "text": "figure out the distance figure out the"
+    },
+    {
+      "start": 1308.66,
+      "end": 1313.28,
+      "text": "distance of every section if there are"
+    },
+    {
+      "start": 1311.24,
+      "end": 1315.92,
+      "text": "any place you will divide it I'll try to"
+    },
+    {
+      "start": 1313.28,
+      "end": 1318.26,
+      "text": "place it at the place wherever there is"
+    },
+    {
+      "start": 1315.92,
+      "end": 1321.32,
+      "text": "maximum so maybe I'll have to keep a"
+    },
+    {
+      "start": 1318.26,
+      "end": 1323.9,
+      "text": "track of which is the maximum value"
+    },
+    {
+      "start": 1321.32,
+      "end": 1326.54,
+      "text": "and at the same time I'll also have to"
+    },
+    {
+      "start": 1323.9,
+      "end": 1328.58,
+      "text": "keep a track of where is the maximum"
+    },
+    {
+      "start": 1326.54,
+      "end": 1331.64,
+      "text": "value occurring like in this case it was"
+    },
+    {
+      "start": 1328.58,
+      "end": 1333.98,
+      "text": "12 and it was occurring at the zeroth it"
+    },
+    {
+      "start": 1331.64,
+      "end": 1335.96,
+      "text": "is occurring at the zeroth section so"
+    },
+    {
+      "start": 1333.98,
+      "end": 1337.82,
+      "text": "what I need to do is this is the first"
+    },
+    {
+      "start": 1335.96,
+      "end": 1339.68,
+      "text": "section this is second is the third so"
+    },
+    {
+      "start": 1337.82,
+      "end": 1342.62,
+      "text": "there are like three sections and"
+    },
+    {
+      "start": 1339.68,
+      "end": 1348.02,
+      "text": "annuals four so I'll have to run a loop"
+    },
+    {
+      "start": 1342.62,
+      "end": 1350.48,
+      "text": "from I equal to 0 till n minus 1 right"
+    },
+    {
+      "start": 1348.02,
+      "end": 1352.4,
+      "text": "what is the difference what is the"
+    },
+    {
+      "start": 1350.48,
+      "end": 1354.8,
+      "text": "initial difference if I have to ask you"
+    },
+    {
+      "start": 1352.4,
+      "end": 1357.44,
+      "text": "the difference is very simple arr[i]"
+    },
+    {
+      "start": 1354.8,
+      "end": 1359.78,
+      "text": "plus 1 minus arr[i] again the array"
+    },
+    {
+      "start": 1357.44,
+      "end": 1362.48,
+      "text": "is sorted so it will be fine so"
+    },
+    {
+      "start": 1359.78,
+      "end": 1365.18,
+      "text": "initially what happens is 13 minus 1 so"
+    },
+    {
+      "start": 1362.48,
+      "end": 1367.58,
+      "text": "this will be 12 this will be 12 but"
+    },
+    {
+      "start": 1365.18,
+      "end": 1369.74,
+      "text": "remember one thing if there was one gas"
+    },
+    {
+      "start": 1367.58,
+      "end": 1372.5,
+      "text": "station already placed this is actually"
+    },
+    {
+      "start": 1369.74,
+      "end": 1374.24,
+      "text": "six this is actually six so how do you"
+    },
+    {
+      "start": 1372.5,
+      "end": 1376.4,
+      "text": "figure out you figure out how many are"
+    },
+    {
+      "start": 1374.24,
+      "end": 1380.26,
+      "text": "there so basically"
+    },
+    {
+      "start": 1376.4,
+      "end": 1380.26,
+      "text": "the sexual length will be"
+    },
+    {
+      "start": 1380.3,
+      "end": 1389.0,
+      "text": "Difference by how many are placed"
+    },
+    {
+      "start": 1385.46,
+      "end": 1391.1,
+      "text": "plus one because if there is one if"
+    },
+    {
+      "start": 1389.0,
+      "end": 1392.84,
+      "text": "there is one placed it will be broken"
+    },
+    {
+      "start": 1391.1,
+      "end": 1395.0,
+      "text": "down into two sections it will be broken"
+    },
+    {
+      "start": 1392.84,
+      "end": 1397.7,
+      "text": "down into two sections so Difference by"
+    },
+    {
+      "start": 1395.0,
+      "end": 1399.26,
+      "text": "how many plus one place that is the"
+    },
+    {
+      "start": 1397.7,
+      "end": 1401.72,
+      "text": "section length of that that's the"
+    },
+    {
+      "start": 1399.26,
+      "end": 1404.06,
+      "text": "section length of that currently I need"
+    },
+    {
+      "start": 1401.72,
+      "end": 1406.94,
+      "text": "to figure out the maximum section length"
+    },
+    {
+      "start": 1404.06,
+      "end": 1410.18,
+      "text": "if maximum is smaller than section"
+    },
+    {
+      "start": 1406.94,
+      "end": 1413.78,
+      "text": "length what I'll do is I will say"
+    },
+    {
+      "start": 1410.18,
+      "end": 1417.94,
+      "text": "maximum equal to"
+    },
+    {
+      "start": 1413.78,
+      "end": 1422.3,
+      "text": "section length and I'll say Max index"
+    },
+    {
+      "start": 1417.94,
+      "end": 1425.72,
+      "text": "equal to I quite simple once this for"
+    },
+    {
+      "start": 1422.3,
+      "end": 1427.52,
+      "text": "Loop overs here NC rather once this for"
+    },
+    {
+      "start": 1425.72,
+      "end": 1429.5,
+      "text": "Loop ends here what will happen is I"
+    },
+    {
+      "start": 1427.52,
+      "end": 1432.14,
+      "text": "would have figured out where is the"
+    },
+    {
+      "start": 1429.5,
+      "end": 1435.98,
+      "text": "maximum line and I will go ahead and"
+    },
+    {
+      "start": 1432.14,
+      "end": 1438.14,
+      "text": "place that gas station at that Max index"
+    },
+    {
+      "start": 1435.98,
+      "end": 1440.36,
+      "text": "I'll just do a plus plus so what will"
+    },
+    {
+      "start": 1438.14,
+      "end": 1442.64,
+      "text": "happen is I'll go across and place it"
+    },
+    {
+      "start": 1440.36,
+      "end": 1444.74,
+      "text": "there once I have done all the"
+    },
+    {
+      "start": 1442.64,
+      "end": 1446.54,
+      "text": "placements once I've done all the"
+    },
+    {
+      "start": 1444.74,
+      "end": 1449.42,
+      "text": "placements I have to go through everyone"
+    },
+    {
+      "start": 1446.54,
+      "end": 1452.54,
+      "text": "and figure out what was the sections"
+    },
+    {
+      "start": 1449.42,
+      "end": 1456.14,
+      "text": "individual length so that's the maximum"
+    },
+    {
+      "start": 1452.54,
+      "end": 1457.52,
+      "text": "answer so the max answer will be -1 and"
+    },
+    {
+      "start": 1456.14,
+      "end": 1460.46,
+      "text": "I can go across every section"
+    },
+    {
+      "start": 1457.52,
+      "end": 1462.98,
+      "text": "individually so that's again n minus 1 I"
+    },
+    {
+      "start": 1460.46,
+      "end": 1465.14,
+      "text": "plus plus 1 and I'll again do the same"
+    },
+    {
+      "start": 1462.98,
+      "end": 1468.16,
+      "text": "process where I'll say the sectional"
+    },
+    {
+      "start": 1465.14,
+      "end": 1468.16,
+      "text": "length is going to be"
+    },
+    {
+      "start": 1469.52,
+      "end": 1478.88,
+      "text": "arr[i] plus 1 minus arr[i]"
+    },
+    {
+      "start": 1474.7,
+      "end": 1480.74,
+      "text": "divided by how many were placed"
+    },
+    {
+      "start": 1478.88,
+      "end": 1484.34,
+      "text": "plus one because that is going to be the"
+    },
+    {
+      "start": 1480.74,
+      "end": 1487.3,
+      "text": "section length and if that exceeds my"
+    },
+    {
+      "start": 1484.34,
+      "end": 1490.22,
+      "text": "answer so I can do a Max of Max answer"
+    },
+    {
+      "start": 1487.3,
+      "end": 1492.14,
+      "text": "dot section length and at the end of the"
+    },
+    {
+      "start": 1490.22,
+      "end": 1495.44,
+      "text": "day I can return this Max answer I can"
+    },
+    {
+      "start": 1492.14,
+      "end": 1497.54,
+      "text": "return this Max answer quite simple and"
+    },
+    {
+      "start": 1495.44,
+      "end": 1499.64,
+      "text": "if you do this you'll figure out each of"
+    },
+    {
+      "start": 1497.54,
+      "end": 1501.74,
+      "text": "the individual sexual lengths and you"
+    },
+    {
+      "start": 1499.64,
+      "end": 1503.36,
+      "text": "can easily return them"
+    },
+    {
+      "start": 1501.74,
+      "end": 1505.1,
+      "text": "I know the presentation was not that"
+    },
+    {
+      "start": 1503.36,
+      "end": 1506.6,
+      "text": "great on the iPad but no issues let's"
+    },
+    {
+      "start": 1505.1,
+      "end": 1508.22,
+      "text": "quickly go back into the code editor"
+    },
+    {
+      "start": 1506.6,
+      "end": 1509.78,
+      "text": "what I've done is I've written the exact"
+    },
+    {
+      "start": 1508.22,
+      "end": 1511.82,
+      "text": "same code so that it's much more"
+    },
+    {
+      "start": 1509.78,
+      "end": 1513.5,
+      "text": "readable initially go through all the"
+    },
+    {
+      "start": 1511.82,
+      "end": 1515.9,
+      "text": "gas stations and I know initially"
+    },
+    {
+      "start": 1513.5,
+      "end": 1518.06,
+      "text": "everything will be -1 make sure that you"
+    },
+    {
+      "start": 1515.9,
+      "end": 1519.98,
+      "text": "define long double and then you find out"
+    },
+    {
+      "start": 1518.06,
+      "end": 1521.48,
+      "text": "the initial differentiation like initial"
+    },
+    {
+      "start": 1519.98,
+      "end": 1524.06,
+      "text": "difference and then you figure out what"
+    },
+    {
+      "start": 1521.48,
+      "end": 1526.52,
+      "text": "is the length by dividing it by how many"
+    },
+    {
+      "start": 1524.06,
+      "end": 1528.62,
+      "text": "were placed plus one and if it exceeds"
+    },
+    {
+      "start": 1526.52,
+      "end": 1530.6,
+      "text": "you do this and right in the end of the"
+    },
+    {
+      "start": 1528.62,
+      "end": 1532.64,
+      "text": "going through all these sections"
+    },
+    {
+      "start": 1530.6,
+      "end": 1534.56,
+      "text": "basically you figure out wherever was"
+    },
+    {
+      "start": 1532.64,
+      "end": 1536.96,
+      "text": "the max you just increase the counter"
+    },
+    {
+      "start": 1534.56,
+      "end": 1538.52,
+      "text": "once this is done you go through every"
+    },
+    {
+      "start": 1536.96,
+      "end": 1540.62,
+      "text": "section and you figure out what's the"
+    },
+    {
+      "start": 1538.52,
+      "end": 1542.12,
+      "text": "individual section length and if you"
+    },
+    {
+      "start": 1540.62,
+      "end": 1543.98,
+      "text": "figure out the max of it because that is"
+    },
+    {
+      "start": 1542.12,
+      "end": 1545.36,
+      "text": "what you have to return make sure that"
+    },
+    {
+      "start": 1543.98,
+      "end": 1546.8,
+      "text": "you do the typecasting properly"
+    },
+    {
+      "start": 1545.36,
+      "end": 1548.6,
+      "text": "otherwise you'll be getting a wrong"
+    },
+    {
+      "start": 1546.8,
+      "end": 1550.04,
+      "text": "answer so if I go ahead and submit this"
+    },
+    {
+      "start": 1548.6,
+      "end": 1551.66,
+      "text": "this will be giving me a time limit"
+    },
+    {
+      "start": 1550.04,
+      "end": 1553.34,
+      "text": "exceeded they will be giving you a time"
+    },
+    {
+      "start": 1551.66,
+      "end": 1555.56,
+      "text": "limit exceeded why because you're"
+    },
+    {
+      "start": 1553.34,
+      "end": 1557.42,
+      "text": "running a loop for K so that's like K"
+    },
+    {
+      "start": 1555.56,
+      "end": 1559.4,
+      "text": "and then internally you're running a n"
+    },
+    {
+      "start": 1557.42,
+      "end": 1562.28,
+      "text": "and then another end to figure out the"
+    },
+    {
+      "start": 1559.4,
+      "end": 1564.38,
+      "text": "maximum so this K into n is kind of"
+    },
+    {
+      "start": 1562.28,
+      "end": 1566.48,
+      "text": "quadratic in nature and this is the"
+    },
+    {
+      "start": 1564.38,
+      "end": 1568.4,
+      "text": "reason why it will be giving you a time"
+    },
+    {
+      "start": 1566.48,
+      "end": 1570.32,
+      "text": "limit exceeded so what we need to do is"
+    },
+    {
+      "start": 1568.4,
+      "end": 1572.18,
+      "text": "we need to kind of optimize this K into"
+    },
+    {
+      "start": 1570.32,
+      "end": 1574.34,
+      "text": "n so let's quickly come back to the"
+    },
+    {
+      "start": 1572.18,
+      "end": 1576.68,
+      "text": "Brute Force solution so we did see that"
+    },
+    {
+      "start": 1574.34,
+      "end": 1579.14,
+      "text": "this Loop is taking K and this Loop is"
+    },
+    {
+      "start": 1576.68,
+      "end": 1582.2,
+      "text": "taking n and that is making it as a k"
+    },
+    {
+      "start": 1579.14,
+      "end": 1584.66,
+      "text": "into n something that I cannot avoid as"
+    },
+    {
+      "start": 1582.2,
+      "end": 1586.76,
+      "text": "of now is this one because my entire"
+    },
+    {
+      "start": 1584.66,
+      "end": 1588.98,
+      "text": "logic depends on placing individual gas"
+    },
+    {
+      "start": 1586.76,
+      "end": 1589.64,
+      "text": "stations now what is this Loop trying to"
+    },
+    {
+      "start": 1588.98,
+      "end": 1591.86,
+      "text": "do"
+    },
+    {
+      "start": 1589.64,
+      "end": 1594.32,
+      "text": "the slope is trying to figure out the"
+    },
+    {
+      "start": 1591.86,
+      "end": 1597.26,
+      "text": "max length that is what it is trying to"
+    },
+    {
+      "start": 1594.32,
+      "end": 1600.08,
+      "text": "do now can I probably try to optimize"
+    },
+    {
+      "start": 1597.26,
+      "end": 1603.14,
+      "text": "this one and if I can optimize this one"
+    },
+    {
+      "start": 1600.08,
+      "end": 1605.06,
+      "text": "my complexity can be reduced so this is"
+    },
+    {
+      "start": 1603.14,
+      "end": 1607.76,
+      "text": "what I'll try to think of I'll try to"
+    },
+    {
+      "start": 1605.06,
+      "end": 1609.68,
+      "text": "optimize the maximum finding mechanism"
+    },
+    {
+      "start": 1607.76,
+      "end": 1611.72,
+      "text": "so let's quickly check if we can do that"
+    },
+    {
+      "start": 1609.68,
+      "end": 1613.76,
+      "text": "or not so before we move on to improving"
+    },
+    {
+      "start": 1611.72,
+      "end": 1615.38,
+      "text": "the time complexity let me quickly tell"
+    },
+    {
+      "start": 1613.76,
+      "end": 1617.0,
+      "text": "you about a data structure priority"
+    },
+    {
+      "start": 1615.38,
+      "end": 1618.56,
+      "text": "queue in case you have seen my C plus"
+    },
+    {
+      "start": 1617.0,
+      "end": 1620.24,
+      "text": "plus still lecture you already know"
+    },
+    {
+      "start": 1618.56,
+      "end": 1622.76,
+      "text": "about it and in case you haven't seen it"
+    },
+    {
+      "start": 1620.24,
+      "end": 1625.94,
+      "text": "I'll just quickly give a recap so this"
+    },
+    {
+      "start": 1622.76,
+      "end": 1628.28,
+      "text": "data structure is there on C plus plus"
+    },
+    {
+      "start": 1625.94,
+      "end": 1630.8,
+      "text": "STL as well as on the Java Collections"
+    },
+    {
+      "start": 1628.28,
+      "end": 1633.2,
+      "text": "so it's not a linear data structure"
+    },
+    {
+      "start": 1630.8,
+      "end": 1634.88,
+      "text": "internally it is implemented using hem"
+    },
+    {
+      "start": 1633.2,
+      "end": 1637.64,
+      "text": "data structure but I'm just writing it"
+    },
+    {
+      "start": 1634.88,
+      "end": 1639.68,
+      "text": "on a linear fashion to explain you in a"
+    },
+    {
+      "start": 1637.64,
+      "end": 1641.9,
+      "text": "much easier way so imagine this is a"
+    },
+    {
+      "start": 1639.68,
+      "end": 1646.28,
+      "text": "priority queue and I ask you okay prior"
+    },
+    {
+      "start": 1641.9,
+      "end": 1650.0,
+      "text": "to you dot push to prodigive dot push"
+    },
+    {
+      "start": 1646.28,
+      "end": 1652.46,
+      "text": "three Prodigy dot push one"
+    },
+    {
+      "start": 1650.0,
+      "end": 1655.24,
+      "text": "and if you do this and after that you"
+    },
+    {
+      "start": 1652.46,
+      "end": 1657.92,
+      "text": "say pratigue.top so if you say dot Top"
+    },
+    {
+      "start": 1655.24,
+      "end": 1659.72,
+      "text": "This push takes log the rhythmic of end"
+    },
+    {
+      "start": 1657.92,
+      "end": 1662.48,
+      "text": "time complexity this takes logarithmic"
+    },
+    {
+      "start": 1659.72,
+      "end": 1665.18,
+      "text": "of n this takes logarithmic effect so if"
+    },
+    {
+      "start": 1662.48,
+      "end": 1667.34,
+      "text": "we say p q dot top what happens is you"
+    },
+    {
+      "start": 1665.18,
+      "end": 1670.4,
+      "text": "have inserted three elements now the"
+    },
+    {
+      "start": 1667.34,
+      "end": 1672.98,
+      "text": "priority queue always stores the maximum"
+    },
+    {
+      "start": 1670.4,
+      "end": 1674.78,
+      "text": "and the stop maximum at the top it"
+    },
+    {
+      "start": 1672.98,
+      "end": 1676.4,
+      "text": "stores in a tree fashion but that's a"
+    },
+    {
+      "start": 1674.78,
+      "end": 1679.58,
+      "text": "completely different thing but as of now"
+    },
+    {
+      "start": 1676.4,
+      "end": 1681.56,
+      "text": "remember if you say p q dot top it will"
+    },
+    {
+      "start": 1679.58,
+      "end": 1683.9,
+      "text": "always give you three because three will"
+    },
+    {
+      "start": 1681.56,
+      "end": 1685.58,
+      "text": "be at the Top If I have to explain it in"
+    },
+    {
+      "start": 1683.9,
+      "end": 1688.4,
+      "text": "a linear fashion it'll be something like"
+    },
+    {
+      "start": 1685.58,
+      "end": 1689.96,
+      "text": "three two one so if you say dot top it"
+    },
+    {
+      "start": 1688.4,
+      "end": 1692.3,
+      "text": "will give you three and after that if"
+    },
+    {
+      "start": 1689.96,
+      "end": 1693.98,
+      "text": "you say p q dot top again it will again"
+    },
+    {
+      "start": 1692.3,
+      "end": 1696.38,
+      "text": "give you three because it will not be"
+    },
+    {
+      "start": 1693.98,
+      "end": 1698.6,
+      "text": "removing it and if you after that say p"
+    },
+    {
+      "start": 1696.38,
+      "end": 1700.46,
+      "text": "q dot pop what will happen is this three"
+    },
+    {
+      "start": 1698.6,
+      "end": 1702.74,
+      "text": "will be gone this three will be gone"
+    },
+    {
+      "start": 1700.46,
+      "end": 1704.78,
+      "text": "after that if you say p q dot top it'll"
+    },
+    {
+      "start": 1702.74,
+      "end": 1705.8,
+      "text": "give you two so this is what the data"
+    },
+    {
+      "start": 1704.78,
+      "end": 1708.38,
+      "text": "structure is"
+    },
+    {
+      "start": 1705.8,
+      "end": 1711.5,
+      "text": "what do we need to do we're taking big"
+    },
+    {
+      "start": 1708.38,
+      "end": 1714.02,
+      "text": "of n in order to find out the maximum we"
+    },
+    {
+      "start": 1711.5,
+      "end": 1715.58,
+      "text": "need to optimize it obviously we don't"
+    },
+    {
+      "start": 1714.02,
+      "end": 1717.68,
+      "text": "need to optimize it to n by two because"
+    },
+    {
+      "start": 1715.58,
+      "end": 1719.78,
+      "text": "that's not a significant Improvement if"
+    },
+    {
+      "start": 1717.68,
+      "end": 1722.36,
+      "text": "I have to talk about Improvement because"
+    },
+    {
+      "start": 1719.78,
+      "end": 1724.76,
+      "text": "it is taking K into n and it was going"
+    },
+    {
+      "start": 1722.36,
+      "end": 1727.04,
+      "text": "towards quadratic I need to be somewhere"
+    },
+    {
+      "start": 1724.76,
+      "end": 1730.1,
+      "text": "in the range of K so that's going to be"
+    },
+    {
+      "start": 1727.04,
+      "end": 1733.22,
+      "text": "like I have to reduce it to logarithmic"
+    },
+    {
+      "start": 1730.1,
+      "end": 1735.14,
+      "text": "of n or B go of one obviously I cannot"
+    },
+    {
+      "start": 1733.22,
+      "end": 1737.12,
+      "text": "find constant in like I cannot find"
+    },
+    {
+      "start": 1735.14,
+      "end": 1738.32,
+      "text": "maximum in bigger fund so that's out of"
+    },
+    {
+      "start": 1737.12,
+      "end": 1740.0,
+      "text": "question"
+    },
+    {
+      "start": 1738.32,
+      "end": 1742.4,
+      "text": "can I do it in a logarithmic event"
+    },
+    {
+      "start": 1740.0,
+      "end": 1744.44,
+      "text": "probably yes because I know a data"
+    },
+    {
+      "start": 1742.4,
+      "end": 1748.52,
+      "text": "structure which always gives me the"
+    },
+    {
+      "start": 1744.44,
+      "end": 1750.5,
+      "text": "maximum in like this PQ dot top takes a"
+    },
+    {
+      "start": 1748.52,
+      "end": 1752.6,
+      "text": "big of one but the speaker dot push"
+    },
+    {
+      "start": 1750.5,
+      "end": 1755.54,
+      "text": "takes a logarithmic event so kind of in"
+    },
+    {
+      "start": 1752.6,
+      "end": 1758.66,
+      "text": "a logarithmic time it gives me the"
+    },
+    {
+      "start": 1755.54,
+      "end": 1760.7,
+      "text": "maximum so I know a data structure which"
+    },
+    {
+      "start": 1758.66,
+      "end": 1763.52,
+      "text": "gives me maximum logarithmic of it so"
+    },
+    {
+      "start": 1760.7,
+      "end": 1764.84,
+      "text": "maybe I can try implementing it so we"
+    },
+    {
+      "start": 1763.52,
+      "end": 1766.52,
+      "text": "know that we have a data structure which"
+    },
+    {
+      "start": 1764.84,
+      "end": 1769.4,
+      "text": "gives us the maximum so we need to start"
+    },
+    {
+      "start": 1766.52,
+      "end": 1770.24,
+      "text": "so what I will do is I will keep how"
+    },
+    {
+      "start": 1769.4,
+      "end": 1773.0,
+      "text": "many"
+    },
+    {
+      "start": 1770.24,
+      "end": 1775.22,
+      "text": "as we did in the first one and we know"
+    },
+    {
+      "start": 1773.0,
+      "end": 1776.86,
+      "text": "that there are three sections 0 1 2 and"
+    },
+    {
+      "start": 1775.22,
+      "end": 1779.54,
+      "text": "I'll keep zero zero zero because"
+    },
+    {
+      "start": 1776.86,
+      "end": 1780.5,
+      "text": "initially I haven't placed any gas"
+    },
+    {
+      "start": 1779.54,
+      "end": 1782.18,
+      "text": "stations"
+    },
+    {
+      "start": 1780.5,
+      "end": 1785.18,
+      "text": "if I ask you what is the length of the"
+    },
+    {
+      "start": 1782.18,
+      "end": 1787.94,
+      "text": "initial sections 12 for the zeroth"
+    },
+    {
+      "start": 1785.18,
+      "end": 1790.64,
+      "text": "four for the first and six for the"
+    },
+    {
+      "start": 1787.94,
+      "end": 1792.5,
+      "text": "second that's something which I know and"
+    },
+    {
+      "start": 1790.64,
+      "end": 1794.06,
+      "text": "whenever I play is the first I always"
+    },
+    {
+      "start": 1792.5,
+      "end": 1797.18,
+      "text": "think the 12th because that's the"
+    },
+    {
+      "start": 1794.06,
+      "end": 1799.04,
+      "text": "maximum so what I'll do is I will take a"
+    },
+    {
+      "start": 1797.18,
+      "end": 1801.74,
+      "text": "priority queue yes I will take up right"
+    },
+    {
+      "start": 1799.04,
+      "end": 1803.78,
+      "text": "EQ and I'll say first section what is"
+    },
+    {
+      "start": 1801.74,
+      "end": 1805.88,
+      "text": "your length he says 12 12 comma 0 go"
+    },
+    {
+      "start": 1803.78,
+      "end": 1808.58,
+      "text": "into the Britain next section what is"
+    },
+    {
+      "start": 1805.88,
+      "end": 1811.4,
+      "text": "your length 4 4 comma 1 go into the"
+    },
+    {
+      "start": 1808.58,
+      "end": 1812.36,
+      "text": "priority one is the index of that"
+    },
+    {
+      "start": 1811.4,
+      "end": 1815.06,
+      "text": "section"
+    },
+    {
+      "start": 1812.36,
+      "end": 1816.8,
+      "text": "what is the next six comma 2 so what"
+    },
+    {
+      "start": 1815.06,
+      "end": 1819.02,
+      "text": "I've done is in the priority view I'm"
+    },
+    {
+      "start": 1816.8,
+      "end": 1821.3,
+      "text": "storing it in pairs and the pairs is"
+    },
+    {
+      "start": 1819.02,
+      "end": 1822.86,
+      "text": "storing the length of the section and"
+    },
+    {
+      "start": 1821.3,
+      "end": 1825.26,
+      "text": "the index of the section"
+    },
+    {
+      "start": 1822.86,
+      "end": 1827.0,
+      "text": "done let's quickly now start our"
+    },
+    {
+      "start": 1825.26,
+      "end": 1829.34,
+      "text": "algorithm"
+    },
+    {
+      "start": 1827.0,
+      "end": 1830.96,
+      "text": "I say first"
+    },
+    {
+      "start": 1829.34,
+      "end": 1833.78,
+      "text": "gas station where will you place it"
+    },
+    {
+      "start": 1830.96,
+      "end": 1836.24,
+      "text": "you're like I have 12 F6 F4"
+    },
+    {
+      "start": 1833.78,
+      "end": 1838.82,
+      "text": "I have to place it such that this 12"
+    },
+    {
+      "start": 1836.24,
+      "end": 1840.98,
+      "text": "goes down I need to minimize so I'm like"
+    },
+    {
+      "start": 1838.82,
+      "end": 1844.22,
+      "text": "okay every place there go ahead and"
+    },
+    {
+      "start": 1840.98,
+      "end": 1846.74,
+      "text": "place it say like 12 comma 0 I have to"
+    },
+    {
+      "start": 1844.22,
+      "end": 1848.84,
+      "text": "place it at 12 how many are there at 12"
+    },
+    {
+      "start": 1846.74,
+      "end": 1851.6,
+      "text": "it's like 0"
+    },
+    {
+      "start": 1848.84,
+      "end": 1854.24,
+      "text": "at zeroth index there's like zero placed"
+    },
+    {
+      "start": 1851.6,
+      "end": 1858.26,
+      "text": "what is the difference 12 so what will"
+    },
+    {
+      "start": 1854.24,
+      "end": 1859.46,
+      "text": "be the sexual length 12 by 1 12 by 1 and"
+    },
+    {
+      "start": 1858.26,
+      "end": 1860.66,
+      "text": "that's 12."
+    },
+    {
+      "start": 1859.46,
+      "end": 1863.18,
+      "text": "so"
+    },
+    {
+      "start": 1860.66,
+      "end": 1865.58,
+      "text": "I can place it"
+    },
+    {
+      "start": 1863.18,
+      "end": 1867.62,
+      "text": "so I've got 12 comma 0 I can place it"
+    },
+    {
+      "start": 1865.58,
+      "end": 1869.96,
+      "text": "there I'll go ahead and place it there"
+    },
+    {
+      "start": 1867.62,
+      "end": 1873.26,
+      "text": "so placed it there so if I place it"
+    },
+    {
+      "start": 1869.96,
+      "end": 1875.18,
+      "text": "there what is the length 12 a place to 1"
+    },
+    {
+      "start": 1873.26,
+      "end": 1877.94,
+      "text": "which means it will be broken down into"
+    },
+    {
+      "start": 1875.18,
+      "end": 1880.76,
+      "text": "two sections that means"
+    },
+    {
+      "start": 1877.94,
+      "end": 1882.86,
+      "text": "now this 12 comma 0 will become 6 comma"
+    },
+    {
+      "start": 1880.76,
+      "end": 1885.74,
+      "text": "zero the length of this one is now six"
+    },
+    {
+      "start": 1882.86,
+      "end": 1888.86,
+      "text": "six six so what I'll do is I'll go ahead"
+    },
+    {
+      "start": 1885.74,
+      "end": 1892.52,
+      "text": "and say 6 comma 0 I'll go ahead and say"
+    },
+    {
+      "start": 1888.86,
+      "end": 1894.92,
+      "text": "six comma 0. remember one thing the"
+    },
+    {
+      "start": 1892.52,
+      "end": 1897.26,
+      "text": "priority queue will store it like six"
+    },
+    {
+      "start": 1894.92,
+      "end": 1899.48,
+      "text": "comma 2 will be at the first y because"
+    },
+    {
+      "start": 1897.26,
+      "end": 1901.58,
+      "text": "if the first one is matching if the"
+    },
+    {
+      "start": 1899.48,
+      "end": 1903.86,
+      "text": "first one is matching it differentiates"
+    },
+    {
+      "start": 1901.58,
+      "end": 1905.6,
+      "text": "it on the second Factor so 6 comma 2"
+    },
+    {
+      "start": 1903.86,
+      "end": 1907.76,
+      "text": "will be at the front the first gas"
+    },
+    {
+      "start": 1905.6,
+      "end": 1911.42,
+      "text": "station is placed I'll go for the second"
+    },
+    {
+      "start": 1907.76,
+      "end": 1914.48,
+      "text": "for the second I say six comma 2 is a"
+    },
+    {
+      "start": 1911.42,
+      "end": 1917.42,
+      "text": "perfect choice and like 6 comma 2 is a"
+    },
+    {
+      "start": 1914.48,
+      "end": 1919.46,
+      "text": "perfect choice what that means is on the"
+    },
+    {
+      "start": 1917.42,
+      "end": 1920.78,
+      "text": "second section is where I'll Place go"
+    },
+    {
+      "start": 1919.46,
+      "end": 1924.08,
+      "text": "ahead and place it on the second section"
+    },
+    {
+      "start": 1920.78,
+      "end": 1926.42,
+      "text": "one incremented and if you increment one"
+    },
+    {
+      "start": 1924.08,
+      "end": 1928.94,
+      "text": "previously the length was six you have"
+    },
+    {
+      "start": 1926.42,
+      "end": 1931.82,
+      "text": "placed one so broken down into two it"
+    },
+    {
+      "start": 1928.94,
+      "end": 1933.8,
+      "text": "will be of a length three so three comma"
+    },
+    {
+      "start": 1931.82,
+      "end": 1934.82,
+      "text": "section 2."
+    },
+    {
+      "start": 1933.8,
+      "end": 1936.68,
+      "text": "perfect"
+    },
+    {
+      "start": 1934.82,
+      "end": 1939.14,
+      "text": "let's do for the next which is the third"
+    },
+    {
+      "start": 1936.68,
+      "end": 1941.18,
+      "text": "gas station for the third it's"
+    },
+    {
+      "start": 1939.14,
+      "end": 1942.68,
+      "text": "six comma zero for short no doubt in"
+    },
+    {
+      "start": 1941.18,
+      "end": 1944.72,
+      "text": "that"
+    },
+    {
+      "start": 1942.68,
+      "end": 1946.58,
+      "text": "so I'm saying the zeroth section I'm"
+    },
+    {
+      "start": 1944.72,
+      "end": 1949.04,
+      "text": "saying the zero section what is the"
+    },
+    {
+      "start": 1946.58,
+      "end": 1951.08,
+      "text": "length of the zero section 12 how many"
+    },
+    {
+      "start": 1949.04,
+      "end": 1952.94,
+      "text": "are placed how many are placed now"
+    },
+    {
+      "start": 1951.08,
+      "end": 1954.02,
+      "text": "you're placing one more how many are"
+    },
+    {
+      "start": 1952.94,
+      "end": 1957.02,
+      "text": "placed"
+    },
+    {
+      "start": 1954.02,
+      "end": 1959.84,
+      "text": "twelve by three four"
+    },
+    {
+      "start": 1957.02,
+      "end": 1962.24,
+      "text": "isn't it because you got this section"
+    },
+    {
+      "start": 1959.84,
+      "end": 1964.34,
+      "text": "which is previously length six because"
+    },
+    {
+      "start": 1962.24,
+      "end": 1968.0,
+      "text": "there was one now you are saying I am"
+    },
+    {
+      "start": 1964.34,
+      "end": 1970.88,
+      "text": "placing one more so 12 by 3 that's 4 so"
+    },
+    {
+      "start": 1968.0,
+      "end": 1973.1,
+      "text": "the new length will be four comma zero"
+    },
+    {
+      "start": 1970.88,
+      "end": 1976.1,
+      "text": "perfect the new length will be four"
+    },
+    {
+      "start": 1973.1,
+      "end": 1977.96,
+      "text": "comma zero so you are storing the"
+    },
+    {
+      "start": 1976.1,
+      "end": 1979.88,
+      "text": "current length and the section and over"
+    },
+    {
+      "start": 1977.96,
+      "end": 1981.56,
+      "text": "here it stores how many so which one"
+    },
+    {
+      "start": 1979.88,
+      "end": 1982.94,
+      "text": "will be at the top obviously 4 comma 1"
+    },
+    {
+      "start": 1981.56,
+      "end": 1985.94,
+      "text": "will be at the top because practical"
+    },
+    {
+      "start": 1982.94,
+      "end": 1988.82,
+      "text": "stores that sales take 4 comma 1 and out"
+    },
+    {
+      "start": 1985.94,
+      "end": 1991.04,
+      "text": "for the fourth we'll take four comma one"
+    },
+    {
+      "start": 1988.82,
+      "end": 1993.38,
+      "text": "out and what will you do you will say"
+    },
+    {
+      "start": 1991.04,
+      "end": 1995.9,
+      "text": "this will go here"
+    },
+    {
+      "start": 1993.38,
+      "end": 1998.12,
+      "text": "and if it goes your house what's the"
+    },
+    {
+      "start": 1995.9,
+      "end": 1998.96,
+      "text": "length four by two so it's two so please"
+    },
+    {
+      "start": 1998.12,
+      "end": 2001.0,
+      "text": "like"
+    },
+    {
+      "start": 1998.96,
+      "end": 2003.22,
+      "text": "two comma one the section is one so"
+    },
+    {
+      "start": 2001.0,
+      "end": 2006.22,
+      "text": "that's placed perfect what's the next"
+    },
+    {
+      "start": 2003.22,
+      "end": 2008.68,
+      "text": "the fifth for the fifth four comma zero"
+    },
+    {
+      "start": 2006.22,
+      "end": 2010.18,
+      "text": "comes in so you say three and this"
+    },
+    {
+      "start": 2008.68,
+      "end": 2013.42,
+      "text": "timeout happens this time what happens"
+    },
+    {
+      "start": 2010.18,
+      "end": 2015.28,
+      "text": "yes the initial length is 12 how many"
+    },
+    {
+      "start": 2013.42,
+      "end": 2018.76,
+      "text": "have you placed three four sections so"
+    },
+    {
+      "start": 2015.28,
+      "end": 2021.22,
+      "text": "three so now you say three comma zero is"
+    },
+    {
+      "start": 2018.76,
+      "end": 2022.78,
+      "text": "what goes inside the priority queue"
+    },
+    {
+      "start": 2021.22,
+      "end": 2024.7,
+      "text": "by the way three comma two will be at"
+    },
+    {
+      "start": 2022.78,
+      "end": 2028.18,
+      "text": "the top"
+    },
+    {
+      "start": 2024.7,
+      "end": 2029.86,
+      "text": "done placed five you have placed five"
+    },
+    {
+      "start": 2028.18,
+      "end": 2031.9,
+      "text": "and you know the zeroth section is of"
+    },
+    {
+      "start": 2029.86,
+      "end": 2033.94,
+      "text": "three the first section is of two and"
+    },
+    {
+      "start": 2031.9,
+      "end": 2036.28,
+      "text": "the second section is of three and you"
+    },
+    {
+      "start": 2033.94,
+      "end": 2037.72,
+      "text": "need the maximum in the maximum value"
+    },
+    {
+      "start": 2036.28,
+      "end": 2039.88,
+      "text": "because that's your answer you again"
+    },
+    {
+      "start": 2037.72,
+      "end": 2042.28,
+      "text": "just call A P Q dot top you just call A"
+    },
+    {
+      "start": 2039.88,
+      "end": 2044.56,
+      "text": "P Q dot top and you get three comma two"
+    },
+    {
+      "start": 2042.28,
+      "end": 2046.6,
+      "text": "you get three comma two so the second"
+    },
+    {
+      "start": 2044.56,
+      "end": 2049.12,
+      "text": "section so the second section has a"
+    },
+    {
+      "start": 2046.6,
+      "end": 2050.62,
+      "text": "value three and that's the answer the"
+    },
+    {
+      "start": 2049.12,
+      "end": 2053.14,
+      "text": "first section also has a value three but"
+    },
+    {
+      "start": 2050.62,
+      "end": 2054.76,
+      "text": "you just see the one value so 3 is the"
+    },
+    {
+      "start": 2053.14,
+      "end": 2056.5,
+      "text": "answer and that is what you will return"
+    },
+    {
+      "start": 2054.76,
+      "end": 2058.12,
+      "text": "quite simple so I hope you have"
+    },
+    {
+      "start": 2056.5,
+      "end": 2060.52,
+      "text": "understood the optimized solution now"
+    },
+    {
+      "start": 2058.12,
+      "end": 2062.02,
+      "text": "the point to note over here is whenever"
+    },
+    {
+      "start": 2060.52,
+      "end": 2066.52,
+      "text": "you take something out so initially you"
+    },
+    {
+      "start": 2062.02,
+      "end": 2068.44,
+      "text": "took 12 comma 0 this is the main one x0"
+    },
+    {
+      "start": 2066.52,
+      "end": 2071.38,
+      "text": "the section index is the main one"
+    },
+    {
+      "start": 2068.44,
+      "end": 2074.38,
+      "text": "because this is where you place and on"
+    },
+    {
+      "start": 2071.38,
+      "end": 2076.0,
+      "text": "the placement the new section length is"
+    },
+    {
+      "start": 2074.38,
+      "end": 2077.68,
+      "text": "defined and that is what you insert"
+    },
+    {
+      "start": 2076.0,
+      "end": 2078.88,
+      "text": "anyways I'll quickly show you in the"
+    },
+    {
+      "start": 2077.68,
+      "end": 2080.44,
+      "text": "code editor because I don't want to"
+    },
+    {
+      "start": 2078.88,
+      "end": 2082.78,
+      "text": "write on the iPad it's going to be super"
+    },
+    {
+      "start": 2080.44,
+      "end": 2084.34,
+      "text": "messy so let's quickly go back into the"
+    },
+    {
+      "start": 2082.78,
+      "end": 2085.66,
+      "text": "code editor what I'll do is I'll quickly"
+    },
+    {
+      "start": 2084.34,
+      "end": 2089.92,
+      "text": "have the practical"
+    },
+    {
+      "start": 2085.66,
+      "end": 2091.6,
+      "text": "and that will be pair of long double and"
+    },
+    {
+      "start": 2089.92,
+      "end": 2093.76,
+      "text": "end make sure it's a long double"
+    },
+    {
+      "start": 2091.6,
+      "end": 2095.8,
+      "text": "otherwise you'll be having an issue and"
+    },
+    {
+      "start": 2093.76,
+      "end": 2098.5,
+      "text": "I'll quickly remove this"
+    },
+    {
+      "start": 2095.8,
+      "end": 2101.86,
+      "text": "I'll remove this as well and I will be"
+    },
+    {
+      "start": 2098.5,
+      "end": 2104.98,
+      "text": "returning PQ dot top because the top DOT"
+    },
+    {
+      "start": 2101.86,
+      "end": 2107.62,
+      "text": "first is what will be"
+    },
+    {
+      "start": 2104.98,
+      "end": 2109.48,
+      "text": "my maximum but before that what do we"
+    },
+    {
+      "start": 2107.62,
+      "end": 2112.78,
+      "text": "need to do initially in the project you"
+    },
+    {
+      "start": 2109.48,
+      "end": 2114.22,
+      "text": "I'll have to insert all the sections so"
+    },
+    {
+      "start": 2112.78,
+      "end": 2116.92,
+      "text": "let's quickly insert all the sections"
+    },
+    {
+      "start": 2114.22,
+      "end": 2121.14,
+      "text": "it's going to be PQ dot push"
+    },
+    {
+      "start": 2116.92,
+      "end": 2125.74,
+      "text": "and uh it'll be like arr[i] plus 1"
+    },
+    {
+      "start": 2121.14,
+      "end": 2127.36,
+      "text": "minus arr[i] comma I done so what"
+    },
+    {
+      "start": 2125.74,
+      "end": 2128.92,
+      "text": "I've done is I've made sure that the"
+    },
+    {
+      "start": 2127.36,
+      "end": 2131.38,
+      "text": "priority queue already contains the"
+    },
+    {
+      "start": 2128.92,
+      "end": 2133.54,
+      "text": "sexual length and the index and how many"
+    },
+    {
+      "start": 2131.38,
+      "end": 2136.48,
+      "text": "is already assigned as zero over here"
+    },
+    {
+      "start": 2133.54,
+      "end": 2139.84,
+      "text": "what I will do is I know one thing"
+    },
+    {
+      "start": 2136.48,
+      "end": 2142.24,
+      "text": "and I can write as Auto and the top"
+    },
+    {
+      "start": 2139.84,
+      "end": 2143.92,
+      "text": "element that I will get is PQ dot top so"
+    },
+    {
+      "start": 2142.24,
+      "end": 2145.6,
+      "text": "once I've got the top element make sure"
+    },
+    {
+      "start": 2143.92,
+      "end": 2147.94,
+      "text": "you pop it out as well otherwise it will"
+    },
+    {
+      "start": 2145.6,
+      "end": 2150.04,
+      "text": "stain the product queue after that you"
+    },
+    {
+      "start": 2147.94,
+      "end": 2153.22,
+      "text": "just need the section index so maybe you"
+    },
+    {
+      "start": 2150.04,
+      "end": 2155.26,
+      "text": "can write section index TP dot second"
+    },
+    {
+      "start": 2153.22,
+      "end": 2158.44,
+      "text": "do you need the length the length is of"
+    },
+    {
+      "start": 2155.26,
+      "end": 2160.48,
+      "text": "no use I go to how many and I say at"
+    },
+    {
+      "start": 2158.44,
+      "end": 2162.58,
+      "text": "this section index we have the maximum"
+    },
+    {
+      "start": 2160.48,
+      "end": 2163.66,
+      "text": "so please go ahead and increase it so"
+    },
+    {
+      "start": 2162.58,
+      "end": 2165.4,
+      "text": "what I've done is I've taken this"
+    },
+    {
+      "start": 2163.66,
+      "end": 2168.04,
+      "text": "particular gas station and I've made"
+    },
+    {
+      "start": 2165.4,
+      "end": 2170.32,
+      "text": "sure that it is under this section index"
+    },
+    {
+      "start": 2168.04,
+      "end": 2172.0,
+      "text": "now what I can say is what is the"
+    },
+    {
+      "start": 2170.32,
+      "end": 2173.02,
+      "text": "initial yes what is the initial"
+    },
+    {
+      "start": 2172.0,
+      "end": 2175.66,
+      "text": "difference"
+    },
+    {
+      "start": 2173.02,
+      "end": 2179.5,
+      "text": "the initial difference is nothing but"
+    },
+    {
+      "start": 2175.66,
+      "end": 2182.86,
+      "text": "array of wherever the section index is"
+    },
+    {
+      "start": 2179.5,
+      "end": 2185.32,
+      "text": "right that is what"
+    },
+    {
+      "start": 2182.86,
+      "end": 2187.36,
+      "text": "this will be the initial difference what"
+    },
+    {
+      "start": 2185.32,
+      "end": 2189.94,
+      "text": "will be the new"
+    },
+    {
+      "start": 2187.36,
+      "end": 2192.54,
+      "text": "new section lens maybe again again take"
+    },
+    {
+      "start": 2189.94,
+      "end": 2195.58,
+      "text": "long double and I can say news section"
+    },
+    {
+      "start": 2192.54,
+      "end": 2198.64,
+      "text": "length and that will be initial"
+    },
+    {
+      "start": 2195.58,
+      "end": 2200.92,
+      "text": "Difference by long double again please"
+    },
+    {
+      "start": 2198.64,
+      "end": 2202.36,
+      "text": "make sure you don't do any type casting"
+    },
+    {
+      "start": 2200.92,
+      "end": 2207.18,
+      "text": "errors otherwise it will be an issue"
+    },
+    {
+      "start": 2202.36,
+      "end": 2210.22,
+      "text": "long double of how many of section index"
+    },
+    {
+      "start": 2207.18,
+      "end": 2212.8,
+      "text": "plus one that is what will be the new"
+    },
+    {
+      "start": 2210.22,
+      "end": 2215.74,
+      "text": "section length once you've done this you"
+    },
+    {
+      "start": 2212.8,
+      "end": 2219.76,
+      "text": "can go to uh priority key and say this"
+    },
+    {
+      "start": 2215.74,
+      "end": 2221.8,
+      "text": "is your new section length comma your"
+    },
+    {
+      "start": 2219.76,
+      "end": 2223.96,
+      "text": "section index because that's what will"
+    },
+    {
+      "start": 2221.8,
+      "end": 2225.78,
+      "text": "be the section index once you have done"
+    },
+    {
+      "start": 2223.96,
+      "end": 2228.04,
+      "text": "this you can simply go ahead and return"
+    },
+    {
+      "start": 2225.78,
+      "end": 2230.08,
+      "text": "pq.first and that will be running so if"
+    },
+    {
+      "start": 2228.04,
+      "end": 2231.82,
+      "text": "I quickly go ahead and run this off I"
+    },
+    {
+      "start": 2230.08,
+      "end": 2234.64,
+      "text": "think this will be running fine"
+    },
+    {
+      "start": 2231.82,
+      "end": 2237.16,
+      "text": "it does I'll quickly go ahead and submit"
+    },
+    {
+      "start": 2234.64,
+      "end": 2240.04,
+      "text": "this as well what is the time complexity"
+    },
+    {
+      "start": 2237.16,
+      "end": 2242.92,
+      "text": "it's a O(N) login because strategy"
+    },
+    {
+      "start": 2240.04,
+      "end": 2244.36,
+      "text": "dot push text login it's a k"
+    },
+    {
+      "start": 2242.92,
+      "end": 2248.26,
+      "text": "Plus"
+    },
+    {
+      "start": 2244.36,
+      "end": 2250.66,
+      "text": "uh a push login so it's an N login plus"
+    },
+    {
+      "start": 2248.26,
+      "end": 2253.18,
+      "text": "K login solution and thereby it is"
+    },
+    {
+      "start": 2250.66,
+      "end": 2255.4,
+      "text": "accepted because you have omitted the"
+    },
+    {
+      "start": 2253.18,
+      "end": 2256.72,
+      "text": "quadratic stuff so if I go into depth"
+    },
+    {
+      "start": 2255.4,
+      "end": 2258.22,
+      "text": "now and if I write down the time"
+    },
+    {
+      "start": 2256.72,
+      "end": 2261.78,
+      "text": "complexity"
+    },
+    {
+      "start": 2258.22,
+      "end": 2261.78,
+      "text": "that's an N log n"
+    },
+    {
+      "start": 2262.0,
+      "end": 2266.68,
+      "text": "Plus"
+    },
+    {
+      "start": 2263.44,
+      "end": 2268.54,
+      "text": "K login again it's it's like n minus 1"
+    },
+    {
+      "start": 2266.68,
+      "end": 2271.6,
+      "text": "but I've written it as n login"
+    },
+    {
+      "start": 2268.54,
+      "end": 2272.98,
+      "text": "what is the space complexity how many am"
+    },
+    {
+      "start": 2271.6,
+      "end": 2277.54,
+      "text": "I keeping in the project you every time"
+    },
+    {
+      "start": 2272.98,
+      "end": 2279.94,
+      "text": "n minus 1 because if I have like uh for"
+    },
+    {
+      "start": 2277.54,
+      "end": 2282.64,
+      "text": "gas stations I'm keeping always three"
+    },
+    {
+      "start": 2279.94,
+      "end": 2284.14,
+      "text": "sections that's like an N minus one so"
+    },
+    {
+      "start": 2282.64,
+      "end": 2286.84,
+      "text": "this is the time complexity and the"
+    },
+    {
+      "start": 2284.14,
+      "end": 2289.6,
+      "text": "space complexity of the better solution"
+    },
+    {
+      "start": 2286.84,
+      "end": 2291.34,
+      "text": "not the most optimal solution now in an"
+    },
+    {
+      "start": 2289.6,
+      "end": 2293.86,
+      "text": "interview if I was the interviewer I'll"
+    },
+    {
+      "start": 2291.34,
+      "end": 2295.36,
+      "text": "be happy with it I am done with this if"
+    },
+    {
+      "start": 2293.86,
+      "end": 2297.7,
+      "text": "you are giving me the solution but a lot"
+    },
+    {
+      "start": 2295.36,
+      "end": 2300.46,
+      "text": "of interviews might not be happy and"
+    },
+    {
+      "start": 2297.7,
+      "end": 2303.16,
+      "text": "they might be asking you to reduce the"
+    },
+    {
+      "start": 2300.46,
+      "end": 2305.44,
+      "text": "space complexity and this is where the"
+    },
+    {
+      "start": 2303.16,
+      "end": 2307.24,
+      "text": "optimal solution comes in so time for"
+    },
+    {
+      "start": 2305.44,
+      "end": 2309.88,
+      "text": "the optimal solution the question is"
+    },
+    {
+      "start": 2307.24,
+      "end": 2312.82,
+      "text": "asking you to minimize the max distance"
+    },
+    {
+      "start": 2309.88,
+      "end": 2315.1,
+      "text": "between any two consecutive gas stations"
+    },
+    {
+      "start": 2312.82,
+      "end": 2316.66,
+      "text": "Whenever there is something like minimum"
+    },
+    {
+      "start": 2315.1,
+      "end": 2318.7,
+      "text": "and maximum I think we have done a lot"
+    },
+    {
+      "start": 2316.66,
+      "end": 2321.52,
+      "text": "of problems for you to understand that"
+    },
+    {
+      "start": 2318.7,
+      "end": 2323.68,
+      "text": "this is something which can be solved"
+    },
+    {
+      "start": 2321.52,
+      "end": 2326.38,
+      "text": "using binary search because we're trying"
+    },
+    {
+      "start": 2323.68,
+      "end": 2328.42,
+      "text": "to minimize something which is the"
+    },
+    {
+      "start": 2326.38,
+      "end": 2330.04,
+      "text": "maximum so we can apply binary search"
+    },
+    {
+      "start": 2328.42,
+      "end": 2332.14,
+      "text": "and we have done similar problems"
+    },
+    {
+      "start": 2330.04,
+      "end": 2335.62,
+      "text": "previously but in this problem the"
+    },
+    {
+      "start": 2332.14,
+      "end": 2339.4,
+      "text": "catches the answer is in Long double so"
+    },
+    {
+      "start": 2335.62,
+      "end": 2341.5,
+      "text": "we definitely can not do something ah"
+    },
+    {
+      "start": 2339.4,
+      "end": 2344.44,
+      "text": "the generic binary search has something"
+    },
+    {
+      "start": 2341.5,
+      "end": 2347.74,
+      "text": "like while low lesser than equal to high"
+    },
+    {
+      "start": 2344.44,
+      "end": 2350.08,
+      "text": "and this is okay if it is an integer"
+    },
+    {
+      "start": 2347.74,
+      "end": 2352.54,
+      "text": "and we also have something like low"
+    },
+    {
+      "start": 2350.08,
+      "end": 2357.64,
+      "text": "equal to Mid plus 1"
+    },
+    {
+      "start": 2352.54,
+      "end": 2360.4,
+      "text": "plus 1 and high equal to Mid minus 1."
+    },
+    {
+      "start": 2357.64,
+      "end": 2362.8,
+      "text": "now the generic binary search operates"
+    },
+    {
+      "start": 2360.4,
+      "end": 2364.42,
+      "text": "in this pattern where we have done all"
+    },
+    {
+      "start": 2362.8,
+      "end": 2366.22,
+      "text": "the problems yes we have done all the"
+    },
+    {
+      "start": 2364.42,
+      "end": 2368.02,
+      "text": "problems till now where we had just"
+    },
+    {
+      "start": 2366.22,
+      "end": 2370.18,
+      "text": "taken low lesser than equal to I nothing"
+    },
+    {
+      "start": 2368.02,
+      "end": 2372.22,
+      "text": "like lesser high or equal to equal to no"
+    },
+    {
+      "start": 2370.18,
+      "end": 2374.44,
+      "text": "all the problems you have done with this"
+    },
+    {
+      "start": 2372.22,
+      "end": 2377.08,
+      "text": "and every problem we have taken mid plus"
+    },
+    {
+      "start": 2374.44,
+      "end": 2378.76,
+      "text": "1 and mid minus one none of the problems"
+    },
+    {
+      "start": 2377.08,
+      "end": 2379.78,
+      "text": "have taken made or made minus one"
+    },
+    {
+      "start": 2378.76,
+      "end": 2381.64,
+      "text": "nothing"
+    },
+    {
+      "start": 2379.78,
+      "end": 2383.62,
+      "text": "all of the problems have solved using"
+    },
+    {
+      "start": 2381.64,
+      "end": 2387.7,
+      "text": "this particular pattern but over here"
+    },
+    {
+      "start": 2383.62,
+      "end": 2389.74,
+      "text": "the answer is in Long double so all of"
+    },
+    {
+      "start": 2387.7,
+      "end": 2391.12,
+      "text": "the pattern will like each of the"
+    },
+    {
+      "start": 2389.74,
+      "end": 2392.56,
+      "text": "statements will not work this will not"
+    },
+    {
+      "start": 2391.12,
+      "end": 2394.9,
+      "text": "work this will not work this will not"
+    },
+    {
+      "start": 2392.56,
+      "end": 2396.58,
+      "text": "work why plus one is definitely not"
+    },
+    {
+      "start": 2394.9,
+      "end": 2399.34,
+      "text": "going to work because you're kind of"
+    },
+    {
+      "start": 2396.58,
+      "end": 2401.62,
+      "text": "missing out on a lot of things so what"
+    },
+    {
+      "start": 2399.34,
+      "end": 2404.68,
+      "text": "will you do will you do like plus 0.1"
+    },
+    {
+      "start": 2401.62,
+      "end": 2407.5,
+      "text": "will you do like plus 0.0001 will you do"
+    },
+    {
+      "start": 2404.68,
+      "end": 2409.0,
+      "text": "like plus 0.0 something like this no you"
+    },
+    {
+      "start": 2407.5,
+      "end": 2411.1,
+      "text": "can't do something like that because you"
+    },
+    {
+      "start": 2409.0,
+      "end": 2413.68,
+      "text": "have to find a proper answer"
+    },
+    {
+      "start": 2411.1,
+      "end": 2415.48,
+      "text": "even if you do this you also might have"
+    },
+    {
+      "start": 2413.68,
+      "end": 2417.22,
+      "text": "end up missing a lot of things because"
+    },
+    {
+      "start": 2415.48,
+      "end": 2419.5,
+      "text": "if you do this"
+    },
+    {
+      "start": 2417.22,
+      "end": 2421.48,
+      "text": "that might end up taking a lot of time"
+    },
+    {
+      "start": 2419.5,
+      "end": 2423.16,
+      "text": "as I explained in the initial part of"
+    },
+    {
+      "start": 2421.48,
+      "end": 2426.16,
+      "text": "the videos because your answer might be"
+    },
+    {
+      "start": 2423.16,
+      "end": 2428.86,
+      "text": "five six seven one two a long long"
+    },
+    {
+      "start": 2426.16,
+      "end": 2431.26,
+      "text": "double and it might end up rotate like"
+    },
+    {
+      "start": 2428.86,
+      "end": 2433.42,
+      "text": "running for millions and millions of"
+    },
+    {
+      "start": 2431.26,
+      "end": 2436.66,
+      "text": "times because it might be meeting at"
+    },
+    {
+      "start": 2433.42,
+      "end": 2439.18,
+      "text": "some like 89th decimal place to do that"
+    },
+    {
+      "start": 2436.66,
+      "end": 2441.28,
+      "text": "it will look for millions of operations"
+    },
+    {
+      "start": 2439.18,
+      "end": 2444.34,
+      "text": "so you cannot write something like this"
+    },
+    {
+      "start": 2441.28,
+      "end": 2447.4,
+      "text": "so the pattern slightly changes yes the"
+    },
+    {
+      "start": 2444.34,
+      "end": 2449.56,
+      "text": "pattern slightly changes all the double"
+    },
+    {
+      "start": 2447.4,
+      "end": 2451.54,
+      "text": "or long double binary search problems"
+    },
+    {
+      "start": 2449.56,
+      "end": 2453.82,
+      "text": "will always have a pattern like what"
+    },
+    {
+      "start": 2451.54,
+      "end": 2456.16,
+      "text": "happens is instead of comparing High"
+    },
+    {
+      "start": 2453.82,
+      "end": 2458.32,
+      "text": "lesser than like low less than equal to"
+    },
+    {
+      "start": 2456.16,
+      "end": 2459.64,
+      "text": "high or doing something like this you"
+    },
+    {
+      "start": 2458.32,
+      "end": 2462.1,
+      "text": "look at the problem statement the"
+    },
+    {
+      "start": 2459.64,
+      "end": 2463.8,
+      "text": "problem statement was asking you to make"
+    },
+    {
+      "start": 2462.1,
+      "end": 2466.48,
+      "text": "sure that the answer is matching"
+    },
+    {
+      "start": 2463.8,
+      "end": 2469.12,
+      "text": "somewhere around 10 to the power like it"
+    },
+    {
+      "start": 2466.48,
+      "end": 2472.18,
+      "text": "should match till six decimal places so"
+    },
+    {
+      "start": 2469.12,
+      "end": 2474.16,
+      "text": "what you will do is you will say high"
+    },
+    {
+      "start": 2472.18,
+      "end": 2477.94,
+      "text": "minus slope"
+    },
+    {
+      "start": 2474.16,
+      "end": 2481.3,
+      "text": "if the differentiation like between them"
+    },
+    {
+      "start": 2477.94,
+      "end": 2482.08,
+      "text": "is exceeding this 10 to the power minus"
+    },
+    {
+      "start": 2481.3,
+      "end": 2486.16,
+      "text": "six"
+    },
+    {
+      "start": 2482.08,
+      "end": 2488.98,
+      "text": "if they are differentiated add somewhere"
+    },
+    {
+      "start": 2486.16,
+      "end": 2491.76,
+      "text": "beyond six decimal places I'm okay I'm"
+    },
+    {
+      "start": 2488.98,
+      "end": 2494.56,
+      "text": "okay if my low and high are standing"
+    },
+    {
+      "start": 2491.76,
+      "end": 2497.68,
+      "text": "with first six decimal places matching"
+    },
+    {
+      "start": 2494.56,
+      "end": 2500.8,
+      "text": "I'm done understood so this is what will"
+    },
+    {
+      "start": 2497.68,
+      "end": 2503.14,
+      "text": "happen to the condition and instead of"
+    },
+    {
+      "start": 2500.8,
+      "end": 2505.36,
+      "text": "doing low equal to Mid plus 1 you will"
+    },
+    {
+      "start": 2503.14,
+      "end": 2507.94,
+      "text": "always do low equal to Mid and you'll"
+    },
+    {
+      "start": 2505.36,
+      "end": 2510.7,
+      "text": "always do high equal to Mid"
+    },
+    {
+      "start": 2507.94,
+      "end": 2513.34,
+      "text": "you will not be reducing it and this"
+    },
+    {
+      "start": 2510.7,
+      "end": 2515.38,
+      "text": "will make sure that if you start like in"
+    },
+    {
+      "start": 2513.34,
+      "end": 2518.32,
+      "text": "this example you had one and five if"
+    },
+    {
+      "start": 2515.38,
+      "end": 2521.86,
+      "text": "your low is standing at one and your"
+    },
+    {
+      "start": 2518.32,
+      "end": 2523.96,
+      "text": "high is standing at five it will make"
+    },
+    {
+      "start": 2521.86,
+      "end": 2525.64,
+      "text": "sure right at the end the low and high"
+    },
+    {
+      "start": 2523.96,
+      "end": 2529.06,
+      "text": "are standing in the correct place like I"
+    },
+    {
+      "start": 2525.64,
+      "end": 2530.56,
+      "text": "just took an example so in all the like"
+    },
+    {
+      "start": 2529.06,
+      "end": 2532.9,
+      "text": "usually you will not find them in"
+    },
+    {
+      "start": 2530.56,
+      "end": 2536.26,
+      "text": "interviews I'm just teaching you just in"
+    },
+    {
+      "start": 2532.9,
+      "end": 2537.46,
+      "text": "case uh they ask you this is a very rare"
+    },
+    {
+      "start": 2536.26,
+      "end": 2539.56,
+      "text": "problem in an interview you might not"
+    },
+    {
+      "start": 2537.46,
+      "end": 2540.34,
+      "text": "find it remember the pattern high minus"
+    },
+    {
+      "start": 2539.56,
+      "end": 2542.92,
+      "text": "low"
+    },
+    {
+      "start": 2540.34,
+      "end": 2544.36,
+      "text": "greater than 10 to the power minus 6 if"
+    },
+    {
+      "start": 2542.92,
+      "end": 2546.04,
+      "text": "they are asking you seven decimal it"
+    },
+    {
+      "start": 2544.36,
+      "end": 2547.78,
+      "text": "will be minus seven and the low will be"
+    },
+    {
+      "start": 2546.04,
+      "end": 2549.82,
+      "text": "mid and high will limit now let's come"
+    },
+    {
+      "start": 2547.78,
+      "end": 2551.98,
+      "text": "back to solving the problem we know how"
+    },
+    {
+      "start": 2549.82,
+      "end": 2552.88,
+      "text": "to solve many such double problems as of"
+    },
+    {
+      "start": 2551.98,
+      "end": 2555.1,
+      "text": "now"
+    },
+    {
+      "start": 2552.88,
+      "end": 2557.92,
+      "text": "what was I doing in all the other binary"
+    },
+    {
+      "start": 2555.1,
+      "end": 2559.54,
+      "text": "search problems I was kind of writing a"
+    },
+    {
+      "start": 2557.92,
+      "end": 2562.6,
+      "text": "while loop"
+    },
+    {
+      "start": 2559.54,
+      "end": 2565.48,
+      "text": "and then as doing some check using some"
+    },
+    {
+      "start": 2562.6,
+      "end": 2568.18,
+      "text": "check functions and using the check"
+    },
+    {
+      "start": 2565.48,
+      "end": 2570.58,
+      "text": "function I was determining whether low"
+    },
+    {
+      "start": 2568.18,
+      "end": 2573.46,
+      "text": "will go to Mid plus one or maybe our"
+    },
+    {
+      "start": 2570.58,
+      "end": 2575.62,
+      "text": "high will go to Mid minus one this is"
+    },
+    {
+      "start": 2573.46,
+      "end": 2578.5,
+      "text": "what I was doing right"
+    },
+    {
+      "start": 2575.62,
+      "end": 2580.72,
+      "text": "this is what most of the binary search"
+    },
+    {
+      "start": 2578.5,
+      "end": 2583.54,
+      "text": "problems I did I tried to figure out"
+    },
+    {
+      "start": 2580.72,
+      "end": 2585.7,
+      "text": "this check function and on the basis of"
+    },
+    {
+      "start": 2583.54,
+      "end": 2588.1,
+      "text": "that I either eliminated the left half"
+    },
+    {
+      "start": 2585.7,
+      "end": 2590.38,
+      "text": "or I either eliminated the right that is"
+    },
+    {
+      "start": 2588.1,
+      "end": 2592.36,
+      "text": "what I did now the difference"
+    },
+    {
+      "start": 2590.38,
+      "end": 2594.28,
+      "text": "the different thing that I'm doing over"
+    },
+    {
+      "start": 2592.36,
+      "end": 2596.98,
+      "text": "here is mid plus 1 goes and minus one"
+    },
+    {
+      "start": 2594.28,
+      "end": 2599.56,
+      "text": "goes but I have to figure out on what"
+    },
+    {
+      "start": 2596.98,
+      "end": 2601.66,
+      "text": "will I check on what will I check so"
+    },
+    {
+      "start": 2599.56,
+      "end": 2604.12,
+      "text": "throughout the binary search we always"
+    },
+    {
+      "start": 2601.66,
+      "end": 2605.86,
+      "text": "checked on answers we always checked on"
+    },
+    {
+      "start": 2604.12,
+      "end": 2606.88,
+      "text": "answers the same thing we'll do over"
+    },
+    {
+      "start": 2605.86,
+      "end": 2608.98,
+      "text": "here"
+    },
+    {
+      "start": 2606.88,
+      "end": 2610.6,
+      "text": "so we need to apply binary search so if"
+    },
+    {
+      "start": 2608.98,
+      "end": 2611.92,
+      "text": "you remember in all our existing binary"
+    },
+    {
+      "start": 2610.6,
+      "end": 2614.26,
+      "text": "search problems the first thing we"
+    },
+    {
+      "start": 2611.92,
+      "end": 2616.96,
+      "text": "figured out is the range in which the"
+    },
+    {
+      "start": 2614.26,
+      "end": 2619.12,
+      "text": "answer can lie so can I say"
+    },
+    {
+      "start": 2616.96,
+      "end": 2622.54,
+      "text": "the answer can lie"
+    },
+    {
+      "start": 2619.12,
+      "end": 2624.64,
+      "text": "between 0 to somewhere why am I saying"
+    },
+    {
+      "start": 2622.54,
+      "end": 2627.82,
+      "text": "zero imagine I'm giving you a test case"
+    },
+    {
+      "start": 2624.64,
+      "end": 2629.56,
+      "text": "where all the N gas stations are at the"
+    },
+    {
+      "start": 2627.82,
+      "end": 2631.3,
+      "text": "coordinate one there are four gas"
+    },
+    {
+      "start": 2629.56,
+      "end": 2633.04,
+      "text": "stations on there at the coordinate one"
+    },
+    {
+      "start": 2631.3,
+      "end": 2635.5,
+      "text": "and I'm asking you to place four more"
+    },
+    {
+      "start": 2633.04,
+      "end": 2637.3,
+      "text": "you'll again go and place it at one"
+    },
+    {
+      "start": 2635.5,
+      "end": 2639.52,
+      "text": "I haven't said that you cannot place it"
+    },
+    {
+      "start": 2637.3,
+      "end": 2641.74,
+      "text": "at the same coordinates you can so"
+    },
+    {
+      "start": 2639.52,
+      "end": 2647.14,
+      "text": "ideally the distance between any two"
+    },
+    {
+      "start": 2641.74,
+      "end": 2649.42,
+      "text": "will be zero right so the answer can be"
+    },
+    {
+      "start": 2647.14,
+      "end": 2652.72,
+      "text": "somewhere from one okay"
+    },
+    {
+      "start": 2649.42,
+      "end": 2654.04,
+      "text": "and where can the answer be tell the"
+    },
+    {
+      "start": 2652.72,
+      "end": 2656.5,
+      "text": "answer can be till"
+    },
+    {
+      "start": 2654.04,
+      "end": 2658.54,
+      "text": "I can place it outside but will it make"
+    },
+    {
+      "start": 2656.5,
+      "end": 2662.98,
+      "text": "sense no what am I looking to optimize"
+    },
+    {
+      "start": 2658.54,
+      "end": 2665.38,
+      "text": "I'm looking to optimize the max distance"
+    },
+    {
+      "start": 2662.98,
+      "end": 2667.48,
+      "text": "already being there I need to reduce it"
+    },
+    {
+      "start": 2665.38,
+      "end": 2669.16,
+      "text": "it cannot be beyond that it cannot be"
+    },
+    {
+      "start": 2667.48,
+      "end": 2671.5,
+      "text": "beyond that so if you remember with this"
+    },
+    {
+      "start": 2669.16,
+      "end": 2674.86,
+      "text": "example as well where is the example but"
+    },
+    {
+      "start": 2671.5,
+      "end": 2677.08,
+      "text": "this example as well there's 12 4 6 the"
+    },
+    {
+      "start": 2674.86,
+      "end": 2679.66,
+      "text": "answer cannot be Beyond 12 right it"
+    },
+    {
+      "start": 2677.08,
+      "end": 2681.64,
+      "text": "cannot be 13. like if you if you decide"
+    },
+    {
+      "start": 2679.66,
+      "end": 2684.04,
+      "text": "to place it at 100 it can be but why"
+    },
+    {
+      "start": 2681.64,
+      "end": 2687.1,
+      "text": "will you you're looking to minimize so"
+    },
+    {
+      "start": 2684.04,
+      "end": 2689.56,
+      "text": "it can be somewhere under 12 if you try"
+    },
+    {
+      "start": 2687.1,
+      "end": 2692.56,
+      "text": "doing it properly so what I can say is"
+    },
+    {
+      "start": 2689.56,
+      "end": 2694.36,
+      "text": "I'd rather look for all the maximums and"
+    },
+    {
+      "start": 2692.56,
+      "end": 2695.68,
+      "text": "the maximum that I find is like all the"
+    },
+    {
+      "start": 2694.36,
+      "end": 2697.9,
+      "text": "consecutive difference and the maximum"
+    },
+    {
+      "start": 2695.68,
+      "end": 2699.82,
+      "text": "that I find is one so it'll be like from"
+    },
+    {
+      "start": 2697.9,
+      "end": 2701.98,
+      "text": "zero to one I know one thing for sure is"
+    },
+    {
+      "start": 2699.82,
+      "end": 2705.06,
+      "text": "the answer is going to be between 0 and"
+    },
+    {
+      "start": 2701.98,
+      "end": 2707.86,
+      "text": "1. now my question comes how do I check"
+    },
+    {
+      "start": 2705.06,
+      "end": 2709.48,
+      "text": "and and all the problems what I did was"
+    },
+    {
+      "start": 2707.86,
+      "end": 2711.94,
+      "text": "I started from 0"
+    },
+    {
+      "start": 2709.48,
+      "end": 2714.64,
+      "text": "that I went to one then I went to two I"
+    },
+    {
+      "start": 2711.94,
+      "end": 2716.68,
+      "text": "did a linear search and over here it's"
+    },
+    {
+      "start": 2714.64,
+      "end": 2718.54,
+      "text": "like 10 to the power -6 so if I have to"
+    },
+    {
+      "start": 2716.68,
+      "end": 2720.34,
+      "text": "do a linear search I'll have to do it"
+    },
+    {
+      "start": 2718.54,
+      "end": 2722.2,
+      "text": "something like this"
+    },
+    {
+      "start": 2720.34,
+      "end": 2726.46,
+      "text": "fall"
+    },
+    {
+      "start": 2722.2,
+      "end": 2728.2,
+      "text": "like maybe the distances zero"
+    },
+    {
+      "start": 2726.46,
+      "end": 2731.2,
+      "text": "that is again everything will be in Long"
+    },
+    {
+      "start": 2728.2,
+      "end": 2733.6,
+      "text": "double one and the distance plus equal"
+    },
+    {
+      "start": 2731.2,
+      "end": 2735.22,
+      "text": "to 10 to the power minus six every time"
+    },
+    {
+      "start": 2733.6,
+      "end": 2737.56,
+      "text": "I just increase it by 10 to the power"
+    },
+    {
+      "start": 2735.22,
+      "end": 2740.08,
+      "text": "minus 6 minus 6 minus 6 minus 6 I keep"
+    },
+    {
+      "start": 2737.56,
+      "end": 2742.3,
+      "text": "on checking got it so I know that the"
+    },
+    {
+      "start": 2740.08,
+      "end": 2743.86,
+      "text": "answer lies between 0 and 1 but over"
+    },
+    {
+      "start": 2742.3,
+      "end": 2745.66,
+      "text": "here if I have to do a linear search"
+    },
+    {
+      "start": 2743.86,
+      "end": 2749.38,
+      "text": "I'll have to write it something like 4"
+    },
+    {
+      "start": 2745.66,
+      "end": 2751.9,
+      "text": "distance equal to 0 I go until 1 and"
+    },
+    {
+      "start": 2749.38,
+      "end": 2753.22,
+      "text": "every time I cannot do plus plus I have"
+    },
+    {
+      "start": 2751.9,
+      "end": 2755.68,
+      "text": "to increase it by plus 10 to the power"
+    },
+    {
+      "start": 2753.22,
+      "end": 2757.12,
+      "text": "minus 6 because it's a long decimal"
+    },
+    {
+      "start": 2755.68,
+      "end": 2760.42,
+      "text": "thing so for the Dual linear says that"
+    },
+    {
+      "start": 2757.12,
+      "end": 2764.16,
+      "text": "will go like zero next one will be 0.000"
+    },
+    {
+      "start": 2760.42,
+      "end": 2768.1,
+      "text": "something and it'll be x 0.0002 black"
+    },
+    {
+      "start": 2764.16,
+      "end": 2770.44,
+      "text": "0.0003 it'll be like 0.0004 and so on"
+    },
+    {
+      "start": 2768.1,
+      "end": 2772.96,
+      "text": "and I'll have to go by increasing it at"
+    },
+    {
+      "start": 2770.44,
+      "end": 2774.94,
+      "text": "the sixth decimal place got it we cannot"
+    },
+    {
+      "start": 2772.96,
+      "end": 2777.64,
+      "text": "go like zero and then one and then two"
+    },
+    {
+      "start": 2774.94,
+      "end": 2779.5,
+      "text": "because it's a matter of double so first"
+    },
+    {
+      "start": 2777.64,
+      "end": 2782.08,
+      "text": "I have to check for 0 and then I have to"
+    },
+    {
+      "start": 2779.5,
+      "end": 2783.88,
+      "text": "check for 0.0001 but in order to"
+    },
+    {
+      "start": 2782.08,
+      "end": 2789.52,
+      "text": "understand what I'll do is I'll I'll"
+    },
+    {
+      "start": 2783.88,
+      "end": 2792.4,
+      "text": "just check for 0.1 0.20 0.3 0.4 0.5 0.6"
+    },
+    {
+      "start": 2789.52,
+      "end": 2794.8,
+      "text": "0.7 and so on till one just to"
+    },
+    {
+      "start": 2792.4,
+      "end": 2798.58,
+      "text": "understand so tell me one thing"
+    },
+    {
+      "start": 2794.8,
+      "end": 2801.28,
+      "text": "if I keep a distance of 0 how many gas"
+    },
+    {
+      "start": 2798.58,
+      "end": 2803.5,
+      "text": "stations will I be able to place"
+    },
+    {
+      "start": 2801.28,
+      "end": 2804.76,
+      "text": "let's see so if I try to keep a distance"
+    },
+    {
+      "start": 2803.5,
+      "end": 2807.34,
+      "text": "of 0"
+    },
+    {
+      "start": 2804.76,
+      "end": 2809.8,
+      "text": "I'll have to place infinite gas stations"
+    },
+    {
+      "start": 2807.34,
+      "end": 2813.64,
+      "text": "in order to make sure the distance"
+    },
+    {
+      "start": 2809.8,
+      "end": 2816.7,
+      "text": "doesn't exceed zero why because I'll"
+    },
+    {
+      "start": 2813.64,
+      "end": 2819.04,
+      "text": "have to play some something at 1 1 1 1 1"
+    },
+    {
+      "start": 2816.7,
+      "end": 2822.04,
+      "text": "and I cannot go beyond this it's not"
+    },
+    {
+      "start": 2819.04,
+      "end": 2824.2,
+      "text": "possible it's not possible because"
+    },
+    {
+      "start": 2822.04,
+      "end": 2827.44,
+      "text": "if I just do 1.1 as well the distance"
+    },
+    {
+      "start": 2824.2,
+      "end": 2829.06,
+      "text": "becomes 0.1 the difference like if I try"
+    },
+    {
+      "start": 2827.44,
+      "end": 2831.46,
+      "text": "to place one gas station at one and"
+    },
+    {
+      "start": 2829.06,
+      "end": 2833.92,
+      "text": "another at 1.1 the distance still"
+    },
+    {
+      "start": 2831.46,
+      "end": 2835.54,
+      "text": "becomes a difference of 0.1 and I want"
+    },
+    {
+      "start": 2833.92,
+      "end": 2837.88,
+      "text": "to keep my answer as zero I want to keep"
+    },
+    {
+      "start": 2835.54,
+      "end": 2839.98,
+      "text": "my answer as zero so what I see is it's"
+    },
+    {
+      "start": 2837.88,
+      "end": 2842.68,
+      "text": "not possible it's not possible by just"
+    },
+    {
+      "start": 2839.98,
+      "end": 2844.72,
+      "text": "placing four gas station I mean"
+    },
+    {
+      "start": 2842.68,
+      "end": 2846.58,
+      "text": "I cannot actually I cannot so not"
+    },
+    {
+      "start": 2844.72,
+      "end": 2849.94,
+      "text": "possible okay"
+    },
+    {
+      "start": 2846.58,
+      "end": 2851.62,
+      "text": "so I'm like it's not possible"
+    },
+    {
+      "start": 2849.94,
+      "end": 2854.56,
+      "text": "to place"
+    },
+    {
+      "start": 2851.62,
+      "end": 2856.72,
+      "text": "four gas stations or to keep a distance"
+    },
+    {
+      "start": 2854.56,
+      "end": 2859.54,
+      "text": "of zero simple as that so this is not"
+    },
+    {
+      "start": 2856.72,
+      "end": 2862.36,
+      "text": "possible let's see if 0.1 is possible if"
+    },
+    {
+      "start": 2859.54,
+      "end": 2864.94,
+      "text": "I try to keep a distance of 0.1"
+    },
+    {
+      "start": 2862.36,
+      "end": 2867.22,
+      "text": "can I place it at 0.5 I cannot place it"
+    },
+    {
+      "start": 2864.94,
+      "end": 2870.4,
+      "text": "at 0.55 because if I place it at Point"
+    },
+    {
+      "start": 2867.22,
+      "end": 2872.5,
+      "text": "1.5 the distance will be 0.5 already and"
+    },
+    {
+      "start": 2870.4,
+      "end": 2875.32,
+      "text": "I want to keep a distance of 0.1 I wanna"
+    },
+    {
+      "start": 2872.5,
+      "end": 2877.9,
+      "text": "keep a distance of 0.1 so I'm like"
+    },
+    {
+      "start": 2875.32,
+      "end": 2880.66,
+      "text": "knowledge we we can't do that we can't"
+    },
+    {
+      "start": 2877.9,
+      "end": 2883.6,
+      "text": "do that so I'm like okay where can I"
+    },
+    {
+      "start": 2880.66,
+      "end": 2886.12,
+      "text": "please I'm like I can straight away"
+    },
+    {
+      "start": 2883.6,
+      "end": 2888.58,
+      "text": "place at 1.1 nothing beyond that because"
+    },
+    {
+      "start": 2886.12,
+      "end": 2890.2,
+      "text": "the moment I place it at 1.2 as well the"
+    },
+    {
+      "start": 2888.58,
+      "end": 2891.88,
+      "text": "difference will be 0.2 and that will be"
+    },
+    {
+      "start": 2890.2,
+      "end": 2893.8,
+      "text": "my answer because I'm looking for Max"
+    },
+    {
+      "start": 2891.88,
+      "end": 2896.74,
+      "text": "but I want to make sure that the answer"
+    },
+    {
+      "start": 2893.8,
+      "end": 2899.62,
+      "text": "doesn't Cross Point over so 1.2 is not"
+    },
+    {
+      "start": 2896.74,
+      "end": 2901.24,
+      "text": "possible 1.2 then 1.3 I have to place"
+    },
+    {
+      "start": 2899.62,
+      "end": 2903.22,
+      "text": "then I have to place 1.4 then I have to"
+    },
+    {
+      "start": 2901.24,
+      "end": 2904.78,
+      "text": "place 1.5 so I'm taking a lot of gas"
+    },
+    {
+      "start": 2903.22,
+      "end": 2905.8,
+      "text": "stations I don't have that many I don't"
+    },
+    {
+      "start": 2904.78,
+      "end": 2907.72,
+      "text": "have that many"
+    },
+    {
+      "start": 2905.8,
+      "end": 2909.7,
+      "text": "so I cannot keep an answer of 0.1"
+    },
+    {
+      "start": 2907.72,
+      "end": 2912.7,
+      "text": "because in order to keep an answer 0.1 I"
+    },
+    {
+      "start": 2909.7,
+      "end": 2914.38,
+      "text": "need a lot more gas stations and I all I"
+    },
+    {
+      "start": 2912.7,
+      "end": 2917.08,
+      "text": "only have four gas stations so not"
+    },
+    {
+      "start": 2914.38,
+      "end": 2920.2,
+      "text": "possible point two for the same reason"
+    },
+    {
+      "start": 2917.08,
+      "end": 2922.54,
+      "text": "not possible 0.3 for the same reason not"
+    },
+    {
+      "start": 2920.2,
+      "end": 2923.68,
+      "text": "possible 0.4 for the same reason not"
+    },
+    {
+      "start": 2922.54,
+      "end": 2926.68,
+      "text": "possible because you have to keep like"
+    },
+    {
+      "start": 2923.68,
+      "end": 2929.8,
+      "text": "1.4 and then maybe at 1.8 you'll Place"
+    },
+    {
+      "start": 2926.68,
+      "end": 2931.48,
+      "text": "one and then you have to go maybe the"
+    },
+    {
+      "start": 2929.8,
+      "end": 2934.24,
+      "text": "next will be 2.4 and then two pointers you"
+    },
+    {
+      "start": 2931.48,
+      "end": 2937.18,
+      "text": "have to go so at the end it's like 2.8"
+    },
+    {
+      "start": 2934.24,
+      "end": 2939.34,
+      "text": "and then 3.4 3.8 so you're already"
+    },
+    {
+      "start": 2937.18,
+      "end": 2941.68,
+      "text": "Crossing because the difference you see"
+    },
+    {
+      "start": 2939.34,
+      "end": 2943.96,
+      "text": "point four point four point two"
+    },
+    {
+      "start": 2941.68,
+      "end": 2946.6,
+      "text": "you in order to keep a 0.4 distance you"
+    },
+    {
+      "start": 2943.96,
+      "end": 2948.76,
+      "text": "need way more than four gas stations so"
+    },
+    {
+      "start": 2946.6,
+      "end": 2950.5,
+      "text": "0.4 is also not possible I hope you're"
+    },
+    {
+      "start": 2948.76,
+      "end": 2952.9,
+      "text": "understanding why 0.4 is not possible"
+    },
+    {
+      "start": 2950.5,
+      "end": 2955.12,
+      "text": "because I cannot go and place it at 0.5"
+    },
+    {
+      "start": 2952.9,
+      "end": 2959.08,
+      "text": "the distance will be 0.5 I want to keep"
+    },
+    {
+      "start": 2955.12,
+      "end": 2962.86,
+      "text": "our distance of 0.4 at maximum not more"
+    },
+    {
+      "start": 2959.08,
+      "end": 2964.78,
+      "text": "than that so 1.4 1.8 I need two here two"
+    },
+    {
+      "start": 2962.86,
+      "end": 2967.48,
+      "text": "here two here so it'll be more than four"
+    },
+    {
+      "start": 2964.78,
+      "end": 2970.96,
+      "text": "gas stations so not possible"
+    },
+    {
+      "start": 2967.48,
+      "end": 2973.86,
+      "text": "0.5 if I keep a distance of 0.5 it's"
+    },
+    {
+      "start": 2970.96,
+      "end": 2976.48,
+      "text": "going to be point point point"
+    },
+    {
+      "start": 2973.86,
+      "end": 2979.48,
+      "text": "and I'm seeing if I keep a distance of"
+    },
+    {
+      "start": 2976.48,
+      "end": 2981.94,
+      "text": "0.5 I'm exactly requiring four gas"
+    },
+    {
+      "start": 2979.48,
+      "end": 2984.7,
+      "text": "stations I'm exactly requiring four gas"
+    },
+    {
+      "start": 2981.94,
+      "end": 2986.86,
+      "text": "stations so it's possible it's possible"
+    },
+    {
+      "start": 2984.7,
+      "end": 2989.2,
+      "text": "and if it is possible"
+    },
+    {
+      "start": 2986.86,
+      "end": 2991.06,
+      "text": "what am I looking for I'm looking for a"
+    },
+    {
+      "start": 2989.2,
+      "end": 2994.72,
+      "text": "minimal manager I'm looking for a"
+    },
+    {
+      "start": 2991.06,
+      "end": 2997.06,
+      "text": "minimum answer so what you can do is you"
+    },
+    {
+      "start": 2994.72,
+      "end": 3000.0,
+      "text": "can eliminate the right half and"
+    },
+    {
+      "start": 2997.06,
+      "end": 3003.62,
+      "text": "probably look on the left side point"
+    },
+    {
+      "start": 3000.0,
+      "end": 3003.62,
+      "text": "four is eliminated but there will be"
+    },
+    {
+      "start": 3003.86,
+      "end": 3008.52,
+      "text": "0.4444.45 something got it now and what"
+    },
+    {
+      "start": 3006.6,
+      "end": 3010.62,
+      "text": "I'm meaning to say so since it is long"
+    },
+    {
+      "start": 3008.52,
+      "end": 3012.48,
+      "text": "distillable look in the left portion so"
+    },
+    {
+      "start": 3010.62,
+      "end": 3016.5,
+      "text": "I'll probably go at the left hand look"
+    },
+    {
+      "start": 3012.48,
+      "end": 3018.42,
+      "text": "so again if you take 0.6 also it's still"
+    },
+    {
+      "start": 3016.5,
+      "end": 3020.22,
+      "text": "going to be possible if you point six"
+    },
+    {
+      "start": 3018.42,
+      "end": 3023.7,
+      "text": "point six point six is also possible"
+    },
+    {
+      "start": 3020.22,
+      "end": 3026.7,
+      "text": "you're keeping a distance of 0.6.4 like"
+    },
+    {
+      "start": 3023.7,
+      "end": 3027.66,
+      "text": "this is still 0.6 it's not Beyond point"
+    },
+    {
+      "start": 3026.7,
+      "end": 3030.3,
+      "text": "six"
+    },
+    {
+      "start": 3027.66,
+      "end": 3032.34,
+      "text": "if even if you take 0.6 you can still do"
+    },
+    {
+      "start": 3030.3,
+      "end": 3034.02,
+      "text": "it in a four even if you take anything"
+    },
+    {
+      "start": 3032.34,
+      "end": 3035.94,
+      "text": "more than 0.6 you can still do it in"
+    },
+    {
+      "start": 3034.02,
+      "end": 3039.48,
+      "text": "four or lesser so that is why anything"
+    },
+    {
+      "start": 3035.94,
+      "end": 3042.06,
+      "text": "on the right anything on the right if"
+    },
+    {
+      "start": 3039.48,
+      "end": 3044.22,
+      "text": "the distance is large I am able to do it"
+    },
+    {
+      "start": 3042.06,
+      "end": 3045.06,
+      "text": "in lesser number of gas stations that is"
+    },
+    {
+      "start": 3044.22,
+      "end": 3047.4,
+      "text": "okay"
+    },
+    {
+      "start": 3045.06,
+      "end": 3049.02,
+      "text": "but if I'm requiring a lot of gas"
+    },
+    {
+      "start": 3047.4,
+      "end": 3051.12,
+      "text": "stations remember carrying a lot of gas"
+    },
+    {
+      "start": 3049.02,
+      "end": 3054.84,
+      "text": "stations that's not I don't have that"
+    },
+    {
+      "start": 3051.12,
+      "end": 3056.52,
+      "text": "Liberty so something I know for sure is"
+    },
+    {
+      "start": 3054.84,
+      "end": 3059.28,
+      "text": "if I'm requiring"
+    },
+    {
+      "start": 3056.52,
+      "end": 3061.74,
+      "text": "the number of gas stations"
+    },
+    {
+      "start": 3059.28,
+      "end": 3063.72,
+      "text": "required is greater than K that's not"
+    },
+    {
+      "start": 3061.74,
+      "end": 3066.18,
+      "text": "possible I need to increase the distance"
+    },
+    {
+      "start": 3063.72,
+      "end": 3067.98,
+      "text": "I need to increase the distance so what"
+    },
+    {
+      "start": 3066.18,
+      "end": 3069.18,
+      "text": "I'll do is I'll eliminate the laptop and"
+    },
+    {
+      "start": 3067.98,
+      "end": 3071.22,
+      "text": "I'll go there"
+    },
+    {
+      "start": 3069.18,
+      "end": 3073.8,
+      "text": "and if it is the other way if it is"
+    },
+    {
+      "start": 3071.22,
+      "end": 3076.38,
+      "text": "lesser that means that answer is I'll"
+    },
+    {
+      "start": 3073.8,
+      "end": 3079.5,
+      "text": "have to just go to the left because even"
+    },
+    {
+      "start": 3076.38,
+      "end": 3081.36,
+      "text": "with 0.7.8 it's possible I need to go on"
+    },
+    {
+      "start": 3079.5,
+      "end": 3083.34,
+      "text": "this one so you go high equal to Mid"
+    },
+    {
+      "start": 3081.36,
+      "end": 3085.8,
+      "text": "that's what you do in Bank research got"
+    },
+    {
+      "start": 3083.34,
+      "end": 3087.84,
+      "text": "it so how do you figure out how many gas"
+    },
+    {
+      "start": 3085.8,
+      "end": 3090.26,
+      "text": "stations you actually need so let me"
+    },
+    {
+      "start": 3087.84,
+      "end": 3093.3,
+      "text": "take an example if I had something like"
+    },
+    {
+      "start": 3090.26,
+      "end": 3096.12,
+      "text": "0.4 if I had 0.4"
+    },
+    {
+      "start": 3093.3,
+      "end": 3098.94,
+      "text": "it was like as placing one and then 1.4"
+    },
+    {
+      "start": 3096.12,
+      "end": 3101.52,
+      "text": "and then 1.8 and then two so I was able"
+    },
+    {
+      "start": 3098.94,
+      "end": 3104.58,
+      "text": "to play this two gas stations and then"
+    },
+    {
+      "start": 3101.52,
+      "end": 3106.44,
+      "text": "it was like 2.4 2.8 how did I figure out"
+    },
+    {
+      "start": 3104.58,
+      "end": 3107.94,
+      "text": "that I was able to place two gas"
+    },
+    {
+      "start": 3106.44,
+      "end": 3109.8,
+      "text": "stations between this between this"
+    },
+    {
+      "start": 3107.94,
+      "end": 3112.98,
+      "text": "between this between this it's very"
+    },
+    {
+      "start": 3109.8,
+      "end": 3116.04,
+      "text": "simple you say 2 minus 1 that's 2 minus"
+    },
+    {
+      "start": 3112.98,
+      "end": 3117.66,
+      "text": "1 by 0.4 you get something like two"
+    },
+    {
+      "start": 3116.04,
+      "end": 3119.88,
+      "text": "point something but you don't take the"
+    },
+    {
+      "start": 3117.66,
+      "end": 3123.06,
+      "text": "decimal party just six two just say two"
+    },
+    {
+      "start": 3119.88,
+      "end": 3125.04,
+      "text": "because I can take two got it so now you"
+    },
+    {
+      "start": 3123.06,
+      "end": 3127.56,
+      "text": "might have a question striver it was"
+    },
+    {
+      "start": 3125.04,
+      "end": 3130.02,
+      "text": "easy for 0.5 because you did like two"
+    },
+    {
+      "start": 3127.56,
+      "end": 3131.88,
+      "text": "minus one the difference is one and he"
+    },
+    {
+      "start": 3130.02,
+      "end": 3134.34,
+      "text": "said there can be two placed as like"
+    },
+    {
+      "start": 3131.88,
+      "end": 3135.84,
+      "text": "point four point four and for one I'll"
+    },
+    {
+      "start": 3134.34,
+      "end": 3137.4,
+      "text": "kind of reduce it because I want to"
+    },
+    {
+      "start": 3135.84,
+      "end": 3140.16,
+      "text": "maintain an answer of point four which"
+    },
+    {
+      "start": 3137.4,
+      "end": 3143.34,
+      "text": "is okay but for point five swivel like"
+    },
+    {
+      "start": 3140.16,
+      "end": 3146.28,
+      "text": "this was like two elements placed 0.5"
+    },
+    {
+      "start": 3143.34,
+      "end": 3149.28,
+      "text": "and another distance is one and I say"
+    },
+    {
+      "start": 3146.28,
+      "end": 3152.28,
+      "text": "one by point five so saying we can place"
+    },
+    {
+      "start": 3149.28,
+      "end": 3155.1,
+      "text": "two that is strong because if I go one I"
+    },
+    {
+      "start": 3152.28,
+      "end": 3158.04,
+      "text": "can only place like one by a distance of"
+    },
+    {
+      "start": 3155.1,
+      "end": 3160.32,
+      "text": "0.5 and it will go to two I cannot place"
+    },
+    {
+      "start": 3158.04,
+      "end": 3162.6,
+      "text": "two that is wrong the absolute division"
+    },
+    {
+      "start": 3160.32,
+      "end": 3165.42,
+      "text": "will be wrong this is where you will do"
+    },
+    {
+      "start": 3162.6,
+      "end": 3169.74,
+      "text": "if one like the the difference of the"
+    },
+    {
+      "start": 3165.42,
+      "end": 3171.18,
+      "text": "section is properly divisible by the"
+    },
+    {
+      "start": 3169.74,
+      "end": 3173.16,
+      "text": "number that you're looking for that"
+    },
+    {
+      "start": 3171.18,
+      "end": 3174.9,
+      "text": "means you can place one lesser that"
+    },
+    {
+      "start": 3173.16,
+      "end": 3176.88,
+      "text": "means you can place one lesser in this"
+    },
+    {
+      "start": 3174.9,
+      "end": 3180.84,
+      "text": "case it is okay because"
+    },
+    {
+      "start": 3176.88,
+      "end": 3182.82,
+      "text": "2 minus 1 was 1 1 by 0.4 was something"
+    },
+    {
+      "start": 3180.84,
+      "end": 3184.8,
+      "text": "like two pointers something so that point"
+    },
+    {
+      "start": 3182.82,
+      "end": 3186.54,
+      "text": "went 10 over here so that was okay but"
+    },
+    {
+      "start": 3184.8,
+      "end": 3188.88,
+      "text": "this is like properly divisible so it's"
+    },
+    {
+      "start": 3186.54,
+      "end": 3190.8,
+      "text": "not possible got it so this is where you"
+    },
+    {
+      "start": 3188.88,
+      "end": 3192.42,
+      "text": "have to be careful so I hope you have"
+    },
+    {
+      "start": 3190.8,
+      "end": 3194.58,
+      "text": "understood everything I did not do a lot"
+    },
+    {
+      "start": 3192.42,
+      "end": 3196.68,
+      "text": "of dragons because it contains long"
+    },
+    {
+      "start": 3194.58,
+      "end": 3199.5,
+      "text": "double and to do a dry run on double"
+    },
+    {
+      "start": 3196.68,
+      "end": 3202.02,
+      "text": "values it's it's very very tough trust"
+    },
+    {
+      "start": 3199.5,
+      "end": 3203.82,
+      "text": "me on that so I'm assuming that you have"
+    },
+    {
+      "start": 3202.02,
+      "end": 3205.98,
+      "text": "been watching the entire penis so you"
+    },
+    {
+      "start": 3203.82,
+      "end": 3208.08,
+      "text": "can easily catch up with it so let's"
+    },
+    {
+      "start": 3205.98,
+      "end": 3210.3,
+      "text": "quickly write down the binary search"
+    },
+    {
+      "start": 3208.08,
+      "end": 3212.82,
+      "text": "code so the low will be zero and the"
+    },
+    {
+      "start": 3210.3,
+      "end": 3214.32,
+      "text": "high will be the maximum of consecutive"
+    },
+    {
+      "start": 3212.82,
+      "end": 3217.86,
+      "text": "differences so you can easily find it"
+    },
+    {
+      "start": 3214.32,
+      "end": 3220.92,
+      "text": "out and what you can do is high minus"
+    },
+    {
+      "start": 3217.86,
+      "end": 3222.5,
+      "text": "slope will be greater than the six"
+    },
+    {
+      "start": 3220.92,
+      "end": 3224.88,
+      "text": "decimal places that is what you write"
+    },
+    {
+      "start": 3222.5,
+      "end": 3226.5,
+      "text": "and make sure everything is in Long"
+    },
+    {
+      "start": 3224.88,
+      "end": 3228.54,
+      "text": "double otherwise"
+    },
+    {
+      "start": 3226.5,
+      "end": 3231.0,
+      "text": "you will be having an issue"
+    },
+    {
+      "start": 3228.54,
+      "end": 3234.36,
+      "text": "perfect done what is the next thing"
+    },
+    {
+      "start": 3231.0,
+      "end": 3237.12,
+      "text": "figure out the count of gas stations"
+    },
+    {
+      "start": 3234.36,
+      "end": 3239.22,
+      "text": "required to maintain this mid distance"
+    },
+    {
+      "start": 3237.12,
+      "end": 3240.96,
+      "text": "to maintain this mid distance just"
+    },
+    {
+      "start": 3239.22,
+      "end": 3243.78,
+      "text": "figure that out"
+    },
+    {
+      "start": 3240.96,
+      "end": 3246.98,
+      "text": "and that can be called as count and"
+    },
+    {
+      "start": 3243.78,
+      "end": 3250.14,
+      "text": "remember if this count is greater than"
+    },
+    {
+      "start": 3246.98,
+      "end": 3252.48,
+      "text": "the number given to you what does that"
+    },
+    {
+      "start": 3250.14,
+      "end": 3255.12,
+      "text": "mean that means it's not possible if it"
+    },
+    {
+      "start": 3252.48,
+      "end": 3257.4,
+      "text": "exceeds that it's not possible and if"
+    },
+    {
+      "start": 3255.12,
+      "end": 3259.38,
+      "text": "it's not possible you've got to increase"
+    },
+    {
+      "start": 3257.4,
+      "end": 3262.68,
+      "text": "the distance because this distance is"
+    },
+    {
+      "start": 3259.38,
+      "end": 3264.3,
+      "text": "not possible it's just too low for that"
+    },
+    {
+      "start": 3262.68,
+      "end": 3267.0,
+      "text": "you need a bunch of gas stations"
+    },
+    {
+      "start": 3264.3,
+      "end": 3269.36,
+      "text": "otherwise it's possible and maybe we"
+    },
+    {
+      "start": 3267.0,
+      "end": 3269.36,
+      "text": "need to"
+    },
+    {
+      "start": 3269.7,
+      "end": 3273.3,
+      "text": "eliminate the write half and look for a"
+    },
+    {
+      "start": 3271.68,
+      "end": 3274.98,
+      "text": "smaller value so you eliminate because"
+    },
+    {
+      "start": 3273.3,
+      "end": 3275.82,
+      "text": "you have to minimize eliminate the right"
+    },
+    {
+      "start": 3274.98,
+      "end": 3279.66,
+      "text": "half"
+    },
+    {
+      "start": 3275.82,
+      "end": 3281.94,
+      "text": "remember one thing the last possible one"
+    },
+    {
+      "start": 3279.66,
+      "end": 3284.58,
+      "text": "was when high was mid"
+    },
+    {
+      "start": 3281.94,
+      "end": 3286.5,
+      "text": "when I was this so maybe you can store"
+    },
+    {
+      "start": 3284.58,
+      "end": 3288.18,
+      "text": "answer equal to high"
+    },
+    {
+      "start": 3286.5,
+      "end": 3290.46,
+      "text": "something like this and at the end you"
+    },
+    {
+      "start": 3288.18,
+      "end": 3292.38,
+      "text": "can return the answer or hi answer or"
+    },
+    {
+      "start": 3290.46,
+      "end": 3294.48,
+      "text": "high"
+    },
+    {
+      "start": 3292.38,
+      "end": 3296.1,
+      "text": "over here the concept of opposite"
+    },
+    {
+      "start": 3294.48,
+      "end": 3298.2,
+      "text": "polarity will not work that I've been"
+    },
+    {
+      "start": 3296.1,
+      "end": 3301.02,
+      "text": "teaching you because this is not mid"
+    },
+    {
+      "start": 3298.2,
+      "end": 3302.4,
+      "text": "minus 1 or mid plus one last one was"
+    },
+    {
+      "start": 3301.02,
+      "end": 3305.04,
+      "text": "high equal to Mid"
+    },
+    {
+      "start": 3302.4,
+      "end": 3307.44,
+      "text": "when it was possible so high is probably"
+    },
+    {
+      "start": 3305.04,
+      "end": 3309.12,
+      "text": "storing the last answer so that's why"
+    },
+    {
+      "start": 3307.44,
+      "end": 3311.76,
+      "text": "you return higher you can also return"
+    },
+    {
+      "start": 3309.12,
+      "end": 3313.44,
+      "text": "answer that is your chest this is how it"
+    },
+    {
+      "start": 3311.76,
+      "end": 3315.36,
+      "text": "will look like what about count of gas"
+    },
+    {
+      "start": 3313.44,
+      "end": 3317.04,
+      "text": "stations I don't want to write it here"
+    },
+    {
+      "start": 3315.36,
+      "end": 3318.6,
+      "text": "because it doesn't matter the C plus"
+    },
+    {
+      "start": 3317.04,
+      "end": 3319.98,
+      "text": "plus or Java the code is going to be"
+    },
+    {
+      "start": 3318.6,
+      "end": 3321.78,
+      "text": "pretty much similar because we just"
+    },
+    {
+      "start": 3319.98,
+      "end": 3322.86,
+      "text": "iterate over the array so what I'll do"
+    },
+    {
+      "start": 3321.78,
+      "end": 3324.84,
+      "text": "is I'll quickly jump into the code"
+    },
+    {
+      "start": 3322.86,
+      "end": 3326.64,
+      "text": "editor now so let's quickly jump into"
+    },
+    {
+      "start": 3324.84,
+      "end": 3328.8,
+      "text": "the code editor as you can see we are"
+    },
+    {
+      "start": 3326.64,
+      "end": 3330.48,
+      "text": "given the array and the K initially what"
+    },
+    {
+      "start": 3328.8,
+      "end": 3333.3,
+      "text": "am I doing I'm taking the low and higher"
+    },
+    {
+      "start": 3330.48,
+      "end": 3334.92,
+      "text": "0 long double please make sure and then"
+    },
+    {
+      "start": 3333.3,
+      "end": 3337.56,
+      "text": "I figured out the high by figuring out"
+    },
+    {
+      "start": 3334.92,
+      "end": 3339.54,
+      "text": "the difference of consecutives so you"
+    },
+    {
+      "start": 3337.56,
+      "end": 3341.7,
+      "text": "just have n minus one section so you can"
+    },
+    {
+      "start": 3339.54,
+      "end": 3344.4,
+      "text": "do that and then what I do is I do the"
+    },
+    {
+      "start": 3341.7,
+      "end": 3346.14,
+      "text": "normal binary search for dumbbells that"
+    },
+    {
+      "start": 3344.4,
+      "end": 3348.3,
+      "text": "is according to the question if you see"
+    },
+    {
+      "start": 3346.14,
+      "end": 3349.62,
+      "text": "in the question I think yeah this is"
+    },
+    {
+      "start": 3348.3,
+      "end": 3351.84,
+      "text": "where they're stating it so I do it"
+    },
+    {
+      "start": 3349.62,
+      "end": 3353.64,
+      "text": "accordingly and after that I find out"
+    },
+    {
+      "start": 3351.84,
+      "end": 3355.38,
+      "text": "the mint and I call a function which"
+    },
+    {
+      "start": 3353.64,
+      "end": 3356.82,
+      "text": "tells me how many gas stations are"
+    },
+    {
+      "start": 3355.38,
+      "end": 3359.22,
+      "text": "required in order to maintain this"
+    },
+    {
+      "start": 3356.82,
+      "end": 3361.5,
+      "text": "particular distance mint and then if it"
+    },
+    {
+      "start": 3359.22,
+      "end": 3363.6,
+      "text": "is a lot more I need to increase the"
+    },
+    {
+      "start": 3361.5,
+      "end": 3365.82,
+      "text": "distance this is not possible people and"
+    },
+    {
+      "start": 3363.6,
+      "end": 3367.86,
+      "text": "else I decrease it and that is what I"
+    },
+    {
+      "start": 3365.82,
+      "end": 3369.84,
+      "text": "return now this is what we have to focus"
+    },
+    {
+      "start": 3367.86,
+      "end": 3371.52,
+      "text": "let's go to the function number of gas"
+    },
+    {
+      "start": 3369.84,
+      "end": 3373.74,
+      "text": "stations required I have to keep a"
+    },
+    {
+      "start": 3371.52,
+      "end": 3375.66,
+      "text": "distance and this is the array initially"
+    },
+    {
+      "start": 3373.74,
+      "end": 3378.36,
+      "text": "I say that number of gas stations"
+    },
+    {
+      "start": 3375.66,
+      "end": 3381.3,
+      "text": "required count as zero and I have n"
+    },
+    {
+      "start": 3378.36,
+      "end": 3382.8,
+      "text": "minus one section so we start from 1 and"
+    },
+    {
+      "start": 3381.3,
+      "end": 3385.2,
+      "text": "in order to find out the difference of"
+    },
+    {
+      "start": 3382.8,
+      "end": 3387.72,
+      "text": "the section it's arr[i] minus array"
+    },
+    {
+      "start": 3385.2,
+      "end": 3388.98,
+      "text": "of I minus 1 by distance what is"
+    },
+    {
+      "start": 3387.72,
+      "end": 3391.92,
+      "text": "distance that has been given to you"
+    },
+    {
+      "start": 3388.98,
+      "end": 3394.08,
+      "text": "0.4.5 can be anything and this is the"
+    },
+    {
+      "start": 3391.92,
+      "end": 3396.66,
+      "text": "number that I require in between so if"
+    },
+    {
+      "start": 3394.08,
+      "end": 3399.0,
+      "text": "it is 0.4 if you remember"
+    },
+    {
+      "start": 3396.66,
+      "end": 3400.44,
+      "text": "let's clearly go back into the iPad if"
+    },
+    {
+      "start": 3399.0,
+      "end": 3404.58,
+      "text": "it was like one to two and the distance"
+    },
+    {
+      "start": 3400.44,
+      "end": 3407.16,
+      "text": "was one one by point four is two pointers"
+    },
+    {
+      "start": 3404.58,
+      "end": 3409.26,
+      "text": "something right this is what I'm"
+    },
+    {
+      "start": 3407.16,
+      "end": 3412.86,
+      "text": "checking if"
+    },
+    {
+      "start": 3409.26,
+      "end": 3414.96,
+      "text": "it is exact division pure mathematics"
+    },
+    {
+      "start": 3412.86,
+      "end": 3417.78,
+      "text": "you can do it on pen and paper then it's"
+    },
+    {
+      "start": 3414.96,
+      "end": 3420.72,
+      "text": "I have to reduce one y because if it is"
+    },
+    {
+      "start": 3417.78,
+      "end": 3422.4,
+      "text": "1 by 0.5 that will be 2 and I cannot"
+    },
+    {
+      "start": 3420.72,
+      "end": 3425.4,
+      "text": "take to have to reduce minus one from it"
+    },
+    {
+      "start": 3422.4,
+      "end": 3427.62,
+      "text": "I have to reduce one for point four"
+    },
+    {
+      "start": 3425.4,
+      "end": 3429.78,
+      "text": "it is 2.5 I'll take the integer which is"
+    },
+    {
+      "start": 3427.62,
+      "end": 3431.7,
+      "text": "2 that's okay so I'm taking an integer"
+    },
+    {
+      "start": 3429.78,
+      "end": 3433.44,
+      "text": "if the exact division matches in the"
+    },
+    {
+      "start": 3431.7,
+      "end": 3435.3,
+      "text": "exact division matches I decrease the"
+    },
+    {
+      "start": 3433.44,
+      "end": 3437.04,
+      "text": "number in between and depending on that"
+    },
+    {
+      "start": 3435.3,
+      "end": 3439.5,
+      "text": "I add it and eventually I'll have the"
+    },
+    {
+      "start": 3437.04,
+      "end": 3441.06,
+      "text": "total numbers if I add up all the"
+    },
+    {
+      "start": 3439.5,
+      "end": 3443.16,
+      "text": "sections and that is what I returned"
+    },
+    {
+      "start": 3441.06,
+      "end": 3444.96,
+      "text": "let's really go ahead and run this off"
+    },
+    {
+      "start": 3443.16,
+      "end": 3446.22,
+      "text": "and see if it is running fine"
+    },
+    {
+      "start": 3444.96,
+      "end": 3448.32,
+      "text": "should be"
+    },
+    {
+      "start": 3446.22,
+      "end": 3450.24,
+      "text": "yeah it does and now let's quickly"
+    },
+    {
+      "start": 3448.32,
+      "end": 3452.58,
+      "text": "submit the surf"
+    },
+    {
+      "start": 3450.24,
+      "end": 3454.92,
+      "text": "same pattern of wine research"
+    },
+    {
+      "start": 3452.58,
+      "end": 3456.66,
+      "text": "writing the binary search and having a"
+    },
+    {
+      "start": 3454.92,
+      "end": 3459.0,
+      "text": "check and according to the check"
+    },
+    {
+      "start": 3456.66,
+      "end": 3463.14,
+      "text": "eliminating the right or left just"
+    },
+    {
+      "start": 3459.0,
+      "end": 3464.76,
+      "text": "because it is uh in terms of double or"
+    },
+    {
+      "start": 3463.14,
+      "end": 3466.68,
+      "text": "long double we cannot do minus one"
+    },
+    {
+      "start": 3464.76,
+      "end": 3468.36,
+      "text": "because that will eliminate a lot of"
+    },
+    {
+      "start": 3466.68,
+      "end": 3470.34,
+      "text": "numbers so this is the standard"
+    },
+    {
+      "start": 3468.36,
+      "end": 3472.32,
+      "text": "procedure of doing my research on"
+    },
+    {
+      "start": 3470.34,
+      "end": 3474.24,
+      "text": "anything which has long double"
+    },
+    {
+      "start": 3472.32,
+      "end": 3476.82,
+      "text": "I don't expect this question to be asked"
+    },
+    {
+      "start": 3474.24,
+      "end": 3479.04,
+      "text": "but just in case it is that is why I'm"
+    },
+    {
+      "start": 3476.82,
+      "end": 3481.08,
+      "text": "teaching you and I know it was tough"
+    },
+    {
+      "start": 3479.04,
+      "end": 3482.82,
+      "text": "because all the three solutions are"
+    },
+    {
+      "start": 3481.08,
+      "end": 3484.92,
+      "text": "tough It's not that one of the solutions"
+    },
+    {
+      "start": 3482.82,
+      "end": 3486.42,
+      "text": "is easy all of them are tough and this"
+    },
+    {
+      "start": 3484.92,
+      "end": 3489.18,
+      "text": "is probably one of the hardest questions"
+    },
+    {
+      "start": 3486.42,
+      "end": 3490.62,
+      "text": "uh if you ask me to rank in terms of"
+    },
+    {
+      "start": 3489.18,
+      "end": 3492.3,
+      "text": "interview questions when it comes to"
+    },
+    {
+      "start": 3490.62,
+      "end": 3493.68,
+      "text": "Binary research so do not worry about"
+    },
+    {
+      "start": 3492.3,
+      "end": 3495.18,
+      "text": "that let's talk about the time"
+    },
+    {
+      "start": 3493.68,
+      "end": 3499.14,
+      "text": "complexity so let's talk about the time"
+    },
+    {
+      "start": 3495.18,
+      "end": 3501.78,
+      "text": "complexity we go of n logarithmic of the"
+    },
+    {
+      "start": 3499.14,
+      "end": 3504.36,
+      "text": "range length is the time taken for"
+    },
+    {
+      "start": 3501.78,
+      "end": 3506.22,
+      "text": "binary search and an N so n logarithmic"
+    },
+    {
+      "start": 3504.36,
+      "end": 3508.68,
+      "text": "of n plus n"
+    },
+    {
+      "start": 3506.22,
+      "end": 3510.3,
+      "text": "I'll be using any extra space no this is"
+    },
+    {
+      "start": 3508.68,
+      "end": 3512.52,
+      "text": "where we optimize from the prioritical"
+    },
+    {
+      "start": 3510.3,
+      "end": 3515.88,
+      "text": "solution and if the interviewer doesn't"
+    },
+    {
+      "start": 3512.52,
+      "end": 3518.34,
+      "text": "agrees on that tell him don't anyways I"
+    },
+    {
+      "start": 3515.88,
+      "end": 3520.5,
+      "text": "hope you have understood this I know it"
+    },
+    {
+      "start": 3518.34,
+      "end": 3522.12,
+      "text": "has been a long video and it took me"
+    },
+    {
+      "start": 3520.5,
+      "end": 3523.68,
+      "text": "nearly three hours to record because I"
+    },
+    {
+      "start": 3522.12,
+      "end": 3526.32,
+      "text": "was really taking most of the times"
+    },
+    {
+      "start": 3523.68,
+      "end": 3528.0,
+      "text": "because I wanted it to be precise and to"
+    },
+    {
+      "start": 3526.32,
+      "end": 3529.68,
+      "text": "the point and I hope you have understood"
+    },
+    {
+      "start": 3528.0,
+      "end": 3533.1,
+      "text": "everything and if you are still watching"
+    },
+    {
+      "start": 3529.68,
+      "end": 3535.56,
+      "text": "uh you can be like you can hear my voice"
+    },
+    {
+      "start": 3533.1,
+      "end": 3537.24,
+      "text": "it's almost done so please please do"
+    },
+    {
+      "start": 3535.56,
+      "end": 3538.44,
+      "text": "consider giving us a like and if you're"
+    },
+    {
+      "start": 3537.24,
+      "end": 3540.12,
+      "text": "new to our channel do consider"
+    },
+    {
+      "start": 3538.44,
+      "end": 3541.26,
+      "text": "subscribing to us and with this I'll be"
+    },
+    {
+      "start": 3540.12,
+      "end": 3542.58,
+      "text": "wrapping up this video let's read in"
+    },
+    {
+      "start": 3541.26,
+      "end": 3547.14,
+      "text": "some of the video till then bye take"
+    },
+    {
+      "start": 3542.58,
+      "end": 3550.8,
+      "text": "care whenever your heart is broken don't"
+    },
+    {
+      "start": 3547.14,
+      "end": 3553.1,
+      "text": "ever forget you're golden I I will find"
+    },
+    {
+      "start": 3550.8,
+      "end": 3553.1,
+      "text": "the light"
+    }
+  ]
+}

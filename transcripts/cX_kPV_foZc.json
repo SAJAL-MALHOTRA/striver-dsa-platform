@@ -1,0 +1,1160 @@
+{
+  "video_id": "cX_kPV_foZc",
+  "title": "L47. LCA in Binary Search Tree",
+  "duration_sec": 486,
+  "num_segments": 192,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.32,
+      "duration": 2.32,
+      "text": "Hey everyone, welcome back to the"
+    },
+    {
+      "start": 1.12,
+      "end": 4.88,
+      "duration": 3.76,
+      "text": "channel. I hope you guys are doing"
+    },
+    {
+      "start": 2.32,
+      "end": 7.6,
+      "duration": 5.28,
+      "text": "extremely well. So today we will be"
+    },
+    {
+      "start": 4.88,
+      "end": 10.4,
+      "duration": 5.52,
+      "text": "solving the problem find the LCA in a"
+    },
+    {
+      "start": 7.6,
+      "end": 12.16,
+      "duration": 4.56,
+      "text": "binary search tree. Now you must be"
+    },
+    {
+      "start": 10.4,
+      "end": 14.08,
+      "duration": 3.68,
+      "text": "knowing what is a binary search tree. A"
+    },
+    {
+      "start": 12.16,
+      "end": 16.96,
+      "duration": 4.8,
+      "text": "binary search tree is a tree where you"
+    },
+    {
+      "start": 14.08,
+      "end": 19.6,
+      "duration": 5.52,
+      "text": "have a node and everything yes"
+    },
+    {
+      "start": 16.96,
+      "end": 22.48,
+      "duration": 5.52,
+      "text": "everything on the left of that node is"
+    },
+    {
+      "start": 19.6,
+      "end": 25.28,
+      "duration": 5.68,
+      "text": "smaller than the node's value and"
+    },
+    {
+      "start": 22.48,
+      "end": 27.12,
+      "duration": 4.64,
+      "text": "everything to the right of that node is"
+    },
+    {
+      "start": 25.28,
+      "end": 28.96,
+      "duration": 3.68,
+      "text": "greater than the node's value. Greater"
+    },
+    {
+      "start": 27.12,
+      "end": 31.28,
+      "duration": 4.16,
+      "text": "than not greater than equal to. That is"
+    },
+    {
+      "start": 28.96,
+      "end": 33.52,
+      "duration": 4.56,
+      "text": "what a binary search tree is. If you"
+    },
+    {
+      "start": 31.28,
+      "end": 35.12,
+      "duration": 3.84,
+      "text": "want to know about binary search tree in"
+    },
+    {
+      "start": 33.52,
+      "end": 36.48,
+      "duration": 2.96,
+      "text": "deep, you can check out my entire"
+    },
+    {
+      "start": 35.12,
+      "end": 39.92,
+      "duration": 4.8,
+      "text": "playlist. You will get to know about"
+    },
+    {
+      "start": 36.48,
+      "end": 44.56,
+      "duration": 8.08,
+      "text": "that. Now, LCA in binary search tree."
+    },
+    {
+      "start": 39.92,
+      "end": 48.32,
+      "duration": 8.4,
+      "text": "So, what is LCA? LCA is known as lowest"
+    },
+    {
+      "start": 44.56,
+      "end": 50.64,
+      "duration": 6.08,
+      "text": "common ancestor. Okay. So, for an"
+    },
+    {
+      "start": 48.32,
+      "end": 54.24,
+      "duration": 5.92,
+      "text": "example, if I say, can you please find"
+    },
+    {
+      "start": 50.64,
+      "end": 56.4,
+      "duration": 5.76,
+      "text": "out the LCA of five and zero? For five,"
+    },
+    {
+      "start": 54.24,
+      "end": 58.08,
+      "duration": 3.84,
+      "text": "if I draw down the path till the root of"
+    },
+    {
+      "start": 56.4,
+      "end": 60.0,
+      "duration": 3.6,
+      "text": "the tree, till the root of the tree,"
+    },
+    {
+      "start": 58.08,
+      "end": 61.68,
+      "duration": 3.6,
+      "text": "this is what the path will be. For zero,"
+    },
+    {
+      "start": 60.0,
+      "end": 63.76,
+      "duration": 3.76,
+      "text": "if I draw down the path till the root of"
+    },
+    {
+      "start": 61.68,
+      "end": 65.92,
+      "duration": 4.24,
+      "text": "the tree, this is the this is the path."
+    },
+    {
+      "start": 63.76,
+      "end": 67.84,
+      "duration": 4.08,
+      "text": "The first point or the last point, if"
+    },
+    {
+      "start": 65.92,
+      "end": 71.36,
+      "duration": 5.44,
+      "text": "you see from the top, from the bottom,"
+    },
+    {
+      "start": 67.84,
+      "end": 75.04,
+      "duration": 7.2,
+      "text": "the first insertion point intersection"
+    },
+    {
+      "start": 71.36,
+      "end": 79.28,
+      "duration": 7.92,
+      "text": "point is what the LCA will be. Now, if I"
+    },
+    {
+      "start": 75.04,
+      "end": 83.68,
+      "duration": 8.64,
+      "text": "say LCA of 2A 5, two is this, five is"
+    },
+    {
+      "start": 79.28,
+      "end": 86.48,
+      "duration": 7.2,
+      "text": "this. So, first intersection point. So I"
+    },
+    {
+      "start": 83.68,
+      "end": 88.96,
+      "duration": 5.28,
+      "text": "hope the definition of LCA is clear to"
+    },
+    {
+      "start": 86.48,
+      "end": 91.04,
+      "duration": 4.56,
+      "text": "you. first intersection point in the"
+    },
+    {
+      "start": 88.96,
+      "end": 92.64,
+      "duration": 3.68,
+      "text": "path or the last intersection point if"
+    },
+    {
+      "start": 91.04,
+      "end": 94.8,
+      "duration": 3.76,
+      "text": "you look from the top from the bottom"
+    },
+    {
+      "start": 92.64,
+      "end": 98.72,
+      "duration": 6.08,
+      "text": "the first one from the top it's the last"
+    },
+    {
+      "start": 94.8,
+      "end": 101.12,
+      "duration": 6.32,
+      "text": "one right now LCA is clear what's the"
+    },
+    {
+      "start": 98.72,
+      "end": 103.92,
+      "duration": 5.2,
+      "text": "naive approach for this problem now I"
+    },
+    {
+      "start": 101.12,
+      "end": 106.4,
+      "duration": 5.28,
+      "text": "have already discussed how to find LCA"
+    },
+    {
+      "start": 103.92,
+      "end": 108.96,
+      "duration": 5.04,
+      "text": "in a binary tree you can check that"
+    },
+    {
+      "start": 106.4,
+      "end": 111.2,
+      "duration": 4.8,
+      "text": "video out it's already there in the"
+    },
+    {
+      "start": 108.96,
+      "end": 114.56,
+      "duration": 5.6,
+      "text": "playlist now this required a time"
+    },
+    {
+      "start": 111.2,
+      "end": 116.88,
+      "duration": 5.68,
+      "text": "complexity of b of n where n is the"
+    },
+    {
+      "start": 114.56,
+      "end": 119.6,
+      "duration": 5.04,
+      "text": "traversal time that you generally take"
+    },
+    {
+      "start": 116.88,
+      "end": 121.92,
+      "duration": 5.04,
+      "text": "in the binary tree. But this question is"
+    },
+    {
+      "start": 119.6,
+      "end": 123.76,
+      "duration": 4.16,
+      "text": "a bit different over here. It has been"
+    },
+    {
+      "start": 121.92,
+      "end": 127.04,
+      "duration": 5.12,
+      "text": "exclusively mentioned that it is a"
+    },
+    {
+      "start": 123.76,
+      "end": 128.32,
+      "duration": 4.56,
+      "text": "binary search tree. So you have to you"
+    },
+    {
+      "start": 127.04,
+      "end": 130.32,
+      "duration": 3.28,
+      "text": "have to take care of that. Now you know"
+    },
+    {
+      "start": 128.32,
+      "end": 133.92,
+      "duration": 5.6,
+      "text": "whenever it is binary search tree, you"
+    },
+    {
+      "start": 130.32,
+      "end": 136.08,
+      "duration": 5.76,
+      "text": "generally don't apply go off and it's on"
+    },
+    {
+      "start": 133.92,
+      "end": 138.08,
+      "duration": 4.16,
+      "text": "the height that you do something to"
+    },
+    {
+      "start": 136.08,
+      "end": 139.84,
+      "duration": 3.76,
+      "text": "solve the problem. Right? So how can you"
+    },
+    {
+      "start": 138.08,
+      "end": 142.0,
+      "duration": 3.92,
+      "text": "solve this problem? Okay. Uh so let's"
+    },
+    {
+      "start": 139.84,
+      "end": 144.64,
+      "duration": 4.8,
+      "text": "let's take this binary search tree and"
+    },
+    {
+      "start": 142.0,
+      "end": 147.44,
+      "duration": 5.44,
+      "text": "try to figure out the LCA of five and 9."
+    },
+    {
+      "start": 144.64,
+      "end": 149.76,
+      "duration": 5.12,
+      "text": "Now it's a binary search tree. Now can I"
+    },
+    {
+      "start": 147.44,
+      "end": 151.76,
+      "duration": 4.32,
+      "text": "say if I'm looking for two nodes, what"
+    },
+    {
+      "start": 149.76,
+      "end": 153.68,
+      "duration": 3.92,
+      "text": "can be the possibilities? If I'm"
+    },
+    {
+      "start": 151.76,
+      "end": 155.28,
+      "duration": 3.52,
+      "text": "standing at a place, what can be the"
+    },
+    {
+      "start": 153.68,
+      "end": 157.04,
+      "duration": 3.36,
+      "text": "possibilities? If I'm looking for two"
+    },
+    {
+      "start": 155.28,
+      "end": 159.2,
+      "duration": 3.92,
+      "text": "nodes, there can be couple of"
+    },
+    {
+      "start": 157.04,
+      "end": 161.44,
+      "duration": 4.4,
+      "text": "possibilities. Either both of them lie"
+    },
+    {
+      "start": 159.2,
+      "end": 165.76,
+      "duration": 6.56,
+      "text": "to the right, both of them lie to the"
+    },
+    {
+      "start": 161.44,
+      "end": 168.56,
+      "duration": 7.12,
+      "text": "right, right? Or both of them lie to the"
+    },
+    {
+      "start": 165.76,
+      "end": 170.08,
+      "duration": 4.32,
+      "text": "left, right? Or what's the other"
+    },
+    {
+      "start": 168.56,
+      "end": 172.56,
+      "duration": 4.0,
+      "text": "possibility?"
+    },
+    {
+      "start": 170.08,
+      "end": 175.84,
+      "duration": 5.76,
+      "text": "One lies to the left, one lies to the"
+    },
+    {
+      "start": 172.56,
+      "end": 178.96,
+      "duration": 6.4,
+      "text": "right. that can be the possibility or"
+    },
+    {
+      "start": 175.84,
+      "end": 181.2,
+      "duration": 5.36,
+      "text": "the node itself is one among them. The"
+    },
+    {
+      "start": 178.96,
+      "end": 183.76,
+      "duration": 4.8,
+      "text": "node itself is one among them. These can"
+    },
+    {
+      "start": 181.2,
+      "end": 186.48,
+      "duration": 5.28,
+      "text": "be the possibilities. Right? So can I"
+    },
+    {
+      "start": 183.76,
+      "end": 190.56,
+      "duration": 6.8,
+      "text": "say let's just talk about uh the portion"
+    },
+    {
+      "start": 186.48,
+      "end": 193.28,
+      "duration": 6.8,
+      "text": "where one U that is the first node lies"
+    },
+    {
+      "start": 190.56,
+      "end": 194.4,
+      "duration": 3.84,
+      "text": "on the left the other V lies on the"
+    },
+    {
+      "start": 193.28,
+      "end": 197.52,
+      "duration": 4.24,
+      "text": "right. Let's talk about that"
+    },
+    {
+      "start": 194.4,
+      "end": 200.32,
+      "duration": 5.92,
+      "text": "possibility. So can I say in that case I"
+    },
+    {
+      "start": 197.52,
+      "end": 203.12,
+      "duration": 5.6,
+      "text": "can say that this guy is my LCA. the"
+    },
+    {
+      "start": 200.32,
+      "end": 206.0,
+      "duration": 5.68,
+      "text": "first the last point where I can say one"
+    },
+    {
+      "start": 203.12,
+      "end": 209.04,
+      "duration": 5.92,
+      "text": "lies on the left one lies on the right"
+    },
+    {
+      "start": 206.0,
+      "end": 211.76,
+      "duration": 5.76,
+      "text": "can I say that is my LCA I think I can"
+    },
+    {
+      "start": 209.04,
+      "end": 214.4,
+      "duration": 5.36,
+      "text": "so let's follow that pattern of algo if"
+    },
+    {
+      "start": 211.76,
+      "end": 218.56,
+      "duration": 6.8,
+      "text": "I am at 10 yes if I am at 10 I'm looking"
+    },
+    {
+      "start": 214.4,
+      "end": 220.8,
+      "duration": 6.4,
+      "text": "for five and 9 five and 9 both are"
+    },
+    {
+      "start": 218.56,
+      "end": 223.2,
+      "duration": 4.64,
+      "text": "smaller than 10 so I will move to the"
+    },
+    {
+      "start": 220.8,
+      "end": 226.32,
+      "duration": 5.52,
+      "text": "left because I I surely know that this"
+    },
+    {
+      "start": 223.2,
+      "end": 229.84,
+      "duration": 6.64,
+      "text": "is the path that I have to move next"
+    },
+    {
+      "start": 226.32,
+      "end": 232.56,
+      "duration": 6.24,
+      "text": "five and 9 are both greater than four."
+    },
+    {
+      "start": 229.84,
+      "end": 237.28,
+      "duration": 7.44,
+      "text": "So I will move to the"
+    },
+    {
+      "start": 232.56,
+      "end": 240.72,
+      "duration": 8.16,
+      "text": "right. Correct. Next on eight. Can I say"
+    },
+    {
+      "start": 237.28,
+      "end": 243.52,
+      "duration": 6.24,
+      "text": "five is on the left,"
+    },
+    {
+      "start": 240.72,
+      "end": 247.12,
+      "duration": 6.4,
+      "text": "nine is on the right. Can I say that? I"
+    },
+    {
+      "start": 243.52,
+      "end": 250.16,
+      "duration": 6.64,
+      "text": "think I can. So if I can say that, can I"
+    },
+    {
+      "start": 247.12,
+      "end": 253.12,
+      "duration": 6.0,
+      "text": "be like, hey, listen, I was following a"
+    },
+    {
+      "start": 250.16,
+      "end": 256.56,
+      "duration": 6.4,
+      "text": "path and suddenly the path split. So can"
+    },
+    {
+      "start": 253.12,
+      "end": 258.56,
+      "duration": 5.44,
+      "text": "I say this is the last point of split?"
+    },
+    {
+      "start": 256.56,
+      "end": 261.68,
+      "duration": 5.12,
+      "text": "Indeed. And that's the last point of the"
+    },
+    {
+      "start": 258.56,
+      "end": 266.08,
+      "duration": 7.52,
+      "text": "split. Can I say the point where you"
+    },
+    {
+      "start": 261.68,
+      "end": 270.32,
+      "duration": 8.64,
+      "text": "split is what your LCA will be. So I"
+    },
+    {
+      "start": 266.08,
+      "end": 272.8,
+      "duration": 6.72,
+      "text": "easily got my LCA note. Right? That's"
+    },
+    {
+      "start": 270.32,
+      "end": 274.96,
+      "duration": 4.64,
+      "text": "that's indeed correct. What if I just"
+    },
+    {
+      "start": 272.8,
+      "end": 279.2,
+      "duration": 6.4,
+      "text": "change it and I say, \"Hey, can you"
+    },
+    {
+      "start": 274.96,
+      "end": 282.0,
+      "duration": 7.04,
+      "text": "figure me out the LCA of 1 and two?\" How"
+    },
+    {
+      "start": 279.2,
+      "end": 285.52,
+      "duration": 6.32,
+      "text": "will that work out? Let's see. You start"
+    },
+    {
+      "start": 282.0,
+      "end": 288.48,
+      "duration": 6.48,
+      "text": "at 10. You're looking for one and two."
+    },
+    {
+      "start": 285.52,
+      "end": 291.68,
+      "duration": 6.16,
+      "text": "So both will lie on the left. You add"
+    },
+    {
+      "start": 288.48,
+      "end": 295.36,
+      "duration": 6.88,
+      "text": "four. One and two again on left. One and"
+    },
+    {
+      "start": 291.68,
+      "end": 298.48,
+      "duration": 6.8,
+      "text": "two again on left. This is the moment"
+    },
+    {
+      "start": 295.36,
+      "end": 300.0,
+      "duration": 4.64,
+      "text": "you you cannot say that one is on the"
+    },
+    {
+      "start": 298.48,
+      "end": 301.6,
+      "duration": 3.12,
+      "text": "left or like both of them are on the"
+    },
+    {
+      "start": 300.0,
+      "end": 305.28,
+      "duration": 5.28,
+      "text": "left and right. You be like okay this is"
+    },
+    {
+      "start": 301.6,
+      "end": 307.6,
+      "duration": 6.0,
+      "text": "the guy who is itself the LCA. So since"
+    },
+    {
+      "start": 305.28,
+      "end": 309.92,
+      "duration": 4.64,
+      "text": "both of them do not lie on the left and"
+    },
+    {
+      "start": 307.6,
+      "end": 312.64,
+      "duration": 5.04,
+      "text": "both of them do not lie on the right."
+    },
+    {
+      "start": 309.92,
+      "end": 314.72,
+      "duration": 4.8,
+      "text": "Hence I can say this guy is my LCA. So"
+    },
+    {
+      "start": 312.64,
+      "end": 316.8,
+      "duration": 4.16,
+      "text": "it's very simple. left, right, left,"
+    },
+    {
+      "start": 314.72,
+      "end": 319.2,
+      "duration": 4.48,
+      "text": "right. And the moment you cannot say"
+    },
+    {
+      "start": 316.8,
+      "end": 321.28,
+      "duration": 4.48,
+      "text": "key, okay, one is on the left, one is on"
+    },
+    {
+      "start": 319.2,
+      "end": 323.2,
+      "duration": 4.0,
+      "text": "the right. That like the moment you can"
+    },
+    {
+      "start": 321.28,
+      "end": 324.96,
+      "duration": 3.68,
+      "text": "say that that both of them are not on"
+    },
+    {
+      "start": 323.2,
+      "end": 326.8,
+      "duration": 3.6,
+      "text": "the left or both of them are not on the"
+    },
+    {
+      "start": 324.96,
+      "end": 329.12,
+      "duration": 4.16,
+      "text": "right, you can say that this guy is my"
+    },
+    {
+      "start": 326.8,
+      "end": 331.04,
+      "duration": 4.24,
+      "text": "LCM because if both of them are on the"
+    },
+    {
+      "start": 329.12,
+      "end": 333.12,
+      "duration": 4.0,
+      "text": "left, you move if both of them are on"
+    },
+    {
+      "start": 331.04,
+      "end": 334.8,
+      "duration": 3.76,
+      "text": "the right, you move as simple as that,"
+    },
+    {
+      "start": 333.12,
+      "end": 336.64,
+      "duration": 3.52,
+      "text": "right? So in this way you can figure"
+    },
+    {
+      "start": 334.8,
+      "end": 338.24,
+      "duration": 3.44,
+      "text": "this out. Now since you're moving left,"
+    },
+    {
+      "start": 336.64,
+      "end": 340.96,
+      "duration": 4.32,
+      "text": "light, left, right, you will be moving"
+    },
+    {
+      "start": 338.24,
+      "end": 343.12,
+      "duration": 4.88,
+      "text": "the height of the tree. So can I say the"
+    },
+    {
+      "start": 340.96,
+      "end": 346.4,
+      "duration": 5.44,
+      "text": "time complexity? Can I say the time"
+    },
+    {
+      "start": 343.12,
+      "end": 348.0,
+      "duration": 4.88,
+      "text": "complexity will be b of height of the"
+    },
+    {
+      "start": 346.4,
+      "end": 350.56,
+      "duration": 4.16,
+      "text": "tree? Yes, the height of the tree can be"
+    },
+    {
+      "start": 348.0,
+      "end": 352.48,
+      "duration": 4.48,
+      "text": "n if it's a linear tree but assuming"
+    },
+    {
+      "start": 350.56,
+      "end": 354.88,
+      "duration": 4.32,
+      "text": "it's a binary search tree generically"
+    },
+    {
+      "start": 352.48,
+      "end": 357.52,
+      "duration": 5.04,
+      "text": "it's not a linear tree. So I can say b"
+    },
+    {
+      "start": 354.88,
+      "end": 360.0,
+      "duration": 5.12,
+      "text": "of h which is much much better than b of"
+    },
+    {
+      "start": 357.52,
+      "end": 363.28,
+      "duration": 5.76,
+      "text": "n and the space complexity will be b of"
+    },
+    {
+      "start": 360.0,
+      "end": 365.68,
+      "duration": 5.68,
+      "text": "one. I'm not considering stack space"
+    },
+    {
+      "start": 363.28,
+      "end": 367.52,
+      "duration": 4.24,
+      "text": "into consideration. You can't do that by"
+    },
+    {
+      "start": 365.68,
+      "end": 369.28,
+      "duration": 3.6,
+      "text": "yourself. If you want to consider stack"
+    },
+    {
+      "start": 367.52,
+      "end": 372.08,
+      "duration": 4.56,
+      "text": "space, if you're doing a recursion call,"
+    },
+    {
+      "start": 369.28,
+      "end": 374.48,
+      "duration": 5.2,
+      "text": "you can do that. Even if you do a normal"
+    },
+    {
+      "start": 372.08,
+      "end": 376.48,
+      "duration": 4.4,
+      "text": "I mean a normal while loop, if you just"
+    },
+    {
+      "start": 374.48,
+      "end": 378.48,
+      "duration": 4.0,
+      "text": "run a while loop, then you will not be"
+    },
+    {
+      "start": 376.48,
+      "end": 380.8,
+      "duration": 4.32,
+      "text": "using the recussion stack space."
+    },
+    {
+      "start": 378.48,
+      "end": 383.36,
+      "duration": 4.88,
+      "text": "Correct? So depending on you, whichever"
+    },
+    {
+      "start": 380.8,
+      "end": 386.4,
+      "duration": 5.6,
+      "text": "algorithm you want to use, uh you can"
+    },
+    {
+      "start": 383.36,
+      "end": 388.72,
+      "duration": 5.36,
+      "text": "easily touch the time complexity and"
+    },
+    {
+      "start": 386.4,
+      "end": 390.4,
+      "duration": 4.0,
+      "text": "space complexity. Right? So now it's"
+    },
+    {
+      "start": 388.72,
+      "end": 392.48,
+      "duration": 3.76,
+      "text": "time to check out the code. So I have"
+    },
+    {
+      "start": 390.4,
+      "end": 394.24,
+      "duration": 3.84,
+      "text": "written the recursive code. You can also"
+    },
+    {
+      "start": 392.48,
+      "end": 396.08,
+      "duration": 3.6,
+      "text": "write the while loop code which will not"
+    },
+    {
+      "start": 394.24,
+      "end": 398.32,
+      "duration": 4.08,
+      "text": "take an extra space like the recussion"
+    },
+    {
+      "start": 396.08,
+      "end": 399.84,
+      "duration": 3.76,
+      "text": "stack space. You can write that by"
+    },
+    {
+      "start": 398.32,
+      "end": 402.32,
+      "duration": 4.0,
+      "text": "yourself. Now I'll be discussing the"
+    },
+    {
+      "start": 399.84,
+      "end": 404.72,
+      "duration": 4.88,
+      "text": "Java code. The C++ and Java code are"
+    },
+    {
+      "start": 402.32,
+      "end": 407.68,
+      "duration": 5.36,
+      "text": "identical because instead of root it'll"
+    },
+    {
+      "start": 404.72,
+      "end": 409.52,
+      "duration": 4.8,
+      "text": "be a star of root star of P star of Q"
+    },
+    {
+      "start": 407.68,
+      "end": 412.88,
+      "duration": 5.2,
+      "text": "root.val. Instead of that it'll be a"
+    },
+    {
+      "start": 409.52,
+      "end": 416.0,
+      "duration": 6.48,
+      "text": "root uh dash and greater than sign uh in"
+    },
+    {
+      "start": 412.88,
+      "end": 417.68,
+      "duration": 4.8,
+      "text": "C++. So apart from that everything is"
+    },
+    {
+      "start": 416.0,
+      "end": 419.6,
+      "duration": 3.6,
+      "text": "identical. So you can follow this code"
+    },
+    {
+      "start": 417.68,
+      "end": 421.6,
+      "duration": 3.92,
+      "text": "as well. So given the root you're given"
+    },
+    {
+      "start": 419.6,
+      "end": 424.08,
+      "duration": 4.48,
+      "text": "the node P and the node Q. How do you"
+    },
+    {
+      "start": 421.6,
+      "end": 426.64,
+      "duration": 5.04,
+      "text": "find the LCM? I say if it's null then"
+    },
+    {
+      "start": 424.08,
+      "end": 429.92,
+      "duration": 5.84,
+      "text": "then I don't do anything. Then I say hey"
+    },
+    {
+      "start": 426.64,
+      "end": 432.48,
+      "duration": 5.84,
+      "text": "listen uh I find out the root value. Do"
+    },
+    {
+      "start": 429.92,
+      "end": 435.04,
+      "duration": 5.12,
+      "text": "both of them lie do both of them lie on"
+    },
+    {
+      "start": 432.48,
+      "end": 438.24,
+      "duration": 5.76,
+      "text": "the right? If they lie on the right"
+    },
+    {
+      "start": 435.04,
+      "end": 440.24,
+      "duration": 5.2,
+      "text": "let's go to the right. Okay. Do both of"
+    },
+    {
+      "start": 438.24,
+      "end": 442.64,
+      "duration": 4.4,
+      "text": "them lie on the left? If it is then go"
+    },
+    {
+      "start": 440.24,
+      "end": 444.64,
+      "duration": 4.4,
+      "text": "to the left. If that's not the case I"
+    },
+    {
+      "start": 442.64,
+      "end": 446.16,
+      "duration": 3.52,
+      "text": "cannot determine if both of them are on"
+    },
+    {
+      "start": 444.64,
+      "end": 448.4,
+      "duration": 3.76,
+      "text": "the left or both of them are on the"
+    },
+    {
+      "start": 446.16,
+      "end": 451.2,
+      "duration": 5.04,
+      "text": "right. If that's the case I return that"
+    },
+    {
+      "start": 448.4,
+      "end": 454.0,
+      "duration": 5.6,
+      "text": "hey this is the first point. This is the"
+    },
+    {
+      "start": 451.2,
+      "end": 456.24,
+      "duration": 5.04,
+      "text": "first point of or the last point of uh"
+    },
+    {
+      "start": 454.0,
+      "end": 459.36,
+      "duration": 5.36,
+      "text": "intersection. You can just return that"
+    },
+    {
+      "start": 456.24,
+      "end": 461.52,
+      "duration": 5.28,
+      "text": "root of the tree and that will be your"
+    },
+    {
+      "start": 459.36,
+      "end": 463.92,
+      "duration": 4.56,
+      "text": "answer. So uh guys, I hope you have"
+    },
+    {
+      "start": 461.52,
+      "end": 466.16,
+      "duration": 4.64,
+      "text": "understood the entire explanation as"
+    },
+    {
+      "start": 463.92,
+      "end": 467.76,
+      "duration": 3.84,
+      "text": "well as the code. Just in case you did,"
+    },
+    {
+      "start": 466.16,
+      "end": 469.68,
+      "duration": 3.52,
+      "text": "please please make sure you like this"
+    },
+    {
+      "start": 467.76,
+      "end": 472.0,
+      "duration": 4.24,
+      "text": "video and if you're new to this channel,"
+    },
+    {
+      "start": 469.68,
+      "end": 473.12,
+      "duration": 3.44,
+      "text": "please do consider subscribing. Yeah,"
+    },
+    {
+      "start": 472.0,
+      "end": 474.8,
+      "duration": 2.8,
+      "text": "with this I'll be wrapping up this"
+    },
+    {
+      "start": 473.12,
+      "end": 478.76,
+      "duration": 5.64,
+      "text": "video. Let's meet in some other video."
+    },
+    {
+      "start": 474.8,
+      "end": 478.76,
+      "duration": 3.96,
+      "text": "Till then, bye-bye. Take care."
+    },
+    {
+      "start": 478.88,
+      "end": 485.32,
+      "duration": 6.44,
+      "text": "is broken. Don't ever forget you're"
+    },
+    {
+      "start": 482.32,
+      "end": 485.32,
+      "duration": 3.0,
+      "text": "golden."
+    }
+  ]
+}

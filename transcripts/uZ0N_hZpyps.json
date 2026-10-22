@@ -1,0 +1,2772 @@
+{
+  "video_id": "uZ0N_hZpyps",
+  "title": "BS-16. Kth Missing Positive Number | Maths + Binary Search",
+  "duration_sec": 1372,
+  "segments": [
+    {
+      "start": 2.88,
+      "end": 5.88,
+      "text": "everyone welcome back to the channel I"
+    },
+    {
+      "start": 4.56,
+      "end": 7.86,
+      "text": "hope you guys are doing extremely well"
+    },
+    {
+      "start": 5.88,
+      "end": 9.36,
+      "text": "so we will be continuing with our binary"
+    },
+    {
+      "start": 7.86,
+      "end": 11.46,
+      "text": "search playlist now this is the part of"
+    },
+    {
+      "start": 9.36,
+      "end": 13.32,
+      "text": "the ongoing striversity and DSA course"
+    },
+    {
+      "start": 11.46,
+      "end": 15.0,
+      "text": "in case you haven't checked it out yet"
+    },
+    {
+      "start": 13.32,
+      "end": 16.68,
+      "text": "there's a link in the description make"
+    },
+    {
+      "start": 15.0,
+      "end": 18.3,
+      "text": "sure you check it out otherwise you're"
+    },
+    {
+      "start": 16.68,
+      "end": 20.04,
+      "text": "going to miss out on something extremely"
+    },
+    {
+      "start": 18.3,
+      "end": 22.08,
+      "text": "special so the problem that you're going"
+    },
+    {
+      "start": 20.04,
+      "end": 24.66,
+      "text": "to solve today will be finding out the"
+    },
+    {
+      "start": 22.08,
+      "end": 27.42,
+      "text": "kth missing number what does the problem"
+    },
+    {
+      "start": 24.66,
+      "end": 29.58,
+      "text": "state it states that it will be given an"
+    },
+    {
+      "start": 27.42,
+      "end": 32.82,
+      "text": "increasing array where you will be"
+    },
+    {
+      "start": 29.58,
+      "end": 35.52,
+      "text": "having positive integers your task is to"
+    },
+    {
+      "start": 32.82,
+      "end": 37.8,
+      "text": "figure out the kth missing number what"
+    },
+    {
+      "start": 35.52,
+      "end": 40.32,
+      "text": "does it mean you can see that the last"
+    },
+    {
+      "start": 37.8,
+      "end": 42.54,
+      "text": "number is still 11. so if I start"
+    },
+    {
+      "start": 40.32,
+      "end": 44.34,
+      "text": "writing all the positive numbers you"
+    },
+    {
+      "start": 42.54,
+      "end": 48.54,
+      "text": "know the positive numbers start from one"
+    },
+    {
+      "start": 44.34,
+      "end": 51.6,
+      "text": "so let's quickly uh write it till 11 so"
+    },
+    {
+      "start": 48.54,
+      "end": 53.88,
+      "text": "the moment I write it till 11 if I ask"
+    },
+    {
+      "start": 51.6,
+      "end": 56.82,
+      "text": "you which of the numbers are missing you"
+    },
+    {
+      "start": 53.88,
+      "end": 60.36,
+      "text": "can say 2 is there 3 is there 4 is there"
+    },
+    {
+      "start": 56.82,
+      "end": 62.94,
+      "text": "7 is there 11 is there so apparently"
+    },
+    {
+      "start": 60.36,
+      "end": 64.62,
+      "text": "this is the first number that is missing"
+    },
+    {
+      "start": 62.94,
+      "end": 66.96,
+      "text": "this is the second number that is"
+    },
+    {
+      "start": 64.62,
+      "end": 69.18,
+      "text": "missing this is the third this is the"
+    },
+    {
+      "start": 66.96,
+      "end": 71.28,
+      "text": "fourth this is the fifth this is the"
+    },
+    {
+      "start": 69.18,
+      "end": 73.86,
+      "text": "Sixth and the question is specifically"
+    },
+    {
+      "start": 71.28,
+      "end": 75.84,
+      "text": "asking you to figure out the fifth"
+    },
+    {
+      "start": 73.86,
+      "end": 77.88,
+      "text": "missing number so if you carefully see"
+    },
+    {
+      "start": 75.84,
+      "end": 79.5,
+      "text": "that the fifth missing number is nine so"
+    },
+    {
+      "start": 77.88,
+      "end": 81.9,
+      "text": "this is what you have to return"
+    },
+    {
+      "start": 79.5,
+      "end": 84.06,
+      "text": "which is basically nine so given an"
+    },
+    {
+      "start": 81.9,
+      "end": 86.34,
+      "text": "array of increasing positive integers"
+    },
+    {
+      "start": 84.06,
+      "end": 88.62,
+      "text": "and given an integer K you have to"
+    },
+    {
+      "start": 86.34,
+      "end": 90.36,
+      "text": "return the kth missing positive integer"
+    },
+    {
+      "start": 88.62,
+      "end": 91.8,
+      "text": "that is what the problem States this"
+    },
+    {
+      "start": 90.36,
+      "end": 93.06,
+      "text": "problem might have a lot of brute force"
+    },
+    {
+      "start": 91.8,
+      "end": 95.64,
+      "text": "solutions but the one that I'm going to"
+    },
+    {
+      "start": 93.06,
+      "end": 97.62,
+      "text": "speak will be super easy and clean so"
+    },
+    {
+      "start": 95.64,
+      "end": 100.74,
+      "text": "imagine I give you an example where the"
+    },
+    {
+      "start": 97.62,
+      "end": 102.9,
+      "text": "array is starting from 5 and then it has"
+    },
+    {
+      "start": 100.74,
+      "end": 104.78,
+      "text": "7 and then probably 10 and then 12 and"
+    },
+    {
+      "start": 102.9,
+      "end": 107.1,
+      "text": "I'm asking you to figure out the fourth"
+    },
+    {
+      "start": 104.78,
+      "end": 109.02,
+      "text": "missing integer"
+    },
+    {
+      "start": 107.1,
+      "end": 112.44,
+      "text": "what will be the fourth missing integer"
+    },
+    {
+      "start": 109.02,
+      "end": 115.14,
+      "text": "your answer will be four why because the"
+    },
+    {
+      "start": 112.44,
+      "end": 118.68,
+      "text": "array itself starts from five thereby"
+    },
+    {
+      "start": 115.14,
+      "end": 121.74,
+      "text": "all the first four numbers will be"
+    },
+    {
+      "start": 118.68,
+      "end": 123.6,
+      "text": "missing and since the question is fourth"
+    },
+    {
+      "start": 121.74,
+      "end": 127.74,
+      "text": "missing integer I say that the number is"
+    },
+    {
+      "start": 123.6,
+      "end": 130.26,
+      "text": "4 whatever I ask you what is the sixth"
+    },
+    {
+      "start": 127.74,
+      "end": 133.14,
+      "text": "missing integer you cannot see straight"
+    },
+    {
+      "start": 130.26,
+      "end": 135.54,
+      "text": "away 6 like you did when K was 4 you"
+    },
+    {
+      "start": 133.14,
+      "end": 139.14,
+      "text": "cannot see straight away six why because"
+    },
+    {
+      "start": 135.54,
+      "end": 141.42,
+      "text": "there is an integer five thereby the"
+    },
+    {
+      "start": 139.14,
+      "end": 145.32,
+      "text": "answer will be like if I have to write 1"
+    },
+    {
+      "start": 141.42,
+      "end": 147.36,
+      "text": "2 3 4 5 is there six seven so if I'm"
+    },
+    {
+      "start": 145.32,
+      "end": 151.2,
+      "text": "looking for the sixth missing integer"
+    },
+    {
+      "start": 147.36,
+      "end": 154.2,
+      "text": "it's one two three four five six this is"
+    },
+    {
+      "start": 151.2,
+      "end": 156.24,
+      "text": "it one more so if you carefully observe"
+    },
+    {
+      "start": 154.2,
+      "end": 159.08,
+      "text": "what do You observe there was one"
+    },
+    {
+      "start": 156.24,
+      "end": 162.3,
+      "text": "integer which was lesser than six"
+    },
+    {
+      "start": 159.08,
+      "end": 165.66,
+      "text": "thereby you kind of added that and you"
+    },
+    {
+      "start": 162.3,
+      "end": 167.46,
+      "text": "got this particular number one ahead one"
+    },
+    {
+      "start": 165.66,
+      "end": 169.8,
+      "text": "head because the five took a place in"
+    },
+    {
+      "start": 167.46,
+      "end": 172.8,
+      "text": "between hence the six could not be the"
+    },
+    {
+      "start": 169.8,
+      "end": 174.96,
+      "text": "answer so this is what the Brute will be"
+    },
+    {
+      "start": 172.8,
+      "end": 177.06,
+      "text": "so let's quickly do the brute force on"
+    },
+    {
+      "start": 174.96,
+      "end": 178.56,
+      "text": "the given example so what I will do is"
+    },
+    {
+      "start": 177.06,
+      "end": 181.98,
+      "text": "I'll take the k equal to 5 and I'll"
+    },
+    {
+      "start": 178.56,
+      "end": 184.2,
+      "text": "start iterating I get to I say that this"
+    },
+    {
+      "start": 181.98,
+      "end": 186.24,
+      "text": "2 will take one please so now I'm"
+    },
+    {
+      "start": 184.2,
+      "end": 188.64,
+      "text": "looking for the sixth possible number"
+    },
+    {
+      "start": 186.24,
+      "end": 190.8,
+      "text": "like the answer can be six then I'll"
+    },
+    {
+      "start": 188.64,
+      "end": 193.86,
+      "text": "move to the next and I'll say three will"
+    },
+    {
+      "start": 190.8,
+      "end": 196.2,
+      "text": "take one more place so seven can be my"
+    },
+    {
+      "start": 193.86,
+      "end": 198.24,
+      "text": "possible answer now I'll move forward I"
+    },
+    {
+      "start": 196.2,
+      "end": 199.98,
+      "text": "have four four will take one more place"
+    },
+    {
+      "start": 198.24,
+      "end": 202.5,
+      "text": "thereby"
+    },
+    {
+      "start": 199.98,
+      "end": 205.74,
+      "text": "I'll move to eight then I'll go to seven"
+    },
+    {
+      "start": 202.5,
+      "end": 207.96,
+      "text": "seven will take one more place thereby"
+    },
+    {
+      "start": 205.74,
+      "end": 211.14,
+      "text": "I'll move to nine the moment I move to"
+    },
+    {
+      "start": 207.96,
+      "end": 213.12,
+      "text": "eleven I see this as exceeded I see this"
+    },
+    {
+      "start": 211.14,
+      "end": 216.18,
+      "text": "has exceeded so I stop then and there"
+    },
+    {
+      "start": 213.12,
+      "end": 218.82,
+      "text": "and I say that this particular 9 is my"
+    },
+    {
+      "start": 216.18,
+      "end": 220.98,
+      "text": "answer so this is going to be my answer"
+    },
+    {
+      "start": 218.82,
+      "end": 223.46,
+      "text": "for The Brute Force"
+    },
+    {
+      "start": 220.98,
+      "end": 227.22,
+      "text": "super simple it's basically the numbers"
+    },
+    {
+      "start": 223.46,
+      "end": 229.08,
+      "text": "that are lesser than K will take its"
+    },
+    {
+      "start": 227.22,
+      "end": 231.78,
+      "text": "place thereby you have to move move move"
+    },
+    {
+      "start": 229.08,
+      "end": 234.18,
+      "text": "and wherever you stop that will be your"
+    },
+    {
+      "start": 231.78,
+      "end": 237.0,
+      "text": "answer it's going to be super simple"
+    },
+    {
+      "start": 234.18,
+      "end": 240.72,
+      "text": "I'll just start from 0 I'll go until the"
+    },
+    {
+      "start": 237.0,
+      "end": 244.14,
+      "text": "last integer and I'll say if arr[i]"
+    },
+    {
+      "start": 240.72,
+      "end": 247.32,
+      "text": "is lesser than equal to K I'll just do a"
+    },
+    {
+      "start": 244.14,
+      "end": 249.06,
+      "text": "K plus plus if I get any number"
+    },
+    {
+      "start": 247.32,
+      "end": 251.52,
+      "text": "because it is an increasing order if I"
+    },
+    {
+      "start": 249.06,
+      "end": 254.46,
+      "text": "get any number which is greater than K I"
+    },
+    {
+      "start": 251.52,
+      "end": 256.26,
+      "text": "stop I stop hence you can straight away"
+    },
+    {
+      "start": 254.46,
+      "end": 258.18,
+      "text": "see break"
+    },
+    {
+      "start": 256.26,
+      "end": 260.76,
+      "text": "and this is what the possible solution"
+    },
+    {
+      "start": 258.18,
+      "end": 263.88,
+      "text": "will be and what will be the time"
+    },
+    {
+      "start": 260.76,
+      "end": 266.82,
+      "text": "complexity we go of n won't be the space"
+    },
+    {
+      "start": 263.88,
+      "end": 268.5,
+      "text": "complexity B go of one now this is what"
+    },
+    {
+      "start": 266.82,
+      "end": 269.7,
+      "text": "the Brute Force solution will be the"
+    },
+    {
+      "start": 268.5,
+      "end": 271.62,
+      "text": "moment you give the solution to the"
+    },
+    {
+      "start": 269.7,
+      "end": 274.64,
+      "text": "interviewer he might ask you to optimize"
+    },
+    {
+      "start": 271.62,
+      "end": 277.74,
+      "text": "it if you have to optimize we go of n"
+    },
+    {
+      "start": 274.64,
+      "end": 279.84,
+      "text": "what should you use because what is"
+    },
+    {
+      "start": 277.74,
+      "end": 281.76,
+      "text": "better than big of n primary logarithmic"
+    },
+    {
+      "start": 279.84,
+      "end": 285.0,
+      "text": "of N and that does make sense over here"
+    },
+    {
+      "start": 281.76,
+      "end": 287.94,
+      "text": "because the array is sorted and whenever"
+    },
+    {
+      "start": 285.0,
+      "end": 290.66,
+      "text": "we see something as sorted we and we"
+    },
+    {
+      "start": 287.94,
+      "end": 292.56,
+      "text": "need something better than we go of n"
+    },
+    {
+      "start": 290.66,
+      "end": 294.78,
+      "text": "logarithmic of n"
+    },
+    {
+      "start": 292.56,
+      "end": 298.02,
+      "text": "that kind of gives us an idea that okay"
+    },
+    {
+      "start": 294.78,
+      "end": 299.4,
+      "text": "binary search might be a solution this"
+    },
+    {
+      "start": 298.02,
+      "end": 301.38,
+      "text": "is how you get the intuition of binary"
+    },
+    {
+      "start": 299.4,
+      "end": 303.48,
+      "text": "search that okay sorted increasing"
+    },
+    {
+      "start": 301.38,
+      "end": 305.64,
+      "text": "better than we go off and thereby we"
+    },
+    {
+      "start": 303.48,
+      "end": 307.98,
+      "text": "move towards a logarithmic cancellation"
+    },
+    {
+      "start": 305.64,
+      "end": 310.5,
+      "text": "so can we apply the typical binary"
+    },
+    {
+      "start": 307.98,
+      "end": 311.88,
+      "text": "search algorithm we cannot why because"
+    },
+    {
+      "start": 310.5,
+      "end": 315.12,
+      "text": "we are looking for the missing number"
+    },
+    {
+      "start": 311.88,
+      "end": 316.98,
+      "text": "this number is not there in the array so"
+    },
+    {
+      "start": 315.12,
+      "end": 319.14,
+      "text": "we cannot apply the typical binary"
+    },
+    {
+      "start": 316.98,
+      "end": 321.36,
+      "text": "search in a sorted array so binary"
+    },
+    {
+      "start": 319.14,
+      "end": 324.0,
+      "text": "search is not possible like the normal"
+    },
+    {
+      "start": 321.36,
+      "end": 327.18,
+      "text": "one can we apply binary search on"
+    },
+    {
+      "start": 324.0,
+      "end": 329.7,
+      "text": "answers we cannot because binary social"
+    },
+    {
+      "start": 327.18,
+      "end": 331.86,
+      "text": "answers is only applicable when you are"
+    },
+    {
+      "start": 329.7,
+      "end": 334.74,
+      "text": "looking for something like minimum or"
+    },
+    {
+      "start": 331.86,
+      "end": 337.08,
+      "text": "maximum and you know that some portion"
+    },
+    {
+      "start": 334.74,
+      "end": 339.36,
+      "text": "is not possible and the other portion is"
+    },
+    {
+      "start": 337.08,
+      "end": 341.4,
+      "text": "possible so either you look for the main"
+    },
+    {
+      "start": 339.36,
+      "end": 344.16,
+      "text": "or either you look for the max something"
+    },
+    {
+      "start": 341.4,
+      "end": 346.98,
+      "text": "like that but over here that's not the"
+    },
+    {
+      "start": 344.16,
+      "end": 349.26,
+      "text": "case the case is very different if you"
+    },
+    {
+      "start": 346.98,
+      "end": 353.16,
+      "text": "carefully notice this particular answer"
+    },
+    {
+      "start": 349.26,
+      "end": 356.04,
+      "text": "line should have mean between 7 7 and"
+    },
+    {
+      "start": 353.16,
+      "end": 360.24,
+      "text": "11. so if I somehow can figure out"
+    },
+    {
+      "start": 356.04,
+      "end": 363.0,
+      "text": "between which which indexes this"
+    },
+    {
+      "start": 360.24,
+      "end": 366.24,
+      "text": "particular answer should have been I"
+    },
+    {
+      "start": 363.0,
+      "end": 368.34,
+      "text": "think my problem will be solved so how"
+    },
+    {
+      "start": 366.24,
+      "end": 371.4,
+      "text": "do we apply binary search in this"
+    },
+    {
+      "start": 368.34,
+      "end": 373.02,
+      "text": "particular question can I say I'm very"
+    },
+    {
+      "start": 371.4,
+      "end": 377.22,
+      "text": "much sure that the answer will be"
+    },
+    {
+      "start": 373.02,
+      "end": 381.36,
+      "text": "between 2 and between 11 for k equal to"
+    },
+    {
+      "start": 377.22,
+      "end": 384.66,
+      "text": "5. I am very much sure about that okay"
+    },
+    {
+      "start": 381.36,
+      "end": 387.96,
+      "text": "can I say that I'm also like for this k"
+    },
+    {
+      "start": 384.66,
+      "end": 391.68,
+      "text": "equal to 5 I know the answer is 9 and"
+    },
+    {
+      "start": 387.96,
+      "end": 394.32,
+      "text": "that always lies between 7 and 11. I'm"
+    },
+    {
+      "start": 391.68,
+      "end": 397.98,
+      "text": "also very much sure about this right"
+    },
+    {
+      "start": 394.32,
+      "end": 402.6,
+      "text": "what if K is 3 in that case the answer"
+    },
+    {
+      "start": 397.98,
+      "end": 405.06,
+      "text": "is 6 and that is lying between 4 and 7."
+    },
+    {
+      "start": 402.6,
+      "end": 408.96,
+      "text": "I know one thing for binary search I"
+    },
+    {
+      "start": 405.06,
+      "end": 411.72,
+      "text": "think the entire range if somehow I can"
+    },
+    {
+      "start": 408.96,
+      "end": 414.48,
+      "text": "figure out like for k equal to 5 I know"
+    },
+    {
+      "start": 411.72,
+      "end": 416.7,
+      "text": "the answer will be between 7 and 11. if"
+    },
+    {
+      "start": 414.48,
+      "end": 418.5,
+      "text": "I can figure out the smaller range"
+    },
+    {
+      "start": 416.7,
+      "end": 421.98,
+      "text": "I'm very much sure that it will be"
+    },
+    {
+      "start": 418.5,
+      "end": 425.16,
+      "text": "between two indexes if I can figure out"
+    },
+    {
+      "start": 421.98,
+      "end": 427.32,
+      "text": "that two nearby indexes my question is"
+    },
+    {
+      "start": 425.16,
+      "end": 430.62,
+      "text": "solved so first Target is to figure out"
+    },
+    {
+      "start": 427.32,
+      "end": 433.02,
+      "text": "the two nearby indexes that's what our"
+    },
+    {
+      "start": 430.62,
+      "end": 436.08,
+      "text": "Target will be and then we'll figure out"
+    },
+    {
+      "start": 433.02,
+      "end": 437.88,
+      "text": "how to how to get the answer once I am"
+    },
+    {
+      "start": 436.08,
+      "end": 440.52,
+      "text": "standing here and once I'm standing here"
+    },
+    {
+      "start": 437.88,
+      "end": 443.46,
+      "text": "I will figure out nine I'll figure out"
+    },
+    {
+      "start": 440.52,
+      "end": 447.18,
+      "text": "nine as of now what do I have I have an"
+    },
+    {
+      "start": 443.46,
+      "end": 449.4,
+      "text": "increasing array I have k equal to 5 and"
+    },
+    {
+      "start": 447.18,
+      "end": 453.0,
+      "text": "what do I need I need to make sure that"
+    },
+    {
+      "start": 449.4,
+      "end": 455.7,
+      "text": "I stand between like I stand on those"
+    },
+    {
+      "start": 453.0,
+      "end": 458.58,
+      "text": "two indexes between which the answer"
+    },
+    {
+      "start": 455.7,
+      "end": 460.62,
+      "text": "will be so that's my first task figure"
+    },
+    {
+      "start": 458.58,
+      "end": 462.3,
+      "text": "out the two nearby indexes"
+    },
+    {
+      "start": 460.62,
+      "end": 464.7,
+      "text": "so the next thing that you should be"
+    },
+    {
+      "start": 462.3,
+      "end": 466.92,
+      "text": "thinking is hey striver you did know"
+    },
+    {
+      "start": 464.7,
+      "end": 468.96,
+      "text": "that the answer was nine that is why it"
+    },
+    {
+      "start": 466.92,
+      "end": 472.26,
+      "text": "was easy for you to say that nine was"
+    },
+    {
+      "start": 468.96,
+      "end": 474.54,
+      "text": "between 7 and 11 but wait we do not know"
+    },
+    {
+      "start": 472.26,
+      "end": 477.42,
+      "text": "what the answer is we are just given K"
+    },
+    {
+      "start": 474.54,
+      "end": 479.28,
+      "text": "and we have to find that number so how"
+    },
+    {
+      "start": 477.42,
+      "end": 481.62,
+      "text": "do I figure out that it is between 7 and"
+    },
+    {
+      "start": 479.28,
+      "end": 484.2,
+      "text": "11 because I do not know the number this"
+    },
+    {
+      "start": 481.62,
+      "end": 486.36,
+      "text": "is where K will come in it will help us"
+    },
+    {
+      "start": 484.2,
+      "end": 488.28,
+      "text": "let's observe something if I write down"
+    },
+    {
+      "start": 486.36,
+      "end": 491.82,
+      "text": "the indexes this is how it will look"
+    },
+    {
+      "start": 488.28,
+      "end": 494.22,
+      "text": "like ideally on a normal scenario the"
+    },
+    {
+      "start": 491.82,
+      "end": 496.5,
+      "text": "numbers should have been this one two"
+    },
+    {
+      "start": 494.22,
+      "end": 499.86,
+      "text": "three four five in the array if nothing"
+    },
+    {
+      "start": 496.5,
+      "end": 502.92,
+      "text": "was missing if nothing was missing but"
+    },
+    {
+      "start": 499.86,
+      "end": 506.58,
+      "text": "over here we have seven and we should"
+    },
+    {
+      "start": 502.92,
+      "end": 508.8,
+      "text": "have had four thereby can I say till"
+    },
+    {
+      "start": 506.58,
+      "end": 510.66,
+      "text": "this particular index there are three"
+    },
+    {
+      "start": 508.8,
+      "end": 513.48,
+      "text": "numbers missing if I again write down"
+    },
+    {
+      "start": 510.66,
+      "end": 516.42,
+      "text": "the integers one two three four five six"
+    },
+    {
+      "start": 513.48,
+      "end": 518.04,
+      "text": "seven you have seven and before that you"
+    },
+    {
+      "start": 516.42,
+      "end": 520.26,
+      "text": "have four and before that you have three"
+    },
+    {
+      "start": 518.04,
+      "end": 522.24,
+      "text": "and before that you have two so you have"
+    },
+    {
+      "start": 520.26,
+      "end": 524.7,
+      "text": "three numbers missing and how did you"
+    },
+    {
+      "start": 522.24,
+      "end": 526.92,
+      "text": "figure that out it's very simple you had"
+    },
+    {
+      "start": 524.7,
+      "end": 529.02,
+      "text": "seven so you said seven is present"
+    },
+    {
+      "start": 526.92,
+      "end": 530.46,
+      "text": "ideally four should have been present"
+    },
+    {
+      "start": 529.02,
+      "end": 532.38,
+      "text": "there ideally four should have been"
+    },
+    {
+      "start": 530.46,
+      "end": 534.24,
+      "text": "present there thereby there are three"
+    },
+    {
+      "start": 532.38,
+      "end": 536.7,
+      "text": "numbers we say I'm like okay there are"
+    },
+    {
+      "start": 534.24,
+      "end": 540.3,
+      "text": "three numbers missing over here there's"
+    },
+    {
+      "start": 536.7,
+      "end": 542.76,
+      "text": "eleven so if I have to again say"
+    },
+    {
+      "start": 540.3,
+      "end": 544.8,
+      "text": "eleven is there ideally what should I"
+    },
+    {
+      "start": 542.76,
+      "end": 546.78,
+      "text": "have been there five if I write down the"
+    },
+    {
+      "start": 544.8,
+      "end": 549.9,
+      "text": "numbers so how many numbers are missing"
+    },
+    {
+      "start": 546.78,
+      "end": 552.66,
+      "text": "can I say 11 minus five equal to six"
+    },
+    {
+      "start": 549.9,
+      "end": 554.34,
+      "text": "numbers is what is missing over there"
+    },
+    {
+      "start": 552.66,
+      "end": 557.04,
+      "text": "you can again go ahead and write down"
+    },
+    {
+      "start": 554.34,
+      "end": 560.34,
+      "text": "the numbers you'll figure out that 11 is"
+    },
+    {
+      "start": 557.04,
+      "end": 563.34,
+      "text": "there thereby one two three four five"
+    },
+    {
+      "start": 560.34,
+      "end": 566.7,
+      "text": "six six numbers I must say so can I say"
+    },
+    {
+      "start": 563.34,
+      "end": 569.7,
+      "text": "that can I say on the basis of K"
+    },
+    {
+      "start": 566.7,
+      "end": 573.06,
+      "text": "on this index three numbers are missing"
+    },
+    {
+      "start": 569.7,
+      "end": 575.04,
+      "text": "on this index six numbers are missing if"
+    },
+    {
+      "start": 573.06,
+      "end": 577.44,
+      "text": "I can figure out the numbers of missing"
+    },
+    {
+      "start": 575.04,
+      "end": 579.06,
+      "text": "what am I looking for I'm looking for"
+    },
+    {
+      "start": 577.44,
+      "end": 581.64,
+      "text": "the fifth number which is missing"
+    },
+    {
+      "start": 579.06,
+      "end": 583.98,
+      "text": "thereby can I surely say that it will"
+    },
+    {
+      "start": 581.64,
+      "end": 586.92,
+      "text": "lie between this it will lie between"
+    },
+    {
+      "start": 583.98,
+      "end": 589.26,
+      "text": "this if I again write for this one if"
+    },
+    {
+      "start": 586.92,
+      "end": 591.42,
+      "text": "you write for four how many numbers are"
+    },
+    {
+      "start": 589.26,
+      "end": 593.52,
+      "text": "missing at four ideally there should"
+    },
+    {
+      "start": 591.42,
+      "end": 595.38,
+      "text": "have been three so four minus three is"
+    },
+    {
+      "start": 593.52,
+      "end": 597.96,
+      "text": "one number is missing over here so there"
+    },
+    {
+      "start": 595.38,
+      "end": 600.42,
+      "text": "is just one number sorry there is just"
+    },
+    {
+      "start": 597.96,
+      "end": 602.58,
+      "text": "one number which is missing at four if I"
+    },
+    {
+      "start": 600.42,
+      "end": 604.38,
+      "text": "have to write it for this ideally there"
+    },
+    {
+      "start": 602.58,
+      "end": 607.38,
+      "text": "should have been two so there is again"
+    },
+    {
+      "start": 604.38,
+      "end": 609.3,
+      "text": "one number missing ideally for this"
+    },
+    {
+      "start": 607.38,
+      "end": 611.58,
+      "text": "2 minus 1 because there should have been"
+    },
+    {
+      "start": 609.3,
+      "end": 613.2,
+      "text": "one so one number missing if you"
+    },
+    {
+      "start": 611.58,
+      "end": 615.48,
+      "text": "carefully observe"
+    },
+    {
+      "start": 613.2,
+      "end": 617.58,
+      "text": "till this particular index one number is"
+    },
+    {
+      "start": 615.48,
+      "end": 619.14,
+      "text": "missing till this particular index one"
+    },
+    {
+      "start": 617.58,
+      "end": 621.24,
+      "text": "number is missing till this particular"
+    },
+    {
+      "start": 619.14,
+      "end": 623.04,
+      "text": "index one number is missing till this"
+    },
+    {
+      "start": 621.24,
+      "end": 625.2,
+      "text": "particular index three number is missing"
+    },
+    {
+      "start": 623.04,
+      "end": 627.6,
+      "text": "in this particular index sixth number is"
+    },
+    {
+      "start": 625.2,
+      "end": 629.52,
+      "text": "missing and what is the"
+    },
+    {
+      "start": 627.6,
+      "end": 630.96,
+      "text": "what is that you're looking for you're"
+    },
+    {
+      "start": 629.52,
+      "end": 633.66,
+      "text": "looking for the fifth missing number"
+    },
+    {
+      "start": 630.96,
+      "end": 636.96,
+      "text": "thereby you can easily figure out that"
+    },
+    {
+      "start": 633.66,
+      "end": 638.82,
+      "text": "between this is where it will lie so"
+    },
+    {
+      "start": 636.96,
+      "end": 641.94,
+      "text": "what I've done is I've written down the"
+    },
+    {
+      "start": 638.82,
+      "end": 643.68,
+      "text": "missing numbers at every index now can I"
+    },
+    {
+      "start": 641.94,
+      "end": 645.96,
+      "text": "perform a binary search in order to"
+    },
+    {
+      "start": 643.68,
+      "end": 649.2,
+      "text": "figure out where will the fifth missing"
+    },
+    {
+      "start": 645.96,
+      "end": 651.0,
+      "text": "number line I can what I'll do is I'll"
+    },
+    {
+      "start": 649.2,
+      "end": 653.04,
+      "text": "take the low pointer to be at the zeroth"
+    },
+    {
+      "start": 651.0,
+      "end": 655.5,
+      "text": "index I'll take the high pointer to B"
+    },
+    {
+      "start": 653.04,
+      "end": 657.9,
+      "text": "and the last Index right"
+    },
+    {
+      "start": 655.5,
+      "end": 660.96,
+      "text": "so what will be my first wind mid will"
+    },
+    {
+      "start": 657.9,
+      "end": 663.48,
+      "text": "be 0 plus 4 by 2 which is second index"
+    },
+    {
+      "start": 660.96,
+      "end": 666.36,
+      "text": "so mid will be pointing to this place"
+    },
+    {
+      "start": 663.48,
+      "end": 668.34,
+      "text": "which is the second index and over here"
+    },
+    {
+      "start": 666.36,
+      "end": 671.58,
+      "text": "we notice that the number of missing"
+    },
+    {
+      "start": 668.34,
+      "end": 673.32,
+      "text": "numbers is one what am I looking for"
+    },
+    {
+      "start": 671.58,
+      "end": 675.9,
+      "text": "I'm looking for the fifth missing number"
+    },
+    {
+      "start": 673.32,
+      "end": 678.66,
+      "text": "so I know that this one can be"
+    },
+    {
+      "start": 675.9,
+      "end": 680.76,
+      "text": "eliminated because 5 is greater than"
+    },
+    {
+      "start": 678.66,
+      "end": 682.92,
+      "text": "this missing number I'm looking for"
+    },
+    {
+      "start": 680.76,
+      "end": 684.72,
+      "text": "fifth missing number and 5 is greater"
+    },
+    {
+      "start": 682.92,
+      "end": 686.46,
+      "text": "than one so the left portion can be"
+    },
+    {
+      "start": 684.72,
+      "end": 689.22,
+      "text": "eliminated so please go ahead and"
+    },
+    {
+      "start": 686.46,
+      "end": 690.96,
+      "text": "eliminate and move to this so this is"
+    },
+    {
+      "start": 689.22,
+      "end": 694.02,
+      "text": "what I'll do I'll eliminate it I'll move"
+    },
+    {
+      "start": 690.96,
+      "end": 696.3,
+      "text": "ahead next what is my job"
+    },
+    {
+      "start": 694.02,
+      "end": 699.18,
+      "text": "my job is to figure out the next mid"
+    },
+    {
+      "start": 696.3,
+      "end": 701.76,
+      "text": "which is index is three"
+    },
+    {
+      "start": 699.18,
+      "end": 703.8,
+      "text": "three plus four is low plus I by two"
+    },
+    {
+      "start": 701.76,
+      "end": 705.96,
+      "text": "thereby it'll be three so the mid will"
+    },
+    {
+      "start": 703.8,
+      "end": 708.72,
+      "text": "be pointing to three this is the moment"
+    },
+    {
+      "start": 705.96,
+      "end": 711.48,
+      "text": "you notice that Hey listen"
+    },
+    {
+      "start": 708.72,
+      "end": 713.64,
+      "text": "over here we are seeing that this is"
+    },
+    {
+      "start": 711.48,
+      "end": 716.52,
+      "text": "having three missing numbers and we are"
+    },
+    {
+      "start": 713.64,
+      "end": 719.1,
+      "text": "looking for five missing numbers so this"
+    },
+    {
+      "start": 716.52,
+      "end": 721.32,
+      "text": "is also not possible so can you please"
+    },
+    {
+      "start": 719.1,
+      "end": 723.6,
+      "text": "because this was already eliminated can"
+    },
+    {
+      "start": 721.32,
+      "end": 726.18,
+      "text": "you please eliminate this and at the"
+    },
+    {
+      "start": 723.6,
+      "end": 729.54,
+      "text": "same time take low"
+    },
+    {
+      "start": 726.18,
+      "end": 732.84,
+      "text": "and move to Mid plus 1 we will just move"
+    },
+    {
+      "start": 729.54,
+      "end": 734.7,
+      "text": "there at the next step mid will also be"
+    },
+    {
+      "start": 732.84,
+      "end": 737.28,
+      "text": "pointing to this and the next step mid"
+    },
+    {
+      "start": 734.7,
+      "end": 739.98,
+      "text": "will also be pointing to this because 4"
+    },
+    {
+      "start": 737.28,
+      "end": 743.58,
+      "text": "plus 4 by 2 is 4 so the mid is already"
+    },
+    {
+      "start": 739.98,
+      "end": 746.16,
+      "text": "pointing to this over here we have six"
+    },
+    {
+      "start": 743.58,
+      "end": 747.42,
+      "text": "missing numbers we have six missing"
+    },
+    {
+      "start": 746.16,
+      "end": 749.16,
+      "text": "numbers but we are looking for five"
+    },
+    {
+      "start": 747.42,
+      "end": 750.78,
+      "text": "we're like the right has to be"
+    },
+    {
+      "start": 749.16,
+      "end": 752.4,
+      "text": "eliminated the right has to be"
+    },
+    {
+      "start": 750.78,
+      "end": 755.16,
+      "text": "eliminated and when the right is"
+    },
+    {
+      "start": 752.4,
+      "end": 757.98,
+      "text": "eliminated High goes as wind minus one"
+    },
+    {
+      "start": 755.16,
+      "end": 760.32,
+      "text": "so I'll move High to one place back of"
+    },
+    {
+      "start": 757.98,
+      "end": 762.98,
+      "text": "mid and this is the moment you see that"
+    },
+    {
+      "start": 760.32,
+      "end": 762.98,
+      "text": "hey"
+    },
+    {
+      "start": 763.14,
+      "end": 768.12,
+      "text": "the low and high have crossed so we"
+    },
+    {
+      "start": 765.3,
+      "end": 771.12,
+      "text": "carefully observe high is standing at 3"
+    },
+    {
+      "start": 768.12,
+      "end": 774.84,
+      "text": "which is lesser than K lower standing at"
+    },
+    {
+      "start": 771.12,
+      "end": 775.8,
+      "text": "6 which is greater than K did you notice"
+    },
+    {
+      "start": 774.84,
+      "end": 780.24,
+      "text": "something"
+    },
+    {
+      "start": 775.8,
+      "end": 783.6,
+      "text": "initially the low was at a point which"
+    },
+    {
+      "start": 780.24,
+      "end": 786.6,
+      "text": "was lesser where has the low gone to a"
+    },
+    {
+      "start": 783.6,
+      "end": 788.4,
+      "text": "higher point to higher than K opposite"
+    },
+    {
+      "start": 786.6,
+      "end": 792.6,
+      "text": "polarity comes in"
+    },
+    {
+      "start": 788.4,
+      "end": 795.72,
+      "text": "let's see where was I I was at six which"
+    },
+    {
+      "start": 792.6,
+      "end": 798.24,
+      "text": "was greater where is high ending at on"
+    },
+    {
+      "start": 795.72,
+      "end": 801.2,
+      "text": "low Earth opposite polarity So"
+    },
+    {
+      "start": 798.24,
+      "end": 804.48,
+      "text": "eventually you are ending up"
+    },
+    {
+      "start": 801.2,
+      "end": 806.4,
+      "text": "at two nearby indexes so I figured out"
+    },
+    {
+      "start": 804.48,
+      "end": 810.06,
+      "text": "my nearby indexes"
+    },
+    {
+      "start": 806.4,
+      "end": 812.7,
+      "text": "done what is my next job if my lowest"
+    },
+    {
+      "start": 810.06,
+      "end": 815.28,
+      "text": "pointing if my low and high are pointing"
+    },
+    {
+      "start": 812.7,
+      "end": 817.68,
+      "text": "to the nearby indexes the next job is"
+    },
+    {
+      "start": 815.28,
+      "end": 820.14,
+      "text": "find the number"
+    },
+    {
+      "start": 817.68,
+      "end": 822.0,
+      "text": "find the number is my next job it's"
+    },
+    {
+      "start": 820.14,
+      "end": 826.08,
+      "text": "going to be super simple it's going to"
+    },
+    {
+      "start": 822.0,
+      "end": 827.1,
+      "text": "be super simple why let's analyze so the"
+    },
+    {
+      "start": 826.08,
+      "end": 830.4,
+      "text": "high is"
+    },
+    {
+      "start": 827.1,
+      "end": 834.66,
+      "text": "pointing to like the arr[i] is"
+    },
+    {
+      "start": 830.4,
+      "end": 836.7,
+      "text": "pointing to 7 right how many numbers are"
+    },
+    {
+      "start": 834.66,
+      "end": 839.22,
+      "text": "missing can I say three numbers are"
+    },
+    {
+      "start": 836.7,
+      "end": 842.28,
+      "text": "missing I can so if three numbers are"
+    },
+    {
+      "start": 839.22,
+      "end": 846.9,
+      "text": "missing how many else am I looking for I"
+    },
+    {
+      "start": 842.28,
+      "end": 850.26,
+      "text": "need more to that's very obvious because"
+    },
+    {
+      "start": 846.9,
+      "end": 852.6,
+      "text": "K is 5 and you know till here the"
+    },
+    {
+      "start": 850.26,
+      "end": 853.8,
+      "text": "missing are three because ideally if I"
+    },
+    {
+      "start": 852.6,
+      "end": 855.78,
+      "text": "write down there should have been four"
+    },
+    {
+      "start": 853.8,
+      "end": 858.66,
+      "text": "so the missing are three how much more"
+    },
+    {
+      "start": 855.78,
+      "end": 859.44,
+      "text": "do I need two so what you do is is a"
+    },
+    {
+      "start": 858.66,
+      "end": 861.18,
+      "text": "seven"
+    },
+    {
+      "start": 859.44,
+      "end": 863.46,
+      "text": "can you go to your next number he says"
+    },
+    {
+      "start": 861.18,
+      "end": 865.62,
+      "text": "eight can you go to one more because I"
+    },
+    {
+      "start": 863.46,
+      "end": 868.14,
+      "text": "need two more that's nine so nine is the"
+    },
+    {
+      "start": 865.62,
+      "end": 870.78,
+      "text": "answer so 9 is the answer this is your"
+    },
+    {
+      "start": 868.14,
+      "end": 872.04,
+      "text": "answer so what do you do is you say hi"
+    },
+    {
+      "start": 870.78,
+      "end": 874.74,
+      "text": "Plus"
+    },
+    {
+      "start": 872.04,
+      "end": 877.14,
+      "text": "how many more you need how many more you"
+    },
+    {
+      "start": 874.74,
+      "end": 879.84,
+      "text": "need that is what you have to say I plus"
+    },
+    {
+      "start": 877.14,
+      "end": 882.66,
+      "text": "how many more you need and this more"
+    },
+    {
+      "start": 879.84,
+      "end": 884.94,
+      "text": "will come back and do it like we'll come"
+    },
+    {
+      "start": 882.66,
+      "end": 887.82,
+      "text": "back and find out a formula but as of"
+    },
+    {
+      "start": 884.94,
+      "end": 889.5,
+      "text": "now just remember hi like whatever is"
+    },
+    {
+      "start": 887.82,
+      "end": 893.16,
+      "text": "array of high"
+    },
+    {
+      "start": 889.5,
+      "end": 895.08,
+      "text": "because RFI is 7 and whatever more you"
+    },
+    {
+      "start": 893.16,
+      "end": 896.52,
+      "text": "need because you already have k equal to"
+    },
+    {
+      "start": 895.08,
+      "end": 898.68,
+      "text": "5 and there are three missing numbers"
+    },
+    {
+      "start": 896.52,
+      "end": 900.36,
+      "text": "still here so more will be two so that's"
+    },
+    {
+      "start": 898.68,
+      "end": 902.0,
+      "text": "what you add it up that's what you add"
+    },
+    {
+      "start": 900.36,
+      "end": 906.0,
+      "text": "up again if I have to give an example"
+    },
+    {
+      "start": 902.0,
+      "end": 908.82,
+      "text": "one two three four five six seven eight"
+    },
+    {
+      "start": 906.0,
+      "end": 910.68,
+      "text": "nine ten eleven"
+    },
+    {
+      "start": 908.82,
+      "end": 913.02,
+      "text": "this is here this is here this is here"
+    },
+    {
+      "start": 910.68,
+      "end": 915.3,
+      "text": "this is here and this is here so this"
+    },
+    {
+      "start": 913.02,
+      "end": 917.28,
+      "text": "was not here this was not here this was"
+    },
+    {
+      "start": 915.3,
+      "end": 919.2,
+      "text": "not here so three were not there until"
+    },
+    {
+      "start": 917.28,
+      "end": 921.18,
+      "text": "here you got it so the next two numbers"
+    },
+    {
+      "start": 919.2,
+      "end": 923.34,
+      "text": "which are not there will be eight and"
+    },
+    {
+      "start": 921.18,
+      "end": 925.32,
+      "text": "nine thereby just add the more numbers"
+    },
+    {
+      "start": 923.34,
+      "end": 928.44,
+      "text": "that are not there okay so you have got"
+    },
+    {
+      "start": 925.32,
+      "end": 930.12,
+      "text": "array of high plus more is what you have"
+    },
+    {
+      "start": 928.44,
+      "end": 932.04,
+      "text": "to do got it we'll try to figure out a"
+    },
+    {
+      "start": 930.12,
+      "end": 935.16,
+      "text": "formula so that we are not dependent on"
+    },
+    {
+      "start": 932.04,
+      "end": 937.08,
+      "text": "the value of array and we will do that"
+    },
+    {
+      "start": 935.16,
+      "end": 939.0,
+      "text": "afterwards but let's quickly write down"
+    },
+    {
+      "start": 937.08,
+      "end": 941.16,
+      "text": "the binary search code where am I"
+    },
+    {
+      "start": 939.0,
+      "end": 942.9,
+      "text": "starting the binary search at so at"
+    },
+    {
+      "start": 941.16,
+      "end": 944.28,
+      "text": "first though let's write the array and"
+    },
+    {
+      "start": 942.9,
+      "end": 946.26,
+      "text": "we're looking for the K missing number"
+    },
+    {
+      "start": 944.28,
+      "end": 948.12,
+      "text": "so let's just write it"
+    },
+    {
+      "start": 946.26,
+      "end": 950.16,
+      "text": "I'm starting the binary search at the"
+    },
+    {
+      "start": 948.12,
+      "end": 952.74,
+      "text": "zeroth index and I'll go till the last"
+    },
+    {
+      "start": 950.16,
+      "end": 953.94,
+      "text": "index which is n minus 1. that is very"
+    },
+    {
+      "start": 952.74,
+      "end": 956.04,
+      "text": "much sure"
+    },
+    {
+      "start": 953.94,
+      "end": 958.86,
+      "text": "let's quickly do the generic binary"
+    },
+    {
+      "start": 956.04,
+      "end": 961.38,
+      "text": "search which is low lesser than equal to"
+    },
+    {
+      "start": 958.86,
+      "end": 963.18,
+      "text": "high again the standard low less than"
+    },
+    {
+      "start": 961.38,
+      "end": 965.76,
+      "text": "equal to I and everything will be"
+    },
+    {
+      "start": 963.18,
+      "end": 967.26,
+      "text": "standard no changes in that I'm trying"
+    },
+    {
+      "start": 965.76,
+      "end": 968.76,
+      "text": "to keep it consistent so that you"
+    },
+    {
+      "start": 967.26,
+      "end": 969.9,
+      "text": "understand the concept in a much better"
+    },
+    {
+      "start": 968.76,
+      "end": 972.3,
+      "text": "way"
+    },
+    {
+      "start": 969.9,
+      "end": 976.56,
+      "text": "what's the next job finding out the mid"
+    },
+    {
+      "start": 972.3,
+      "end": 979.68,
+      "text": "which is low plus High by 2."
+    },
+    {
+      "start": 976.56,
+      "end": 981.24,
+      "text": "right what is the next job how many are"
+    },
+    {
+      "start": 979.68,
+      "end": 983.4,
+      "text": "missing you have to figure out how many"
+    },
+    {
+      "start": 981.24,
+      "end": 985.08,
+      "text": "are missing because on that basis you"
+    },
+    {
+      "start": 983.4,
+      "end": 987.54,
+      "text": "either eliminate left or you either"
+    },
+    {
+      "start": 985.08,
+      "end": 991.62,
+      "text": "eliminate right how many are missing can"
+    },
+    {
+      "start": 987.54,
+      "end": 993.9,
+      "text": "I say array of that mid index minus what"
+    },
+    {
+      "start": 991.62,
+      "end": 996.36,
+      "text": "should be there originally because if"
+    },
+    {
+      "start": 993.9,
+      "end": 999.36,
+      "text": "I'm having seven originally it should"
+    },
+    {
+      "start": 996.36,
+      "end": 1002.12,
+      "text": "have been 4 which is 1 plus index can I"
+    },
+    {
+      "start": 999.36,
+      "end": 1004.94,
+      "text": "say 7 minus index plus 1 will be the"
+    },
+    {
+      "start": 1002.12,
+      "end": 1008.24,
+      "text": "missing number can I say this because 7"
+    },
+    {
+      "start": 1004.94,
+      "end": 1010.1,
+      "text": "minus whatever is the index plus 1 will"
+    },
+    {
+      "start": 1008.24,
+      "end": 1014.36,
+      "text": "be the number of missing number I can"
+    },
+    {
+      "start": 1010.1,
+      "end": 1017.12,
+      "text": "thereby I'll write this as arr[mid]"
+    },
+    {
+      "start": 1014.36,
+      "end": 1020.96,
+      "text": "mid plus 1 that will be my missing"
+    },
+    {
+      "start": 1017.12,
+      "end": 1024.02,
+      "text": "numbers if missing is"
+    },
+    {
+      "start": 1020.96,
+      "end": 1025.76,
+      "text": "lesser than k then I'll eliminate the"
+    },
+    {
+      "start": 1024.02,
+      "end": 1028.04,
+      "text": "left half"
+    },
+    {
+      "start": 1025.76,
+      "end": 1031.88,
+      "text": "because I'm looking for the range or"
+    },
+    {
+      "start": 1028.04,
+      "end": 1034.7,
+      "text": "else I'll eliminate the right half"
+    },
+    {
+      "start": 1031.88,
+      "end": 1037.64,
+      "text": "quite simple done"
+    },
+    {
+      "start": 1034.7,
+      "end": 1039.5,
+      "text": "done now you have to return array of"
+    },
+    {
+      "start": 1037.64,
+      "end": 1042.44,
+      "text": "high plus more but I'll try to figure"
+    },
+    {
+      "start": 1039.5,
+      "end": 1045.32,
+      "text": "out a formula for this because array of"
+    },
+    {
+      "start": 1042.44,
+      "end": 1050.12,
+      "text": "Pi might not be correct why I'll tell"
+    },
+    {
+      "start": 1045.32,
+      "end": 1052.88,
+      "text": "you imagine your array is given as"
+    },
+    {
+      "start": 1050.12,
+      "end": 1056.18,
+      "text": "four seven nine"
+    },
+    {
+      "start": 1052.88,
+      "end": 1059.3,
+      "text": "and I am looking for k equal to 3 so"
+    },
+    {
+      "start": 1056.18,
+      "end": 1061.82,
+      "text": "where will the hive point to"
+    },
+    {
+      "start": 1059.3,
+      "end": 1063.92,
+      "text": "this will be your because third missing"
+    },
+    {
+      "start": 1061.82,
+      "end": 1066.44,
+      "text": "number will be somewhere bit before 4"
+    },
+    {
+      "start": 1063.92,
+      "end": 1068.72,
+      "text": "before 4 so the high will be pointing"
+    },
+    {
+      "start": 1066.44,
+      "end": 1071.72,
+      "text": "here and the low will be pointing here"
+    },
+    {
+      "start": 1068.72,
+      "end": 1074.24,
+      "text": "so high will be pointing to negative"
+    },
+    {
+      "start": 1071.72,
+      "end": 1076.64,
+      "text": "index so arr[i] cannot be written"
+    },
+    {
+      "start": 1074.24,
+      "end": 1078.74,
+      "text": "just take this example try to do the"
+    },
+    {
+      "start": 1076.64,
+      "end": 1080.48,
+      "text": "binary search try to do the binary"
+    },
+    {
+      "start": 1078.74,
+      "end": 1082.4,
+      "text": "search and see where is high ending at"
+    },
+    {
+      "start": 1080.48,
+      "end": 1084.14,
+      "text": "you will see that high is ending at the"
+    },
+    {
+      "start": 1082.4,
+      "end": 1086.12,
+      "text": "minus 1 index and the low will stay at"
+    },
+    {
+      "start": 1084.14,
+      "end": 1088.28,
+      "text": "the zeroth index because this is where"
+    },
+    {
+      "start": 1086.12,
+      "end": 1089.54,
+      "text": "the third missing number will be this is"
+    },
+    {
+      "start": 1088.28,
+      "end": 1092.54,
+      "text": "where the third missing number will be"
+    },
+    {
+      "start": 1089.54,
+      "end": 1094.16,
+      "text": "so you cannot say array of high plus"
+    },
+    {
+      "start": 1092.54,
+      "end": 1096.2,
+      "text": "something so we have to figure out a"
+    },
+    {
+      "start": 1094.16,
+      "end": 1098.96,
+      "text": "formula for this we will do that now"
+    },
+    {
+      "start": 1096.2,
+      "end": 1101.06,
+      "text": "okay so let's figure out the formula"
+    },
+    {
+      "start": 1098.96,
+      "end": 1103.04,
+      "text": "at arr[i] because if you remember"
+    },
+    {
+      "start": 1101.06,
+      "end": 1106.22,
+      "text": "this particular example I was standing"
+    },
+    {
+      "start": 1103.04,
+      "end": 1109.34,
+      "text": "at this and lower standing at this so at"
+    },
+    {
+      "start": 1106.22,
+      "end": 1111.38,
+      "text": "area 5 we had 7 right and the missing"
+    },
+    {
+      "start": 1109.34,
+      "end": 1113.48,
+      "text": "numbers were three what is the formula"
+    },
+    {
+      "start": 1111.38,
+      "end": 1116.66,
+      "text": "for missing numbers if I ask you"
+    },
+    {
+      "start": 1113.48,
+      "end": 1119.54,
+      "text": "it's array of high"
+    },
+    {
+      "start": 1116.66,
+      "end": 1121.46,
+      "text": "minus that index plus one"
+    },
+    {
+      "start": 1119.54,
+      "end": 1124.94,
+      "text": "because that is what it is"
+    },
+    {
+      "start": 1121.46,
+      "end": 1125.78,
+      "text": "7 minus three plus one sorry three plus"
+    },
+    {
+      "start": 1124.94,
+      "end": 1128.18,
+      "text": "one"
+    },
+    {
+      "start": 1125.78,
+      "end": 1130.4,
+      "text": "that seven minus 4 equal to 3 because"
+    },
+    {
+      "start": 1128.18,
+      "end": 1133.22,
+      "text": "ideally they should have been Fourier so"
+    },
+    {
+      "start": 1130.4,
+      "end": 1136.22,
+      "text": "we know the formula for missing is this"
+    },
+    {
+      "start": 1133.22,
+      "end": 1139.4,
+      "text": "how many more do you need that is what"
+    },
+    {
+      "start": 1136.22,
+      "end": 1142.94,
+      "text": "the thing is what is your answer array"
+    },
+    {
+      "start": 1139.4,
+      "end": 1146.06,
+      "text": "of high plus more"
+    },
+    {
+      "start": 1142.94,
+      "end": 1149.72,
+      "text": "what is more what is more can I say more"
+    },
+    {
+      "start": 1146.06,
+      "end": 1151.94,
+      "text": "is nothing but K minus missing"
+    },
+    {
+      "start": 1149.72,
+      "end": 1155.66,
+      "text": "can I say more is nothing but K minus"
+    },
+    {
+      "start": 1151.94,
+      "end": 1157.76,
+      "text": "pressing because K was 5 missing was"
+    },
+    {
+      "start": 1155.66,
+      "end": 1159.74,
+      "text": "three so more came out to be two"
+    },
+    {
+      "start": 1157.76,
+      "end": 1162.14,
+      "text": "whatever you are looking to find and"
+    },
+    {
+      "start": 1159.74,
+      "end": 1164.72,
+      "text": "wherever you are at K minus messing will"
+    },
+    {
+      "start": 1162.14,
+      "end": 1166.4,
+      "text": "be or more right so can I say this was"
+    },
+    {
+      "start": 1164.72,
+      "end": 1168.62,
+      "text": "my answer"
+    },
+    {
+      "start": 1166.4,
+      "end": 1171.98,
+      "text": "this was my answer which is answer of 5"
+    },
+    {
+      "start": 1168.62,
+      "end": 1175.88,
+      "text": "plus more salvate array of high plus"
+    },
+    {
+      "start": 1171.98,
+      "end": 1178.22,
+      "text": "more what is more K minus missing K"
+    },
+    {
+      "start": 1175.88,
+      "end": 1181.18,
+      "text": "minus missing what is missing"
+    },
+    {
+      "start": 1178.22,
+      "end": 1183.2,
+      "text": "array of high"
+    },
+    {
+      "start": 1181.18,
+      "end": 1185.72,
+      "text": "minus High"
+    },
+    {
+      "start": 1183.2,
+      "end": 1186.98,
+      "text": "minus 1. what I've done is I've simply"
+    },
+    {
+      "start": 1185.72,
+      "end": 1190.22,
+      "text": "put values"
+    },
+    {
+      "start": 1186.98,
+      "end": 1192.26,
+      "text": "K minus missing was more in missing I"
+    },
+    {
+      "start": 1190.22,
+      "end": 1194.42,
+      "text": "have put this value this will go here"
+    },
+    {
+      "start": 1192.26,
+      "end": 1198.34,
+      "text": "and this becomes this perfect now what"
+    },
+    {
+      "start": 1194.42,
+      "end": 1198.34,
+      "text": "will happen arr[i]"
+    },
+    {
+      "start": 1198.68,
+      "end": 1204.86,
+      "text": "plus K minus array of high"
+    },
+    {
+      "start": 1203.24,
+      "end": 1207.92,
+      "text": "plus I"
+    },
+    {
+      "start": 1204.86,
+      "end": 1211.0,
+      "text": "plus 1 so arr[i] and arr[i] will"
+    },
+    {
+      "start": 1207.92,
+      "end": 1213.38,
+      "text": "go off and the formula turns out to be"
+    },
+    {
+      "start": 1211.0,
+      "end": 1217.94,
+      "text": "high Plus"
+    },
+    {
+      "start": 1213.38,
+      "end": 1220.88,
+      "text": "K plus 1 or I can say hi plus 1"
+    },
+    {
+      "start": 1217.94,
+      "end": 1223.58,
+      "text": "plus K this is what the formula turns"
+    },
+    {
+      "start": 1220.88,
+      "end": 1225.5,
+      "text": "out to be this is your missing number or"
+    },
+    {
+      "start": 1223.58,
+      "end": 1228.86,
+      "text": "you can say we know one thing for sure"
+    },
+    {
+      "start": 1225.5,
+      "end": 1231.62,
+      "text": "low is also High plus one low is also"
+    },
+    {
+      "start": 1228.86,
+      "end": 1234.02,
+      "text": "High plus one if you carefully notice"
+    },
+    {
+      "start": 1231.62,
+      "end": 1236.36,
+      "text": "because low is one place ahead of I so"
+    },
+    {
+      "start": 1234.02,
+      "end": 1238.7,
+      "text": "low is also 5 plus 1 so either you can"
+    },
+    {
+      "start": 1236.36,
+      "end": 1241.52,
+      "text": "return this or you can go ahead and"
+    },
+    {
+      "start": 1238.7,
+      "end": 1243.08,
+      "text": "return low plus K as well this is the"
+    },
+    {
+      "start": 1241.52,
+      "end": 1245.3,
+      "text": "reason in a lot of"
+    },
+    {
+      "start": 1243.08,
+      "end": 1247.28,
+      "text": "Solutions you'll find low plus K being"
+    },
+    {
+      "start": 1245.3,
+      "end": 1249.26,
+      "text": "returned and in a lot of solution you'll"
+    },
+    {
+      "start": 1247.28,
+      "end": 1250.64,
+      "text": "find High plus actually you will not"
+    },
+    {
+      "start": 1249.26,
+      "end": 1252.98,
+      "text": "find in any of the solution that's being"
+    },
+    {
+      "start": 1250.64,
+      "end": 1254.48,
+      "text": "written everyone is returning low plus K"
+    },
+    {
+      "start": 1252.98,
+      "end": 1257.54,
+      "text": "and no one is explaining the reason"
+    },
+    {
+      "start": 1254.48,
+      "end": 1259.64,
+      "text": "behind it the reason is this derivation"
+    },
+    {
+      "start": 1257.54,
+      "end": 1261.5,
+      "text": "I hope you have understood this"
+    },
+    {
+      "start": 1259.64,
+      "end": 1263.6,
+      "text": "so let's quickly go back to the code and"
+    },
+    {
+      "start": 1261.5,
+      "end": 1266.84,
+      "text": "over here we will return"
+    },
+    {
+      "start": 1263.6,
+      "end": 1268.76,
+      "text": "High plus 1 plus K or else you can"
+    },
+    {
+      "start": 1266.84,
+      "end": 1271.76,
+      "text": "return low plus K as well that is your"
+    },
+    {
+      "start": 1268.76,
+      "end": 1274.22,
+      "text": "choice either this or either that that's"
+    },
+    {
+      "start": 1271.76,
+      "end": 1276.26,
+      "text": "it done what is the time complexity"
+    },
+    {
+      "start": 1274.22,
+      "end": 1279.26,
+      "text": "you're doing a typical binary search in"
+    },
+    {
+      "start": 1276.26,
+      "end": 1281.78,
+      "text": "the array such a O(N) what is the"
+    },
+    {
+      "start": 1279.26,
+      "end": 1283.46,
+      "text": "space complexity a b go of one"
+    },
+    {
+      "start": 1281.78,
+      "end": 1286.7,
+      "text": "and this will also be running for this"
+    },
+    {
+      "start": 1283.46,
+      "end": 1289.76,
+      "text": "example four seven eight I am looking"
+    },
+    {
+      "start": 1286.7,
+      "end": 1291.32,
+      "text": "for the third missing number so"
+    },
+    {
+      "start": 1289.76,
+      "end": 1293.72,
+      "text": "since you know that at the end of the"
+    },
+    {
+      "start": 1291.32,
+      "end": 1295.64,
+      "text": "binary search hi will be pointing at the"
+    },
+    {
+      "start": 1293.72,
+      "end": 1297.5,
+      "text": "minus 1 index and the low will be"
+    },
+    {
+      "start": 1295.64,
+      "end": 1299.3,
+      "text": "pointing at the zeroth index so there is"
+    },
+    {
+      "start": 1297.5,
+      "end": 1301.34,
+      "text": "no array of height because it's an array"
+    },
+    {
+      "start": 1299.3,
+      "end": 1303.8,
+      "text": "of negative index so you do a high plus"
+    },
+    {
+      "start": 1301.34,
+      "end": 1306.34,
+      "text": "1 which is minus one plus one"
+    },
+    {
+      "start": 1303.8,
+      "end": 1306.34,
+      "text": "Plus"
+    },
+    {
+      "start": 1307.12,
+      "end": 1311.0,
+      "text": "so the answer will be minus one plus one"
+    },
+    {
+      "start": 1309.38,
+      "end": 1313.58,
+      "text": "will be 0 and the answer comes out to be"
+    },
+    {
+      "start": 1311.0,
+      "end": 1316.94,
+      "text": "plus 3 which is indeed your answer this"
+    },
+    {
+      "start": 1313.58,
+      "end": 1318.2,
+      "text": "is why I converted it into a formula I I"
+    },
+    {
+      "start": 1316.94,
+      "end": 1321.14,
+      "text": "could have written an arr[i] plus"
+    },
+    {
+      "start": 1318.2,
+      "end": 1324.68,
+      "text": "more but that is technically not"
+    },
+    {
+      "start": 1321.14,
+      "end": 1327.8,
+      "text": "feasible for such cases where the high"
+    },
+    {
+      "start": 1324.68,
+      "end": 1329.0,
+      "text": "ends up pointing to this place got it so"
+    },
+    {
+      "start": 1327.8,
+      "end": 1330.5,
+      "text": "let's quickly get back into the code"
+    },
+    {
+      "start": 1329.0,
+      "end": 1332.78,
+      "text": "editor by the way you can find out the"
+    },
+    {
+      "start": 1330.5,
+      "end": 1334.82,
+      "text": "problem Link in the description and you"
+    },
+    {
+      "start": 1332.78,
+      "end": 1337.22,
+      "text": "can also find out the C plus plus Java"
+    },
+    {
+      "start": 1334.82,
+      "end": 1339.56,
+      "text": "Python and JavaScript code links from"
+    },
+    {
+      "start": 1337.22,
+      "end": 1341.3,
+      "text": "the description as well so this is how"
+    },
+    {
+      "start": 1339.56,
+      "end": 1343.34,
+      "text": "the code will look like you can return K"
+    },
+    {
+      "start": 1341.3,
+      "end": 1346.4,
+      "text": "plus I plus 1 or you can also return low"
+    },
+    {
+      "start": 1343.34,
+      "end": 1347.96,
+      "text": "plus K as your wish so I have submitted"
+    },
+    {
+      "start": 1346.4,
+      "end": 1349.64,
+      "text": "this code and it works and if you're"
+    },
+    {
+      "start": 1347.96,
+      "end": 1350.96,
+      "text": "still watching I hope you have"
+    },
+    {
+      "start": 1349.64,
+      "end": 1352.64,
+      "text": "understood everything and in case you"
+    },
+    {
+      "start": 1350.96,
+      "end": 1353.96,
+      "text": "have please please do consider giving us"
+    },
+    {
+      "start": 1352.64,
+      "end": 1355.82,
+      "text": "that like and if you're new to our"
+    },
+    {
+      "start": 1353.96,
+      "end": 1357.62,
+      "text": "channel do consider subscribing as well"
+    },
+    {
+      "start": 1355.82,
+      "end": 1358.94,
+      "text": "and yeah uh if you haven't followed me"
+    },
+    {
+      "start": 1357.62,
+      "end": 1359.96,
+      "text": "on Instagram Twitter and Linkedin all"
+    },
+    {
+      "start": 1358.94,
+      "end": 1361.46,
+      "text": "the profile links will be in the"
+    },
+    {
+      "start": 1359.96,
+      "end": 1362.6,
+      "text": "description with this I'll be wrapping"
+    },
+    {
+      "start": 1361.46,
+      "end": 1365.68,
+      "text": "up this video let's read in some of the"
+    },
+    {
+      "start": 1362.6,
+      "end": 1365.68,
+      "text": "video till then bye take care"
+    },
+    {
+      "start": 1365.72,
+      "end": 1372.58,
+      "text": "[Music]"
+    },
+    {
+      "start": 1367.94,
+      "end": 1372.58,
+      "text": "hey you're golden I will"
+    }
+  ]
+}

@@ -1,0 +1,1976 @@
+{
+  "video_id": "5lZ0iJMrUMk",
+  "title": "G-21. Topological Sort Algorithm | DFS",
+  "duration_sec": 810,
+  "num_segments": 328,
+  "segments": [
+    {
+      "start": 2.88,
+      "end": 6.36,
+      "duration": 3.48,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.74,
+      "end": 9.06,
+      "duration": 4.32,
+      "text": "I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.36,
+      "end": 11.58,
+      "duration": 5.22,
+      "text": "so in this video we are going to learn"
+    },
+    {
+      "start": 9.06,
+      "end": 13.32,
+      "duration": 4.26,
+      "text": "about topological sorting and we are"
+    },
+    {
+      "start": 11.58,
+      "end": 14.94,
+      "duration": 3.36,
+      "text": "going to solve this using the DFS"
+    },
+    {
+      "start": 13.32,
+      "end": 17.7,
+      "duration": 4.38,
+      "text": "algorithm which is the depth first"
+    },
+    {
+      "start": 14.94,
+      "end": 21.0,
+      "duration": 6.06,
+      "text": "search now what is topological sorting"
+    },
+    {
+      "start": 17.7,
+      "end": 25.38,
+      "duration": 7.68,
+      "text": "in order to Define it I can say it only"
+    },
+    {
+      "start": 21.0,
+      "end": 28.44,
+      "duration": 7.44,
+      "text": "exists on DAC which is directed as"
+    },
+    {
+      "start": 25.38,
+      "end": 31.38,
+      "duration": 6.0,
+      "text": "cyclic graph that means any directed"
+    },
+    {
+      "start": 28.44,
+      "end": 33.18,
+      "duration": 4.74,
+      "text": "graph which does not have a cycle why I"
+    },
+    {
+      "start": 31.38,
+      "end": 35.64,
+      "duration": 4.26,
+      "text": "will tell you that so basically the"
+    },
+    {
+      "start": 33.18,
+      "end": 38.34,
+      "duration": 5.16,
+      "text": "definition States any linear ordering of"
+    },
+    {
+      "start": 35.64,
+      "end": 40.86,
+      "duration": 5.22,
+      "text": "vertices means these nodes any of the"
+    },
+    {
+      "start": 38.34,
+      "end": 43.32,
+      "duration": 4.98,
+      "text": "linear ordering such that if there is an"
+    },
+    {
+      "start": 40.86,
+      "end": 45.36,
+      "duration": 4.5,
+      "text": "edge between u and v such that there is"
+    },
+    {
+      "start": 43.32,
+      "end": 48.36,
+      "duration": 5.04,
+      "text": "an edge between event V you always"
+    },
+    {
+      "start": 45.36,
+      "end": 50.76,
+      "duration": 5.4,
+      "text": "appears V"
+    },
+    {
+      "start": 48.36,
+      "end": 53.28,
+      "duration": 4.92,
+      "text": "in that ordering he always appears"
+    },
+    {
+      "start": 50.76,
+      "end": 55.26,
+      "duration": 4.5,
+      "text": "before we in that ordering so this is"
+    },
+    {
+      "start": 53.28,
+      "end": 57.18,
+      "duration": 3.9,
+      "text": "the particular dag so let me write down"
+    },
+    {
+      "start": 55.26,
+      "end": 59.34,
+      "duration": 4.08,
+      "text": "the edges that we have I think we have"
+    },
+    {
+      "start": 57.18,
+      "end": 61.32,
+      "duration": 4.14,
+      "text": "an edge from five to zero we have an"
+    },
+    {
+      "start": 59.34,
+      "end": 63.48,
+      "duration": 4.14,
+      "text": "edge from 4 to 0 we have an edge from"
+    },
+    {
+      "start": 61.32,
+      "end": 65.7,
+      "duration": 4.38,
+      "text": "five to two we have an H from two to"
+    },
+    {
+      "start": 63.48,
+      "end": 68.16,
+      "duration": 4.68,
+      "text": "three we have an H from three to one and"
+    },
+    {
+      "start": 65.7,
+      "end": 70.38,
+      "duration": 4.68,
+      "text": "we have an edge from four to one so one"
+    },
+    {
+      "start": 68.16,
+      "end": 72.84,
+      "duration": 4.68,
+      "text": "two three four five six we have all the"
+    },
+    {
+      "start": 70.38,
+      "end": 75.12,
+      "duration": 4.74,
+      "text": "six edges so this can be a possible"
+    },
+    {
+      "start": 72.84,
+      "end": 79.32,
+      "duration": 6.48,
+      "text": "linear ordering why let me tell you that"
+    },
+    {
+      "start": 75.12,
+      "end": 82.86,
+      "duration": 7.74,
+      "text": "five to zero five appears before zero"
+    },
+    {
+      "start": 79.32,
+      "end": 86.7,
+      "duration": 7.38,
+      "text": "four to zero four appears before zero"
+    },
+    {
+      "start": 82.86,
+      "end": 89.94,
+      "duration": 7.08,
+      "text": "five to two five appears before two two"
+    },
+    {
+      "start": 86.7,
+      "end": 92.82,
+      "duration": 6.12,
+      "text": "three two appears before three three two"
+    },
+    {
+      "start": 89.94,
+      "end": 96.54,
+      "duration": 6.6,
+      "text": "one three appears before one four two"
+    },
+    {
+      "start": 92.82,
+      "end": 98.94,
+      "duration": 6.12,
+      "text": "one four appears before one so thereby"
+    },
+    {
+      "start": 96.54,
+      "end": 101.52,
+      "duration": 4.98,
+      "text": "this is a valid linear ordering"
+    },
+    {
+      "start": 98.94,
+      "end": 104.28,
+      "duration": 5.34,
+      "text": "similarly this can also be a valid"
+    },
+    {
+      "start": 101.52,
+      "end": 106.92,
+      "duration": 5.4,
+      "text": "linear ordering so if you see 5 appears"
+    },
+    {
+      "start": 104.28,
+      "end": 109.62,
+      "duration": 5.34,
+      "text": "before zero five appears before zero"
+    },
+    {
+      "start": 106.92,
+      "end": 112.62,
+      "duration": 5.7,
+      "text": "four appears before zero yes five"
+    },
+    {
+      "start": 109.62,
+      "end": 116.88,
+      "duration": 7.26,
+      "text": "appears before 2 yes 2 appears before 3"
+    },
+    {
+      "start": 112.62,
+      "end": 120.54,
+      "duration": 7.92,
+      "text": "yes 3 appears before 1 yes 4 appears"
+    },
+    {
+      "start": 116.88,
+      "end": 122.88,
+      "duration": 6.0,
+      "text": "before one yes so this is also a valid"
+    },
+    {
+      "start": 120.54,
+      "end": 125.46,
+      "duration": 4.92,
+      "text": "ordering there can be multiple valid"
+    },
+    {
+      "start": 122.88,
+      "end": 128.28,
+      "duration": 5.4,
+      "text": "orderings but we just need to figure out"
+    },
+    {
+      "start": 125.46,
+      "end": 131.58,
+      "duration": 6.12,
+      "text": "one of the topological sortings and that"
+    },
+    {
+      "start": 128.28,
+      "end": 132.72,
+      "duration": 4.44,
+      "text": "should be good enough now coming across"
+    },
+    {
+      "start": 131.58,
+      "end": 135.12,
+      "duration": 3.54,
+      "text": "uh"
+    },
+    {
+      "start": 132.72,
+      "end": 138.96,
+      "duration": 6.24,
+      "text": "we will understand how to find it but"
+    },
+    {
+      "start": 135.12,
+      "end": 142.08,
+      "duration": 6.96,
+      "text": "why only in directed a cyclic graph why"
+    },
+    {
+      "start": 138.96,
+      "end": 142.92,
+      "duration": 3.96,
+      "text": "suppose let's understand why indirected"
+    },
+    {
+      "start": 142.08,
+      "end": 145.08,
+      "duration": 3.0,
+      "text": "graph"
+    },
+    {
+      "start": 142.92,
+      "end": 148.02,
+      "duration": 5.1,
+      "text": "so what does the definition state"
+    },
+    {
+      "start": 145.08,
+      "end": 150.12,
+      "duration": 5.04,
+      "text": "if there is an edge between u and v u"
+    },
+    {
+      "start": 148.02,
+      "end": 152.04,
+      "duration": 4.02,
+      "text": "appears before V so if you take"
+    },
+    {
+      "start": 150.12,
+      "end": 154.38,
+      "duration": 4.26,
+      "text": "undirected graph and you see that there"
+    },
+    {
+      "start": 152.04,
+      "end": 156.06,
+      "duration": 4.02,
+      "text": "is an edge between one to two"
+    },
+    {
+      "start": 154.38,
+      "end": 158.1,
+      "duration": 3.72,
+      "text": "it actually means there is an edge"
+    },
+    {
+      "start": 156.06,
+      "end": 161.28,
+      "duration": 5.22,
+      "text": "between 1 to 2 and there is an edge"
+    },
+    {
+      "start": 158.1,
+      "end": 163.38,
+      "duration": 5.28,
+      "text": "between two to one so how can you write"
+    },
+    {
+      "start": 161.28,
+      "end": 165.66,
+      "duration": 4.38,
+      "text": "the ordering such that one is before 2"
+    },
+    {
+      "start": 163.38,
+      "end": 168.38,
+      "duration": 5.0,
+      "text": "and 2 is also before 1 that is not"
+    },
+    {
+      "start": 165.66,
+      "end": 171.78,
+      "duration": 6.12,
+      "text": "practically possible thereby the line"
+    },
+    {
+      "start": 168.38,
+      "end": 175.04,
+      "duration": 6.66,
+      "text": "thereby the directed graphs are only"
+    },
+    {
+      "start": 171.78,
+      "end": 179.04,
+      "duration": 7.26,
+      "text": "possible now why a cyclic"
+    },
+    {
+      "start": 175.04,
+      "end": 181.14,
+      "duration": 6.1,
+      "text": "means no cycle means no cycle why is"
+    },
+    {
+      "start": 179.04,
+      "end": 185.04,
+      "duration": 6.0,
+      "text": "that imagine if you have a cycle in a"
+    },
+    {
+      "start": 181.14,
+      "end": 188.82,
+      "duration": 7.68,
+      "text": "directed graph one two two two three"
+    },
+    {
+      "start": 185.04,
+      "end": 192.9,
+      "duration": 7.86,
+      "text": "three to one okay so what I'm stating is"
+    },
+    {
+      "start": 188.82,
+      "end": 195.54,
+      "duration": 6.72,
+      "text": "one is having a H22 which means one"
+    },
+    {
+      "start": 192.9,
+      "end": 198.12,
+      "duration": 5.22,
+      "text": "should be before 2 in that ordering two"
+    },
+    {
+      "start": 195.54,
+      "end": 200.22,
+      "duration": 4.68,
+      "text": "to three is an H which means"
+    },
+    {
+      "start": 198.12,
+      "end": 202.92,
+      "duration": 4.8,
+      "text": "two should be before 3 in that ordering"
+    },
+    {
+      "start": 200.22,
+      "end": 205.2,
+      "duration": 4.98,
+      "text": "three to one has an edge which means"
+    },
+    {
+      "start": 202.92,
+      "end": 207.06,
+      "duration": 4.14,
+      "text": "three should be before one in that"
+    },
+    {
+      "start": 205.2,
+      "end": 209.88,
+      "duration": 4.68,
+      "text": "ordering that is not possible why"
+    },
+    {
+      "start": 207.06,
+      "end": 211.5,
+      "duration": 4.44,
+      "text": "because there is a cyclic dependency"
+    },
+    {
+      "start": 209.88,
+      "end": 214.44,
+      "duration": 4.56,
+      "text": "happening because there is a cyclic"
+    },
+    {
+      "start": 211.5,
+      "end": 216.66,
+      "duration": 5.16,
+      "text": "dependency happening thereby"
+    },
+    {
+      "start": 214.44,
+      "end": 218.64,
+      "duration": 4.2,
+      "text": "if there is a cycle you cannot have an"
+    },
+    {
+      "start": 216.66,
+      "end": 221.7,
+      "duration": 5.04,
+      "text": "ordering such that everyone follows that"
+    },
+    {
+      "start": 218.64,
+      "end": 224.34,
+      "duration": 5.7,
+      "text": "so thereby as I click and graph yes"
+    },
+    {
+      "start": 221.7,
+      "end": 226.98,
+      "duration": 5.28,
+      "text": "so I hope you got the reason why is"
+    },
+    {
+      "start": 224.34,
+      "end": 229.56,
+      "duration": 5.22,
+      "text": "topological sorting valid or why can you"
+    },
+    {
+      "start": 226.98,
+      "end": 231.48,
+      "duration": 4.5,
+      "text": "just write a linear ordering for a"
+    },
+    {
+      "start": 229.56,
+      "end": 234.72,
+      "duration": 5.16,
+      "text": "directed a cyclic graph which is nothing"
+    },
+    {
+      "start": 231.48,
+      "end": 236.52,
+      "duration": 5.04,
+      "text": "but a DAC okay so the reason is clear"
+    },
+    {
+      "start": 234.72,
+      "end": 238.98,
+      "duration": 4.26,
+      "text": "now let's quickly jump up to the"
+    },
+    {
+      "start": 236.52,
+      "end": 240.9,
+      "duration": 4.38,
+      "text": "algorithm so we have this particular dag"
+    },
+    {
+      "start": 238.98,
+      "end": 243.66,
+      "duration": 4.68,
+      "text": "and we have the corresponding adjacency"
+    },
+    {
+      "start": 240.9,
+      "end": 246.06,
+      "duration": 5.16,
+      "text": "list for this particular tag so what"
+    },
+    {
+      "start": 243.66,
+      "end": 249.24,
+      "duration": 5.58,
+      "text": "does uh this particular topological sort"
+    },
+    {
+      "start": 246.06,
+      "end": 251.34,
+      "duration": 5.28,
+      "text": "algorithm in DFS States now what we will"
+    },
+    {
+      "start": 249.24,
+      "end": 253.2,
+      "duration": 3.96,
+      "text": "always do is you know that right we"
+    },
+    {
+      "start": 251.34,
+      "end": 255.54,
+      "duration": 4.2,
+      "text": "always have this particular stuff for"
+    },
+    {
+      "start": 253.2,
+      "end": 258.48,
+      "duration": 5.28,
+      "text": "components and that is the same thing we"
+    },
+    {
+      "start": 255.54,
+      "end": 260.64,
+      "duration": 5.1,
+      "text": "will be following over here as well so"
+    },
+    {
+      "start": 258.48,
+      "end": 264.12,
+      "duration": 5.64,
+      "text": "over here how many nodes do we have we"
+    },
+    {
+      "start": 260.64,
+      "end": 266.46,
+      "duration": 5.82,
+      "text": "have five notes so one till five and we"
+    },
+    {
+      "start": 264.12,
+      "end": 270.0,
+      "duration": 5.88,
+      "text": "will say if not visited yes very very"
+    },
+    {
+      "start": 266.46,
+      "end": 273.24,
+      "duration": 6.78,
+      "text": "important if not visited of I then we"
+    },
+    {
+      "start": 270.0,
+      "end": 275.1,
+      "duration": 5.1,
+      "text": "will call the DFS for I yes that is how"
+    },
+    {
+      "start": 273.24,
+      "end": 277.26,
+      "duration": 4.02,
+      "text": "we will do it and I'll explain you"
+    },
+    {
+      "start": 275.1,
+      "end": 279.42,
+      "duration": 4.32,
+      "text": "slowly so this is what we will take and"
+    },
+    {
+      "start": 277.26,
+      "end": 281.7,
+      "duration": 4.44,
+      "text": "we will always declare a visited array"
+    },
+    {
+      "start": 279.42,
+      "end": 284.22,
+      "duration": 4.8,
+      "text": "so let's quickly declare the visitor"
+    },
+    {
+      "start": 281.7,
+      "end": 286.56,
+      "duration": 4.86,
+      "text": "probably we can do that over here"
+    },
+    {
+      "start": 284.22,
+      "end": 289.08,
+      "duration": 4.86,
+      "text": "so we have declared the visited array"
+    },
+    {
+      "start": 286.56,
+      "end": 291.6,
+      "duration": 5.04,
+      "text": "and make sure everything is marked as 0"
+    },
+    {
+      "start": 289.08,
+      "end": 293.58,
+      "duration": 4.5,
+      "text": "initially"
+    },
+    {
+      "start": 291.6,
+      "end": 295.5,
+      "duration": 3.9,
+      "text": "marked as zero initially now let's"
+    },
+    {
+      "start": 293.58,
+      "end": 297.78,
+      "duration": 4.2,
+      "text": "quickly start off what is the value of y"
+    },
+    {
+      "start": 295.5,
+      "end": 300.36,
+      "duration": 4.86,
+      "text": "the value of I is 0 initially is that"
+    },
+    {
+      "start": 297.78,
+      "end": 302.46,
+      "duration": 4.68,
+      "text": "visited no so what do you do is you"
+    },
+    {
+      "start": 300.36,
+      "end": 306.12,
+      "duration": 5.76,
+      "text": "start the DFS call from zero remember"
+    },
+    {
+      "start": 302.46,
+      "end": 309.24,
+      "duration": 6.78,
+      "text": "this you start the DFS call from 0 at"
+    },
+    {
+      "start": 306.12,
+      "end": 311.88,
+      "duration": 5.76,
+      "text": "the same time just declare a stack yes"
+    },
+    {
+      "start": 309.24,
+      "end": 314.76,
+      "duration": 5.52,
+      "text": "declare a stack now what is a stack it"
+    },
+    {
+      "start": 311.88,
+      "end": 316.8,
+      "duration": 4.92,
+      "text": "is a last in first out operation uh data"
+    },
+    {
+      "start": 314.76,
+      "end": 318.12,
+      "duration": 3.36,
+      "text": "structure last in first start operation"
+    },
+    {
+      "start": 316.8,
+      "end": 320.94,
+      "duration": 4.14,
+      "text": "data structure if you don't know please"
+    },
+    {
+      "start": 318.12,
+      "end": 322.74,
+      "duration": 4.62,
+      "text": "read about stack so DFS of 0 is there so"
+    },
+    {
+      "start": 320.94,
+      "end": 325.74,
+      "duration": 4.8,
+      "text": "what you do is you say okay this guy is"
+    },
+    {
+      "start": 322.74,
+      "end": 329.1,
+      "duration": 6.36,
+      "text": "visited does 0 have any adjacent nodes"
+    },
+    {
+      "start": 325.74,
+      "end": 331.74,
+      "duration": 6.0,
+      "text": "no so the DFS will not call any for the"
+    },
+    {
+      "start": 329.1,
+      "end": 334.86,
+      "duration": 5.76,
+      "text": "DFS and it will go back but remember"
+    },
+    {
+      "start": 331.74,
+      "end": 336.84,
+      "duration": 5.1,
+      "text": "before going back take the zero and put"
+    },
+    {
+      "start": 334.86,
+      "end": 339.78,
+      "duration": 4.92,
+      "text": "it into the stack before going back take"
+    },
+    {
+      "start": 336.84,
+      "end": 342.18,
+      "duration": 5.34,
+      "text": "the 0 and put it into the stack done so"
+    },
+    {
+      "start": 339.78,
+      "end": 344.76,
+      "duration": 4.98,
+      "text": "the DFS for 0 is completed"
+    },
+    {
+      "start": 342.18,
+      "end": 348.3,
+      "duration": 6.12,
+      "text": "next array the intuition going forward"
+    },
+    {
+      "start": 344.76,
+      "end": 350.46,
+      "duration": 5.7,
+      "text": "don't worry next is one so again you"
+    },
+    {
+      "start": 348.3,
+      "end": 351.96,
+      "duration": 3.66,
+      "text": "write the same thing DFS of one the"
+    },
+    {
+      "start": 350.46,
+      "end": 354.6,
+      "duration": 4.14,
+      "text": "first thing you do is you mark it as"
+    },
+    {
+      "start": 351.96,
+      "end": 357.36,
+      "duration": 5.4,
+      "text": "visited does one have any adjacent notes"
+    },
+    {
+      "start": 354.6,
+      "end": 359.4,
+      "duration": 4.8,
+      "text": "no so there will be no further DFS calls"
+    },
+    {
+      "start": 357.36,
+      "end": 361.74,
+      "duration": 4.38,
+      "text": "no for the DFS calls so before going"
+    },
+    {
+      "start": 359.4,
+      "end": 363.36,
+      "duration": 3.96,
+      "text": "back put this into the stack so you'll"
+    },
+    {
+      "start": 361.74,
+      "end": 366.72,
+      "duration": 4.98,
+      "text": "put this into the stack and now you will"
+    },
+    {
+      "start": 363.36,
+      "end": 369.6,
+      "duration": 6.24,
+      "text": "go back so the DFS is completed next it"
+    },
+    {
+      "start": 366.72,
+      "end": 371.94,
+      "duration": 5.22,
+      "text": "comes for two so what happens is you"
+    },
+    {
+      "start": 369.6,
+      "end": 374.58,
+      "duration": 4.98,
+      "text": "call the DFS for two your Market is"
+    },
+    {
+      "start": 371.94,
+      "end": 376.8,
+      "duration": 4.86,
+      "text": "visited now two has an adjacent node so"
+    },
+    {
+      "start": 374.58,
+      "end": 379.14,
+      "duration": 4.56,
+      "text": "you go and call it for three and what"
+    },
+    {
+      "start": 376.8,
+      "end": 381.18,
+      "duration": 4.38,
+      "text": "you do is you mark for three as visited"
+    },
+    {
+      "start": 379.14,
+      "end": 382.98,
+      "duration": 3.84,
+      "text": "as well now does three have an adjacent"
+    },
+    {
+      "start": 381.18,
+      "end": 385.62,
+      "duration": 4.44,
+      "text": "node it checks that three has an"
+    },
+    {
+      "start": 382.98,
+      "end": 388.92,
+      "duration": 5.94,
+      "text": "adjacent node one but if we carefully"
+    },
+    {
+      "start": 385.62,
+      "end": 391.26,
+      "duration": 5.64,
+      "text": "see we cannot call for DFS of one why"
+    },
+    {
+      "start": 388.92,
+      "end": 393.9,
+      "duration": 4.98,
+      "text": "because it is already visited yes"
+    },
+    {
+      "start": 391.26,
+      "end": 396.12,
+      "duration": 4.86,
+      "text": "because it is already visited so thereby"
+    },
+    {
+      "start": 393.9,
+      "end": 398.4,
+      "duration": 4.5,
+      "text": "what we will do is we'll be like okay it"
+    },
+    {
+      "start": 396.12,
+      "end": 401.4,
+      "duration": 5.28,
+      "text": "is already visited so let's quickly just"
+    },
+    {
+      "start": 398.4,
+      "end": 403.44,
+      "duration": 5.04,
+      "text": "uh not call any further DFS calls and go"
+    },
+    {
+      "start": 401.4,
+      "end": 405.84,
+      "duration": 4.44,
+      "text": "back whatever going back take that tree"
+    },
+    {
+      "start": 403.44,
+      "end": 407.52,
+      "duration": 4.08,
+      "text": "and put it in now we go over here no"
+    },
+    {
+      "start": 405.84,
+      "end": 410.16,
+      "duration": 4.32,
+      "text": "further differs calls go back before"
+    },
+    {
+      "start": 407.52,
+      "end": 411.6,
+      "duration": 4.08,
+      "text": "going back put that into the stack so we"
+    },
+    {
+      "start": 410.16,
+      "end": 412.5,
+      "duration": 2.34,
+      "text": "have put that into the stack and we are"
+    },
+    {
+      "start": 411.6,
+      "end": 414.72,
+      "duration": 3.12,
+      "text": "now done"
+    },
+    {
+      "start": 412.5,
+      "end": 417.42,
+      "duration": 4.92,
+      "text": "right now"
+    },
+    {
+      "start": 414.72,
+      "end": 419.64,
+      "duration": 4.92,
+      "text": "the value will be 3 3 is already visited"
+    },
+    {
+      "start": 417.42,
+      "end": 422.34,
+      "duration": 4.92,
+      "text": "next value will be 4 and that is not"
+    },
+    {
+      "start": 419.64,
+      "end": 425.1,
+      "duration": 5.46,
+      "text": "visited so what we will do is we will go"
+    },
+    {
+      "start": 422.34,
+      "end": 426.66,
+      "duration": 4.32,
+      "text": "and check out for four now for four we"
+    },
+    {
+      "start": 425.1,
+      "end": 428.76,
+      "duration": 3.66,
+      "text": "will mark it as visited and we will"
+    },
+    {
+      "start": 426.66,
+      "end": 431.22,
+      "duration": 4.56,
+      "text": "check if there are adjacent notes zero"
+    },
+    {
+      "start": 428.76,
+      "end": 433.14,
+      "duration": 4.38,
+      "text": "is visited one is visited so both of the"
+    },
+    {
+      "start": 431.22,
+      "end": 435.18,
+      "duration": 3.96,
+      "text": "adjacent notes are visited so there will"
+    },
+    {
+      "start": 433.14,
+      "end": 436.62,
+      "duration": 3.48,
+      "text": "be no further DFS calls so you go back"
+    },
+    {
+      "start": 435.18,
+      "end": 438.6,
+      "duration": 3.42,
+      "text": "now what you do is you take this four"
+    },
+    {
+      "start": 436.62,
+      "end": 440.28,
+      "duration": 3.66,
+      "text": "and you put it into the stack you take"
+    },
+    {
+      "start": 438.6,
+      "end": 444.72,
+      "duration": 6.12,
+      "text": "this four and you put it into the stack"
+    },
+    {
+      "start": 440.28,
+      "end": 446.52,
+      "duration": 6.24,
+      "text": "right so next it'll be five and now next"
+    },
+    {
+      "start": 444.72,
+      "end": 449.04,
+      "duration": 4.32,
+      "text": "the DFS call will be happening for five"
+    },
+    {
+      "start": 446.52,
+      "end": 451.8,
+      "duration": 5.28,
+      "text": "so you'll mark it as visited does five"
+    },
+    {
+      "start": 449.04,
+      "end": 454.98,
+      "duration": 5.94,
+      "text": "have any address notes yes zero already"
+    },
+    {
+      "start": 451.8,
+      "end": 457.74,
+      "duration": 5.94,
+      "text": "visited two already visited so thereby"
+    },
+    {
+      "start": 454.98,
+      "end": 460.44,
+      "duration": 5.46,
+      "text": "no further DFS calls or five and you'll"
+    },
+    {
+      "start": 457.74,
+      "end": 462.66,
+      "duration": 4.92,
+      "text": "put five into the stack done now I can"
+    },
+    {
+      "start": 460.44,
+      "end": 465.18,
+      "duration": 4.74,
+      "text": "say that the DFS call is over once the"
+    },
+    {
+      "start": 462.66,
+      "end": 467.34,
+      "duration": 4.68,
+      "text": "DFS call is over whatever you stored in"
+    },
+    {
+      "start": 465.18,
+      "end": 469.26,
+      "duration": 4.08,
+      "text": "the stack take it one by one the first"
+    },
+    {
+      "start": 467.34,
+      "end": 471.54,
+      "duration": 4.2,
+      "text": "thing that you take out is five next"
+    },
+    {
+      "start": 469.26,
+      "end": 473.64,
+      "duration": 4.38,
+      "text": "thing you take out is for next thing two"
+    },
+    {
+      "start": 471.54,
+      "end": 476.76,
+      "duration": 5.22,
+      "text": "next thing three next thing one next"
+    },
+    {
+      "start": 473.64,
+      "end": 480.54,
+      "duration": 6.9,
+      "text": "thing zero this is one of the linear"
+    },
+    {
+      "start": 476.76,
+      "end": 482.52,
+      "duration": 5.76,
+      "text": "orderings yes this is one of the linear"
+    },
+    {
+      "start": 480.54,
+      "end": 485.52,
+      "duration": 4.98,
+      "text": "orderings that you can get very very"
+    },
+    {
+      "start": 482.52,
+      "end": 488.46,
+      "duration": 5.94,
+      "text": "important this is one of the linear"
+    },
+    {
+      "start": 485.52,
+      "end": 492.72,
+      "duration": 7.2,
+      "text": "orderings that you can get and this is"
+    },
+    {
+      "start": 488.46,
+      "end": 495.54,
+      "duration": 7.08,
+      "text": "what is known as topological sort of"
+    },
+    {
+      "start": 492.72,
+      "end": 497.04,
+      "duration": 4.32,
+      "text": "this particular graph I hope that does"
+    },
+    {
+      "start": 495.54,
+      "end": 498.84,
+      "duration": 3.3,
+      "text": "make sense"
+    },
+    {
+      "start": 497.04,
+      "end": 500.22,
+      "duration": 3.18,
+      "text": "now you must be thinking about Ace"
+    },
+    {
+      "start": 498.84,
+      "end": 501.72,
+      "duration": 2.88,
+      "text": "driver but what is the intuition behind"
+    },
+    {
+      "start": 500.22,
+      "end": 503.46,
+      "duration": 3.24,
+      "text": "this algorithm the algorithm looks"
+    },
+    {
+      "start": 501.72,
+      "end": 504.9,
+      "duration": 3.18,
+      "text": "pretty simple but what is the intuition"
+    },
+    {
+      "start": 503.46,
+      "end": 506.82,
+      "duration": 3.36,
+      "text": "I'll tell you the intuition but let's"
+    },
+    {
+      "start": 504.9,
+      "end": 508.98,
+      "duration": 4.08,
+      "text": "first write the code absorb the code"
+    },
+    {
+      "start": 506.82,
+      "end": 510.18,
+      "duration": 3.36,
+      "text": "absorb the logic and then I'll tell you"
+    },
+    {
+      "start": 508.98,
+      "end": 512.7,
+      "duration": 3.72,
+      "text": "the intuition the intuition is very"
+    },
+    {
+      "start": 510.18,
+      "end": 515.04,
+      "duration": 4.86,
+      "text": "small don't worry about that so guys as"
+    },
+    {
+      "start": 512.7,
+      "end": 516.3,
+      "duration": 3.6,
+      "text": "usual I'll write the C plus plus code on"
+    },
+    {
+      "start": 515.04,
+      "end": 517.8,
+      "duration": 2.76,
+      "text": "the right and you can find the Java code"
+    },
+    {
+      "start": 516.3,
+      "end": 520.44,
+      "duration": 4.14,
+      "text": "on the left so given the V and the"
+    },
+    {
+      "start": 517.8,
+      "end": 522.6,
+      "duration": 4.8,
+      "text": "adjacency Matrix we will be declaring uh"
+    },
+    {
+      "start": 520.44,
+      "end": 524.16,
+      "duration": 3.72,
+      "text": "the visited guy so let's quickly declare"
+    },
+    {
+      "start": 522.6,
+      "end": 527.58,
+      "duration": 4.98,
+      "text": "the visited guy and Mark everyone as"
+    },
+    {
+      "start": 524.16,
+      "end": 529.62,
+      "duration": 5.46,
+      "text": "zero done next we need a Stacks please"
+    },
+    {
+      "start": 527.58,
+      "end": 531.18,
+      "duration": 3.6,
+      "text": "go and declare the stack"
+    },
+    {
+      "start": 529.62,
+      "end": 535.08,
+      "duration": 5.46,
+      "text": "what's the next thing that we do we"
+    },
+    {
+      "start": 531.18,
+      "end": 538.02,
+      "duration": 6.84,
+      "text": "iterate from zero till we"
+    },
+    {
+      "start": 535.08,
+      "end": 540.48,
+      "duration": 5.4,
+      "text": "next we say Hey listen not visited of I"
+    },
+    {
+      "start": 538.02,
+      "end": 542.82,
+      "duration": 4.8,
+      "text": "then we call the DFS with this"
+    },
+    {
+      "start": 540.48,
+      "end": 545.52,
+      "duration": 5.04,
+      "text": "particular node and the visit and the"
+    },
+    {
+      "start": 542.82,
+      "end": 546.84,
+      "duration": 4.02,
+      "text": "stack perfect at the end of the day we"
+    },
+    {
+      "start": 545.52,
+      "end": 549.54,
+      "duration": 4.02,
+      "text": "know that we have to store the answer in"
+    },
+    {
+      "start": 546.84,
+      "end": 551.76,
+      "duration": 4.92,
+      "text": "a vector so Vector of answer and we need"
+    },
+    {
+      "start": 549.54,
+      "end": 556.52,
+      "duration": 6.98,
+      "text": "to uh just do uh keep on doing till the"
+    },
+    {
+      "start": 551.76,
+      "end": 559.8,
+      "duration": 8.04,
+      "text": "stack is non-empty so answer dot push"
+    },
+    {
+      "start": 556.52,
+      "end": 562.74,
+      "duration": 6.22,
+      "text": "back stack dot top"
+    },
+    {
+      "start": 559.8,
+      "end": 564.18,
+      "duration": 4.38,
+      "text": "and you can do stack dot pop perfect and"
+    },
+    {
+      "start": 562.74,
+      "end": 565.86,
+      "duration": 3.12,
+      "text": "at the end of the day you can return the"
+    },
+    {
+      "start": 564.18,
+      "end": 569.1,
+      "duration": 4.92,
+      "text": "answer now what you just need to write"
+    },
+    {
+      "start": 565.86,
+      "end": 572.34,
+      "duration": 6.48,
+      "text": "is the DFS function so you can go over"
+    },
+    {
+      "start": 569.1,
+      "end": 575.28,
+      "duration": 6.18,
+      "text": "here and say Hey listen void DFS IND"
+    },
+    {
+      "start": 572.34,
+      "end": 579.06,
+      "duration": 6.72,
+      "text": "node int visited"
+    },
+    {
+      "start": 575.28,
+      "end": 581.64,
+      "duration": 6.36,
+      "text": "and we also need the stack so stack by"
+    },
+    {
+      "start": 579.06,
+      "end": 585.0,
+      "duration": 5.94,
+      "text": "the way we visited is an array we need"
+    },
+    {
+      "start": 581.64,
+      "end": 588.18,
+      "duration": 6.54,
+      "text": "the stack so stack of int stack and we"
+    },
+    {
+      "start": 585.0,
+      "end": 591.3,
+      "duration": 6.3,
+      "text": "need this particular adjacency Matrix as"
+    },
+    {
+      "start": 588.18,
+      "end": 592.92,
+      "duration": 4.74,
+      "text": "well so adjacency Matrix now what we"
+    },
+    {
+      "start": 591.3,
+      "end": 595.38,
+      "duration": 4.08,
+      "text": "will do is we'll say visited node equal"
+    },
+    {
+      "start": 592.92,
+      "end": 598.2,
+      "duration": 5.28,
+      "text": "to 1 and over here we will say Auto of"
+    },
+    {
+      "start": 595.38,
+      "end": 601.32,
+      "duration": 5.94,
+      "text": "ID adjacency node and we will plain call"
+    },
+    {
+      "start": 598.2,
+      "end": 603.72,
+      "duration": 5.52,
+      "text": "the DFS nothing fancy call the DFS for"
+    },
+    {
+      "start": 601.32,
+      "end": 606.3,
+      "duration": 4.98,
+      "text": "this particular node with this visited"
+    },
+    {
+      "start": 603.72,
+      "end": 608.04,
+      "duration": 4.32,
+      "text": "stack and the adjacency so make sure you"
+    },
+    {
+      "start": 606.3,
+      "end": 609.78,
+      "duration": 3.48,
+      "text": "pass on the adjacency over here as well"
+    },
+    {
+      "start": 608.04,
+      "end": 611.76,
+      "duration": 3.72,
+      "text": "and right at the end of the day when the"
+    },
+    {
+      "start": 609.78,
+      "end": 614.58,
+      "duration": 4.8,
+      "text": "DFS is over you do not have any further"
+    },
+    {
+      "start": 611.76,
+      "end": 616.2,
+      "duration": 4.44,
+      "text": "DFS calls to make Take On The Stack and"
+    },
+    {
+      "start": 614.58,
+      "end": 617.94,
+      "duration": 3.36,
+      "text": "say hey can you please do the node so"
+    },
+    {
+      "start": 616.2,
+      "end": 619.62,
+      "duration": 3.42,
+      "text": "that's how you will do it and now let's"
+    },
+    {
+      "start": 617.94,
+      "end": 621.54,
+      "duration": 3.6,
+      "text": "quickly compile this and see if it is"
+    },
+    {
+      "start": 619.62,
+      "end": 625.7,
+      "duration": 6.08,
+      "text": "running fine it says there is some issue"
+    },
+    {
+      "start": 621.54,
+      "end": 625.7,
+      "duration": 4.16,
+      "text": "with it let's quickly check it out okay"
+    },
+    {
+      "start": 627.72,
+      "end": 631.44,
+      "duration": 3.72,
+      "text": "now if you read the question find any"
+    },
+    {
+      "start": 629.82,
+      "end": 633.24,
+      "duration": 3.42,
+      "text": "topological sorting you can find any"
+    },
+    {
+      "start": 631.44,
+      "end": 635.64,
+      "duration": 4.2,
+      "text": "topological sorting and it will work"
+    },
+    {
+      "start": 633.24,
+      "end": 637.44,
+      "duration": 4.2,
+      "text": "fine so it does run now if I discuss"
+    },
+    {
+      "start": 635.64,
+      "end": 640.08,
+      "duration": 4.44,
+      "text": "about the space complexity by using a"
+    },
+    {
+      "start": 637.44,
+      "end": 642.24,
+      "duration": 4.8,
+      "text": "visited and a stack so we go of n plus b"
+    },
+    {
+      "start": 640.08,
+      "end": 644.46,
+      "duration": 4.38,
+      "text": "go of n what about the time complexity"
+    },
+    {
+      "start": 642.24,
+      "end": 646.44,
+      "duration": 4.2,
+      "text": "is similar to DFS algorithm which is V"
+    },
+    {
+      "start": 644.46,
+      "end": 649.2,
+      "duration": 4.74,
+      "text": "plus e for directed graphs so the time"
+    },
+    {
+      "start": 646.44,
+      "end": 652.2,
+      "duration": 5.76,
+      "text": "complexity is V plus e for directed"
+    },
+    {
+      "start": 649.2,
+      "end": 654.84,
+      "duration": 5.64,
+      "text": "graphs at the worst case now"
+    },
+    {
+      "start": 652.2,
+      "end": 658.68,
+      "duration": 6.48,
+      "text": "coming back to the intuition"
+    },
+    {
+      "start": 654.84,
+      "end": 661.2,
+      "duration": 6.36,
+      "text": "what is the intuition of this particular"
+    },
+    {
+      "start": 658.68,
+      "end": 665.12,
+      "duration": 6.44,
+      "text": "stuff now if I give you a simple enough"
+    },
+    {
+      "start": 661.2,
+      "end": 670.44,
+      "duration": 9.24,
+      "text": "directed graph like one two three four"
+    },
+    {
+      "start": 665.12,
+      "end": 672.6,
+      "duration": 7.48,
+      "text": "five and six okay so what will you do"
+    },
+    {
+      "start": 670.44,
+      "end": 673.8,
+      "duration": 3.36,
+      "text": "you know if I ask you to write the"
+    },
+    {
+      "start": 672.6,
+      "end": 676.32,
+      "duration": 3.72,
+      "text": "linear ordering you'll be like the"
+    },
+    {
+      "start": 673.8,
+      "end": 679.26,
+      "duration": 5.46,
+      "text": "linear ordering is very simple one two"
+    },
+    {
+      "start": 676.32,
+      "end": 681.96,
+      "duration": 5.64,
+      "text": "three four you can either write five or"
+    },
+    {
+      "start": 679.26,
+      "end": 683.52,
+      "duration": 4.26,
+      "text": "you can either write six vice versa you"
+    },
+    {
+      "start": 681.96,
+      "end": 685.74,
+      "duration": 3.78,
+      "text": "can do either of them like you can write"
+    },
+    {
+      "start": 683.52,
+      "end": 689.04,
+      "duration": 5.52,
+      "text": "one two you can either write one two"
+    },
+    {
+      "start": 685.74,
+      "end": 691.26,
+      "duration": 5.52,
+      "text": "three four five sorry one two three four"
+    },
+    {
+      "start": 689.04,
+      "end": 693.54,
+      "duration": 4.5,
+      "text": "five six or you can write one two three"
+    },
+    {
+      "start": 691.26,
+      "end": 696.3,
+      "duration": 5.04,
+      "text": "four six five both of the linear"
+    },
+    {
+      "start": 693.54,
+      "end": 698.64,
+      "duration": 5.1,
+      "text": "ordering are two true so how did you get"
+    },
+    {
+      "start": 696.3,
+      "end": 700.38,
+      "duration": 4.08,
+      "text": "this very simple you call the DFS from"
+    },
+    {
+      "start": 698.64,
+      "end": 702.3,
+      "duration": 3.66,
+      "text": "here then you went here then you went"
+    },
+    {
+      "start": 700.38,
+      "end": 704.28,
+      "duration": 3.9,
+      "text": "here then you went here if you went here"
+    },
+    {
+      "start": 702.3,
+      "end": 706.5,
+      "duration": 4.2,
+      "text": "I was uh"
+    },
+    {
+      "start": 704.28,
+      "end": 708.6,
+      "duration": 4.32,
+      "text": "I was coming first or if you went here"
+    },
+    {
+      "start": 706.5,
+      "end": 710.88,
+      "duration": 4.38,
+      "text": "six was coming first now when you come"
+    },
+    {
+      "start": 708.6,
+      "end": 713.58,
+      "duration": 4.98,
+      "text": "back what I did was I just stored the"
+    },
+    {
+      "start": 710.88,
+      "end": 715.14,
+      "duration": 4.26,
+      "text": "six in a stack and then from four when I"
+    },
+    {
+      "start": 713.58,
+      "end": 716.88,
+      "duration": 3.3,
+      "text": "went to five and when I came back from"
+    },
+    {
+      "start": 715.14,
+      "end": 719.16,
+      "duration": 4.02,
+      "text": "five I stored it here and I went from"
+    },
+    {
+      "start": 716.88,
+      "end": 721.2,
+      "duration": 4.32,
+      "text": "four I stored uh the four here then for"
+    },
+    {
+      "start": 719.16,
+      "end": 722.94,
+      "duration": 3.78,
+      "text": "three I stored it here then for two I"
+    },
+    {
+      "start": 721.2,
+      "end": 724.32,
+      "duration": 3.12,
+      "text": "stored it here then for one I stored it"
+    },
+    {
+      "start": 722.94,
+      "end": 726.0,
+      "duration": 3.06,
+      "text": "here so"
+    },
+    {
+      "start": 724.32,
+      "end": 729.06,
+      "duration": 4.74,
+      "text": "what I did was"
+    },
+    {
+      "start": 726.0,
+      "end": 730.5,
+      "duration": 4.5,
+      "text": "the people whose DFS was complete I just"
+    },
+    {
+      "start": 729.06,
+      "end": 735.12,
+      "duration": 6.06,
+      "text": "stood it"
+    },
+    {
+      "start": 730.5,
+      "end": 738.36,
+      "duration": 7.86,
+      "text": "I just stole it I just stored it I just"
+    },
+    {
+      "start": 735.12,
+      "end": 740.76,
+      "duration": 5.64,
+      "text": "stored it what happens is I know the DFS"
+    },
+    {
+      "start": 738.36,
+      "end": 742.8,
+      "duration": 4.44,
+      "text": "of three is completed which means this"
+    },
+    {
+      "start": 740.76,
+      "end": 744.6,
+      "duration": 3.84,
+      "text": "entire portion has been visited which"
+    },
+    {
+      "start": 742.8,
+      "end": 746.58,
+      "duration": 3.78,
+      "text": "means this entire portion has been"
+    },
+    {
+      "start": 744.6,
+      "end": 748.62,
+      "duration": 4.02,
+      "text": "visited so everything would have been"
+    },
+    {
+      "start": 746.58,
+      "end": 751.44,
+      "duration": 4.86,
+      "text": "here and the linear ordering will be"
+    },
+    {
+      "start": 748.62,
+      "end": 754.44,
+      "duration": 5.82,
+      "text": "followed days before 4 is before 6 6 as"
+    },
+    {
+      "start": 751.44,
+      "end": 756.48,
+      "duration": 5.04,
+      "text": "before five just because I know if I"
+    },
+    {
+      "start": 754.44,
+      "end": 758.22,
+      "duration": 3.78,
+      "text": "have done the defense for three then"
+    },
+    {
+      "start": 756.48,
+      "end": 760.44,
+      "duration": 3.96,
+      "text": "everything could have been done"
+    },
+    {
+      "start": 758.22,
+      "end": 762.3,
+      "duration": 4.08,
+      "text": "everything would have been done thereby"
+    },
+    {
+      "start": 760.44,
+      "end": 763.62,
+      "duration": 3.18,
+      "text": "whenever I complete the DFS then only I"
+    },
+    {
+      "start": 762.3,
+      "end": 765.12,
+      "duration": 2.82,
+      "text": "put it because I know everything would"
+    },
+    {
+      "start": 763.62,
+      "end": 766.32,
+      "duration": 2.7,
+      "text": "have been done so if everything would"
+    },
+    {
+      "start": 765.12,
+      "end": 768.42,
+      "duration": 3.3,
+      "text": "have been done everything would have"
+    },
+    {
+      "start": 766.32,
+      "end": 770.1,
+      "duration": 3.78,
+      "text": "been stacked below if I get it back I'll"
+    },
+    {
+      "start": 768.42,
+      "end": 772.14,
+      "duration": 3.72,
+      "text": "get the linear ordering as a simple"
+    },
+    {
+      "start": 770.1,
+      "end": 774.72,
+      "duration": 4.62,
+      "text": "intuition nothing special whenever the"
+    },
+    {
+      "start": 772.14,
+      "end": 777.18,
+      "duration": 5.04,
+      "text": "DFS is completed everyone is touched so"
+    },
+    {
+      "start": 774.72,
+      "end": 779.34,
+      "duration": 4.62,
+      "text": "just picked it and the next guy would"
+    },
+    {
+      "start": 777.18,
+      "end": 782.28,
+      "duration": 5.1,
+      "text": "have called it he will be now coming in"
+    },
+    {
+      "start": 779.34,
+      "end": 783.6,
+      "duration": 4.26,
+      "text": "so simple intuition so guys I hope I was"
+    },
+    {
+      "start": 782.28,
+      "end": 785.88,
+      "duration": 3.6,
+      "text": "able to explain you this particular"
+    },
+    {
+      "start": 783.6,
+      "end": 787.32,
+      "duration": 3.72,
+      "text": "algorithm so just in case I was please"
+    },
+    {
+      "start": 785.88,
+      "end": 789.24,
+      "duration": 3.36,
+      "text": "make sure you like this video and if"
+    },
+    {
+      "start": 787.32,
+      "end": 790.8,
+      "duration": 3.48,
+      "text": "you're new to our Channel what are you"
+    },
+    {
+      "start": 789.24,
+      "end": 792.0,
+      "duration": 2.76,
+      "text": "waiting for hit that subscribe button"
+    },
+    {
+      "start": 790.8,
+      "end": 794.28,
+      "duration": 3.48,
+      "text": "right away and if you haven't checked"
+    },
+    {
+      "start": 792.0,
+      "end": 795.72,
+      "duration": 3.72,
+      "text": "out our DP series and the SD sheet the"
+    },
+    {
+      "start": 794.28,
+      "end": 797.16,
+      "duration": 2.88,
+      "text": "links are in the description please make"
+    },
+    {
+      "start": 795.72,
+      "end": 798.54,
+      "duration": 2.82,
+      "text": "sure to check it out with this I'll be"
+    },
+    {
+      "start": 797.16,
+      "end": 801.24,
+      "duration": 4.08,
+      "text": "wrapping up this video let's meet in the"
+    },
+    {
+      "start": 798.54,
+      "end": 811.24,
+      "duration": 12.7,
+      "text": "next one till then bye bye take care"
+    },
+    {
+      "start": 801.24,
+      "end": 811.24,
+      "duration": 10.0,
+      "text": "[Music]"
+    }
+  ]
+}

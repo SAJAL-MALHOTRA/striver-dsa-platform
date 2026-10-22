@@ -1,0 +1,1220 @@
+{
+  "video_id": "3OXWEdlIGl4",
+  "title": "L19. Zig-Zag or Spiral Traversal in Binary Tree | C++ | Java",
+  "duration_sec": 501,
+  "num_segments": 202,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.4,
+      "duration": 2.4,
+      "text": "Hey everyone, welcome back to the"
+    },
+    {
+      "start": 1.2,
+      "end": 4.24,
+      "duration": 3.04,
+      "text": "channel. I hope you guys are doing"
+    },
+    {
+      "start": 2.4,
+      "end": 6.72,
+      "duration": 4.32,
+      "text": "extremely well. So today we will be"
+    },
+    {
+      "start": 4.24,
+      "end": 9.52,
+      "duration": 5.28,
+      "text": "discussing the zigzag traversal from the"
+    },
+    {
+      "start": 6.72,
+      "end": 12.4,
+      "duration": 5.68,
+      "text": "freata tree series. Now what does this"
+    },
+    {
+      "start": 9.52,
+      "end": 14.0,
+      "duration": 4.48,
+      "text": "traversal means? So in the previous uh"
+    },
+    {
+      "start": 12.4,
+      "end": 16.4,
+      "duration": 4.0,
+      "text": "traversal that is the level order"
+    },
+    {
+      "start": 14.0,
+      "end": 21.68,
+      "duration": 7.68,
+      "text": "traversal. You saw that the traversal"
+    },
+    {
+      "start": 16.4,
+      "end": 24.8,
+      "duration": 8.4,
+      "text": "was like 1 2 3 then a 4 5 6. Now this is"
+    },
+    {
+      "start": 21.68,
+      "end": 27.68,
+      "duration": 6.0,
+      "text": "zigzag as the name suggest. So first"
+    },
+    {
+      "start": 24.8,
+      "end": 30.8,
+      "duration": 6.0,
+      "text": "it'll be one then you'll go across like"
+    },
+    {
+      "start": 27.68,
+      "end": 33.92,
+      "duration": 6.24,
+      "text": "this. That's 32. Then you'll go across"
+    },
+    {
+      "start": 30.8,
+      "end": 37.36,
+      "duration": 6.56,
+      "text": "like this. 4 5 6. So that's the"
+    },
+    {
+      "start": 33.92,
+      "end": 40.72,
+      "duration": 6.8,
+      "text": "traversal. Zigzag traversal. Like first"
+    },
+    {
+      "start": 37.36,
+      "end": 43.76,
+      "duration": 6.4,
+      "text": "like this, then like this, then like"
+    },
+    {
+      "start": 40.72,
+      "end": 46.8,
+      "duration": 6.08,
+      "text": "this, then like this. So kind of this,"
+    },
+    {
+      "start": 43.76,
+      "end": 48.72,
+      "duration": 4.96,
+      "text": "this, this, and if there were any other"
+    },
+    {
+      "start": 46.8,
+      "end": 50.56,
+      "duration": 3.76,
+      "text": "levels, it would have been like this,"
+    },
+    {
+      "start": 48.72,
+      "end": 54.88,
+      "duration": 6.16,
+      "text": "then it have been like this. So that's"
+    },
+    {
+      "start": 50.56,
+      "end": 57.12,
+      "duration": 6.56,
+      "text": "what a zigzag traversal is all about. So"
+    },
+    {
+      "start": 54.88,
+      "end": 59.52,
+      "duration": 4.64,
+      "text": "we're going to follow the same technique"
+    },
+    {
+      "start": 57.12,
+      "end": 61.84,
+      "duration": 4.72,
+      "text": "as we did in the level order traversal."
+    },
+    {
+      "start": 59.52,
+      "end": 63.76,
+      "duration": 4.24,
+      "text": "So initially we will be taking a Q data"
+    },
+    {
+      "start": 61.84,
+      "end": 65.6,
+      "duration": 3.76,
+      "text": "structure. So let's take initially a Q"
+    },
+    {
+      "start": 63.76,
+      "end": 67.2,
+      "duration": 3.44,
+      "text": "data structure and we're going to store"
+    },
+    {
+      "start": 65.6,
+      "end": 68.8,
+      "duration": 3.2,
+      "text": "the root of the tree. There's no doubt"
+    },
+    {
+      "start": 67.2,
+      "end": 71.44,
+      "duration": 4.24,
+      "text": "in that we're going to store the root of"
+    },
+    {
+      "start": 68.8,
+      "end": 73.44,
+      "duration": 4.64,
+      "text": "the tree in the Q data structure. Also"
+    },
+    {
+      "start": 71.44,
+      "end": 76.08,
+      "duration": 4.64,
+      "text": "we're going to take a vector of vector"
+    },
+    {
+      "start": 73.44,
+      "end": 78.32,
+      "duration": 4.88,
+      "text": "or a list for that reason. That's the"
+    },
+    {
+      "start": 76.08,
+      "end": 80.32,
+      "duration": 4.24,
+      "text": "data structure where we will be storing"
+    },
+    {
+      "start": 78.32,
+      "end": 83.68,
+      "duration": 5.36,
+      "text": "the zigzag traversal and we'll be"
+    },
+    {
+      "start": 80.32,
+      "end": 86.64,
+      "duration": 6.32,
+      "text": "returning this as our answer. So what we"
+    },
+    {
+      "start": 83.68,
+      "end": 88.96,
+      "duration": 5.28,
+      "text": "will do different is we are seeing one"
+    },
+    {
+      "start": 86.64,
+      "end": 91.92,
+      "duration": 5.28,
+      "text": "thing that the first traversal is from"
+    },
+    {
+      "start": 88.96,
+      "end": 94.08,
+      "duration": 5.12,
+      "text": "left to right then it's like this right"
+    },
+    {
+      "start": 91.92,
+      "end": 96.08,
+      "duration": 4.16,
+      "text": "from right to left then again from left"
+    },
+    {
+      "start": 94.08,
+      "end": 98.16,
+      "duration": 4.08,
+      "text": "to right then from right to left so"
+    },
+    {
+      "start": 96.08,
+      "end": 100.72,
+      "duration": 4.64,
+      "text": "we're going to introduce a flag kind of"
+    },
+    {
+      "start": 98.16,
+      "end": 103.92,
+      "duration": 5.76,
+      "text": "a variable okay so let's introduce a"
+    },
+    {
+      "start": 100.72,
+      "end": 106.24,
+      "duration": 5.52,
+      "text": "flag variable which is going to say us"
+    },
+    {
+      "start": 103.92,
+      "end": 108.0,
+      "duration": 4.08,
+      "text": "if you're moving from left to right or"
+    },
+    {
+      "start": 106.24,
+      "end": 110.48,
+      "duration": 4.24,
+      "text": "we're moving from right to left so"
+    },
+    {
+      "start": 108.0,
+      "end": 113.12,
+      "duration": 5.12,
+      "text": "probably we can keep a flag variable uh"
+    },
+    {
+      "start": 110.48,
+      "end": 115.52,
+      "duration": 5.04,
+      "text": "initially let's assign it to zero or"
+    },
+    {
+      "start": 113.12,
+      "end": 118.24,
+      "duration": 5.12,
+      "text": "one. You can do it as you wish. So let's"
+    },
+    {
+      "start": 115.52,
+      "end": 119.84,
+      "duration": 4.32,
+      "text": "start the iteration of the que. So in"
+    },
+    {
+      "start": 118.24,
+      "end": 121.44,
+      "duration": 3.2,
+      "text": "the iteration of the queue, first time"
+    },
+    {
+      "start": 119.84,
+      "end": 123.52,
+      "duration": 3.68,
+      "text": "when I check out the queue, there's only"
+    },
+    {
+      "start": 121.44,
+      "end": 125.28,
+      "duration": 3.84,
+      "text": "one element. So we will take it out."
+    },
+    {
+      "start": 123.52,
+      "end": 127.52,
+      "duration": 4.0,
+      "text": "Okay. And now what we will do is if"
+    },
+    {
+      "start": 125.28,
+      "end": 129.6,
+      "duration": 4.32,
+      "text": "there is a left, there is. So we will"
+    },
+    {
+      "start": 127.52,
+      "end": 131.68,
+      "duration": 4.16,
+      "text": "insert it into the queue. If there is a"
+    },
+    {
+      "start": 129.6,
+      "end": 133.76,
+      "duration": 4.16,
+      "text": "right, there is. We will insert that"
+    },
+    {
+      "start": 131.68,
+      "end": 135.68,
+      "duration": 4.0,
+      "text": "into the queue. Once I've done that,"
+    },
+    {
+      "start": 133.76,
+      "end": 138.24,
+      "duration": 4.48,
+      "text": "once I've inserted all the bottom notes"
+    },
+    {
+      "start": 135.68,
+      "end": 141.84,
+      "duration": 6.16,
+      "text": "left and right, I will take this guy and"
+    },
+    {
+      "start": 138.24,
+      "end": 144.16,
+      "duration": 5.92,
+      "text": "I'll insert it in the same order like I"
+    },
+    {
+      "start": 141.84,
+      "end": 145.84,
+      "duration": 4.0,
+      "text": "took it out. That's one. The flag is"
+    },
+    {
+      "start": 144.16,
+      "end": 149.12,
+      "duration": 4.96,
+      "text": "zero. Very important if the flag is"
+    },
+    {
+      "start": 145.84,
+      "end": 151.84,
+      "duration": 6.0,
+      "text": "zero. So flag zero says us that the"
+    },
+    {
+      "start": 149.12,
+      "end": 154.4,
+      "duration": 5.28,
+      "text": "direction is from left to right and the"
+    },
+    {
+      "start": 151.84,
+      "end": 157.76,
+      "duration": 5.92,
+      "text": "value one says us that the direction is"
+    },
+    {
+      "start": 154.4,
+      "end": 159.84,
+      "duration": 5.44,
+      "text": "from right to left in our traversal. So"
+    },
+    {
+      "start": 157.76,
+      "end": 162.56,
+      "duration": 4.8,
+      "text": "we are done with one. So once you have"
+    },
+    {
+      "start": 159.84,
+      "end": 164.64,
+      "duration": 4.8,
+      "text": "inserted one into your data structure,"
+    },
+    {
+      "start": 162.56,
+      "end": 167.04,
+      "duration": 4.48,
+      "text": "please make sure you turn the flag to be"
+    },
+    {
+      "start": 164.64,
+      "end": 169.2,
+      "duration": 4.56,
+      "text": "one because you're going to the next"
+    },
+    {
+      "start": 167.04,
+      "end": 173.04,
+      "duration": 6.0,
+      "text": "iteration of the queue right and you'll"
+    },
+    {
+      "start": 169.2,
+      "end": 174.88,
+      "duration": 5.68,
+      "text": "get the the next level nodes that's two"
+    },
+    {
+      "start": 173.04,
+      "end": 179.28,
+      "duration": 6.24,
+      "text": "and three. So let's get the next level"
+    },
+    {
+      "start": 174.88,
+      "end": 181.76,
+      "duration": 6.88,
+      "text": "notes two and three. Now you're going to"
+    },
+    {
+      "start": 179.28,
+      "end": 183.28,
+      "duration": 4.0,
+      "text": "check for two's left that's four. So"
+    },
+    {
+      "start": 181.76,
+      "end": 184.96,
+      "duration": 3.2,
+      "text": "kindly insert that into the queue."
+    },
+    {
+      "start": 183.28,
+      "end": 186.64,
+      "duration": 3.36,
+      "text": "You're going to check for two's right"
+    },
+    {
+      "start": 184.96,
+      "end": 189.04,
+      "duration": 4.08,
+      "text": "that's five. Insert that into the queue."
+    },
+    {
+      "start": 186.64,
+      "end": 190.48,
+      "duration": 3.84,
+      "text": "So two is done. Next for three is left"
+    },
+    {
+      "start": 189.04,
+      "end": 194.08,
+      "duration": 5.04,
+      "text": "there is nothing. Three's right there's"
+    },
+    {
+      "start": 190.48,
+      "end": 196.24,
+      "duration": 5.76,
+      "text": "a six insert it. So I can say I've done"
+    },
+    {
+      "start": 194.08,
+      "end": 200.72,
+      "duration": 6.64,
+      "text": "for two and three. So these elements are"
+    },
+    {
+      "start": 196.24,
+      "end": 203.52,
+      "duration": 7.28,
+      "text": "also done. Now since the value of flag"
+    },
+    {
+      "start": 200.72,
+      "end": 206.56,
+      "duration": 5.84,
+      "text": "is one what you will do is instead of"
+    },
+    {
+      "start": 203.52,
+      "end": 208.8,
+      "duration": 5.28,
+      "text": "inserting it like two and three"
+    },
+    {
+      "start": 206.56,
+      "end": 211.52,
+      "duration": 4.96,
+      "text": "you will make sure they insert it in the"
+    },
+    {
+      "start": 208.8,
+      "end": 214.32,
+      "duration": 5.52,
+      "text": "reverse order that's three and two."
+    },
+    {
+      "start": 211.52,
+      "end": 217.04,
+      "duration": 5.52,
+      "text": "That's why I said if flag is one it's"
+    },
+    {
+      "start": 214.32,
+      "end": 220.08,
+      "duration": 5.76,
+      "text": "right to left. So flag one told us that"
+    },
+    {
+      "start": 217.04,
+      "end": 222.8,
+      "duration": 5.76,
+      "text": "it's right to left. Now while you while"
+    },
+    {
+      "start": 220.08,
+      "end": 225.52,
+      "duration": 5.44,
+      "text": "you move to the next level, please make"
+    },
+    {
+      "start": 222.8,
+      "end": 227.76,
+      "duration": 4.96,
+      "text": "sure you turn flag back to zero. So"
+    },
+    {
+      "start": 225.52,
+      "end": 231.92,
+      "duration": 6.4,
+      "text": "every time you are switching on levels,"
+    },
+    {
+      "start": 227.76,
+      "end": 234.72,
+      "duration": 6.96,
+      "text": "you turn flag 0 1 0 1 0 1, right? And"
+    },
+    {
+      "start": 231.92,
+      "end": 237.52,
+      "duration": 5.6,
+      "text": "the next you get something as four,"
+    },
+    {
+      "start": 234.72,
+      "end": 239.44,
+      "duration": 4.72,
+      "text": "five, six. And it's time to check if"
+    },
+    {
+      "start": 237.52,
+      "end": 241.44,
+      "duration": 3.92,
+      "text": "they have left and right. Four doesn't"
+    },
+    {
+      "start": 239.44,
+      "end": 243.52,
+      "duration": 4.08,
+      "text": "have a left. Four doesn't have a right."
+    },
+    {
+      "start": 241.44,
+      "end": 245.44,
+      "duration": 4.0,
+      "text": "Five doesn't have a left. Five doesn't"
+    },
+    {
+      "start": 243.52,
+      "end": 247.44,
+      "duration": 3.92,
+      "text": "have a right. Similarly with six doesn't"
+    },
+    {
+      "start": 245.44,
+      "end": 251.12,
+      "duration": 5.68,
+      "text": "have a left doesn't have a right. So can"
+    },
+    {
+      "start": 247.44,
+      "end": 254.8,
+      "duration": 7.36,
+      "text": "I say the traversal for 4 5 6 has been"
+    },
+    {
+      "start": 251.12,
+      "end": 258.72,
+      "duration": 7.6,
+      "text": "completed and the flag value is zero and"
+    },
+    {
+      "start": 254.8,
+      "end": 261.6,
+      "duration": 6.8,
+      "text": "if it is zero I will simply take 456 and"
+    },
+    {
+      "start": 258.72,
+      "end": 263.76,
+      "duration": 5.04,
+      "text": "insert it into my data structure without"
+    },
+    {
+      "start": 261.6,
+      "end": 266.72,
+      "duration": 5.12,
+      "text": "reversing it. So I've inserted that into"
+    },
+    {
+      "start": 263.76,
+      "end": 270.08,
+      "duration": 6.32,
+      "text": "the data structure. Now can I say if I"
+    },
+    {
+      "start": 266.72,
+      "end": 273.84,
+      "duration": 7.12,
+      "text": "look back at the Q my Q is indeed empty"
+    },
+    {
+      "start": 270.08,
+      "end": 276.64,
+      "duration": 6.56,
+      "text": "now. Hence we have traversed all the"
+    },
+    {
+      "start": 273.84,
+      "end": 279.6,
+      "duration": 5.76,
+      "text": "nodes and right after the traversal can"
+    },
+    {
+      "start": 276.64,
+      "end": 282.72,
+      "duration": 6.08,
+      "text": "I say my data structure is having the"
+    },
+    {
+      "start": 279.6,
+      "end": 284.32,
+      "duration": 4.72,
+      "text": "zigzag traversal that I was asked to"
+    },
+    {
+      "start": 282.72,
+      "end": 286.24,
+      "duration": 3.52,
+      "text": "print and I can return this data"
+    },
+    {
+      "start": 284.32,
+      "end": 288.56,
+      "duration": 4.24,
+      "text": "structure and this is going to be my"
+    },
+    {
+      "start": 286.24,
+      "end": 290.8,
+      "duration": 4.56,
+      "text": "answer. So the difference that I did"
+    },
+    {
+      "start": 288.56,
+      "end": 293.44,
+      "duration": 4.88,
+      "text": "from the previous question was I just"
+    },
+    {
+      "start": 290.8,
+      "end": 297.12,
+      "duration": 6.32,
+      "text": "maintained a flag variable which was"
+    },
+    {
+      "start": 293.44,
+      "end": 300.48,
+      "duration": 7.04,
+      "text": "like 0 1 0 every time I went on to the"
+    },
+    {
+      "start": 297.12,
+      "end": 303.04,
+      "duration": 5.92,
+      "text": "next level. I just uh converted 0 to 1 1"
+    },
+    {
+      "start": 300.48,
+      "end": 304.96,
+      "duration": 4.48,
+      "text": "to 0 and vice versa. That is what I did."
+    },
+    {
+      "start": 303.04,
+      "end": 306.56,
+      "duration": 3.52,
+      "text": "So again we're going to discuss the C++"
+    },
+    {
+      "start": 304.96,
+      "end": 309.6,
+      "duration": 4.64,
+      "text": "and the Java code. So you can see the"
+    },
+    {
+      "start": 306.56,
+      "end": 311.28,
+      "duration": 4.72,
+      "text": "C++ code on the left and the Java people"
+    },
+    {
+      "start": 309.6,
+      "end": 313.92,
+      "duration": 4.32,
+      "text": "can definitely follow their code that's"
+    },
+    {
+      "start": 311.28,
+      "end": 315.68,
+      "duration": 4.4,
+      "text": "on the right. They're mostly identical."
+    },
+    {
+      "start": 313.92,
+      "end": 317.12,
+      "duration": 3.2,
+      "text": "So you can definitely catch up. So"
+    },
+    {
+      "start": 315.68,
+      "end": 319.52,
+      "duration": 3.84,
+      "text": "initially we are given the root of the"
+    },
+    {
+      "start": 317.12,
+      "end": 321.6,
+      "duration": 4.48,
+      "text": "tree and we declare a data structure"
+    },
+    {
+      "start": 319.52,
+      "end": 323.6,
+      "duration": 4.08,
+      "text": "that's result and the tree is empty."
+    },
+    {
+      "start": 321.6,
+      "end": 326.64,
+      "duration": 5.04,
+      "text": "We're going to return uh the data"
+    },
+    {
+      "start": 323.6,
+      "end": 329.04,
+      "duration": 5.44,
+      "text": "structure which will never have any uh"
+    },
+    {
+      "start": 326.64,
+      "end": 331.44,
+      "duration": 4.8,
+      "text": "zigzag traversal. Right after that I"
+    },
+    {
+      "start": 329.04,
+      "end": 334.16,
+      "duration": 5.12,
+      "text": "declare the Q and I initially push uh"
+    },
+    {
+      "start": 331.44,
+      "end": 336.24,
+      "duration": 4.8,
+      "text": "the root right and we have a flag which"
+    },
+    {
+      "start": 334.16,
+      "end": 338.4,
+      "duration": 4.24,
+      "text": "is initially marked as true. So"
+    },
+    {
+      "start": 336.24,
+      "end": 341.6,
+      "duration": 5.36,
+      "text": "basically over here what I'm done is"
+    },
+    {
+      "start": 338.4,
+      "end": 345.04,
+      "duration": 6.64,
+      "text": "true means left to right and the"
+    },
+    {
+      "start": 341.6,
+      "end": 347.12,
+      "duration": 5.52,
+      "text": "opposite will mean uh right to left that"
+    },
+    {
+      "start": 345.04,
+      "end": 349.36,
+      "duration": 4.32,
+      "text": "is what I have been doing over here"
+    },
+    {
+      "start": 347.12,
+      "end": 352.0,
+      "duration": 4.88,
+      "text": "right after that I traverse in the cube"
+    },
+    {
+      "start": 349.36,
+      "end": 354.72,
+      "duration": 5.36,
+      "text": "so you know uh always we take all the"
+    },
+    {
+      "start": 352.0,
+      "end": 356.8,
+      "duration": 4.8,
+      "text": "nodes of that level so let's take all"
+    },
+    {
+      "start": 354.72,
+      "end": 358.88,
+      "duration": 4.16,
+      "text": "the nodes of that level and what I do is"
+    },
+    {
+      "start": 356.8,
+      "end": 361.28,
+      "duration": 4.48,
+      "text": "I run a for loop okay I'm running a for"
+    },
+    {
+      "start": 358.88,
+      "end": 363.6,
+      "duration": 4.72,
+      "text": "loop"
+    },
+    {
+      "start": 361.28,
+      "end": 366.0,
+      "duration": 4.72,
+      "text": "on all the nodes of that level and what"
+    },
+    {
+      "start": 363.6,
+      "end": 368.72,
+      "duration": 5.12,
+      "text": "I'm doing is I'm basically taking it"
+    },
+    {
+      "start": 366.0,
+      "end": 371.44,
+      "duration": 5.44,
+      "text": "popping it out. So if your Q for an"
+    },
+    {
+      "start": 368.72,
+      "end": 373.92,
+      "duration": 5.2,
+      "text": "example has 2 three I will iterate on"
+    },
+    {
+      "start": 371.44,
+      "end": 376.56,
+      "duration": 5.12,
+      "text": "two and I'll iterate on three using this"
+    },
+    {
+      "start": 373.92,
+      "end": 380.64,
+      "duration": 6.72,
+      "text": "for loop. Got it? Right after that I"
+    },
+    {
+      "start": 376.56,
+      "end": 383.12,
+      "duration": 6.56,
+      "text": "check what I check is is left to right"
+    },
+    {
+      "start": 380.64,
+      "end": 386.0,
+      "duration": 5.36,
+      "text": "true. If that's the case like this two"
+    },
+    {
+      "start": 383.12,
+      "end": 388.96,
+      "duration": 5.84,
+      "text": "that I'm taking out I'll put it in the"
+    },
+    {
+      "start": 386.0,
+      "end": 391.36,
+      "duration": 5.36,
+      "text": "front of my data structure"
+    },
+    {
+      "start": 388.96,
+      "end": 393.92,
+      "duration": 4.96,
+      "text": "and after that I'll put three if if the"
+    },
+    {
+      "start": 391.36,
+      "end": 396.48,
+      "duration": 5.12,
+      "text": "flag is true. If it is not what I've"
+    },
+    {
+      "start": 393.92,
+      "end": 398.88,
+      "duration": 4.96,
+      "text": "done is I've smartly made sure that two"
+    },
+    {
+      "start": 396.48,
+      "end": 401.92,
+      "duration": 5.44,
+      "text": "will come at back then three will come"
+    },
+    {
+      "start": 398.88,
+      "end": 404.24,
+      "duration": 5.36,
+      "text": "right depending on this flag I'll either"
+    },
+    {
+      "start": 401.92,
+      "end": 406.08,
+      "duration": 4.16,
+      "text": "insert it uh from the front or I'll"
+    },
+    {
+      "start": 404.24,
+      "end": 408.08,
+      "duration": 3.84,
+      "text": "either insert it from the back simple"
+    },
+    {
+      "start": 406.08,
+      "end": 411.36,
+      "duration": 5.28,
+      "text": "enough right simple enough constructive"
+    },
+    {
+      "start": 408.08,
+      "end": 414.0,
+      "duration": 5.92,
+      "text": "and the rest thing remains the same I"
+    },
+    {
+      "start": 411.36,
+      "end": 416.0,
+      "duration": 4.64,
+      "text": "insert that into our vector or list and"
+    },
+    {
+      "start": 414.0,
+      "end": 418.72,
+      "duration": 4.72,
+      "text": "right after that I check left and right"
+    },
+    {
+      "start": 416.0,
+      "end": 421.84,
+      "duration": 5.84,
+      "text": "and I push it once I've done this entire"
+    },
+    {
+      "start": 418.72,
+      "end": 424.24,
+      "duration": 5.52,
+      "text": "iteration right I can I can always"
+    },
+    {
+      "start": 421.84,
+      "end": 426.48,
+      "duration": 4.64,
+      "text": "switch switch on the flags and I'll keep"
+    },
+    {
+      "start": 424.24,
+      "end": 428.48,
+      "duration": 4.24,
+      "text": "on the data structure whatever is on the"
+    },
+    {
+      "start": 426.48,
+      "end": 431.28,
+      "duration": 4.8,
+      "text": "row that's 32 whatever is it I'll keep"
+    },
+    {
+      "start": 428.48,
+      "end": 434.56,
+      "duration": 6.08,
+      "text": "on the data structure once that is done"
+    },
+    {
+      "start": 431.28,
+      "end": 436.4,
+      "duration": 5.12,
+      "text": "I can definitely return my result so the"
+    },
+    {
+      "start": 434.56,
+      "end": 439.04,
+      "duration": 4.48,
+      "text": "thing that I did different from the"
+    },
+    {
+      "start": 436.4,
+      "end": 442.64,
+      "duration": 6.24,
+      "text": "previous uh level order traversal is"
+    },
+    {
+      "start": 439.04,
+      "end": 444.96,
+      "duration": 5.92,
+      "text": "this one flag and this while storing in"
+    },
+    {
+      "start": 442.64,
+      "end": 448.0,
+      "duration": 5.36,
+      "text": "a array or a vector whatever you can"
+    },
+    {
+      "start": 444.96,
+      "end": 450.72,
+      "duration": 5.76,
+      "text": "call it what I made sure is I made sure"
+    },
+    {
+      "start": 448.0,
+      "end": 453.36,
+      "duration": 5.36,
+      "text": "I either push it from the front or from"
+    },
+    {
+      "start": 450.72,
+      "end": 455.36,
+      "duration": 4.64,
+      "text": "the back that's that is the that is the"
+    },
+    {
+      "start": 453.36,
+      "end": 458.08,
+      "duration": 4.72,
+      "text": "logical thing that I did in order to get"
+    },
+    {
+      "start": 455.36,
+      "end": 460.16,
+      "duration": 4.8,
+      "text": "the zigzag order traversal. So what will"
+    },
+    {
+      "start": 458.08,
+      "end": 462.0,
+      "duration": 3.92,
+      "text": "be the time complexity? Again the time"
+    },
+    {
+      "start": 460.16,
+      "end": 463.84,
+      "duration": 3.68,
+      "text": "complexity is going to be VO of N"
+    },
+    {
+      "start": 462.0,
+      "end": 465.52,
+      "duration": 3.52,
+      "text": "similar to level order. And what will be"
+    },
+    {
+      "start": 463.84,
+      "end": 467.76,
+      "duration": 3.92,
+      "text": "the space complexity? That's going to be"
+    },
+    {
+      "start": 465.52,
+      "end": 469.44,
+      "duration": 3.92,
+      "text": "VGO of N similar to the level order"
+    },
+    {
+      "start": 467.76,
+      "end": 470.88,
+      "duration": 3.12,
+      "text": "traversal. So I hope you have understood"
+    },
+    {
+      "start": 469.44,
+      "end": 472.64,
+      "duration": 3.2,
+      "text": "the entire explanation as well as the"
+    },
+    {
+      "start": 470.88,
+      "end": 474.08,
+      "duration": 3.2,
+      "text": "code. Just in case you did, please"
+    },
+    {
+      "start": 472.64,
+      "end": 476.0,
+      "duration": 3.36,
+      "text": "please please make sure you like this"
+    },
+    {
+      "start": 474.08,
+      "end": 478.4,
+      "duration": 4.32,
+      "text": "video because it took a lot of efforts"
+    },
+    {
+      "start": 476.0,
+      "end": 480.0,
+      "duration": 4.0,
+      "text": "to make this entire tree series. Also,"
+    },
+    {
+      "start": 478.4,
+      "end": 481.76,
+      "duration": 3.36,
+      "text": "if you wish, you can definitely drop in"
+    },
+    {
+      "start": 480.0,
+      "end": 484.4,
+      "duration": 4.4,
+      "text": "a comment that will keep motivating me"
+    },
+    {
+      "start": 481.76,
+      "end": 485.6,
+      "duration": 3.84,
+      "text": "to make such further series. Also, if"
+    },
+    {
+      "start": 484.4,
+      "end": 486.88,
+      "duration": 2.48,
+      "text": "you're new to this channel, please do"
+    },
+    {
+      "start": 485.6,
+      "end": 488.56,
+      "duration": 2.96,
+      "text": "consider subscribing because I'm going"
+    },
+    {
+      "start": 486.88,
+      "end": 490.64,
+      "duration": 3.76,
+      "text": "to bring in such more series in the"
+    },
+    {
+      "start": 488.56,
+      "end": 491.92,
+      "duration": 3.36,
+      "text": "upcoming future as well. With this, uh,"
+    },
+    {
+      "start": 490.64,
+      "end": 494.88,
+      "duration": 4.24,
+      "text": "let's wrap up this video. Let's meet in"
+    },
+    {
+      "start": 491.92,
+      "end": 497.12,
+      "duration": 5.2,
+      "text": "the next lecture. Bye-bye. Take care."
+    },
+    {
+      "start": 494.88,
+      "end": 500.92,
+      "duration": 6.04,
+      "text": "[Music]"
+    },
+    {
+      "start": 497.12,
+      "end": 500.92,
+      "duration": 3.8,
+      "text": "Get your golden."
+    }
+  ]
+}

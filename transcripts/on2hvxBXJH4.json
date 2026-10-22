@@ -1,0 +1,2798 @@
+{
+  "video_id": "on2hvxBXJH4",
+  "title": "DP 43. Longest Increasing Subsequence | Binary Search | Intuition",
+  "duration_sec": 987,
+  "num_segments": 465,
+  "segments": [
+    {
+      "start": 0.24,
+      "end": 3.76,
+      "duration": 3.52,
+      "text": "hey everyone welcome back to take you"
+    },
+    {
+      "start": 1.52,
+      "end": 5.52,
+      "duration": 4.0,
+      "text": "forward so today we will be solving uh"
+    },
+    {
+      "start": 3.76,
+      "end": 6.8,
+      "duration": 3.04,
+      "text": "the problem longest increasing"
+    },
+    {
+      "start": 5.52,
+      "end": 9.12,
+      "duration": 3.6,
+      "text": "subsequence"
+    },
+    {
+      "start": 6.8,
+      "end": 11.68,
+      "duration": 4.88,
+      "text": "using binary search in the previous two"
+    },
+    {
+      "start": 9.12,
+      "end": 14.48,
+      "duration": 5.36,
+      "text": "videos we have solved using recursion"
+    },
+    {
+      "start": 11.68,
+      "end": 16.88,
+      "duration": 5.2,
+      "text": "memorization space optimization uh"
+    },
+    {
+      "start": 14.48,
+      "end": 17.84,
+      "duration": 3.36,
+      "text": "tabulation and an algorithmic"
+    },
+    {
+      "start": 16.88,
+      "end": 20.16,
+      "duration": 3.28,
+      "text": "approach"
+    },
+    {
+      "start": 17.84,
+      "end": 22.88,
+      "duration": 5.04,
+      "text": "these approach has been covered in the"
+    },
+    {
+      "start": 20.16,
+      "end": 24.16,
+      "duration": 4.0,
+      "text": "previous couple of videos but we did see"
+    },
+    {
+      "start": 22.88,
+      "end": 26.64,
+      "duration": 3.76,
+      "text": "that"
+    },
+    {
+      "start": 24.16,
+      "end": 28.48,
+      "duration": 4.32,
+      "text": "the constraint was n equal to 10 to the"
+    },
+    {
+      "start": 26.64,
+      "end": 30.56,
+      "duration": 3.92,
+      "text": "power 5 and"
+    },
+    {
+      "start": 28.48,
+      "end": 33.92,
+      "duration": 5.44,
+      "text": "the best we could do was uh time"
+    },
+    {
+      "start": 30.56,
+      "end": 36.32,
+      "duration": 5.76,
+      "text": "complexity of big o of n square and a"
+    },
+    {
+      "start": 33.92,
+      "end": 38.8,
+      "duration": 4.88,
+      "text": "space complexity of big o of n this was"
+    },
+    {
+      "start": 36.32,
+      "end": 41.44,
+      "duration": 5.12,
+      "text": "the best that we"
+    },
+    {
+      "start": 38.8,
+      "end": 44.88,
+      "duration": 6.08,
+      "text": "had done till now but if n is 10 to the"
+    },
+    {
+      "start": 41.44,
+      "end": 46.72,
+      "duration": 5.28,
+      "text": "power 5 n square is 10 to the power 5"
+    },
+    {
+      "start": 44.88,
+      "end": 49.6,
+      "duration": 4.72,
+      "text": "square is 10 to the power 10 operations"
+    },
+    {
+      "start": 46.72,
+      "end": 53.04,
+      "duration": 6.32,
+      "text": "which is definitely giving you rtle so"
+    },
+    {
+      "start": 49.6,
+      "end": 54.08,
+      "duration": 4.48,
+      "text": "we we definitely cannot do this right so"
+    },
+    {
+      "start": 53.04,
+      "end": 56.56,
+      "duration": 3.52,
+      "text": "that's where something like binary"
+    },
+    {
+      "start": 54.08,
+      "end": 57.92,
+      "duration": 3.84,
+      "text": "search comes in can we find lis using"
+    },
+    {
+      "start": 56.56,
+      "end": 60.48,
+      "duration": 3.92,
+      "text": "binary search"
+    },
+    {
+      "start": 57.92,
+      "end": 62.4,
+      "duration": 4.48,
+      "text": "now you will find a lot of videos where"
+    },
+    {
+      "start": 60.48,
+      "end": 63.36,
+      "duration": 2.88,
+      "text": "the intuition is missing like i i went"
+    },
+    {
+      "start": 62.4,
+      "end": 65.52,
+      "duration": 3.12,
+      "text": "through a lot of videos but the"
+    },
+    {
+      "start": 63.36,
+      "end": 67.76,
+      "duration": 4.4,
+      "text": "intuition was missing so"
+    },
+    {
+      "start": 65.52,
+      "end": 69.2,
+      "duration": 3.68,
+      "text": "in this video my main focus will be to"
+    },
+    {
+      "start": 67.76,
+      "end": 70.72,
+      "duration": 2.96,
+      "text": "give you the thought process because"
+    },
+    {
+      "start": 69.2,
+      "end": 72.48,
+      "duration": 3.28,
+      "text": "once you get the thought process the"
+    },
+    {
+      "start": 70.72,
+      "end": 74.32,
+      "duration": 3.6,
+      "text": "algorithm is very very simple"
+    },
+    {
+      "start": 72.48,
+      "end": 76.64,
+      "duration": 4.16,
+      "text": "so prerequisites are you should be"
+    },
+    {
+      "start": 74.32,
+      "end": 78.8,
+      "duration": 4.48,
+      "text": "knowing binary search and there is a"
+    },
+    {
+      "start": 76.64,
+      "end": 79.84,
+      "duration": 3.2,
+      "text": "lower bound and there's an upper bound"
+    },
+    {
+      "start": 78.8,
+      "end": 80.72,
+      "duration": 1.92,
+      "text": "video"
+    },
+    {
+      "start": 79.84,
+      "end": 82.32,
+      "duration": 2.48,
+      "text": "in"
+    },
+    {
+      "start": 80.72,
+      "end": 84.16,
+      "duration": 3.44,
+      "text": "my channel i'll be putting the link in"
+    },
+    {
+      "start": 82.32,
+      "end": 85.68,
+      "duration": 3.36,
+      "text": "the description go back and watch it and"
+    },
+    {
+      "start": 84.16,
+      "end": 87.68,
+      "duration": 3.52,
+      "text": "after that come back and watch this"
+    },
+    {
+      "start": 85.68,
+      "end": 89.44,
+      "duration": 3.76,
+      "text": "video okay uh if you know lower bound"
+    },
+    {
+      "start": 87.68,
+      "end": 92.48,
+      "duration": 4.8,
+      "text": "it's uh well and good so let's let's get"
+    },
+    {
+      "start": 89.44,
+      "end": 94.48,
+      "duration": 5.04,
+      "text": "started what is first of all what is lis"
+    },
+    {
+      "start": 92.48,
+      "end": 96.0,
+      "duration": 3.52,
+      "text": "you know what is longest increasing"
+    },
+    {
+      "start": 94.48,
+      "end": 98.32,
+      "duration": 3.84,
+      "text": "subsequence like"
+    },
+    {
+      "start": 96.0,
+      "end": 101.36,
+      "duration": 5.36,
+      "text": "uh you can call a subsequence like one"
+    },
+    {
+      "start": 98.32,
+      "end": 102.56,
+      "duration": 4.24,
+      "text": "eight four six this is a subsequence not"
+    },
+    {
+      "start": 101.36,
+      "end": 105.12,
+      "duration": 3.76,
+      "text": "increasing"
+    },
+    {
+      "start": 102.56,
+      "end": 107.84,
+      "duration": 5.28,
+      "text": "you can call something like one eight"
+    },
+    {
+      "start": 105.12,
+      "end": 109.52,
+      "duration": 4.4,
+      "text": "nine as an increasing subsequence"
+    },
+    {
+      "start": 107.84,
+      "end": 111.44,
+      "duration": 3.6,
+      "text": "increasing okay"
+    },
+    {
+      "start": 109.52,
+      "end": 116.08,
+      "duration": 6.56,
+      "text": "uh similarly you can call something like"
+    },
+    {
+      "start": 111.44,
+      "end": 119.6,
+      "duration": 8.16,
+      "text": "one four five six nine as the longest"
+    },
+    {
+      "start": 116.08,
+      "end": 121.12,
+      "duration": 5.04,
+      "text": "increasing subsequence of length five"
+    },
+    {
+      "start": 119.6,
+      "end": 123.6,
+      "duration": 4.0,
+      "text": "subsequence you know"
+    },
+    {
+      "start": 121.12,
+      "end": 125.52,
+      "duration": 4.4,
+      "text": "a contiguous or a non-contagious part"
+    },
+    {
+      "start": 123.6,
+      "end": 128.08,
+      "duration": 4.48,
+      "text": "but it should follow the order like you"
+    },
+    {
+      "start": 125.52,
+      "end": 129.2,
+      "duration": 3.68,
+      "text": "can't be like one 8"
+    },
+    {
+      "start": 128.08,
+      "end": 131.6,
+      "duration": 3.52,
+      "text": "7"
+    },
+    {
+      "start": 129.2,
+      "end": 133.2,
+      "duration": 4.0,
+      "text": "6 this is not a subsequence because"
+    },
+    {
+      "start": 131.6,
+      "end": 135.84,
+      "duration": 4.24,
+      "text": "8 is"
+    },
+    {
+      "start": 133.2,
+      "end": 137.92,
+      "duration": 4.72,
+      "text": "before 7 but actually 7 is before 8 so"
+    },
+    {
+      "start": 135.84,
+      "end": 139.6,
+      "duration": 3.76,
+      "text": "this is not a subsequence"
+    },
+    {
+      "start": 137.92,
+      "end": 141.6,
+      "duration": 3.68,
+      "text": "okay so we saw that the longest"
+    },
+    {
+      "start": 139.6,
+      "end": 144.08,
+      "duration": 4.48,
+      "text": "increasing subsequence over here was one"
+    },
+    {
+      "start": 141.6,
+      "end": 145.68,
+      "duration": 4.08,
+      "text": "four five six and nine"
+    },
+    {
+      "start": 144.08,
+      "end": 147.84,
+      "duration": 3.76,
+      "text": "okay so"
+    },
+    {
+      "start": 145.68,
+      "end": 149.12,
+      "duration": 3.44,
+      "text": "how do you actually uh"
+    },
+    {
+      "start": 147.84,
+      "end": 151.44,
+      "duration": 3.6,
+      "text": "solve this particular problem that's"
+    },
+    {
+      "start": 149.12,
+      "end": 153.76,
+      "duration": 4.64,
+      "text": "that's a big so how do you approach this"
+    },
+    {
+      "start": 151.44,
+      "end": 154.88,
+      "duration": 3.44,
+      "text": "problem so what i will say is"
+    },
+    {
+      "start": 153.76,
+      "end": 157.6,
+      "duration": 3.84,
+      "text": "okay let's"
+    },
+    {
+      "start": 154.88,
+      "end": 160.0,
+      "duration": 5.12,
+      "text": "let's try to go across every element and"
+    },
+    {
+      "start": 157.6,
+      "end": 162.4,
+      "duration": 4.8,
+      "text": "try to form subsequences that's that's"
+    },
+    {
+      "start": 160.0,
+      "end": 165.04,
+      "duration": 5.04,
+      "text": "my thinking so i'll be like okay"
+    },
+    {
+      "start": 162.4,
+      "end": 167.6,
+      "duration": 5.2,
+      "text": "initially when i'm at one"
+    },
+    {
+      "start": 165.04,
+      "end": 168.64,
+      "duration": 3.6,
+      "text": "okay let's form a subsequence with one"
+    },
+    {
+      "start": 167.6,
+      "end": 171.12,
+      "duration": 3.52,
+      "text": "make sense"
+    },
+    {
+      "start": 168.64,
+      "end": 173.36,
+      "duration": 4.72,
+      "text": "next let's go to seven"
+    },
+    {
+      "start": 171.12,
+      "end": 174.32,
+      "duration": 3.2,
+      "text": "do i need to form a new sub sequence"
+    },
+    {
+      "start": 173.36,
+      "end": 176.96,
+      "duration": 3.6,
+      "text": "with sir"
+    },
+    {
+      "start": 174.32,
+      "end": 179.28,
+      "duration": 4.96,
+      "text": "or can i just attach over like attach it"
+    },
+    {
+      "start": 176.96,
+      "end": 182.08,
+      "duration": 5.12,
+      "text": "over here the answer to that is uh"
+    },
+    {
+      "start": 179.28,
+      "end": 184.48,
+      "duration": 5.2,
+      "text": "straight let's attach it over here why"
+    },
+    {
+      "start": 182.08,
+      "end": 186.88,
+      "duration": 4.8,
+      "text": "because if you form a new it will be of"
+    },
+    {
+      "start": 184.48,
+      "end": 189.28,
+      "duration": 4.8,
+      "text": "length one but if i attach it it is"
+    },
+    {
+      "start": 186.88,
+      "end": 191.44,
+      "duration": 4.56,
+      "text": "still increasing it is still increasing"
+    },
+    {
+      "start": 189.28,
+      "end": 193.52,
+      "duration": 4.24,
+      "text": "and it is having a length two"
+    },
+    {
+      "start": 191.44,
+      "end": 194.48,
+      "duration": 3.04,
+      "text": "perfect let's move"
+    },
+    {
+      "start": 193.52,
+      "end": 196.4,
+      "duration": 2.88,
+      "text": "to eight"
+    },
+    {
+      "start": 194.48,
+      "end": 198.72,
+      "duration": 4.24,
+      "text": "now if you're having eight"
+    },
+    {
+      "start": 196.4,
+      "end": 201.2,
+      "duration": 4.8,
+      "text": "can you attach it over here or will you"
+    },
+    {
+      "start": 198.72,
+      "end": 203.12,
+      "duration": 4.4,
+      "text": "prefer this you can because eight is"
+    },
+    {
+      "start": 201.2,
+      "end": 205.44,
+      "duration": 4.24,
+      "text": "still greater than seven"
+    },
+    {
+      "start": 203.12,
+      "end": 206.96,
+      "duration": 3.84,
+      "text": "perfect"
+    },
+    {
+      "start": 205.44,
+      "end": 208.0,
+      "duration": 2.56,
+      "text": "it's still greater than seven so i've"
+    },
+    {
+      "start": 206.96,
+      "end": 209.6,
+      "duration": 2.64,
+      "text": "attached"
+    },
+    {
+      "start": 208.0,
+      "end": 212.48,
+      "duration": 4.48,
+      "text": "next i go to four"
+    },
+    {
+      "start": 209.6,
+      "end": 213.28,
+      "duration": 3.68,
+      "text": "so i see there is four i see there is 4"
+    },
+    {
+      "start": 212.48,
+      "end": 215.6,
+      "duration": 3.12,
+      "text": "but"
+    },
+    {
+      "start": 213.28,
+      "end": 218.08,
+      "duration": 4.8,
+      "text": "if i attach it over here it will not be"
+    },
+    {
+      "start": 215.6,
+      "end": 219.68,
+      "duration": 4.08,
+      "text": "increasing because 8 is greater than 4"
+    },
+    {
+      "start": 218.08,
+      "end": 220.48,
+      "duration": 2.4,
+      "text": "it will not be increasing"
+    },
+    {
+      "start": 219.68,
+      "end": 222.56,
+      "duration": 2.88,
+      "text": "so"
+    },
+    {
+      "start": 220.48,
+      "end": 225.04,
+      "duration": 4.56,
+      "text": "i can either start with 4"
+    },
+    {
+      "start": 222.56,
+      "end": 226.56,
+      "duration": 4.0,
+      "text": "but my brain says whats favor there is"
+    },
+    {
+      "start": 225.04,
+      "end": 230.56,
+      "duration": 5.52,
+      "text": "one which you can take and you can"
+    },
+    {
+      "start": 226.56,
+      "end": 230.56,
+      "duration": 4.0,
+      "text": "attach with four so okay"
+    },
+    {
+      "start": 231.2,
+      "end": 233.76,
+      "duration": 2.56,
+      "text": "make sense"
+    },
+    {
+      "start": 232.72,
+      "end": 235.2,
+      "duration": 2.48,
+      "text": "next"
+    },
+    {
+      "start": 233.76,
+      "end": 237.68,
+      "duration": 3.92,
+      "text": "i go to five"
+    },
+    {
+      "start": 235.2,
+      "end": 239.92,
+      "duration": 4.72,
+      "text": "the moment i go to five"
+    },
+    {
+      "start": 237.68,
+      "end": 242.8,
+      "duration": 5.12,
+      "text": "can i attach it here the answer to that"
+    },
+    {
+      "start": 239.92,
+      "end": 245.04,
+      "duration": 5.12,
+      "text": "is no strava you cannot"
+    },
+    {
+      "start": 242.8,
+      "end": 245.92,
+      "duration": 3.12,
+      "text": "can i attach it over here yes trevor you"
+    },
+    {
+      "start": 245.04,
+      "end": 248.08,
+      "duration": 3.04,
+      "text": "can"
+    },
+    {
+      "start": 245.92,
+      "end": 250.4,
+      "duration": 4.48,
+      "text": "perfect"
+    },
+    {
+      "start": 248.08,
+      "end": 251.76,
+      "duration": 3.68,
+      "text": "next i go to six"
+    },
+    {
+      "start": 250.4,
+      "end": 253.52,
+      "duration": 3.12,
+      "text": "i have a six"
+    },
+    {
+      "start": 251.76,
+      "end": 258.0,
+      "duration": 6.24,
+      "text": "can i attach it over here"
+    },
+    {
+      "start": 253.52,
+      "end": 258.0,
+      "duration": 4.48,
+      "text": "no can i attach it over here yes"
+    },
+    {
+      "start": 258.8,
+      "end": 262.56,
+      "duration": 3.76,
+      "text": "perfect"
+    },
+    {
+      "start": 260.08,
+      "end": 264.32,
+      "duration": 4.24,
+      "text": "next i go to minus one"
+    },
+    {
+      "start": 262.56,
+      "end": 265.36,
+      "duration": 2.8,
+      "text": "where can i attach it"
+    },
+    {
+      "start": 264.32,
+      "end": 268.4,
+      "duration": 4.08,
+      "text": "now"
+    },
+    {
+      "start": 265.36,
+      "end": 270.64,
+      "duration": 5.28,
+      "text": "my brain says we can't attach it"
+    },
+    {
+      "start": 268.4,
+      "end": 272.88,
+      "duration": 4.48,
+      "text": "we cannot attach a minus one here we"
+    },
+    {
+      "start": 270.64,
+      "end": 274.64,
+      "duration": 4.0,
+      "text": "cannot attach a minus one here but we"
+    },
+    {
+      "start": 272.88,
+      "end": 277.36,
+      "duration": 4.48,
+      "text": "can start fresh"
+    },
+    {
+      "start": 274.64,
+      "end": 279.52,
+      "duration": 4.88,
+      "text": "will minus one have anything before"
+    },
+    {
+      "start": 277.36,
+      "end": 282.72,
+      "duration": 5.36,
+      "text": "no it's the smallest"
+    },
+    {
+      "start": 279.52,
+      "end": 283.84,
+      "duration": 4.32,
+      "text": "so i will have minus 1 right before this"
+    },
+    {
+      "start": 282.72,
+      "end": 286.4,
+      "duration": 3.68,
+      "text": "perfect"
+    },
+    {
+      "start": 283.84,
+      "end": 287.84,
+      "duration": 4.0,
+      "text": "next i go to 9 so when i go to 9 when i"
+    },
+    {
+      "start": 286.4,
+      "end": 289.76,
+      "duration": 3.36,
+      "text": "go to 9"
+    },
+    {
+      "start": 287.84,
+      "end": 291.52,
+      "duration": 3.68,
+      "text": "i can attach 9 here"
+    },
+    {
+      "start": 289.76,
+      "end": 293.4,
+      "duration": 3.64,
+      "text": "i can attach 9 here"
+    },
+    {
+      "start": 291.52,
+      "end": 294.56,
+      "duration": 3.04,
+      "text": "i can attach 9 here so"
+    },
+    {
+      "start": 293.4,
+      "end": 297.2,
+      "duration": 3.8,
+      "text": "[Music]"
+    },
+    {
+      "start": 294.56,
+      "end": 298.32,
+      "duration": 3.76,
+      "text": "assuming attached to everyone assuming"
+    },
+    {
+      "start": 297.2,
+      "end": 300.08,
+      "duration": 2.88,
+      "text": "it's over"
+    },
+    {
+      "start": 298.32,
+      "end": 302.64,
+      "duration": 4.32,
+      "text": "so once you end it"
+    },
+    {
+      "start": 300.08,
+      "end": 304.88,
+      "duration": 4.8,
+      "text": "you see this is a length four"
+    },
+    {
+      "start": 302.64,
+      "end": 307.28,
+      "duration": 4.64,
+      "text": "you see this is a length five"
+    },
+    {
+      "start": 304.88,
+      "end": 308.72,
+      "duration": 3.84,
+      "text": "you see this is a length two and"
+    },
+    {
+      "start": 307.28,
+      "end": 310.48,
+      "duration": 3.2,
+      "text": "eventually"
+    },
+    {
+      "start": 308.72,
+      "end": 314.0,
+      "duration": 5.28,
+      "text": "the length five is the longest one and"
+    },
+    {
+      "start": 310.48,
+      "end": 314.0,
+      "duration": 3.52,
+      "text": "that is the length of the lis"
+    },
+    {
+      "start": 314.88,
+      "end": 317.52,
+      "duration": 2.64,
+      "text": "but"
+    },
+    {
+      "start": 315.84,
+      "end": 319.92,
+      "duration": 4.08,
+      "text": "will you actually uh"
+    },
+    {
+      "start": 317.52,
+      "end": 323.12,
+      "duration": 5.6,
+      "text": "go across and uh"
+    },
+    {
+      "start": 319.92,
+      "end": 326.0,
+      "duration": 6.08,
+      "text": "generate all these subsequences because"
+    },
+    {
+      "start": 323.12,
+      "end": 327.28,
+      "duration": 4.16,
+      "text": "it's it's going to be very hectic and"
+    },
+    {
+      "start": 326.0,
+      "end": 328.56,
+      "duration": 2.56,
+      "text": "it's going to be taking a lot of time"
+    },
+    {
+      "start": 327.28,
+      "end": 330.16,
+      "duration": 2.88,
+      "text": "because"
+    },
+    {
+      "start": 328.56,
+      "end": 332.4,
+      "duration": 3.84,
+      "text": "if you make"
+    },
+    {
+      "start": 330.16,
+      "end": 334.16,
+      "duration": 4.0,
+      "text": "new subsequences at every junction it's"
+    },
+    {
+      "start": 332.4,
+      "end": 336.16,
+      "duration": 3.76,
+      "text": "going to take up a lot of space"
+    },
+    {
+      "start": 334.16,
+      "end": 338.32,
+      "duration": 4.16,
+      "text": "because if you're aiming to uh"
+    },
+    {
+      "start": 336.16,
+      "end": 341.28,
+      "duration": 5.12,
+      "text": "make a new subsequence at every step"
+    },
+    {
+      "start": 338.32,
+      "end": 343.44,
+      "duration": 5.12,
+      "text": "it's gonna take up a lot of space so we"
+    },
+    {
+      "start": 341.28,
+      "end": 345.68,
+      "duration": 4.4,
+      "text": "will definitely not move this way but"
+    },
+    {
+      "start": 343.44,
+      "end": 348.0,
+      "duration": 4.56,
+      "text": "this is an intuition which"
+    },
+    {
+      "start": 345.68,
+      "end": 348.88,
+      "duration": 3.2,
+      "text": "helps us to think of binary search"
+    },
+    {
+      "start": 348.0,
+      "end": 350.8,
+      "duration": 2.8,
+      "text": "so"
+    },
+    {
+      "start": 348.88,
+      "end": 353.76,
+      "duration": 4.88,
+      "text": "tell me one thing like i don't need i"
+    },
+    {
+      "start": 350.8,
+      "end": 355.36,
+      "duration": 4.56,
+      "text": "don't need to print lcs i just need five"
+    },
+    {
+      "start": 353.76,
+      "end": 358.0,
+      "duration": 4.24,
+      "text": "i just need five"
+    },
+    {
+      "start": 355.36,
+      "end": 360.88,
+      "duration": 5.52,
+      "text": "so can i do something like this"
+    },
+    {
+      "start": 358.0,
+      "end": 364.08,
+      "duration": 6.08,
+      "text": "when i was carrying one seven eight"
+    },
+    {
+      "start": 360.88,
+      "end": 366.64,
+      "duration": 5.76,
+      "text": "and this was done when four came in"
+    },
+    {
+      "start": 364.08,
+      "end": 368.4,
+      "duration": 4.32,
+      "text": "can i say one seven eight"
+    },
+    {
+      "start": 366.64,
+      "end": 370.24,
+      "duration": 3.6,
+      "text": "let's rewrite four over here"
+    },
+    {
+      "start": 368.4,
+      "end": 372.56,
+      "duration": 4.16,
+      "text": "can i do something like this"
+    },
+    {
+      "start": 370.24,
+      "end": 374.16,
+      "duration": 3.92,
+      "text": "rewrite rewrite the same subsequence can"
+    },
+    {
+      "start": 372.56,
+      "end": 376.88,
+      "duration": 4.32,
+      "text": "i do something like this"
+    },
+    {
+      "start": 374.16,
+      "end": 379.6,
+      "duration": 5.44,
+      "text": "and the answer to that is yeah striper"
+    },
+    {
+      "start": 376.88,
+      "end": 382.64,
+      "duration": 5.76,
+      "text": "we can do it and let me show you what"
+    },
+    {
+      "start": 379.6,
+      "end": 384.16,
+      "duration": 4.56,
+      "text": "i'm actually talking about"
+    },
+    {
+      "start": 382.64,
+      "end": 385.2,
+      "duration": 2.56,
+      "text": "because we're just concerned about the"
+    },
+    {
+      "start": 384.16,
+      "end": 387.6,
+      "duration": 3.44,
+      "text": "length"
+    },
+    {
+      "start": 385.2,
+      "end": 389.04,
+      "duration": 3.84,
+      "text": "we're just concerned about the length"
+    },
+    {
+      "start": 387.6,
+      "end": 390.4,
+      "duration": 2.8,
+      "text": "we are at one"
+    },
+    {
+      "start": 389.04,
+      "end": 391.76,
+      "duration": 2.72,
+      "text": "let's have one"
+    },
+    {
+      "start": 390.4,
+      "end": 393.2,
+      "duration": 2.8,
+      "text": "we are at seven"
+    },
+    {
+      "start": 391.76,
+      "end": 394.4,
+      "duration": 2.64,
+      "text": "let's have seven"
+    },
+    {
+      "start": 393.2,
+      "end": 395.92,
+      "duration": 2.72,
+      "text": "we are at eight"
+    },
+    {
+      "start": 394.4,
+      "end": 397.68,
+      "duration": 3.28,
+      "text": "let's have eight"
+    },
+    {
+      "start": 395.92,
+      "end": 400.24,
+      "duration": 4.32,
+      "text": "we are at four"
+    },
+    {
+      "start": 397.68,
+      "end": 401.6,
+      "duration": 3.92,
+      "text": "instead of making"
+    },
+    {
+      "start": 400.24,
+      "end": 404.16,
+      "duration": 3.92,
+      "text": "one four"
+    },
+    {
+      "start": 401.6,
+      "end": 406.16,
+      "duration": 4.56,
+      "text": "instead of making one four"
+    },
+    {
+      "start": 404.16,
+      "end": 408.24,
+      "duration": 4.08,
+      "text": "since we are actually not concerned"
+    },
+    {
+      "start": 406.16,
+      "end": 409.2,
+      "duration": 3.04,
+      "text": "about the lis and we're concerned about"
+    },
+    {
+      "start": 408.24,
+      "end": 410.72,
+      "duration": 2.48,
+      "text": "the length"
+    },
+    {
+      "start": 409.2,
+      "end": 413.76,
+      "duration": 4.56,
+      "text": "we will say"
+    },
+    {
+      "start": 410.72,
+      "end": 415.28,
+      "duration": 4.56,
+      "text": "where can 4 fit in in the existing"
+    },
+    {
+      "start": 413.76,
+      "end": 417.6,
+      "duration": 3.84,
+      "text": "subsequence"
+    },
+    {
+      "start": 415.28,
+      "end": 420.64,
+      "duration": 5.36,
+      "text": "i say 4 can fit in here"
+    },
+    {
+      "start": 417.6,
+      "end": 423.44,
+      "duration": 5.84,
+      "text": "so what you do is remember what you do"
+    },
+    {
+      "start": 420.64,
+      "end": 425.68,
+      "duration": 5.04,
+      "text": "is you take the seven out you take the"
+    },
+    {
+      "start": 423.44,
+      "end": 428.48,
+      "duration": 5.04,
+      "text": "seven out and you say four can fit in"
+    },
+    {
+      "start": 425.68,
+      "end": 431.36,
+      "duration": 5.68,
+      "text": "here remember this that it does not"
+    },
+    {
+      "start": 428.48,
+      "end": 433.36,
+      "duration": 4.88,
+      "text": "means one four eight is a subsequence no"
+    },
+    {
+      "start": 431.36,
+      "end": 435.12,
+      "duration": 3.76,
+      "text": "i'm just making sure instead of storing"
+    },
+    {
+      "start": 433.36,
+      "end": 438.56,
+      "duration": 5.2,
+      "text": "one four separately"
+    },
+    {
+      "start": 435.12,
+      "end": 441.36,
+      "duration": 6.24,
+      "text": "i stored 1 4 right over there to save"
+    },
+    {
+      "start": 438.56,
+      "end": 442.16,
+      "duration": 3.6,
+      "text": "space even if someone like 9 comes in"
+    },
+    {
+      "start": 441.36,
+      "end": 444.32,
+      "duration": 2.96,
+      "text": "and"
+    },
+    {
+      "start": 442.16,
+      "end": 446.4,
+      "duration": 4.24,
+      "text": "because i know if 8 is there why is 8"
+    },
+    {
+      "start": 444.32,
+      "end": 448.16,
+      "duration": 3.84,
+      "text": "here because previously 7 was there"
+    },
+    {
+      "start": 446.4,
+      "end": 450.0,
+      "duration": 3.6,
+      "text": "because previously 7 was there that's"
+    },
+    {
+      "start": 448.16,
+      "end": 452.96,
+      "duration": 4.8,
+      "text": "the reason 8 is here that is something"
+    },
+    {
+      "start": 450.0,
+      "end": 455.12,
+      "duration": 5.12,
+      "text": "which we definitely know so"
+    },
+    {
+      "start": 452.96,
+      "end": 456.96,
+      "duration": 4.0,
+      "text": "we are sure that before 8 there is"
+    },
+    {
+      "start": 455.12,
+      "end": 458.4,
+      "duration": 3.28,
+      "text": "something smaller which is 7. yeah we"
+    },
+    {
+      "start": 456.96,
+      "end": 460.72,
+      "duration": 3.76,
+      "text": "have over written it but we are not"
+    },
+    {
+      "start": 458.4,
+      "end": 462.96,
+      "duration": 4.56,
+      "text": "concerned about the subsequence that's"
+    },
+    {
+      "start": 460.72,
+      "end": 466.56,
+      "duration": 5.84,
+      "text": "why what i did is instead of creating a"
+    },
+    {
+      "start": 462.96,
+      "end": 469.12,
+      "duration": 6.16,
+      "text": "new i overwrote the seven i over the"
+    },
+    {
+      "start": 466.56,
+      "end": 470.88,
+      "duration": 4.32,
+      "text": "seven to four because it's okay to"
+    },
+    {
+      "start": 469.12,
+      "end": 472.48,
+      "duration": 3.36,
+      "text": "overwrite because we're not"
+    },
+    {
+      "start": 470.88,
+      "end": 474.88,
+      "duration": 4.0,
+      "text": "we're not concerned about the lis we're"
+    },
+    {
+      "start": 472.48,
+      "end": 477.76,
+      "duration": 5.28,
+      "text": "concerned about the length so i over it"
+    },
+    {
+      "start": 474.88,
+      "end": 480.08,
+      "duration": 5.2,
+      "text": "at that place itself perfect let's move"
+    },
+    {
+      "start": 477.76,
+      "end": 482.32,
+      "duration": 4.56,
+      "text": "across to the next which is five"
+    },
+    {
+      "start": 480.08,
+      "end": 484.32,
+      "duration": 4.24,
+      "text": "okay where can five be"
+    },
+    {
+      "start": 482.32,
+      "end": 487.12,
+      "duration": 4.8,
+      "text": "i either go and create like one four"
+    },
+    {
+      "start": 484.32,
+      "end": 488.56,
+      "duration": 4.24,
+      "text": "five or i either say let's not create"
+    },
+    {
+      "start": 487.12,
+      "end": 489.36,
+      "duration": 2.24,
+      "text": "and instead of that"
+    },
+    {
+      "start": 488.56,
+      "end": 492.32,
+      "duration": 3.76,
+      "text": "let's"
+    },
+    {
+      "start": 489.36,
+      "end": 493.76,
+      "duration": 4.4,
+      "text": "omit eight and write five because either"
+    },
+    {
+      "start": 492.32,
+      "end": 495.36,
+      "duration": 3.04,
+      "text": "you're carrying one seven eight or"
+    },
+    {
+      "start": 493.76,
+      "end": 496.48,
+      "duration": 2.72,
+      "text": "either you're carrying one for five it"
+    },
+    {
+      "start": 495.36,
+      "end": 498.64,
+      "duration": 3.28,
+      "text": "still makes"
+    },
+    {
+      "start": 496.48,
+      "end": 500.72,
+      "duration": 4.24,
+      "text": "the same sense right"
+    },
+    {
+      "start": 498.64,
+      "end": 502.8,
+      "duration": 4.16,
+      "text": "perfect let's go to six"
+    },
+    {
+      "start": 500.72,
+      "end": 503.68,
+      "duration": 2.96,
+      "text": "the moment i go to six i'm like okay"
+    },
+    {
+      "start": 502.8,
+      "end": 504.84,
+      "duration": 2.04,
+      "text": "fine"
+    },
+    {
+      "start": 503.68,
+      "end": 506.48,
+      "duration": 2.8,
+      "text": "where can i have"
+    },
+    {
+      "start": 504.84,
+      "end": 507.84,
+      "duration": 3.0,
+      "text": "six"
+    },
+    {
+      "start": 506.48,
+      "end": 509.12,
+      "duration": 2.64,
+      "text": "right after this"
+    },
+    {
+      "start": 507.84,
+      "end": 511.2,
+      "duration": 3.36,
+      "text": "amazing"
+    },
+    {
+      "start": 509.12,
+      "end": 512.24,
+      "duration": 3.12,
+      "text": "the moment i have minus 1 where can i"
+    },
+    {
+      "start": 511.2,
+      "end": 515.44,
+      "duration": 4.24,
+      "text": "have it"
+    },
+    {
+      "start": 512.24,
+      "end": 517.68,
+      "duration": 5.44,
+      "text": "i can definitely have it right over here"
+    },
+    {
+      "start": 515.44,
+      "end": 520.64,
+      "duration": 5.2,
+      "text": "replace it so i replace it over here"
+    },
+    {
+      "start": 517.68,
+      "end": 521.52,
+      "duration": 3.84,
+      "text": "saying not 1 it's gonna be minus one"
+    },
+    {
+      "start": 520.64,
+      "end": 523.12,
+      "duration": 2.48,
+      "text": "perfect"
+    },
+    {
+      "start": 521.52,
+      "end": 525.36,
+      "duration": 3.84,
+      "text": "where can i have nine"
+    },
+    {
+      "start": 523.12,
+      "end": 527.68,
+      "duration": 4.56,
+      "text": "i say right after this"
+    },
+    {
+      "start": 525.36,
+      "end": 529.68,
+      "duration": 4.32,
+      "text": "so this is not the subsequence this is"
+    },
+    {
+      "start": 527.68,
+      "end": 531.12,
+      "duration": 3.44,
+      "text": "definitely not the subsequence but this"
+    },
+    {
+      "start": 529.68,
+      "end": 533.12,
+      "duration": 3.44,
+      "text": "gives you the length"
+    },
+    {
+      "start": 531.12,
+      "end": 535.12,
+      "duration": 4.0,
+      "text": "the length of the final array will be"
+    },
+    {
+      "start": 533.12,
+      "end": 537.84,
+      "duration": 4.72,
+      "text": "your answer which is 5"
+    },
+    {
+      "start": 535.12,
+      "end": 540.0,
+      "duration": 4.88,
+      "text": "because you replicate it by putting"
+    },
+    {
+      "start": 537.84,
+      "end": 542.8,
+      "duration": 4.96,
+      "text": "those values you replicated the same"
+    },
+    {
+      "start": 540.0,
+      "end": 545.12,
+      "duration": 5.12,
+      "text": "space by putting those values that's how"
+    },
+    {
+      "start": 542.8,
+      "end": 546.8,
+      "duration": 4.0,
+      "text": "you can easily do it now"
+    },
+    {
+      "start": 545.12,
+      "end": 548.88,
+      "duration": 3.76,
+      "text": "why binary search"
+    },
+    {
+      "start": 546.8,
+      "end": 553.12,
+      "duration": 6.32,
+      "text": "again very straight forward if you uh"
+    },
+    {
+      "start": 548.88,
+      "end": 555.36,
+      "duration": 6.48,
+      "text": "like if i again just omit this off"
+    },
+    {
+      "start": 553.12,
+      "end": 556.88,
+      "duration": 3.76,
+      "text": "yeah i'll be just formatting this"
+    },
+    {
+      "start": 555.36,
+      "end": 559.12,
+      "duration": 3.76,
+      "text": "why binary search again a very simple"
+    },
+    {
+      "start": 556.88,
+      "end": 560.56,
+      "duration": 3.68,
+      "text": "one because initially you had one then"
+    },
+    {
+      "start": 559.12,
+      "end": 563.04,
+      "duration": 3.92,
+      "text": "you had seven"
+    },
+    {
+      "start": 560.56,
+      "end": 565.52,
+      "duration": 4.96,
+      "text": "then you add eight the moment you got"
+    },
+    {
+      "start": 563.04,
+      "end": 568.0,
+      "duration": 4.96,
+      "text": "four you wanna insert four if there was"
+    },
+    {
+      "start": 565.52,
+      "end": 570.4,
+      "duration": 4.88,
+      "text": "a four you inserted at that place or you"
+    },
+    {
+      "start": 568.0,
+      "end": 572.64,
+      "duration": 4.64,
+      "text": "say hey listen there is no four so"
+    },
+    {
+      "start": 570.4,
+      "end": 575.2,
+      "duration": 4.8,
+      "text": "please go across and insert it right"
+    },
+    {
+      "start": 572.64,
+      "end": 579.52,
+      "duration": 6.88,
+      "text": "after four right at the first element"
+    },
+    {
+      "start": 575.2,
+      "end": 581.92,
+      "duration": 6.72,
+      "text": "after four at the first element"
+    },
+    {
+      "start": 579.52,
+      "end": 584.32,
+      "duration": 4.8,
+      "text": "after four can you please do it for me"
+    },
+    {
+      "start": 581.92,
+      "end": 587.04,
+      "duration": 5.12,
+      "text": "right at the first element after four so"
+    },
+    {
+      "start": 584.32,
+      "end": 588.64,
+      "duration": 4.32,
+      "text": "you since you know this is sorted since"
+    },
+    {
+      "start": 587.04,
+      "end": 591.36,
+      "duration": 4.32,
+      "text": "you know this is sorted"
+    },
+    {
+      "start": 588.64,
+      "end": 593.52,
+      "duration": 4.88,
+      "text": "in order to insert four here you can"
+    },
+    {
+      "start": 591.36,
+      "end": 595.52,
+      "duration": 4.16,
+      "text": "simply do a binary search and binary"
+    },
+    {
+      "start": 593.52,
+      "end": 596.88,
+      "duration": 3.36,
+      "text": "search will say four will go here next"
+    },
+    {
+      "start": 595.52,
+      "end": 599.76,
+      "duration": 4.24,
+      "text": "you go to five"
+    },
+    {
+      "start": 596.88,
+      "end": 602.48,
+      "duration": 5.6,
+      "text": "binary search will say"
+    },
+    {
+      "start": 599.76,
+      "end": 605.04,
+      "duration": 5.28,
+      "text": "first element after five that's eight"
+    },
+    {
+      "start": 602.48,
+      "end": 607.28,
+      "duration": 4.8,
+      "text": "binary search we'll say i'll go here six"
+    },
+    {
+      "start": 605.04,
+      "end": 609.92,
+      "duration": 4.88,
+      "text": "first element after six no one so goes"
+    },
+    {
+      "start": 607.28,
+      "end": 611.04,
+      "duration": 3.76,
+      "text": "here first element after minus one"
+    },
+    {
+      "start": 609.92,
+      "end": 613.52,
+      "duration": 3.6,
+      "text": "that's this"
+    },
+    {
+      "start": 611.04,
+      "end": 615.68,
+      "duration": 4.64,
+      "text": "first element after nine that's this"
+    },
+    {
+      "start": 613.52,
+      "end": 617.68,
+      "duration": 4.16,
+      "text": "that's how you get the length that's how"
+    },
+    {
+      "start": 615.68,
+      "end": 619.36,
+      "duration": 3.68,
+      "text": "you replicate that's the"
+    },
+    {
+      "start": 617.68,
+      "end": 620.96,
+      "duration": 3.28,
+      "text": "thought process"
+    },
+    {
+      "start": 619.36,
+      "end": 623.52,
+      "duration": 4.16,
+      "text": "simple"
+    },
+    {
+      "start": 620.96,
+      "end": 624.96,
+      "duration": 4.0,
+      "text": "thought process behind the binary search"
+    },
+    {
+      "start": 623.52,
+      "end": 625.68,
+      "duration": 2.16,
+      "text": "solution"
+    },
+    {
+      "start": 624.96,
+      "end": 627.36,
+      "duration": 2.4,
+      "text": "so"
+    },
+    {
+      "start": 625.68,
+      "end": 629.92,
+      "duration": 4.24,
+      "text": "in c plus"
+    },
+    {
+      "start": 627.36,
+      "end": 631.84,
+      "duration": 4.48,
+      "text": "there exists a function like lower bound"
+    },
+    {
+      "start": 629.92,
+      "end": 634.16,
+      "duration": 4.24,
+      "text": "like you might argue okay let me just"
+    },
+    {
+      "start": 631.84,
+      "end": 636.32,
+      "duration": 4.48,
+      "text": "give you one more example uh"
+    },
+    {
+      "start": 634.16,
+      "end": 639.76,
+      "duration": 5.6,
+      "text": "okay so let me give you one more example"
+    },
+    {
+      "start": 636.32,
+      "end": 640.72,
+      "duration": 4.4,
+      "text": "if array is given something like one"
+    },
+    {
+      "start": 639.76,
+      "end": 644.08,
+      "duration": 4.32,
+      "text": "four"
+    },
+    {
+      "start": 640.72,
+      "end": 646.56,
+      "duration": 5.84,
+      "text": "uh five then a four then a"
+    },
+    {
+      "start": 644.08,
+      "end": 648.32,
+      "duration": 4.24,
+      "text": "two then a eight so what will happen in"
+    },
+    {
+      "start": 646.56,
+      "end": 650.64,
+      "duration": 4.08,
+      "text": "this case because you see repeated"
+    },
+    {
+      "start": 648.32,
+      "end": 652.8,
+      "duration": 4.48,
+      "text": "developments so initially you are at one"
+    },
+    {
+      "start": 650.64,
+      "end": 654.24,
+      "duration": 3.6,
+      "text": "so you don't have anything so you put it"
+    },
+    {
+      "start": 652.8,
+      "end": 655.2,
+      "duration": 2.4,
+      "text": "across here"
+    },
+    {
+      "start": 654.24,
+      "end": 656.32,
+      "duration": 2.08,
+      "text": "perfect"
+    },
+    {
+      "start": 655.2,
+      "end": 658.64,
+      "duration": 3.44,
+      "text": "next"
+    },
+    {
+      "start": 656.32,
+      "end": 661.52,
+      "duration": 5.2,
+      "text": "you have a four yes next you have a four"
+    },
+    {
+      "start": 658.64,
+      "end": 663.76,
+      "duration": 5.12,
+      "text": "so you again right after four so that's"
+    },
+    {
+      "start": 661.52,
+      "end": 665.84,
+      "duration": 4.32,
+      "text": "where you put next you have a five"
+    },
+    {
+      "start": 663.76,
+      "end": 667.04,
+      "duration": 3.28,
+      "text": "you put here now when you look for four"
+    },
+    {
+      "start": 665.84,
+      "end": 669.44,
+      "duration": 3.6,
+      "text": "again"
+    },
+    {
+      "start": 667.04,
+      "end": 671.52,
+      "duration": 4.48,
+      "text": "if there exists a four you just rewrite"
+    },
+    {
+      "start": 669.44,
+      "end": 673.6,
+      "duration": 4.16,
+      "text": "it over there because that's what you do"
+    },
+    {
+      "start": 671.52,
+      "end": 675.28,
+      "duration": 3.76,
+      "text": "you don't put it across anywhere else"
+    },
+    {
+      "start": 673.6,
+      "end": 677.2,
+      "duration": 3.6,
+      "text": "next you give a 2 so this is where it"
+    },
+    {
+      "start": 675.28,
+      "end": 679.2,
+      "duration": 3.92,
+      "text": "goes next you get a 8 this is where it"
+    },
+    {
+      "start": 677.2,
+      "end": 681.44,
+      "duration": 4.24,
+      "text": "goes so this is the length length is"
+    },
+    {
+      "start": 679.2,
+      "end": 684.72,
+      "duration": 5.52,
+      "text": "going to be 4 again is it practical"
+    },
+    {
+      "start": 681.44,
+      "end": 686.16,
+      "duration": 4.72,
+      "text": "enough yes because 1 4 5 8 can be the"
+    },
+    {
+      "start": 684.72,
+      "end": 688.24,
+      "duration": 3.52,
+      "text": "subsequence"
+    },
+    {
+      "start": 686.16,
+      "end": 690.32,
+      "duration": 4.16,
+      "text": "can you regenerate the subsequence via"
+    },
+    {
+      "start": 688.24,
+      "end": 692.24,
+      "duration": 4.0,
+      "text": "binary search the answer is no then you"
+    },
+    {
+      "start": 690.32,
+      "end": 694.72,
+      "duration": 4.4,
+      "text": "have to store a lot more things but you"
+    },
+    {
+      "start": 692.24,
+      "end": 696.24,
+      "duration": 4.0,
+      "text": "can easily get the length by accessing"
+    },
+    {
+      "start": 694.72,
+      "end": 699.04,
+      "duration": 4.32,
+      "text": "the length because"
+    },
+    {
+      "start": 696.24,
+      "end": 701.44,
+      "duration": 5.2,
+      "text": "you optimize space instead of carrying"
+    },
+    {
+      "start": 699.04,
+      "end": 704.4,
+      "duration": 5.36,
+      "text": "different subsequences you reuse that"
+    },
+    {
+      "start": 701.44,
+      "end": 708.24,
+      "duration": 6.8,
+      "text": "space and you created it so it's time to"
+    },
+    {
+      "start": 704.4,
+      "end": 710.64,
+      "duration": 6.24,
+      "text": "actually now go back and code it"
+    },
+    {
+      "start": 708.24,
+      "end": 715.0,
+      "duration": 6.76,
+      "text": "so in order to find remove this"
+    },
+    {
+      "start": 710.64,
+      "end": 715.0,
+      "duration": 4.36,
+      "text": "our main intention of binary searches"
+    },
+    {
+      "start": 716.08,
+      "end": 723.44,
+      "duration": 7.36,
+      "text": "if there is an element as array of i"
+    },
+    {
+      "start": 720.56,
+      "end": 725.36,
+      "duration": 4.8,
+      "text": "find array of i"
+    },
+    {
+      "start": 723.44,
+      "end": 727.36,
+      "duration": 3.92,
+      "text": "like in this case if you see"
+    },
+    {
+      "start": 725.36,
+      "end": 729.84,
+      "duration": 4.48,
+      "text": "when i inserted 4 i inserted at the"
+    },
+    {
+      "start": 727.36,
+      "end": 731.04,
+      "duration": 3.68,
+      "text": "place of 4 i inserted at the place of 4"
+    },
+    {
+      "start": 729.84,
+      "end": 733.68,
+      "duration": 3.84,
+      "text": "right"
+    },
+    {
+      "start": 731.04,
+      "end": 735.6,
+      "duration": 4.56,
+      "text": "so either find array of i"
+    },
+    {
+      "start": 733.68,
+      "end": 736.72,
+      "duration": 3.04,
+      "text": "and if this is not found"
+    },
+    {
+      "start": 735.6,
+      "end": 738.56,
+      "duration": 2.96,
+      "text": "find"
+    },
+    {
+      "start": 736.72,
+      "end": 740.64,
+      "duration": 3.92,
+      "text": "first greater"
+    },
+    {
+      "start": 738.56,
+      "end": 744.0,
+      "duration": 5.44,
+      "text": "again the first element"
+    },
+    {
+      "start": 740.64,
+      "end": 745.92,
+      "duration": 5.28,
+      "text": "that's greater than array of i that's it"
+    },
+    {
+      "start": 744.0,
+      "end": 749.36,
+      "duration": 5.36,
+      "text": "and in c plus plus this can easily be"
+    },
+    {
+      "start": 745.92,
+      "end": 750.88,
+      "duration": 4.96,
+      "text": "done using a function a lower bound the"
+    },
+    {
+      "start": 749.36,
+      "end": 753.84,
+      "duration": 4.48,
+      "text": "lower bound if you are doing a lower"
+    },
+    {
+      "start": 750.88,
+      "end": 756.88,
+      "duration": 6.0,
+      "text": "bound on any array it gives you the"
+    },
+    {
+      "start": 753.84,
+      "end": 759.44,
+      "duration": 5.6,
+      "text": "first index it gives you the index"
+    },
+    {
+      "start": 756.88,
+      "end": 760.96,
+      "duration": 4.08,
+      "text": "of array of i if exist"
+    },
+    {
+      "start": 759.44,
+      "end": 763.6,
+      "duration": 4.16,
+      "text": "or gives you"
+    },
+    {
+      "start": 760.96,
+      "end": 765.6,
+      "duration": 4.64,
+      "text": "the first index"
+    },
+    {
+      "start": 763.6,
+      "end": 767.36,
+      "duration": 3.76,
+      "text": "which is greater than array of i in"
+    },
+    {
+      "start": 765.6,
+      "end": 770.64,
+      "duration": 5.04,
+      "text": "order to understand it in depth you can"
+    },
+    {
+      "start": 767.36,
+      "end": 772.32,
+      "duration": 4.96,
+      "text": "watch the video link in the description"
+    },
+    {
+      "start": 770.64,
+      "end": 774.88,
+      "duration": 4.24,
+      "text": "okay so guys it's time to check out the"
+    },
+    {
+      "start": 772.32,
+      "end": 778.08,
+      "duration": 5.76,
+      "text": "code now so in the in the ipad if you"
+    },
+    {
+      "start": 774.88,
+      "end": 779.76,
+      "duration": 4.88,
+      "text": "see uh there is one initially right so"
+    },
+    {
+      "start": 778.08,
+      "end": 782.72,
+      "duration": 4.64,
+      "text": "what i'll do is i'll put this one into"
+    },
+    {
+      "start": 779.76,
+      "end": 784.72,
+      "duration": 4.96,
+      "text": "some temporary okay temporary so"
+    },
+    {
+      "start": 782.72,
+      "end": 786.48,
+      "duration": 3.76,
+      "text": "as i can know that what i'll do is i'll"
+    },
+    {
+      "start": 784.72,
+      "end": 790.16,
+      "duration": 5.44,
+      "text": "just declare a temporary"
+    },
+    {
+      "start": 786.48,
+      "end": 792.48,
+      "duration": 6.0,
+      "text": "that's the initial stuff that i'll do"
+    },
+    {
+      "start": 790.16,
+      "end": 794.24,
+      "duration": 4.08,
+      "text": "and let's put the first guy into the"
+    },
+    {
+      "start": 792.48,
+      "end": 795.68,
+      "duration": 3.2,
+      "text": "temporary because i know that's where i"
+    },
+    {
+      "start": 794.24,
+      "end": 798.24,
+      "duration": 4.0,
+      "text": "start off"
+    },
+    {
+      "start": 795.68,
+      "end": 801.12,
+      "duration": 5.44,
+      "text": "so area of zero will go in and now i can"
+    },
+    {
+      "start": 798.24,
+      "end": 804.96,
+      "duration": 6.72,
+      "text": "initially start from int i equal to one"
+    },
+    {
+      "start": 801.12,
+      "end": 807.12,
+      "duration": 6.0,
+      "text": "and i can just go until i plus plus okay"
+    },
+    {
+      "start": 804.96,
+      "end": 809.2,
+      "duration": 4.24,
+      "text": "now whenever in the next step i get"
+    },
+    {
+      "start": 807.12,
+      "end": 811.12,
+      "duration": 4.0,
+      "text": "seven what do i do i just take seven"
+    },
+    {
+      "start": 809.2,
+      "end": 813.04,
+      "duration": 3.84,
+      "text": "added next time whenever i get eight i"
+    },
+    {
+      "start": 811.12,
+      "end": 815.68,
+      "duration": 4.56,
+      "text": "add it why because seven was greater"
+    },
+    {
+      "start": 813.04,
+      "end": 817.52,
+      "duration": 4.48,
+      "text": "than one eight was greater than seven so"
+    },
+    {
+      "start": 815.68,
+      "end": 819.68,
+      "duration": 4.0,
+      "text": "just make sure"
+    },
+    {
+      "start": 817.52,
+      "end": 821.68,
+      "duration": 4.16,
+      "text": "if this guy is greater than the last guy"
+    },
+    {
+      "start": 819.68,
+      "end": 823.76,
+      "duration": 4.08,
+      "text": "if this guy is greater than the last guy"
+    },
+    {
+      "start": 821.68,
+      "end": 827.04,
+      "duration": 5.36,
+      "text": "don't do anything just go across and say"
+    },
+    {
+      "start": 823.76,
+      "end": 829.04,
+      "duration": 5.28,
+      "text": "hey listen uh can you just go across"
+    },
+    {
+      "start": 827.04,
+      "end": 830.72,
+      "duration": 3.68,
+      "text": "the sky that's perfect"
+    },
+    {
+      "start": 829.04,
+      "end": 833.44,
+      "duration": 4.4,
+      "text": "if it is not then you need to put a"
+    },
+    {
+      "start": 830.72,
+      "end": 835.36,
+      "duration": 4.64,
+      "text": "binary search on the index so in the"
+    },
+    {
+      "start": 833.44,
+      "end": 837.28,
+      "duration": 3.84,
+      "text": "index you can easily do a binary search"
+    },
+    {
+      "start": 835.36,
+      "end": 839.52,
+      "duration": 4.16,
+      "text": "like lower bound"
+    },
+    {
+      "start": 837.28,
+      "end": 841.04,
+      "duration": 3.76,
+      "text": "and the temporary space is this so just"
+    },
+    {
+      "start": 839.52,
+      "end": 843.6,
+      "duration": 4.08,
+      "text": "do a begin"
+    },
+    {
+      "start": 841.04,
+      "end": 845.28,
+      "duration": 4.24,
+      "text": "comma temporary dot end and you're"
+    },
+    {
+      "start": 843.6,
+      "end": 847.2,
+      "duration": 3.6,
+      "text": "looking for array of i that's what"
+    },
+    {
+      "start": 845.28,
+      "end": 849.68,
+      "duration": 4.4,
+      "text": "you'll do a binary search and you can"
+    },
+    {
+      "start": 847.2,
+      "end": 852.64,
+      "duration": 5.44,
+      "text": "just subtract them that's how easy the"
+    },
+    {
+      "start": 849.68,
+      "end": 854.24,
+      "duration": 4.56,
+      "text": "binary search will be looking perfect"
+    },
+    {
+      "start": 852.64,
+      "end": 856.08,
+      "duration": 3.44,
+      "text": "once you've got the index just go to"
+    },
+    {
+      "start": 854.24,
+      "end": 858.0,
+      "duration": 3.76,
+      "text": "temporary index and say this is where"
+    },
+    {
+      "start": 856.08,
+      "end": 860.24,
+      "duration": 4.16,
+      "text": "this guy will replace once you have done"
+    },
+    {
+      "start": 858.0,
+      "end": 862.0,
+      "duration": 4.0,
+      "text": "this you can directly return the temp"
+    },
+    {
+      "start": 860.24,
+      "end": 862.96,
+      "duration": 2.72,
+      "text": "dot size"
+    },
+    {
+      "start": 862.0,
+      "end": 865.12,
+      "duration": 3.12,
+      "text": "perfect"
+    },
+    {
+      "start": 862.96,
+      "end": 866.48,
+      "duration": 3.52,
+      "text": "and in this way if you run this code it"
+    },
+    {
+      "start": 865.12,
+      "end": 867.76,
+      "duration": 2.64,
+      "text": "should be i think it should give you the"
+    },
+    {
+      "start": 866.48,
+      "end": 869.76,
+      "duration": 3.28,
+      "text": "correct answer"
+    },
+    {
+      "start": 867.76,
+      "end": 870.96,
+      "duration": 3.2,
+      "text": "uh my bad m dot begin this will be temp"
+    },
+    {
+      "start": 869.76,
+      "end": 872.08,
+      "duration": 2.32,
+      "text": "dot begin"
+    },
+    {
+      "start": 870.96,
+      "end": 873.04,
+      "duration": 2.08,
+      "text": "now it should give you the correct"
+    },
+    {
+      "start": 872.08,
+      "end": 874.88,
+      "duration": 2.8,
+      "text": "answer"
+    },
+    {
+      "start": 873.04,
+      "end": 877.12,
+      "duration": 4.08,
+      "text": "so we did a mistake this will be array"
+    },
+    {
+      "start": 874.88,
+      "end": 878.48,
+      "duration": 3.6,
+      "text": "of i and yeah it should be fine now and"
+    },
+    {
+      "start": 877.12,
+      "end": 880.0,
+      "duration": 2.88,
+      "text": "you see all the test cases are running"
+    },
+    {
+      "start": 878.48,
+      "end": 882.24,
+      "duration": 3.76,
+      "text": "absolutely fine"
+    },
+    {
+      "start": 880.0,
+      "end": 883.68,
+      "duration": 3.68,
+      "text": "like this will take some more space so"
+    },
+    {
+      "start": 882.24,
+      "end": 885.6,
+      "duration": 3.36,
+      "text": "what you can do is you you know every"
+    },
+    {
+      "start": 883.68,
+      "end": 887.84,
+      "duration": 4.16,
+      "text": "time you're pushing or this is like the"
+    },
+    {
+      "start": 885.6,
+      "end": 889.44,
+      "duration": 3.84,
+      "text": "initial length is one and every time"
+    },
+    {
+      "start": 887.84,
+      "end": 891.44,
+      "duration": 3.6,
+      "text": "you're inserting one the length will"
+    },
+    {
+      "start": 889.44,
+      "end": 892.96,
+      "duration": 3.52,
+      "text": "always increase so yeah that's that's"
+    },
+    {
+      "start": 891.44,
+      "end": 895.28,
+      "duration": 3.84,
+      "text": "how you can also maintain the length of"
+    },
+    {
+      "start": 892.96,
+      "end": 897.28,
+      "duration": 4.32,
+      "text": "the alias and you can just run this like"
+    },
+    {
+      "start": 895.28,
+      "end": 898.72,
+      "duration": 3.44,
+      "text": "i don't want to do a 10 dot size right"
+    },
+    {
+      "start": 897.28,
+      "end": 900.48,
+      "duration": 3.2,
+      "text": "at the end because it might end up"
+    },
+    {
+      "start": 898.72,
+      "end": 902.56,
+      "duration": 3.84,
+      "text": "taking a bit more space"
+    },
+    {
+      "start": 900.48,
+      "end": 904.96,
+      "duration": 4.48,
+      "text": "so bit more time rather so now if i"
+    },
+    {
+      "start": 902.56,
+      "end": 906.64,
+      "duration": 4.08,
+      "text": "submit this you will see that"
+    },
+    {
+      "start": 904.96,
+      "end": 908.8,
+      "duration": 3.84,
+      "text": "this is indeed running absolutely fine"
+    },
+    {
+      "start": 906.64,
+      "end": 910.48,
+      "duration": 3.84,
+      "text": "yeah this is how you get the 100"
+    },
+    {
+      "start": 908.8,
+      "end": 912.4,
+      "duration": 3.6,
+      "text": "solution so"
+    },
+    {
+      "start": 910.48,
+      "end": 914.24,
+      "duration": 3.76,
+      "text": "as well as the time complexity that we"
+    },
+    {
+      "start": 912.4,
+      "end": 916.08,
+      "duration": 3.68,
+      "text": "did use"
+    },
+    {
+      "start": 914.24,
+      "end": 920.64,
+      "duration": 6.4,
+      "text": "it was"
+    },
+    {
+      "start": 916.08,
+      "end": 922.16,
+      "duration": 6.08,
+      "text": "big o of n into a binary search login"
+    },
+    {
+      "start": 920.64,
+      "end": 925.28,
+      "duration": 4.64,
+      "text": "what is the space"
+    },
+    {
+      "start": 922.16,
+      "end": 927.44,
+      "duration": 5.28,
+      "text": "b of n now a lot of people will say that"
+    },
+    {
+      "start": 925.28,
+      "end": 929.68,
+      "duration": 4.4,
+      "text": "trevor why don't you uh"
+    },
+    {
+      "start": 927.44,
+      "end": 931.92,
+      "duration": 4.48,
+      "text": "use the same array to rewrite but in"
+    },
+    {
+      "start": 929.68,
+      "end": 933.44,
+      "duration": 3.76,
+      "text": "interviews is generally not perfect not"
+    },
+    {
+      "start": 931.92,
+      "end": 937.04,
+      "duration": 5.12,
+      "text": "preferred to use the same array instead"
+    },
+    {
+      "start": 933.44,
+      "end": 938.96,
+      "duration": 5.52,
+      "text": "of that try to create a new temp"
+    },
+    {
+      "start": 937.04,
+      "end": 940.96,
+      "duration": 3.92,
+      "text": "but please please keep in mind the"
+    },
+    {
+      "start": 938.96,
+      "end": 944.4,
+      "duration": 5.44,
+      "text": "temporary array at the end of the day is"
+    },
+    {
+      "start": 940.96,
+      "end": 948.08,
+      "duration": 7.12,
+      "text": "not the lis is not the las okay we're"
+    },
+    {
+      "start": 944.4,
+      "end": 950.8,
+      "duration": 6.4,
+      "text": "just using it to store uh like instead"
+    },
+    {
+      "start": 948.08,
+      "end": 952.32,
+      "duration": 4.24,
+      "text": "of creating one seven eight one four"
+    },
+    {
+      "start": 950.8,
+      "end": 954.8,
+      "duration": 4.0,
+      "text": "we're just using this four to be stored"
+    },
+    {
+      "start": 952.32,
+      "end": 956.08,
+      "duration": 3.76,
+      "text": "here that's it we are not"
+    },
+    {
+      "start": 954.8,
+      "end": 958.0,
+      "duration": 3.2,
+      "text": "generating the alias we're just"
+    },
+    {
+      "start": 956.08,
+      "end": 960.32,
+      "duration": 4.24,
+      "text": "generating the length of the alas over"
+    },
+    {
+      "start": 958.0,
+      "end": 961.6,
+      "duration": 3.6,
+      "text": "here so guys i hope you have understood"
+    },
+    {
+      "start": 960.32,
+      "end": 963.44,
+      "duration": 3.12,
+      "text": "uh the"
+    },
+    {
+      "start": 961.6,
+      "end": 965.36,
+      "duration": 3.76,
+      "text": "longest increasing subsequence using"
+    },
+    {
+      "start": 963.44,
+      "end": 966.8,
+      "duration": 3.36,
+      "text": "binary search and just in case you did"
+    },
+    {
+      "start": 965.36,
+      "end": 967.92,
+      "duration": 2.56,
+      "text": "please please please make sure you like"
+    },
+    {
+      "start": 966.8,
+      "end": 969.52,
+      "duration": 2.72,
+      "text": "this video and if you're new to this"
+    },
+    {
+      "start": 967.92,
+      "end": 970.8,
+      "duration": 2.88,
+      "text": "channel please do consider subscribing"
+    },
+    {
+      "start": 969.52,
+      "end": 972.16,
+      "duration": 2.64,
+      "text": "and to continue our tradition please"
+    },
+    {
+      "start": 970.8,
+      "end": 973.92,
+      "duration": 3.12,
+      "text": "make sure you write it in the comment"
+    },
+    {
+      "start": 972.16,
+      "end": 975.36,
+      "duration": 3.2,
+      "text": "section if you understood this or not i"
+    },
+    {
+      "start": 973.92,
+      "end": 977.9,
+      "duration": 3.98,
+      "text": "never this let's wrap up this video"
+    },
+    {
+      "start": 975.36,
+      "end": 980.96,
+      "duration": 5.6,
+      "text": "let's read in the next one till then bye"
+    },
+    {
+      "start": 977.9,
+      "end": 980.96,
+      "duration": 3.06,
+      "text": "[Music]"
+    },
+    {
+      "start": 981.12,
+      "end": 985.8,
+      "duration": 4.68,
+      "text": "don't ever bye"
+    },
+    {
+      "start": 982.4,
+      "end": 985.8,
+      "duration": 3.4,
+      "text": "you're golden"
+    }
+  ]
+}

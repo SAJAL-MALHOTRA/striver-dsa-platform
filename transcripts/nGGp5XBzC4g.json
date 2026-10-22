@@ -1,0 +1,2447 @@
+{
+  "video_id": "nGGp5XBzC4g",
+  "title": "BS-26. Find Peak Element-II | Binary Search",
+  "duration_sec": 1202,
+  "segments": [
+    {
+      "start": 2.94,
+      "end": 6.12,
+      "text": "okay so let's continue with our binary"
+    },
+    {
+      "start": 4.68,
+      "end": 7.14,
+      "text": "search playlist for before that heavy"
+    },
+    {
+      "start": 6.12,
+      "end": 8.88,
+      "text": "and welcome back to the channel I hope"
+    },
+    {
+      "start": 7.14,
+      "end": 10.08,
+      "text": "you guys are doing extremely well so the"
+    },
+    {
+      "start": 8.88,
+      "end": 13.32,
+      "text": "problem that you're going to solve today"
+    },
+    {
+      "start": 10.08,
+      "end": 15.3,
+      "text": "is finding a peak element the second now"
+    },
+    {
+      "start": 13.32,
+      "end": 17.58,
+      "text": "before watching this video please go"
+    },
+    {
+      "start": 15.3,
+      "end": 19.86,
+      "text": "back in the playlist and watch the part"
+    },
+    {
+      "start": 17.58,
+      "end": 22.44,
+      "text": "one where we have figured out the peak"
+    },
+    {
+      "start": 19.86,
+      "end": 24.32,
+      "text": "element in a 1D array so what does this"
+    },
+    {
+      "start": 22.44,
+      "end": 27.24,
+      "text": "particular problem state it states that"
+    },
+    {
+      "start": 24.32,
+      "end": 29.58,
+      "text": "instead of a 1D array it'll be given a"
+    },
+    {
+      "start": 27.24,
+      "end": 32.4,
+      "text": "2d array and it is clearly stated that"
+    },
+    {
+      "start": 29.58,
+      "end": 35.22,
+      "text": "none of the two adjacent cells will be"
+    },
+    {
+      "start": 32.4,
+      "end": 37.56,
+      "text": "similar what does that mean if it is 2"
+    },
+    {
+      "start": 35.22,
+      "end": 39.78,
+      "text": "it cannot be 2 it cannot be two it"
+    },
+    {
+      "start": 37.56,
+      "end": 42.18,
+      "text": "cannot be two it cannot be do so the"
+    },
+    {
+      "start": 39.78,
+      "end": 44.46,
+      "text": "problem is stating you're given a 2d"
+    },
+    {
+      "start": 42.18,
+      "end": 47.22,
+      "text": "Matrix when none of the two adjacent"
+    },
+    {
+      "start": 44.46,
+      "end": 50.04,
+      "text": "cells can be similar your task is to"
+    },
+    {
+      "start": 47.22,
+      "end": 52.5,
+      "text": "figure out the peak element and the part"
+    },
+    {
+      "start": 50.04,
+      "end": 55.98,
+      "text": "one of the problem we had a 1D array"
+    },
+    {
+      "start": 52.5,
+      "end": 58.56,
+      "text": "where the peak element was an element"
+    },
+    {
+      "start": 55.98,
+      "end": 61.5,
+      "text": "that is greater than its left"
+    },
+    {
+      "start": 58.56,
+      "end": 64.08,
+      "text": "counterpart and it is greater than its"
+    },
+    {
+      "start": 61.5,
+      "end": 66.24,
+      "text": "right counterpart so n any element that"
+    },
+    {
+      "start": 64.08,
+      "end": 68.58,
+      "text": "was greater than its left and greater"
+    },
+    {
+      "start": 66.24,
+      "end": 70.38,
+      "text": "than its right was called as a peak"
+    },
+    {
+      "start": 68.58,
+      "end": 73.68,
+      "text": "element now in this particular problem"
+    },
+    {
+      "start": 70.38,
+      "end": 76.92,
+      "text": "since a 2d Matrix is involved we will"
+    },
+    {
+      "start": 73.68,
+      "end": 79.86,
+      "text": "call an element a peak element only if"
+    },
+    {
+      "start": 76.92,
+      "end": 82.02,
+      "text": "it is greater than its left counterpart"
+    },
+    {
+      "start": 79.86,
+      "end": 84.54,
+      "text": "greater than its right counterpart"
+    },
+    {
+      "start": 82.02,
+      "end": 87.06,
+      "text": "greater than its top counterpart and"
+    },
+    {
+      "start": 84.54,
+      "end": 90.12,
+      "text": "greater than its bottom counterpart for"
+    },
+    {
+      "start": 87.06,
+      "end": 92.82,
+      "text": "an example I can say 9 as a peak element"
+    },
+    {
+      "start": 90.12,
+      "end": 95.22,
+      "text": "y because it's greater than its top"
+    },
+    {
+      "start": 92.82,
+      "end": 98.1,
+      "text": "counterpart greater than its right"
+    },
+    {
+      "start": 95.22,
+      "end": 102.48,
+      "text": "greater than its bottom greater than x"
+    },
+    {
+      "start": 98.1,
+      "end": 105.3,
+      "text": "left can I say 7 to be uh Peak element"
+    },
+    {
+      "start": 102.48,
+      "end": 108.24,
+      "text": "yes I can see 7 to be a peak element why"
+    },
+    {
+      "start": 105.3,
+      "end": 111.42,
+      "text": "because 7 is greater than 3 the left"
+    },
+    {
+      "start": 108.24,
+      "end": 113.46,
+      "text": "greater than 1 the top greater than 2"
+    },
+    {
+      "start": 111.42,
+      "end": 115.62,
+      "text": "the right but on the bottom we don't"
+    },
+    {
+      "start": 113.46,
+      "end": 118.56,
+      "text": "have anything if you do not have"
+    },
+    {
+      "start": 115.62,
+      "end": 121.2,
+      "text": "anything then it will be considered as"
+    },
+    {
+      "start": 118.56,
+      "end": 124.32,
+      "text": "-1 so the problem is clearly stating all"
+    },
+    {
+      "start": 121.2,
+      "end": 126.96,
+      "text": "the outer parts will be having minus one"
+    },
+    {
+      "start": 124.32,
+      "end": 129.72,
+      "text": "so thereby 7 can also be called as a"
+    },
+    {
+      "start": 126.96,
+      "end": 131.4,
+      "text": "peak element now in a 2d Matrix they can"
+    },
+    {
+      "start": 129.72,
+      "end": 133.98,
+      "text": "be simultaneous like there can be"
+    },
+    {
+      "start": 131.4,
+      "end": 138.0,
+      "text": "multiple Peak elements your task is to"
+    },
+    {
+      "start": 133.98,
+      "end": 140.34,
+      "text": "return the row and column of any one of"
+    },
+    {
+      "start": 138.0,
+      "end": 142.56,
+      "text": "them yes any one of them for an example"
+    },
+    {
+      "start": 140.34,
+      "end": 145.56,
+      "text": "you decide to return this peak element"
+    },
+    {
+      "start": 142.56,
+      "end": 146.82,
+      "text": "it is on the row one and it is at the"
+    },
+    {
+      "start": 145.56,
+      "end": 149.34,
+      "text": "column one so you will have to return"
+    },
+    {
+      "start": 146.82,
+      "end": 151.86,
+      "text": "one comma one in case you decide that"
+    },
+    {
+      "start": 149.34,
+      "end": 155.16,
+      "text": "you have to return for this one so it's"
+    },
+    {
+      "start": 151.86,
+      "end": 157.26,
+      "text": "on the third row and it's on the fourth"
+    },
+    {
+      "start": 155.16,
+      "end": 159.0,
+      "text": "column so after return three comma four"
+    },
+    {
+      "start": 157.26,
+      "end": 161.28,
+      "text": "so this is what the problem is stating"
+    },
+    {
+      "start": 159.0,
+      "end": 163.26,
+      "text": "now if this problem comes up in an"
+    },
+    {
+      "start": 161.28,
+      "end": 164.76,
+      "text": "interview what is the first solution the"
+    },
+    {
+      "start": 163.26,
+      "end": 167.76,
+      "text": "first solution that I can think of is"
+    },
+    {
+      "start": 164.76,
+      "end": 169.74,
+      "text": "like the extreme Brute Force I scan"
+    },
+    {
+      "start": 167.76,
+      "end": 171.66,
+      "text": "through every element yes I will be"
+    },
+    {
+      "start": 169.74,
+      "end": 174.18,
+      "text": "scanning through every element in a 2d"
+    },
+    {
+      "start": 171.66,
+      "end": 176.82,
+      "text": "Matrix and whenever I am standing at an"
+    },
+    {
+      "start": 174.18,
+      "end": 179.7,
+      "text": "element I check for its left counterpart"
+    },
+    {
+      "start": 176.82,
+      "end": 182.22,
+      "text": "check for its stop check for it's right"
+    },
+    {
+      "start": 179.7,
+      "end": 184.74,
+      "text": "check for its bottom if it is greater"
+    },
+    {
+      "start": 182.22,
+      "end": 186.72,
+      "text": "than all the four counterparts I will be"
+    },
+    {
+      "start": 184.74,
+      "end": 188.52,
+      "text": "calling that element as a peak element"
+    },
+    {
+      "start": 186.72,
+      "end": 190.5,
+      "text": "so if I am scanning through every"
+    },
+    {
+      "start": 188.52,
+      "end": 192.78,
+      "text": "element if I'm scanning through every"
+    },
+    {
+      "start": 190.5,
+      "end": 195.54,
+      "text": "element what can be the worst possible"
+    },
+    {
+      "start": 192.78,
+      "end": 198.66,
+      "text": "scenario I'll be scanning to everyone in"
+    },
+    {
+      "start": 195.54,
+      "end": 200.76,
+      "text": "the last element isn't it so it will be"
+    },
+    {
+      "start": 198.66,
+      "end": 203.04,
+      "text": "n cross n because that is the number of"
+    },
+    {
+      "start": 200.76,
+      "end": 205.26,
+      "text": "elements in the 2D Matrix and if I'm"
+    },
+    {
+      "start": 203.04,
+      "end": 206.94,
+      "text": "checking whenever I am standing on an"
+    },
+    {
+      "start": 205.26,
+      "end": 209.52,
+      "text": "element I am checking for four"
+    },
+    {
+      "start": 206.94,
+      "end": 211.56,
+      "text": "directions so for every element I'm"
+    },
+    {
+      "start": 209.52,
+      "end": 214.14,
+      "text": "checking in four directions so can I say"
+    },
+    {
+      "start": 211.56,
+      "end": 216.78,
+      "text": "that the overall time complexity the"
+    },
+    {
+      "start": 214.14,
+      "end": 220.08,
+      "text": "worst possible case will be n cross n"
+    },
+    {
+      "start": 216.78,
+      "end": 224.34,
+      "text": "cross 4 I can right can I optimize this"
+    },
+    {
+      "start": 220.08,
+      "end": 226.14,
+      "text": "I can but by a slight margin now for the"
+    },
+    {
+      "start": 224.34,
+      "end": 227.7,
+      "text": "best possible case it will be you just"
+    },
+    {
+      "start": 226.14,
+      "end": 229.92,
+      "text": "find out the first element to be the"
+    },
+    {
+      "start": 227.7,
+      "end": 232.68,
+      "text": "peak element on an average it'll be"
+    },
+    {
+      "start": 229.92,
+      "end": 234.9,
+      "text": "somewhere in between only in the worst"
+    },
+    {
+      "start": 232.68,
+      "end": 236.94,
+      "text": "case scenario the last possible element"
+    },
+    {
+      "start": 234.9,
+      "end": 238.8,
+      "text": "will be your Peak element and that is"
+    },
+    {
+      "start": 236.94,
+      "end": 241.98,
+      "text": "when this particular complexity will"
+    },
+    {
+      "start": 238.8,
+      "end": 244.14,
+      "text": "appear I can only optimize the worst"
+    },
+    {
+      "start": 241.98,
+      "end": 246.9,
+      "text": "case scenario I cannot optimize the best"
+    },
+    {
+      "start": 244.14,
+      "end": 249.42,
+      "text": "case I cannot optimize the average case"
+    },
+    {
+      "start": 246.9,
+      "end": 252.12,
+      "text": "I can definitely optimize the worst case"
+    },
+    {
+      "start": 249.42,
+      "end": 255.66,
+      "text": "scenario how can I see"
+    },
+    {
+      "start": 252.12,
+      "end": 257.82,
+      "text": "if I just return the largest element"
+    },
+    {
+      "start": 255.66,
+      "end": 261.54,
+      "text": "in The Matrix that will be my answer"
+    },
+    {
+      "start": 257.82,
+      "end": 264.96,
+      "text": "over here 9 yeah 9 is the largest but"
+    },
+    {
+      "start": 261.54,
+      "end": 267.6,
+      "text": "simply return 9 that will suffice so if"
+    },
+    {
+      "start": 264.96,
+      "end": 270.24,
+      "text": "I go by the approach of finding the"
+    },
+    {
+      "start": 267.6,
+      "end": 272.16,
+      "text": "largest element in a 2d Matrix even in"
+    },
+    {
+      "start": 270.24,
+      "end": 274.2,
+      "text": "the best case I'll have to scan through"
+    },
+    {
+      "start": 272.16,
+      "end": 277.02,
+      "text": "every element from the first to the last"
+    },
+    {
+      "start": 274.2,
+      "end": 279.3,
+      "text": "even in the average case we have to scan"
+    },
+    {
+      "start": 277.02,
+      "end": 280.5,
+      "text": "through every element even at the worst"
+    },
+    {
+      "start": 279.3,
+      "end": 283.5,
+      "text": "case I have to scan through every"
+    },
+    {
+      "start": 280.5,
+      "end": 285.66,
+      "text": "element so the complexity will boil down"
+    },
+    {
+      "start": 283.5,
+      "end": 288.0,
+      "text": "to n cross M but this will be a"
+    },
+    {
+      "start": 285.66,
+      "end": 291.06,
+      "text": "complexity for best average and the"
+    },
+    {
+      "start": 288.0,
+      "end": 294.06,
+      "text": "worst case complexity so not that much"
+    },
+    {
+      "start": 291.06,
+      "end": 296.22,
+      "text": "of optimizations now will this be"
+    },
+    {
+      "start": 294.06,
+      "end": 298.26,
+      "text": "accepted in an interview no they'll ask"
+    },
+    {
+      "start": 296.22,
+      "end": 300.18,
+      "text": "you to optimize this so I've been asked"
+    },
+    {
+      "start": 298.26,
+      "end": 301.98,
+      "text": "to optimize n cross M and this"
+    },
+    {
+      "start": 300.18,
+      "end": 304.14,
+      "text": "particular problem we have a 2d Matrix"
+    },
+    {
+      "start": 301.98,
+      "end": 307.08,
+      "text": "and the total number of elements in the"
+    },
+    {
+      "start": 304.14,
+      "end": 309.6,
+      "text": "2D Matrix is n cross n so the algorithm"
+    },
+    {
+      "start": 307.08,
+      "end": 312.06,
+      "text": "that we have figured out is equivalent"
+    },
+    {
+      "start": 309.6,
+      "end": 313.86,
+      "text": "to the search space right so we're"
+    },
+    {
+      "start": 312.06,
+      "end": 316.26,
+      "text": "searching for a peak element now they"
+    },
+    {
+      "start": 313.86,
+      "end": 318.12,
+      "text": "are asking us to optimize I cannot go"
+    },
+    {
+      "start": 316.26,
+      "end": 320.46,
+      "text": "through every element because if I've"
+    },
+    {
+      "start": 318.12,
+      "end": 322.62,
+      "text": "been asked to optimize n cross M that"
+    },
+    {
+      "start": 320.46,
+      "end": 325.02,
+      "text": "technically means I have to trim down in"
+    },
+    {
+      "start": 322.62,
+      "end": 326.76,
+      "text": "Cross M which means I cannot Vapor every"
+    },
+    {
+      "start": 325.02,
+      "end": 329.94,
+      "text": "element if I cannot go through every"
+    },
+    {
+      "start": 326.76,
+      "end": 332.4,
+      "text": "element which means I have to delete I"
+    },
+    {
+      "start": 329.94,
+      "end": 334.44,
+      "text": "have to skip some portion of the search"
+    },
+    {
+      "start": 332.4,
+      "end": 336.54,
+      "text": "space and that is when you start"
+    },
+    {
+      "start": 334.44,
+      "end": 338.7,
+      "text": "thinking of algorithms and that's when"
+    },
+    {
+      "start": 336.54,
+      "end": 340.5,
+      "text": "binary search comes in because searching"
+    },
+    {
+      "start": 338.7,
+      "end": 343.92,
+      "text": "algorithm cannot go through everyone"
+    },
+    {
+      "start": 340.5,
+      "end": 345.66,
+      "text": "have to skip I think man research is a"
+    },
+    {
+      "start": 343.92,
+      "end": 347.58,
+      "text": "potential candidate and I start thinking"
+    },
+    {
+      "start": 345.66,
+      "end": 348.84,
+      "text": "in the direction of binary search so"
+    },
+    {
+      "start": 347.58,
+      "end": 351.18,
+      "text": "before I move on to the binary search"
+    },
+    {
+      "start": 348.84,
+      "end": 354.06,
+      "text": "approach please please make sure that"
+    },
+    {
+      "start": 351.18,
+      "end": 355.92,
+      "text": "you should have seen the part one of"
+    },
+    {
+      "start": 354.06,
+      "end": 357.72,
+      "text": "this particular problem in case you"
+    },
+    {
+      "start": 355.92,
+      "end": 359.82,
+      "text": "haven't seen it or is in case it has"
+    },
+    {
+      "start": 357.72,
+      "end": 361.8,
+      "text": "been a very long time please pause this"
+    },
+    {
+      "start": 359.82,
+      "end": 364.02,
+      "text": "video right away find the link in the"
+    },
+    {
+      "start": 361.8,
+      "end": 366.0,
+      "text": "description go back and watch it get the"
+    },
+    {
+      "start": 364.02,
+      "end": 367.74,
+      "text": "intuition again back in your head and"
+    },
+    {
+      "start": 366.0,
+      "end": 370.26,
+      "text": "then start watching it because whatever"
+    },
+    {
+      "start": 367.74,
+      "end": 372.6,
+      "text": "intuition I've used in the part one I'll"
+    },
+    {
+      "start": 370.26,
+      "end": 375.36,
+      "text": "be using that over here so if you"
+    },
+    {
+      "start": 372.6,
+      "end": 378.0,
+      "text": "remember in part one I stated this thing"
+    },
+    {
+      "start": 375.36,
+      "end": 381.24,
+      "text": "that we're gonna use binary search and"
+    },
+    {
+      "start": 378.0,
+      "end": 384.72,
+      "text": "whenever we are standing on the mid that"
+    },
+    {
+      "start": 381.24,
+      "end": 388.5,
+      "text": "mid will be the peak element only if"
+    },
+    {
+      "start": 384.72,
+      "end": 390.18,
+      "text": "it's greater than both of its left and"
+    },
+    {
+      "start": 388.5,
+      "end": 392.64,
+      "text": "right counterpart and that is very"
+    },
+    {
+      "start": 390.18,
+      "end": 394.98,
+      "text": "obvious because if you're standing at a"
+    },
+    {
+      "start": 392.64,
+      "end": 397.8,
+      "text": "peak and it's greater than left and"
+    },
+    {
+      "start": 394.98,
+      "end": 401.94,
+      "text": "right that's a peak element you stop but"
+    },
+    {
+      "start": 397.8,
+      "end": 404.28,
+      "text": "in case this mid element was smaller"
+    },
+    {
+      "start": 401.94,
+      "end": 406.56,
+      "text": "than the right part was smaller than the"
+    },
+    {
+      "start": 404.28,
+      "end": 409.08,
+      "text": "right part which means imagine you're"
+    },
+    {
+      "start": 406.56,
+      "end": 411.06,
+      "text": "standing here and the right part this is"
+    },
+    {
+      "start": 409.08,
+      "end": 412.62,
+      "text": "the right part so it's smaller than the"
+    },
+    {
+      "start": 411.06,
+      "end": 416.46,
+      "text": "right part it's smaller than the right"
+    },
+    {
+      "start": 412.62,
+      "end": 418.86,
+      "text": "part which means there is definitely a"
+    },
+    {
+      "start": 416.46,
+      "end": 421.38,
+      "text": "peak there is definitely a peak on the"
+    },
+    {
+      "start": 418.86,
+      "end": 423.54,
+      "text": "right just think it as a mountain range"
+    },
+    {
+      "start": 421.38,
+      "end": 426.3,
+      "text": "think it as a mountain range if you're"
+    },
+    {
+      "start": 423.54,
+      "end": 428.04,
+      "text": "standing here the mountain has to go up"
+    },
+    {
+      "start": 426.3,
+      "end": 430.56,
+      "text": "has to go up before it goes down"
+    },
+    {
+      "start": 428.04,
+      "end": 433.74,
+      "text": "somewhere it will go down because it is"
+    },
+    {
+      "start": 430.56,
+      "end": 437.28,
+      "text": "clearly stated outside of VRA it is -1"
+    },
+    {
+      "start": 433.74,
+      "end": 440.28,
+      "text": "so even if even if"
+    },
+    {
+      "start": 437.28,
+      "end": 442.08,
+      "text": "it doesn't doesn't goes down I'm very"
+    },
+    {
+      "start": 440.28,
+      "end": 443.64,
+      "text": "sure there will be a minus one at the"
+    },
+    {
+      "start": 442.08,
+      "end": 446.7,
+      "text": "outer portion of the array because that"
+    },
+    {
+      "start": 443.64,
+      "end": 449.04,
+      "text": "is stated thereby whenever I am standing"
+    },
+    {
+      "start": 446.7,
+      "end": 452.16,
+      "text": "here and the right portion is actually"
+    },
+    {
+      "start": 449.04,
+      "end": 455.64,
+      "text": "greater I eliminate the left half right"
+    },
+    {
+      "start": 452.16,
+      "end": 457.32,
+      "text": "in the part one and similarly if the"
+    },
+    {
+      "start": 455.64,
+      "end": 459.84,
+      "text": "male is"
+    },
+    {
+      "start": 457.32,
+      "end": 460.98,
+      "text": "smaller than the left which means is"
+    },
+    {
+      "start": 459.84,
+      "end": 462.9,
+      "text": "standing here"
+    },
+    {
+      "start": 460.98,
+      "end": 465.0,
+      "text": "yes you're standing here and this is"
+    },
+    {
+      "start": 462.9,
+      "end": 467.7,
+      "text": "your left and it is smaller than the"
+    },
+    {
+      "start": 465.0,
+      "end": 470.4,
+      "text": "left thereby I'm very sure that this is"
+    },
+    {
+      "start": 467.7,
+      "end": 473.28,
+      "text": "the inclination of the mountain thereby"
+    },
+    {
+      "start": 470.4,
+      "end": 474.96,
+      "text": "you delete the right half this is the"
+    },
+    {
+      "start": 473.28,
+      "end": 477.84,
+      "text": "intuition that we followed in part one"
+    },
+    {
+      "start": 474.96,
+      "end": 480.24,
+      "text": "we follow the similar intuition in part"
+    },
+    {
+      "start": 477.84,
+      "end": 484.32,
+      "text": "two as well so let's try to solve it"
+    },
+    {
+      "start": 480.24,
+      "end": 485.88,
+      "text": "what I'll try to do is I have six rows"
+    },
+    {
+      "start": 484.32,
+      "end": 488.82,
+      "text": "I'll take"
+    },
+    {
+      "start": 485.88,
+      "end": 491.1,
+      "text": "load to be standing at"
+    },
+    {
+      "start": 488.82,
+      "end": 494.72,
+      "text": "the zeroth row and the high to be"
+    },
+    {
+      "start": 491.1,
+      "end": 494.72,
+      "text": "standing in the fifth row"
+    },
+    {
+      "start": 495.54,
+      "end": 502.56,
+      "text": "I'll try to have the algorithm"
+    },
+    {
+      "start": 499.44,
+      "end": 504.54,
+      "text": "what is mid for the first scenario"
+    },
+    {
+      "start": 502.56,
+      "end": 506.82,
+      "text": "the mid will be zero plus five by two"
+    },
+    {
+      "start": 504.54,
+      "end": 508.62,
+      "text": "that's the second row which is the"
+    },
+    {
+      "start": 506.82,
+      "end": 512.16,
+      "text": "second row can I say this is the second"
+    },
+    {
+      "start": 508.62,
+      "end": 514.92,
+      "text": "row tell me one day in the second row"
+    },
+    {
+      "start": 512.16,
+      "end": 516.42,
+      "text": "which element has the highest"
+    },
+    {
+      "start": 514.92,
+      "end": 519.78,
+      "text": "possibility of being the peak element"
+    },
+    {
+      "start": 516.42,
+      "end": 522.66,
+      "text": "just think can I say whoever is the"
+    },
+    {
+      "start": 519.78,
+      "end": 525.6,
+      "text": "largest has the highest probability yes"
+    },
+    {
+      "start": 522.66,
+      "end": 528.68,
+      "text": "someone else might have mind me but who"
+    },
+    {
+      "start": 525.6,
+      "end": 530.7,
+      "text": "has the highest probability can I say"
+    },
+    {
+      "start": 528.68,
+      "end": 533.22,
+      "text": "definitely has the highest probability"
+    },
+    {
+      "start": 530.7,
+      "end": 536.52,
+      "text": "because that's the largest element so"
+    },
+    {
+      "start": 533.22,
+      "end": 539.76,
+      "text": "I'll be like okay fine who's the max"
+    },
+    {
+      "start": 536.52,
+      "end": 542.34,
+      "text": "Max is six where is it here"
+    },
+    {
+      "start": 539.76,
+      "end": 545.88,
+      "text": "let's see if this can be a peak element"
+    },
+    {
+      "start": 542.34,
+      "end": 549.3,
+      "text": "I stand at six it's greater it's greater"
+    },
+    {
+      "start": 545.88,
+      "end": 552.78,
+      "text": "it's greater it's greater than all its"
+    },
+    {
+      "start": 549.3,
+      "end": 556.56,
+      "text": "three counterparts but it's not greater"
+    },
+    {
+      "start": 552.78,
+      "end": 559.62,
+      "text": "than its left counterpart thereby 6"
+    },
+    {
+      "start": 556.56,
+      "end": 561.6,
+      "text": "cannot be a peak element thereby 6"
+    },
+    {
+      "start": 559.62,
+      "end": 564.72,
+      "text": "cannot be a peak element"
+    },
+    {
+      "start": 561.6,
+      "end": 566.7,
+      "text": "hence you say that 6 cannot be a peak"
+    },
+    {
+      "start": 564.72,
+      "end": 568.38,
+      "text": "element now you need to Omit some"
+    },
+    {
+      "start": 566.7,
+      "end": 570.54,
+      "text": "portion because"
+    },
+    {
+      "start": 568.38,
+      "end": 572.34,
+      "text": "six can never be a peak element and if"
+    },
+    {
+      "start": 570.54,
+      "end": 573.66,
+      "text": "you go on checking every element you"
+    },
+    {
+      "start": 572.34,
+      "end": 575.52,
+      "text": "will not be able to optimize so you"
+    },
+    {
+      "start": 573.66,
+      "end": 578.52,
+      "text": "don't go and check every element you"
+    },
+    {
+      "start": 575.52,
+      "end": 580.56,
+      "text": "check for six and you say that this is"
+    },
+    {
+      "start": 578.52,
+      "end": 582.24,
+      "text": "not my Peak element now the question"
+    },
+    {
+      "start": 580.56,
+      "end": 585.66,
+      "text": "arises"
+    },
+    {
+      "start": 582.24,
+      "end": 587.22,
+      "text": "you took 0 and 5 to be low and high now"
+    },
+    {
+      "start": 585.66,
+      "end": 589.02,
+      "text": "you're standing at"
+    },
+    {
+      "start": 587.22,
+      "end": 590.4,
+      "text": "second column"
+    },
+    {
+      "start": 589.02,
+      "end": 592.62,
+      "text": "do you"
+    },
+    {
+      "start": 590.4,
+      "end": 594.66,
+      "text": "delete the left half or do you delete"
+    },
+    {
+      "start": 592.62,
+      "end": 596.4,
+      "text": "the write half is the question because"
+    },
+    {
+      "start": 594.66,
+      "end": 597.24,
+      "text": "that is how we have been doing binary"
+    },
+    {
+      "start": 596.4,
+      "end": 599.1,
+      "text": "search"
+    },
+    {
+      "start": 597.24,
+      "end": 600.9,
+      "text": "let's start going back to this"
+    },
+    {
+      "start": 599.1,
+      "end": 602.04,
+      "text": "particular intuition and I think Hey"
+    },
+    {
+      "start": 600.9,
+      "end": 605.64,
+      "text": "listen"
+    },
+    {
+      "start": 602.04,
+      "end": 609.18,
+      "text": "why is six not a peak element"
+    },
+    {
+      "start": 605.64,
+      "end": 612.06,
+      "text": "the only reason is there is someone on"
+    },
+    {
+      "start": 609.18,
+      "end": 616.02,
+      "text": "the left who is greater there's someone"
+    },
+    {
+      "start": 612.06,
+      "end": 616.92,
+      "text": "on the left who else greater right can I"
+    },
+    {
+      "start": 616.02,
+      "end": 620.16,
+      "text": "say"
+    },
+    {
+      "start": 616.92,
+      "end": 623.28,
+      "text": "if this is 6 and this is 7 is someone on"
+    },
+    {
+      "start": 620.16,
+      "end": 626.04,
+      "text": "the left is greater so maybe delete the"
+    },
+    {
+      "start": 623.28,
+      "end": 629.16,
+      "text": "right off yes I go ahead and I say"
+    },
+    {
+      "start": 626.04,
+      "end": 631.5,
+      "text": "delete the right half yes I delete the"
+    },
+    {
+      "start": 629.16,
+      "end": 635.04,
+      "text": "right half the moment I delete the high"
+    },
+    {
+      "start": 631.5,
+      "end": 637.8,
+      "text": "will my bad the high will come here"
+    },
+    {
+      "start": 635.04,
+      "end": 640.26,
+      "text": "yes so low will be at zero high will be"
+    },
+    {
+      "start": 637.8,
+      "end": 642.84,
+      "text": "at one let me quickly erase it"
+    },
+    {
+      "start": 640.26,
+      "end": 645.84,
+      "text": "so can I say low is at zero and high is"
+    },
+    {
+      "start": 642.84,
+      "end": 649.32,
+      "text": "at one thereby the mid will be zero plus"
+    },
+    {
+      "start": 645.84,
+      "end": 652.68,
+      "text": "one by two that's zero so if the mid is"
+    },
+    {
+      "start": 649.32,
+      "end": 654.6,
+      "text": "0 who has the highest probability again"
+    },
+    {
+      "start": 652.68,
+      "end": 656.28,
+      "text": "technically if I take the max element"
+    },
+    {
+      "start": 654.6,
+      "end": 658.5,
+      "text": "that will always have the highest"
+    },
+    {
+      "start": 656.28,
+      "end": 659.76,
+      "text": "probability and four"
+    },
+    {
+      "start": 658.5,
+      "end": 664.5,
+      "text": "yes"
+    },
+    {
+      "start": 659.76,
+      "end": 666.84,
+      "text": "now I see 4 is greater then it's left 4"
+    },
+    {
+      "start": 664.5,
+      "end": 669.66,
+      "text": "is greater than 2 4 is greater than its"
+    },
+    {
+      "start": 666.84,
+      "end": 672.96,
+      "text": "bottom and at the same time 4 is greater"
+    },
+    {
+      "start": 669.66,
+      "end": 677.16,
+      "text": "than its top thereby I say"
+    },
+    {
+      "start": 672.96,
+      "end": 679.26,
+      "text": "the max element 4 is my S is my Peak"
+    },
+    {
+      "start": 677.16,
+      "end": 680.94,
+      "text": "element and we stop yeah I know nine"
+    },
+    {
+      "start": 679.26,
+      "end": 683.4,
+      "text": "nine could have been an answer seven"
+    },
+    {
+      "start": 680.94,
+      "end": 685.32,
+      "text": "could have been an answer but we figured"
+    },
+    {
+      "start": 683.4,
+      "end": 687.66,
+      "text": "out an element and that is what we"
+    },
+    {
+      "start": 685.32,
+      "end": 690.12,
+      "text": "require just one and that is where we"
+    },
+    {
+      "start": 687.66,
+      "end": 692.82,
+      "text": "stop so part one was simple because it"
+    },
+    {
+      "start": 690.12,
+      "end": 694.68,
+      "text": "was a 1D array it was easy to visualize"
+    },
+    {
+      "start": 692.82,
+      "end": 697.2,
+      "text": "and the part two you might have couple"
+    },
+    {
+      "start": 694.68,
+      "end": 700.08,
+      "text": "of questions the first one is"
+    },
+    {
+      "start": 697.2,
+      "end": 702.48,
+      "text": "why are we taking the max element and"
+    },
+    {
+      "start": 700.08,
+      "end": 704.22,
+      "text": "the second one might be might be I'm not"
+    },
+    {
+      "start": 702.48,
+      "end": 707.22,
+      "text": "sure if you have this question"
+    },
+    {
+      "start": 704.22,
+      "end": 709.02,
+      "text": "you said 6 is not the peak element and"
+    },
+    {
+      "start": 707.22,
+      "end": 712.74,
+      "text": "you eliminated the right half and you"
+    },
+    {
+      "start": 709.02,
+      "end": 714.54,
+      "text": "moved left on the basis that 7 is"
+    },
+    {
+      "start": 712.74,
+      "end": 716.82,
+      "text": "greater than 6."
+    },
+    {
+      "start": 714.54,
+      "end": 720.06,
+      "text": "thinking that Federal mind me or Peak"
+    },
+    {
+      "start": 716.82,
+      "end": 722.52,
+      "text": "but wait wait someone nine might be my"
+    },
+    {
+      "start": 720.06,
+      "end": 724.74,
+      "text": "Peak Seven might not be because 7 is"
+    },
+    {
+      "start": 722.52,
+      "end": 727.98,
+      "text": "smaller than nine so how are you"
+    },
+    {
+      "start": 724.74,
+      "end": 729.3,
+      "text": "managing this vertical alignment not"
+    },
+    {
+      "start": 727.98,
+      "end": 731.82,
+      "text": "vertical how are you managing this"
+    },
+    {
+      "start": 729.3,
+      "end": 734.16,
+      "text": "alignment whatever it is so"
+    },
+    {
+      "start": 731.82,
+      "end": 737.52,
+      "text": "let me first answer this question why am"
+    },
+    {
+      "start": 734.16,
+      "end": 738.84,
+      "text": "I taking Max so whenever I'm taking an"
+    },
+    {
+      "start": 737.52,
+      "end": 741.9,
+      "text": "element"
+    },
+    {
+      "start": 738.84,
+      "end": 744.6,
+      "text": "when when do I call it a peak element if"
+    },
+    {
+      "start": 741.9,
+      "end": 748.02,
+      "text": "it's greater than its top greater than"
+    },
+    {
+      "start": 744.6,
+      "end": 749.64,
+      "text": "its bottom left and right now if I'm"
+    },
+    {
+      "start": 748.02,
+      "end": 753.12,
+      "text": "taking Max"
+    },
+    {
+      "start": 749.64,
+      "end": 755.7,
+      "text": "in this case 6 am I very sure that it'll"
+    },
+    {
+      "start": 753.12,
+      "end": 758.1,
+      "text": "be greater than its top and bottom I'm"
+    },
+    {
+      "start": 755.7,
+      "end": 761.16,
+      "text": "very much sure about it I'm left out"
+    },
+    {
+      "start": 758.1,
+      "end": 763.5,
+      "text": "with two cases which is the left and the"
+    },
+    {
+      "start": 761.16,
+      "end": 766.2,
+      "text": "right that's what I have to check the"
+    },
+    {
+      "start": 763.5,
+      "end": 768.12,
+      "text": "kind of kind of boils down to a 1D array"
+    },
+    {
+      "start": 766.2,
+      "end": 770.58,
+      "text": "case because I don't need to check for"
+    },
+    {
+      "start": 768.12,
+      "end": 773.4,
+      "text": "these cases kind of balls don't do 1D"
+    },
+    {
+      "start": 770.58,
+      "end": 776.04,
+      "text": "array scenario right that is why I'm"
+    },
+    {
+      "start": 773.4,
+      "end": 778.92,
+      "text": "taking Max because I'm trying to go in"
+    },
+    {
+      "start": 776.04,
+      "end": 780.9,
+      "text": "the direction of 1D got it are you now"
+    },
+    {
+      "start": 778.92,
+      "end": 781.68,
+      "text": "your second question comes in whatsoever"
+    },
+    {
+      "start": 780.9,
+      "end": 784.92,
+      "text": "then"
+    },
+    {
+      "start": 781.68,
+      "end": 787.02,
+      "text": "how do you manage seven because it has a"
+    },
+    {
+      "start": 784.92,
+      "end": 789.96,
+      "text": "vertical alignment as well this is what"
+    },
+    {
+      "start": 787.02,
+      "end": 793.62,
+      "text": "I'll now explain tell you one thing if 7"
+    },
+    {
+      "start": 789.96,
+      "end": 795.96,
+      "text": "is greater than 6. I'm saying 7 my DBI"
+    },
+    {
+      "start": 793.62,
+      "end": 798.36,
+      "text": "Peak according to the intuition thereby"
+    },
+    {
+      "start": 795.96,
+      "end": 801.0,
+      "text": "I am going left seven might be my Peak"
+    },
+    {
+      "start": 798.36,
+      "end": 804.06,
+      "text": "but 7 is not there's someone 9 which is"
+    },
+    {
+      "start": 801.0,
+      "end": 806.4,
+      "text": "greater tell me one thing"
+    },
+    {
+      "start": 804.06,
+      "end": 808.74,
+      "text": "if 7 is greater than 6"
+    },
+    {
+      "start": 806.4,
+      "end": 810.9,
+      "text": "which technically means I repeat which"
+    },
+    {
+      "start": 808.74,
+      "end": 813.48,
+      "text": "technically means 7 is greater than"
+    },
+    {
+      "start": 810.9,
+      "end": 814.8,
+      "text": "everyone here right"
+    },
+    {
+      "start": 813.48,
+      "end": 817.2,
+      "text": "hence"
+    },
+    {
+      "start": 814.8,
+      "end": 819.54,
+      "text": "nine is also greater than everyone here"
+    },
+    {
+      "start": 817.2,
+      "end": 821.04,
+      "text": "right hence 9 is also greater than"
+    },
+    {
+      "start": 819.54,
+      "end": 823.08,
+      "text": "everyone here"
+    },
+    {
+      "start": 821.04,
+      "end": 825.6,
+      "text": "indeed because if 7 is greater than 6"
+    },
+    {
+      "start": 823.08,
+      "end": 828.0,
+      "text": "any 1 greater than 7 will also be"
+    },
+    {
+      "start": 825.6,
+      "end": 830.16,
+      "text": "greater than this hence this alignment"
+    },
+    {
+      "start": 828.0,
+      "end": 832.86,
+      "text": "is maintained even if you cancel of"
+    },
+    {
+      "start": 830.16,
+      "end": 834.78,
+      "text": "every one you're considering I'm not"
+    },
+    {
+      "start": 832.86,
+      "end": 837.0,
+      "text": "saying 7 is definitely my Peak I'm"
+    },
+    {
+      "start": 834.78,
+      "end": 840.3,
+      "text": "considering it to be my P and if it is"
+    },
+    {
+      "start": 837.0,
+      "end": 842.4,
+      "text": "not someone else a is greater than 7"
+    },
+    {
+      "start": 840.3,
+      "end": 845.1,
+      "text": "will always be greater than its right"
+    },
+    {
+      "start": 842.4,
+      "end": 846.84,
+      "text": "part and the bottom part I just need to"
+    },
+    {
+      "start": 845.1,
+      "end": 848.52,
+      "text": "check out the other parts and eventually"
+    },
+    {
+      "start": 846.84,
+      "end": 851.58,
+      "text": "the algorithm will flow you can take a"
+    },
+    {
+      "start": 848.52,
+      "end": 854.1,
+      "text": "bigger Matrix but just think on it"
+    },
+    {
+      "start": 851.58,
+      "end": 856.2,
+      "text": "you'll still start understanding it"
+    },
+    {
+      "start": 854.1,
+      "end": 858.72,
+      "text": "the core is if the intuition for the"
+    },
+    {
+      "start": 856.2,
+      "end": 861.42,
+      "text": "part one is Crystal Clear you'll"
+    },
+    {
+      "start": 858.72,
+      "end": 863.52,
+      "text": "understand this as well so as usual I'll"
+    },
+    {
+      "start": 861.42,
+      "end": 865.62,
+      "text": "be writing code in pseudocode I'm not"
+    },
+    {
+      "start": 863.52,
+      "end": 868.02,
+      "text": "sure why people on Twitter on LinkedIn"
+    },
+    {
+      "start": 865.62,
+      "end": 869.76,
+      "text": "say that my courses in C plus plus I"
+    },
+    {
+      "start": 868.02,
+      "end": 871.56,
+      "text": "don't write code in C plus plus I write"
+    },
+    {
+      "start": 869.76,
+      "end": 873.54,
+      "text": "sudo code a to understand this is"
+    },
+    {
+      "start": 871.56,
+      "end": 875.34,
+      "text": "pseudocode this is not C plus plus Java"
+    },
+    {
+      "start": 873.54,
+      "end": 877.44,
+      "text": "please please if someone is saying I"
+    },
+    {
+      "start": 875.34,
+      "end": 879.66,
+      "text": "teach in C plus plus correct them tell"
+    },
+    {
+      "start": 877.44,
+      "end": 881.64,
+      "text": "them that Raj teaches in pseudocode"
+    },
+    {
+      "start": 879.66,
+      "end": 883.68,
+      "text": "version and then you can write any code"
+    },
+    {
+      "start": 881.64,
+      "end": 885.6,
+      "text": "in any language got it so we'll be"
+    },
+    {
+      "start": 883.68,
+      "end": 888.18,
+      "text": "writing the code"
+    },
+    {
+      "start": 885.6,
+      "end": 891.42,
+      "text": "so I have a function which is given a"
+    },
+    {
+      "start": 888.18,
+      "end": 893.76,
+      "text": "matrix and assume it's given an N M if"
+    },
+    {
+      "start": 891.42,
+      "end": 896.7,
+      "text": "not given you can find it out can I say"
+    },
+    {
+      "start": 893.76,
+      "end": 899.28,
+      "text": "the low will be 0 and the high will be"
+    },
+    {
+      "start": 896.7,
+      "end": 901.08,
+      "text": "the last column which is M minus 1 very"
+    },
+    {
+      "start": 899.28,
+      "end": 902.64,
+      "text": "much sure"
+    },
+    {
+      "start": 901.08,
+      "end": 904.56,
+      "text": "let's quickly write down the binary"
+    },
+    {
+      "start": 902.64,
+      "end": 906.72,
+      "text": "search the binary search will go from"
+    },
+    {
+      "start": 904.56,
+      "end": 909.54,
+      "text": "low lesser than High"
+    },
+    {
+      "start": 906.72,
+      "end": 912.66,
+      "text": "correct what will I do and the first"
+    },
+    {
+      "start": 909.54,
+      "end": 913.56,
+      "text": "time I'll do low plus High by 2 to get"
+    },
+    {
+      "start": 912.66,
+      "end": 915.84,
+      "text": "them"
+    },
+    {
+      "start": 913.56,
+      "end": 918.72,
+      "text": "mid column can I say this will be the"
+    },
+    {
+      "start": 915.84,
+      "end": 922.02,
+      "text": "mid column now what am I doing"
+    },
+    {
+      "start": 918.72,
+      "end": 926.82,
+      "text": "what am I doing I'm trying to figure out"
+    },
+    {
+      "start": 922.02,
+      "end": 930.3,
+      "text": "where like at which rho is my"
+    },
+    {
+      "start": 926.82,
+      "end": 931.92,
+      "text": "X element figure out that Rhona"
+    },
+    {
+      "start": 930.3,
+      "end": 934.86,
+      "text": "figure out the row where your max"
+    },
+    {
+      "start": 931.92,
+      "end": 937.56,
+      "text": "element is maybe write a function which"
+    },
+    {
+      "start": 934.86,
+      "end": 940.98,
+      "text": "gives you the max element send them the"
+    },
+    {
+      "start": 937.56,
+      "end": 943.8,
+      "text": "Matrix send send them the n m and the"
+    },
+    {
+      "start": 940.98,
+      "end": 946.62,
+      "text": "column number so I think you can write a"
+    },
+    {
+      "start": 943.8,
+      "end": 950.16,
+      "text": "function that Returns the row number"
+    },
+    {
+      "start": 946.62,
+      "end": 951.54,
+      "text": "that returns this row number two stating"
+    },
+    {
+      "start": 950.16,
+      "end": 954.0,
+      "text": "the row number two as the max element"
+    },
+    {
+      "start": 951.54,
+      "end": 956.1,
+      "text": "you can do that right"
+    },
+    {
+      "start": 954.0,
+      "end": 958.08,
+      "text": "so I'll write that I'll show you"
+    },
+    {
+      "start": 956.1,
+      "end": 961.08,
+      "text": "afterwards in case you cannot snap the"
+    },
+    {
+      "start": 958.08,
+      "end": 963.66,
+      "text": "row at the mid what is my next stop"
+    },
+    {
+      "start": 961.08,
+      "end": 965.52,
+      "text": "to check the left and the right that's"
+    },
+    {
+      "start": 963.66,
+      "end": 968.22,
+      "text": "what I have to check can I say on the"
+    },
+    {
+      "start": 965.52,
+      "end": 969.66,
+      "text": "left what will be left what will be left"
+    },
+    {
+      "start": 968.22,
+      "end": 972.18,
+      "text": "think think"
+    },
+    {
+      "start": 969.66,
+      "end": 974.88,
+      "text": "it's on the same row so if I'm standing"
+    },
+    {
+      "start": 972.18,
+      "end": 977.34,
+      "text": "at Mid the left will be made minus 1 and"
+    },
+    {
+      "start": 974.88,
+      "end": 978.9,
+      "text": "the right will be mid plus one value"
+    },
+    {
+      "start": 977.34,
+      "end": 981.92,
+      "text": "so I'll take the left"
+    },
+    {
+      "start": 978.9,
+      "end": 981.92,
+      "text": "and I'll take the right"
+    },
+    {
+      "start": 982.08,
+      "end": 988.98,
+      "text": "so I'll be left left can I say that if"
+    },
+    {
+      "start": 985.62,
+      "end": 991.08,
+      "text": "mid minus 1 is greater than zero in case"
+    },
+    {
+      "start": 988.98,
+      "end": 995.28,
+      "text": "I can easily take the left to be"
+    },
+    {
+      "start": 991.08,
+      "end": 997.74,
+      "text": "whatever row we are at and mid minus 1"
+    },
+    {
+      "start": 995.28,
+      "end": 1000.08,
+      "text": "or else we can simply say"
+    },
+    {
+      "start": 997.74,
+      "end": 1003.8,
+      "text": "-1 because that's a small number"
+    },
+    {
+      "start": 1000.08,
+      "end": 1006.38,
+      "text": "on the right if mid plus 1 is still"
+    },
+    {
+      "start": 1003.8,
+      "end": 1009.86,
+      "text": "lesser than the boundary in that case we"
+    },
+    {
+      "start": 1006.38,
+      "end": 1013.7,
+      "text": "can take Matrix of rho of"
+    },
+    {
+      "start": 1009.86,
+      "end": 1015.8,
+      "text": "mid plus 1 or else on the outer part we"
+    },
+    {
+      "start": 1013.7,
+      "end": 1020.12,
+      "text": "will always take minus one so can I say"
+    },
+    {
+      "start": 1015.8,
+      "end": 1023.6,
+      "text": "if if if my value at Matrix of"
+    },
+    {
+      "start": 1020.12,
+      "end": 1027.38,
+      "text": "mid sorry uh"
+    },
+    {
+      "start": 1023.6,
+      "end": 1030.5,
+      "text": "row and the mid column is greater than"
+    },
+    {
+      "start": 1027.38,
+      "end": 1032.84,
+      "text": "left and and greater than right"
+    },
+    {
+      "start": 1030.5,
+      "end": 1035.3,
+      "text": "can I say this is my Peak element yes I"
+    },
+    {
+      "start": 1032.84,
+      "end": 1037.76,
+      "text": "can and thereby you can always return"
+    },
+    {
+      "start": 1035.3,
+      "end": 1039.44,
+      "text": "the row and the mid as the column"
+    },
+    {
+      "start": 1037.76,
+      "end": 1041.6,
+      "text": "perfect"
+    },
+    {
+      "start": 1039.44,
+      "end": 1044.6,
+      "text": "else if"
+    },
+    {
+      "start": 1041.6,
+      "end": 1047.6,
+      "text": "The Matrix is smaller than the left"
+    },
+    {
+      "start": 1044.6,
+      "end": 1049.64,
+      "text": "which indicates the left one is greater"
+    },
+    {
+      "start": 1047.6,
+      "end": 1052.88,
+      "text": "there is a possibility that the peak is"
+    },
+    {
+      "start": 1049.64,
+      "end": 1054.8,
+      "text": "on the left I say high equal to Mid"
+    },
+    {
+      "start": 1052.88,
+      "end": 1058.4,
+      "text": "minus 1."
+    },
+    {
+      "start": 1054.8,
+      "end": 1061.34,
+      "text": "or else I will go the opposite saying"
+    },
+    {
+      "start": 1058.4,
+      "end": 1063.38,
+      "text": "low equal to Mid plus 1 that's how it is"
+    },
+    {
+      "start": 1061.34,
+      "end": 1066.08,
+      "text": "done because if"
+    },
+    {
+      "start": 1063.38,
+      "end": 1067.34,
+      "text": "these condition is false either this is"
+    },
+    {
+      "start": 1066.08,
+      "end": 1069.5,
+      "text": "false or this is"
+    },
+    {
+      "start": 1067.34,
+      "end": 1071.3,
+      "text": "that is how it is done if this if is"
+    },
+    {
+      "start": 1069.5,
+      "end": 1073.28,
+      "text": "false which means either this is false"
+    },
+    {
+      "start": 1071.3,
+      "end": 1075.14,
+      "text": "or this is false so we just check for"
+    },
+    {
+      "start": 1073.28,
+      "end": 1077.54,
+      "text": "else if and the next else will be"
+    },
+    {
+      "start": 1075.14,
+      "end": 1080.42,
+      "text": "following and at the end you can just"
+    },
+    {
+      "start": 1077.54,
+      "end": 1082.46,
+      "text": "give a dummy return of minus 1 minus 1"
+    },
+    {
+      "start": 1080.42,
+      "end": 1085.82,
+      "text": "why"
+    },
+    {
+      "start": 1082.46,
+      "end": 1087.38,
+      "text": "because it's a function it will be x uh"
+    },
+    {
+      "start": 1085.82,
+      "end": 1089.6,
+      "text": "it'll be expecting you to return"
+    },
+    {
+      "start": 1087.38,
+      "end": 1091.52,
+      "text": "something so just give a dummy one"
+    },
+    {
+      "start": 1089.6,
+      "end": 1092.9,
+      "text": "so in all the cases you will be finding"
+    },
+    {
+      "start": 1091.52,
+      "end": 1094.4,
+      "text": "a peak element that is what the question"
+    },
+    {
+      "start": 1092.9,
+      "end": 1096.92,
+      "text": "is stating so don't worry about this"
+    },
+    {
+      "start": 1094.4,
+      "end": 1098.0,
+      "text": "this is just a dummy line that you have"
+    },
+    {
+      "start": 1096.92,
+      "end": 1100.1,
+      "text": "to write in order to complete the"
+    },
+    {
+      "start": 1098.0,
+      "end": 1101.78,
+      "text": "execution of code so let's quickly jump"
+    },
+    {
+      "start": 1100.1,
+      "end": 1103.88,
+      "text": "into the code editor you can find the C"
+    },
+    {
+      "start": 1101.78,
+      "end": 1105.62,
+      "text": "plus plus code on the screen in case you"
+    },
+    {
+      "start": 1103.88,
+      "end": 1106.94,
+      "text": "want the Java Python and JavaScript code"
+    },
+    {
+      "start": 1105.62,
+      "end": 1108.32,
+      "text": "the article link will be in the"
+    },
+    {
+      "start": 1106.94,
+      "end": 1110.48,
+      "text": "description you can definitely check it"
+    },
+    {
+      "start": 1108.32,
+      "end": 1112.04,
+      "text": "out I am opening this because I wanted"
+    },
+    {
+      "start": 1110.48,
+      "end": 1115.4,
+      "text": "to show you how to find the max index"
+    },
+    {
+      "start": 1112.04,
+      "end": 1118.88,
+      "text": "it's very obvious just go through this"
+    },
+    {
+      "start": 1115.4,
+      "end": 1120.32,
+      "text": "entire column which is having n rows and"
+    },
+    {
+      "start": 1118.88,
+      "end": 1122.24,
+      "text": "then you figure out whatever is the max"
+    },
+    {
+      "start": 1120.32,
+      "end": 1124.88,
+      "text": "value you store it at the end you return"
+    },
+    {
+      "start": 1122.24,
+      "end": 1127.88,
+      "text": "the index pretty simple and apart from"
+    },
+    {
+      "start": 1124.88,
+      "end": 1130.1,
+      "text": "that everything is self-explanatory we"
+    },
+    {
+      "start": 1127.88,
+      "end": 1131.72,
+      "text": "have written the same on the iPad and"
+    },
+    {
+      "start": 1130.1,
+      "end": 1133.22,
+      "text": "we're returning the dummy what I'll do"
+    },
+    {
+      "start": 1131.72,
+      "end": 1135.86,
+      "text": "is I'll quickly go ahead and submit this"
+    },
+    {
+      "start": 1133.22,
+      "end": 1138.14,
+      "text": "what will be the time complexity of this"
+    },
+    {
+      "start": 1135.86,
+      "end": 1139.88,
+      "text": "I'm doing a binary search so can I say"
+    },
+    {
+      "start": 1138.14,
+      "end": 1143.78,
+      "text": "I'm doing a binary search"
+    },
+    {
+      "start": 1139.88,
+      "end": 1144.86,
+      "text": "on the number of columns I can so what"
+    },
+    {
+      "start": 1143.78,
+      "end": 1147.62,
+      "text": "will be it"
+    },
+    {
+      "start": 1144.86,
+      "end": 1150.02,
+      "text": "can be logarithmic base to M for sure"
+    },
+    {
+      "start": 1147.62,
+      "end": 1153.2,
+      "text": "for binary search and on every binary"
+    },
+    {
+      "start": 1150.02,
+      "end": 1155.9,
+      "text": "search I'm scanning through entire yes"
+    },
+    {
+      "start": 1153.2,
+      "end": 1160.46,
+      "text": "entire column to find out the max so the"
+    },
+    {
+      "start": 1155.9,
+      "end": 1164.06,
+      "text": "column length is n can I say Migo of"
+    },
+    {
+      "start": 1160.46,
+      "end": 1166.34,
+      "text": "n into logarithmic base to m is my time"
+    },
+    {
+      "start": 1164.06,
+      "end": 1169.58,
+      "text": "complexity what about the extra space"
+    },
+    {
+      "start": 1166.34,
+      "end": 1171.2,
+      "text": "I'm not using any extra space so Migo 1"
+    },
+    {
+      "start": 1169.58,
+      "end": 1173.24,
+      "text": "is my space complexity and this will be"
+    },
+    {
+      "start": 1171.2,
+      "end": 1174.92,
+      "text": "the most optimal solution so this will"
+    },
+    {
+      "start": 1173.24,
+      "end": 1176.36,
+      "text": "wait for this problem in case you've"
+    },
+    {
+      "start": 1174.92,
+      "end": 1178.22,
+      "text": "understood the entire intuition the"
+    },
+    {
+      "start": 1176.36,
+      "end": 1179.48,
+      "text": "solution please do consider giving us a"
+    },
+    {
+      "start": 1178.22,
+      "end": 1180.86,
+      "text": "like and if you haven't checked out our"
+    },
+    {
+      "start": 1179.48,
+      "end": 1182.9,
+      "text": "merchandise store the link will be in"
+    },
+    {
+      "start": 1180.86,
+      "end": 1184.46,
+      "text": "the description and yeah if you're new"
+    },
+    {
+      "start": 1182.9,
+      "end": 1185.96,
+      "text": "to our channel do consider subscribing"
+    },
+    {
+      "start": 1184.46,
+      "end": 1187.82,
+      "text": "to us if you haven't followed me on"
+    },
+    {
+      "start": 1185.96,
+      "end": 1189.08,
+      "text": "Twitter Instagram LinkedIn all the"
+    },
+    {
+      "start": 1187.82,
+      "end": 1190.58,
+      "text": "profile links will be in the description"
+    },
+    {
+      "start": 1189.08,
+      "end": 1191.72,
+      "text": "for this I'll be wrapping up this video"
+    },
+    {
+      "start": 1190.58,
+      "end": 1193.18,
+      "text": "let's read in some of the video till"
+    },
+    {
+      "start": 1191.72,
+      "end": 1197.78,
+      "text": "then bye-bye take care"
+    },
+    {
+      "start": 1193.18,
+      "end": 1202.66,
+      "text": "[Music]"
+    },
+    {
+      "start": 1197.78,
+      "end": 1202.66,
+      "text": "you're golden I will find"
+    }
+  ]
+}

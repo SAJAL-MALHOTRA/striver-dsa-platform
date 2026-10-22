@@ -1,0 +1,5906 @@
+{
+  "video_id": "nGJmxkUJQGs",
+  "title": "DP 36. Buy and Sell Stock - II | Recursion to Space Optimisation",
+  "duration_sec": 2134,
+  "num_segments": 983,
+  "segments": [
+    {
+      "start": 0.08,
+      "end": 4.64,
+      "duration": 4.56,
+      "text": "hey everyone welcome back to take you"
+    },
+    {
+      "start": 1.52,
+      "end": 7.36,
+      "duration": 5.84,
+      "text": "forward so we will be continuing with dp"
+    },
+    {
+      "start": 4.64,
+      "end": 11.04,
+      "duration": 6.4,
+      "text": "on stocks and it is the second problem"
+    },
+    {
+      "start": 7.36,
+      "end": 13.2,
+      "duration": 5.84,
+      "text": "best time to buy and sell stock part two"
+    },
+    {
+      "start": 11.04,
+      "end": 14.64,
+      "duration": 3.6,
+      "text": "so what does the problem state you'll be"
+    },
+    {
+      "start": 13.2,
+      "end": 17.84,
+      "duration": 4.64,
+      "text": "given prices"
+    },
+    {
+      "start": 14.64,
+      "end": 20.4,
+      "duration": 5.76,
+      "text": "of stocks on each day yeah so you have"
+    },
+    {
+      "start": 17.84,
+      "end": 22.56,
+      "duration": 4.72,
+      "text": "been given the prices on each day"
+    },
+    {
+      "start": 20.4,
+      "end": 24.88,
+      "duration": 4.48,
+      "text": "now you're allowed to buy"
+    },
+    {
+      "start": 22.56,
+      "end": 27.12,
+      "duration": 4.56,
+      "text": "and sell stocks as the name suggests"
+    },
+    {
+      "start": 24.88,
+      "end": 28.24,
+      "duration": 3.36,
+      "text": "you're allowed to buy and sell"
+    },
+    {
+      "start": 27.12,
+      "end": 31.2,
+      "duration": 4.08,
+      "text": "stocks"
+    },
+    {
+      "start": 28.24,
+      "end": 33.28,
+      "duration": 5.04,
+      "text": "now in this part one what we did was you"
+    },
+    {
+      "start": 31.2,
+      "end": 36.88,
+      "duration": 5.68,
+      "text": "were allowed to buy once"
+    },
+    {
+      "start": 33.28,
+      "end": 39.68,
+      "duration": 6.4,
+      "text": "sell once but over here you can buy as"
+    },
+    {
+      "start": 36.88,
+      "end": 42.64,
+      "duration": 5.76,
+      "text": "many times as you want and you can sell"
+    },
+    {
+      "start": 39.68,
+      "end": 45.2,
+      "duration": 5.52,
+      "text": "as many times as you want okay so"
+    },
+    {
+      "start": 42.64,
+      "end": 46.24,
+      "duration": 3.6,
+      "text": "what you can do is you are going into"
+    },
+    {
+      "start": 45.2,
+      "end": 48.64,
+      "duration": 3.44,
+      "text": "the market"
+    },
+    {
+      "start": 46.24,
+      "end": 51.2,
+      "duration": 4.96,
+      "text": "you say i'm going to buy it on this day"
+    },
+    {
+      "start": 48.64,
+      "end": 53.2,
+      "duration": 4.56,
+      "text": "so i'll say okay i'll buy it on this day"
+    },
+    {
+      "start": 51.2,
+      "end": 54.16,
+      "duration": 2.96,
+      "text": "and i'll sell it on this day"
+    },
+    {
+      "start": 53.2,
+      "end": 56.72,
+      "duration": 3.52,
+      "text": "so"
+    },
+    {
+      "start": 54.16,
+      "end": 58.96,
+      "duration": 4.8,
+      "text": "over here i'll make a profit of four"
+    },
+    {
+      "start": 56.72,
+      "end": 61.44,
+      "duration": 4.72,
+      "text": "i buy it with rupees one i sell it with"
+    },
+    {
+      "start": 58.96,
+      "end": 62.32,
+      "duration": 3.36,
+      "text": "five i make a profit of"
+    },
+    {
+      "start": 61.44,
+      "end": 64.32,
+      "duration": 2.88,
+      "text": "four"
+    },
+    {
+      "start": 62.32,
+      "end": 66.72,
+      "duration": 4.4,
+      "text": "then i say hey listen"
+    },
+    {
+      "start": 64.32,
+      "end": 68.4,
+      "duration": 4.08,
+      "text": "i'm going to again buy it over here and"
+    },
+    {
+      "start": 66.72,
+      "end": 70.32,
+      "duration": 3.6,
+      "text": "i'm going to again sell it over here"
+    },
+    {
+      "start": 68.4,
+      "end": 71.28,
+      "duration": 2.88,
+      "text": "which gives me a profit of"
+    },
+    {
+      "start": 70.32,
+      "end": 74.64,
+      "duration": 4.32,
+      "text": "three"
+    },
+    {
+      "start": 71.28,
+      "end": 75.6,
+      "duration": 4.32,
+      "text": "which in turn gives me a total profit of"
+    },
+    {
+      "start": 74.64,
+      "end": 78.8,
+      "duration": 4.16,
+      "text": "seven"
+    },
+    {
+      "start": 75.6,
+      "end": 81.44,
+      "duration": 5.84,
+      "text": "right i could have gone other ways like"
+    },
+    {
+      "start": 78.8,
+      "end": 83.68,
+      "duration": 4.88,
+      "text": "if i write down again seven one five"
+    },
+    {
+      "start": 81.44,
+      "end": 85.76,
+      "duration": 4.32,
+      "text": "three six four i could have gone other"
+    },
+    {
+      "start": 83.68,
+      "end": 88.0,
+      "duration": 4.32,
+      "text": "ways as well i could have said hey"
+    },
+    {
+      "start": 85.76,
+      "end": 89.92,
+      "duration": 4.16,
+      "text": "listen i will be"
+    },
+    {
+      "start": 88.0,
+      "end": 91.12,
+      "duration": 3.12,
+      "text": "i'll buy it over here i'll sell it over"
+    },
+    {
+      "start": 89.92,
+      "end": 92.0,
+      "duration": 2.08,
+      "text": "here"
+    },
+    {
+      "start": 91.12,
+      "end": 92.8,
+      "duration": 1.68,
+      "text": "right"
+    },
+    {
+      "start": 92.0,
+      "end": 94.96,
+      "duration": 2.96,
+      "text": "now"
+    },
+    {
+      "start": 92.8,
+      "end": 97.36,
+      "duration": 4.56,
+      "text": "the thing that you cannot do is you"
+    },
+    {
+      "start": 94.96,
+      "end": 99.44,
+      "duration": 4.48,
+      "text": "cannot go something like this you cannot"
+    },
+    {
+      "start": 97.36,
+      "end": 101.84,
+      "duration": 4.48,
+      "text": "buy buy"
+    },
+    {
+      "start": 99.44,
+      "end": 103.36,
+      "duration": 3.92,
+      "text": "before perform like if you're buying"
+    },
+    {
+      "start": 101.84,
+      "end": 104.32,
+      "duration": 2.48,
+      "text": "before performing the next buy you have"
+    },
+    {
+      "start": 103.36,
+      "end": 107.04,
+      "duration": 3.68,
+      "text": "to sell"
+    },
+    {
+      "start": 104.32,
+      "end": 109.44,
+      "duration": 5.12,
+      "text": "so buy and then you have to sell"
+    },
+    {
+      "start": 107.04,
+      "end": 110.24,
+      "duration": 3.2,
+      "text": "then again you can buy any day"
+    },
+    {
+      "start": 109.44,
+      "end": 113.52,
+      "duration": 4.08,
+      "text": "so"
+    },
+    {
+      "start": 110.24,
+      "end": 115.68,
+      "duration": 5.44,
+      "text": "this buy sell has to be done"
+    },
+    {
+      "start": 113.52,
+      "end": 118.0,
+      "duration": 4.48,
+      "text": "before performing the next buy sell you"
+    },
+    {
+      "start": 115.68,
+      "end": 122.08,
+      "duration": 6.4,
+      "text": "can't be like buy buy buy then sell sell"
+    },
+    {
+      "start": 118.0,
+      "end": 124.56,
+      "duration": 6.56,
+      "text": "sell that is strictly not allowed"
+    },
+    {
+      "start": 122.08,
+      "end": 128.72,
+      "duration": 6.64,
+      "text": "got this so performing this buy sell can"
+    },
+    {
+      "start": 124.56,
+      "end": 131.12,
+      "duration": 6.56,
+      "text": "be anywhere like you could just do a one"
+    },
+    {
+      "start": 128.72,
+      "end": 134.0,
+      "duration": 5.28,
+      "text": "cell as well this is one where you say"
+    },
+    {
+      "start": 131.12,
+      "end": 136.48,
+      "duration": 5.36,
+      "text": "okay the profit that i will make is five"
+    },
+    {
+      "start": 134.0,
+      "end": 138.64,
+      "duration": 4.64,
+      "text": "so you can perform buy sell as many"
+    },
+    {
+      "start": 136.48,
+      "end": 140.96,
+      "duration": 4.48,
+      "text": "times as you want"
+    },
+    {
+      "start": 138.64,
+      "end": 143.36,
+      "duration": 4.72,
+      "text": "only with the condition that before"
+    },
+    {
+      "start": 140.96,
+      "end": 146.48,
+      "duration": 5.52,
+      "text": "buying a stock you should have sold out"
+    },
+    {
+      "start": 143.36,
+      "end": 148.32,
+      "duration": 4.96,
+      "text": "the previous holding stocks"
+    },
+    {
+      "start": 146.48,
+      "end": 150.4,
+      "duration": 3.92,
+      "text": "that is the clear instruction given to"
+    },
+    {
+      "start": 148.32,
+      "end": 154.08,
+      "duration": 5.76,
+      "text": "you so you can perform this"
+    },
+    {
+      "start": 150.4,
+      "end": 154.08,
+      "duration": 3.68,
+      "text": "as many times as you want"
+    },
+    {
+      "start": 154.24,
+      "end": 159.04,
+      "duration": 4.8,
+      "text": "and if to give me the maximal profit you"
+    },
+    {
+      "start": 156.64,
+      "end": 161.28,
+      "duration": 4.64,
+      "text": "have to maximize this profit in this"
+    },
+    {
+      "start": 159.04,
+      "end": 164.0,
+      "duration": 4.96,
+      "text": "example the answer is"
+    },
+    {
+      "start": 161.28,
+      "end": 166.08,
+      "duration": 4.8,
+      "text": "seven so you have to just make sure you"
+    },
+    {
+      "start": 164.0,
+      "end": 167.92,
+      "duration": 3.92,
+      "text": "do this right"
+    },
+    {
+      "start": 166.08,
+      "end": 170.24,
+      "duration": 4.16,
+      "text": "so how will you actually"
+    },
+    {
+      "start": 167.92,
+      "end": 171.52,
+      "duration": 3.6,
+      "text": "solve this particular problem is my"
+    },
+    {
+      "start": 170.24,
+      "end": 173.76,
+      "duration": 3.52,
+      "text": "question to you"
+    },
+    {
+      "start": 171.52,
+      "end": 175.36,
+      "duration": 3.84,
+      "text": "so let's analyze this problem and try to"
+    },
+    {
+      "start": 173.76,
+      "end": 177.52,
+      "duration": 3.76,
+      "text": "figure out"
+    },
+    {
+      "start": 175.36,
+      "end": 180.0,
+      "duration": 4.64,
+      "text": "how will i try to approach these kind of"
+    },
+    {
+      "start": 177.52,
+      "end": 181.92,
+      "duration": 4.4,
+      "text": "problems so what was i given i was given"
+    },
+    {
+      "start": 180.0,
+      "end": 183.84,
+      "duration": 3.84,
+      "text": "7"
+    },
+    {
+      "start": 181.92,
+      "end": 186.0,
+      "duration": 4.08,
+      "text": "1 5 3"
+    },
+    {
+      "start": 183.84,
+      "end": 188.96,
+      "duration": 5.12,
+      "text": "six four okay"
+    },
+    {
+      "start": 186.0,
+      "end": 191.04,
+      "duration": 5.04,
+      "text": "so let's assume let's assume"
+    },
+    {
+      "start": 188.96,
+      "end": 192.56,
+      "duration": 3.6,
+      "text": "i will be starting over here"
+    },
+    {
+      "start": 191.04,
+      "end": 195.92,
+      "duration": 4.88,
+      "text": "okay let's assume i'll be starting over"
+    },
+    {
+      "start": 192.56,
+      "end": 198.96,
+      "duration": 6.4,
+      "text": "here it's kind of a 1d array and when"
+    },
+    {
+      "start": 195.92,
+      "end": 201.6,
+      "duration": 5.68,
+      "text": "i'm starting off when i'm starting off"
+    },
+    {
+      "start": 198.96,
+      "end": 202.96,
+      "duration": 4.0,
+      "text": "generically what can i do i can be like"
+    },
+    {
+      "start": 201.6,
+      "end": 204.8,
+      "duration": 3.2,
+      "text": "i can buy it"
+    },
+    {
+      "start": 202.96,
+      "end": 207.12,
+      "duration": 4.16,
+      "text": "or i can say i'll not buy it let's move"
+    },
+    {
+      "start": 204.8,
+      "end": 209.36,
+      "duration": 4.56,
+      "text": "i can buy it and then i can sell it or"
+    },
+    {
+      "start": 207.12,
+      "end": 211.04,
+      "duration": 3.92,
+      "text": "i'll not sell it i'll sell it here"
+    },
+    {
+      "start": 209.36,
+      "end": 212.96,
+      "duration": 3.6,
+      "text": "so what am i seeing"
+    },
+    {
+      "start": 211.04,
+      "end": 215.84,
+      "duration": 4.8,
+      "text": "a pattern of"
+    },
+    {
+      "start": 212.96,
+      "end": 218.0,
+      "duration": 5.04,
+      "text": "a lot of ways like you can do a buy cell"
+    },
+    {
+      "start": 215.84,
+      "end": 220.16,
+      "duration": 4.32,
+      "text": "you can probably do a buy sell"
+    },
+    {
+      "start": 218.0,
+      "end": 224.32,
+      "duration": 6.32,
+      "text": "you can do it"
+    },
+    {
+      "start": 220.16,
+      "end": 227.76,
+      "duration": 7.6,
+      "text": "on numerous occasions right and whenever"
+    },
+    {
+      "start": 224.32,
+      "end": 229.2,
+      "duration": 4.88,
+      "text": "there's a lot of ways"
+    },
+    {
+      "start": 227.76,
+      "end": 231.6,
+      "duration": 3.84,
+      "text": "what do you do"
+    },
+    {
+      "start": 229.2,
+      "end": 232.48,
+      "duration": 3.28,
+      "text": "you try always"
+    },
+    {
+      "start": 231.6,
+      "end": 234.56,
+      "duration": 2.96,
+      "text": "yes"
+    },
+    {
+      "start": 232.48,
+      "end": 235.84,
+      "duration": 3.36,
+      "text": "you try always"
+    },
+    {
+      "start": 234.56,
+      "end": 238.64,
+      "duration": 4.08,
+      "text": "and you get"
+    },
+    {
+      "start": 235.84,
+      "end": 239.68,
+      "duration": 3.84,
+      "text": "the best possible answer from"
+    },
+    {
+      "start": 238.64,
+      "end": 241.6,
+      "duration": 2.96,
+      "text": "always"
+    },
+    {
+      "start": 239.68,
+      "end": 243.36,
+      "duration": 3.68,
+      "text": "now when i say try always"
+    },
+    {
+      "start": 241.6,
+      "end": 244.96,
+      "duration": 3.36,
+      "text": "what comes to your brain"
+    },
+    {
+      "start": 243.36,
+      "end": 246.48,
+      "duration": 3.12,
+      "text": "what comes to your brain"
+    },
+    {
+      "start": 244.96,
+      "end": 248.24,
+      "duration": 3.28,
+      "text": "recursion"
+    },
+    {
+      "start": 246.48,
+      "end": 250.56,
+      "duration": 4.08,
+      "text": "recursion because"
+    },
+    {
+      "start": 248.24,
+      "end": 253.04,
+      "duration": 4.8,
+      "text": "there can be a lot of face so recursion"
+    },
+    {
+      "start": 250.56,
+      "end": 255.92,
+      "duration": 5.36,
+      "text": "comes to your brain right so how do you"
+    },
+    {
+      "start": 253.04,
+      "end": 257.6,
+      "duration": 4.56,
+      "text": "write recurrence in dp"
+    },
+    {
+      "start": 255.92,
+      "end": 259.04,
+      "duration": 3.12,
+      "text": "how do you write recurrence"
+    },
+    {
+      "start": 257.6,
+      "end": 261.68,
+      "duration": 4.08,
+      "text": "again we will follow a standard"
+    },
+    {
+      "start": 259.04,
+      "end": 261.68,
+      "duration": 2.64,
+      "text": "procedure"
+    },
+    {
+      "start": 264.0,
+      "end": 267.36,
+      "duration": 3.36,
+      "text": "what is the standard procedure of"
+    },
+    {
+      "start": 265.2,
+      "end": 270.24,
+      "duration": 5.04,
+      "text": "writing records the standard procedure"
+    },
+    {
+      "start": 267.36,
+      "end": 271.36,
+      "duration": 4.0,
+      "text": "is pretty straight forward"
+    },
+    {
+      "start": 270.24,
+      "end": 274.32,
+      "duration": 4.08,
+      "text": "it is"
+    },
+    {
+      "start": 271.36,
+      "end": 276.64,
+      "duration": 5.28,
+      "text": "express everything in terms of index now"
+    },
+    {
+      "start": 274.32,
+      "end": 278.88,
+      "duration": 4.56,
+      "text": "over here yes over here"
+    },
+    {
+      "start": 276.64,
+      "end": 280.8,
+      "duration": 4.16,
+      "text": "we have a plane array and you know"
+    },
+    {
+      "start": 278.88,
+      "end": 283.36,
+      "duration": 4.48,
+      "text": "whenever we have a plane array we can"
+    },
+    {
+      "start": 280.8,
+      "end": 285.28,
+      "duration": 4.48,
+      "text": "have the index working right across here"
+    },
+    {
+      "start": 283.36,
+      "end": 288.0,
+      "duration": 4.64,
+      "text": "so what i'll say is okay"
+    },
+    {
+      "start": 285.28,
+      "end": 288.0,
+      "duration": 2.72,
+      "text": "express"
+    },
+    {
+      "start": 289.04,
+      "end": 293.44,
+      "duration": 4.4,
+      "text": "everything"
+    },
+    {
+      "start": 290.96,
+      "end": 294.56,
+      "duration": 3.6,
+      "text": "in terms of"
+    },
+    {
+      "start": 293.44,
+      "end": 297.04,
+      "duration": 3.6,
+      "text": "index"
+    },
+    {
+      "start": 294.56,
+      "end": 298.4,
+      "duration": 3.84,
+      "text": "that is something which i'll do so"
+    },
+    {
+      "start": 297.04,
+      "end": 301.12,
+      "duration": 4.08,
+      "text": "we will be expressing everything in"
+    },
+    {
+      "start": 298.4,
+      "end": 302.96,
+      "duration": 4.56,
+      "text": "terms of index now"
+    },
+    {
+      "start": 301.12,
+      "end": 305.44,
+      "duration": 4.32,
+      "text": "do i need any other parameters is my"
+    },
+    {
+      "start": 302.96,
+      "end": 307.6,
+      "duration": 4.64,
+      "text": "question we need to think on this now we"
+    },
+    {
+      "start": 305.44,
+      "end": 308.8,
+      "duration": 3.36,
+      "text": "have done problems like knapsack if you"
+    },
+    {
+      "start": 307.6,
+      "end": 312.16,
+      "duration": 4.56,
+      "text": "remember"
+    },
+    {
+      "start": 308.8,
+      "end": 313.92,
+      "duration": 5.12,
+      "text": "and in that we have to uh we have to"
+    },
+    {
+      "start": 312.16,
+      "end": 316.88,
+      "duration": 4.72,
+      "text": "take care if our"
+    },
+    {
+      "start": 313.92,
+      "end": 318.08,
+      "duration": 4.16,
+      "text": "baggage was full or not right now over"
+    },
+    {
+      "start": 316.88,
+      "end": 321.36,
+      "duration": 4.48,
+      "text": "here"
+    },
+    {
+      "start": 318.08,
+      "end": 322.24,
+      "duration": 4.16,
+      "text": "if i am standing at here"
+    },
+    {
+      "start": 321.36,
+      "end": 324.4,
+      "duration": 3.04,
+      "text": "what"
+    },
+    {
+      "start": 322.24,
+      "end": 327.04,
+      "duration": 4.8,
+      "text": "decision can i make on it"
+    },
+    {
+      "start": 324.4,
+      "end": 328.48,
+      "duration": 4.08,
+      "text": "i can buy or i cannot buy"
+    },
+    {
+      "start": 327.04,
+      "end": 330.72,
+      "duration": 3.68,
+      "text": "how did you"
+    },
+    {
+      "start": 328.48,
+      "end": 332.96,
+      "duration": 4.48,
+      "text": "understand because you know before this"
+    },
+    {
+      "start": 330.72,
+      "end": 334.96,
+      "duration": 4.24,
+      "text": "you have not bought anything but if"
+    },
+    {
+      "start": 332.96,
+      "end": 336.88,
+      "duration": 3.92,
+      "text": "you're standing here"
+    },
+    {
+      "start": 334.96,
+      "end": 339.36,
+      "duration": 4.4,
+      "text": "what decision can you make"
+    },
+    {
+      "start": 336.88,
+      "end": 342.0,
+      "duration": 5.12,
+      "text": "what if if you bought someone here"
+    },
+    {
+      "start": 339.36,
+      "end": 345.52,
+      "duration": 6.16,
+      "text": "then you cannot buy here for sure you"
+    },
+    {
+      "start": 342.0,
+      "end": 347.12,
+      "duration": 5.12,
+      "text": "can sell it so what idea i'm getting is"
+    },
+    {
+      "start": 345.52,
+      "end": 348.8,
+      "duration": 3.28,
+      "text": "on any index"
+    },
+    {
+      "start": 347.12,
+      "end": 350.24,
+      "duration": 3.12,
+      "text": "i have to know"
+    },
+    {
+      "start": 348.8,
+      "end": 352.72,
+      "duration": 3.92,
+      "text": "whether i have bought anything"
+    },
+    {
+      "start": 350.24,
+      "end": 354.8,
+      "duration": 4.56,
+      "text": "previously or not because"
+    },
+    {
+      "start": 352.72,
+      "end": 357.12,
+      "duration": 4.4,
+      "text": "if this guy was bought here"
+    },
+    {
+      "start": 354.8,
+      "end": 360.0,
+      "duration": 5.2,
+      "text": "i cannot buy this again i definitely"
+    },
+    {
+      "start": 357.12,
+      "end": 361.12,
+      "duration": 4.0,
+      "text": "cannot or if this guy was sold here then"
+    },
+    {
+      "start": 360.0,
+      "end": 362.96,
+      "duration": 2.96,
+      "text": "i can buy"
+    },
+    {
+      "start": 361.12,
+      "end": 365.92,
+      "duration": 4.8,
+      "text": "so i have to know"
+    },
+    {
+      "start": 362.96,
+      "end": 368.16,
+      "duration": 5.2,
+      "text": "if any guys were bought right before"
+    },
+    {
+      "start": 365.92,
+      "end": 370.08,
+      "duration": 4.16,
+      "text": "this or any guys were sold"
+    },
+    {
+      "start": 368.16,
+      "end": 372.48,
+      "duration": 4.32,
+      "text": "right so"
+    },
+    {
+      "start": 370.08,
+      "end": 374.88,
+      "duration": 4.8,
+      "text": "do i have an allowance of buying so i"
+    },
+    {
+      "start": 372.48,
+      "end": 378.08,
+      "duration": 5.6,
+      "text": "can say probably i can carry something"
+    },
+    {
+      "start": 374.88,
+      "end": 381.12,
+      "duration": 6.24,
+      "text": "like buy a variable like buy"
+    },
+    {
+      "start": 378.08,
+      "end": 383.6,
+      "duration": 5.52,
+      "text": "which tells me can i buy or not"
+    },
+    {
+      "start": 381.12,
+      "end": 385.04,
+      "duration": 3.92,
+      "text": "if someone has bought this and he has"
+    },
+    {
+      "start": 383.6,
+      "end": 387.6,
+      "duration": 4.0,
+      "text": "not sold it"
+    },
+    {
+      "start": 385.04,
+      "end": 389.68,
+      "duration": 4.64,
+      "text": "so over here i definitely cannot buy so"
+    },
+    {
+      "start": 387.6,
+      "end": 392.8,
+      "duration": 5.2,
+      "text": "i have to carry a variable as buy which"
+    },
+    {
+      "start": 389.68,
+      "end": 394.8,
+      "duration": 5.12,
+      "text": "tells me can i buy that stock"
+    },
+    {
+      "start": 392.8,
+      "end": 397.28,
+      "duration": 4.48,
+      "text": "if i can i'll either decided to buy or"
+    },
+    {
+      "start": 394.8,
+      "end": 399.12,
+      "duration": 4.32,
+      "text": "i'll skip it and go across"
+    },
+    {
+      "start": 397.28,
+      "end": 401.36,
+      "duration": 4.08,
+      "text": "and if i cannot buy then there are two"
+    },
+    {
+      "start": 399.12,
+      "end": 403.44,
+      "duration": 4.32,
+      "text": "options either sell it off or don't sell"
+    },
+    {
+      "start": 401.36,
+      "end": 405.36,
+      "duration": 4.0,
+      "text": "it off so i'll be like okay we have"
+    },
+    {
+      "start": 403.44,
+      "end": 407.36,
+      "duration": 3.92,
+      "text": "understood we need one more variable"
+    },
+    {
+      "start": 405.36,
+      "end": 409.44,
+      "duration": 4.08,
+      "text": "which tells me"
+    },
+    {
+      "start": 407.36,
+      "end": 410.72,
+      "duration": 3.36,
+      "text": "on that particular index can i buy or"
+    },
+    {
+      "start": 409.44,
+      "end": 412.56,
+      "duration": 3.12,
+      "text": "can i not"
+    },
+    {
+      "start": 410.72,
+      "end": 414.64,
+      "duration": 3.92,
+      "text": "right perfect"
+    },
+    {
+      "start": 412.56,
+      "end": 416.48,
+      "duration": 3.92,
+      "text": "explore"
+    },
+    {
+      "start": 414.64,
+      "end": 421.8,
+      "duration": 7.16,
+      "text": "possibilities"
+    },
+    {
+      "start": 416.48,
+      "end": 421.8,
+      "duration": 5.32,
+      "text": "explore possibilities on that day"
+    },
+    {
+      "start": 422.72,
+      "end": 426.72,
+      "duration": 4.0,
+      "text": "what am i looking for i'm looking for"
+    },
+    {
+      "start": 425.04,
+      "end": 427.52,
+      "duration": 2.48,
+      "text": "best possible answer"
+    },
+    {
+      "start": 426.72,
+      "end": 429.44,
+      "duration": 2.72,
+      "text": "so"
+    },
+    {
+      "start": 427.52,
+      "end": 431.92,
+      "duration": 4.4,
+      "text": "try to add up what i what are you trying"
+    },
+    {
+      "start": 429.44,
+      "end": 433.04,
+      "duration": 3.6,
+      "text": "to make profits try to add up if you're"
+    },
+    {
+      "start": 431.92,
+      "end": 434.0,
+      "duration": 2.08,
+      "text": "buying"
+    },
+    {
+      "start": 433.04,
+      "end": 435.92,
+      "duration": 2.88,
+      "text": "then"
+    },
+    {
+      "start": 434.0,
+      "end": 438.0,
+      "duration": 4.0,
+      "text": "it is as a minus if you are selling it"
+    },
+    {
+      "start": 435.92,
+      "end": 439.6,
+      "duration": 3.68,
+      "text": "as a plus i'll explain you when i write"
+    },
+    {
+      "start": 438.0,
+      "end": 443.28,
+      "duration": 5.28,
+      "text": "the records"
+    },
+    {
+      "start": 439.6,
+      "end": 444.72,
+      "duration": 5.12,
+      "text": "x or you're looking for profits right so"
+    },
+    {
+      "start": 443.28,
+      "end": 446.16,
+      "duration": 2.88,
+      "text": "take the"
+    },
+    {
+      "start": 444.72,
+      "end": 449.28,
+      "duration": 4.56,
+      "text": "addition of states or whatever you're"
+    },
+    {
+      "start": 446.16,
+      "end": 451.12,
+      "duration": 4.96,
+      "text": "doing wanting to do take the maximum of"
+    },
+    {
+      "start": 449.28,
+      "end": 453.76,
+      "duration": 4.48,
+      "text": "all profits make because you are looking"
+    },
+    {
+      "start": 451.12,
+      "end": 453.76,
+      "duration": 2.64,
+      "text": "for profits"
+    },
+    {
+      "start": 454.32,
+      "end": 456.72,
+      "duration": 2.4,
+      "text": "and then"
+    },
+    {
+      "start": 455.36,
+      "end": 457.92,
+      "duration": 2.56,
+      "text": "if you follow these and then there will"
+    },
+    {
+      "start": 456.72,
+      "end": 460.4,
+      "duration": 3.68,
+      "text": "be a base case"
+    },
+    {
+      "start": 457.92,
+      "end": 462.96,
+      "duration": 5.04,
+      "text": "if you follow all of these conditions i"
+    },
+    {
+      "start": 460.4,
+      "end": 465.04,
+      "duration": 4.64,
+      "text": "think you will be able to write"
+    },
+    {
+      "start": 462.96,
+      "end": 466.72,
+      "duration": 3.76,
+      "text": "very easily so"
+    },
+    {
+      "start": 465.04,
+      "end": 468.8,
+      "duration": 3.76,
+      "text": "without actually wasting any time let's"
+    },
+    {
+      "start": 466.72,
+      "end": 470.4,
+      "duration": 3.68,
+      "text": "try to write the recurrence okay so what"
+    },
+    {
+      "start": 468.8,
+      "end": 471.52,
+      "duration": 2.72,
+      "text": "what did i say express everything in"
+    },
+    {
+      "start": 470.4,
+      "end": 474.72,
+      "duration": 4.32,
+      "text": "terms of"
+    },
+    {
+      "start": 471.52,
+      "end": 476.96,
+      "duration": 5.44,
+      "text": "index and by okay so"
+    },
+    {
+      "start": 474.72,
+      "end": 478.4,
+      "duration": 3.68,
+      "text": "let's analyze"
+    },
+    {
+      "start": 476.96,
+      "end": 480.96,
+      "duration": 4.0,
+      "text": "f of"
+    },
+    {
+      "start": 478.4,
+      "end": 483.76,
+      "duration": 5.36,
+      "text": "index and by"
+    },
+    {
+      "start": 480.96,
+      "end": 486.56,
+      "duration": 5.6,
+      "text": "so assuming assuming uh the array is"
+    },
+    {
+      "start": 483.76,
+      "end": 490.64,
+      "duration": 6.88,
+      "text": "seven one five three six four"
+    },
+    {
+      "start": 486.56,
+      "end": 492.8,
+      "duration": 6.24,
+      "text": "so assuming you start at the zero earth"
+    },
+    {
+      "start": 490.64,
+      "end": 494.8,
+      "duration": 4.16,
+      "text": "index"
+    },
+    {
+      "start": 492.8,
+      "end": 496.56,
+      "duration": 3.76,
+      "text": "so this this is the price array and it's"
+    },
+    {
+      "start": 494.8,
+      "end": 499.6,
+      "duration": 4.8,
+      "text": "starting at the zeroth index"
+    },
+    {
+      "start": 496.56,
+      "end": 501.6,
+      "duration": 5.04,
+      "text": "so can i say at f of zero"
+    },
+    {
+      "start": 499.6,
+      "end": 503.76,
+      "duration": 4.16,
+      "text": "you have complete liberty of buying"
+    },
+    {
+      "start": 501.6,
+      "end": 506.48,
+      "duration": 4.88,
+      "text": "because that's the first guy that's the"
+    },
+    {
+      "start": 503.76,
+      "end": 508.48,
+      "duration": 4.72,
+      "text": "first guy i'm giving you complete"
+    },
+    {
+      "start": 506.48,
+      "end": 511.44,
+      "duration": 4.96,
+      "text": "liberty of banks i'll be like okay i get"
+    },
+    {
+      "start": 508.48,
+      "end": 515.68,
+      "duration": 7.2,
+      "text": "the complete liberty of buying which is"
+    },
+    {
+      "start": 511.44,
+      "end": 517.52,
+      "duration": 6.08,
+      "text": "one assuming uh liberty by"
+    },
+    {
+      "start": 515.68,
+      "end": 520.0,
+      "duration": 4.32,
+      "text": "one means you can"
+    },
+    {
+      "start": 517.52,
+      "end": 522.8,
+      "duration": 5.28,
+      "text": "zero means you cannot so i'm giving them"
+    },
+    {
+      "start": 520.0,
+      "end": 523.6,
+      "duration": 3.6,
+      "text": "complete liberty so what i am asking you"
+    },
+    {
+      "start": 522.8,
+      "end": 525.44,
+      "duration": 2.64,
+      "text": "is"
+    },
+    {
+      "start": 523.6,
+      "end": 528.32,
+      "duration": 4.72,
+      "text": "ff01"
+    },
+    {
+      "start": 525.44,
+      "end": 531.44,
+      "duration": 6.0,
+      "text": "starting on"
+    },
+    {
+      "start": 528.32,
+      "end": 531.44,
+      "duration": 3.12,
+      "text": "zeroth day"
+    },
+    {
+      "start": 532.88,
+      "end": 536.72,
+      "duration": 3.84,
+      "text": "with by"
+    },
+    {
+      "start": 535.84,
+      "end": 539.2,
+      "duration": 3.36,
+      "text": "what"
+    },
+    {
+      "start": 536.72,
+      "end": 542.32,
+      "duration": 5.6,
+      "text": "max profit you can give me"
+    },
+    {
+      "start": 539.2,
+      "end": 545.12,
+      "duration": 5.92,
+      "text": "what max profit you can give me that is"
+    },
+    {
+      "start": 542.32,
+      "end": 547.84,
+      "duration": 5.52,
+      "text": "what it signifies starting"
+    },
+    {
+      "start": 545.12,
+      "end": 550.56,
+      "duration": 5.44,
+      "text": "on this day you're starting to do your"
+    },
+    {
+      "start": 547.84,
+      "end": 553.76,
+      "duration": 5.92,
+      "text": "trading on the zero day what maximum"
+    },
+    {
+      "start": 550.56,
+      "end": 556.8,
+      "duration": 6.24,
+      "text": "profit can you give me is the question"
+    },
+    {
+      "start": 553.76,
+      "end": 559.04,
+      "duration": 5.28,
+      "text": "okay fine so"
+    },
+    {
+      "start": 556.8,
+      "end": 560.8,
+      "duration": 4.0,
+      "text": "what can be the states so"
+    },
+    {
+      "start": 559.04,
+      "end": 563.68,
+      "duration": 4.64,
+      "text": "we have understood uh these two states"
+    },
+    {
+      "start": 560.8,
+      "end": 565.04,
+      "duration": 4.24,
+      "text": "of index buy so let's uh tick mark"
+    },
+    {
+      "start": 563.68,
+      "end": 568.24,
+      "duration": 4.56,
+      "text": "the first thing"
+    },
+    {
+      "start": 565.04,
+      "end": 570.8,
+      "duration": 5.76,
+      "text": "explore possibilities on that day so"
+    },
+    {
+      "start": 568.24,
+      "end": 573.04,
+      "duration": 4.8,
+      "text": "let's analyze what can you do"
+    },
+    {
+      "start": 570.8,
+      "end": 574.96,
+      "duration": 4.16,
+      "text": "one thing i know for sure is"
+    },
+    {
+      "start": 573.04,
+      "end": 576.72,
+      "duration": 3.68,
+      "text": "there can be two possibilities"
+    },
+    {
+      "start": 574.96,
+      "end": 578.88,
+      "duration": 3.92,
+      "text": "whether like"
+    },
+    {
+      "start": 576.72,
+      "end": 581.2,
+      "duration": 4.48,
+      "text": "if there will be a buy"
+    },
+    {
+      "start": 578.88,
+      "end": 584.4,
+      "duration": 5.52,
+      "text": "like i'm allowed to buy i'm allowed to"
+    },
+    {
+      "start": 581.2,
+      "end": 586.4,
+      "duration": 5.2,
+      "text": "buy or else i'm not allowed to buy that"
+    },
+    {
+      "start": 584.4,
+      "end": 589.04,
+      "duration": 4.64,
+      "text": "is for sure the possibilities will be"
+    },
+    {
+      "start": 586.4,
+      "end": 590.96,
+      "duration": 4.56,
+      "text": "this and on those basis i can make two"
+    },
+    {
+      "start": 589.04,
+      "end": 593.6,
+      "duration": 4.56,
+      "text": "profits"
+    },
+    {
+      "start": 590.96,
+      "end": 594.4,
+      "duration": 3.44,
+      "text": "there'll be two profits that i'll make"
+    },
+    {
+      "start": 593.6,
+      "end": 597.04,
+      "duration": 3.44,
+      "text": "right"
+    },
+    {
+      "start": 594.4,
+      "end": 598.32,
+      "duration": 3.92,
+      "text": "so let's assume if i'm allowed to buy"
+    },
+    {
+      "start": 597.04,
+      "end": 600.8,
+      "duration": 3.76,
+      "text": "what will i do"
+    },
+    {
+      "start": 598.32,
+      "end": 602.72,
+      "duration": 4.4,
+      "text": "let's come back to this"
+    },
+    {
+      "start": 600.8,
+      "end": 604.8,
+      "duration": 4.0,
+      "text": "what can i do with this seven"
+    },
+    {
+      "start": 602.72,
+      "end": 607.2,
+      "duration": 4.48,
+      "text": "i will like striver"
+    },
+    {
+      "start": 604.8,
+      "end": 608.64,
+      "duration": 3.84,
+      "text": "i'll definitely buy this there's"
+    },
+    {
+      "start": 607.2,
+      "end": 611.84,
+      "duration": 4.64,
+      "text": "no other way wrong"
+    },
+    {
+      "start": 608.64,
+      "end": 613.92,
+      "duration": 5.28,
+      "text": "i will definitely buy this"
+    },
+    {
+      "start": 611.84,
+      "end": 615.84,
+      "duration": 4.0,
+      "text": "or i'll say he's rival oh this is too"
+    },
+    {
+      "start": 613.92,
+      "end": 618.32,
+      "duration": 4.4,
+      "text": "costly uh let's not buy this and move to"
+    },
+    {
+      "start": 615.84,
+      "end": 619.84,
+      "duration": 4.0,
+      "text": "the next guy and see if i can do a"
+    },
+    {
+      "start": 618.32,
+      "end": 621.04,
+      "duration": 2.72,
+      "text": "trading on the next day"
+    },
+    {
+      "start": 619.84,
+      "end": 623.76,
+      "duration": 3.92,
+      "text": "so i'm saying"
+    },
+    {
+      "start": 621.04,
+      "end": 625.84,
+      "duration": 4.8,
+      "text": "you can buy or you cannot buy"
+    },
+    {
+      "start": 623.76,
+      "end": 627.6,
+      "duration": 3.84,
+      "text": "back to the previous days of dp on"
+    },
+    {
+      "start": 625.84,
+      "end": 628.96,
+      "duration": 3.12,
+      "text": "subsequences"
+    },
+    {
+      "start": 627.6,
+      "end": 630.4,
+      "duration": 2.8,
+      "text": "take"
+    },
+    {
+      "start": 628.96,
+      "end": 632.64,
+      "duration": 3.68,
+      "text": "not kick"
+    },
+    {
+      "start": 630.4,
+      "end": 635.44,
+      "duration": 5.04,
+      "text": "buy or don't buy"
+    },
+    {
+      "start": 632.64,
+      "end": 637.28,
+      "duration": 4.64,
+      "text": "so assume just for an example assume if"
+    },
+    {
+      "start": 635.44,
+      "end": 639.2,
+      "duration": 3.76,
+      "text": "you decide to buy over here and you"
+    },
+    {
+      "start": 637.28,
+      "end": 641.52,
+      "duration": 4.24,
+      "text": "decide to sell it over here"
+    },
+    {
+      "start": 639.2,
+      "end": 643.52,
+      "duration": 4.32,
+      "text": "what is the profit that you make"
+    },
+    {
+      "start": 641.52,
+      "end": 644.88,
+      "duration": 3.36,
+      "text": "five minus seven"
+    },
+    {
+      "start": 643.52,
+      "end": 647.28,
+      "duration": 3.76,
+      "text": "is the profit that you make which is"
+    },
+    {
+      "start": 644.88,
+      "end": 649.44,
+      "duration": 4.56,
+      "text": "minus two so you're adding minus seven"
+    },
+    {
+      "start": 647.28,
+      "end": 651.6,
+      "duration": 4.32,
+      "text": "to the answer whenever you're buying"
+    },
+    {
+      "start": 649.44,
+      "end": 653.12,
+      "duration": 3.68,
+      "text": "you're actually adding minus seven to"
+    },
+    {
+      "start": 651.6,
+      "end": 655.68,
+      "duration": 4.08,
+      "text": "the answer when you're buying and when"
+    },
+    {
+      "start": 653.12,
+      "end": 657.52,
+      "duration": 4.4,
+      "text": "you're selling you're adding plus five"
+    },
+    {
+      "start": 655.68,
+      "end": 658.96,
+      "duration": 3.28,
+      "text": "got this because if you're doing a buy"
+    },
+    {
+      "start": 657.52,
+      "end": 661.2,
+      "duration": 3.68,
+      "text": "over here and if you're doing a cell"
+    },
+    {
+      "start": 658.96,
+      "end": 663.52,
+      "duration": 4.56,
+      "text": "over here it's basically 3 minus 7 is"
+    },
+    {
+      "start": 661.2,
+      "end": 666.64,
+      "duration": 5.44,
+      "text": "the profit so minus 7 is added to the"
+    },
+    {
+      "start": 663.52,
+      "end": 669.84,
+      "duration": 6.32,
+      "text": "answer so can i say can i say"
+    },
+    {
+      "start": 666.64,
+      "end": 672.56,
+      "duration": 5.92,
+      "text": "if i decide to buy on that day"
+    },
+    {
+      "start": 669.84,
+      "end": 673.68,
+      "duration": 3.84,
+      "text": "the profit that i'll add is"
+    },
+    {
+      "start": 672.56,
+      "end": 675.92,
+      "duration": 3.36,
+      "text": "this guy"
+    },
+    {
+      "start": 673.68,
+      "end": 677.92,
+      "duration": 4.24,
+      "text": "and if i bought on that day i'll move to"
+    },
+    {
+      "start": 675.92,
+      "end": 680.16,
+      "duration": 4.24,
+      "text": "the next day"
+    },
+    {
+      "start": 677.92,
+      "end": 682.4,
+      "duration": 4.48,
+      "text": "which is index plus one"
+    },
+    {
+      "start": 680.16,
+      "end": 684.96,
+      "duration": 4.8,
+      "text": "and if i bought i bought"
+    },
+    {
+      "start": 682.4,
+      "end": 687.36,
+      "duration": 4.96,
+      "text": "in the next he cannot buy he has to sell"
+    },
+    {
+      "start": 684.96,
+      "end": 688.4,
+      "duration": 3.44,
+      "text": "so you cannot buy"
+    },
+    {
+      "start": 687.36,
+      "end": 689.92,
+      "duration": 2.56,
+      "text": "makes sense"
+    },
+    {
+      "start": 688.4,
+      "end": 692.32,
+      "duration": 3.92,
+      "text": "makes sense"
+    },
+    {
+      "start": 689.92,
+      "end": 694.32,
+      "duration": 4.4,
+      "text": "and what if i decide hey listen i am not"
+    },
+    {
+      "start": 692.32,
+      "end": 695.92,
+      "duration": 3.6,
+      "text": "interested to buy on this because the"
+    },
+    {
+      "start": 694.32,
+      "end": 698.56,
+      "duration": 4.24,
+      "text": "price looks"
+    },
+    {
+      "start": 695.92,
+      "end": 701.44,
+      "duration": 5.52,
+      "text": "huge i'm not interested to buy i'm like"
+    },
+    {
+      "start": 698.56,
+      "end": 703.36,
+      "duration": 4.8,
+      "text": "okay fine you are not interested to buy"
+    },
+    {
+      "start": 701.44,
+      "end": 704.88,
+      "duration": 3.44,
+      "text": "so why don't you"
+    },
+    {
+      "start": 703.36,
+      "end": 706.56,
+      "duration": 3.2,
+      "text": "don't buy"
+    },
+    {
+      "start": 704.88,
+      "end": 707.92,
+      "duration": 3.04,
+      "text": "and you go across to the next day and"
+    },
+    {
+      "start": 706.56,
+      "end": 711.04,
+      "duration": 4.48,
+      "text": "you see"
+    },
+    {
+      "start": 707.92,
+      "end": 713.28,
+      "duration": 5.36,
+      "text": "you still go with one saying hey listen"
+    },
+    {
+      "start": 711.04,
+      "end": 715.04,
+      "duration": 4.0,
+      "text": "i will still go with the buy because in"
+    },
+    {
+      "start": 713.28,
+      "end": 717.92,
+      "duration": 4.64,
+      "text": "the next day i still have the liberty to"
+    },
+    {
+      "start": 715.04,
+      "end": 719.2,
+      "duration": 4.16,
+      "text": "buy so you know this can be one way"
+    },
+    {
+      "start": 717.92,
+      "end": 720.72,
+      "duration": 2.8,
+      "text": "which is take"
+    },
+    {
+      "start": 719.2,
+      "end": 722.08,
+      "duration": 2.88,
+      "text": "if i just write this"
+    },
+    {
+      "start": 720.72,
+      "end": 724.88,
+      "duration": 4.16,
+      "text": "this is take"
+    },
+    {
+      "start": 722.08,
+      "end": 727.68,
+      "duration": 5.6,
+      "text": "case this is not a case"
+    },
+    {
+      "start": 724.88,
+      "end": 730.0,
+      "duration": 5.12,
+      "text": "and i definitely know what i require is"
+    },
+    {
+      "start": 727.68,
+      "end": 731.12,
+      "duration": 3.44,
+      "text": "max of all profits made so the profit"
+    },
+    {
+      "start": 730.0,
+      "end": 734.24,
+      "duration": 4.24,
+      "text": "will be"
+    },
+    {
+      "start": 731.12,
+      "end": 736.48,
+      "duration": 5.36,
+      "text": "max of these couple of guys either i buy"
+    },
+    {
+      "start": 734.24,
+      "end": 738.96,
+      "duration": 4.72,
+      "text": "or either i don't buy as simple as that"
+    },
+    {
+      "start": 736.48,
+      "end": 741.6,
+      "duration": 5.12,
+      "text": "what about sell because if i come across"
+    },
+    {
+      "start": 738.96,
+      "end": 742.32,
+      "duration": 3.36,
+      "text": "to the next guy it is sell right"
+    },
+    {
+      "start": 741.6,
+      "end": 744.96,
+      "duration": 3.36,
+      "text": "so"
+    },
+    {
+      "start": 742.32,
+      "end": 746.88,
+      "duration": 4.56,
+      "text": "again we'll try to sell"
+    },
+    {
+      "start": 744.96,
+      "end": 748.8,
+      "duration": 3.84,
+      "text": "because i know"
+    },
+    {
+      "start": 746.88,
+      "end": 752.16,
+      "duration": 5.28,
+      "text": "we cannot buy if i coming to else we"
+    },
+    {
+      "start": 748.8,
+      "end": 754.24,
+      "duration": 5.44,
+      "text": "cannot buy we have to sell again assume"
+    },
+    {
+      "start": 752.16,
+      "end": 756.0,
+      "duration": 3.84,
+      "text": "uh you are somewhere oh where was the"
+    },
+    {
+      "start": 754.24,
+      "end": 756.8,
+      "duration": 2.56,
+      "text": "example assume you are somewhere over"
+    },
+    {
+      "start": 756.0,
+      "end": 758.96,
+      "duration": 2.96,
+      "text": "here"
+    },
+    {
+      "start": 756.8,
+      "end": 761.12,
+      "duration": 4.32,
+      "text": "i'm like hey i'm not interested to sell"
+    },
+    {
+      "start": 758.96,
+      "end": 762.8,
+      "duration": 3.84,
+      "text": "because the price is very very low the"
+    },
+    {
+      "start": 761.12,
+      "end": 765.04,
+      "duration": 3.92,
+      "text": "price is very very low i'm not"
+    },
+    {
+      "start": 762.8,
+      "end": 766.88,
+      "duration": 4.08,
+      "text": "interested to sell or you can be like"
+    },
+    {
+      "start": 765.04,
+      "end": 768.96,
+      "duration": 3.92,
+      "text": "six if you're over here but the price is"
+    },
+    {
+      "start": 766.88,
+      "end": 771.28,
+      "duration": 4.4,
+      "text": "very high let's sell it so there can be"
+    },
+    {
+      "start": 768.96,
+      "end": 772.4,
+      "duration": 3.44,
+      "text": "again two ways i decide"
+    },
+    {
+      "start": 771.28,
+      "end": 774.08,
+      "duration": 2.8,
+      "text": "i'll sell it"
+    },
+    {
+      "start": 772.4,
+      "end": 776.32,
+      "duration": 3.92,
+      "text": "i'll say hey don't sell it let's move to"
+    },
+    {
+      "start": 774.08,
+      "end": 778.0,
+      "duration": 3.92,
+      "text": "the next day so two ways again so i'll"
+    },
+    {
+      "start": 776.32,
+      "end": 780.32,
+      "duration": 4.0,
+      "text": "be like fine"
+    },
+    {
+      "start": 778.0,
+      "end": 781.92,
+      "duration": 3.92,
+      "text": "let's go across if i decide to sell it i"
+    },
+    {
+      "start": 780.32,
+      "end": 783.68,
+      "duration": 3.36,
+      "text": "know the profit will be plus because i'm"
+    },
+    {
+      "start": 781.92,
+      "end": 785.84,
+      "duration": 3.92,
+      "text": "selling the money is coming to me the"
+    },
+    {
+      "start": 783.68,
+      "end": 786.72,
+      "duration": 3.04,
+      "text": "money is coming to me so i'll be like"
+    },
+    {
+      "start": 785.84,
+      "end": 789.28,
+      "duration": 3.44,
+      "text": "fine"
+    },
+    {
+      "start": 786.72,
+      "end": 792.96,
+      "duration": 6.24,
+      "text": "let's sell it so if i'm selling it"
+    },
+    {
+      "start": 789.28,
+      "end": 792.96,
+      "duration": 3.68,
+      "text": "i will be getting something around"
+    },
+    {
+      "start": 793.04,
+      "end": 797.68,
+      "duration": 4.64,
+      "text": "prices of index"
+    },
+    {
+      "start": 795.36,
+      "end": 799.28,
+      "duration": 3.92,
+      "text": "plus function if i've sold a stock if"
+    },
+    {
+      "start": 797.68,
+      "end": 801.44,
+      "duration": 3.76,
+      "text": "i've sold a stock"
+    },
+    {
+      "start": 799.28,
+      "end": 803.68,
+      "duration": 4.4,
+      "text": "i will move to the next day and i still"
+    },
+    {
+      "start": 801.44,
+      "end": 805.36,
+      "duration": 3.92,
+      "text": "have liberty to buy i still have liberty"
+    },
+    {
+      "start": 803.68,
+      "end": 807.92,
+      "duration": 4.24,
+      "text": "because i've sold it"
+    },
+    {
+      "start": 805.36,
+      "end": 809.92,
+      "duration": 4.56,
+      "text": "now i'm i'm free in the next junction i"
+    },
+    {
+      "start": 807.92,
+      "end": 811.76,
+      "duration": 3.84,
+      "text": "can buy"
+    },
+    {
+      "start": 809.92,
+      "end": 813.68,
+      "duration": 3.76,
+      "text": "but if i don't sell it"
+    },
+    {
+      "start": 811.76,
+      "end": 815.36,
+      "duration": 3.6,
+      "text": "then the profit made will be this"
+    },
+    {
+      "start": 813.68,
+      "end": 816.32,
+      "duration": 2.64,
+      "text": "i'll go to the next and i'll say hey"
+    },
+    {
+      "start": 815.36,
+      "end": 817.68,
+      "duration": 2.32,
+      "text": "listen"
+    },
+    {
+      "start": 816.32,
+      "end": 819.44,
+      "duration": 3.12,
+      "text": "you're still holding a stock you don't"
+    },
+    {
+      "start": 817.68,
+      "end": 821.2,
+      "duration": 3.52,
+      "text": "have a liberty to buy"
+    },
+    {
+      "start": 819.44,
+      "end": 822.08,
+      "duration": 2.64,
+      "text": "i don't know the max of this is what you"
+    },
+    {
+      "start": 821.2,
+      "end": 823.44,
+      "duration": 2.24,
+      "text": "take"
+    },
+    {
+      "start": 822.08,
+      "end": 825.76,
+      "duration": 3.68,
+      "text": "and you return the profit at the end of"
+    },
+    {
+      "start": 823.44,
+      "end": 825.76,
+      "duration": 2.32,
+      "text": "the day"
+    },
+    {
+      "start": 826.4,
+      "end": 830.24,
+      "duration": 3.84,
+      "text": "so can i say can i say"
+    },
+    {
+      "start": 828.96,
+      "end": 832.16,
+      "duration": 3.2,
+      "text": "this is what"
+    },
+    {
+      "start": 830.24,
+      "end": 834.48,
+      "duration": 4.24,
+      "text": "the possibilities will be and you're"
+    },
+    {
+      "start": 832.16,
+      "end": 838.4,
+      "duration": 6.24,
+      "text": "returning the max of profits so what i"
+    },
+    {
+      "start": 834.48,
+      "end": 840.32,
+      "duration": 5.84,
+      "text": "can say is okay fine we have explored"
+    },
+    {
+      "start": 838.4,
+      "end": 842.32,
+      "duration": 3.92,
+      "text": "possibilities on that day"
+    },
+    {
+      "start": 840.32,
+      "end": 843.36,
+      "duration": 3.04,
+      "text": "what's the next take the max profits has"
+    },
+    {
+      "start": 842.32,
+      "end": 844.56,
+      "duration": 2.24,
+      "text": "been done"
+    },
+    {
+      "start": 843.36,
+      "end": 846.4,
+      "duration": 3.04,
+      "text": "peace case"
+    },
+    {
+      "start": 844.56,
+      "end": 847.92,
+      "duration": 3.36,
+      "text": "you're trying you're trying on every day"
+    },
+    {
+      "start": 846.4,
+      "end": 850.88,
+      "duration": 4.48,
+      "text": "when do you end up"
+    },
+    {
+      "start": 847.92,
+      "end": 853.36,
+      "duration": 5.44,
+      "text": "when when you've tried on every day"
+    },
+    {
+      "start": 850.88,
+      "end": 856.4,
+      "duration": 5.52,
+      "text": "you've exhausted the days so i can be"
+    },
+    {
+      "start": 853.36,
+      "end": 858.88,
+      "duration": 5.52,
+      "text": "like when you exhaust the days that"
+    },
+    {
+      "start": 856.4,
+      "end": 861.2,
+      "duration": 4.8,
+      "text": "means when you reach this index because"
+    },
+    {
+      "start": 858.88,
+      "end": 863.36,
+      "duration": 4.48,
+      "text": "you started here you go here you go here"
+    },
+    {
+      "start": 861.2,
+      "end": 865.76,
+      "duration": 4.56,
+      "text": "you go here you go here you go here and"
+    },
+    {
+      "start": 863.36,
+      "end": 868.24,
+      "duration": 4.88,
+      "text": "ultimately you'll come to the nth index"
+    },
+    {
+      "start": 865.76,
+      "end": 870.48,
+      "duration": 4.72,
+      "text": "so whenever you come to the nth index"
+    },
+    {
+      "start": 868.24,
+      "end": 872.96,
+      "duration": 4.72,
+      "text": "there's no profit to be made the array"
+    },
+    {
+      "start": 870.48,
+      "end": 876.0,
+      "duration": 5.52,
+      "text": "is over there's no profit to be made"
+    },
+    {
+      "start": 872.96,
+      "end": 877.76,
+      "duration": 4.8,
+      "text": "but you have to be careful over here"
+    },
+    {
+      "start": 876.0,
+      "end": 879.84,
+      "duration": 3.84,
+      "text": "what if"
+    },
+    {
+      "start": 877.76,
+      "end": 882.72,
+      "duration": 4.96,
+      "text": "you actually bought a stock what if you"
+    },
+    {
+      "start": 879.84,
+      "end": 885.12,
+      "duration": 5.28,
+      "text": "bought a stock and you did not sell it"
+    },
+    {
+      "start": 882.72,
+      "end": 887.04,
+      "duration": 4.32,
+      "text": "so there will be a problem right"
+    },
+    {
+      "start": 885.12,
+      "end": 889.12,
+      "duration": 4.0,
+      "text": "so coming across"
+    },
+    {
+      "start": 887.04,
+      "end": 890.88,
+      "duration": 3.84,
+      "text": "when you end all the days so there is no"
+    },
+    {
+      "start": 889.12,
+      "end": 892.96,
+      "duration": 3.84,
+      "text": "profit to be made"
+    },
+    {
+      "start": 890.88,
+      "end": 895.92,
+      "duration": 5.04,
+      "text": "you have invested some money even if"
+    },
+    {
+      "start": 892.96,
+      "end": 897.76,
+      "duration": 4.8,
+      "text": "buyers even if buy is zero that means"
+    },
+    {
+      "start": 895.92,
+      "end": 899.92,
+      "duration": 4.0,
+      "text": "you're still holding a stock but if"
+    },
+    {
+      "start": 897.76,
+      "end": 902.8,
+      "duration": 5.04,
+      "text": "you're holding a stock that means you"
+    },
+    {
+      "start": 899.92,
+      "end": 905.6,
+      "duration": 5.68,
+      "text": "have gone you have invested a money"
+    },
+    {
+      "start": 902.8,
+      "end": 907.68,
+      "duration": 4.88,
+      "text": "minus so that won't matter so you will"
+    },
+    {
+      "start": 905.6,
+      "end": 909.52,
+      "duration": 3.92,
+      "text": "return zero no more"
+    },
+    {
+      "start": 907.68,
+      "end": 911.12,
+      "duration": 3.44,
+      "text": "no more money you'll get from the market"
+    },
+    {
+      "start": 909.52,
+      "end": 913.68,
+      "duration": 4.16,
+      "text": "because you're done no more money you'll"
+    },
+    {
+      "start": 911.12,
+      "end": 915.2,
+      "duration": 4.08,
+      "text": "get from the market so if you have gone"
+    },
+    {
+      "start": 913.68,
+      "end": 916.72,
+      "duration": 3.04,
+      "text": "with something it will be a negative"
+    },
+    {
+      "start": 915.2,
+      "end": 917.92,
+      "duration": 2.72,
+      "text": "value so that will not be considered"
+    },
+    {
+      "start": 916.72,
+      "end": 919.52,
+      "duration": 2.8,
+      "text": "into your answer"
+    },
+    {
+      "start": 917.92,
+      "end": 921.36,
+      "duration": 3.44,
+      "text": "this is how you can"
+    },
+    {
+      "start": 919.52,
+      "end": 923.2,
+      "duration": 3.68,
+      "text": "easily write the recursion so if you"
+    },
+    {
+      "start": 921.36,
+      "end": 926.08,
+      "duration": 4.72,
+      "text": "have written the recursion"
+    },
+    {
+      "start": 923.2,
+      "end": 928.32,
+      "duration": 5.12,
+      "text": "what is the time complexity"
+    },
+    {
+      "start": 926.08,
+      "end": 930.96,
+      "duration": 4.88,
+      "text": "the time complexity will be very simple"
+    },
+    {
+      "start": 928.32,
+      "end": 932.72,
+      "duration": 4.4,
+      "text": "2 to the power n because for every index"
+    },
+    {
+      "start": 930.96,
+      "end": 935.04,
+      "duration": 4.08,
+      "text": "you can either sell like take or not"
+    },
+    {
+      "start": 932.72,
+      "end": 937.36,
+      "duration": 4.64,
+      "text": "take so to the parent space complexity"
+    },
+    {
+      "start": 935.04,
+      "end": 939.04,
+      "duration": 4.0,
+      "text": "will be we go off and the auxiliary"
+    },
+    {
+      "start": 937.36,
+      "end": 941.84,
+      "duration": 4.48,
+      "text": "stack space"
+    },
+    {
+      "start": 939.04,
+      "end": 945.12,
+      "duration": 6.08,
+      "text": "and you can definitely optimize this"
+    },
+    {
+      "start": 941.84,
+      "end": 946.16,
+      "duration": 4.32,
+      "text": "because there will be overlapping"
+    },
+    {
+      "start": 945.12,
+      "end": 947.36,
+      "duration": 2.24,
+      "text": "sub"
+    },
+    {
+      "start": 946.16,
+      "end": 949.28,
+      "duration": 3.12,
+      "text": "problems"
+    },
+    {
+      "start": 947.36,
+      "end": 951.28,
+      "duration": 3.92,
+      "text": "there will be overlapping sub problems"
+    },
+    {
+      "start": 949.28,
+      "end": 952.88,
+      "duration": 3.6,
+      "text": "if you try to draw the recursion tree"
+    },
+    {
+      "start": 951.28,
+      "end": 954.48,
+      "duration": 3.2,
+      "text": "you will see that there are overlapping"
+    },
+    {
+      "start": 952.88,
+      "end": 957.12,
+      "duration": 4.24,
+      "text": "sub problems of"
+    },
+    {
+      "start": 954.48,
+      "end": 957.92,
+      "duration": 3.44,
+      "text": "f of index and by"
+    },
+    {
+      "start": 957.12,
+      "end": 960.16,
+      "duration": 3.04,
+      "text": "so"
+    },
+    {
+      "start": 957.92,
+      "end": 961.92,
+      "duration": 4.0,
+      "text": "you can definitely apply the memoization"
+    },
+    {
+      "start": 960.16,
+      "end": 963.76,
+      "duration": 3.6,
+      "text": "technique"
+    },
+    {
+      "start": 961.92,
+      "end": 965.44,
+      "duration": 3.52,
+      "text": "and in order to apply the memory action"
+    },
+    {
+      "start": 963.76,
+      "end": 967.76,
+      "duration": 4.0,
+      "text": "technique what do you apply"
+    },
+    {
+      "start": 965.44,
+      "end": 968.96,
+      "duration": 3.52,
+      "text": "the changing parameters are index"
+    },
+    {
+      "start": 967.76,
+      "end": 971.6,
+      "duration": 3.84,
+      "text": "and the buy"
+    },
+    {
+      "start": 968.96,
+      "end": 975.6,
+      "duration": 6.64,
+      "text": "what are the values of index from 0 1 2"
+    },
+    {
+      "start": 971.6,
+      "end": 979.12,
+      "duration": 7.52,
+      "text": "3 n so n different values what is buy"
+    },
+    {
+      "start": 975.6,
+      "end": 981.44,
+      "duration": 5.84,
+      "text": "either you say 0 or 1 1 for you are"
+    },
+    {
+      "start": 979.12,
+      "end": 984.08,
+      "duration": 4.96,
+      "text": "allowed to buy 0 4 you're not allowed to"
+    },
+    {
+      "start": 981.44,
+      "end": 986.72,
+      "duration": 5.28,
+      "text": "buy so there are two values"
+    },
+    {
+      "start": 984.08,
+      "end": 988.64,
+      "duration": 4.56,
+      "text": "zero or one so this will be the dp state"
+    },
+    {
+      "start": 986.72,
+      "end": 991.68,
+      "duration": 4.96,
+      "text": "that you need to optimize"
+    },
+    {
+      "start": 988.64,
+      "end": 993.12,
+      "duration": 4.48,
+      "text": "so if you use this dp states you will be"
+    },
+    {
+      "start": 991.68,
+      "end": 995.28,
+      "duration": 3.6,
+      "text": "easily able to"
+    },
+    {
+      "start": 993.12,
+      "end": 996.96,
+      "duration": 3.84,
+      "text": "write it so just make sure you just"
+    },
+    {
+      "start": 995.28,
+      "end": 1000.32,
+      "duration": 5.04,
+      "text": "insert a couple of lines"
+    },
+    {
+      "start": 996.96,
+      "end": 1001.84,
+      "duration": 4.88,
+      "text": "dp of index and buy"
+    },
+    {
+      "start": 1000.32,
+      "end": 1002.72,
+      "duration": 2.4,
+      "text": "one more line"
+    },
+    {
+      "start": 1001.84,
+      "end": 1004.64,
+      "duration": 2.8,
+      "text": "if"
+    },
+    {
+      "start": 1002.72,
+      "end": 1007.68,
+      "duration": 4.96,
+      "text": "dp of index"
+    },
+    {
+      "start": 1004.64,
+      "end": 1011.28,
+      "duration": 6.64,
+      "text": "and buy is not equal to minus 1"
+    },
+    {
+      "start": 1007.68,
+      "end": 1013.92,
+      "duration": 6.24,
+      "text": "you return dp of index and buy again i"
+    },
+    {
+      "start": 1011.28,
+      "end": 1016.0,
+      "duration": 4.72,
+      "text": "have explained these steps in the entire"
+    },
+    {
+      "start": 1013.92,
+      "end": 1018.16,
+      "duration": 4.24,
+      "text": "dp playlist so if you're watching this"
+    },
+    {
+      "start": 1016.0,
+      "end": 1020.0,
+      "duration": 4.0,
+      "text": "video right from anywhere in between"
+    },
+    {
+      "start": 1018.16,
+      "end": 1021.6,
+      "duration": 3.44,
+      "text": "it's not my fault so yeah without"
+    },
+    {
+      "start": 1020.0,
+      "end": 1024.48,
+      "duration": 4.48,
+      "text": "wasting any time let's get started and"
+    },
+    {
+      "start": 1021.6,
+      "end": 1026.72,
+      "duration": 5.12,
+      "text": "code this"
+    },
+    {
+      "start": 1024.48,
+      "end": 1028.72,
+      "duration": 4.24,
+      "text": "so let's quickly quote this up uh you're"
+    },
+    {
+      "start": 1026.72,
+      "end": 1030.72,
+      "duration": 4.0,
+      "text": "given the values and the n"
+    },
+    {
+      "start": 1028.72,
+      "end": 1033.52,
+      "duration": 4.8,
+      "text": "so i'll just write the function we know"
+    },
+    {
+      "start": 1030.72,
+      "end": 1037.6,
+      "duration": 6.88,
+      "text": "it will be an index it'll be a buy"
+    },
+    {
+      "start": 1033.52,
+      "end": 1039.04,
+      "duration": 5.52,
+      "text": "and we can definitely carry the same"
+    },
+    {
+      "start": 1037.6,
+      "end": 1040.24,
+      "duration": 2.64,
+      "text": "array"
+    },
+    {
+      "start": 1039.04,
+      "end": 1042.72,
+      "duration": 3.68,
+      "text": "and uh"
+    },
+    {
+      "start": 1040.24,
+      "end": 1045.04,
+      "duration": 4.8,
+      "text": "and yeah perfect so we know if index"
+    },
+    {
+      "start": 1042.72,
+      "end": 1047.2,
+      "duration": 4.48,
+      "text": "reaches n uh it's over"
+    },
+    {
+      "start": 1045.04,
+      "end": 1049.12,
+      "duration": 4.08,
+      "text": "so you can return zero there is no more"
+    },
+    {
+      "start": 1047.2,
+      "end": 1050.0,
+      "duration": 2.8,
+      "text": "profit that you can make once that is"
+    },
+    {
+      "start": 1049.12,
+      "end": 1051.36,
+      "duration": 2.24,
+      "text": "over"
+    },
+    {
+      "start": 1050.0,
+      "end": 1054.16,
+      "duration": 4.16,
+      "text": "or else there can be a couple of ways"
+    },
+    {
+      "start": 1051.36,
+      "end": 1057.12,
+      "duration": 5.76,
+      "text": "you can say okay listen if buy"
+    },
+    {
+      "start": 1054.16,
+      "end": 1058.72,
+      "duration": 4.56,
+      "text": "is there or else a buy is not there and"
+    },
+    {
+      "start": 1057.12,
+      "end": 1060.16,
+      "duration": 3.04,
+      "text": "you know the profit can be easily made"
+    },
+    {
+      "start": 1058.72,
+      "end": 1062.96,
+      "duration": 4.24,
+      "text": "so you can just"
+    },
+    {
+      "start": 1060.16,
+      "end": 1066.08,
+      "duration": 5.92,
+      "text": "keep the profit to be uh zero"
+    },
+    {
+      "start": 1062.96,
+      "end": 1067.36,
+      "duration": 4.4,
+      "text": "and make sure it's long rather because"
+    },
+    {
+      "start": 1066.08,
+      "end": 1069.52,
+      "duration": 3.44,
+      "text": "they want the answer to be in long"
+    },
+    {
+      "start": 1067.36,
+      "end": 1072.64,
+      "duration": 5.28,
+      "text": "probability to constraints so profit"
+    },
+    {
+      "start": 1069.52,
+      "end": 1075.44,
+      "duration": 5.92,
+      "text": "will be max of couple of guys you know"
+    },
+    {
+      "start": 1072.64,
+      "end": 1077.44,
+      "duration": 4.8,
+      "text": "so either you decide to uh sell it off"
+    },
+    {
+      "start": 1075.44,
+      "end": 1080.0,
+      "duration": 4.56,
+      "text": "like you're buying so this is the cost"
+    },
+    {
+      "start": 1077.44,
+      "end": 1082.16,
+      "duration": 4.72,
+      "text": "that it will cost you and you cannot buy"
+    },
+    {
+      "start": 1080.0,
+      "end": 1084.16,
+      "duration": 4.16,
+      "text": "any further right or you can be like"
+    },
+    {
+      "start": 1082.16,
+      "end": 1086.16,
+      "duration": 4.0,
+      "text": "okay i'm not buying so i'll move to the"
+    },
+    {
+      "start": 1084.16,
+      "end": 1088.32,
+      "duration": 4.16,
+      "text": "next and you still have the liberty to"
+    },
+    {
+      "start": 1086.16,
+      "end": 1091.52,
+      "duration": 5.36,
+      "text": "do whatever or"
+    },
+    {
+      "start": 1088.32,
+      "end": 1093.2,
+      "duration": 4.88,
+      "text": "if you cannot buy then you can sell so"
+    },
+    {
+      "start": 1091.52,
+      "end": 1095.12,
+      "duration": 3.6,
+      "text": "if you can sell then there will be a"
+    },
+    {
+      "start": 1093.2,
+      "end": 1097.12,
+      "duration": 3.92,
+      "text": "plus that will that is something which"
+    },
+    {
+      "start": 1095.12,
+      "end": 1098.48,
+      "duration": 3.36,
+      "text": "you will get and it'll go across and say"
+    },
+    {
+      "start": 1097.12,
+      "end": 1101.36,
+      "duration": 4.24,
+      "text": "now you can buy"
+    },
+    {
+      "start": 1098.48,
+      "end": 1101.36,
+      "duration": 2.88,
+      "text": "it's now you can buy"
+    },
+    {
+      "start": 1102.08,
+      "end": 1105.68,
+      "duration": 3.6,
+      "text": "and over here or you can say okay listen"
+    },
+    {
+      "start": 1104.24,
+      "end": 1107.12,
+      "duration": 2.88,
+      "text": "i'm not going to sell"
+    },
+    {
+      "start": 1105.68,
+      "end": 1110.72,
+      "duration": 5.04,
+      "text": "as of now"
+    },
+    {
+      "start": 1107.12,
+      "end": 1112.24,
+      "duration": 5.12,
+      "text": "go and the liberty is sell zero like you"
+    },
+    {
+      "start": 1110.72,
+      "end": 1113.92,
+      "duration": 3.2,
+      "text": "cannot buy"
+    },
+    {
+      "start": 1112.24,
+      "end": 1116.24,
+      "duration": 4.0,
+      "text": "at the end of the day you can return the"
+    },
+    {
+      "start": 1113.92,
+      "end": 1116.24,
+      "duration": 2.32,
+      "text": "profit"
+    },
+    {
+      "start": 1118.08,
+      "end": 1123.28,
+      "duration": 5.2,
+      "text": "over here you can say return f of"
+    },
+    {
+      "start": 1120.64,
+      "end": 1126.48,
+      "duration": 5.84,
+      "text": "zero comma the buy is one"
+    },
+    {
+      "start": 1123.28,
+      "end": 1128.72,
+      "duration": 5.44,
+      "text": "values and n is what you return"
+    },
+    {
+      "start": 1126.48,
+      "end": 1130.8,
+      "duration": 4.32,
+      "text": "indeed it does run fine so what is the"
+    },
+    {
+      "start": 1128.72,
+      "end": 1133.92,
+      "duration": 5.2,
+      "text": "next step that we will do we will try to"
+    },
+    {
+      "start": 1130.8,
+      "end": 1134.72,
+      "duration": 3.92,
+      "text": "optimize this by dp so vector of vector"
+    },
+    {
+      "start": 1133.92,
+      "end": 1137.04,
+      "duration": 3.12,
+      "text": "n"
+    },
+    {
+      "start": 1134.72,
+      "end": 1137.92,
+      "duration": 3.2,
+      "text": "dp n comma vector"
+    },
+    {
+      "start": 1137.04,
+      "end": 1141.44,
+      "duration": 4.4,
+      "text": "end"
+    },
+    {
+      "start": 1137.92,
+      "end": 1143.36,
+      "duration": 5.44,
+      "text": "to size so to size minus 1 and please"
+    },
+    {
+      "start": 1141.44,
+      "end": 1144.48,
+      "duration": 3.04,
+      "text": "make sure you pass it over here versus"
+    },
+    {
+      "start": 1143.36,
+      "end": 1147.44,
+      "duration": 4.08,
+      "text": "dp"
+    },
+    {
+      "start": 1144.48,
+      "end": 1148.32,
+      "duration": 3.84,
+      "text": "and over here you can write vector of"
+    },
+    {
+      "start": 1147.44,
+      "end": 1149.36,
+      "duration": 1.92,
+      "text": "int"
+    },
+    {
+      "start": 1148.32,
+      "end": 1151.6,
+      "duration": 3.28,
+      "text": "dp"
+    },
+    {
+      "start": 1149.36,
+      "end": 1153.6,
+      "duration": 4.24,
+      "text": "and right over here before returning you"
+    },
+    {
+      "start": 1151.6,
+      "end": 1154.8,
+      "duration": 3.2,
+      "text": "can write dp of index"
+    },
+    {
+      "start": 1153.6,
+      "end": 1157.04,
+      "duration": 3.44,
+      "text": "and by"
+    },
+    {
+      "start": 1154.8,
+      "end": 1160.0,
+      "duration": 5.2,
+      "text": "again very straightforward and right"
+    },
+    {
+      "start": 1157.04,
+      "end": 1162.0,
+      "duration": 4.96,
+      "text": "over here you can just check if this guy"
+    },
+    {
+      "start": 1160.0,
+      "end": 1164.8,
+      "duration": 4.8,
+      "text": "has been"
+    },
+    {
+      "start": 1162.0,
+      "end": 1167.04,
+      "duration": 5.04,
+      "text": "previously visited if not"
+    },
+    {
+      "start": 1164.8,
+      "end": 1169.6,
+      "duration": 4.8,
+      "text": "why don't you return that guy"
+    },
+    {
+      "start": 1167.04,
+      "end": 1170.8,
+      "duration": 3.76,
+      "text": "which is index and buy just make sure"
+    },
+    {
+      "start": 1169.6,
+      "end": 1172.32,
+      "duration": 2.72,
+      "text": "you return it"
+    },
+    {
+      "start": 1170.8,
+      "end": 1174.96,
+      "duration": 4.16,
+      "text": "and i think once you've done this this"
+    },
+    {
+      "start": 1172.32,
+      "end": 1176.88,
+      "duration": 4.56,
+      "text": "should be running super fine"
+    },
+    {
+      "start": 1174.96,
+      "end": 1179.76,
+      "duration": 4.8,
+      "text": "okay it will not run because we forgot"
+    },
+    {
+      "start": 1176.88,
+      "end": 1181.92,
+      "duration": 5.04,
+      "text": "to pass the parameters over here my bad"
+    },
+    {
+      "start": 1179.76,
+      "end": 1183.52,
+      "duration": 3.76,
+      "text": "so just make sure you declare uh the dp"
+    },
+    {
+      "start": 1181.92,
+      "end": 1185.84,
+      "duration": 3.92,
+      "text": "to be long long otherwise it will give"
+    },
+    {
+      "start": 1183.52,
+      "end": 1187.52,
+      "duration": 4.0,
+      "text": "you a wrong answer that's how you can"
+    },
+    {
+      "start": 1185.84,
+      "end": 1189.2,
+      "duration": 3.36,
+      "text": "easily solve this problem but now it's"
+    },
+    {
+      "start": 1187.52,
+      "end": 1190.56,
+      "duration": 3.04,
+      "text": "time to convert this into a tabulation"
+    },
+    {
+      "start": 1189.2,
+      "end": 1192.64,
+      "duration": 3.44,
+      "text": "code"
+    },
+    {
+      "start": 1190.56,
+      "end": 1195.28,
+      "duration": 4.72,
+      "text": "so we have done the memoration code and"
+    },
+    {
+      "start": 1192.64,
+      "end": 1197.76,
+      "duration": 5.12,
+      "text": "we know the complexity of the memoration"
+    },
+    {
+      "start": 1195.28,
+      "end": 1200.96,
+      "duration": 5.68,
+      "text": "code will be uh big o of"
+    },
+    {
+      "start": 1197.76,
+      "end": 1203.28,
+      "duration": 5.52,
+      "text": "n crosser 2 the space complexity will be"
+    },
+    {
+      "start": 1200.96,
+      "end": 1205.12,
+      "duration": 4.16,
+      "text": "n cross a 2 plus an auxiliary stack"
+    },
+    {
+      "start": 1203.28,
+      "end": 1207.52,
+      "duration": 4.24,
+      "text": "space and you know i'm not a big fan of"
+    },
+    {
+      "start": 1205.12,
+      "end": 1210.48,
+      "duration": 5.36,
+      "text": "this so you notice that in order to"
+    },
+    {
+      "start": 1207.52,
+      "end": 1212.72,
+      "duration": 5.2,
+      "text": "remove the auxiliary stack space we have"
+    },
+    {
+      "start": 1210.48,
+      "end": 1215.2,
+      "duration": 4.72,
+      "text": "to apply tabulation what are the steps"
+    },
+    {
+      "start": 1212.72,
+      "end": 1216.96,
+      "duration": 4.24,
+      "text": "of tabulation the steps are very very"
+    },
+    {
+      "start": 1215.2,
+      "end": 1218.48,
+      "duration": 3.28,
+      "text": "straight forward you have to write the"
+    },
+    {
+      "start": 1216.96,
+      "end": 1219.6,
+      "duration": 2.64,
+      "text": "base case"
+    },
+    {
+      "start": 1218.48,
+      "end": 1220.72,
+      "duration": 2.24,
+      "text": "and then"
+    },
+    {
+      "start": 1219.6,
+      "end": 1222.72,
+      "duration": 3.12,
+      "text": "you write"
+    },
+    {
+      "start": 1220.72,
+      "end": 1225.36,
+      "duration": 4.64,
+      "text": "all the changing parameters"
+    },
+    {
+      "start": 1222.72,
+      "end": 1229.44,
+      "duration": 6.72,
+      "text": "this is i and then there is buy"
+    },
+    {
+      "start": 1225.36,
+      "end": 1229.44,
+      "duration": 4.08,
+      "text": "right and then you copy the records"
+    },
+    {
+      "start": 1232.32,
+      "end": 1236.32,
+      "duration": 4.0,
+      "text": "that's what you do right so let's write"
+    },
+    {
+      "start": 1234.96,
+      "end": 1237.84,
+      "duration": 2.88,
+      "text": "the base case"
+    },
+    {
+      "start": 1236.32,
+      "end": 1240.8,
+      "duration": 4.48,
+      "text": "what is the base case"
+    },
+    {
+      "start": 1237.84,
+      "end": 1240.8,
+      "duration": 2.96,
+      "text": "the base case was"
+    },
+    {
+      "start": 1241.2,
+      "end": 1245.36,
+      "duration": 4.16,
+      "text": "index equal equal to n"
+    },
+    {
+      "start": 1242.8,
+      "end": 1248.08,
+      "duration": 5.28,
+      "text": "so you can say that hey listen you will"
+    },
+    {
+      "start": 1245.36,
+      "end": 1250.4,
+      "duration": 5.04,
+      "text": "be creating a dp of n plus 1 this time"
+    },
+    {
+      "start": 1248.08,
+      "end": 1251.76,
+      "duration": 3.68,
+      "text": "and we will be starting off with dp of n"
+    },
+    {
+      "start": 1250.4,
+      "end": 1253.68,
+      "duration": 3.28,
+      "text": "equal to 0"
+    },
+    {
+      "start": 1251.76,
+      "end": 1256.56,
+      "duration": 4.8,
+      "text": "that's what you will be starting off"
+    },
+    {
+      "start": 1253.68,
+      "end": 1258.0,
+      "duration": 4.32,
+      "text": "with right and right after that"
+    },
+    {
+      "start": 1256.56,
+      "end": 1259.84,
+      "duration": 3.28,
+      "text": "what is i"
+    },
+    {
+      "start": 1258.0,
+      "end": 1263.36,
+      "duration": 5.36,
+      "text": "how did you run the"
+    },
+    {
+      "start": 1259.84,
+      "end": 1265.92,
+      "duration": 6.08,
+      "text": "recursion if you remember the recursion"
+    },
+    {
+      "start": 1263.36,
+      "end": 1266.88,
+      "duration": 3.52,
+      "text": "it went in from 0 to n"
+    },
+    {
+      "start": 1265.92,
+      "end": 1268.48,
+      "duration": 2.56,
+      "text": "so"
+    },
+    {
+      "start": 1266.88,
+      "end": 1269.68,
+      "duration": 2.8,
+      "text": "it's the reverse that you will do in"
+    },
+    {
+      "start": 1268.48,
+      "end": 1271.92,
+      "duration": 3.44,
+      "text": "tabulation"
+    },
+    {
+      "start": 1269.68,
+      "end": 1273.12,
+      "duration": 3.44,
+      "text": "you start from n minus 1"
+    },
+    {
+      "start": 1271.92,
+      "end": 1274.8,
+      "duration": 2.88,
+      "text": "till 0"
+    },
+    {
+      "start": 1273.12,
+      "end": 1277.36,
+      "duration": 4.24,
+      "text": "what about by"
+    },
+    {
+      "start": 1274.8,
+      "end": 1279.68,
+      "duration": 4.88,
+      "text": "it will be from zero to one"
+    },
+    {
+      "start": 1277.36,
+      "end": 1281.44,
+      "duration": 4.08,
+      "text": "you can go from one to zero as well but"
+    },
+    {
+      "start": 1279.68,
+      "end": 1284.0,
+      "duration": 4.32,
+      "text": "it'll be from zero to one so just write"
+    },
+    {
+      "start": 1281.44,
+      "end": 1285.76,
+      "duration": 4.32,
+      "text": "this and copy the recurrence and if you"
+    },
+    {
+      "start": 1284.0,
+      "end": 1287.84,
+      "duration": 3.84,
+      "text": "do this it will be running fine and"
+    },
+    {
+      "start": 1285.76,
+      "end": 1290.24,
+      "duration": 4.48,
+      "text": "after that we will do another space"
+    },
+    {
+      "start": 1287.84,
+      "end": 1292.4,
+      "duration": 4.56,
+      "text": "optimization on that"
+    },
+    {
+      "start": 1290.24,
+      "end": 1295.36,
+      "duration": 5.12,
+      "text": "so i'll go back to here and we'll make"
+    },
+    {
+      "start": 1292.4,
+      "end": 1298.08,
+      "duration": 5.68,
+      "text": "it zero okay and right here we can say"
+    },
+    {
+      "start": 1295.36,
+      "end": 1301.6,
+      "duration": 6.24,
+      "text": "uh just make sure it is n plus one so"
+    },
+    {
+      "start": 1298.08,
+      "end": 1305.52,
+      "duration": 7.44,
+      "text": "that we can be like dp of n of zero dp"
+    },
+    {
+      "start": 1301.6,
+      "end": 1306.56,
+      "duration": 4.96,
+      "text": "of n of 1 is equal to 0 that's for sure"
+    },
+    {
+      "start": 1305.52,
+      "end": 1308.24,
+      "duration": 2.72,
+      "text": "because"
+    },
+    {
+      "start": 1306.56,
+      "end": 1310.88,
+      "duration": 4.32,
+      "text": "index equal to equal to n by can be"
+    },
+    {
+      "start": 1308.24,
+      "end": 1313.52,
+      "duration": 5.28,
+      "text": "anything but it has to be 0."
+    },
+    {
+      "start": 1310.88,
+      "end": 1315.68,
+      "duration": 4.8,
+      "text": "next is let's run the for loops so we"
+    },
+    {
+      "start": 1313.52,
+      "end": 1317.84,
+      "duration": 4.32,
+      "text": "know the loops will be running from here"
+    },
+    {
+      "start": 1315.68,
+      "end": 1320.0,
+      "duration": 4.32,
+      "text": "till"
+    },
+    {
+      "start": 1317.84,
+      "end": 1321.2,
+      "duration": 3.36,
+      "text": "and we know there will be a buy"
+    },
+    {
+      "start": 1320.0,
+      "end": 1322.72,
+      "duration": 2.72,
+      "text": "so probably"
+    },
+    {
+      "start": 1321.2,
+      "end": 1324.56,
+      "duration": 3.36,
+      "text": "it will be better if you write index"
+    },
+    {
+      "start": 1322.72,
+      "end": 1325.68,
+      "duration": 2.96,
+      "text": "because we are going to copy paste the"
+    },
+    {
+      "start": 1324.56,
+      "end": 1328.4,
+      "duration": 3.84,
+      "text": "recurrence"
+    },
+    {
+      "start": 1325.68,
+      "end": 1329.44,
+      "duration": 3.76,
+      "text": "so let's write index okay by can be from"
+    },
+    {
+      "start": 1328.4,
+      "end": 1333.28,
+      "duration": 4.88,
+      "text": "zero"
+    },
+    {
+      "start": 1329.44,
+      "end": 1334.24,
+      "duration": 4.8,
+      "text": "till one perfect ready"
+    },
+    {
+      "start": 1333.28,
+      "end": 1335.76,
+      "duration": 2.48,
+      "text": "next"
+    },
+    {
+      "start": 1334.24,
+      "end": 1338.16,
+      "duration": 3.92,
+      "text": "please make sure you copy paste the"
+    },
+    {
+      "start": 1335.76,
+      "end": 1339.44,
+      "duration": 3.68,
+      "text": "recurrence there's no need to apply your"
+    },
+    {
+      "start": 1338.16,
+      "end": 1343.44,
+      "duration": 5.28,
+      "text": "brains"
+    },
+    {
+      "start": 1339.44,
+      "end": 1343.44,
+      "duration": 4.0,
+      "text": "just copy paste the recurrence because"
+    },
+    {
+      "start": 1343.84,
+      "end": 1348.88,
+      "duration": 5.04,
+      "text": "tabulation is bottom up right it's the"
+    },
+    {
+      "start": 1346.96,
+      "end": 1350.08,
+      "duration": 3.12,
+      "text": "opposite of recursion so you have copy"
+    },
+    {
+      "start": 1348.88,
+      "end": 1351.92,
+      "duration": 3.04,
+      "text": "pasted that"
+    },
+    {
+      "start": 1350.08,
+      "end": 1352.88,
+      "duration": 2.8,
+      "text": "and over here just make sure you remove"
+    },
+    {
+      "start": 1351.92,
+      "end": 1355.92,
+      "duration": 4.0,
+      "text": "this"
+    },
+    {
+      "start": 1352.88,
+      "end": 1359.6,
+      "duration": 6.72,
+      "text": "instead of uh this entire thing it'll be"
+    },
+    {
+      "start": 1355.92,
+      "end": 1361.28,
+      "duration": 5.36,
+      "text": "dp of index plus one and it does buy one"
+    },
+    {
+      "start": 1359.6,
+      "end": 1364.08,
+      "duration": 4.48,
+      "text": "and this will be db of index plus one"
+    },
+    {
+      "start": 1361.28,
+      "end": 1367.68,
+      "duration": 6.4,
+      "text": "and zero so dp of index plus"
+    },
+    {
+      "start": 1364.08,
+      "end": 1370.32,
+      "duration": 6.24,
+      "text": "one and it will be zero this will be dpf"
+    },
+    {
+      "start": 1367.68,
+      "end": 1372.8,
+      "duration": 5.12,
+      "text": "index plus one and zero dp of index plus"
+    },
+    {
+      "start": 1370.32,
+      "end": 1374.64,
+      "duration": 4.32,
+      "text": "one and zero perfect this will be dp of"
+    },
+    {
+      "start": 1372.8,
+      "end": 1377.44,
+      "duration": 4.64,
+      "text": "index plus one and one so just write"
+    },
+    {
+      "start": 1374.64,
+      "end": 1378.4,
+      "duration": 3.76,
+      "text": "this db of index plus one and one"
+    },
+    {
+      "start": 1377.44,
+      "end": 1380.88,
+      "duration": 3.44,
+      "text": "perfect"
+    },
+    {
+      "start": 1378.4,
+      "end": 1382.32,
+      "duration": 3.92,
+      "text": "so that's what uh you have written and"
+    },
+    {
+      "start": 1380.88,
+      "end": 1384.08,
+      "duration": 3.2,
+      "text": "right over here you have written this"
+    },
+    {
+      "start": 1382.32,
+      "end": 1386.56,
+      "duration": 4.24,
+      "text": "and this will be dp of zero one is what"
+    },
+    {
+      "start": 1384.08,
+      "end": 1388.08,
+      "duration": 4.0,
+      "text": "you return dp of zero one"
+    },
+    {
+      "start": 1386.56,
+      "end": 1389.84,
+      "duration": 3.28,
+      "text": "now try to run this and see if this is"
+    },
+    {
+      "start": 1388.08,
+      "end": 1391.12,
+      "duration": 3.04,
+      "text": "running in the tabulation"
+    },
+    {
+      "start": 1389.84,
+      "end": 1392.8,
+      "duration": 2.96,
+      "text": "mode"
+    },
+    {
+      "start": 1391.12,
+      "end": 1394.8,
+      "duration": 3.68,
+      "text": "it is indeed running let's quickly"
+    },
+    {
+      "start": 1392.8,
+      "end": 1397.76,
+      "duration": 4.96,
+      "text": "submit this and see if this is working"
+    },
+    {
+      "start": 1394.8,
+      "end": 1399.36,
+      "duration": 4.56,
+      "text": "fine it is indeed working fine now what"
+    },
+    {
+      "start": 1397.76,
+      "end": 1400.72,
+      "duration": 2.96,
+      "text": "is the next step"
+    },
+    {
+      "start": 1399.36,
+      "end": 1402.64,
+      "duration": 3.28,
+      "text": "we know that"
+    },
+    {
+      "start": 1400.72,
+      "end": 1404.56,
+      "duration": 3.84,
+      "text": "whenever we are dependent on the"
+    },
+    {
+      "start": 1402.64,
+      "end": 1406.48,
+      "duration": 3.84,
+      "text": "previous like this is the"
+    },
+    {
+      "start": 1404.56,
+      "end": 1407.68,
+      "duration": 3.12,
+      "text": "previous row like index plus one is the"
+    },
+    {
+      "start": 1406.48,
+      "end": 1409.76,
+      "duration": 3.28,
+      "text": "previous"
+    },
+    {
+      "start": 1407.68,
+      "end": 1412.64,
+      "duration": 4.96,
+      "text": "index plus one is the previous so we are"
+    },
+    {
+      "start": 1409.76,
+      "end": 1414.08,
+      "duration": 4.32,
+      "text": "dependent on the previous guy right so"
+    },
+    {
+      "start": 1412.64,
+      "end": 1417.04,
+      "duration": 4.4,
+      "text": "if i try to"
+    },
+    {
+      "start": 1414.08,
+      "end": 1418.48,
+      "duration": 4.4,
+      "text": "show you in the ipad you'll get a much"
+    },
+    {
+      "start": 1417.04,
+      "end": 1419.68,
+      "duration": 2.64,
+      "text": "clearer picture"
+    },
+    {
+      "start": 1418.48,
+      "end": 1421.36,
+      "duration": 2.88,
+      "text": "now if you are following the space"
+    },
+    {
+      "start": 1419.68,
+      "end": 1422.88,
+      "duration": 3.2,
+      "text": "optimization technique from"
+    },
+    {
+      "start": 1421.36,
+      "end": 1424.56,
+      "duration": 3.2,
+      "text": "the first lecture i think this is very"
+    },
+    {
+      "start": 1422.88,
+      "end": 1426.48,
+      "duration": 3.6,
+      "text": "easy for you but for anyone who is"
+    },
+    {
+      "start": 1424.56,
+      "end": 1429.28,
+      "duration": 4.72,
+      "text": "coming out to you what are we doing we"
+    },
+    {
+      "start": 1426.48,
+      "end": 1431.76,
+      "duration": 5.28,
+      "text": "were assigning these guys as"
+    },
+    {
+      "start": 1429.28,
+      "end": 1434.16,
+      "duration": 4.88,
+      "text": "0 and 0 which is the nth index"
+    },
+    {
+      "start": 1431.76,
+      "end": 1436.64,
+      "duration": 4.88,
+      "text": "then we went on to n minus 1 at index"
+    },
+    {
+      "start": 1434.16,
+      "end": 1438.32,
+      "duration": 4.16,
+      "text": "and we tried to find this and find this"
+    },
+    {
+      "start": 1436.64,
+      "end": 1440.32,
+      "duration": 3.68,
+      "text": "and in order to"
+    },
+    {
+      "start": 1438.32,
+      "end": 1441.92,
+      "duration": 3.6,
+      "text": "in order to find this"
+    },
+    {
+      "start": 1440.32,
+      "end": 1442.88,
+      "duration": 2.56,
+      "text": "what am i using let's go back to the"
+    },
+    {
+      "start": 1441.92,
+      "end": 1445.6,
+      "duration": 3.68,
+      "text": "code"
+    },
+    {
+      "start": 1442.88,
+      "end": 1447.52,
+      "duration": 4.64,
+      "text": "we are using index plus one like if you"
+    },
+    {
+      "start": 1445.6,
+      "end": 1450.08,
+      "duration": 4.48,
+      "text": "are standing at"
+    },
+    {
+      "start": 1447.52,
+      "end": 1452.08,
+      "duration": 4.56,
+      "text": "n minus one if you're looking at at the"
+    },
+    {
+      "start": 1450.08,
+      "end": 1453.92,
+      "duration": 3.84,
+      "text": "code you're using"
+    },
+    {
+      "start": 1452.08,
+      "end": 1455.92,
+      "duration": 3.84,
+      "text": "index plus one which means you're just"
+    },
+    {
+      "start": 1453.92,
+      "end": 1456.72,
+      "duration": 2.8,
+      "text": "using these couple of guys"
+    },
+    {
+      "start": 1455.92,
+      "end": 1458.88,
+      "duration": 2.96,
+      "text": "right"
+    },
+    {
+      "start": 1456.72,
+      "end": 1460.48,
+      "duration": 3.76,
+      "text": "and you're filling this easily"
+    },
+    {
+      "start": 1458.88,
+      "end": 1463.12,
+      "duration": 4.24,
+      "text": "similarly you are also filling this"
+    },
+    {
+      "start": 1460.48,
+      "end": 1464.48,
+      "duration": 4.0,
+      "text": "easily by using these couple of guys"
+    },
+    {
+      "start": 1463.12,
+      "end": 1466.72,
+      "duration": 3.6,
+      "text": "that is what you're doing in x plus one"
+    },
+    {
+      "start": 1464.48,
+      "end": 1468.48,
+      "duration": 4.0,
+      "text": "and index plus one using these couple of"
+    },
+    {
+      "start": 1466.72,
+      "end": 1470.72,
+      "duration": 4.0,
+      "text": "guys to fill this"
+    },
+    {
+      "start": 1468.48,
+      "end": 1473.04,
+      "duration": 4.56,
+      "text": "and then you go to the next which is n"
+    },
+    {
+      "start": 1470.72,
+      "end": 1475.04,
+      "duration": 4.32,
+      "text": "minus 2 and in order to fill this you're"
+    },
+    {
+      "start": 1473.04,
+      "end": 1477.76,
+      "duration": 4.72,
+      "text": "using these couple of guys so do you"
+    },
+    {
+      "start": 1475.04,
+      "end": 1479.68,
+      "duration": 4.64,
+      "text": "actually need to store this now no"
+    },
+    {
+      "start": 1477.76,
+      "end": 1481.76,
+      "duration": 4.0,
+      "text": "again you'll fill this and then again"
+    },
+    {
+      "start": 1479.68,
+      "end": 1484.08,
+      "duration": 4.4,
+      "text": "you'll go to n minus 3 in order to fill"
+    },
+    {
+      "start": 1481.76,
+      "end": 1485.36,
+      "duration": 3.6,
+      "text": "this you'll use this and this how to"
+    },
+    {
+      "start": 1484.08,
+      "end": 1487.04,
+      "duration": 2.96,
+      "text": "fill this you'll use this in this so"
+    },
+    {
+      "start": 1485.36,
+      "end": 1489.36,
+      "duration": 4.0,
+      "text": "there's no need to store this so you"
+    },
+    {
+      "start": 1487.04,
+      "end": 1491.84,
+      "duration": 4.8,
+      "text": "just need to store two variables"
+    },
+    {
+      "start": 1489.36,
+      "end": 1493.6,
+      "duration": 4.24,
+      "text": "one is this and the another one is this"
+    },
+    {
+      "start": 1491.84,
+      "end": 1496.0,
+      "duration": 4.16,
+      "text": "just need to store two variables one is"
+    },
+    {
+      "start": 1493.6,
+      "end": 1499.2,
+      "duration": 5.6,
+      "text": "this and the another one is this"
+    },
+    {
+      "start": 1496.0,
+      "end": 1501.6,
+      "duration": 5.6,
+      "text": "so you can say this as the one variable"
+    },
+    {
+      "start": 1499.2,
+      "end": 1502.4,
+      "duration": 3.2,
+      "text": "this is the other variable so i can say"
+    },
+    {
+      "start": 1501.6,
+      "end": 1505.68,
+      "duration": 4.08,
+      "text": "uh"
+    },
+    {
+      "start": 1502.4,
+      "end": 1505.68,
+      "duration": 3.28,
+      "text": "this as the ahead"
+    },
+    {
+      "start": 1505.76,
+      "end": 1508.8,
+      "duration": 3.04,
+      "text": "because it's it's at the front or you"
+    },
+    {
+      "start": 1507.68,
+      "end": 1510.96,
+      "duration": 3.28,
+      "text": "can say"
+    },
+    {
+      "start": 1508.8,
+      "end": 1512.32,
+      "duration": 3.52,
+      "text": "whatever you can call it i'll try to"
+    },
+    {
+      "start": 1510.96,
+      "end": 1514.4,
+      "duration": 3.44,
+      "text": "call it let's"
+    },
+    {
+      "start": 1512.32,
+      "end": 1516.16,
+      "duration": 3.84,
+      "text": "because this is not the buy right"
+    },
+    {
+      "start": 1514.4,
+      "end": 1518.08,
+      "duration": 3.68,
+      "text": "you can call it whatever you wish to or"
+    },
+    {
+      "start": 1516.16,
+      "end": 1520.24,
+      "duration": 4.08,
+      "text": "you can take uh"
+    },
+    {
+      "start": 1518.08,
+      "end": 1522.08,
+      "duration": 4.0,
+      "text": "two variable array as well you can take"
+    },
+    {
+      "start": 1520.24,
+      "end": 1524.16,
+      "duration": 3.92,
+      "text": "two variable array as well that's your"
+    },
+    {
+      "start": 1522.08,
+      "end": 1526.64,
+      "duration": 4.56,
+      "text": "choice or you can take variables as well"
+    },
+    {
+      "start": 1524.16,
+      "end": 1528.8,
+      "duration": 4.64,
+      "text": "so what i'll do is i will be like okay"
+    },
+    {
+      "start": 1526.64,
+      "end": 1532.08,
+      "duration": 5.44,
+      "text": "i'll go back to the code what i'll do is"
+    },
+    {
+      "start": 1528.8,
+      "end": 1534.88,
+      "duration": 6.08,
+      "text": "i'll try to carry just two variables"
+    },
+    {
+      "start": 1532.08,
+      "end": 1538.0,
+      "duration": 5.92,
+      "text": "vector n or rather vector long"
+    },
+    {
+      "start": 1534.88,
+      "end": 1540.24,
+      "duration": 5.36,
+      "text": "of the ahead guy because it's the head"
+    },
+    {
+      "start": 1538.0,
+      "end": 1541.68,
+      "duration": 3.68,
+      "text": "and i'll be like two comma zero i know"
+    },
+    {
+      "start": 1540.24,
+      "end": 1543.6,
+      "duration": 3.36,
+      "text": "one thing for sure"
+    },
+    {
+      "start": 1541.68,
+      "end": 1546.32,
+      "duration": 4.64,
+      "text": "the ahead is this"
+    },
+    {
+      "start": 1543.6,
+      "end": 1546.32,
+      "duration": 2.72,
+      "text": "is that guy"
+    },
+    {
+      "start": 1546.64,
+      "end": 1549.84,
+      "duration": 3.2,
+      "text": "and i know there will be current which"
+    },
+    {
+      "start": 1548.08,
+      "end": 1551.2,
+      "duration": 3.12,
+      "text": "i'll compute because the current has to"
+    },
+    {
+      "start": 1549.84,
+      "end": 1553.36,
+      "duration": 3.52,
+      "text": "be computed"
+    },
+    {
+      "start": 1551.2,
+      "end": 1555.28,
+      "duration": 4.08,
+      "text": "right and uh these are the ahead so"
+    },
+    {
+      "start": 1553.36,
+      "end": 1557.36,
+      "duration": 4.0,
+      "text": "let's take it from head"
+    },
+    {
+      "start": 1555.28,
+      "end": 1560.32,
+      "duration": 5.04,
+      "text": "let's take it from ahead"
+    },
+    {
+      "start": 1557.36,
+      "end": 1562.88,
+      "duration": 5.52,
+      "text": "let's take it from add"
+    },
+    {
+      "start": 1560.32,
+      "end": 1564.32,
+      "duration": 4.0,
+      "text": "let's take it from ahead"
+    },
+    {
+      "start": 1562.88,
+      "end": 1566.4,
+      "duration": 3.52,
+      "text": "and"
+    },
+    {
+      "start": 1564.32,
+      "end": 1569.2,
+      "duration": 4.88,
+      "text": "this will be the current guy"
+    },
+    {
+      "start": 1566.4,
+      "end": 1570.4,
+      "duration": 4.0,
+      "text": "and once you've done this just"
+    },
+    {
+      "start": 1569.2,
+      "end": 1571.6,
+      "duration": 2.4,
+      "text": "interchange"
+    },
+    {
+      "start": 1570.4,
+      "end": 1574.24,
+      "duration": 3.84,
+      "text": "because"
+    },
+    {
+      "start": 1571.6,
+      "end": 1576.64,
+      "duration": 5.04,
+      "text": "in the next step if i if i show you the"
+    },
+    {
+      "start": 1574.24,
+      "end": 1577.44,
+      "duration": 3.2,
+      "text": "ipad whenever you go to the next n minus"
+    },
+    {
+      "start": 1576.64,
+      "end": 1580.48,
+      "duration": 3.84,
+      "text": "2"
+    },
+    {
+      "start": 1577.44,
+      "end": 1582.96,
+      "duration": 5.52,
+      "text": "this guy will be the ahead and now you"
+    },
+    {
+      "start": 1580.48,
+      "end": 1584.56,
+      "duration": 4.08,
+      "text": "will use these guys so just interchange"
+    },
+    {
+      "start": 1582.96,
+      "end": 1586.16,
+      "duration": 3.2,
+      "text": "once you have done this"
+    },
+    {
+      "start": 1584.56,
+      "end": 1589.28,
+      "duration": 4.72,
+      "text": "you know this at the end of the day is"
+    },
+    {
+      "start": 1586.16,
+      "end": 1591.28,
+      "duration": 5.12,
+      "text": "previous so you just change this off and"
+    },
+    {
+      "start": 1589.28,
+      "end": 1593.04,
+      "duration": 3.76,
+      "text": "you know try to run this"
+    },
+    {
+      "start": 1591.28,
+      "end": 1594.88,
+      "duration": 3.6,
+      "text": "okay my bad"
+    },
+    {
+      "start": 1593.04,
+      "end": 1596.16,
+      "duration": 3.12,
+      "text": "okay my bad it will be ahead not"
+    },
+    {
+      "start": 1594.88,
+      "end": 1599.2,
+      "duration": 4.32,
+      "text": "previous"
+    },
+    {
+      "start": 1596.16,
+      "end": 1601.04,
+      "duration": 4.88,
+      "text": "so yeah let's just make sure it is ahead"
+    },
+    {
+      "start": 1599.2,
+      "end": 1602.4,
+      "duration": 3.2,
+      "text": "i've been so habituated to use previous"
+    },
+    {
+      "start": 1601.04,
+      "end": 1604.8,
+      "duration": 3.76,
+      "text": "and current that"
+    },
+    {
+      "start": 1602.4,
+      "end": 1606.48,
+      "duration": 4.08,
+      "text": "uh i wrote it okay that's fine uh submit"
+    },
+    {
+      "start": 1604.8,
+      "end": 1608.56,
+      "duration": 3.76,
+      "text": "this it will be running fine"
+    },
+    {
+      "start": 1606.48,
+      "end": 1611.36,
+      "duration": 4.88,
+      "text": "okay so"
+    },
+    {
+      "start": 1608.56,
+      "end": 1613.6,
+      "duration": 5.04,
+      "text": "this is uh the most optimized stuff that"
+    },
+    {
+      "start": 1611.36,
+      "end": 1615.12,
+      "duration": 3.76,
+      "text": "you can do but in the discussion forum"
+    },
+    {
+      "start": 1613.6,
+      "end": 1616.88,
+      "duration": 3.28,
+      "text": "you will see that people"
+    },
+    {
+      "start": 1615.12,
+      "end": 1618.72,
+      "duration": 3.6,
+      "text": "not using the"
+    },
+    {
+      "start": 1616.88,
+      "end": 1621.6,
+      "duration": 4.72,
+      "text": "2l array and they will be using"
+    },
+    {
+      "start": 1618.72,
+      "end": 1623.52,
+      "duration": 4.8,
+      "text": "variables you can also use variables"
+    },
+    {
+      "start": 1621.6,
+      "end": 1625.68,
+      "duration": 4.08,
+      "text": "instead of the"
+    },
+    {
+      "start": 1623.52,
+      "end": 1626.64,
+      "duration": 3.12,
+      "text": "two sized array that is the similar"
+    },
+    {
+      "start": 1625.68,
+      "end": 1629.12,
+      "duration": 3.44,
+      "text": "stuff"
+    },
+    {
+      "start": 1626.64,
+      "end": 1630.8,
+      "duration": 4.16,
+      "text": "and if you use uh the"
+    },
+    {
+      "start": 1629.12,
+      "end": 1632.08,
+      "duration": 2.96,
+      "text": "the studio error that then also it is"
+    },
+    {
+      "start": 1630.8,
+      "end": 1634.56,
+      "duration": 3.76,
+      "text": "similar like over here what are you"
+    },
+    {
+      "start": 1632.08,
+      "end": 1636.72,
+      "duration": 4.64,
+      "text": "using you're using uh two space over"
+    },
+    {
+      "start": 1634.56,
+      "end": 1637.92,
+      "duration": 3.36,
+      "text": "here and two so that's four"
+    },
+    {
+      "start": 1636.72,
+      "end": 1639.76,
+      "duration": 3.04,
+      "text": "so you'll see"
+    },
+    {
+      "start": 1637.92,
+      "end": 1641.84,
+      "duration": 3.92,
+      "text": "a lot of solutions having they're using"
+    },
+    {
+      "start": 1639.76,
+      "end": 1643.36,
+      "duration": 3.6,
+      "text": "four variables to write it it does not"
+    },
+    {
+      "start": 1641.84,
+      "end": 1644.56,
+      "duration": 2.72,
+      "text": "optimize is it"
+    },
+    {
+      "start": 1643.36,
+      "end": 1646.56,
+      "duration": 3.2,
+      "text": "it's still the same thing if you're"
+    },
+    {
+      "start": 1644.56,
+      "end": 1649.12,
+      "duration": 4.56,
+      "text": "using four variables to solve this the"
+    },
+    {
+      "start": 1646.56,
+      "end": 1651.76,
+      "duration": 5.2,
+      "text": "same as using a two and two size array"
+    },
+    {
+      "start": 1649.12,
+      "end": 1652.72,
+      "duration": 3.6,
+      "text": "it's four space that you're using right"
+    },
+    {
+      "start": 1651.76,
+      "end": 1654.64,
+      "duration": 2.88,
+      "text": "so"
+    },
+    {
+      "start": 1652.72,
+      "end": 1656.4,
+      "duration": 3.68,
+      "text": "so lead code discussion forum you will"
+    },
+    {
+      "start": 1654.64,
+      "end": 1658.72,
+      "duration": 4.08,
+      "text": "see that uh people"
+    },
+    {
+      "start": 1656.4,
+      "end": 1661.04,
+      "duration": 4.64,
+      "text": "uh using four different variables to"
+    },
+    {
+      "start": 1658.72,
+      "end": 1663.2,
+      "duration": 4.48,
+      "text": "solve this again i will not say that it"
+    },
+    {
+      "start": 1661.04,
+      "end": 1666.0,
+      "duration": 4.96,
+      "text": "is wrong you can still use four"
+    },
+    {
+      "start": 1663.2,
+      "end": 1667.84,
+      "duration": 4.64,
+      "text": "different variables such as your choice"
+    },
+    {
+      "start": 1666.0,
+      "end": 1670.0,
+      "duration": 4.0,
+      "text": "like what are we doing over here if you"
+    },
+    {
+      "start": 1667.84,
+      "end": 1672.64,
+      "duration": 4.8,
+      "text": "carefully see you're basically running a"
+    },
+    {
+      "start": 1670.0,
+      "end": 1675.36,
+      "duration": 5.36,
+      "text": "loop from n minus 1 till 0 and then"
+    },
+    {
+      "start": 1672.64,
+      "end": 1678.08,
+      "duration": 5.44,
+      "text": "there's a by which is like from 0 to 1"
+    },
+    {
+      "start": 1675.36,
+      "end": 1680.96,
+      "duration": 5.6,
+      "text": "so it's like 0 once there is a 0 and"
+    },
+    {
+      "start": 1678.08,
+      "end": 1683.52,
+      "duration": 5.44,
+      "text": "once there is a 1. so whenever it's a 0"
+    },
+    {
+      "start": 1680.96,
+      "end": 1687.04,
+      "duration": 6.08,
+      "text": "the else part gets executed whenever"
+    },
+    {
+      "start": 1683.52,
+      "end": 1688.64,
+      "duration": 5.12,
+      "text": "it's a one the if part gets executed so"
+    },
+    {
+      "start": 1687.04,
+      "end": 1689.92,
+      "duration": 2.88,
+      "text": "you will see in the lead code forum what"
+    },
+    {
+      "start": 1688.64,
+      "end": 1692.88,
+      "duration": 4.24,
+      "text": "they will do is"
+    },
+    {
+      "start": 1689.92,
+      "end": 1695.12,
+      "duration": 5.2,
+      "text": "they'll omit this since they omit this"
+    },
+    {
+      "start": 1692.88,
+      "end": 1697.92,
+      "duration": 5.04,
+      "text": "and since buy is zero and one both will"
+    },
+    {
+      "start": 1695.12,
+      "end": 1699.52,
+      "duration": 4.4,
+      "text": "get executed once and once so what they"
+    },
+    {
+      "start": 1697.92,
+      "end": 1701.36,
+      "duration": 3.44,
+      "text": "will do is"
+    },
+    {
+      "start": 1699.52,
+      "end": 1703.84,
+      "duration": 4.32,
+      "text": "they will first execute"
+    },
+    {
+      "start": 1701.36,
+      "end": 1705.12,
+      "duration": 3.76,
+      "text": "the zeroth guy then they will execute"
+    },
+    {
+      "start": 1703.84,
+      "end": 1706.8,
+      "duration": 2.96,
+      "text": "the one"
+    },
+    {
+      "start": 1705.12,
+      "end": 1708.96,
+      "duration": 3.84,
+      "text": "right and they'll store it so you can"
+    },
+    {
+      "start": 1706.8,
+      "end": 1712.32,
+      "duration": 5.52,
+      "text": "also do the same thing so what you can"
+    },
+    {
+      "start": 1708.96,
+      "end": 1713.92,
+      "duration": 4.96,
+      "text": "do is you can say this guy to be"
+    },
+    {
+      "start": 1712.32,
+      "end": 1715.36,
+      "duration": 3.04,
+      "text": "ahead"
+    },
+    {
+      "start": 1713.92,
+      "end": 1717.52,
+      "duration": 3.6,
+      "text": "ahead"
+    },
+    {
+      "start": 1715.36,
+      "end": 1720.0,
+      "duration": 4.64,
+      "text": "like this is the not by case"
+    },
+    {
+      "start": 1717.52,
+      "end": 1722.56,
+      "duration": 5.04,
+      "text": "so you can say ahead not by"
+    },
+    {
+      "start": 1720.0,
+      "end": 1725.92,
+      "duration": 5.92,
+      "text": "and you can say ahead"
+    },
+    {
+      "start": 1722.56,
+      "end": 1728.8,
+      "duration": 6.24,
+      "text": "by case and you can say this guy to be"
+    },
+    {
+      "start": 1725.92,
+      "end": 1728.8,
+      "duration": 2.88,
+      "text": "car not by"
+    },
+    {
+      "start": 1729.2,
+      "end": 1732.08,
+      "duration": 2.88,
+      "text": "and you can say this guy to be"
+    },
+    {
+      "start": 1731.12,
+      "end": 1735.68,
+      "duration": 4.56,
+      "text": "cur"
+    },
+    {
+      "start": 1732.08,
+      "end": 1736.4,
+      "duration": 4.32,
+      "text": "by okay so let's come back"
+    },
+    {
+      "start": 1735.68,
+      "end": 1739.92,
+      "duration": 4.24,
+      "text": "to"
+    },
+    {
+      "start": 1736.4,
+      "end": 1741.68,
+      "duration": 5.28,
+      "text": "whenever buy is zero what happens let's"
+    },
+    {
+      "start": 1739.92,
+      "end": 1742.88,
+      "duration": 2.96,
+      "text": "go back and check"
+    },
+    {
+      "start": 1741.68,
+      "end": 1744.64,
+      "duration": 2.96,
+      "text": "what happens"
+    },
+    {
+      "start": 1742.88,
+      "end": 1746.56,
+      "duration": 3.68,
+      "text": "i'm saying profit"
+    },
+    {
+      "start": 1744.64,
+      "end": 1748.4,
+      "duration": 3.76,
+      "text": "goes to the car by"
+    },
+    {
+      "start": 1746.56,
+      "end": 1749.36,
+      "duration": 2.8,
+      "text": "whenever buy is zero"
+    },
+    {
+      "start": 1748.4,
+      "end": 1752.32,
+      "duration": 3.92,
+      "text": "so"
+    },
+    {
+      "start": 1749.36,
+      "end": 1755.84,
+      "duration": 6.48,
+      "text": "let's write this"
+    },
+    {
+      "start": 1752.32,
+      "end": 1756.96,
+      "duration": 4.64,
+      "text": "curve not buy because by zero means"
+    },
+    {
+      "start": 1755.84,
+      "end": 1758.0,
+      "duration": 2.16,
+      "text": "cur"
+    },
+    {
+      "start": 1756.96,
+      "end": 1758.8,
+      "duration": 1.84,
+      "text": "not"
+    },
+    {
+      "start": 1758.0,
+      "end": 1760.8,
+      "duration": 2.8,
+      "text": "buy"
+    },
+    {
+      "start": 1758.8,
+      "end": 1763.92,
+      "duration": 5.12,
+      "text": "what happens on car not bad let's go"
+    },
+    {
+      "start": 1760.8,
+      "end": 1766.72,
+      "duration": 5.92,
+      "text": "back i'm saying the value of index plus"
+    },
+    {
+      "start": 1763.92,
+      "end": 1769.44,
+      "duration": 5.52,
+      "text": "ahead of one ahead of one means"
+    },
+    {
+      "start": 1766.72,
+      "end": 1771.52,
+      "duration": 4.8,
+      "text": "ahead of buy head of one means ahead of"
+    },
+    {
+      "start": 1769.44,
+      "end": 1773.28,
+      "duration": 3.84,
+      "text": "buy so let's write"
+    },
+    {
+      "start": 1771.52,
+      "end": 1775.76,
+      "duration": 4.24,
+      "text": "max of"
+    },
+    {
+      "start": 1773.28,
+      "end": 1777.04,
+      "duration": 3.76,
+      "text": "values of index"
+    },
+    {
+      "start": 1775.76,
+      "end": 1778.64,
+      "duration": 2.88,
+      "text": "plus"
+    },
+    {
+      "start": 1777.04,
+      "end": 1780.8,
+      "duration": 3.76,
+      "text": "ahead of"
+    },
+    {
+      "start": 1778.64,
+      "end": 1782.24,
+      "duration": 3.6,
+      "text": "buy is what you write and what's the"
+    },
+    {
+      "start": 1780.8,
+      "end": 1783.6,
+      "duration": 2.8,
+      "text": "other thing"
+    },
+    {
+      "start": 1782.24,
+      "end": 1786.96,
+      "duration": 4.72,
+      "text": "0 plus"
+    },
+    {
+      "start": 1783.6,
+      "end": 1788.32,
+      "duration": 4.72,
+      "text": "ahead of 0 means ahead of not buy"
+    },
+    {
+      "start": 1786.96,
+      "end": 1789.52,
+      "duration": 2.56,
+      "text": "add off"
+    },
+    {
+      "start": 1788.32,
+      "end": 1791.6,
+      "duration": 3.28,
+      "text": "not buy"
+    },
+    {
+      "start": 1789.52,
+      "end": 1793.28,
+      "duration": 3.76,
+      "text": "so if you write this can i say"
+    },
+    {
+      "start": 1791.6,
+      "end": 1796.0,
+      "duration": 4.4,
+      "text": "the curve not by"
+    },
+    {
+      "start": 1793.28,
+      "end": 1799.04,
+      "duration": 5.76,
+      "text": "because what are you generating car of"
+    },
+    {
+      "start": 1796.0,
+      "end": 1800.56,
+      "duration": 4.56,
+      "text": "zero car of zero right curve zero and"
+    },
+    {
+      "start": 1799.04,
+      "end": 1801.76,
+      "duration": 2.72,
+      "text": "what is curve of zero if you carefully"
+    },
+    {
+      "start": 1800.56,
+      "end": 1804.16,
+      "duration": 3.6,
+      "text": "observe"
+    },
+    {
+      "start": 1801.76,
+      "end": 1806.16,
+      "duration": 4.4,
+      "text": "cur of zero is curve not by so you have"
+    },
+    {
+      "start": 1804.16,
+      "end": 1808.16,
+      "duration": 4.0,
+      "text": "generated that perfect"
+    },
+    {
+      "start": 1806.16,
+      "end": 1809.92,
+      "duration": 3.76,
+      "text": "what's the next thing that you'll do cut"
+    },
+    {
+      "start": 1808.16,
+      "end": 1811.2,
+      "duration": 3.04,
+      "text": "off not buy is done and this is also"
+    },
+    {
+      "start": 1809.92,
+      "end": 1813.76,
+      "duration": 3.84,
+      "text": "done"
+    },
+    {
+      "start": 1811.2,
+      "end": 1817.12,
+      "duration": 5.92,
+      "text": "next thing that you will do is"
+    },
+    {
+      "start": 1813.76,
+      "end": 1817.12,
+      "duration": 3.36,
+      "text": "you will take care of buy"
+    },
+    {
+      "start": 1817.36,
+      "end": 1821.68,
+      "duration": 4.32,
+      "text": "and you will write max"
+    },
+    {
+      "start": 1819.6,
+      "end": 1823.76,
+      "duration": 4.16,
+      "text": "because the next thing will be"
+    },
+    {
+      "start": 1821.68,
+      "end": 1825.2,
+      "duration": 3.52,
+      "text": "1 which means"
+    },
+    {
+      "start": 1823.76,
+      "end": 1825.84,
+      "duration": 2.08,
+      "text": "this guy will generate which is square"
+    },
+    {
+      "start": 1825.2,
+      "end": 1828.16,
+      "duration": 2.96,
+      "text": "of"
+    },
+    {
+      "start": 1825.84,
+      "end": 1830.48,
+      "duration": 4.64,
+      "text": "y and for this what's the formula let's"
+    },
+    {
+      "start": 1828.16,
+      "end": 1833.28,
+      "duration": 5.12,
+      "text": "see let's go back whenever you add y"
+    },
+    {
+      "start": 1830.48,
+      "end": 1836.64,
+      "duration": 6.16,
+      "text": "which is 1 which is 1 this is 1 right"
+    },
+    {
+      "start": 1833.28,
+      "end": 1839.52,
+      "duration": 6.24,
+      "text": "this is 1 so whenever you add this as a"
+    },
+    {
+      "start": 1836.64,
+      "end": 1841.92,
+      "duration": 5.28,
+      "text": "formula minus value of index plus add of"
+    },
+    {
+      "start": 1839.52,
+      "end": 1845.44,
+      "duration": 5.92,
+      "text": "zero so let's write it"
+    },
+    {
+      "start": 1841.92,
+      "end": 1848.16,
+      "duration": 6.24,
+      "text": "minus values of index"
+    },
+    {
+      "start": 1845.44,
+      "end": 1851.76,
+      "duration": 6.32,
+      "text": "plus ahead of zero head of zero means"
+    },
+    {
+      "start": 1848.16,
+      "end": 1853.04,
+      "duration": 4.88,
+      "text": "not by ahead"
+    },
+    {
+      "start": 1851.76,
+      "end": 1854.72,
+      "duration": 2.96,
+      "text": "not by"
+    },
+    {
+      "start": 1853.04,
+      "end": 1857.2,
+      "duration": 4.16,
+      "text": "comma"
+    },
+    {
+      "start": 1854.72,
+      "end": 1858.64,
+      "duration": 3.92,
+      "text": "zero plus ahead of one"
+    },
+    {
+      "start": 1857.2,
+      "end": 1861.12,
+      "duration": 3.92,
+      "text": "zero plus"
+    },
+    {
+      "start": 1858.64,
+      "end": 1862.88,
+      "duration": 4.24,
+      "text": "ahead of one means ahead of by"
+    },
+    {
+      "start": 1861.12,
+      "end": 1866.16,
+      "duration": 5.04,
+      "text": "and in this way"
+    },
+    {
+      "start": 1862.88,
+      "end": 1868.88,
+      "duration": 6.0,
+      "text": "you can easily get the current buy"
+    },
+    {
+      "start": 1866.16,
+      "end": 1871.44,
+      "duration": 5.28,
+      "text": "not buy and current buy which means you"
+    },
+    {
+      "start": 1868.88,
+      "end": 1874.24,
+      "duration": 5.36,
+      "text": "have filled up this guy and this guy and"
+    },
+    {
+      "start": 1871.44,
+      "end": 1876.84,
+      "duration": 5.4,
+      "text": "in the next step when you go across"
+    },
+    {
+      "start": 1874.24,
+      "end": 1880.0,
+      "duration": 5.76,
+      "text": "you'll be like"
+    },
+    {
+      "start": 1876.84,
+      "end": 1882.4,
+      "duration": 5.56,
+      "text": "okay these guys"
+    },
+    {
+      "start": 1880.0,
+      "end": 1885.28,
+      "duration": 5.28,
+      "text": "will serve as"
+    },
+    {
+      "start": 1882.4,
+      "end": 1887.68,
+      "duration": 5.28,
+      "text": "head not by and they head by in order to"
+    },
+    {
+      "start": 1885.28,
+      "end": 1890.72,
+      "duration": 5.44,
+      "text": "compute this and this so you can just"
+    },
+    {
+      "start": 1887.68,
+      "end": 1894.0,
+      "duration": 6.32,
+      "text": "stomach this and say okay listen"
+    },
+    {
+      "start": 1890.72,
+      "end": 1897.44,
+      "duration": 6.72,
+      "text": "next step ahead of not buy will be"
+    },
+    {
+      "start": 1894.0,
+      "end": 1899.68,
+      "duration": 5.68,
+      "text": "cur of not buy so instead of 2d array"
+    },
+    {
+      "start": 1897.44,
+      "end": 1902.0,
+      "duration": 4.56,
+      "text": "you'll just do this and ahead of buy"
+    },
+    {
+      "start": 1899.68,
+      "end": 1902.0,
+      "duration": 2.32,
+      "text": "will be"
+    },
+    {
+      "start": 1903.12,
+      "end": 1905.44,
+      "duration": 2.32,
+      "text": "cur of buy"
+    },
+    {
+      "start": 1904.72,
+      "end": 1908.08,
+      "duration": 3.36,
+      "text": "and"
+    },
+    {
+      "start": 1905.44,
+      "end": 1909.92,
+      "duration": 4.48,
+      "text": "you actually solve this using this"
+    },
+    {
+      "start": 1908.08,
+      "end": 1911.2,
+      "duration": 3.12,
+      "text": "wonderful variables and this is the"
+    },
+    {
+      "start": 1909.92,
+      "end": 1913.36,
+      "duration": 3.44,
+      "text": "solution that you"
+    },
+    {
+      "start": 1911.2,
+      "end": 1915.52,
+      "duration": 4.32,
+      "text": "always find in a lot of discussion"
+    },
+    {
+      "start": 1913.36,
+      "end": 1918.32,
+      "duration": 4.96,
+      "text": "forums but you don't understand so this"
+    },
+    {
+      "start": 1915.52,
+      "end": 1921.84,
+      "duration": 6.32,
+      "text": "was the entire intuition behind this"
+    },
+    {
+      "start": 1918.32,
+      "end": 1921.84,
+      "duration": 3.52,
+      "text": "possible solution"
+    },
+    {
+      "start": 1924.16,
+      "end": 1927.92,
+      "duration": 3.76,
+      "text": "so now what i will do is"
+    },
+    {
+      "start": 1926.24,
+      "end": 1929.84,
+      "duration": 3.6,
+      "text": "i'll go back to the code"
+    },
+    {
+      "start": 1927.92,
+      "end": 1932.32,
+      "duration": 4.4,
+      "text": "and now i'll try to omit this portion"
+    },
+    {
+      "start": 1929.84,
+      "end": 1933.36,
+      "duration": 3.52,
+      "text": "okay and let's try to write it"
+    },
+    {
+      "start": 1932.32,
+      "end": 1936.16,
+      "duration": 3.84,
+      "text": "long"
+    },
+    {
+      "start": 1933.36,
+      "end": 1937.92,
+      "duration": 4.56,
+      "text": "zero means not buy you know this"
+    },
+    {
+      "start": 1936.16,
+      "end": 1941.52,
+      "duration": 5.36,
+      "text": "not bad perfect"
+    },
+    {
+      "start": 1937.92,
+      "end": 1943.12,
+      "duration": 5.2,
+      "text": "one means bye you also know this right"
+    },
+    {
+      "start": 1941.52,
+      "end": 1945.92,
+      "duration": 4.4,
+      "text": "so bye"
+    },
+    {
+      "start": 1943.12,
+      "end": 1947.68,
+      "duration": 4.56,
+      "text": "so this is what you write"
+    },
+    {
+      "start": 1945.92,
+      "end": 1948.48,
+      "duration": 2.56,
+      "text": "perfect let's quickly declare this as"
+    },
+    {
+      "start": 1947.68,
+      "end": 1950.96,
+      "duration": 3.28,
+      "text": "well"
+    },
+    {
+      "start": 1948.48,
+      "end": 1953.04,
+      "duration": 4.56,
+      "text": "long off ahead not by"
+    },
+    {
+      "start": 1950.96,
+      "end": 1954.48,
+      "duration": 3.52,
+      "text": "and long off ahead back"
+    },
+    {
+      "start": 1953.04,
+      "end": 1957.52,
+      "duration": 4.48,
+      "text": "perfect i've declared both and i've"
+    },
+    {
+      "start": 1954.48,
+      "end": 1960.4,
+      "duration": 5.92,
+      "text": "assigned them to be zeros amazing"
+    },
+    {
+      "start": 1957.52,
+      "end": 1963.12,
+      "duration": 5.6,
+      "text": "instead of this i'll omit this law let's"
+    },
+    {
+      "start": 1960.4,
+      "end": 1964.08,
+      "duration": 3.68,
+      "text": "omit this let's omit this entire stuff"
+    },
+    {
+      "start": 1963.12,
+      "end": 1966.08,
+      "duration": 2.96,
+      "text": "so"
+    },
+    {
+      "start": 1964.08,
+      "end": 1967.2,
+      "duration": 3.12,
+      "text": "and i need one other variables which is"
+    },
+    {
+      "start": 1966.08,
+      "end": 1970.64,
+      "duration": 4.56,
+      "text": "curve buy"
+    },
+    {
+      "start": 1967.2,
+      "end": 1973.2,
+      "duration": 6.0,
+      "text": "and cut not buy for sure okay so"
+    },
+    {
+      "start": 1970.64,
+      "end": 1975.68,
+      "duration": 5.04,
+      "text": "i know i'll have to switch so instead of"
+    },
+    {
+      "start": 1973.2,
+      "end": 1976.88,
+      "duration": 3.68,
+      "text": "this i'll say okay ahead by will be"
+    },
+    {
+      "start": 1975.68,
+      "end": 1978.8,
+      "duration": 3.12,
+      "text": "curved by"
+    },
+    {
+      "start": 1976.88,
+      "end": 1980.72,
+      "duration": 3.84,
+      "text": "and ahead not by"
+    },
+    {
+      "start": 1978.8,
+      "end": 1983.2,
+      "duration": 4.4,
+      "text": "will be current by for sure that's the"
+    },
+    {
+      "start": 1980.72,
+      "end": 1984.8,
+      "duration": 4.08,
+      "text": "first switch that i'll do"
+    },
+    {
+      "start": 1983.2,
+      "end": 1986.32,
+      "duration": 3.12,
+      "text": "perfect"
+    },
+    {
+      "start": 1984.8,
+      "end": 1990.24,
+      "duration": 5.44,
+      "text": "now let's come over here"
+    },
+    {
+      "start": 1986.32,
+      "end": 1992.24,
+      "duration": 5.92,
+      "text": "i know whenever by zero this is executed"
+    },
+    {
+      "start": 1990.24,
+      "end": 1994.08,
+      "duration": 3.84,
+      "text": "right so what i'll do is"
+    },
+    {
+      "start": 1992.24,
+      "end": 1996.16,
+      "duration": 3.92,
+      "text": "i'll say okay this is definitely going"
+    },
+    {
+      "start": 1994.08,
+      "end": 1997.52,
+      "duration": 3.44,
+      "text": "to be executed"
+    },
+    {
+      "start": 1996.16,
+      "end": 2000.4,
+      "duration": 4.24,
+      "text": "and the profit"
+    },
+    {
+      "start": 1997.52,
+      "end": 2002.24,
+      "duration": 4.72,
+      "text": "goes and stores in carbide which is"
+    },
+    {
+      "start": 2000.4,
+      "end": 2005.68,
+      "duration": 5.28,
+      "text": "curved by"
+    },
+    {
+      "start": 2002.24,
+      "end": 2007.44,
+      "duration": 5.2,
+      "text": "car not by the else one"
+    },
+    {
+      "start": 2005.68,
+      "end": 2008.48,
+      "duration": 2.8,
+      "text": "the else one is cannot buy and whenever"
+    },
+    {
+      "start": 2007.44,
+      "end": 2011.28,
+      "duration": 3.84,
+      "text": "it buys"
+    },
+    {
+      "start": 2008.48,
+      "end": 2013.76,
+      "duration": 5.28,
+      "text": "its curl by for sure and i can remove"
+    },
+    {
+      "start": 2011.28,
+      "end": 2017.36,
+      "duration": 6.08,
+      "text": "this i'll make sure that both of them"
+    },
+    {
+      "start": 2013.76,
+      "end": 2019.44,
+      "duration": 5.68,
+      "text": "gets executed so this guy goes"
+    },
+    {
+      "start": 2017.36,
+      "end": 2020.64,
+      "duration": 3.28,
+      "text": "this guy also goes so i'm left off with"
+    },
+    {
+      "start": 2019.44,
+      "end": 2022.48,
+      "duration": 3.04,
+      "text": "carbine"
+    },
+    {
+      "start": 2020.64,
+      "end": 2024.32,
+      "duration": 3.68,
+      "text": "all right i'm left off with turbine i'm"
+    },
+    {
+      "start": 2022.48,
+      "end": 2026.32,
+      "duration": 3.84,
+      "text": "left with curd not by"
+    },
+    {
+      "start": 2024.32,
+      "end": 2028.56,
+      "duration": 4.24,
+      "text": "perfect this is over because i've"
+    },
+    {
+      "start": 2026.32,
+      "end": 2030.0,
+      "duration": 3.68,
+      "text": "assigned them so both of i'm executing"
+    },
+    {
+      "start": 2028.56,
+      "end": 2031.36,
+      "duration": 2.8,
+      "text": "both of them without actually running a"
+    },
+    {
+      "start": 2030.0,
+      "end": 2033.76,
+      "duration": 3.76,
+      "text": "for loop because"
+    },
+    {
+      "start": 2031.36,
+      "end": 2036.32,
+      "duration": 4.96,
+      "text": "i know both of them will execute it so"
+    },
+    {
+      "start": 2033.76,
+      "end": 2038.56,
+      "duration": 4.8,
+      "text": "first the curl of not buy was executing"
+    },
+    {
+      "start": 2036.32,
+      "end": 2040.96,
+      "duration": 4.64,
+      "text": "you can execute that at first or at end"
+    },
+    {
+      "start": 2038.56,
+      "end": 2042.72,
+      "duration": 4.16,
+      "text": "doesn't matter"
+    },
+    {
+      "start": 2040.96,
+      "end": 2044.32,
+      "duration": 3.36,
+      "text": "and you can execute the curve back"
+    },
+    {
+      "start": 2042.72,
+      "end": 2046.64,
+      "duration": 3.92,
+      "text": "perfect now"
+    },
+    {
+      "start": 2044.32,
+      "end": 2049.76,
+      "duration": 5.44,
+      "text": "let's come back uh to changing this"
+    },
+    {
+      "start": 2046.64,
+      "end": 2051.28,
+      "duration": 4.64,
+      "text": "slowly ahead of one means"
+    },
+    {
+      "start": 2049.76,
+      "end": 2052.8,
+      "duration": 3.04,
+      "text": "ahead of"
+    },
+    {
+      "start": 2051.28,
+      "end": 2055.12,
+      "duration": 3.84,
+      "text": "buy"
+    },
+    {
+      "start": 2052.8,
+      "end": 2058.64,
+      "duration": 5.84,
+      "text": "head of zero means"
+    },
+    {
+      "start": 2055.12,
+      "end": 2062.0,
+      "duration": 6.88,
+      "text": "not buy perfect head of zero means"
+    },
+    {
+      "start": 2058.64,
+      "end": 2064.0,
+      "duration": 5.36,
+      "text": "not buy perfect head of one means"
+    },
+    {
+      "start": 2062.0,
+      "end": 2066.48,
+      "duration": 4.48,
+      "text": "buy perfect"
+    },
+    {
+      "start": 2064.0,
+      "end": 2069.2,
+      "duration": 5.2,
+      "text": "i think we have done this and one means"
+    },
+    {
+      "start": 2066.48,
+      "end": 2069.2,
+      "duration": 2.72,
+      "text": "at a buy"
+    },
+    {
+      "start": 2070.32,
+      "end": 2073.2,
+      "duration": 2.88,
+      "text": "amazing"
+    },
+    {
+      "start": 2071.84,
+      "end": 2074.48,
+      "duration": 2.64,
+      "text": "amazing"
+    },
+    {
+      "start": 2073.2,
+      "end": 2077.2,
+      "duration": 4.0,
+      "text": "isn't it"
+    },
+    {
+      "start": 2074.48,
+      "end": 2080.0,
+      "duration": 5.52,
+      "text": "if i run this hopefully it runs yes yes"
+    },
+    {
+      "start": 2077.2,
+      "end": 2080.0,
+      "duration": 2.8,
+      "text": "it does it does"
+    },
+    {
+      "start": 2081.52,
+      "end": 2084.24,
+      "duration": 2.72,
+      "text": "let's submit this"
+    },
+    {
+      "start": 2084.56,
+      "end": 2090.24,
+      "duration": 5.68,
+      "text": "wow"
+    },
+    {
+      "start": 2086.72,
+      "end": 2092.8,
+      "duration": 6.08,
+      "text": "that is how you generate"
+    },
+    {
+      "start": 2090.24,
+      "end": 2094.96,
+      "duration": 4.72,
+      "text": "the variable solutions from a recursion"
+    },
+    {
+      "start": 2092.8,
+      "end": 2096.32,
+      "duration": 3.52,
+      "text": "from a tabulation from a space"
+    },
+    {
+      "start": 2094.96,
+      "end": 2098.64,
+      "duration": 3.68,
+      "text": "optimization this is how you generate"
+    },
+    {
+      "start": 2096.32,
+      "end": 2099.36,
+      "duration": 3.04,
+      "text": "the variable solution just don't mug it"
+    },
+    {
+      "start": 2098.64,
+      "end": 2102.72,
+      "duration": 4.08,
+      "text": "up"
+    },
+    {
+      "start": 2099.36,
+      "end": 2104.16,
+      "duration": 4.8,
+      "text": "have the intuition and it's 5 41 am in"
+    },
+    {
+      "start": 2102.72,
+      "end": 2105.84,
+      "duration": 3.12,
+      "text": "the morning"
+    },
+    {
+      "start": 2104.16,
+      "end": 2107.84,
+      "duration": 3.68,
+      "text": "so guys i hope you've understood the"
+    },
+    {
+      "start": 2105.84,
+      "end": 2109.84,
+      "duration": 4.0,
+      "text": "entire stuff just in case you did and"
+    },
+    {
+      "start": 2107.84,
+      "end": 2112.0,
+      "duration": 4.16,
+      "text": "just in case you did not please take"
+    },
+    {
+      "start": 2109.84,
+      "end": 2113.68,
+      "duration": 3.84,
+      "text": "your pen and paper and try to do it"
+    },
+    {
+      "start": 2112.0,
+      "end": 2115.36,
+      "duration": 3.36,
+      "text": "and just in case you did understand"
+    },
+    {
+      "start": 2113.68,
+      "end": 2116.48,
+      "duration": 2.8,
+      "text": "please please please give it a like and"
+    },
+    {
+      "start": 2115.36,
+      "end": 2118.56,
+      "duration": 3.2,
+      "text": "if you're new to this channel please do"
+    },
+    {
+      "start": 2116.48,
+      "end": 2120.88,
+      "duration": 4.4,
+      "text": "consider subscribing to us it is very"
+    },
+    {
+      "start": 2118.56,
+      "end": 2122.72,
+      "duration": 4.16,
+      "text": "very important for us and now with this"
+    },
+    {
+      "start": 2120.88,
+      "end": 2124.72,
+      "duration": 3.84,
+      "text": "i will be wrapping up this video let's"
+    },
+    {
+      "start": 2122.72,
+      "end": 2126.96,
+      "duration": 4.24,
+      "text": "meet in the next one till then bye bye"
+    },
+    {
+      "start": 2124.72,
+      "end": 2126.96,
+      "duration": 2.24,
+      "text": "take"
+    },
+    {
+      "start": 2129.28,
+      "end": 2133.64,
+      "duration": 4.36,
+      "text": "ever care you're golden"
+    }
+  ]
+}

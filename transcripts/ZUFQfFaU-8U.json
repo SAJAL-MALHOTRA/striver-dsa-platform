@@ -1,0 +1,4352 @@
+{
+  "video_id": "ZUFQfFaU-8U",
+  "title": "G-27. Shortest Path in Directed Acyclic Graph - Topological Sort",
+  "duration_sec": 1596,
+  "num_segments": 724,
+  "segments": [
+    {
+      "start": 3.04,
+      "end": 6.24,
+      "duration": 3.2,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.4,
+      "end": 8.0,
+      "duration": 3.6,
+      "text": "i hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.24,
+      "end": 11.36,
+      "duration": 5.12,
+      "text": "today we will be solving the problem"
+    },
+    {
+      "start": 8.0,
+      "end": 13.84,
+      "duration": 5.84,
+      "text": "shortest path in directed acyclic graph"
+    },
+    {
+      "start": 11.36,
+      "end": 15.68,
+      "duration": 4.32,
+      "text": "given a directed acyclic graph find the"
+    },
+    {
+      "start": 13.84,
+      "end": 17.44,
+      "duration": 3.6,
+      "text": "shortest path from the source they've"
+    },
+    {
+      "start": 15.68,
+      "end": 19.04,
+      "duration": 3.36,
+      "text": "clearly stated that the source will"
+    },
+    {
+      "start": 17.44,
+      "end": 22.48,
+      "duration": 5.04,
+      "text": "always be zero"
+    },
+    {
+      "start": 19.04,
+      "end": 25.12,
+      "duration": 6.08,
+      "text": "to all the vertex okay so basically what"
+    },
+    {
+      "start": 22.48,
+      "end": 27.92,
+      "duration": 5.44,
+      "text": "does the problem state uh you're given a"
+    },
+    {
+      "start": 25.12,
+      "end": 30.8,
+      "duration": 5.68,
+      "text": "dag now what is a dag if you remember"
+    },
+    {
+      "start": 27.92,
+      "end": 31.68,
+      "duration": 3.76,
+      "text": "it's a directed graph"
+    },
+    {
+      "start": 30.8,
+      "end": 33.2,
+      "duration": 2.4,
+      "text": "with"
+    },
+    {
+      "start": 31.68,
+      "end": 36.24,
+      "duration": 4.56,
+      "text": "no cycles"
+    },
+    {
+      "start": 33.2,
+      "end": 38.96,
+      "duration": 5.76,
+      "text": "if i combine this then you call it as a"
+    },
+    {
+      "start": 36.24,
+      "end": 41.04,
+      "duration": 4.8,
+      "text": "directed acyclic graph that is the"
+    },
+    {
+      "start": 38.96,
+      "end": 43.6,
+      "duration": 4.64,
+      "text": "definition of it so over here you're"
+    },
+    {
+      "start": 41.04,
+      "end": 45.44,
+      "duration": 4.4,
+      "text": "given a graph now do you see a shuttle"
+    },
+    {
+      "start": 43.6,
+      "end": 47.76,
+      "duration": 4.16,
+      "text": "change from the graphs that we were"
+    },
+    {
+      "start": 45.44,
+      "end": 50.16,
+      "duration": 4.72,
+      "text": "doing till now yes you do so if you see"
+    },
+    {
+      "start": 47.76,
+      "end": 53.68,
+      "duration": 5.92,
+      "text": "0 and 1 there's an edge"
+    },
+    {
+      "start": 50.16,
+      "end": 56.48,
+      "duration": 6.32,
+      "text": "but we have added edge weights to it we"
+    },
+    {
+      "start": 53.68,
+      "end": 59.2,
+      "duration": 5.52,
+      "text": "are saying the edge weight is 2 that"
+    },
+    {
+      "start": 56.48,
+      "end": 62.08,
+      "duration": 5.6,
+      "text": "means to go from zero to one it will"
+    },
+    {
+      "start": 59.2,
+      "end": 64.16,
+      "duration": 4.96,
+      "text": "take you two to go from one to two it"
+    },
+    {
+      "start": 62.08,
+      "end": 65.84,
+      "duration": 3.76,
+      "text": "will take you three so in short if i ask"
+    },
+    {
+      "start": 64.16,
+      "end": 67.2,
+      "duration": 3.04,
+      "text": "you to go from"
+    },
+    {
+      "start": 65.84,
+      "end": 69.92,
+      "duration": 4.08,
+      "text": "zero to one"
+    },
+    {
+      "start": 67.2,
+      "end": 71.84,
+      "duration": 4.64,
+      "text": "what is the shortest path it takes two"
+    },
+    {
+      "start": 69.92,
+      "end": 74.4,
+      "duration": 4.48,
+      "text": "are there any other paths in the graph"
+    },
+    {
+      "start": 71.84,
+      "end": 77.04,
+      "duration": 5.2,
+      "text": "the answer to that is no so i can say"
+    },
+    {
+      "start": 74.4,
+      "end": 78.88,
+      "duration": 4.48,
+      "text": "if i say node one the distance is two"
+    },
+    {
+      "start": 77.04,
+      "end": 81.76,
+      "duration": 4.72,
+      "text": "because that is what it will take for"
+    },
+    {
+      "start": 78.88,
+      "end": 84.16,
+      "duration": 5.28,
+      "text": "node zero the distance is zero why"
+    },
+    {
+      "start": 81.76,
+      "end": 87.68,
+      "duration": 5.92,
+      "text": "zero on itself because the source node"
+    },
+    {
+      "start": 84.16,
+      "end": 90.64,
+      "duration": 6.48,
+      "text": "has been clearly stated as zero so zero"
+    },
+    {
+      "start": 87.68,
+      "end": 93.2,
+      "duration": 5.52,
+      "text": "to itself will be zero right if i ask"
+    },
+    {
+      "start": 90.64,
+      "end": 94.08,
+      "duration": 3.44,
+      "text": "you for z the second node it states"
+    },
+    {
+      "start": 93.2,
+      "end": 95.84,
+      "duration": 2.64,
+      "text": "three"
+    },
+    {
+      "start": 94.08,
+      "end": 98.0,
+      "duration": 3.92,
+      "text": "where's the second node here how many"
+    },
+    {
+      "start": 95.84,
+      "end": 100.48,
+      "duration": 4.64,
+      "text": "parts are there one is this which takes"
+    },
+    {
+      "start": 98.0,
+      "end": 103.04,
+      "duration": 5.04,
+      "text": "five one is this which takes three so"
+    },
+    {
+      "start": 100.48,
+      "end": 104.88,
+      "duration": 4.4,
+      "text": "thereby the shortest path is three so"
+    },
+    {
+      "start": 103.04,
+      "end": 105.92,
+      "duration": 2.88,
+      "text": "the question is very straightforward and"
+    },
+    {
+      "start": 104.88,
+      "end": 108.08,
+      "duration": 3.2,
+      "text": "simple"
+    },
+    {
+      "start": 105.92,
+      "end": 110.32,
+      "duration": 4.4,
+      "text": "you're given a source and it will always"
+    },
+    {
+      "start": 108.08,
+      "end": 113.52,
+      "duration": 5.44,
+      "text": "be zero from zero to all other parts"
+    },
+    {
+      "start": 110.32,
+      "end": 114.8,
+      "duration": 4.48,
+      "text": "like all of the notes zero one two three"
+    },
+    {
+      "start": 113.52,
+      "end": 117.2,
+      "duration": 3.68,
+      "text": "and so on"
+    },
+    {
+      "start": 114.8,
+      "end": 121.12,
+      "duration": 6.32,
+      "text": "till n minus one node you have to find"
+    },
+    {
+      "start": 117.2,
+      "end": 123.68,
+      "duration": 6.48,
+      "text": "me the shortest distance to travel"
+    },
+    {
+      "start": 121.12,
+      "end": 125.92,
+      "duration": 4.8,
+      "text": "shortest distance to it that is what the"
+    },
+    {
+      "start": 123.68,
+      "end": 128.0,
+      "duration": 4.32,
+      "text": "question states"
+    },
+    {
+      "start": 125.92,
+      "end": 129.92,
+      "duration": 4.0,
+      "text": "so you have learned topo sort tell now"
+    },
+    {
+      "start": 128.0,
+      "end": 131.68,
+      "duration": 3.68,
+      "text": "right so you'll be applying topo sort"
+    },
+    {
+      "start": 129.92,
+      "end": 133.76,
+      "duration": 3.84,
+      "text": "but the algorithm will be slightly"
+    },
+    {
+      "start": 131.68,
+      "end": 136.4,
+      "duration": 4.72,
+      "text": "different this time okay i'll be uh"
+    },
+    {
+      "start": 133.76,
+      "end": 138.56,
+      "duration": 4.8,
+      "text": "combining topo sort with some relaxation"
+    },
+    {
+      "start": 136.4,
+      "end": 139.68,
+      "duration": 3.28,
+      "text": "of edges to solve this so i like the"
+    },
+    {
+      "start": 138.56,
+      "end": 140.96,
+      "duration": 2.4,
+      "text": "steps"
+    },
+    {
+      "start": 139.68,
+      "end": 142.8,
+      "duration": 3.12,
+      "text": "and the"
+    },
+    {
+      "start": 140.96,
+      "end": 145.12,
+      "duration": 4.16,
+      "text": "process that i'll follow is"
+    },
+    {
+      "start": 142.8,
+      "end": 148.0,
+      "duration": 5.2,
+      "text": "first i'll tell you the algorithm"
+    },
+    {
+      "start": 145.12,
+      "end": 149.52,
+      "duration": 4.4,
+      "text": "then we'll go and code it so that after"
+    },
+    {
+      "start": 148.0,
+      "end": 151.76,
+      "duration": 3.76,
+      "text": "this process"
+    },
+    {
+      "start": 149.52,
+      "end": 154.24,
+      "duration": 4.72,
+      "text": "you have a very strong hold of what we"
+    },
+    {
+      "start": 151.76,
+      "end": 156.8,
+      "duration": 5.04,
+      "text": "are doing once you understand this"
+    },
+    {
+      "start": 154.24,
+      "end": 158.72,
+      "duration": 4.48,
+      "text": "i will tell you the intuition okay you"
+    },
+    {
+      "start": 156.8,
+      "end": 160.16,
+      "duration": 3.36,
+      "text": "might think why not intuition at the"
+    },
+    {
+      "start": 158.72,
+      "end": 162.32,
+      "duration": 3.6,
+      "text": "start because if i tell you the"
+    },
+    {
+      "start": 160.16,
+      "end": 164.32,
+      "duration": 4.16,
+      "text": "intuition you might understand but in a"
+    },
+    {
+      "start": 162.32,
+      "end": 166.56,
+      "duration": 4.24,
+      "text": "very blunt manner you'll understand you"
+    },
+    {
+      "start": 164.32,
+      "end": 169.36,
+      "duration": 5.04,
+      "text": "won't understand in depth once you have"
+    },
+    {
+      "start": 166.56,
+      "end": 170.96,
+      "duration": 4.4,
+      "text": "the algorithm and the code in the brain"
+    },
+    {
+      "start": 169.36,
+      "end": 173.28,
+      "duration": 3.92,
+      "text": "and then i tell the intuition you'll be"
+    },
+    {
+      "start": 170.96,
+      "end": 175.36,
+      "duration": 4.4,
+      "text": "able to connect it and you'll be much"
+    },
+    {
+      "start": 173.28,
+      "end": 178.48,
+      "duration": 5.2,
+      "text": "like it will be easier for you to absorb"
+    },
+    {
+      "start": 175.36,
+      "end": 181.04,
+      "duration": 5.68,
+      "text": "it okay so this is the dag and this is"
+    },
+    {
+      "start": 178.48,
+      "end": 184.16,
+      "duration": 5.68,
+      "text": "the corresponding adjacency list"
+    },
+    {
+      "start": 181.04,
+      "end": 186.56,
+      "duration": 5.52,
+      "text": "this time let's carefully see the six"
+    },
+    {
+      "start": 184.16,
+      "end": 189.28,
+      "duration": 5.12,
+      "text": "has an adjacency node of four"
+    },
+    {
+      "start": 186.56,
+      "end": 191.2,
+      "duration": 4.64,
+      "text": "six has an adjacency of node of four"
+    },
+    {
+      "start": 189.28,
+      "end": 192.8,
+      "duration": 3.52,
+      "text": "with a weight of two so instead of"
+    },
+    {
+      "start": 191.2,
+      "end": 194.8,
+      "duration": 3.6,
+      "text": "storing an integer"
+    },
+    {
+      "start": 192.8,
+      "end": 197.12,
+      "duration": 4.32,
+      "text": "previously it was like six as an"
+    },
+    {
+      "start": 194.8,
+      "end": 199.28,
+      "duration": 4.48,
+      "text": "adjacency node of four and five four and"
+    },
+    {
+      "start": 197.12,
+      "end": 201.68,
+      "duration": 4.56,
+      "text": "five this is what we were storing right"
+    },
+    {
+      "start": 199.28,
+      "end": 203.2,
+      "duration": 3.92,
+      "text": "this time we will store pairs"
+    },
+    {
+      "start": 201.68,
+      "end": 205.52,
+      "duration": 3.84,
+      "text": "four comma two"
+    },
+    {
+      "start": 203.2,
+      "end": 208.32,
+      "duration": 5.12,
+      "text": "five comma three because this is five"
+    },
+    {
+      "start": 205.52,
+      "end": 210.32,
+      "duration": 4.8,
+      "text": "will store pairs this time this time it"
+    },
+    {
+      "start": 208.32,
+      "end": 212.08,
+      "duration": 3.76,
+      "text": "will be list of pairs"
+    },
+    {
+      "start": 210.32,
+      "end": 214.0,
+      "duration": 3.68,
+      "text": "either you are in c plus plus it will be"
+    },
+    {
+      "start": 212.08,
+      "end": 216.08,
+      "duration": 4.0,
+      "text": "vector of pairs"
+    },
+    {
+      "start": 214.0,
+      "end": 219.2,
+      "duration": 5.2,
+      "text": "what you will store if you are doing a"
+    },
+    {
+      "start": 216.08,
+      "end": 222.08,
+      "duration": 6.0,
+      "text": "java it will be a list of pairs that you"
+    },
+    {
+      "start": 219.2,
+      "end": 223.6,
+      "duration": 4.4,
+      "text": "will store in this particular thing"
+    },
+    {
+      "start": 222.08,
+      "end": 226.08,
+      "duration": 4.0,
+      "text": "remember the third lecture where i told"
+    },
+    {
+      "start": 223.6,
+      "end": 228.64,
+      "duration": 5.04,
+      "text": "you how to store graphs if they have"
+    },
+    {
+      "start": 226.08,
+      "end": 230.64,
+      "duration": 4.56,
+      "text": "edge weights you always declare it as"
+    },
+    {
+      "start": 228.64,
+      "end": 232.72,
+      "duration": 4.08,
+      "text": "pairs and you store pairs where the"
+    },
+    {
+      "start": 230.64,
+      "end": 235.44,
+      "duration": 4.8,
+      "text": "first guy will be the adjacent node the"
+    },
+    {
+      "start": 232.72,
+      "end": 237.36,
+      "duration": 4.64,
+      "text": "second guy will be the weight of that"
+    },
+    {
+      "start": 235.44,
+      "end": 238.84,
+      "duration": 3.4,
+      "text": "edge remember so that is what i have"
+    },
+    {
+      "start": 237.36,
+      "end": 242.0,
+      "duration": 4.64,
+      "text": "done over here"
+    },
+    {
+      "start": 238.84,
+      "end": 244.32,
+      "duration": 5.48,
+      "text": "so the question stated the source will"
+    },
+    {
+      "start": 242.0,
+      "end": 246.64,
+      "duration": 4.64,
+      "text": "always be zero but we will try to solve"
+    },
+    {
+      "start": 244.32,
+      "end": 248.4,
+      "duration": 4.08,
+      "text": "this problem for any given source so"
+    },
+    {
+      "start": 246.64,
+      "end": 250.56,
+      "duration": 3.92,
+      "text": "source can be anything so thereby what"
+    },
+    {
+      "start": 248.4,
+      "end": 253.28,
+      "duration": 4.88,
+      "text": "i'll do is i'll say for this graph"
+    },
+    {
+      "start": 250.56,
+      "end": 255.36,
+      "duration": 4.8,
+      "text": "assume the source to be six for this"
+    },
+    {
+      "start": 253.28,
+      "end": 257.52,
+      "duration": 4.24,
+      "text": "graph assume the source to be six"
+    },
+    {
+      "start": 255.36,
+      "end": 260.0,
+      "duration": 4.64,
+      "text": "because i don't want you to be sticking"
+    },
+    {
+      "start": 257.52,
+      "end": 261.52,
+      "duration": 4.0,
+      "text": "with zero because that will"
+    },
+    {
+      "start": 260.0,
+      "end": 262.96,
+      "duration": 2.96,
+      "text": "not help you out so"
+    },
+    {
+      "start": 261.52,
+      "end": 264.32,
+      "duration": 2.8,
+      "text": "we can have any source because the"
+    },
+    {
+      "start": 262.96,
+      "end": 266.72,
+      "duration": 3.76,
+      "text": "interviewer might give you the question"
+    },
+    {
+      "start": 264.32,
+      "end": 268.72,
+      "duration": 4.4,
+      "text": "as stating as any source so any source"
+    },
+    {
+      "start": 266.72,
+      "end": 270.72,
+      "duration": 4.0,
+      "text": "okay so what is the step one"
+    },
+    {
+      "start": 268.72,
+      "end": 273.04,
+      "duration": 4.32,
+      "text": "so the step one of the algorithm is very"
+    },
+    {
+      "start": 270.72,
+      "end": 275.44,
+      "duration": 4.72,
+      "text": "simple do a two possible"
+    },
+    {
+      "start": 273.04,
+      "end": 278.88,
+      "duration": 5.84,
+      "text": "do a two possible on the graph yes"
+    },
+    {
+      "start": 275.44,
+      "end": 280.64,
+      "duration": 5.2,
+      "text": "do a two pose sort on the graph now how"
+    },
+    {
+      "start": 278.88,
+      "end": 282.96,
+      "duration": 4.08,
+      "text": "many ways do you know to do a tuple sort"
+    },
+    {
+      "start": 280.64,
+      "end": 284.96,
+      "duration": 4.32,
+      "text": "there are two ways one is the dfs way"
+    },
+    {
+      "start": 282.96,
+      "end": 287.28,
+      "duration": 4.32,
+      "text": "one is the bf space to whichever you"
+    },
+    {
+      "start": 284.96,
+      "end": 288.8,
+      "duration": 3.84,
+      "text": "wish to i just want the topo sort for"
+    },
+    {
+      "start": 287.28,
+      "end": 291.76,
+      "duration": 4.48,
+      "text": "this particular"
+    },
+    {
+      "start": 288.8,
+      "end": 292.8,
+      "duration": 4.0,
+      "text": "dac which is the directed acyclic graph"
+    },
+    {
+      "start": 291.76,
+      "end": 294.88,
+      "duration": 3.12,
+      "text": "so"
+    },
+    {
+      "start": 292.8,
+      "end": 297.28,
+      "duration": 4.48,
+      "text": "let's quickly do the topo sort for this"
+    },
+    {
+      "start": 294.88,
+      "end": 298.96,
+      "duration": 4.08,
+      "text": "dag so i'll be using the dfs method to"
+    },
+    {
+      "start": 297.28,
+      "end": 301.92,
+      "duration": 4.64,
+      "text": "find the toposort so you know the dfs"
+    },
+    {
+      "start": 298.96,
+      "end": 303.76,
+      "duration": 4.8,
+      "text": "method is very simple we always take a"
+    },
+    {
+      "start": 301.92,
+      "end": 306.4,
+      "duration": 4.48,
+      "text": "stacked data structure which stores the"
+    },
+    {
+      "start": 303.76,
+      "end": 308.8,
+      "duration": 5.04,
+      "text": "toposort whenever we complete the dfs or"
+    },
+    {
+      "start": 306.4,
+      "end": 310.96,
+      "duration": 4.56,
+      "text": "a given node we put it into the stack we"
+    },
+    {
+      "start": 308.8,
+      "end": 313.6,
+      "duration": 4.8,
+      "text": "take a visited node that is what we take"
+    },
+    {
+      "start": 310.96,
+      "end": 317.12,
+      "duration": 6.16,
+      "text": "and we always run something like this"
+    },
+    {
+      "start": 313.6,
+      "end": 320.4,
+      "duration": 6.8,
+      "text": "for i equal to 0 and we go until 6 and"
+    },
+    {
+      "start": 317.12,
+      "end": 323.04,
+      "duration": 5.92,
+      "text": "we say if not visited of i"
+    },
+    {
+      "start": 320.4,
+      "end": 324.88,
+      "duration": 4.48,
+      "text": "then please call the dfs for i if you"
+    },
+    {
+      "start": 323.04,
+      "end": 328.32,
+      "duration": 5.28,
+      "text": "remember this is always done for the"
+    },
+    {
+      "start": 324.88,
+      "end": 330.8,
+      "duration": 5.92,
+      "text": "components right so the first value of"
+    },
+    {
+      "start": 328.32,
+      "end": 333.76,
+      "duration": 5.44,
+      "text": "i that's zero so we'll go and call the"
+    },
+    {
+      "start": 330.8,
+      "end": 335.92,
+      "duration": 5.12,
+      "text": "dfs for zero the dfs of zero is called"
+    },
+    {
+      "start": 333.76,
+      "end": 338.56,
+      "duration": 4.8,
+      "text": "whenever the dfs of zero is called"
+    },
+    {
+      "start": 335.92,
+      "end": 341.36,
+      "duration": 5.44,
+      "text": "please make sure it is marked as visited"
+    },
+    {
+      "start": 338.56,
+      "end": 344.0,
+      "duration": 5.44,
+      "text": "now who are zeros adjacent nodes it"
+    },
+    {
+      "start": 341.36,
+      "end": 346.96,
+      "duration": 5.6,
+      "text": "appears that zero's adjacent node is one"
+    },
+    {
+      "start": 344.0,
+      "end": 348.88,
+      "duration": 4.88,
+      "text": "so go and call the dfs for one perfect"
+    },
+    {
+      "start": 346.96,
+      "end": 350.08,
+      "duration": 3.12,
+      "text": "so again mark it as visited"
+    },
+    {
+      "start": 348.88,
+      "end": 352.48,
+      "duration": 3.6,
+      "text": "once"
+    },
+    {
+      "start": 350.08,
+      "end": 353.68,
+      "duration": 3.6,
+      "text": "adjacent node appears to be three so go"
+    },
+    {
+      "start": 352.48,
+      "end": 356.48,
+      "duration": 4.0,
+      "text": "and call for"
+    },
+    {
+      "start": 353.68,
+      "end": 358.56,
+      "duration": 4.88,
+      "text": "three so i called it for three or four"
+    },
+    {
+      "start": 356.48,
+      "end": 360.96,
+      "duration": 4.48,
+      "text": "three appears that there is no one for"
+    },
+    {
+      "start": 358.56,
+      "end": 362.48,
+      "duration": 3.92,
+      "text": "three mark three has visited"
+    },
+    {
+      "start": 360.96,
+      "end": 365.76,
+      "duration": 4.8,
+      "text": "and it appears that for three there is"
+    },
+    {
+      "start": 362.48,
+      "end": 367.84,
+      "duration": 5.36,
+      "text": "no one so what i can say is for three"
+    },
+    {
+      "start": 365.76,
+      "end": 369.6,
+      "duration": 3.84,
+      "text": "the dfs call is over and whenever the"
+    },
+    {
+      "start": 367.84,
+      "end": 371.6,
+      "duration": 3.76,
+      "text": "dfs call is over in tuperson if you"
+    },
+    {
+      "start": 369.6,
+      "end": 373.84,
+      "duration": 4.24,
+      "text": "remember we just took that three and put"
+    },
+    {
+      "start": 371.6,
+      "end": 375.68,
+      "duration": 4.08,
+      "text": "it into the stack go back"
+    },
+    {
+      "start": 373.84,
+      "end": 376.88,
+      "duration": 3.04,
+      "text": "one do we have any further adjusted"
+    },
+    {
+      "start": 375.68,
+      "end": 379.12,
+      "duration": 3.44,
+      "text": "nodes no"
+    },
+    {
+      "start": 376.88,
+      "end": 381.52,
+      "duration": 4.64,
+      "text": "put it into the stack go back zero do we"
+    },
+    {
+      "start": 379.12,
+      "end": 383.52,
+      "duration": 4.4,
+      "text": "have any further adjacent nodes no put"
+    },
+    {
+      "start": 381.52,
+      "end": 385.68,
+      "duration": 4.16,
+      "text": "it into the stack and go back so what i"
+    },
+    {
+      "start": 383.52,
+      "end": 388.64,
+      "duration": 5.12,
+      "text": "can say is this particular dfs call is"
+    },
+    {
+      "start": 385.68,
+      "end": 389.68,
+      "duration": 4.0,
+      "text": "done let's increase the value of i"
+    },
+    {
+      "start": 388.64,
+      "end": 392.8,
+      "duration": 4.16,
+      "text": "one"
+    },
+    {
+      "start": 389.68,
+      "end": 395.68,
+      "duration": 6.0,
+      "text": "it's already visited two not visited"
+    },
+    {
+      "start": 392.8,
+      "end": 397.6,
+      "duration": 4.8,
+      "text": "call it for two mark it as visited"
+    },
+    {
+      "start": 395.68,
+      "end": 400.56,
+      "duration": 4.88,
+      "text": "what two do we have any edges and notes"
+    },
+    {
+      "start": 397.6,
+      "end": 403.36,
+      "duration": 5.76,
+      "text": "yes what is it three but it's already"
+    },
+    {
+      "start": 400.56,
+      "end": 405.6,
+      "duration": 5.04,
+      "text": "visited no for the dfs calls so two is"
+    },
+    {
+      "start": 403.36,
+      "end": 407.84,
+      "duration": 4.48,
+      "text": "also done go back so once you go back"
+    },
+    {
+      "start": 405.6,
+      "end": 409.68,
+      "duration": 4.08,
+      "text": "this is done increase the value of i"
+    },
+    {
+      "start": 407.84,
+      "end": 411.6,
+      "duration": 3.76,
+      "text": "because this will be three will we do"
+    },
+    {
+      "start": 409.68,
+      "end": 414.0,
+      "duration": 4.32,
+      "text": "our dfs call for three no it's already"
+    },
+    {
+      "start": 411.6,
+      "end": 415.84,
+      "duration": 4.24,
+      "text": "visited increase the value four so will"
+    },
+    {
+      "start": 414.0,
+      "end": 418.4,
+      "duration": 4.4,
+      "text": "we do it for four yes we'll do it for"
+    },
+    {
+      "start": 415.84,
+      "end": 420.8,
+      "duration": 4.96,
+      "text": "four mark four as visited"
+    },
+    {
+      "start": 418.4,
+      "end": 423.68,
+      "duration": 5.28,
+      "text": "after that look at four it has zero"
+    },
+    {
+      "start": 420.8,
+      "end": 424.88,
+      "duration": 4.08,
+      "text": "which is visited you see zero is visited"
+    },
+    {
+      "start": 423.68,
+      "end": 426.88,
+      "duration": 3.2,
+      "text": "it is"
+    },
+    {
+      "start": 424.88,
+      "end": 428.8,
+      "duration": 3.92,
+      "text": "and it has three uh two which is also"
+    },
+    {
+      "start": 426.88,
+      "end": 430.88,
+      "duration": 4.0,
+      "text": "visited zero and two both are visited"
+    },
+    {
+      "start": 428.8,
+      "end": 432.32,
+      "duration": 3.52,
+      "text": "separately no for the dfs calls so it"
+    },
+    {
+      "start": 430.88,
+      "end": 434.24,
+      "duration": 3.36,
+      "text": "will go back and"
+    },
+    {
+      "start": 432.32,
+      "end": 437.36,
+      "duration": 5.04,
+      "text": "reverse put it into the stack and go"
+    },
+    {
+      "start": 434.24,
+      "end": 438.88,
+      "duration": 4.64,
+      "text": "back next it's 5 for 5"
+    },
+    {
+      "start": 437.36,
+      "end": 442.16,
+      "duration": 4.8,
+      "text": "mark it is visited"
+    },
+    {
+      "start": 438.88,
+      "end": 444.0,
+      "duration": 5.12,
+      "text": "and 5 has adjacent node as 4 which is"
+    },
+    {
+      "start": 442.16,
+      "end": 446.24,
+      "duration": 4.08,
+      "text": "already visited so no further defense"
+    },
+    {
+      "start": 444.0,
+      "end": 448.96,
+      "duration": 4.96,
+      "text": "calls please make sure put 5 into the"
+    },
+    {
+      "start": 446.24,
+      "end": 451.52,
+      "duration": 5.28,
+      "text": "adjacent nodes and go back"
+    },
+    {
+      "start": 448.96,
+      "end": 453.84,
+      "duration": 4.88,
+      "text": "next into the stack rather it'll be six"
+    },
+    {
+      "start": 451.52,
+      "end": 456.72,
+      "duration": 5.2,
+      "text": "similarly it will happen for six mark it"
+    },
+    {
+      "start": 453.84,
+      "end": 458.96,
+      "duration": 5.12,
+      "text": "as visited and you'll find that for six"
+    },
+    {
+      "start": 456.72,
+      "end": 461.52,
+      "duration": 4.8,
+      "text": "we have four and five as the adjacent"
+    },
+    {
+      "start": 458.96,
+      "end": 463.92,
+      "duration": 4.96,
+      "text": "node four and five both are visited so"
+    },
+    {
+      "start": 461.52,
+      "end": 467.36,
+      "duration": 5.84,
+      "text": "no further dfs calls put it into the"
+    },
+    {
+      "start": 463.92,
+      "end": 470.0,
+      "duration": 6.08,
+      "text": "stack and go back so apparently once"
+    },
+    {
+      "start": 467.36,
+      "end": 472.0,
+      "duration": 4.64,
+      "text": "this for loop has been completed all the"
+    },
+    {
+      "start": 470.0,
+      "end": 474.88,
+      "duration": 4.88,
+      "text": "defense calls have been completed"
+    },
+    {
+      "start": 472.0,
+      "end": 476.72,
+      "duration": 4.72,
+      "text": "this stack will store the topo sort now"
+    },
+    {
+      "start": 474.88,
+      "end": 478.96,
+      "duration": 4.08,
+      "text": "if i quickly erase this off let's"
+    },
+    {
+      "start": 476.72,
+      "end": 480.72,
+      "duration": 4.0,
+      "text": "quickly raise this off so the step one i"
+    },
+    {
+      "start": 478.96,
+      "end": 484.8,
+      "duration": 5.84,
+      "text": "can say has been completed and the"
+    },
+    {
+      "start": 480.72,
+      "end": 486.4,
+      "duration": 5.68,
+      "text": "toposoda is very simple it is 6 5 4 2 0"
+    },
+    {
+      "start": 484.8,
+      "end": 487.84,
+      "duration": 3.04,
+      "text": "1 3"
+    },
+    {
+      "start": 486.4,
+      "end": 491.04,
+      "duration": 4.64,
+      "text": "and if you carefully see there is an"
+    },
+    {
+      "start": 487.84,
+      "end": 492.56,
+      "duration": 4.72,
+      "text": "edge between 0 to 1 0 appears before 1"
+    },
+    {
+      "start": 491.04,
+      "end": 495.44,
+      "duration": 4.4,
+      "text": "there there's an edge between two two"
+    },
+    {
+      "start": 492.56,
+      "end": 498.16,
+      "duration": 5.6,
+      "text": "three the two appears before three so"
+    },
+    {
+      "start": 495.44,
+      "end": 500.32,
+      "duration": 4.88,
+      "text": "this is indeed a valid topo sort i can"
+    },
+    {
+      "start": 498.16,
+      "end": 502.56,
+      "duration": 4.4,
+      "text": "easily say that now what is step two"
+    },
+    {
+      "start": 500.32,
+      "end": 504.32,
+      "duration": 4.0,
+      "text": "step two is very very simple"
+    },
+    {
+      "start": 502.56,
+      "end": 506.96,
+      "duration": 4.4,
+      "text": "you take out all the notes from the"
+    },
+    {
+      "start": 504.32,
+      "end": 511.04,
+      "duration": 6.72,
+      "text": "stack one by one take the notes out of"
+    },
+    {
+      "start": 506.96,
+      "end": 513.12,
+      "duration": 6.16,
+      "text": "the stack one by one notes out of stack"
+    },
+    {
+      "start": 511.04,
+      "end": 514.32,
+      "duration": 3.28,
+      "text": "and relax the edges you'll hear this"
+    },
+    {
+      "start": 513.12,
+      "end": 517.12,
+      "duration": 4.0,
+      "text": "term a lot"
+    },
+    {
+      "start": 514.32,
+      "end": 519.2,
+      "duration": 4.88,
+      "text": "going forward and relax the edges"
+    },
+    {
+      "start": 517.12,
+      "end": 521.44,
+      "duration": 4.32,
+      "text": "okay this is the step"
+    },
+    {
+      "start": 519.2,
+      "end": 523.6,
+      "duration": 4.4,
+      "text": "two so in order to relax the edges we"
+    },
+    {
+      "start": 521.44,
+      "end": 525.04,
+      "duration": 3.6,
+      "text": "need to declare a distance array and"
+    },
+    {
+      "start": 523.6,
+      "end": 526.56,
+      "duration": 2.96,
+      "text": "that should be marked with infinity"
+    },
+    {
+      "start": 525.04,
+      "end": 528.16,
+      "duration": 3.12,
+      "text": "let's do it"
+    },
+    {
+      "start": 526.56,
+      "end": 530.24,
+      "duration": 3.68,
+      "text": "the distance error has been declared and"
+    },
+    {
+      "start": 528.16,
+      "end": 532.8,
+      "duration": 4.64,
+      "text": "what you'll do initially is just make"
+    },
+    {
+      "start": 530.24,
+      "end": 535.28,
+      "duration": 5.04,
+      "text": "sure everything is marked as infinity"
+    },
+    {
+      "start": 532.8,
+      "end": 537.2,
+      "duration": 4.4,
+      "text": "now let's start relaxation of the edges"
+    },
+    {
+      "start": 535.28,
+      "end": 539.36,
+      "duration": 4.08,
+      "text": "but before that please make sure"
+    },
+    {
+      "start": 537.2,
+      "end": 541.76,
+      "duration": 4.56,
+      "text": "whatever is your source node just go to"
+    },
+    {
+      "start": 539.36,
+      "end": 543.36,
+      "duration": 4.0,
+      "text": "that source node and make it zero just"
+    },
+    {
+      "start": 541.76,
+      "end": 545.36,
+      "duration": 3.6,
+      "text": "make sure that you go to that source"
+    },
+    {
+      "start": 543.36,
+      "end": 547.2,
+      "duration": 3.84,
+      "text": "node and see that hey i know one thing"
+    },
+    {
+      "start": 545.36,
+      "end": 549.04,
+      "duration": 3.68,
+      "text": "if you start from six and if you end at"
+    },
+    {
+      "start": 547.2,
+      "end": 550.96,
+      "duration": 3.76,
+      "text": "six the distance that you will take will"
+    },
+    {
+      "start": 549.04,
+      "end": 552.8,
+      "duration": 3.76,
+      "text": "always be zero so make sure you do that"
+    },
+    {
+      "start": 550.96,
+      "end": 554.96,
+      "duration": 4.0,
+      "text": "okay next"
+    },
+    {
+      "start": 552.8,
+      "end": 557.68,
+      "duration": 4.88,
+      "text": "whatever is on the stack stop this is"
+    },
+    {
+      "start": 554.96,
+      "end": 559.92,
+      "duration": 4.96,
+      "text": "stack stop stack is always"
+    },
+    {
+      "start": 557.68,
+      "end": 562.4,
+      "duration": 4.72,
+      "text": "last in first stop so the last inverse"
+    },
+    {
+      "start": 559.92,
+      "end": 564.8,
+      "duration": 4.88,
+      "text": "six this is stack stop so make sure you"
+    },
+    {
+      "start": 562.4,
+      "end": 568.08,
+      "duration": 5.68,
+      "text": "take it out the node equal to 6 has been"
+    },
+    {
+      "start": 564.8,
+      "end": 569.52,
+      "duration": 4.72,
+      "text": "taken out now whenever you are at 6 you"
+    },
+    {
+      "start": 568.08,
+      "end": 572.4,
+      "duration": 4.32,
+      "text": "know the distance"
+    },
+    {
+      "start": 569.52,
+      "end": 574.08,
+      "duration": 4.56,
+      "text": "to 6 is 0 how did you figure this out"
+    },
+    {
+      "start": 572.4,
+      "end": 576.64,
+      "duration": 4.24,
+      "text": "because that is what it was stored over"
+    },
+    {
+      "start": 574.08,
+      "end": 577.84,
+      "duration": 3.76,
+      "text": "here right now figure out the adjacent"
+    },
+    {
+      "start": 576.64,
+      "end": 580.4,
+      "duration": 3.76,
+      "text": "nodes of six"
+    },
+    {
+      "start": 577.84,
+      "end": 583.44,
+      "duration": 5.6,
+      "text": "that is the nodes of six is four and"
+    },
+    {
+      "start": 580.4,
+      "end": 586.64,
+      "duration": 6.24,
+      "text": "five the adjacent node of six is four"
+    },
+    {
+      "start": 583.44,
+      "end": 589.2,
+      "duration": 5.76,
+      "text": "and five so try to go there so you will"
+    },
+    {
+      "start": 586.64,
+      "end": 592.16,
+      "duration": 5.52,
+      "text": "be like okay i'll try to go to node"
+    },
+    {
+      "start": 589.2,
+      "end": 594.96,
+      "duration": 5.76,
+      "text": "5 i'll also try to go to node"
+    },
+    {
+      "start": 592.16,
+      "end": 596.72,
+      "duration": 4.56,
+      "text": "4 okay these are the two nodes that i'll"
+    },
+    {
+      "start": 594.96,
+      "end": 598.72,
+      "duration": 3.76,
+      "text": "try to go to these are the two nodes"
+    },
+    {
+      "start": 596.72,
+      "end": 600.96,
+      "duration": 4.24,
+      "text": "that i'll try to go to now have a"
+    },
+    {
+      "start": 598.72,
+      "end": 603.76,
+      "duration": 5.04,
+      "text": "careful observation have a very careful"
+    },
+    {
+      "start": 600.96,
+      "end": 606.88,
+      "duration": 5.92,
+      "text": "observation on this graph"
+    },
+    {
+      "start": 603.76,
+      "end": 608.96,
+      "duration": 5.2,
+      "text": "in order to go from six to five"
+    },
+    {
+      "start": 606.88,
+      "end": 611.12,
+      "duration": 4.24,
+      "text": "which is this what is the edge weight"
+    },
+    {
+      "start": 608.96,
+      "end": 612.16,
+      "duration": 3.2,
+      "text": "that is required three"
+    },
+    {
+      "start": 611.12,
+      "end": 613.12,
+      "duration": 2.0,
+      "text": "do you see"
+    },
+    {
+      "start": 612.16,
+      "end": 616.4,
+      "duration": 4.24,
+      "text": "three"
+    },
+    {
+      "start": 613.12,
+      "end": 620.0,
+      "duration": 6.88,
+      "text": "so you say if i go i'll require a three"
+    },
+    {
+      "start": 616.4,
+      "end": 622.24,
+      "duration": 5.84,
+      "text": "so can i say if in order to reach 6 i"
+    },
+    {
+      "start": 620.0,
+      "end": 624.96,
+      "duration": 4.96,
+      "text": "required a distance of 0"
+    },
+    {
+      "start": 622.24,
+      "end": 628.08,
+      "duration": 5.84,
+      "text": "from 6 to 5 i require a distance of plus"
+    },
+    {
+      "start": 624.96,
+      "end": 629.04,
+      "duration": 4.08,
+      "text": "3. can i say the overall distance"
+    },
+    {
+      "start": 628.08,
+      "end": 630.0,
+      "duration": 1.92,
+      "text": "will be"
+    },
+    {
+      "start": 629.04,
+      "end": 631.36,
+      "duration": 2.32,
+      "text": "3"
+    },
+    {
+      "start": 630.0,
+      "end": 634.72,
+      "duration": 4.72,
+      "text": "because"
+    },
+    {
+      "start": 631.36,
+      "end": 637.12,
+      "duration": 5.76,
+      "text": "from 6 to 6 it was 0 and from 6 to 5 it"
+    },
+    {
+      "start": 634.72,
+      "end": 640.32,
+      "duration": 5.6,
+      "text": "is 3 so the overall distance will be 3"
+    },
+    {
+      "start": 637.12,
+      "end": 643.52,
+      "duration": 6.4,
+      "text": "and you see to node 5"
+    },
+    {
+      "start": 640.32,
+      "end": 645.28,
+      "duration": 4.96,
+      "text": "it was infinity right and if you see we"
+    },
+    {
+      "start": 643.52,
+      "end": 647.84,
+      "duration": 4.32,
+      "text": "are reaching a distance 3 which is"
+    },
+    {
+      "start": 645.28,
+      "end": 650.08,
+      "duration": 4.8,
+      "text": "better three obviously so you go and"
+    },
+    {
+      "start": 647.84,
+      "end": 651.36,
+      "duration": 3.52,
+      "text": "update this to three you go and update"
+    },
+    {
+      "start": 650.08,
+      "end": 653.28,
+      "duration": 3.2,
+      "text": "this to three don't do anything else"
+    },
+    {
+      "start": 651.36,
+      "end": 654.56,
+      "duration": 3.2,
+      "text": "just go and update similarly see over"
+    },
+    {
+      "start": 653.28,
+      "end": 657.6,
+      "duration": 4.32,
+      "text": "here"
+    },
+    {
+      "start": 654.56,
+      "end": 659.68,
+      "duration": 5.12,
+      "text": "to node four what will you require two"
+    },
+    {
+      "start": 657.6,
+      "end": 661.76,
+      "duration": 4.16,
+      "text": "so please do a plus two"
+    },
+    {
+      "start": 659.68,
+      "end": 663.28,
+      "duration": 3.6,
+      "text": "the distance will be two similarly go to"
+    },
+    {
+      "start": 661.76,
+      "end": 665.28,
+      "duration": 3.52,
+      "text": "node four and see"
+    },
+    {
+      "start": 663.28,
+      "end": 667.44,
+      "duration": 4.16,
+      "text": "you will require a distance of two you"
+    },
+    {
+      "start": 665.28,
+      "end": 669.04,
+      "duration": 3.76,
+      "text": "will require a distance of two"
+    },
+    {
+      "start": 667.44,
+      "end": 671.36,
+      "duration": 3.92,
+      "text": "done"
+    },
+    {
+      "start": 669.04,
+      "end": 673.92,
+      "duration": 4.88,
+      "text": "once you have checked out all the"
+    },
+    {
+      "start": 671.36,
+      "end": 675.84,
+      "duration": 4.48,
+      "text": "nodes completed next get the next node"
+    },
+    {
+      "start": 673.92,
+      "end": 677.6,
+      "duration": 3.68,
+      "text": "out which is five"
+    },
+    {
+      "start": 675.84,
+      "end": 678.96,
+      "duration": 3.12,
+      "text": "and let's see what is the distance taken"
+    },
+    {
+      "start": 677.6,
+      "end": 680.48,
+      "duration": 2.88,
+      "text": "to five that"
+    },
+    {
+      "start": 678.96,
+      "end": 682.88,
+      "duration": 3.92,
+      "text": "states me that the distance has been"
+    },
+    {
+      "start": 680.48,
+      "end": 685.2,
+      "duration": 4.72,
+      "text": "taken as three it's clearly states as"
+    },
+    {
+      "start": 682.88,
+      "end": 687.36,
+      "duration": 4.48,
+      "text": "three the distance is three what does it"
+    },
+    {
+      "start": 685.2,
+      "end": 689.12,
+      "duration": 3.92,
+      "text": "mean what was whatever was the source"
+    },
+    {
+      "start": 687.36,
+      "end": 691.28,
+      "duration": 3.92,
+      "text": "node in order to get to node 5 i"
+    },
+    {
+      "start": 689.12,
+      "end": 693.68,
+      "duration": 4.56,
+      "text": "required a distance of 3 that is the"
+    },
+    {
+      "start": 691.28,
+      "end": 696.24,
+      "duration": 4.96,
+      "text": "meaning of it so for node 5"
+    },
+    {
+      "start": 693.68,
+      "end": 697.76,
+      "duration": 4.08,
+      "text": "look at the uh nodes so the nearby node"
+    },
+    {
+      "start": 696.24,
+      "end": 700.08,
+      "duration": 3.84,
+      "text": "is poor"
+    },
+    {
+      "start": 697.76,
+      "end": 702.64,
+      "duration": 4.88,
+      "text": "the nearby node is 4 how much will it"
+    },
+    {
+      "start": 700.08,
+      "end": 703.6,
+      "duration": 3.52,
+      "text": "take if it goes from four five to four"
+    },
+    {
+      "start": 702.64,
+      "end": 706.32,
+      "duration": 3.68,
+      "text": "one"
+    },
+    {
+      "start": 703.6,
+      "end": 708.32,
+      "duration": 4.72,
+      "text": "plus one is what it will take let's uh"
+    },
+    {
+      "start": 706.32,
+      "end": 710.32,
+      "duration": 4.0,
+      "text": "let's take the distance so previously it"
+    },
+    {
+      "start": 708.32,
+      "end": 712.88,
+      "duration": 4.56,
+      "text": "took three in order to reach from six to"
+    },
+    {
+      "start": 710.32,
+      "end": 716.08,
+      "duration": 5.76,
+      "text": "five that's taking plus one the total"
+    },
+    {
+      "start": 712.88,
+      "end": 717.92,
+      "duration": 5.04,
+      "text": "distance will be four t plus one is four"
+    },
+    {
+      "start": 716.08,
+      "end": 720.08,
+      "duration": 4.0,
+      "text": "and if you carefully see in order to"
+    },
+    {
+      "start": 717.92,
+      "end": 722.56,
+      "duration": 4.64,
+      "text": "reach node four i already have a better"
+    },
+    {
+      "start": 720.08,
+      "end": 726.32,
+      "duration": 6.24,
+      "text": "option i already have a better option of"
+    },
+    {
+      "start": 722.56,
+      "end": 728.72,
+      "duration": 6.16,
+      "text": "two so will i take this four no why very"
+    },
+    {
+      "start": 726.32,
+      "end": 731.04,
+      "duration": 4.72,
+      "text": "simple because from six to five and five"
+    },
+    {
+      "start": 728.72,
+      "end": 732.72,
+      "duration": 4.0,
+      "text": "to four it will be four and from six to"
+    },
+    {
+      "start": 731.04,
+      "end": 735.76,
+      "duration": 4.72,
+      "text": "four it will just be two which we"
+    },
+    {
+      "start": 732.72,
+      "end": 738.16,
+      "duration": 5.44,
+      "text": "already have taken so nothing to be done"
+    },
+    {
+      "start": 735.76,
+      "end": 739.68,
+      "duration": 3.92,
+      "text": "omit this off next take the next guy"
+    },
+    {
+      "start": 738.16,
+      "end": 741.36,
+      "duration": 3.2,
+      "text": "note four"
+    },
+    {
+      "start": 739.68,
+      "end": 742.72,
+      "duration": 3.04,
+      "text": "at the moment you take note four what"
+    },
+    {
+      "start": 741.36,
+      "end": 744.88,
+      "duration": 3.52,
+      "text": "happens"
+    },
+    {
+      "start": 742.72,
+      "end": 746.8,
+      "duration": 4.08,
+      "text": "you again check for the adjacent nodes"
+    },
+    {
+      "start": 744.88,
+      "end": 749.52,
+      "duration": 4.64,
+      "text": "that's zero and two"
+    },
+    {
+      "start": 746.8,
+      "end": 751.84,
+      "duration": 5.04,
+      "text": "so one is node zero"
+    },
+    {
+      "start": 749.52,
+      "end": 754.4,
+      "duration": 4.88,
+      "text": "and the other one is node"
+    },
+    {
+      "start": 751.84,
+      "end": 756.72,
+      "duration": 4.88,
+      "text": "two this takes a distance of plus three"
+    },
+    {
+      "start": 754.4,
+      "end": 758.08,
+      "duration": 3.68,
+      "text": "this takes a distance of plus one very"
+    },
+    {
+      "start": 756.72,
+      "end": 760.56,
+      "duration": 3.84,
+      "text": "simple to figure out you have already"
+    },
+    {
+      "start": 758.08,
+      "end": 762.32,
+      "duration": 4.24,
+      "text": "stored it so plus three and plus one"
+    },
+    {
+      "start": 760.56,
+      "end": 763.36,
+      "duration": 2.8,
+      "text": "previously how much distance node four"
+    },
+    {
+      "start": 762.32,
+      "end": 765.6,
+      "duration": 3.28,
+      "text": "took"
+    },
+    {
+      "start": 763.36,
+      "end": 768.96,
+      "duration": 5.6,
+      "text": "two again very simple to get from here"
+    },
+    {
+      "start": 765.6,
+      "end": 771.36,
+      "duration": 5.76,
+      "text": "so six two four took a two plus three so"
+    },
+    {
+      "start": 768.96,
+      "end": 772.56,
+      "duration": 3.6,
+      "text": "till node zero what will be the distance"
+    },
+    {
+      "start": 771.36,
+      "end": 776.24,
+      "duration": 4.88,
+      "text": "it will be"
+    },
+    {
+      "start": 772.56,
+      "end": 778.4,
+      "duration": 5.84,
+      "text": "nothing but very simple 5 until here it"
+    },
+    {
+      "start": 776.24,
+      "end": 782.48,
+      "duration": 6.24,
+      "text": "will be nothing but"
+    },
+    {
+      "start": 778.4,
+      "end": 786.24,
+      "duration": 7.84,
+      "text": "3 why 2 plus 3 will be 5 2 plus 1 will"
+    },
+    {
+      "start": 782.48,
+      "end": 788.56,
+      "duration": 6.08,
+      "text": "be 3 so node 0 states it's infinity so"
+    },
+    {
+      "start": 786.24,
+      "end": 790.8,
+      "duration": 4.56,
+      "text": "you update it to distance 5"
+    },
+    {
+      "start": 788.56,
+      "end": 792.8,
+      "duration": 4.24,
+      "text": "and node 2 says it's infinity so you"
+    },
+    {
+      "start": 790.8,
+      "end": 793.6,
+      "duration": 2.8,
+      "text": "update it to distance 3"
+    },
+    {
+      "start": 792.8,
+      "end": 795.04,
+      "duration": 2.24,
+      "text": "done"
+    },
+    {
+      "start": 793.6,
+      "end": 797.36,
+      "duration": 3.76,
+      "text": "once you've done this"
+    },
+    {
+      "start": 795.04,
+      "end": 800.32,
+      "duration": 5.28,
+      "text": "omit this as well"
+    },
+    {
+      "start": 797.36,
+      "end": 801.44,
+      "duration": 4.08,
+      "text": "simple next take the next node which is"
+    },
+    {
+      "start": 800.32,
+      "end": 804.48,
+      "duration": 4.16,
+      "text": "two"
+    },
+    {
+      "start": 801.44,
+      "end": 805.44,
+      "duration": 4.0,
+      "text": "so node two what is the distance taken"
+    },
+    {
+      "start": 804.48,
+      "end": 807.28,
+      "duration": 2.8,
+      "text": "three"
+    },
+    {
+      "start": 805.44,
+      "end": 809.6,
+      "duration": 4.16,
+      "text": "from the distance array so from six to"
+    },
+    {
+      "start": 807.28,
+      "end": 811.44,
+      "duration": 4.16,
+      "text": "two you know the distance is"
+    },
+    {
+      "start": 809.6,
+      "end": 813.04,
+      "duration": 3.44,
+      "text": "three you know the distance is"
+    },
+    {
+      "start": 811.44,
+      "end": 814.32,
+      "duration": 2.88,
+      "text": "three from six to two you know the"
+    },
+    {
+      "start": 813.04,
+      "end": 816.56,
+      "duration": 3.52,
+      "text": "distance is three and that's very"
+    },
+    {
+      "start": 814.32,
+      "end": 818.88,
+      "duration": 4.56,
+      "text": "obvious because it took this path it"
+    },
+    {
+      "start": 816.56,
+      "end": 820.56,
+      "duration": 4.0,
+      "text": "took this path right so from node to"
+    },
+    {
+      "start": 818.88,
+      "end": 822.32,
+      "duration": 3.44,
+      "text": "where can you go let's quickly check it"
+    },
+    {
+      "start": 820.56,
+      "end": 824.08,
+      "duration": 3.52,
+      "text": "out"
+    },
+    {
+      "start": 822.32,
+      "end": 826.8,
+      "duration": 4.48,
+      "text": "from node two you can go to three so"
+    },
+    {
+      "start": 824.08,
+      "end": 829.36,
+      "duration": 5.28,
+      "text": "let's write it you can go to"
+    },
+    {
+      "start": 826.8,
+      "end": 831.6,
+      "duration": 4.8,
+      "text": "three and if i go to 3"
+    },
+    {
+      "start": 829.36,
+      "end": 832.48,
+      "duration": 3.12,
+      "text": "i will require how much"
+    },
+    {
+      "start": 831.6,
+      "end": 835.36,
+      "duration": 3.76,
+      "text": "3"
+    },
+    {
+      "start": 832.48,
+      "end": 838.32,
+      "duration": 5.84,
+      "text": "i'll require nothing but 3 so i'll just"
+    },
+    {
+      "start": 835.36,
+      "end": 841.6,
+      "duration": 6.24,
+      "text": "add a 3 and that will give me nothing"
+    },
+    {
+      "start": 838.32,
+      "end": 844.4,
+      "duration": 6.08,
+      "text": "but distance of 6 so till node 3"
+    },
+    {
+      "start": 841.6,
+      "end": 845.28,
+      "duration": 3.68,
+      "text": "i get a better option than infinity so i"
+    },
+    {
+      "start": 844.4,
+      "end": 847.52,
+      "duration": 3.12,
+      "text": "take it"
+    },
+    {
+      "start": 845.28,
+      "end": 850.24,
+      "duration": 4.96,
+      "text": "next erase it it's really take the next"
+    },
+    {
+      "start": 847.52,
+      "end": 851.12,
+      "duration": 3.6,
+      "text": "one which is zero so node is"
+    },
+    {
+      "start": 850.24,
+      "end": 853.84,
+      "duration": 3.6,
+      "text": "zero"
+    },
+    {
+      "start": 851.12,
+      "end": 856.64,
+      "duration": 5.52,
+      "text": "the distance taken is five from zero you"
+    },
+    {
+      "start": 853.84,
+      "end": 859.2,
+      "duration": 5.36,
+      "text": "can go to node one"
+    },
+    {
+      "start": 856.64,
+      "end": 861.2,
+      "duration": 4.56,
+      "text": "and the distance will be"
+    },
+    {
+      "start": 859.2,
+      "end": 863.52,
+      "duration": 4.32,
+      "text": "plus two of it so the distance will be"
+    },
+    {
+      "start": 861.2,
+      "end": 865.76,
+      "duration": 4.56,
+      "text": "seven what you can do is you can say one"
+    },
+    {
+      "start": 863.52,
+      "end": 868.0,
+      "duration": 4.48,
+      "text": "to be seven very obvious because if this"
+    },
+    {
+      "start": 865.76,
+      "end": 870.32,
+      "duration": 4.56,
+      "text": "is taking five and this takes another"
+    },
+    {
+      "start": 868.0,
+      "end": 872.4,
+      "duration": 4.4,
+      "text": "two so five plus 2 will be 7 which is"
+    },
+    {
+      "start": 870.32,
+      "end": 875.52,
+      "duration": 5.2,
+      "text": "better than infinity so done"
+    },
+    {
+      "start": 872.4,
+      "end": 878.08,
+      "duration": 5.68,
+      "text": "omit this let's say the next guy who is"
+    },
+    {
+      "start": 875.52,
+      "end": 879.84,
+      "duration": 4.32,
+      "text": "1 so from node 1"
+    },
+    {
+      "start": 878.08,
+      "end": 882.64,
+      "duration": 4.56,
+      "text": "what is the distance"
+    },
+    {
+      "start": 879.84,
+      "end": 886.16,
+      "duration": 6.32,
+      "text": "7 you see node 1 has distance 7 where"
+    },
+    {
+      "start": 882.64,
+      "end": 888.56,
+      "duration": 5.92,
+      "text": "can one go one can go to node three how"
+    },
+    {
+      "start": 886.16,
+      "end": 889.6,
+      "duration": 3.44,
+      "text": "did you get this from here what is the"
+    },
+    {
+      "start": 888.56,
+      "end": 891.84,
+      "duration": 3.28,
+      "text": "distance"
+    },
+    {
+      "start": 889.6,
+      "end": 894.24,
+      "duration": 4.64,
+      "text": "plus one so what will be the distance if"
+    },
+    {
+      "start": 891.84,
+      "end": 896.4,
+      "duration": 4.56,
+      "text": "i go to node three eight will i take"
+    },
+    {
+      "start": 894.24,
+      "end": 900.0,
+      "duration": 5.76,
+      "text": "this no why because we already have a"
+    },
+    {
+      "start": 896.4,
+      "end": 901.44,
+      "duration": 5.04,
+      "text": "six to omit this we will not take it"
+    },
+    {
+      "start": 900.0,
+      "end": 902.56,
+      "duration": 2.56,
+      "text": "similarly we'll get the next guy which"
+    },
+    {
+      "start": 901.44,
+      "end": 904.24,
+      "duration": 2.8,
+      "text": "is three"
+    },
+    {
+      "start": 902.56,
+      "end": 906.32,
+      "duration": 3.76,
+      "text": "so node is"
+    },
+    {
+      "start": 904.24,
+      "end": 908.24,
+      "duration": 4.0,
+      "text": "three so from three where can you go you"
+    },
+    {
+      "start": 906.32,
+      "end": 911.2,
+      "duration": 4.88,
+      "text": "can go nowhere there's nothing to be"
+    },
+    {
+      "start": 908.24,
+      "end": 913.44,
+      "duration": 5.2,
+      "text": "done omit this this is the step two so"
+    },
+    {
+      "start": 911.2,
+      "end": 915.76,
+      "duration": 4.56,
+      "text": "once you have done the step two you can"
+    },
+    {
+      "start": 913.44,
+      "end": 918.56,
+      "duration": 5.12,
+      "text": "see that the distance array actually"
+    },
+    {
+      "start": 915.76,
+      "end": 919.76,
+      "duration": 4.0,
+      "text": "stores all the shortest distance from"
+    },
+    {
+      "start": 918.56,
+      "end": 920.64,
+      "duration": 2.08,
+      "text": "the source"
+    },
+    {
+      "start": 919.76,
+      "end": 922.88,
+      "duration": 3.12,
+      "text": "six"
+    },
+    {
+      "start": 920.64,
+      "end": 924.96,
+      "duration": 4.32,
+      "text": "and the topo sort is empty and we have"
+    },
+    {
+      "start": 922.88,
+      "end": 928.08,
+      "duration": 5.2,
+      "text": "figured out how this is"
+    },
+    {
+      "start": 924.96,
+      "end": 929.76,
+      "duration": 4.8,
+      "text": "our answer yes this is what our answer"
+    },
+    {
+      "start": 928.08,
+      "end": 931.36,
+      "duration": 3.28,
+      "text": "is so"
+    },
+    {
+      "start": 929.76,
+      "end": 933.52,
+      "duration": 3.76,
+      "text": "i hope you've understood the algorithm"
+    },
+    {
+      "start": 931.36,
+      "end": 935.2,
+      "duration": 3.84,
+      "text": "it's very straightforward and simple"
+    },
+    {
+      "start": 933.52,
+      "end": 936.56,
+      "duration": 3.04,
+      "text": "figure out the tuple sort"
+    },
+    {
+      "start": 935.2,
+      "end": 939.04,
+      "duration": 3.84,
+      "text": "once you've done that"
+    },
+    {
+      "start": 936.56,
+      "end": 940.88,
+      "duration": 4.32,
+      "text": "take one one node out and just"
+    },
+    {
+      "start": 939.04,
+      "end": 943.04,
+      "duration": 4.0,
+      "text": "keep on updating the distance array keep"
+    },
+    {
+      "start": 940.88,
+      "end": 944.96,
+      "duration": 4.08,
+      "text": "on updating the distance every time once"
+    },
+    {
+      "start": 943.04,
+      "end": 947.2,
+      "duration": 4.16,
+      "text": "you're done with this this is your"
+    },
+    {
+      "start": 944.96,
+      "end": 948.88,
+      "duration": 3.92,
+      "text": "particular answer what's the intuition"
+    },
+    {
+      "start": 947.2,
+      "end": 950.48,
+      "duration": 3.28,
+      "text": "after the code i'll tell you"
+    },
+    {
+      "start": 948.88,
+      "end": 952.16,
+      "duration": 3.28,
+      "text": "so i hope you've understood the entire"
+    },
+    {
+      "start": 950.48,
+      "end": 953.76,
+      "duration": 3.28,
+      "text": "algorithm now it's time to code it up so"
+    },
+    {
+      "start": 952.16,
+      "end": 955.36,
+      "duration": 3.2,
+      "text": "i'll be coding the c plus plus solution"
+    },
+    {
+      "start": 953.76,
+      "end": 958.32,
+      "duration": 4.56,
+      "text": "on the right and you can figure out the"
+    },
+    {
+      "start": 955.36,
+      "end": 959.84,
+      "duration": 4.48,
+      "text": "exact similar java code on the left"
+    },
+    {
+      "start": 958.32,
+      "end": 962.16,
+      "duration": 3.84,
+      "text": "so as you can see we are given the"
+    },
+    {
+      "start": 959.84,
+      "end": 964.4,
+      "duration": 4.56,
+      "text": "number of nodes the number of edges and"
+    },
+    {
+      "start": 962.16,
+      "end": 966.96,
+      "duration": 4.8,
+      "text": "all the edges data have been given over"
+    },
+    {
+      "start": 964.4,
+      "end": 969.84,
+      "duration": 5.44,
+      "text": "here the edges data is like"
+    },
+    {
+      "start": 966.96,
+      "end": 972.08,
+      "duration": 5.12,
+      "text": "u and v and the weight so the first step"
+    },
+    {
+      "start": 969.84,
+      "end": 973.44,
+      "duration": 3.6,
+      "text": "is definitely to create a graph so let's"
+    },
+    {
+      "start": 972.08,
+      "end": 975.52,
+      "duration": 3.44,
+      "text": "quickly create the graph which will be"
+    },
+    {
+      "start": 973.44,
+      "end": 978.0,
+      "duration": 4.56,
+      "text": "something like vector of pair we need to"
+    },
+    {
+      "start": 975.52,
+      "end": 980.72,
+      "duration": 5.2,
+      "text": "store pairs this time so adjacency of n"
+    },
+    {
+      "start": 978.0,
+      "end": 982.64,
+      "duration": 4.64,
+      "text": "okay next we go across and say i and d i"
+    },
+    {
+      "start": 980.72,
+      "end": 983.44,
+      "duration": 2.72,
+      "text": "equal to zero i lesser than n i plus"
+    },
+    {
+      "start": 982.64,
+      "end": 984.8,
+      "duration": 2.16,
+      "text": "plus"
+    },
+    {
+      "start": 983.44,
+      "end": 986.24,
+      "duration": 2.8,
+      "text": "this is something which you will do"
+    },
+    {
+      "start": 984.8,
+      "end": 989.28,
+      "duration": 4.48,
+      "text": "how's the next thing that i'll do is the"
+    },
+    {
+      "start": 986.24,
+      "end": 991.28,
+      "duration": 5.04,
+      "text": "adjacency of u by the way just uh to"
+    },
+    {
+      "start": 989.28,
+      "end": 992.72,
+      "duration": 3.44,
+      "text": "make your understanding better edges of"
+    },
+    {
+      "start": 991.28,
+      "end": 995.76,
+      "duration": 4.48,
+      "text": "i zero because"
+    },
+    {
+      "start": 992.72,
+      "end": 998.24,
+      "duration": 5.52,
+      "text": "every index has a vector and the vector"
+    },
+    {
+      "start": 995.76,
+      "end": 999.28,
+      "duration": 3.52,
+      "text": "resembles three guys that is the meaning"
+    },
+    {
+      "start": 998.24,
+      "end": 1001.12,
+      "duration": 2.88,
+      "text": "of this"
+    },
+    {
+      "start": 999.28,
+      "end": 1005.68,
+      "duration": 6.4,
+      "text": "so u is this"
+    },
+    {
+      "start": 1001.12,
+      "end": 1007.2,
+      "duration": 6.08,
+      "text": "v is edges of i of one and w d is"
+    },
+    {
+      "start": 1005.68,
+      "end": 1009.2,
+      "duration": 3.52,
+      "text": "on the second index"
+    },
+    {
+      "start": 1007.2,
+      "end": 1011.76,
+      "duration": 4.56,
+      "text": "simple as that next"
+    },
+    {
+      "start": 1009.2,
+      "end": 1015.28,
+      "duration": 6.08,
+      "text": "i say adjacency of you can you please"
+    },
+    {
+      "start": 1011.76,
+      "end": 1018.08,
+      "duration": 6.32,
+      "text": "store the adjacent guy which is v and"
+    },
+    {
+      "start": 1015.28,
+      "end": 1019.2,
+      "duration": 3.92,
+      "text": "the weight is wt as a pair stored"
+    },
+    {
+      "start": 1018.08,
+      "end": 1021.76,
+      "duration": 3.68,
+      "text": "next"
+    },
+    {
+      "start": 1019.2,
+      "end": 1023.28,
+      "duration": 4.08,
+      "text": "you always find the toefl so that's the"
+    },
+    {
+      "start": 1021.76,
+      "end": 1025.36,
+      "duration": 3.6,
+      "text": "first thing so"
+    },
+    {
+      "start": 1023.28,
+      "end": 1026.56,
+      "duration": 3.28,
+      "text": "what do i need i need a visitor direct i"
+    },
+    {
+      "start": 1025.36,
+      "end": 1028.56,
+      "duration": 3.2,
+      "text": "need a stack"
+    },
+    {
+      "start": 1026.56,
+      "end": 1031.04,
+      "duration": 4.48,
+      "text": "and do i need anything else"
+    },
+    {
+      "start": 1028.56,
+      "end": 1033.12,
+      "duration": 4.56,
+      "text": "no so let's quickly create the visited"
+    },
+    {
+      "start": 1031.04,
+      "end": 1034.88,
+      "duration": 3.84,
+      "text": "array so i create a visited array"
+    },
+    {
+      "start": 1033.12,
+      "end": 1036.24,
+      "duration": 3.12,
+      "text": "something like this"
+    },
+    {
+      "start": 1034.88,
+      "end": 1039.04,
+      "duration": 4.16,
+      "text": "now which is capital"
+    },
+    {
+      "start": 1036.24,
+      "end": 1041.52,
+      "duration": 5.28,
+      "text": "equal to zero perfect uh i need a stack"
+    },
+    {
+      "start": 1039.04,
+      "end": 1044.48,
+      "duration": 5.44,
+      "text": "so let's quickly create a stack as well"
+    },
+    {
+      "start": 1041.52,
+      "end": 1046.56,
+      "duration": 5.04,
+      "text": "perfect next i need to uh figure out uh"
+    },
+    {
+      "start": 1044.48,
+      "end": 1050.4,
+      "duration": 5.92,
+      "text": "for all components so let's go for all"
+    },
+    {
+      "start": 1046.56,
+      "end": 1053.68,
+      "duration": 7.12,
+      "text": "components and we say if not"
+    },
+    {
+      "start": 1050.4,
+      "end": 1055.92,
+      "duration": 5.52,
+      "text": "visited of i we go across and say okay"
+    },
+    {
+      "start": 1053.68,
+      "end": 1057.52,
+      "duration": 3.84,
+      "text": "listen go for the tube so and in those"
+    },
+    {
+      "start": 1055.92,
+      "end": 1059.44,
+      "duration": 3.52,
+      "text": "two sort what do we need we need the"
+    },
+    {
+      "start": 1057.52,
+      "end": 1061.44,
+      "duration": 3.92,
+      "text": "node we need the adjacency we need to"
+    },
+    {
+      "start": 1059.44,
+      "end": 1063.92,
+      "duration": 4.48,
+      "text": "visit it and we need the stack so this"
+    },
+    {
+      "start": 1061.44,
+      "end": 1065.52,
+      "duration": 4.08,
+      "text": "is what i'll do i'll get my tuple sort"
+    },
+    {
+      "start": 1063.92,
+      "end": 1067.92,
+      "duration": 4.0,
+      "text": "so now quickly write the tuple sort and"
+    },
+    {
+      "start": 1065.52,
+      "end": 1069.84,
+      "duration": 4.32,
+      "text": "that's for dfs you can always write"
+    },
+    {
+      "start": 1067.92,
+      "end": 1073.12,
+      "duration": 5.2,
+      "text": "whatever you wish you can do the bfs as"
+    },
+    {
+      "start": 1069.84,
+      "end": 1075.12,
+      "duration": 5.28,
+      "text": "well void dfs id node and i'll say"
+    },
+    {
+      "start": 1073.12,
+      "end": 1077.68,
+      "duration": 4.56,
+      "text": "vector of"
+    },
+    {
+      "start": 1075.12,
+      "end": 1080.4,
+      "duration": 5.28,
+      "text": "pair of int i"
+    },
+    {
+      "start": 1077.68,
+      "end": 1083.28,
+      "duration": 5.6,
+      "text": "int int int adjacent this is how the"
+    },
+    {
+      "start": 1080.4,
+      "end": 1085.04,
+      "duration": 4.64,
+      "text": "graph will be perfect next i need the"
+    },
+    {
+      "start": 1083.28,
+      "end": 1087.2,
+      "duration": 3.92,
+      "text": "visited so let's see the visitor and"
+    },
+    {
+      "start": 1085.04,
+      "end": 1089.6,
+      "duration": 4.56,
+      "text": "this is the stack which is int and"
+    },
+    {
+      "start": 1087.2,
+      "end": 1091.44,
+      "duration": 4.24,
+      "text": "please pass it using reference"
+    },
+    {
+      "start": 1089.6,
+      "end": 1094.16,
+      "duration": 4.56,
+      "text": "so that's what i will do"
+    },
+    {
+      "start": 1091.44,
+      "end": 1095.52,
+      "duration": 4.08,
+      "text": "what's the first step of dfs you say by"
+    },
+    {
+      "start": 1094.16,
+      "end": 1098.0,
+      "duration": 3.84,
+      "text": "the way this will not be dfs this will"
+    },
+    {
+      "start": 1095.52,
+      "end": 1100.64,
+      "duration": 5.12,
+      "text": "be two sort that's what we are naming it"
+    },
+    {
+      "start": 1098.0,
+      "end": 1103.2,
+      "duration": 5.2,
+      "text": "visited of node will be one and while"
+    },
+    {
+      "start": 1100.64,
+      "end": 1105.84,
+      "duration": 5.2,
+      "text": "going back just make sure you push on"
+    },
+    {
+      "start": 1103.2,
+      "end": 1108.8,
+      "duration": 5.6,
+      "text": "the node next i traverse all the"
+    },
+    {
+      "start": 1105.84,
+      "end": 1111.68,
+      "duration": 5.84,
+      "text": "adjacent nodes which is adjacency of"
+    },
+    {
+      "start": 1108.8,
+      "end": 1112.64,
+      "duration": 3.84,
+      "text": "node now i know v is"
+    },
+    {
+      "start": 1111.68,
+      "end": 1114.88,
+      "duration": 3.2,
+      "text": "the"
+    },
+    {
+      "start": 1112.64,
+      "end": 1117.2,
+      "duration": 4.56,
+      "text": "node is right at the first because we"
+    },
+    {
+      "start": 1114.88,
+      "end": 1119.04,
+      "duration": 4.16,
+      "text": "are storing pairs so i see if not"
+    },
+    {
+      "start": 1117.2,
+      "end": 1121.2,
+      "duration": 4.0,
+      "text": "visited of b"
+    },
+    {
+      "start": 1119.04,
+      "end": 1123.12,
+      "duration": 4.08,
+      "text": "please go and call the two post it's"
+    },
+    {
+      "start": 1121.2,
+      "end": 1124.8,
+      "duration": 3.6,
+      "text": "very simple because we will be calling"
+    },
+    {
+      "start": 1123.12,
+      "end": 1126.32,
+      "duration": 3.2,
+      "text": "the topo sort for v"
+    },
+    {
+      "start": 1124.8,
+      "end": 1128.24,
+      "duration": 3.44,
+      "text": "adjacency"
+    },
+    {
+      "start": 1126.32,
+      "end": 1129.84,
+      "duration": 3.52,
+      "text": "visited and stack"
+    },
+    {
+      "start": 1128.24,
+      "end": 1132.24,
+      "duration": 4.0,
+      "text": "done so this is how i'll call the topo"
+    },
+    {
+      "start": 1129.84,
+      "end": 1134.4,
+      "duration": 4.56,
+      "text": "sort so i can say once i've done this"
+    },
+    {
+      "start": 1132.24,
+      "end": 1135.84,
+      "duration": 3.6,
+      "text": "the stack is ready and it has all the"
+    },
+    {
+      "start": 1134.4,
+      "end": 1139.04,
+      "duration": 4.64,
+      "text": "tuple sort elements"
+    },
+    {
+      "start": 1135.84,
+      "end": 1142.16,
+      "duration": 6.32,
+      "text": "next step two do the distance thing do"
+    },
+    {
+      "start": 1139.04,
+      "end": 1144.24,
+      "duration": 5.2,
+      "text": "the distance thing and what do i need uh"
+    },
+    {
+      "start": 1142.16,
+      "end": 1146.8,
+      "duration": 4.64,
+      "text": "what do i need for doing the distance"
+    },
+    {
+      "start": 1144.24,
+      "end": 1149.04,
+      "duration": 4.8,
+      "text": "thing i need a vector which stores all"
+    },
+    {
+      "start": 1146.8,
+      "end": 1151.28,
+      "duration": 4.48,
+      "text": "the distance"
+    },
+    {
+      "start": 1149.04,
+      "end": 1154.64,
+      "duration": 5.6,
+      "text": "perfect please make sure everything is"
+    },
+    {
+      "start": 1151.28,
+      "end": 1156.72,
+      "duration": 5.44,
+      "text": "initially marked as infinity so i this"
+    },
+    {
+      "start": 1154.64,
+      "end": 1157.84,
+      "duration": 3.2,
+      "text": "and you can go on like i less than n i"
+    },
+    {
+      "start": 1156.72,
+      "end": 1160.32,
+      "duration": 3.6,
+      "text": "plus plus"
+    },
+    {
+      "start": 1157.84,
+      "end": 1161.76,
+      "duration": 3.92,
+      "text": "and you can go as distance of i"
+    },
+    {
+      "start": 1160.32,
+      "end": 1164.8,
+      "duration": 4.48,
+      "text": "equal to infinity you can call it as"
+    },
+    {
+      "start": 1161.76,
+      "end": 1166.4,
+      "duration": 4.64,
+      "text": "into max super simple next you know you"
+    },
+    {
+      "start": 1164.8,
+      "end": 1169.2,
+      "duration": 4.4,
+      "text": "have a source node and that's always"
+    },
+    {
+      "start": 1166.4,
+      "end": 1170.56,
+      "duration": 4.16,
+      "text": "zero if the question does not mentions"
+    },
+    {
+      "start": 1169.2,
+      "end": 1172.64,
+      "duration": 3.44,
+      "text": "your source node and it gives you you"
+    },
+    {
+      "start": 1170.56,
+      "end": 1175.04,
+      "duration": 4.48,
+      "text": "have to write distance of src equal to"
+    },
+    {
+      "start": 1172.64,
+      "end": 1177.28,
+      "duration": 4.64,
+      "text": "zero next you start from a wire and you"
+    },
+    {
+      "start": 1175.04,
+      "end": 1178.4,
+      "duration": 3.36,
+      "text": "say stack not empty that's the first"
+    },
+    {
+      "start": 1177.28,
+      "end": 1180.08,
+      "duration": 2.8,
+      "text": "thing you'll do"
+    },
+    {
+      "start": 1178.4,
+      "end": 1181.52,
+      "duration": 3.12,
+      "text": "what what will you do over here you'll"
+    },
+    {
+      "start": 1180.08,
+      "end": 1183.2,
+      "duration": 3.12,
+      "text": "say okay let's get the note which is"
+    },
+    {
+      "start": 1181.52,
+      "end": 1185.68,
+      "duration": 4.16,
+      "text": "stack the top"
+    },
+    {
+      "start": 1183.2,
+      "end": 1186.72,
+      "duration": 3.52,
+      "text": "and let's do a stack dot"
+    },
+    {
+      "start": 1185.68,
+      "end": 1188.88,
+      "duration": 3.2,
+      "text": "perfect"
+    },
+    {
+      "start": 1186.72,
+      "end": 1191.28,
+      "duration": 4.56,
+      "text": "next you need all the adjective notes so"
+    },
+    {
+      "start": 1188.88,
+      "end": 1194.4,
+      "duration": 5.52,
+      "text": "please go across all the adjacent notes"
+    },
+    {
+      "start": 1191.28,
+      "end": 1196.64,
+      "duration": 5.36,
+      "text": "and you know over here idv id dot first"
+    },
+    {
+      "start": 1194.4,
+      "end": 1199.6,
+      "duration": 5.2,
+      "text": "stores the adjacent nodes and id dot"
+    },
+    {
+      "start": 1196.64,
+      "end": 1202.72,
+      "duration": 6.08,
+      "text": "second stores the wait and i need to"
+    },
+    {
+      "start": 1199.6,
+      "end": 1204.48,
+      "duration": 4.88,
+      "text": "relax it so distance of node is what it"
+    },
+    {
+      "start": 1202.72,
+      "end": 1207.12,
+      "duration": 4.4,
+      "text": "takes to reach the node"
+    },
+    {
+      "start": 1204.48,
+      "end": 1208.16,
+      "duration": 3.68,
+      "text": "and from u to v it takes sweet and if it"
+    },
+    {
+      "start": 1207.12,
+      "end": 1210.48,
+      "duration": 3.36,
+      "text": "is"
+    },
+    {
+      "start": 1208.16,
+      "end": 1212.64,
+      "duration": 4.48,
+      "text": "lesser than the previous"
+    },
+    {
+      "start": 1210.48,
+      "end": 1214.64,
+      "duration": 4.16,
+      "text": "uh way of reaching v it can be infinite"
+    },
+    {
+      "start": 1212.64,
+      "end": 1216.0,
+      "duration": 3.36,
+      "text": "it can be anything if"
+    },
+    {
+      "start": 1214.64,
+      "end": 1217.76,
+      "duration": 3.12,
+      "text": "node plus v it is lesser than the"
+    },
+    {
+      "start": 1216.0,
+      "end": 1219.68,
+      "duration": 3.68,
+      "text": "previous way of reaching it"
+    },
+    {
+      "start": 1217.76,
+      "end": 1223.04,
+      "duration": 5.28,
+      "text": "i do not do anything i just go across"
+    },
+    {
+      "start": 1219.68,
+      "end": 1224.48,
+      "duration": 4.8,
+      "text": "and update it to the new node"
+    },
+    {
+      "start": 1223.04,
+      "end": 1226.8,
+      "duration": 3.76,
+      "text": "this is what i'll do i'll just update it"
+    },
+    {
+      "start": 1224.48,
+      "end": 1229.12,
+      "duration": 4.64,
+      "text": "to new node once i've done this i'll"
+    },
+    {
+      "start": 1226.8,
+      "end": 1231.52,
+      "duration": 4.72,
+      "text": "return the distance so this is how"
+    },
+    {
+      "start": 1229.12,
+      "end": 1233.76,
+      "duration": 4.64,
+      "text": "simple it is and after this i'll go"
+    },
+    {
+      "start": 1231.52,
+      "end": 1235.68,
+      "duration": 4.16,
+      "text": "across and run this and see if it is"
+    },
+    {
+      "start": 1233.76,
+      "end": 1237.92,
+      "duration": 4.16,
+      "text": "fine it gives me a compilation error"
+    },
+    {
+      "start": 1235.68,
+      "end": 1239.44,
+      "duration": 3.76,
+      "text": "because i think we uh my bad it will be"
+    },
+    {
+      "start": 1237.92,
+      "end": 1241.28,
+      "duration": 3.36,
+      "text": "pushed back"
+    },
+    {
+      "start": 1239.44,
+      "end": 1243.52,
+      "duration": 4.08,
+      "text": "so let's quickly run this so i've done a"
+    },
+    {
+      "start": 1241.28,
+      "end": 1245.68,
+      "duration": 4.4,
+      "text": "slight typo over here it will be in m"
+    },
+    {
+      "start": 1243.52,
+      "end": 1247.36,
+      "duration": 3.84,
+      "text": "because number of edges i'll quickly"
+    },
+    {
+      "start": 1245.68,
+      "end": 1248.88,
+      "duration": 3.2,
+      "text": "compile and see if it is giving us the"
+    },
+    {
+      "start": 1247.36,
+      "end": 1250.56,
+      "duration": 3.2,
+      "text": "correct answer"
+    },
+    {
+      "start": 1248.88,
+      "end": 1253.28,
+      "duration": 4.4,
+      "text": "in compilation we see that it is giving"
+    },
+    {
+      "start": 1250.56,
+      "end": 1255.84,
+      "duration": 5.28,
+      "text": "us the correct answer will we submit no"
+    },
+    {
+      "start": 1253.28,
+      "end": 1258.4,
+      "duration": 5.12,
+      "text": "let's wait let's uh read a couple of uh"
+    },
+    {
+      "start": 1255.84,
+      "end": 1260.96,
+      "duration": 5.12,
+      "text": "statements so it says find the shortest"
+    },
+    {
+      "start": 1258.4,
+      "end": 1263.84,
+      "duration": 5.44,
+      "text": "path but does it mentions about what if"
+    },
+    {
+      "start": 1260.96,
+      "end": 1266.16,
+      "duration": 5.2,
+      "text": "it do not reach so it doesn't mentions"
+    },
+    {
+      "start": 1263.84,
+      "end": 1268.88,
+      "duration": 5.04,
+      "text": "about it i'll ask the problem setter to"
+    },
+    {
+      "start": 1266.16,
+      "end": 1270.64,
+      "duration": 4.48,
+      "text": "add it up but as of now there's a trick"
+    },
+    {
+      "start": 1268.88,
+      "end": 1272.96,
+      "duration": 4.08,
+      "text": "i'll go ahead and i say okay they're"
+    },
+    {
+      "start": 1270.64,
+      "end": 1274.8,
+      "duration": 4.16,
+      "text": "expecting if it is 189 to see out"
+    },
+    {
+      "start": 1272.96,
+      "end": 1277.6,
+      "duration": 4.64,
+      "text": "infinity not reachable but they're"
+    },
+    {
+      "start": 1274.8,
+      "end": 1280.0,
+      "duration": 5.2,
+      "text": "expecting one e9 instead of into max so"
+    },
+    {
+      "start": 1277.6,
+      "end": 1281.28,
+      "duration": 3.68,
+      "text": "i'll just assign 199 because what"
+    },
+    {
+      "start": 1280.0,
+      "end": 1284.0,
+      "duration": 4.0,
+      "text": "they're expecting is if it's not"
+    },
+    {
+      "start": 1281.28,
+      "end": 1286.48,
+      "duration": 5.2,
+      "text": "reachable it should be 189 so i just did"
+    },
+    {
+      "start": 1284.0,
+      "end": 1287.84,
+      "duration": 3.84,
+      "text": "a slight hack i just checked in but i'll"
+    },
+    {
+      "start": 1286.48,
+      "end": 1290.08,
+      "duration": 3.6,
+      "text": "ask the problem setter to update the"
+    },
+    {
+      "start": 1287.84,
+      "end": 1291.6,
+      "duration": 3.76,
+      "text": "problem statement don't worry about that"
+    },
+    {
+      "start": 1290.08,
+      "end": 1293.44,
+      "duration": 3.36,
+      "text": "i'll now quickly"
+    },
+    {
+      "start": 1291.6,
+      "end": 1296.48,
+      "duration": 4.88,
+      "text": "uh run this off and see if it is running"
+    },
+    {
+      "start": 1293.44,
+      "end": 1298.96,
+      "duration": 5.52,
+      "text": "fine okay it is so all of these test"
+    },
+    {
+      "start": 1296.48,
+      "end": 1301.36,
+      "duration": 4.88,
+      "text": "cases to pass so we have understood the"
+    },
+    {
+      "start": 1298.96,
+      "end": 1302.88,
+      "duration": 3.92,
+      "text": "algorithm we've understood the code now"
+    },
+    {
+      "start": 1301.36,
+      "end": 1304.64,
+      "duration": 3.28,
+      "text": "let's discuss the time complexity then"
+    },
+    {
+      "start": 1302.88,
+      "end": 1307.12,
+      "duration": 4.24,
+      "text": "we will go across to the intuition what"
+    },
+    {
+      "start": 1304.64,
+      "end": 1309.6,
+      "duration": 4.96,
+      "text": "are the time complexity or topo sort"
+    },
+    {
+      "start": 1307.12,
+      "end": 1311.76,
+      "duration": 4.64,
+      "text": "plane dfs whatever time the default"
+    },
+    {
+      "start": 1309.6,
+      "end": 1313.36,
+      "duration": 3.76,
+      "text": "takes what about this"
+    },
+    {
+      "start": 1311.76,
+      "end": 1315.76,
+      "duration": 4.0,
+      "text": "the number of nodes is what the stack"
+    },
+    {
+      "start": 1313.36,
+      "end": 1317.36,
+      "duration": 4.0,
+      "text": "will always give you that's for sure the"
+    },
+    {
+      "start": 1315.76,
+      "end": 1319.76,
+      "duration": 4.0,
+      "text": "number of nodes is what the stack will"
+    },
+    {
+      "start": 1317.36,
+      "end": 1322.48,
+      "duration": 5.12,
+      "text": "give you which is n into all the"
+    },
+    {
+      "start": 1319.76,
+      "end": 1325.84,
+      "duration": 6.08,
+      "text": "neighbors into all the news so if i ask"
+    },
+    {
+      "start": 1322.48,
+      "end": 1328.4,
+      "duration": 5.92,
+      "text": "you in total this for loop will run for"
+    },
+    {
+      "start": 1325.84,
+      "end": 1329.6,
+      "duration": 3.76,
+      "text": "how many times let's go back"
+    },
+    {
+      "start": 1328.4,
+      "end": 1330.84,
+      "duration": 2.44,
+      "text": "so can i say"
+    },
+    {
+      "start": 1329.6,
+      "end": 1333.84,
+      "duration": 4.24,
+      "text": "in the uh"
+    },
+    {
+      "start": 1330.84,
+      "end": 1337.04,
+      "duration": 6.2,
+      "text": "ipad runs for first round zero will run"
+    },
+    {
+      "start": 1333.84,
+      "end": 1339.84,
+      "duration": 6.0,
+      "text": "for once twice price four times five"
+    },
+    {
+      "start": 1337.04,
+      "end": 1342.16,
+      "duration": 5.12,
+      "text": "times six times seven times eight times"
+    },
+    {
+      "start": 1339.84,
+      "end": 1344.72,
+      "duration": 4.88,
+      "text": "can i say the internal fall for loop for"
+    },
+    {
+      "start": 1342.16,
+      "end": 1347.12,
+      "duration": 4.96,
+      "text": "the adjacent nodes will run for one two"
+    },
+    {
+      "start": 1344.72,
+      "end": 1349.76,
+      "duration": 5.04,
+      "text": "three four five six seven eight times"
+    },
+    {
+      "start": 1347.12,
+      "end": 1351.52,
+      "duration": 4.4,
+      "text": "which is nothing but one two three four"
+    },
+    {
+      "start": 1349.76,
+      "end": 1353.6,
+      "duration": 3.84,
+      "text": "five six seven eight which is nothing"
+    },
+    {
+      "start": 1351.52,
+      "end": 1356.0,
+      "duration": 4.48,
+      "text": "but the m edges"
+    },
+    {
+      "start": 1353.6,
+      "end": 1358.56,
+      "duration": 4.96,
+      "text": "and i say overall it will run for images"
+    },
+    {
+      "start": 1356.0,
+      "end": 1359.44,
+      "duration": 3.44,
+      "text": "so n plus"
+    },
+    {
+      "start": 1358.56,
+      "end": 1362.56,
+      "duration": 4.0,
+      "text": "m"
+    },
+    {
+      "start": 1359.44,
+      "end": 1366.72,
+      "duration": 7.28,
+      "text": "is what the second loop will run this is"
+    },
+    {
+      "start": 1362.56,
+      "end": 1368.88,
+      "duration": 6.32,
+      "text": "a plane dfs this is plane dfs n plus"
+    },
+    {
+      "start": 1366.72,
+      "end": 1371.04,
+      "duration": 4.32,
+      "text": "e the number of edges which is m but"
+    },
+    {
+      "start": 1368.88,
+      "end": 1373.44,
+      "duration": 4.56,
+      "text": "this is very obvious right"
+    },
+    {
+      "start": 1371.04,
+      "end": 1375.28,
+      "duration": 4.24,
+      "text": "because the stack will give you n and in"
+    },
+    {
+      "start": 1373.44,
+      "end": 1376.32,
+      "duration": 2.88,
+      "text": "total the adjacent nodes is nothing but"
+    },
+    {
+      "start": 1375.28,
+      "end": 1378.16,
+      "duration": 2.88,
+      "text": "the"
+    },
+    {
+      "start": 1376.32,
+      "end": 1379.36,
+      "duration": 3.04,
+      "text": "number of edges only so we have"
+    },
+    {
+      "start": 1378.16,
+      "end": 1382.32,
+      "duration": 4.16,
+      "text": "understood the"
+    },
+    {
+      "start": 1379.36,
+      "end": 1383.68,
+      "duration": 4.32,
+      "text": "uh time complexity as well now it's the"
+    },
+    {
+      "start": 1382.32,
+      "end": 1386.0,
+      "duration": 3.68,
+      "text": "main thing"
+    },
+    {
+      "start": 1383.68,
+      "end": 1387.68,
+      "duration": 4.0,
+      "text": "about okay so you've understood"
+    },
+    {
+      "start": 1386.0,
+      "end": 1389.84,
+      "duration": 3.84,
+      "text": "everything now i must be thinking about"
+    },
+    {
+      "start": 1387.68,
+      "end": 1391.92,
+      "duration": 4.24,
+      "text": "the intuition why"
+    },
+    {
+      "start": 1389.84,
+      "end": 1394.48,
+      "duration": 4.64,
+      "text": "why not some standard algorithm like in"
+    },
+    {
+      "start": 1391.92,
+      "end": 1395.76,
+      "duration": 3.84,
+      "text": "the next uh half of the lecture like in"
+    },
+    {
+      "start": 1394.48,
+      "end": 1398.4,
+      "duration": 3.92,
+      "text": "the sorry in the next half of the series"
+    },
+    {
+      "start": 1395.76,
+      "end": 1400.24,
+      "duration": 4.48,
+      "text": "we'll learn algorithms like dijkstra"
+    },
+    {
+      "start": 1398.4,
+      "end": 1401.92,
+      "duration": 3.52,
+      "text": "and a lot more which helps us to find"
+    },
+    {
+      "start": 1400.24,
+      "end": 1404.0,
+      "duration": 3.76,
+      "text": "the shortest path will those algorithms"
+    },
+    {
+      "start": 1401.92,
+      "end": 1406.72,
+      "duration": 4.8,
+      "text": "work those algorithms will definitely"
+    },
+    {
+      "start": 1404.0,
+      "end": 1409.52,
+      "duration": 5.52,
+      "text": "work but why did we do a tuple sort"
+    },
+    {
+      "start": 1406.72,
+      "end": 1413.84,
+      "duration": 7.12,
+      "text": "let's understand so what was the tuple"
+    },
+    {
+      "start": 1409.52,
+      "end": 1416.32,
+      "duration": 6.8,
+      "text": "set for this if i write it it was 6 5"
+    },
+    {
+      "start": 1413.84,
+      "end": 1418.4,
+      "duration": 4.56,
+      "text": "4 2 0 one three"
+    },
+    {
+      "start": 1416.32,
+      "end": 1420.56,
+      "duration": 4.24,
+      "text": "something i know for sure is"
+    },
+    {
+      "start": 1418.4,
+      "end": 1421.92,
+      "duration": 3.52,
+      "text": "there is no one before six there's no"
+    },
+    {
+      "start": 1420.56,
+      "end": 1423.76,
+      "duration": 3.2,
+      "text": "one before six"
+    },
+    {
+      "start": 1421.92,
+      "end": 1425.92,
+      "duration": 4.0,
+      "text": "so something i know for sure is the"
+    },
+    {
+      "start": 1423.76,
+      "end": 1427.44,
+      "duration": 3.68,
+      "text": "initial guy is six so i took the initial"
+    },
+    {
+      "start": 1425.92,
+      "end": 1428.8,
+      "duration": 2.88,
+      "text": "guy to be six"
+    },
+    {
+      "start": 1427.44,
+      "end": 1430.64,
+      "duration": 3.2,
+      "text": "and six"
+    },
+    {
+      "start": 1428.8,
+      "end": 1432.96,
+      "duration": 4.16,
+      "text": "took me to four and five"
+    },
+    {
+      "start": 1430.64,
+      "end": 1434.64,
+      "duration": 4.0,
+      "text": "so apparently once i started from six"
+    },
+    {
+      "start": 1432.96,
+      "end": 1436.4,
+      "duration": 3.44,
+      "text": "which was the topo sort"
+    },
+    {
+      "start": 1434.64,
+      "end": 1439.44,
+      "duration": 4.8,
+      "text": "then i could go to the next guys and"
+    },
+    {
+      "start": 1436.4,
+      "end": 1440.88,
+      "duration": 4.48,
+      "text": "that will always be in my two post only"
+    },
+    {
+      "start": 1439.44,
+      "end": 1443.2,
+      "duration": 3.76,
+      "text": "this topo sort"
+    },
+    {
+      "start": 1440.88,
+      "end": 1446.0,
+      "duration": 5.12,
+      "text": "starts with the first guy who has no one"
+    },
+    {
+      "start": 1443.2,
+      "end": 1449.04,
+      "duration": 5.84,
+      "text": "into it and then takes to the next guys"
+    },
+    {
+      "start": 1446.0,
+      "end": 1451.6,
+      "duration": 5.6,
+      "text": "who he was into who he was into just so"
+    },
+    {
+      "start": 1449.04,
+      "end": 1455.84,
+      "duration": 6.8,
+      "text": "takes it to five because it was just two"
+    },
+    {
+      "start": 1451.6,
+      "end": 1457.84,
+      "duration": 6.24,
+      "text": "five and five says i'll take you to four"
+    },
+    {
+      "start": 1455.84,
+      "end": 1459.92,
+      "duration": 4.08,
+      "text": "all right so what tupusa did was it"
+    },
+    {
+      "start": 1457.84,
+      "end": 1462.4,
+      "duration": 4.56,
+      "text": "stated as the first cat i don't have"
+    },
+    {
+      "start": 1459.92,
+      "end": 1463.68,
+      "duration": 3.76,
+      "text": "anything i'll start off from myself"
+    },
+    {
+      "start": 1462.4,
+      "end": 1466.24,
+      "duration": 3.84,
+      "text": "and since i was the source node i'll"
+    },
+    {
+      "start": 1463.68,
+      "end": 1468.16,
+      "duration": 4.48,
+      "text": "assign myself to be zero i'll go to five"
+    },
+    {
+      "start": 1466.24,
+      "end": 1469.76,
+      "duration": 3.52,
+      "text": "i'll figure out the answer for five"
+    },
+    {
+      "start": 1468.16,
+      "end": 1471.68,
+      "duration": 3.52,
+      "text": "then i'll go to four figure out the"
+    },
+    {
+      "start": 1469.76,
+      "end": 1473.36,
+      "duration": 3.6,
+      "text": "answer for four then i'll go to zero and"
+    },
+    {
+      "start": 1471.68,
+      "end": 1475.6,
+      "duration": 3.92,
+      "text": "to figure out the answer for them then"
+    },
+    {
+      "start": 1473.36,
+      "end": 1477.76,
+      "duration": 4.4,
+      "text": "i'll go to three then i'll go to one and"
+    },
+    {
+      "start": 1475.6,
+      "end": 1478.64,
+      "duration": 3.04,
+      "text": "i'll figure out so what i did was i"
+    },
+    {
+      "start": 1477.76,
+      "end": 1480.56,
+      "duration": 2.8,
+      "text": "moved"
+    },
+    {
+      "start": 1478.64,
+      "end": 1483.52,
+      "duration": 4.88,
+      "text": "sequentially the nodes which are"
+    },
+    {
+      "start": 1480.56,
+      "end": 1486.8,
+      "duration": 6.24,
+      "text": "reachable first i moved them then this"
+    },
+    {
+      "start": 1483.52,
+      "end": 1487.84,
+      "duration": 4.32,
+      "text": "then this then this then this then this"
+    },
+    {
+      "start": 1486.8,
+      "end": 1490.24,
+      "duration": 3.44,
+      "text": "then this"
+    },
+    {
+      "start": 1487.84,
+      "end": 1492.24,
+      "duration": 4.4,
+      "text": "i moved according to reachability"
+    },
+    {
+      "start": 1490.24,
+      "end": 1494.4,
+      "duration": 4.16,
+      "text": "moved according to reachability"
+    },
+    {
+      "start": 1492.24,
+      "end": 1496.8,
+      "duration": 4.56,
+      "text": "so what happened was i minimized the"
+    },
+    {
+      "start": 1494.4,
+      "end": 1499.92,
+      "duration": 5.52,
+      "text": "number of steps to be go of"
+    },
+    {
+      "start": 1496.8,
+      "end": 1502.72,
+      "duration": 5.92,
+      "text": "n plus m which is much much better than"
+    },
+    {
+      "start": 1499.92,
+      "end": 1505.28,
+      "duration": 5.36,
+      "text": "any standard algorithm"
+    },
+    {
+      "start": 1502.72,
+      "end": 1507.68,
+      "duration": 4.96,
+      "text": "because nexo takes more than this"
+    },
+    {
+      "start": 1505.28,
+      "end": 1509.12,
+      "duration": 3.84,
+      "text": "the only reason it works is because"
+    },
+    {
+      "start": 1507.68,
+      "end": 1511.6,
+      "duration": 3.92,
+      "text": "we are making sure there was no one"
+    },
+    {
+      "start": 1509.12,
+      "end": 1513.04,
+      "duration": 3.92,
+      "text": "before six and we computed for six then"
+    },
+    {
+      "start": 1511.6,
+      "end": 1515.04,
+      "duration": 3.44,
+      "text": "we did for five"
+    },
+    {
+      "start": 1513.04,
+      "end": 1517.6,
+      "duration": 4.56,
+      "text": "so when we are doing for four"
+    },
+    {
+      "start": 1515.04,
+      "end": 1519.92,
+      "duration": 4.88,
+      "text": "we know all the previous guys have been"
+    },
+    {
+      "start": 1517.6,
+      "end": 1522.64,
+      "duration": 5.04,
+      "text": "computed and i have i can only reach"
+    },
+    {
+      "start": 1519.92,
+      "end": 1524.4,
+      "duration": 4.48,
+      "text": "four via six or five because it is a"
+    },
+    {
+      "start": 1522.64,
+      "end": 1526.88,
+      "duration": 4.24,
+      "text": "directed graph"
+    },
+    {
+      "start": 1524.4,
+      "end": 1527.6,
+      "duration": 3.2,
+      "text": "two zero one three cannot make me reach"
+    },
+    {
+      "start": 1526.88,
+      "end": 1529.52,
+      "duration": 2.64,
+      "text": "for"
+    },
+    {
+      "start": 1527.6,
+      "end": 1531.92,
+      "duration": 4.32,
+      "text": "the guys who can make me reach 4 are 6"
+    },
+    {
+      "start": 1529.52,
+      "end": 1532.72,
+      "duration": 3.2,
+      "text": "and 5 and they have that their answers"
+    },
+    {
+      "start": 1531.92,
+      "end": 1535.28,
+      "duration": 3.36,
+      "text": "come"
+    },
+    {
+      "start": 1532.72,
+      "end": 1537.76,
+      "duration": 5.04,
+      "text": "computed so i'll compute r4"
+    },
+    {
+      "start": 1535.28,
+      "end": 1540.32,
+      "duration": 5.04,
+      "text": "now for 2 these 3 guys can make me reach"
+    },
+    {
+      "start": 1537.76,
+      "end": 1542.4,
+      "duration": 4.64,
+      "text": "2. so these answers are computed so i"
+    },
+    {
+      "start": 1540.32,
+      "end": 1544.48,
+      "duration": 4.16,
+      "text": "started with a very small"
+    },
+    {
+      "start": 1542.4,
+      "end": 1546.64,
+      "duration": 4.24,
+      "text": "and then i expanded it to 2"
+    },
+    {
+      "start": 1544.48,
+      "end": 1548.08,
+      "duration": 3.6,
+      "text": "then i expanded it to 3 and so on that"
+    },
+    {
+      "start": 1546.64,
+      "end": 1549.52,
+      "duration": 2.88,
+      "text": "is how we will do it"
+    },
+    {
+      "start": 1548.08,
+      "end": 1551.76,
+      "duration": 3.68,
+      "text": "so in short the intuition is very"
+    },
+    {
+      "start": 1549.52,
+      "end": 1553.36,
+      "duration": 3.84,
+      "text": "straightforward if i'm reaching a node i"
+    },
+    {
+      "start": 1551.76,
+      "end": 1554.32,
+      "duration": 2.56,
+      "text": "know all the previous nodes have their"
+    },
+    {
+      "start": 1553.36,
+      "end": 1556.08,
+      "duration": 2.72,
+      "text": "answers"
+    },
+    {
+      "start": 1554.32,
+      "end": 1557.76,
+      "duration": 3.44,
+      "text": "right so that was the simple intuition"
+    },
+    {
+      "start": 1556.08,
+      "end": 1560.24,
+      "duration": 4.16,
+      "text": "we still have a problem i'll leave a"
+    },
+    {
+      "start": 1557.76,
+      "end": 1562.08,
+      "duration": 4.32,
+      "text": "stack overflow link on the description"
+    },
+    {
+      "start": 1560.24,
+      "end": 1563.68,
+      "duration": 3.44,
+      "text": "you can check it out or the answer is"
+    },
+    {
+      "start": 1562.08,
+      "end": 1566.0,
+      "duration": 3.92,
+      "text": "given over there you can read it again"
+    },
+    {
+      "start": 1563.68,
+      "end": 1567.68,
+      "duration": 4.0,
+      "text": "and again but i think it is more or less"
+    },
+    {
+      "start": 1566.0,
+      "end": 1569.12,
+      "duration": 3.12,
+      "text": "clear to you know so i hope you"
+    },
+    {
+      "start": 1567.68,
+      "end": 1571.04,
+      "duration": 3.36,
+      "text": "understood the algorithm the code and"
+    },
+    {
+      "start": 1569.12,
+      "end": 1572.48,
+      "duration": 3.36,
+      "text": "the intuition so just in case you did"
+    },
+    {
+      "start": 1571.04,
+      "end": 1573.92,
+      "duration": 2.88,
+      "text": "please please please make sure you like"
+    },
+    {
+      "start": 1572.48,
+      "end": 1574.96,
+      "duration": 2.48,
+      "text": "this video and if you're new to our"
+    },
+    {
+      "start": 1573.92,
+      "end": 1576.48,
+      "duration": 2.56,
+      "text": "channel"
+    },
+    {
+      "start": 1574.96,
+      "end": 1579.04,
+      "duration": 4.08,
+      "text": "hit that subscribe button right away"
+    },
+    {
+      "start": 1576.48,
+      "end": 1580.32,
+      "duration": 3.84,
+      "text": "please do consider subscribing to us if"
+    },
+    {
+      "start": 1579.04,
+      "end": 1582.0,
+      "duration": 2.96,
+      "text": "you haven't checked out our dp series"
+    },
+    {
+      "start": 1580.32,
+      "end": 1583.28,
+      "duration": 2.96,
+      "text": "and the hd sheet the links will be in"
+    },
+    {
+      "start": 1582.0,
+      "end": 1584.96,
+      "duration": 2.96,
+      "text": "the description and here with this i'll"
+    },
+    {
+      "start": 1583.28,
+      "end": 1587.44,
+      "duration": 4.16,
+      "text": "be wrapping up this video let's meet in"
+    },
+    {
+      "start": 1584.96,
+      "end": 1591.77,
+      "duration": 6.81,
+      "text": "some other video till then bye take care"
+    },
+    {
+      "start": 1587.44,
+      "end": 1597.4,
+      "duration": 9.96,
+      "text": "whenever your heart is broken"
+    },
+    {
+      "start": 1591.77,
+      "end": 1597.4,
+      "duration": 5.63,
+      "text": "[Music]"
+    }
+  ]
+}

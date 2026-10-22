@@ -1,0 +1,1802 @@
+{
+  "video_id": "lxTGsVXjwvM",
+  "title": "L10. iterative Inorder Traversal in Binary Tree | C++ | Java | Stack",
+  "duration_sec": 674,
+  "num_segments": 299,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.44,
+      "duration": 3.44,
+      "text": "before starting this video i'd love to"
+    },
+    {
+      "start": 1.44,
+      "end": 5.12,
+      "duration": 3.68,
+      "text": "thank releval for sponsoring this entire"
+    },
+    {
+      "start": 3.44,
+      "end": 7.04,
+      "duration": 3.6,
+      "text": "tree series did you know that companies"
+    },
+    {
+      "start": 5.12,
+      "end": 8.56,
+      "duration": 3.44,
+      "text": "like google apple starbucks are now"
+    },
+    {
+      "start": 7.04,
+      "end": 10.72,
+      "duration": 3.68,
+      "text": "hiring people without any degree or"
+    },
+    {
+      "start": 8.56,
+      "end": 12.56,
+      "duration": 4.0,
+      "text": "experience why because they believe that"
+    },
+    {
+      "start": 10.72,
+      "end": 14.72,
+      "duration": 4.0,
+      "text": "skills are more important than anything"
+    },
+    {
+      "start": 12.56,
+      "end": 16.64,
+      "duration": 4.08,
+      "text": "else the top companies in india like the"
+    },
+    {
+      "start": 14.72,
+      "end": 18.24,
+      "duration": 3.52,
+      "text": "top startups have also started following"
+    },
+    {
+      "start": 16.64,
+      "end": 20.32,
+      "duration": 3.68,
+      "text": "this trend by hiring through a platform"
+    },
+    {
+      "start": 18.24,
+      "end": 22.24,
+      "duration": 4.0,
+      "text": "which is relevant which is backed up by"
+    },
+    {
+      "start": 20.32,
+      "end": 24.0,
+      "duration": 3.68,
+      "text": "an academy all you have to do is to give"
+    },
+    {
+      "start": 22.24,
+      "end": 25.6,
+      "duration": 3.36,
+      "text": "the relevant test and based on your"
+    },
+    {
+      "start": 24.0,
+      "end": 27.68,
+      "duration": 3.68,
+      "text": "score this flat send your candidate"
+    },
+    {
+      "start": 25.6,
+      "end": 30.48,
+      "duration": 4.88,
+      "text": "profiles to 50 plus companies which"
+    },
+    {
+      "start": 27.68,
+      "end": 32.24,
+      "duration": 4.56,
+      "text": "includes cred upgrade vedanta"
+    },
+    {
+      "start": 30.48,
+      "end": 34.32,
+      "duration": 3.84,
+      "text": "and you can get selected for a job role"
+    },
+    {
+      "start": 32.24,
+      "end": 36.56,
+      "duration": 4.32,
+      "text": "within a week another amazing thing"
+    },
+    {
+      "start": 34.32,
+      "end": 37.84,
+      "duration": 3.52,
+      "text": "about relevel is it's absolutely free so"
+    },
+    {
+      "start": 36.56,
+      "end": 41.08,
+      "duration": 4.52,
+      "text": "please make sure you check out the links"
+    },
+    {
+      "start": 37.84,
+      "end": 41.08,
+      "duration": 3.24,
+      "text": "in the description"
+    },
+    {
+      "start": 44.0,
+      "end": 47.36,
+      "duration": 3.36,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 45.52,
+      "end": 49.68,
+      "duration": 4.16,
+      "text": "i hope you guys are doing extremely well"
+    },
+    {
+      "start": 47.36,
+      "end": 52.8,
+      "duration": 5.44,
+      "text": "so the previous video we did learn about"
+    },
+    {
+      "start": 49.68,
+      "end": 55.2,
+      "duration": 5.52,
+      "text": "how to find an inorder traversal of any"
+    },
+    {
+      "start": 52.8,
+      "end": 56.0,
+      "duration": 3.2,
+      "text": "given binary tree but that method did"
+    },
+    {
+      "start": 55.2,
+      "end": 58.64,
+      "duration": 3.44,
+      "text": "use"
+    },
+    {
+      "start": 56.0,
+      "end": 60.56,
+      "duration": 4.56,
+      "text": "recursion right what if in an interview"
+    },
+    {
+      "start": 58.64,
+      "end": 62.64,
+      "duration": 4.0,
+      "text": "the interviewer says uh tells you that"
+    },
+    {
+      "start": 60.56,
+      "end": 64.4,
+      "duration": 3.84,
+      "text": "you cannot use recursion then how will"
+    },
+    {
+      "start": 62.64,
+      "end": 67.68,
+      "duration": 5.04,
+      "text": "you solve this problem we're going to"
+    },
+    {
+      "start": 64.4,
+      "end": 70.16,
+      "duration": 5.76,
+      "text": "use an iterative uh technique in order"
+    },
+    {
+      "start": 67.68,
+      "end": 72.24,
+      "duration": 4.56,
+      "text": "to get the in-order traversal so let's"
+    },
+    {
+      "start": 70.16,
+      "end": 74.56,
+      "duration": 4.4,
+      "text": "just quickly write the inorder traversal"
+    },
+    {
+      "start": 72.24,
+      "end": 76.96,
+      "duration": 4.72,
+      "text": "for this particular tree or the inorder"
+    },
+    {
+      "start": 74.56,
+      "end": 79.2,
+      "duration": 4.64,
+      "text": "traversal you know what is in order in"
+    },
+    {
+      "start": 76.96,
+      "end": 80.64,
+      "duration": 3.68,
+      "text": "order is basically left and"
+    },
+    {
+      "start": 79.2,
+      "end": 83.04,
+      "duration": 3.84,
+      "text": "since it is in"
+    },
+    {
+      "start": 80.64,
+      "end": 85.36,
+      "duration": 4.72,
+      "text": "so the node or the root will be at the"
+    },
+    {
+      "start": 83.04,
+      "end": 88.16,
+      "duration": 5.12,
+      "text": "middle and after that something like the"
+    },
+    {
+      "start": 85.36,
+      "end": 89.44,
+      "duration": 4.08,
+      "text": "right will appear so over here"
+    },
+    {
+      "start": 88.16,
+      "end": 90.4,
+      "duration": 2.24,
+      "text": "this is where you start you go to the"
+    },
+    {
+      "start": 89.44,
+      "end": 92.4,
+      "duration": 2.96,
+      "text": "left"
+    },
+    {
+      "start": 90.4,
+      "end": 93.2,
+      "duration": 2.8,
+      "text": "4 is the first node"
+    },
+    {
+      "start": 92.4,
+      "end": 96.24,
+      "duration": 3.84,
+      "text": "then"
+    },
+    {
+      "start": 93.2,
+      "end": 98.08,
+      "duration": 4.88,
+      "text": "you go to its root that's 2"
+    },
+    {
+      "start": 96.24,
+      "end": 100.32,
+      "duration": 4.08,
+      "text": "then you go to the right so this is the"
+    },
+    {
+      "start": 98.08,
+      "end": 105.28,
+      "duration": 7.2,
+      "text": "right subtree and this right subtree"
+    },
+    {
+      "start": 100.32,
+      "end": 105.28,
+      "duration": 4.96,
+      "text": "again left root right so six five seven"
+    },
+    {
+      "start": 106.24,
+      "end": 110.56,
+      "duration": 4.32,
+      "text": "so the left portion is completed so you"
+    },
+    {
+      "start": 108.24,
+      "end": 112.8,
+      "duration": 4.56,
+      "text": "come back to root that's one then you go"
+    },
+    {
+      "start": 110.56,
+      "end": 114.96,
+      "duration": 4.4,
+      "text": "to the right that's three that is how"
+    },
+    {
+      "start": 112.8,
+      "end": 117.92,
+      "duration": 5.12,
+      "text": "you generally do left root right so this"
+    },
+    {
+      "start": 114.96,
+      "end": 119.36,
+      "duration": 4.4,
+      "text": "is going to be the in order traversal of"
+    },
+    {
+      "start": 117.92,
+      "end": 121.76,
+      "duration": 3.84,
+      "text": "this particular"
+    },
+    {
+      "start": 119.36,
+      "end": 124.08,
+      "duration": 4.72,
+      "text": "binary tree so you know recursive way"
+    },
+    {
+      "start": 121.76,
+      "end": 126.24,
+      "duration": 4.48,
+      "text": "right so if you remember in the"
+    },
+    {
+      "start": 124.08,
+      "end": 127.28,
+      "duration": 3.2,
+      "text": "recursion what we did was we moved to"
+    },
+    {
+      "start": 126.24,
+      "end": 128.88,
+      "duration": 2.64,
+      "text": "the left"
+    },
+    {
+      "start": 127.28,
+      "end": 131.2,
+      "duration": 3.92,
+      "text": "we printed"
+    },
+    {
+      "start": 128.88,
+      "end": 134.24,
+      "duration": 5.36,
+      "text": "and then we moved to right so basically"
+    },
+    {
+      "start": 131.2,
+      "end": 136.32,
+      "duration": 5.12,
+      "text": "what happened was we went to the left"
+    },
+    {
+      "start": 134.24,
+      "end": 138.24,
+      "duration": 4.0,
+      "text": "again we came to the left again we came"
+    },
+    {
+      "start": 136.32,
+      "end": 140.32,
+      "duration": 4.0,
+      "text": "to the left and the moment the left was"
+    },
+    {
+      "start": 138.24,
+      "end": 142.24,
+      "duration": 4.0,
+      "text": "complete then we printed that note"
+    },
+    {
+      "start": 140.32,
+      "end": 144.08,
+      "duration": 3.76,
+      "text": "basically i went to one then i went to"
+    },
+    {
+      "start": 142.24,
+      "end": 146.88,
+      "duration": 4.64,
+      "text": "two then i went to four and then i"
+    },
+    {
+      "start": 144.08,
+      "end": 149.12,
+      "duration": 5.04,
+      "text": "printed four and this one like at first"
+    },
+    {
+      "start": 146.88,
+      "end": 150.48,
+      "duration": 3.6,
+      "text": "the call was made for one it went to the"
+    },
+    {
+      "start": 149.12,
+      "end": 153.2,
+      "duration": 4.08,
+      "text": "left then"
+    },
+    {
+      "start": 150.48,
+      "end": 155.68,
+      "duration": 5.2,
+      "text": "two then it went to four and at the end"
+    },
+    {
+      "start": 153.2,
+      "end": 158.16,
+      "duration": 4.96,
+      "text": "the four was printed so these"
+    },
+    {
+      "start": 155.68,
+      "end": 159.68,
+      "duration": 4.0,
+      "text": "two and one were stored in the"
+    },
+    {
+      "start": 158.16,
+      "end": 162.72,
+      "duration": 4.56,
+      "text": "auxiliary"
+    },
+    {
+      "start": 159.68,
+      "end": 165.12,
+      "duration": 5.44,
+      "text": "stack space of recursion right auxiliary"
+    },
+    {
+      "start": 162.72,
+      "end": 167.52,
+      "duration": 4.8,
+      "text": "stack space of recursion"
+    },
+    {
+      "start": 165.12,
+      "end": 170.96,
+      "duration": 5.84,
+      "text": "over here in order to convert this into"
+    },
+    {
+      "start": 167.52,
+      "end": 174.4,
+      "duration": 6.88,
+      "text": "an iterative solution can i not use"
+    },
+    {
+      "start": 170.96,
+      "end": 176.8,
+      "duration": 5.84,
+      "text": "a stack which is created by me yes i can"
+    },
+    {
+      "start": 174.4,
+      "end": 179.28,
+      "duration": 4.88,
+      "text": "and i same this i store the similar"
+    },
+    {
+      "start": 176.8,
+      "end": 182.08,
+      "duration": 5.28,
+      "text": "thing like one two and i can just reuse"
+    },
+    {
+      "start": 179.28,
+      "end": 183.44,
+      "duration": 4.16,
+      "text": "them i think that makes absolute sense"
+    },
+    {
+      "start": 182.08,
+      "end": 185.12,
+      "duration": 3.04,
+      "text": "so let's do that"
+    },
+    {
+      "start": 183.44,
+      "end": 187.6,
+      "duration": 4.16,
+      "text": "so in order to have an iterative"
+    },
+    {
+      "start": 185.12,
+      "end": 189.68,
+      "duration": 4.56,
+      "text": "traversal just make sure you have a"
+    },
+    {
+      "start": 187.6,
+      "end": 191.44,
+      "duration": 3.84,
+      "text": "stack data structure okay"
+    },
+    {
+      "start": 189.68,
+      "end": 192.8,
+      "duration": 3.12,
+      "text": "so what's the stack data structure it's"
+    },
+    {
+      "start": 191.44,
+      "end": 195.36,
+      "duration": 3.92,
+      "text": "a lasting"
+    },
+    {
+      "start": 192.8,
+      "end": 199.04,
+      "duration": 6.24,
+      "text": "first out data structure that is what"
+    },
+    {
+      "start": 195.36,
+      "end": 202.48,
+      "duration": 7.12,
+      "text": "you will have and also have a node which"
+    },
+    {
+      "start": 199.04,
+      "end": 204.48,
+      "duration": 5.44,
+      "text": "is initialized to the root initially so"
+    },
+    {
+      "start": 202.48,
+      "end": 207.28,
+      "duration": 4.8,
+      "text": "currently you add the node one"
+    },
+    {
+      "start": 204.48,
+      "end": 209.84,
+      "duration": 5.36,
+      "text": "let's start the iteration now remember"
+    },
+    {
+      "start": 207.28,
+      "end": 212.56,
+      "duration": 5.28,
+      "text": "at every step of iteration you take"
+    },
+    {
+      "start": 209.84,
+      "end": 214.64,
+      "duration": 4.8,
+      "text": "whatever is at the node remember this if"
+    },
+    {
+      "start": 212.56,
+      "end": 216.96,
+      "duration": 4.4,
+      "text": "this is not null you take this and you"
+    },
+    {
+      "start": 214.64,
+      "end": 219.6,
+      "duration": 4.96,
+      "text": "put it into your stack okay once you"
+    },
+    {
+      "start": 216.96,
+      "end": 222.56,
+      "duration": 5.6,
+      "text": "have put it into your stack if there"
+    },
+    {
+      "start": 219.6,
+      "end": 224.96,
+      "duration": 5.36,
+      "text": "exists a left like even if that doesn't"
+    },
+    {
+      "start": 222.56,
+      "end": 226.72,
+      "duration": 4.16,
+      "text": "you just take the left of one so you'll"
+    },
+    {
+      "start": 224.96,
+      "end": 229.44,
+      "duration": 4.48,
+      "text": "take the left of one so in every"
+    },
+    {
+      "start": 226.72,
+      "end": 230.96,
+      "duration": 4.24,
+      "text": "iteration if the node is not null you'll"
+    },
+    {
+      "start": 229.44,
+      "end": 232.88,
+      "duration": 3.44,
+      "text": "take this and you'll put it into your"
+    },
+    {
+      "start": 230.96,
+      "end": 234.48,
+      "duration": 3.52,
+      "text": "stack and you'll move to the left"
+    },
+    {
+      "start": 232.88,
+      "end": 236.0,
+      "duration": 3.12,
+      "text": "similar to recursion where you move to"
+    },
+    {
+      "start": 234.48,
+      "end": 237.6,
+      "duration": 3.12,
+      "text": "the left now"
+    },
+    {
+      "start": 236.0,
+      "end": 238.56,
+      "duration": 2.56,
+      "text": "in the next iteration you come to two"
+    },
+    {
+      "start": 237.6,
+      "end": 240.72,
+      "duration": 3.12,
+      "text": "again"
+    },
+    {
+      "start": 238.56,
+      "end": 242.72,
+      "duration": 4.16,
+      "text": "same thing take it and put it into your"
+    },
+    {
+      "start": 240.72,
+      "end": 244.72,
+      "duration": 4.0,
+      "text": "stack and now it's time to move to the"
+    },
+    {
+      "start": 242.72,
+      "end": 246.24,
+      "duration": 3.52,
+      "text": "left similar to recursion i'll move to"
+    },
+    {
+      "start": 244.72,
+      "end": 248.08,
+      "duration": 3.36,
+      "text": "the left"
+    },
+    {
+      "start": 246.24,
+      "end": 250.56,
+      "duration": 4.32,
+      "text": "and the next iteration you come back"
+    },
+    {
+      "start": 248.08,
+      "end": 251.6,
+      "duration": 3.52,
+      "text": "again and you have a four again just"
+    },
+    {
+      "start": 250.56,
+      "end": 252.84,
+      "duration": 2.28,
+      "text": "store it"
+    },
+    {
+      "start": 251.6,
+      "end": 255.84,
+      "duration": 4.24,
+      "text": "and move to the"
+    },
+    {
+      "start": 252.84,
+      "end": 256.96,
+      "duration": 4.12,
+      "text": "next so move to the left so when you"
+    },
+    {
+      "start": 255.84,
+      "end": 259.52,
+      "duration": 3.68,
+      "text": "move to the"
+    },
+    {
+      "start": 256.96,
+      "end": 262.08,
+      "duration": 5.12,
+      "text": "left you will get null so in the next"
+    },
+    {
+      "start": 259.52,
+      "end": 264.64,
+      "duration": 5.12,
+      "text": "iteration when you come"
+    },
+    {
+      "start": 262.08,
+      "end": 266.8,
+      "duration": 4.72,
+      "text": "you see that there is a null remember if"
+    },
+    {
+      "start": 264.64,
+      "end": 267.6,
+      "duration": 2.96,
+      "text": "there is a null there is no need to move"
+    },
+    {
+      "start": 266.8,
+      "end": 269.12,
+      "duration": 2.32,
+      "text": "to the"
+    },
+    {
+      "start": 267.6,
+      "end": 271.6,
+      "duration": 4.0,
+      "text": "there is no need to move to the left any"
+    },
+    {
+      "start": 269.12,
+      "end": 272.56,
+      "duration": 3.44,
+      "text": "further so similar to recursion what you"
+    },
+    {
+      "start": 271.6,
+      "end": 274.48,
+      "duration": 2.88,
+      "text": "will do is"
+    },
+    {
+      "start": 272.56,
+      "end": 276.4,
+      "duration": 3.84,
+      "text": "you will just take out this element and"
+    },
+    {
+      "start": 274.48,
+      "end": 279.12,
+      "duration": 4.64,
+      "text": "you will print it so the first element"
+    },
+    {
+      "start": 276.4,
+      "end": 282.32,
+      "duration": 5.92,
+      "text": "for is indeed printed that is the"
+    },
+    {
+      "start": 279.12,
+      "end": 283.68,
+      "duration": 4.56,
+      "text": "inorder traversal right after that you"
+    },
+    {
+      "start": 282.32,
+      "end": 286.8,
+      "duration": 4.48,
+      "text": "know you have to move to the right if"
+    },
+    {
+      "start": 283.68,
+      "end": 288.72,
+      "duration": 5.04,
+      "text": "you remember a question left print right"
+    },
+    {
+      "start": 286.8,
+      "end": 291.2,
+      "duration": 4.4,
+      "text": "so you have to move to the right so who"
+    },
+    {
+      "start": 288.72,
+      "end": 294.0,
+      "duration": 5.28,
+      "text": "is force right do you have anything no"
+    },
+    {
+      "start": 291.2,
+      "end": 295.84,
+      "duration": 4.64,
+      "text": "so this guy again gets converted to null"
+    },
+    {
+      "start": 294.0,
+      "end": 298.08,
+      "duration": 4.08,
+      "text": "because force right is null and that is"
+    },
+    {
+      "start": 295.84,
+      "end": 300.24,
+      "duration": 4.4,
+      "text": "what you will make the node as"
+    },
+    {
+      "start": 298.08,
+      "end": 302.0,
+      "duration": 3.92,
+      "text": "iteration over again come back to the"
+    },
+    {
+      "start": 300.24,
+      "end": 304.32,
+      "duration": 4.08,
+      "text": "next iteration now when you come back to"
+    },
+    {
+      "start": 302.0,
+      "end": 306.56,
+      "duration": 4.56,
+      "text": "the next iteration you again have a null"
+    },
+    {
+      "start": 304.32,
+      "end": 307.36,
+      "duration": 3.04,
+      "text": "if you again have a null it's the same"
+    },
+    {
+      "start": 306.56,
+      "end": 309.6,
+      "duration": 3.04,
+      "text": "thing"
+    },
+    {
+      "start": 307.36,
+      "end": 311.76,
+      "duration": 4.4,
+      "text": "come back so you'll take this too and"
+    },
+    {
+      "start": 309.6,
+      "end": 312.96,
+      "duration": 3.36,
+      "text": "you'll print it so coming back right if"
+    },
+    {
+      "start": 311.76,
+      "end": 314.96,
+      "duration": 3.2,
+      "text": "it's a null if you remember the"
+    },
+    {
+      "start": 312.96,
+      "end": 316.64,
+      "duration": 3.68,
+      "text": "recursion code if it's a null you have"
+    },
+    {
+      "start": 314.96,
+      "end": 319.2,
+      "duration": 4.24,
+      "text": "to come back right"
+    },
+    {
+      "start": 316.64,
+      "end": 321.04,
+      "duration": 4.4,
+      "text": "so came back"
+    },
+    {
+      "start": 319.2,
+      "end": 322.72,
+      "duration": 3.52,
+      "text": "you have printed two right now since"
+    },
+    {
+      "start": 321.04,
+      "end": 325.04,
+      "duration": 4.0,
+      "text": "you've taken two and printed if you"
+    },
+    {
+      "start": 322.72,
+      "end": 327.52,
+      "duration": 4.8,
+      "text": "remember it was left root right so it's"
+    },
+    {
+      "start": 325.04,
+      "end": 330.8,
+      "duration": 5.76,
+      "text": "time to move to two's right what's two's"
+    },
+    {
+      "start": 327.52,
+      "end": 332.8,
+      "duration": 5.28,
+      "text": "right five so this is what i will do"
+    },
+    {
+      "start": 330.8,
+      "end": 334.48,
+      "duration": 3.68,
+      "text": "i'll take out the top of the stack i'll"
+    },
+    {
+      "start": 332.8,
+      "end": 336.0,
+      "duration": 3.2,
+      "text": "print it and now it's time to move to"
+    },
+    {
+      "start": 334.48,
+      "end": 337.68,
+      "duration": 3.2,
+      "text": "the right so i'll move to the right"
+    },
+    {
+      "start": 336.0,
+      "end": 340.0,
+      "duration": 4.0,
+      "text": "perfect in the next iteration when i"
+    },
+    {
+      "start": 337.68,
+      "end": 342.4,
+      "duration": 4.72,
+      "text": "come across i will take this five and"
+    },
+    {
+      "start": 340.0,
+      "end": 344.72,
+      "duration": 4.72,
+      "text": "i'll put this into the stack okay and at"
+    },
+    {
+      "start": 342.4,
+      "end": 347.28,
+      "duration": 4.88,
+      "text": "the same time i will move to the left of"
+    },
+    {
+      "start": 344.72,
+      "end": 349.68,
+      "duration": 4.96,
+      "text": "five because this five will wait and"
+    },
+    {
+      "start": 347.28,
+      "end": 350.84,
+      "duration": 3.56,
+      "text": "i'll move to the left that is six let's"
+    },
+    {
+      "start": 349.68,
+      "end": 353.28,
+      "duration": 3.6,
+      "text": "move to the"
+    },
+    {
+      "start": 350.84,
+      "end": 355.68,
+      "duration": 4.84,
+      "text": "six then the next iteration when i come"
+    },
+    {
+      "start": 353.28,
+      "end": 358.24,
+      "duration": 4.96,
+      "text": "back again again i'll take this six and"
+    },
+    {
+      "start": 355.68,
+      "end": 360.0,
+      "duration": 4.32,
+      "text": "make it wait and i'll move to the left"
+    },
+    {
+      "start": 358.24,
+      "end": 360.96,
+      "duration": 2.72,
+      "text": "so when i move to the left it's a null"
+    },
+    {
+      "start": 360.0,
+      "end": 363.36,
+      "duration": 3.36,
+      "text": "again"
+    },
+    {
+      "start": 360.96,
+      "end": 365.44,
+      "duration": 4.48,
+      "text": "perfect if it's a null again"
+    },
+    {
+      "start": 363.36,
+      "end": 368.24,
+      "duration": 4.88,
+      "text": "in the next iteration what will happen"
+    },
+    {
+      "start": 365.44,
+      "end": 370.08,
+      "duration": 4.64,
+      "text": "it will say i'm a null so i will take"
+    },
+    {
+      "start": 368.24,
+      "end": 373.2,
+      "duration": 4.96,
+      "text": "the top of the stack and what is the top"
+    },
+    {
+      "start": 370.08,
+      "end": 376.24,
+      "duration": 6.16,
+      "text": "of the stack six so i'll print the six"
+    },
+    {
+      "start": 373.2,
+      "end": 378.72,
+      "duration": 5.52,
+      "text": "and what i will do is left print right"
+    },
+    {
+      "start": 376.24,
+      "end": 380.48,
+      "duration": 4.24,
+      "text": "so six is right is null again so i'll"
+    },
+    {
+      "start": 378.72,
+      "end": 382.8,
+      "duration": 4.08,
+      "text": "just reassign that to"
+    },
+    {
+      "start": 380.48,
+      "end": 384.64,
+      "duration": 4.16,
+      "text": "null so i've reassigned that to null"
+    },
+    {
+      "start": 382.8,
+      "end": 387.68,
+      "duration": 4.88,
+      "text": "perfect in the next iteration when i"
+    },
+    {
+      "start": 384.64,
+      "end": 390.56,
+      "duration": 5.92,
+      "text": "come across i again get a null so what i"
+    },
+    {
+      "start": 387.68,
+      "end": 393.44,
+      "duration": 5.76,
+      "text": "will do is i will take back the last guy"
+    },
+    {
+      "start": 390.56,
+      "end": 395.44,
+      "duration": 4.88,
+      "text": "5 and i'll print it once i have printed"
+    },
+    {
+      "start": 393.44,
+      "end": 397.28,
+      "duration": 3.84,
+      "text": "it you're getting a pattern right first"
+    },
+    {
+      "start": 395.44,
+      "end": 399.52,
+      "duration": 4.08,
+      "text": "it was six then it was five so it is"
+    },
+    {
+      "start": 397.28,
+      "end": 401.92,
+      "duration": 4.64,
+      "text": "coming back it is backtracking for six"
+    },
+    {
+      "start": 399.52,
+      "end": 404.8,
+      "duration": 5.28,
+      "text": "then five is backtracking"
+    },
+    {
+      "start": 401.92,
+      "end": 406.8,
+      "duration": 4.88,
+      "text": "so since you've printed five so left"
+    },
+    {
+      "start": 404.8,
+      "end": 409.04,
+      "duration": 4.24,
+      "text": "root is printed time to go to the right"
+    },
+    {
+      "start": 406.8,
+      "end": 412.64,
+      "duration": 5.84,
+      "text": "so five's right is seven so this guy"
+    },
+    {
+      "start": 409.04,
+      "end": 415.52,
+      "duration": 6.48,
+      "text": "will change to seven so i'll come to the"
+    },
+    {
+      "start": 412.64,
+      "end": 417.52,
+      "duration": 4.88,
+      "text": "right now i'll come to seven perfect"
+    },
+    {
+      "start": 415.52,
+      "end": 419.52,
+      "duration": 4.0,
+      "text": "and the next iteration when i come back"
+    },
+    {
+      "start": 417.52,
+      "end": 421.92,
+      "duration": 4.4,
+      "text": "i see i have a seven so i'll take that"
+    },
+    {
+      "start": 419.52,
+      "end": 422.88,
+      "duration": 3.36,
+      "text": "and put into the stack and i will move"
+    },
+    {
+      "start": 421.92,
+      "end": 425.36,
+      "duration": 3.44,
+      "text": "to the"
+    },
+    {
+      "start": 422.88,
+      "end": 427.2,
+      "duration": 4.32,
+      "text": "left of 7 so i'll move to null"
+    },
+    {
+      "start": 425.36,
+      "end": 429.92,
+      "duration": 4.56,
+      "text": "and the next iteration when i come back"
+    },
+    {
+      "start": 427.2,
+      "end": 433.2,
+      "duration": 6.0,
+      "text": "i see a null if it's a null what i'll do"
+    },
+    {
+      "start": 429.92,
+      "end": 435.28,
+      "duration": 5.36,
+      "text": "is i'll take this 7 and i'll print it"
+    },
+    {
+      "start": 433.2,
+      "end": 436.4,
+      "duration": 3.2,
+      "text": "and since it is printed now it's time to"
+    },
+    {
+      "start": 435.28,
+      "end": 439.36,
+      "duration": 4.08,
+      "text": "move to the right"
+    },
+    {
+      "start": 436.4,
+      "end": 440.24,
+      "duration": 3.84,
+      "text": "seventh writer is null so i'll move to"
+    },
+    {
+      "start": 439.36,
+      "end": 442.48,
+      "duration": 3.12,
+      "text": "null"
+    },
+    {
+      "start": 440.24,
+      "end": 445.28,
+      "duration": 5.04,
+      "text": "perfect now the next iteration when i"
+    },
+    {
+      "start": 442.48,
+      "end": 447.04,
+      "duration": 4.56,
+      "text": "come across i again see a null"
+    },
+    {
+      "start": 445.28,
+      "end": 449.92,
+      "duration": 4.64,
+      "text": "now this moment"
+    },
+    {
+      "start": 447.04,
+      "end": 452.56,
+      "duration": 5.52,
+      "text": "when i see a null what happens"
+    },
+    {
+      "start": 449.92,
+      "end": 455.12,
+      "duration": 5.2,
+      "text": "very simple i take the topmost element"
+    },
+    {
+      "start": 452.56,
+      "end": 457.92,
+      "duration": 5.36,
+      "text": "again and that is what is printed"
+    },
+    {
+      "start": 455.12,
+      "end": 460.16,
+      "duration": 5.04,
+      "text": "once that is printed i will reassign"
+    },
+    {
+      "start": 457.92,
+      "end": 462.4,
+      "duration": 4.48,
+      "text": "this to"
+    },
+    {
+      "start": 460.16,
+      "end": 464.72,
+      "duration": 4.56,
+      "text": "the right of one because one is printed"
+    },
+    {
+      "start": 462.4,
+      "end": 466.64,
+      "duration": 4.24,
+      "text": "it's time to go to the right of one left"
+    },
+    {
+      "start": 464.72,
+      "end": 469.36,
+      "duration": 4.64,
+      "text": "print right so the right of one is"
+    },
+    {
+      "start": 466.64,
+      "end": 471.52,
+      "duration": 4.88,
+      "text": "nothing but three sub went to three and"
+    },
+    {
+      "start": 469.36,
+      "end": 473.68,
+      "duration": 4.32,
+      "text": "the next iteration when i come back i"
+    },
+    {
+      "start": 471.52,
+      "end": 475.68,
+      "duration": 4.16,
+      "text": "have a three so i go to the left of"
+    },
+    {
+      "start": 473.68,
+      "end": 477.52,
+      "duration": 3.84,
+      "text": "three yes in the next right so in the"
+    },
+    {
+      "start": 475.68,
+      "end": 479.68,
+      "duration": 4.0,
+      "text": "next iteration when i come back i have a"
+    },
+    {
+      "start": 477.52,
+      "end": 482.08,
+      "duration": 4.56,
+      "text": "three so just take it and put it into"
+    },
+    {
+      "start": 479.68,
+      "end": 484.88,
+      "duration": 5.2,
+      "text": "your stack and that's time that you"
+    },
+    {
+      "start": 482.08,
+      "end": 486.96,
+      "duration": 4.88,
+      "text": "change this to the left so the left is"
+    },
+    {
+      "start": 484.88,
+      "end": 489.68,
+      "duration": 4.8,
+      "text": "null in the next iteration when you come"
+    },
+    {
+      "start": 486.96,
+      "end": 492.4,
+      "duration": 5.44,
+      "text": "back you see there is a null so whatever"
+    },
+    {
+      "start": 489.68,
+      "end": 494.88,
+      "duration": 5.2,
+      "text": "is over here you just take it out and"
+    },
+    {
+      "start": 492.4,
+      "end": 497.44,
+      "duration": 5.04,
+      "text": "you print and you move to the right of"
+    },
+    {
+      "start": 494.88,
+      "end": 500.24,
+      "duration": 5.36,
+      "text": "three that's null"
+    },
+    {
+      "start": 497.44,
+      "end": 502.4,
+      "duration": 4.96,
+      "text": "perfect now the next iteration when you"
+    },
+    {
+      "start": 500.24,
+      "end": 504.8,
+      "duration": 4.56,
+      "text": "come back there is a null yes there is"
+    },
+    {
+      "start": 502.4,
+      "end": 505.6,
+      "duration": 3.2,
+      "text": "null and whenever you look at the stack"
+    },
+    {
+      "start": 504.8,
+      "end": 509.2,
+      "duration": 4.4,
+      "text": "it's"
+    },
+    {
+      "start": 505.6,
+      "end": 510.48,
+      "duration": 4.88,
+      "text": "empty so if it's empty you can break out"
+    },
+    {
+      "start": 509.2,
+      "end": 512.96,
+      "duration": 3.76,
+      "text": "saying there is"
+    },
+    {
+      "start": 510.48,
+      "end": 515.68,
+      "duration": 5.2,
+      "text": "no further notes to travel and at the"
+    },
+    {
+      "start": 512.96,
+      "end": 518.88,
+      "duration": 5.92,
+      "text": "end i can say i have actually"
+    },
+    {
+      "start": 515.68,
+      "end": 521.6,
+      "duration": 5.92,
+      "text": "printed my inorder traversal so if you"
+    },
+    {
+      "start": 518.88,
+      "end": 525.52,
+      "duration": 6.64,
+      "text": "draw the recursion tree"
+    },
+    {
+      "start": 521.6,
+      "end": 528.8,
+      "duration": 7.2,
+      "text": "you'll actually see the same stack trace"
+    },
+    {
+      "start": 525.52,
+      "end": 530.4,
+      "duration": 4.88,
+      "text": "the same stack trace being created so as"
+    },
+    {
+      "start": 528.8,
+      "end": 533.28,
+      "duration": 4.48,
+      "text": "usual the c plus plus code is on the"
+    },
+    {
+      "start": 530.4,
+      "end": 534.88,
+      "duration": 4.48,
+      "text": "left and the java code is on the right"
+    },
+    {
+      "start": 533.28,
+      "end": 537.2,
+      "duration": 3.92,
+      "text": "so what are we given we're given the"
+    },
+    {
+      "start": 534.88,
+      "end": 540.16,
+      "duration": 5.28,
+      "text": "root of the tree right and we take a"
+    },
+    {
+      "start": 537.2,
+      "end": 542.16,
+      "duration": 4.96,
+      "text": "stack empty stack i create a node which"
+    },
+    {
+      "start": 540.16,
+      "end": 544.56,
+      "duration": 4.4,
+      "text": "is our current or whatever you can call"
+    },
+    {
+      "start": 542.16,
+      "end": 546.4,
+      "duration": 4.24,
+      "text": "i can just assign it to root and i've"
+    },
+    {
+      "start": 544.56,
+      "end": 548.64,
+      "duration": 4.08,
+      "text": "declared a vector which stores my in"
+    },
+    {
+      "start": 546.4,
+      "end": 551.36,
+      "duration": 4.96,
+      "text": "order now if you remember what we did if"
+    },
+    {
+      "start": 548.64,
+      "end": 553.68,
+      "duration": 5.04,
+      "text": "the node is not null we took that node"
+    },
+    {
+      "start": 551.36,
+      "end": 556.0,
+      "duration": 4.64,
+      "text": "we put that into the stack and we moved"
+    },
+    {
+      "start": 553.68,
+      "end": 558.72,
+      "duration": 5.04,
+      "text": "to the left basically this creates my"
+    },
+    {
+      "start": 556.0,
+      "end": 561.2,
+      "duration": 5.2,
+      "text": "stack auxiliary stack trace and i move"
+    },
+    {
+      "start": 558.72,
+      "end": 563.44,
+      "duration": 4.72,
+      "text": "to the left perfect and at the same"
+    },
+    {
+      "start": 561.2,
+      "end": 567.36,
+      "duration": 6.16,
+      "text": "iteration if i end up getting to the"
+    },
+    {
+      "start": 563.44,
+      "end": 569.52,
+      "duration": 6.08,
+      "text": "else what does else means it means it's"
+    },
+    {
+      "start": 567.36,
+      "end": 572.16,
+      "duration": 4.8,
+      "text": "null right if it is null if you remember"
+    },
+    {
+      "start": 569.52,
+      "end": 574.16,
+      "duration": 4.64,
+      "text": "what did we do we just we will just make"
+    },
+    {
+      "start": 572.16,
+      "end": 576.08,
+      "duration": 3.92,
+      "text": "sure the stack is empty then it's over"
+    },
+    {
+      "start": 574.16,
+      "end": 578.48,
+      "duration": 4.32,
+      "text": "that means there are no nodes to travel"
+    },
+    {
+      "start": 576.08,
+      "end": 580.72,
+      "duration": 4.64,
+      "text": "or else whatever is at the top of the"
+    },
+    {
+      "start": 578.48,
+      "end": 583.44,
+      "duration": 4.96,
+      "text": "stack we take it okay and that will be"
+    },
+    {
+      "start": 580.72,
+      "end": 585.92,
+      "duration": 5.2,
+      "text": "my in order and after that since it is"
+    },
+    {
+      "start": 583.44,
+      "end": 588.88,
+      "duration": 5.44,
+      "text": "print and after that it's right i move"
+    },
+    {
+      "start": 585.92,
+      "end": 590.8,
+      "duration": 4.88,
+      "text": "to the right and the iteration goes over"
+    },
+    {
+      "start": 588.88,
+      "end": 593.12,
+      "duration": 4.24,
+      "text": "whenever the stack becomes empty i'll"
+    },
+    {
+      "start": 590.8,
+      "end": 595.76,
+      "duration": 4.96,
+      "text": "break out once i break out i'm going to"
+    },
+    {
+      "start": 593.12,
+      "end": 598.4,
+      "duration": 5.28,
+      "text": "return the inorder traversal what will"
+    },
+    {
+      "start": 595.76,
+      "end": 600.8,
+      "duration": 5.04,
+      "text": "be the time complexity guys it's very"
+    },
+    {
+      "start": 598.4,
+      "end": 603.12,
+      "duration": 4.72,
+      "text": "simple it's a big go of end traversal"
+    },
+    {
+      "start": 600.8,
+      "end": 605.28,
+      "duration": 4.48,
+      "text": "because i'm traversing all the notes"
+    },
+    {
+      "start": 603.12,
+      "end": 608.48,
+      "duration": 5.36,
+      "text": "what is the space complexity it's a big"
+    },
+    {
+      "start": 605.28,
+      "end": 610.88,
+      "duration": 5.6,
+      "text": "of n because i am using an auxiliary"
+    },
+    {
+      "start": 608.48,
+      "end": 613.2,
+      "duration": 4.72,
+      "text": "stack space now why the auxiliary space"
+    },
+    {
+      "start": 610.88,
+      "end": 616.08,
+      "duration": 5.2,
+      "text": "is b go off and imagine you're given a"
+    },
+    {
+      "start": 613.2,
+      "end": 618.32,
+      "duration": 5.12,
+      "text": "tree which just has left children so"
+    },
+    {
+      "start": 616.08,
+      "end": 619.92,
+      "duration": 3.84,
+      "text": "you'll push this then you'll push this"
+    },
+    {
+      "start": 618.32,
+      "end": 622.32,
+      "duration": 4.0,
+      "text": "they will push this and you'll go to the"
+    },
+    {
+      "start": 619.92,
+      "end": 624.16,
+      "duration": 4.24,
+      "text": "left every time you go to the left and"
+    },
+    {
+      "start": 622.32,
+      "end": 626.32,
+      "duration": 4.0,
+      "text": "you're going on to push on so if there"
+    },
+    {
+      "start": 624.16,
+      "end": 629.44,
+      "duration": 5.28,
+      "text": "is a skew tree which is just the left"
+    },
+    {
+      "start": 626.32,
+      "end": 632.24,
+      "duration": 5.92,
+      "text": "children you will end up taking b go off"
+    },
+    {
+      "start": 629.44,
+      "end": 634.48,
+      "duration": 5.04,
+      "text": "n space or if i just summarize this i"
+    },
+    {
+      "start": 632.24,
+      "end": 638.08,
+      "duration": 5.84,
+      "text": "can say it's a big go of height of the"
+    },
+    {
+      "start": 634.48,
+      "end": 640.88,
+      "duration": 6.4,
+      "text": "binary tree is the space complexity for"
+    },
+    {
+      "start": 638.08,
+      "end": 642.32,
+      "duration": 4.24,
+      "text": "storing the inorder traversal so i hope"
+    },
+    {
+      "start": 640.88,
+      "end": 644.4,
+      "duration": 3.52,
+      "text": "you've understood the entire explanation"
+    },
+    {
+      "start": 642.32,
+      "end": 645.84,
+      "duration": 3.52,
+      "text": "as well as the code just in case you did"
+    },
+    {
+      "start": 644.4,
+      "end": 647.28,
+      "duration": 2.88,
+      "text": "please please please make sure you like"
+    },
+    {
+      "start": 645.84,
+      "end": 650.16,
+      "duration": 4.32,
+      "text": "this video because it took a lot of"
+    },
+    {
+      "start": 647.28,
+      "end": 651.84,
+      "duration": 4.56,
+      "text": "efforts to make this entire tree series"
+    },
+    {
+      "start": 650.16,
+      "end": 653.6,
+      "duration": 3.44,
+      "text": "also if you wish you can definitely drop"
+    },
+    {
+      "start": 651.84,
+      "end": 656.4,
+      "duration": 4.56,
+      "text": "in a comment that will keep motivating"
+    },
+    {
+      "start": 653.6,
+      "end": 657.52,
+      "duration": 3.92,
+      "text": "me to make such further series also if"
+    },
+    {
+      "start": 656.4,
+      "end": 658.88,
+      "duration": 2.48,
+      "text": "you're new to this channel please do"
+    },
+    {
+      "start": 657.52,
+      "end": 660.48,
+      "duration": 2.96,
+      "text": "consider subscribing because i'm going"
+    },
+    {
+      "start": 658.88,
+      "end": 662.8,
+      "duration": 3.92,
+      "text": "to bring in such more series in the"
+    },
+    {
+      "start": 660.48,
+      "end": 663.92,
+      "duration": 3.44,
+      "text": "upcoming future as well with this let's"
+    },
+    {
+      "start": 662.8,
+      "end": 667.02,
+      "duration": 4.22,
+      "text": "wrap up this video let's speed in the"
+    },
+    {
+      "start": 663.92,
+      "end": 674.95,
+      "duration": 11.03,
+      "text": "next lecture bye"
+    },
+    {
+      "start": 667.02,
+      "end": 674.95,
+      "duration": 7.93,
+      "text": "[Music]"
+    }
+  ]
+}

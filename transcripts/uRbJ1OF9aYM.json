@@ -1,0 +1,3800 @@
+{
+  "video_id": "uRbJ1OF9aYM",
+  "title": "G-20. Find Eventual Safe States - DFS",
+  "duration_sec": 1423,
+  "num_segments": 632,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.48,
+      "duration": 2.48,
+      "text": "so hey everyone welcome back to the"
+    },
+    {
+      "start": 1.28,
+      "end": 4.4,
+      "duration": 3.12,
+      "text": "channel i hope you guys are doing"
+    },
+    {
+      "start": 2.48,
+      "end": 6.72,
+      "duration": 4.24,
+      "text": "extremely well one more problem in the"
+    },
+    {
+      "start": 4.4,
+      "end": 8.72,
+      "duration": 4.32,
+      "text": "graph series which is the eventual save"
+    },
+    {
+      "start": 6.72,
+      "end": 10.24,
+      "duration": 3.52,
+      "text": "states what is the problem state the"
+    },
+    {
+      "start": 8.72,
+      "end": 13.68,
+      "duration": 4.96,
+      "text": "problem states are given a directed"
+    },
+    {
+      "start": 10.24,
+      "end": 16.4,
+      "duration": 6.16,
+      "text": "graph of v vertices and e edges and the"
+    },
+    {
+      "start": 13.68,
+      "end": 18.72,
+      "duration": 5.04,
+      "text": "graph is a zero based flexing graph a"
+    },
+    {
+      "start": 16.4,
+      "end": 21.12,
+      "duration": 4.72,
+      "text": "note is a terminal note if there are no"
+    },
+    {
+      "start": 18.72,
+      "end": 23.12,
+      "duration": 4.4,
+      "text": "outgoing edges so there should be"
+    },
+    {
+      "start": 21.12,
+      "end": 25.68,
+      "duration": 4.56,
+      "text": "incoming they might be incoming edges"
+    },
+    {
+      "start": 23.12,
+      "end": 27.6,
+      "duration": 4.48,
+      "text": "but there should be no outgoing edges"
+    },
+    {
+      "start": 25.68,
+      "end": 30.64,
+      "duration": 4.96,
+      "text": "then we call that node as a terminal"
+    },
+    {
+      "start": 27.6,
+      "end": 33.12,
+      "duration": 5.52,
+      "text": "node a node is a safe node if every"
+    },
+    {
+      "start": 30.64,
+      "end": 35.76,
+      "duration": 5.12,
+      "text": "possible very very important point if"
+    },
+    {
+      "start": 33.12,
+      "end": 40.32,
+      "duration": 7.2,
+      "text": "every possible path starting from that"
+    },
+    {
+      "start": 35.76,
+      "end": 41.84,
+      "duration": 6.08,
+      "text": "node leads to a terminal node okay now"
+    },
+    {
+      "start": 40.32,
+      "end": 43.84,
+      "duration": 3.52,
+      "text": "you need to return me an array"
+    },
+    {
+      "start": 41.84,
+      "end": 48.08,
+      "duration": 6.24,
+      "text": "containing all the safe nodes of the"
+    },
+    {
+      "start": 43.84,
+      "end": 51.2,
+      "duration": 7.36,
+      "text": "graph the answer should be sorted in a"
+    },
+    {
+      "start": 48.08,
+      "end": 53.92,
+      "duration": 5.84,
+      "text": "ascending order so what does"
+    },
+    {
+      "start": 51.2,
+      "end": 56.08,
+      "duration": 4.88,
+      "text": "the question state so this is the given"
+    },
+    {
+      "start": 53.92,
+      "end": 59.52,
+      "duration": 5.6,
+      "text": "example they're asking you"
+    },
+    {
+      "start": 56.08,
+      "end": 61.04,
+      "duration": 4.96,
+      "text": "out of this which are the c notes that's"
+    },
+    {
+      "start": 59.52,
+      "end": 63.92,
+      "duration": 4.4,
+      "text": "what you need to figure out what is the"
+    },
+    {
+      "start": 61.04,
+      "end": 67.2,
+      "duration": 6.16,
+      "text": "safe node every path very important"
+    },
+    {
+      "start": 63.92,
+      "end": 70.08,
+      "duration": 6.16,
+      "text": "every path ends up at a terminal node"
+    },
+    {
+      "start": 67.2,
+      "end": 72.96,
+      "duration": 5.76,
+      "text": "ends up at which node a terminal node"
+    },
+    {
+      "start": 70.08,
+      "end": 74.64,
+      "duration": 4.56,
+      "text": "what is a terminal node no outgoing"
+    },
+    {
+      "start": 72.96,
+      "end": 77.2,
+      "duration": 4.24,
+      "text": "edges or you can say"
+    },
+    {
+      "start": 74.64,
+      "end": 80.0,
+      "duration": 5.36,
+      "text": "out degree of that node is"
+    },
+    {
+      "start": 77.2,
+      "end": 82.24,
+      "duration": 5.04,
+      "text": "zero so in this video i'll be solving"
+    },
+    {
+      "start": 80.0,
+      "end": 84.32,
+      "duration": 4.32,
+      "text": "this using the cycle detection technique"
+    },
+    {
+      "start": 82.24,
+      "end": 86.48,
+      "duration": 4.24,
+      "text": "and the next video i'll be solving this"
+    },
+    {
+      "start": 84.32,
+      "end": 89.04,
+      "duration": 4.72,
+      "text": "using the bfs or the tuple sort"
+    },
+    {
+      "start": 86.48,
+      "end": 91.84,
+      "duration": 5.36,
+      "text": "technique so in this video you need to"
+    },
+    {
+      "start": 89.04,
+      "end": 94.4,
+      "duration": 5.36,
+      "text": "uh be knowing about cycle detection in"
+    },
+    {
+      "start": 91.84,
+      "end": 96.32,
+      "duration": 4.48,
+      "text": "an undirected graph if you haven't seen"
+    },
+    {
+      "start": 94.4,
+      "end": 97.6,
+      "duration": 3.2,
+      "text": "and you can go back like"
+    },
+    {
+      "start": 96.32,
+      "end": 99.28,
+      "duration": 2.96,
+      "text": "three or four videos in the series"
+    },
+    {
+      "start": 97.6,
+      "end": 101.92,
+      "duration": 4.32,
+      "text": "you'll get that video"
+    },
+    {
+      "start": 99.28,
+      "end": 102.8,
+      "duration": 3.52,
+      "text": "so out degree has to be zero so can i"
+    },
+    {
+      "start": 101.92,
+      "end": 105.52,
+      "duration": 3.6,
+      "text": "see"
+    },
+    {
+      "start": 102.8,
+      "end": 108.08,
+      "duration": 5.28,
+      "text": "this guy has one"
+    },
+    {
+      "start": 105.52,
+      "end": 110.72,
+      "duration": 5.2,
+      "text": "outgoing edge but this is definitely not"
+    },
+    {
+      "start": 108.08,
+      "end": 113.2,
+      "duration": 5.12,
+      "text": "a terminal node can i say this has no"
+    },
+    {
+      "start": 110.72,
+      "end": 115.2,
+      "duration": 4.48,
+      "text": "outgoing edge i can and can i say this"
+    },
+    {
+      "start": 113.2,
+      "end": 117.92,
+      "duration": 4.72,
+      "text": "is a terminal node for me"
+    },
+    {
+      "start": 115.2,
+      "end": 121.28,
+      "duration": 6.08,
+      "text": "i can so the first terminal node i can"
+    },
+    {
+      "start": 117.92,
+      "end": 123.68,
+      "duration": 5.76,
+      "text": "spot is six do you spot any other"
+    },
+    {
+      "start": 121.28,
+      "end": 124.56,
+      "duration": 3.28,
+      "text": "terminal nodes yes you do if you see"
+    },
+    {
+      "start": 123.68,
+      "end": 127.2,
+      "duration": 3.52,
+      "text": "five"
+    },
+    {
+      "start": 124.56,
+      "end": 129.84,
+      "duration": 5.28,
+      "text": "has incoming but no outgoing so i"
+    },
+    {
+      "start": 127.2,
+      "end": 132.24,
+      "duration": 5.04,
+      "text": "spotted one more terminal which is five"
+    },
+    {
+      "start": 129.84,
+      "end": 133.36,
+      "duration": 3.52,
+      "text": "do i spot any further terminal notes"
+    },
+    {
+      "start": 132.24,
+      "end": 135.28,
+      "duration": 3.04,
+      "text": "i do not"
+    },
+    {
+      "start": 133.36,
+      "end": 139.36,
+      "duration": 6.0,
+      "text": "i do not because everyone has an"
+    },
+    {
+      "start": 135.28,
+      "end": 141.6,
+      "duration": 6.32,
+      "text": "incoming and an outgoing edge as well so"
+    },
+    {
+      "start": 139.36,
+      "end": 142.96,
+      "duration": 3.6,
+      "text": "let's start with zero let's figure out"
+    },
+    {
+      "start": 141.6,
+      "end": 144.16,
+      "duration": 2.56,
+      "text": "the first part"
+    },
+    {
+      "start": 142.96,
+      "end": 146.08,
+      "duration": 3.12,
+      "text": "one"
+    },
+    {
+      "start": 144.16,
+      "end": 147.28,
+      "duration": 3.12,
+      "text": "three"
+    },
+    {
+      "start": 146.08,
+      "end": 148.0,
+      "duration": 1.92,
+      "text": "so"
+    },
+    {
+      "start": 147.28,
+      "end": 150.88,
+      "duration": 3.6,
+      "text": "it"
+    },
+    {
+      "start": 148.0,
+      "end": 154.0,
+      "duration": 6.0,
+      "text": "redirects me back to zero not toward any"
+    },
+    {
+      "start": 150.88,
+      "end": 156.88,
+      "duration": 6.0,
+      "text": "of the terminal nodes so zero cannot be"
+    },
+    {
+      "start": 154.0,
+      "end": 159.68,
+      "duration": 5.68,
+      "text": "a part or zero cannot be called a same"
+    },
+    {
+      "start": 156.88,
+      "end": 163.28,
+      "duration": 6.4,
+      "text": "note let's try out with one one goes to"
+    },
+    {
+      "start": 159.68,
+      "end": 167.04,
+      "duration": 7.36,
+      "text": "three three goes to zero zero comes back"
+    },
+    {
+      "start": 163.28,
+      "end": 169.44,
+      "duration": 6.16,
+      "text": "to one so the one can also not be part"
+    },
+    {
+      "start": 167.04,
+      "end": 172.24,
+      "duration": 5.2,
+      "text": "of a safe note because it comes back to"
+    },
+    {
+      "start": 169.44,
+      "end": 174.64,
+      "duration": 5.2,
+      "text": "himself or it doesn't like all the parts"
+    },
+    {
+      "start": 172.24,
+      "end": 176.8,
+      "duration": 4.56,
+      "text": "do not end up at the terminal node"
+    },
+    {
+      "start": 174.64,
+      "end": 178.64,
+      "duration": 4.0,
+      "text": "let's check out two two has only one"
+    },
+    {
+      "start": 176.8,
+      "end": 181.52,
+      "duration": 4.72,
+      "text": "path if a capital c two has only one"
+    },
+    {
+      "start": 178.64,
+      "end": 184.88,
+      "duration": 6.24,
+      "text": "path and that ends up at five two has"
+    },
+    {
+      "start": 181.52,
+      "end": 187.52,
+      "duration": 6.0,
+      "text": "only one path that ends up at five so"
+    },
+    {
+      "start": 184.88,
+      "end": 189.6,
+      "duration": 4.72,
+      "text": "can i see this yes can i see this that"
+    },
+    {
+      "start": 187.52,
+      "end": 191.76,
+      "duration": 4.24,
+      "text": "two is a same node i can definitely see"
+    },
+    {
+      "start": 189.6,
+      "end": 194.16,
+      "duration": 4.56,
+      "text": "that two is the same node so two is the"
+    },
+    {
+      "start": 191.76,
+      "end": 195.6,
+      "duration": 3.84,
+      "text": "same node let's check out the three"
+    },
+    {
+      "start": 194.16,
+      "end": 196.56,
+      "duration": 2.4,
+      "text": "three"
+    },
+    {
+      "start": 195.6,
+      "end": 198.48,
+      "duration": 2.88,
+      "text": "one of your"
+    },
+    {
+      "start": 196.56,
+      "end": 201.12,
+      "duration": 4.56,
+      "text": "paths is definitely ending up at the"
+    },
+    {
+      "start": 198.48,
+      "end": 203.28,
+      "duration": 4.8,
+      "text": "terminal notes but are all the paths"
+    },
+    {
+      "start": 201.12,
+      "end": 205.2,
+      "duration": 4.08,
+      "text": "let's check three has one more path like"
+    },
+    {
+      "start": 203.28,
+      "end": 208.0,
+      "duration": 4.72,
+      "text": "this like this"
+    },
+    {
+      "start": 205.2,
+      "end": 210.08,
+      "duration": 4.88,
+      "text": "and like this which ends up at the three"
+    },
+    {
+      "start": 208.0,
+      "end": 212.64,
+      "duration": 4.64,
+      "text": "himself so i can definitely say three"
+    },
+    {
+      "start": 210.08,
+      "end": 215.36,
+      "duration": 5.28,
+      "text": "cannot be a part of it can i have"
+    },
+    {
+      "start": 212.64,
+      "end": 218.16,
+      "duration": 5.52,
+      "text": "four as a part of it yes it does end up"
+    },
+    {
+      "start": 215.36,
+      "end": 221.6,
+      "duration": 6.24,
+      "text": "at a terminal node five so four can also"
+    },
+    {
+      "start": 218.16,
+      "end": 224.0,
+      "duration": 5.84,
+      "text": "be a part of my same node right let's"
+    },
+    {
+      "start": 221.6,
+      "end": 226.16,
+      "duration": 4.56,
+      "text": "check out for five five is himself a"
+    },
+    {
+      "start": 224.0,
+      "end": 228.8,
+      "duration": 4.8,
+      "text": "terminal node which means it's a safe"
+    },
+    {
+      "start": 226.16,
+      "end": 231.12,
+      "duration": 4.96,
+      "text": "node so five is a safe node let's check"
+    },
+    {
+      "start": 228.8,
+      "end": 233.28,
+      "duration": 4.48,
+      "text": "out for six itself a terminal node so"
+    },
+    {
+      "start": 231.12,
+      "end": 235.44,
+      "duration": 4.32,
+      "text": "our safe node so i can say this is the"
+    },
+    {
+      "start": 233.28,
+      "end": 237.76,
+      "duration": 4.48,
+      "text": "array in the sorting order which you"
+    },
+    {
+      "start": 235.44,
+      "end": 239.44,
+      "duration": 4.0,
+      "text": "have to return as an answer so you have"
+    },
+    {
+      "start": 237.76,
+      "end": 242.24,
+      "duration": 4.48,
+      "text": "to figure out all the parts"
+    },
+    {
+      "start": 239.44,
+      "end": 244.64,
+      "duration": 5.2,
+      "text": "and if all of the parts like end up at a"
+    },
+    {
+      "start": 242.24,
+      "end": 248.0,
+      "duration": 5.76,
+      "text": "terminal node then you say that okay"
+    },
+    {
+      "start": 244.64,
+      "end": 249.92,
+      "duration": 5.28,
+      "text": "that guy is definitely a safe node so"
+    },
+    {
+      "start": 248.0,
+      "end": 253.12,
+      "duration": 5.12,
+      "text": "the question is very straightforward"
+    },
+    {
+      "start": 249.92,
+      "end": 255.28,
+      "duration": 5.36,
+      "text": "give me all the safe nodes present in a"
+    },
+    {
+      "start": 253.12,
+      "end": 257.04,
+      "duration": 3.92,
+      "text": "graph so do you remember the cycle"
+    },
+    {
+      "start": 255.28,
+      "end": 259.52,
+      "duration": 4.24,
+      "text": "detection technique where we detected a"
+    },
+    {
+      "start": 257.04,
+      "end": 261.68,
+      "duration": 4.64,
+      "text": "cycle so can i see"
+    },
+    {
+      "start": 259.52,
+      "end": 263.92,
+      "duration": 4.4,
+      "text": "by observing this particular example we"
+    },
+    {
+      "start": 261.68,
+      "end": 266.0,
+      "duration": 4.32,
+      "text": "did figure out that all the possible"
+    },
+    {
+      "start": 263.92,
+      "end": 266.88,
+      "duration": 2.96,
+      "text": "paths are going to end up somewhere but"
+    },
+    {
+      "start": 266.0,
+      "end": 269.12,
+      "duration": 3.12,
+      "text": "if they"
+    },
+    {
+      "start": 266.88,
+      "end": 272.08,
+      "duration": 5.2,
+      "text": "return back to themselves if they return"
+    },
+    {
+      "start": 269.12,
+      "end": 273.2,
+      "duration": 4.08,
+      "text": "back to themselves like there's one"
+    },
+    {
+      "start": 272.08,
+      "end": 274.08,
+      "duration": 2.0,
+      "text": "three"
+    },
+    {
+      "start": 273.2,
+      "end": 275.84,
+      "duration": 2.64,
+      "text": "zero"
+    },
+    {
+      "start": 274.08,
+      "end": 277.68,
+      "duration": 3.6,
+      "text": "right these three"
+    },
+    {
+      "start": 275.84,
+      "end": 279.44,
+      "duration": 3.6,
+      "text": "we have the part of the cycle"
+    },
+    {
+      "start": 277.68,
+      "end": 281.76,
+      "duration": 4.08,
+      "text": "and they can never be safe"
+    },
+    {
+      "start": 279.44,
+      "end": 284.48,
+      "duration": 5.04,
+      "text": "something to observe anyone who's a part"
+    },
+    {
+      "start": 281.76,
+      "end": 288.48,
+      "duration": 6.72,
+      "text": "of the cycle can never be a"
+    },
+    {
+      "start": 284.48,
+      "end": 291.6,
+      "duration": 7.12,
+      "text": "safe node so imagine if i have a 7 which"
+    },
+    {
+      "start": 288.48,
+      "end": 294.88,
+      "duration": 6.4,
+      "text": "is pointing to 1 will 7 be a safe node"
+    },
+    {
+      "start": 291.6,
+      "end": 298.24,
+      "duration": 6.64,
+      "text": "no why because 7 can have a path through"
+    },
+    {
+      "start": 294.88,
+      "end": 301.12,
+      "duration": 6.24,
+      "text": "the same cycle and end back at"
+    },
+    {
+      "start": 298.24,
+      "end": 303.12,
+      "duration": 4.88,
+      "text": "not a safe node or not a terminal node"
+    },
+    {
+      "start": 301.12,
+      "end": 305.28,
+      "duration": 4.16,
+      "text": "so what you can say is"
+    },
+    {
+      "start": 303.12,
+      "end": 307.28,
+      "duration": 4.16,
+      "text": "everyone who's a part of the cycle to"
+    },
+    {
+      "start": 305.28,
+      "end": 308.56,
+      "duration": 3.28,
+      "text": "carefully observe everyone who's a part"
+    },
+    {
+      "start": 307.28,
+      "end": 310.16,
+      "duration": 2.88,
+      "text": "of the cycle"
+    },
+    {
+      "start": 308.56,
+      "end": 312.4,
+      "duration": 3.84,
+      "text": "have everyone who's connected to the"
+    },
+    {
+      "start": 310.16,
+      "end": 314.24,
+      "duration": 4.08,
+      "text": "cycle you can say everyone is a part of"
+    },
+    {
+      "start": 312.4,
+      "end": 316.48,
+      "duration": 4.08,
+      "text": "the cycle and everyone has a connected"
+    },
+    {
+      "start": 314.24,
+      "end": 318.08,
+      "duration": 3.84,
+      "text": "to the cycle will never be safe notes"
+    },
+    {
+      "start": 316.48,
+      "end": 320.96,
+      "duration": 4.48,
+      "text": "and if you look at this"
+    },
+    {
+      "start": 318.08,
+      "end": 323.36,
+      "duration": 5.28,
+      "text": "this is not having any incoming edges to"
+    },
+    {
+      "start": 320.96,
+      "end": 325.12,
+      "duration": 4.16,
+      "text": "the cycle no incoming edges to the cycle"
+    },
+    {
+      "start": 323.36,
+      "end": 327.84,
+      "duration": 4.48,
+      "text": "thereby it will always end up at"
+    },
+    {
+      "start": 325.12,
+      "end": 330.72,
+      "duration": 5.6,
+      "text": "terminal nodes if there is a cycle and"
+    },
+    {
+      "start": 327.84,
+      "end": 333.44,
+      "duration": 5.6,
+      "text": "anyone who is connected to that incoming"
+    },
+    {
+      "start": 330.72,
+      "end": 335.76,
+      "duration": 5.04,
+      "text": "edges so it will turn back on that stuff"
+    },
+    {
+      "start": 333.44,
+      "end": 337.76,
+      "duration": 4.32,
+      "text": "so you cannot end up at a terminal node"
+    },
+    {
+      "start": 335.76,
+      "end": 338.96,
+      "duration": 3.2,
+      "text": "so a slight observation we have noticed"
+    },
+    {
+      "start": 337.76,
+      "end": 341.36,
+      "duration": 3.6,
+      "text": "is"
+    },
+    {
+      "start": 338.96,
+      "end": 345.44,
+      "duration": 6.48,
+      "text": "anyone who's a part of the cycle"
+    },
+    {
+      "start": 341.36,
+      "end": 347.6,
+      "duration": 6.24,
+      "text": "anyone who is a part of the cycle"
+    },
+    {
+      "start": 345.44,
+      "end": 348.56,
+      "duration": 3.12,
+      "text": "cannot be a safe note"
+    },
+    {
+      "start": 347.6,
+      "end": 352.0,
+      "duration": 4.4,
+      "text": "and"
+    },
+    {
+      "start": 348.56,
+      "end": 352.96,
+      "duration": 4.4,
+      "text": "anyone that leads to a cycle anyone that"
+    },
+    {
+      "start": 352.0,
+      "end": 354.56,
+      "duration": 2.56,
+      "text": "leads"
+    },
+    {
+      "start": 352.96,
+      "end": 357.84,
+      "duration": 4.88,
+      "text": "to a cycle"
+    },
+    {
+      "start": 354.56,
+      "end": 360.0,
+      "duration": 5.44,
+      "text": "cannot be so i have figured out two ways"
+    },
+    {
+      "start": 357.84,
+      "end": 362.56,
+      "duration": 4.72,
+      "text": "apart from them everyone else can be"
+    },
+    {
+      "start": 360.0,
+      "end": 363.36,
+      "duration": 3.36,
+      "text": "asleep i can definitely say that right"
+    },
+    {
+      "start": 362.56,
+      "end": 365.6,
+      "duration": 3.04,
+      "text": "so"
+    },
+    {
+      "start": 363.36,
+      "end": 367.44,
+      "duration": 4.08,
+      "text": "the whole problem can be easily solved"
+    },
+    {
+      "start": 365.6,
+      "end": 370.4,
+      "duration": 4.8,
+      "text": "by figuring out"
+    },
+    {
+      "start": 367.44,
+      "end": 372.72,
+      "duration": 5.28,
+      "text": "which guys are a part of a cycle and and"
+    },
+    {
+      "start": 370.4,
+      "end": 374.56,
+      "duration": 4.16,
+      "text": "which guys are incoming to the cycle"
+    },
+    {
+      "start": 372.72,
+      "end": 376.48,
+      "duration": 3.76,
+      "text": "that is what we need to figure out once"
+    },
+    {
+      "start": 374.56,
+      "end": 378.32,
+      "duration": 3.76,
+      "text": "you figure that out i think we should be"
+    },
+    {
+      "start": 376.48,
+      "end": 381.68,
+      "duration": 5.2,
+      "text": "able to solve this problem very very"
+    },
+    {
+      "start": 378.32,
+      "end": 383.76,
+      "duration": 5.44,
+      "text": "easily so now you know both the points"
+    },
+    {
+      "start": 381.68,
+      "end": 386.48,
+      "duration": 4.8,
+      "text": "right so we have already learned how to"
+    },
+    {
+      "start": 383.76,
+      "end": 387.28,
+      "duration": 3.52,
+      "text": "detect a cycle using the dfs technique"
+    },
+    {
+      "start": 386.48,
+      "end": 388.64,
+      "duration": 2.16,
+      "text": "and"
+    },
+    {
+      "start": 387.28,
+      "end": 390.48,
+      "duration": 3.2,
+      "text": "if you do not know please go back and"
+    },
+    {
+      "start": 388.64,
+      "end": 394.0,
+      "duration": 5.36,
+      "text": "watch it and over there we used couple"
+    },
+    {
+      "start": 390.48,
+      "end": 396.4,
+      "duration": 5.92,
+      "text": "of arrays one is the visited and one is"
+    },
+    {
+      "start": 394.0,
+      "end": 399.2,
+      "duration": 5.2,
+      "text": "the path visited right that is what we"
+    },
+    {
+      "start": 396.4,
+      "end": 401.12,
+      "duration": 4.72,
+      "text": "used so we're going to do the same thing"
+    },
+    {
+      "start": 399.2,
+      "end": 403.52,
+      "duration": 4.32,
+      "text": "and we will run the same thing on this"
+    },
+    {
+      "start": 401.12,
+      "end": 406.24,
+      "duration": 5.12,
+      "text": "particular algorithm and we will see how"
+    },
+    {
+      "start": 403.52,
+      "end": 408.64,
+      "duration": 5.12,
+      "text": "can we figure out which is a cycle"
+    },
+    {
+      "start": 406.24,
+      "end": 410.72,
+      "duration": 4.48,
+      "text": "and which nodes are approaching the"
+    },
+    {
+      "start": 408.64,
+      "end": 412.48,
+      "duration": 3.84,
+      "text": "cycle so we've learned cycle detection"
+    },
+    {
+      "start": 410.72,
+      "end": 414.4,
+      "duration": 3.68,
+      "text": "in the previous videos right and over"
+    },
+    {
+      "start": 412.48,
+      "end": 416.48,
+      "duration": 4.0,
+      "text": "there we used couple of concepts one is"
+    },
+    {
+      "start": 414.4,
+      "end": 418.64,
+      "duration": 4.24,
+      "text": "the visitor and the other one is the"
+    },
+    {
+      "start": 416.48,
+      "end": 420.56,
+      "duration": 4.08,
+      "text": "path visited now over here we are going"
+    },
+    {
+      "start": 418.64,
+      "end": 423.68,
+      "duration": 5.04,
+      "text": "to apply the same concept and we are"
+    },
+    {
+      "start": 420.56,
+      "end": 425.84,
+      "duration": 5.28,
+      "text": "going to determine which are the same"
+    },
+    {
+      "start": 423.68,
+      "end": 427.36,
+      "duration": 3.68,
+      "text": "nodes so as of now for this particular"
+    },
+    {
+      "start": 425.84,
+      "end": 429.68,
+      "duration": 3.84,
+      "text": "graph what you can do is you can draw"
+    },
+    {
+      "start": 427.36,
+      "end": 431.52,
+      "duration": 4.16,
+      "text": "the corresponding adjacency list so this"
+    },
+    {
+      "start": 429.68,
+      "end": 433.44,
+      "duration": 3.76,
+      "text": "is how the corresponding adjacency list"
+    },
+    {
+      "start": 431.52,
+      "end": 435.52,
+      "duration": 4.0,
+      "text": "will look for this particular graph so"
+    },
+    {
+      "start": 433.44,
+      "end": 437.04,
+      "duration": 3.6,
+      "text": "what we will do is if you remember we"
+    },
+    {
+      "start": 435.52,
+      "end": 439.04,
+      "duration": 3.52,
+      "text": "had couple of"
+    },
+    {
+      "start": 437.04,
+      "end": 441.44,
+      "duration": 4.4,
+      "text": "visited arrays so we will create both"
+    },
+    {
+      "start": 439.04,
+      "end": 443.92,
+      "duration": 4.88,
+      "text": "the visited arrays and assign them with"
+    },
+    {
+      "start": 441.44,
+      "end": 445.76,
+      "duration": 4.32,
+      "text": "zero so let's create both both of them"
+    },
+    {
+      "start": 443.92,
+      "end": 448.16,
+      "duration": 4.24,
+      "text": "okay so as of now what i've done is i've"
+    },
+    {
+      "start": 445.76,
+      "end": 450.48,
+      "duration": 4.72,
+      "text": "created the adjacency list as well as"
+    },
+    {
+      "start": 448.16,
+      "end": 452.56,
+      "duration": 4.4,
+      "text": "i've made the visited array and the path"
+    },
+    {
+      "start": 450.48,
+      "end": 455.12,
+      "duration": 4.64,
+      "text": "visited array as well so remember all of"
+    },
+    {
+      "start": 452.56,
+      "end": 457.68,
+      "duration": 5.12,
+      "text": "these are assigned with zeros so let's"
+    },
+    {
+      "start": 455.12,
+      "end": 459.84,
+      "duration": 4.72,
+      "text": "start the dfs calls again since this can"
+    },
+    {
+      "start": 457.68,
+      "end": 462.24,
+      "duration": 4.56,
+      "text": "have multiple components we will start"
+    },
+    {
+      "start": 459.84,
+      "end": 464.96,
+      "duration": 5.12,
+      "text": "the dfs in the standard way where we"
+    },
+    {
+      "start": 462.24,
+      "end": 467.28,
+      "duration": 5.04,
+      "text": "write i equal to 0 and then go for v"
+    },
+    {
+      "start": 464.96,
+      "end": 469.44,
+      "duration": 4.48,
+      "text": "and then we say not visited"
+    },
+    {
+      "start": 467.28,
+      "end": 472.0,
+      "duration": 4.72,
+      "text": "then we call the dfs remember this so"
+    },
+    {
+      "start": 469.44,
+      "end": 473.84,
+      "duration": 4.4,
+      "text": "that's what we will do the very basic"
+    },
+    {
+      "start": 472.0,
+      "end": 475.84,
+      "duration": 3.84,
+      "text": "standard way if there are multiple"
+    },
+    {
+      "start": 473.84,
+      "end": 478.64,
+      "duration": 4.8,
+      "text": "components so which is the first one it"
+    },
+    {
+      "start": 475.84,
+      "end": 480.88,
+      "duration": 5.04,
+      "text": "will go from zero so let's start from"
+    },
+    {
+      "start": 478.64,
+      "end": 483.12,
+      "duration": 4.48,
+      "text": "zero so starting from zero this is where"
+    },
+    {
+      "start": 480.88,
+      "end": 485.2,
+      "duration": 4.32,
+      "text": "we are so we will start the defense call"
+    },
+    {
+      "start": 483.12,
+      "end": 487.44,
+      "duration": 4.32,
+      "text": "from zero so let's start the call from"
+    },
+    {
+      "start": 485.2,
+      "end": 490.0,
+      "duration": 4.8,
+      "text": "zero the moment you are at zero what you"
+    },
+    {
+      "start": 487.44,
+      "end": 493.12,
+      "duration": 5.68,
+      "text": "will say is okay hey listen"
+    },
+    {
+      "start": 490.0,
+      "end": 496.08,
+      "duration": 6.08,
+      "text": "until this call gets completed"
+    },
+    {
+      "start": 493.12,
+      "end": 498.24,
+      "duration": 5.12,
+      "text": "until this call gets completed then only"
+    },
+    {
+      "start": 496.08,
+      "end": 499.12,
+      "duration": 3.04,
+      "text": "i'll call it as a safe note and if this"
+    },
+    {
+      "start": 498.24,
+      "end": 501.44,
+      "duration": 3.2,
+      "text": "call"
+    },
+    {
+      "start": 499.12,
+      "end": 503.28,
+      "duration": 4.16,
+      "text": "gets a cycle anywhere"
+    },
+    {
+      "start": 501.44,
+      "end": 504.08,
+      "duration": 2.64,
+      "text": "anywhere in the path i will not call"
+    },
+    {
+      "start": 503.28,
+      "end": 506.64,
+      "duration": 3.36,
+      "text": "this"
+    },
+    {
+      "start": 504.08,
+      "end": 508.96,
+      "duration": 4.88,
+      "text": "as a safe note got it so let's start so"
+    },
+    {
+      "start": 506.64,
+      "end": 511.68,
+      "duration": 5.04,
+      "text": "the office of zeo says hey listen i am"
+    },
+    {
+      "start": 508.96,
+      "end": 514.8,
+      "duration": 5.84,
+      "text": "visited and paths visited as well i am"
+    },
+    {
+      "start": 511.68,
+      "end": 518.0,
+      "duration": 6.32,
+      "text": "visited and i'm path visited as well"
+    },
+    {
+      "start": 514.8,
+      "end": 520.56,
+      "duration": 5.76,
+      "text": "done next it goes to the adjacent which"
+    },
+    {
+      "start": 518.0,
+      "end": 522.72,
+      "duration": 4.72,
+      "text": "is dfs of one right this is the adjacent"
+    },
+    {
+      "start": 520.56,
+      "end": 526.24,
+      "duration": 5.68,
+      "text": "node this is the adjacent node goes to"
+    },
+    {
+      "start": 522.72,
+      "end": 528.88,
+      "duration": 6.16,
+      "text": "it and as of now says visited and path"
+    },
+    {
+      "start": 526.24,
+      "end": 531.6,
+      "duration": 5.36,
+      "text": "visited one will now go to"
+    },
+    {
+      "start": 528.88,
+      "end": 534.56,
+      "duration": 5.68,
+      "text": "two and when it goes to two it says"
+    },
+    {
+      "start": 531.6,
+      "end": 537.12,
+      "duration": 5.52,
+      "text": "visited and path visited two will now go"
+    },
+    {
+      "start": 534.56,
+      "end": 539.28,
+      "duration": 4.72,
+      "text": "to three so when it goes to three it"
+    },
+    {
+      "start": 537.12,
+      "end": 541.36,
+      "duration": 4.24,
+      "text": "again says it has visited and path"
+    },
+    {
+      "start": 539.28,
+      "end": 543.52,
+      "duration": 4.24,
+      "text": "visited remember this"
+    },
+    {
+      "start": 541.36,
+      "end": 546.48,
+      "duration": 5.12,
+      "text": "starts from here goes here goes here and"
+    },
+    {
+      "start": 543.52,
+      "end": 548.64,
+      "duration": 5.12,
+      "text": "it has two options either it can from"
+    },
+    {
+      "start": 546.48,
+      "end": 551.12,
+      "duration": 4.64,
+      "text": "three it has two options either it can"
+    },
+    {
+      "start": 548.64,
+      "end": 553.04,
+      "duration": 4.4,
+      "text": "go to five either it can go to four so"
+    },
+    {
+      "start": 551.12,
+      "end": 555.36,
+      "duration": 4.24,
+      "text": "three goes and checks who's the first in"
+    },
+    {
+      "start": 553.04,
+      "end": 558.48,
+      "duration": 5.44,
+      "text": "the adjacency list so the first it finds"
+    },
+    {
+      "start": 555.36,
+      "end": 560.72,
+      "duration": 5.36,
+      "text": "is four so it'll go to four remember"
+    },
+    {
+      "start": 558.48,
+      "end": 562.8,
+      "duration": 4.32,
+      "text": "this it'll go to four and then it'll"
+    },
+    {
+      "start": 560.72,
+      "end": 564.96,
+      "duration": 4.24,
+      "text": "come back and probably go to five but"
+    },
+    {
+      "start": 562.8,
+      "end": 567.12,
+      "duration": 4.32,
+      "text": "that will be done in the later stage"
+    },
+    {
+      "start": 564.96,
+      "end": 569.6,
+      "duration": 4.64,
+      "text": "when the recursion is complete"
+    },
+    {
+      "start": 567.12,
+      "end": 570.48,
+      "duration": 3.36,
+      "text": "percussion classes guys so december ah"
+    },
+    {
+      "start": 569.6,
+      "end": 574.16,
+      "duration": 4.56,
+      "text": "sorry"
+    },
+    {
+      "start": 570.48,
+      "end": 577.52,
+      "duration": 7.04,
+      "text": "dfs three two dfs four so we will go for"
+    },
+    {
+      "start": 574.16,
+      "end": 578.88,
+      "duration": 4.72,
+      "text": "four who is visited path visited as well"
+    },
+    {
+      "start": 577.52,
+      "end": 581.28,
+      "duration": 3.76,
+      "text": "next"
+    },
+    {
+      "start": 578.88,
+      "end": 584.24,
+      "duration": 5.36,
+      "text": "four will go to home for will go to six"
+    },
+    {
+      "start": 581.28,
+      "end": 586.88,
+      "duration": 5.6,
+      "text": "let's go to six dfs of six again it will"
+    },
+    {
+      "start": 584.24,
+      "end": 589.44,
+      "duration": 5.2,
+      "text": "mark six as visited and"
+    },
+    {
+      "start": 586.88,
+      "end": 591.52,
+      "duration": 4.64,
+      "text": "path visited as well now six"
+    },
+    {
+      "start": 589.44,
+      "end": 593.12,
+      "duration": 3.68,
+      "text": "it's a very important point six is"
+    },
+    {
+      "start": 591.52,
+      "end": 596.4,
+      "duration": 4.88,
+      "text": "pointing to seven"
+    },
+    {
+      "start": 593.12,
+      "end": 599.76,
+      "duration": 6.64,
+      "text": "six is pointing to seven so it will call"
+    },
+    {
+      "start": 596.4,
+      "end": 603.2,
+      "duration": 6.8,
+      "text": "for seven it will call for seven and it"
+    },
+    {
+      "start": 599.76,
+      "end": 605.92,
+      "duration": 6.16,
+      "text": "will mark it as visited and path visited"
+    },
+    {
+      "start": 603.2,
+      "end": 609.04,
+      "duration": 5.84,
+      "text": "visited and path visited now when you go"
+    },
+    {
+      "start": 605.92,
+      "end": 611.2,
+      "duration": 5.28,
+      "text": "to seven it states hey"
+    },
+    {
+      "start": 609.04,
+      "end": 613.76,
+      "duration": 4.72,
+      "text": "i do not have anyone i do not have"
+    },
+    {
+      "start": 611.2,
+      "end": 615.76,
+      "duration": 4.56,
+      "text": "anyone to further call dfs so i'm like"
+    },
+    {
+      "start": 613.76,
+      "end": 618.0,
+      "duration": 4.24,
+      "text": "did i get a cycle no"
+    },
+    {
+      "start": 615.76,
+      "end": 619.76,
+      "duration": 4.0,
+      "text": "we actually reached an end we started"
+    },
+    {
+      "start": 618.0,
+      "end": 622.96,
+      "duration": 4.96,
+      "text": "our journey from here"
+    },
+    {
+      "start": 619.76,
+      "end": 624.0,
+      "duration": 4.24,
+      "text": "and we reached and can i say every node"
+    },
+    {
+      "start": 622.96,
+      "end": 625.68,
+      "duration": 2.72,
+      "text": "in this"
+    },
+    {
+      "start": 624.0,
+      "end": 628.0,
+      "duration": 4.0,
+      "text": "is a safe mode"
+    },
+    {
+      "start": 625.68,
+      "end": 630.0,
+      "duration": 4.32,
+      "text": "because you started a journey but wait"
+    },
+    {
+      "start": 628.0,
+      "end": 632.48,
+      "duration": 4.48,
+      "text": "there's one more part to be checked"
+    },
+    {
+      "start": 630.0,
+      "end": 635.04,
+      "duration": 5.04,
+      "text": "fine we'll check it afterwards but as of"
+    },
+    {
+      "start": 632.48,
+      "end": 637.2,
+      "duration": 4.72,
+      "text": "now can i say from six there's one"
+    },
+    {
+      "start": 635.04,
+      "end": 638.72,
+      "duration": 3.68,
+      "text": "outgoing edge which ends at seven and"
+    },
+    {
+      "start": 637.2,
+      "end": 641.44,
+      "duration": 4.24,
+      "text": "seven is the terminal node where i'm"
+    },
+    {
+      "start": 638.72,
+      "end": 644.72,
+      "duration": 6.0,
+      "text": "standing at so from seven there cannot"
+    },
+    {
+      "start": 641.44,
+      "end": 645.6,
+      "duration": 4.16,
+      "text": "be any further dfs call so kinesis seven"
+    },
+    {
+      "start": 644.72,
+      "end": 649.36,
+      "duration": 4.64,
+      "text": "is"
+    },
+    {
+      "start": 645.6,
+      "end": 651.68,
+      "duration": 6.08,
+      "text": "definitely 7 is definitely a"
+    },
+    {
+      "start": 649.36,
+      "end": 654.48,
+      "duration": 5.12,
+      "text": "safe note i can say it's a terminal so"
+    },
+    {
+      "start": 651.68,
+      "end": 655.84,
+      "duration": 4.16,
+      "text": "what i'll do is i'll just mark 7 you can"
+    },
+    {
+      "start": 654.48,
+      "end": 658.88,
+      "duration": 4.4,
+      "text": "use any"
+    },
+    {
+      "start": 655.84,
+      "end": 661.36,
+      "duration": 5.52,
+      "text": "map or a third array to just keep a mark"
+    },
+    {
+      "start": 658.88,
+      "end": 663.76,
+      "duration": 4.88,
+      "text": "which is a check so i say everything for"
+    },
+    {
+      "start": 661.36,
+      "end": 666.56,
+      "duration": 5.2,
+      "text": "seven is done no for the dfs calls so"
+    },
+    {
+      "start": 663.76,
+      "end": 668.24,
+      "duration": 4.48,
+      "text": "this is a safe note marked it as true"
+    },
+    {
+      "start": 666.56,
+      "end": 670.24,
+      "duration": 3.68,
+      "text": "right what's the next thing that we will"
+    },
+    {
+      "start": 668.24,
+      "end": 671.52,
+      "duration": 3.28,
+      "text": "do what we will do is okay we've marked"
+    },
+    {
+      "start": 670.24,
+      "end": 674.24,
+      "duration": 4.0,
+      "text": "it as two"
+    },
+    {
+      "start": 671.52,
+      "end": 675.36,
+      "duration": 3.84,
+      "text": "next we come back so let's come back now"
+    },
+    {
+      "start": 674.24,
+      "end": 678.4,
+      "duration": 4.16,
+      "text": "six scenes"
+    },
+    {
+      "start": 675.36,
+      "end": 680.64,
+      "duration": 5.28,
+      "text": "i had a call for seven and i ended i do"
+    },
+    {
+      "start": 678.4,
+      "end": 682.72,
+      "duration": 4.32,
+      "text": "not have any further calls why six only"
+    },
+    {
+      "start": 680.64,
+      "end": 685.2,
+      "duration": 4.56,
+      "text": "had seven to go"
+    },
+    {
+      "start": 682.72,
+      "end": 686.24,
+      "duration": 3.52,
+      "text": "fine dfs is over for six go for the"
+    },
+    {
+      "start": 685.2,
+      "end": 688.8,
+      "duration": 3.6,
+      "text": "calls"
+    },
+    {
+      "start": 686.24,
+      "end": 690.96,
+      "duration": 4.72,
+      "text": "this guy is also a safe node"
+    },
+    {
+      "start": 688.8,
+      "end": 693.2,
+      "duration": 4.4,
+      "text": "this guy is also safe not market and"
+    },
+    {
+      "start": 690.96,
+      "end": 694.88,
+      "duration": 3.92,
+      "text": "remember when you are returning the path"
+    },
+    {
+      "start": 693.2,
+      "end": 697.52,
+      "duration": 4.32,
+      "text": "visit will go as zero the path because"
+    },
+    {
+      "start": 694.88,
+      "end": 699.52,
+      "duration": 4.64,
+      "text": "it will go zero so not return before the"
+    },
+    {
+      "start": 697.52,
+      "end": 700.48,
+      "duration": 2.96,
+      "text": "four things i do not have any further"
+    },
+    {
+      "start": 699.52,
+      "end": 702.16,
+      "duration": 2.64,
+      "text": "calls"
+    },
+    {
+      "start": 700.48,
+      "end": 704.96,
+      "duration": 4.48,
+      "text": "i just had four six and i did it i'm"
+    },
+    {
+      "start": 702.16,
+      "end": 706.56,
+      "duration": 4.4,
+      "text": "back or doesn't have any dfs calls four"
+    },
+    {
+      "start": 704.96,
+      "end": 709.52,
+      "duration": 4.56,
+      "text": "is also a safe node"
+    },
+    {
+      "start": 706.56,
+      "end": 711.76,
+      "duration": 5.2,
+      "text": "so mark it as true oh why am i going up"
+    },
+    {
+      "start": 709.52,
+      "end": 714.24,
+      "duration": 4.72,
+      "text": "mark it as true"
+    },
+    {
+      "start": 711.76,
+      "end": 715.92,
+      "duration": 4.16,
+      "text": "and at the same time make sure force"
+    },
+    {
+      "start": 714.24,
+      "end": 716.96,
+      "duration": 2.72,
+      "text": "path visit is done because four will now"
+    },
+    {
+      "start": 715.92,
+      "end": 718.72,
+      "duration": 2.8,
+      "text": "go back"
+    },
+    {
+      "start": 716.96,
+      "end": 721.68,
+      "duration": 4.72,
+      "text": "so now three"
+    },
+    {
+      "start": 718.72,
+      "end": 724.24,
+      "duration": 5.52,
+      "text": "which went cannot call it as a silk node"
+    },
+    {
+      "start": 721.68,
+      "end": 726.08,
+      "duration": 4.4,
+      "text": "cannot call it as a safe node as of now"
+    },
+    {
+      "start": 724.24,
+      "end": 727.68,
+      "duration": 3.44,
+      "text": "why because there's one more path which"
+    },
+    {
+      "start": 726.08,
+      "end": 729.84,
+      "duration": 3.76,
+      "text": "he has to explore"
+    },
+    {
+      "start": 727.68,
+      "end": 732.4,
+      "duration": 4.72,
+      "text": "what does sep uh what the safe node"
+    },
+    {
+      "start": 729.84,
+      "end": 735.2,
+      "duration": 5.36,
+      "text": "means all the parts should end up at"
+    },
+    {
+      "start": 732.4,
+      "end": 737.52,
+      "duration": 5.12,
+      "text": "terminal node over here three states one"
+    },
+    {
+      "start": 735.2,
+      "end": 739.68,
+      "duration": 4.48,
+      "text": "path ends at a terminal node i have one"
+    },
+    {
+      "start": 737.52,
+      "end": 741.44,
+      "duration": 3.92,
+      "text": "more part to figure out does it end at a"
+    },
+    {
+      "start": 739.68,
+      "end": 743.2,
+      "duration": 3.52,
+      "text": "terminal node i have to figure that out"
+    },
+    {
+      "start": 741.44,
+      "end": 745.76,
+      "duration": 4.32,
+      "text": "right so that is what we're gonna do"
+    },
+    {
+      "start": 743.2,
+      "end": 747.84,
+      "duration": 4.64,
+      "text": "we'll start from six now sorry five no"
+    },
+    {
+      "start": 745.76,
+      "end": 751.6,
+      "duration": 5.84,
+      "text": "so we'll go to five and we'll see path"
+    },
+    {
+      "start": 747.84,
+      "end": 752.48,
+      "duration": 4.64,
+      "text": "visited path visited now five goes to"
+    },
+    {
+      "start": 751.6,
+      "end": 755.76,
+      "duration": 4.16,
+      "text": "six"
+    },
+    {
+      "start": 752.48,
+      "end": 758.56,
+      "duration": 6.08,
+      "text": "five goes to six because fives next node"
+    },
+    {
+      "start": 755.76,
+      "end": 760.4,
+      "duration": 4.64,
+      "text": "is six but the moment you go to six you"
+    },
+    {
+      "start": 758.56,
+      "end": 761.52,
+      "duration": 2.96,
+      "text": "actually say hey"
+    },
+    {
+      "start": 760.4,
+      "end": 762.64,
+      "duration": 2.24,
+      "text": "wait"
+    },
+    {
+      "start": 761.52,
+      "end": 764.88,
+      "duration": 3.36,
+      "text": "wait"
+    },
+    {
+      "start": 762.64,
+      "end": 767.28,
+      "duration": 4.64,
+      "text": "six is already visited six is already"
+    },
+    {
+      "start": 764.88,
+      "end": 770.0,
+      "duration": 5.12,
+      "text": "visited it got visited in this this"
+    },
+    {
+      "start": 767.28,
+      "end": 772.08,
+      "duration": 4.8,
+      "text": "direction and if six is already visited"
+    },
+    {
+      "start": 770.0,
+      "end": 775.2,
+      "duration": 5.2,
+      "text": "and i did not get any cycle i did not"
+    },
+    {
+      "start": 772.08,
+      "end": 777.44,
+      "duration": 5.36,
+      "text": "get any cycle six is visited but six is"
+    },
+    {
+      "start": 775.2,
+      "end": 779.6,
+      "duration": 4.4,
+      "text": "not path visited it's not in the same"
+    },
+    {
+      "start": 777.44,
+      "end": 781.84,
+      "duration": 4.4,
+      "text": "path it went in this part now it's just"
+    },
+    {
+      "start": 779.6,
+      "end": 783.68,
+      "duration": 4.08,
+      "text": "other path it's not in the same path"
+    },
+    {
+      "start": 781.84,
+      "end": 784.84,
+      "duration": 3.0,
+      "text": "it's definitely not a cycle"
+    },
+    {
+      "start": 783.68,
+      "end": 787.84,
+      "duration": 4.16,
+      "text": "and if"
+    },
+    {
+      "start": 784.84,
+      "end": 790.16,
+      "duration": 5.32,
+      "text": "six has been checked and we did not get"
+    },
+    {
+      "start": 787.84,
+      "end": 792.08,
+      "duration": 4.24,
+      "text": "a cycle i will no more go and check for"
+    },
+    {
+      "start": 790.16,
+      "end": 793.76,
+      "duration": 3.6,
+      "text": "six i'll no more go and check for six"
+    },
+    {
+      "start": 792.08,
+      "end": 795.36,
+      "duration": 3.28,
+      "text": "and i'll be like fine i don't need to"
+    },
+    {
+      "start": 793.76,
+      "end": 796.88,
+      "duration": 3.12,
+      "text": "check for six"
+    },
+    {
+      "start": 795.36,
+      "end": 799.04,
+      "duration": 3.68,
+      "text": "so i don't need to do"
+    },
+    {
+      "start": 796.88,
+      "end": 801.04,
+      "duration": 4.16,
+      "text": "a call because six has already been"
+    },
+    {
+      "start": 799.04,
+      "end": 803.28,
+      "duration": 4.24,
+      "text": "checked if you carefully see e6 has"
+    },
+    {
+      "start": 801.04,
+      "end": 805.44,
+      "duration": 4.4,
+      "text": "already been checked and it did not get"
+    },
+    {
+      "start": 803.28,
+      "end": 807.84,
+      "duration": 4.56,
+      "text": "a cycle so i will not go because six is"
+    },
+    {
+      "start": 805.44,
+      "end": 809.84,
+      "duration": 4.4,
+      "text": "not definitely not a cycle why because"
+    },
+    {
+      "start": 807.84,
+      "end": 811.84,
+      "duration": 4.0,
+      "text": "it was in a different path and this is"
+    },
+    {
+      "start": 809.84,
+      "end": 813.68,
+      "duration": 3.84,
+      "text": "in a different path six is definitely"
+    },
+    {
+      "start": 811.84,
+      "end": 815.76,
+      "duration": 3.92,
+      "text": "not a cycle because if it is a cycle it"
+    },
+    {
+      "start": 813.68,
+      "end": 818.72,
+      "duration": 5.04,
+      "text": "would have gone like this so it is not a"
+    },
+    {
+      "start": 815.76,
+      "end": 822.0,
+      "duration": 6.24,
+      "text": "cycle it is not a cycle can five do any"
+    },
+    {
+      "start": 818.72,
+      "end": 824.24,
+      "duration": 5.52,
+      "text": "further dfs calls apart from six no so"
+    },
+    {
+      "start": 822.0,
+      "end": 825.6,
+      "duration": 3.6,
+      "text": "i'll say five is a safe node and then"
+    },
+    {
+      "start": 824.24,
+      "end": 828.64,
+      "duration": 4.4,
+      "text": "mark five is"
+    },
+    {
+      "start": 825.6,
+      "end": 831.52,
+      "duration": 5.92,
+      "text": "unvisited and i'll go back now three"
+    },
+    {
+      "start": 828.64,
+      "end": 833.68,
+      "duration": 5.04,
+      "text": "explore this part explore this part can"
+    },
+    {
+      "start": 831.52,
+      "end": 836.8,
+      "duration": 5.28,
+      "text": "i say for three it explode both the"
+    },
+    {
+      "start": 833.68,
+      "end": 839.2,
+      "duration": 5.52,
+      "text": "paths which eventually means it is a"
+    },
+    {
+      "start": 836.8,
+      "end": 841.12,
+      "duration": 4.32,
+      "text": "safe node so mark"
+    },
+    {
+      "start": 839.2,
+      "end": 844.72,
+      "duration": 5.52,
+      "text": "three also has a safe node and i'll now"
+    },
+    {
+      "start": 841.12,
+      "end": 847.76,
+      "duration": 6.64,
+      "text": "go back going back make sure this is 0"
+    },
+    {
+      "start": 844.72,
+      "end": 850.64,
+      "duration": 5.92,
+      "text": "2 says i'm also a safe node so 2 marks"
+    },
+    {
+      "start": 847.76,
+      "end": 853.12,
+      "duration": 5.36,
+      "text": "itself and goes back"
+    },
+    {
+      "start": 850.64,
+      "end": 856.24,
+      "duration": 5.6,
+      "text": "one says i'm also safe note marks itself"
+    },
+    {
+      "start": 853.12,
+      "end": 858.96,
+      "duration": 5.84,
+      "text": "and goes back 0 says i explored all my"
+    },
+    {
+      "start": 856.24,
+      "end": 861.76,
+      "duration": 5.52,
+      "text": "paths i'm also safe node marks it has"
+    },
+    {
+      "start": 858.96,
+      "end": 864.32,
+      "duration": 5.36,
+      "text": "zero and goes back every one the path"
+    },
+    {
+      "start": 861.76,
+      "end": 866.16,
+      "duration": 4.4,
+      "text": "has been travis we did not get a cycle"
+    },
+    {
+      "start": 864.32,
+      "end": 867.6,
+      "duration": 3.28,
+      "text": "because this part does not have a cycle"
+    },
+    {
+      "start": 866.16,
+      "end": 869.52,
+      "duration": 3.36,
+      "text": "and everyone"
+    },
+    {
+      "start": 867.6,
+      "end": 872.96,
+      "duration": 5.36,
+      "text": "ends at seven if you see"
+    },
+    {
+      "start": 869.52,
+      "end": 875.36,
+      "duration": 5.84,
+      "text": "every one ends at seven so thereby all"
+    },
+    {
+      "start": 872.96,
+      "end": 878.4,
+      "duration": 5.44,
+      "text": "of these nodes can be called as a safe"
+    },
+    {
+      "start": 875.36,
+      "end": 882.4,
+      "duration": 7.04,
+      "text": "node right so everyone done now this"
+    },
+    {
+      "start": 878.4,
+      "end": 884.8,
+      "duration": 6.4,
+      "text": "will change to one to two to three to"
+    },
+    {
+      "start": 882.4,
+      "end": 886.96,
+      "duration": 4.56,
+      "text": "four and it finds everyone has visited"
+    },
+    {
+      "start": 884.8,
+      "end": 888.88,
+      "duration": 4.08,
+      "text": "which means they have been checked there"
+    },
+    {
+      "start": 886.96,
+      "end": 891.6,
+      "duration": 4.64,
+      "text": "is no need to check any and they have"
+    },
+    {
+      "start": 888.88,
+      "end": 894.8,
+      "duration": 5.92,
+      "text": "been checked so what i will do is i'll"
+    },
+    {
+      "start": 891.6,
+      "end": 897.6,
+      "duration": 6.0,
+      "text": "now go to eight and that's when we find"
+    },
+    {
+      "start": 894.8,
+      "end": 900.8,
+      "duration": 6.0,
+      "text": "it as unvisited we will go to eight and"
+    },
+    {
+      "start": 897.6,
+      "end": 902.48,
+      "duration": 4.88,
+      "text": "that is when we find it as unvisited so"
+    },
+    {
+      "start": 900.8,
+      "end": 904.56,
+      "duration": 3.76,
+      "text": "what i'll do is i'll call a difference"
+    },
+    {
+      "start": 902.48,
+      "end": 905.84,
+      "duration": 3.36,
+      "text": "for eight now so i'll just quickly raise"
+    },
+    {
+      "start": 904.56,
+      "end": 907.84,
+      "duration": 3.28,
+      "text": "this up"
+    },
+    {
+      "start": 905.84,
+      "end": 910.96,
+      "duration": 5.12,
+      "text": "because the next call will go for"
+    },
+    {
+      "start": 907.84,
+      "end": 912.88,
+      "duration": 5.04,
+      "text": "eight right so as of now we have a dfs"
+    },
+    {
+      "start": 910.96,
+      "end": 915.2,
+      "duration": 4.24,
+      "text": "call for eight"
+    },
+    {
+      "start": 912.88,
+      "end": 917.76,
+      "duration": 4.88,
+      "text": "so let's start the dfs for eight now so"
+    },
+    {
+      "start": 915.2,
+      "end": 920.24,
+      "duration": 5.04,
+      "text": "i start the dfs for eight when you start"
+    },
+    {
+      "start": 917.76,
+      "end": 921.68,
+      "duration": 3.92,
+      "text": "it for eight"
+    },
+    {
+      "start": 920.24,
+      "end": 923.2,
+      "duration": 2.96,
+      "text": "you mark them as visited and path"
+    },
+    {
+      "start": 921.68,
+      "end": 925.44,
+      "duration": 3.76,
+      "text": "visited right"
+    },
+    {
+      "start": 923.2,
+      "end": 927.92,
+      "duration": 4.72,
+      "text": "eight has couple of them one and nine"
+    },
+    {
+      "start": 925.44,
+      "end": 929.68,
+      "duration": 4.24,
+      "text": "so one"
+    },
+    {
+      "start": 927.92,
+      "end": 931.92,
+      "duration": 4.0,
+      "text": "and nine"
+    },
+    {
+      "start": 929.68,
+      "end": 933.28,
+      "duration": 3.6,
+      "text": "so as of now can i see this"
+    },
+    {
+      "start": 931.92,
+      "end": 935.28,
+      "duration": 3.36,
+      "text": "eight goes to"
+    },
+    {
+      "start": 933.28,
+      "end": 937.52,
+      "duration": 4.24,
+      "text": "one right but"
+    },
+    {
+      "start": 935.28,
+      "end": 942.08,
+      "duration": 6.8,
+      "text": "will you go to one that's my question"
+    },
+    {
+      "start": 937.52,
+      "end": 945.12,
+      "duration": 7.6,
+      "text": "will the eight call a dfs for one no why"
+    },
+    {
+      "start": 942.08,
+      "end": 946.32,
+      "duration": 4.24,
+      "text": "so when a tries to go to one it says hey"
+    },
+    {
+      "start": 945.12,
+      "end": 948.72,
+      "duration": 3.6,
+      "text": "listen"
+    },
+    {
+      "start": 946.32,
+      "end": 950.64,
+      "duration": 4.32,
+      "text": "i am already visited"
+    },
+    {
+      "start": 948.72,
+      "end": 953.04,
+      "duration": 4.32,
+      "text": "i am already visited and i am not part"
+    },
+    {
+      "start": 950.64,
+      "end": 954.72,
+      "duration": 4.08,
+      "text": "visited which means i'm not i'm not a"
+    },
+    {
+      "start": 953.04,
+      "end": 956.96,
+      "duration": 3.92,
+      "text": "part of a cycle or i'm not someone who"
+    },
+    {
+      "start": 954.72,
+      "end": 959.04,
+      "duration": 4.32,
+      "text": "gets into a cycle because if this guy"
+    },
+    {
+      "start": 956.96,
+      "end": 962.0,
+      "duration": 5.04,
+      "text": "was a part of a cycle it would have been"
+    },
+    {
+      "start": 959.04,
+      "end": 964.96,
+      "duration": 5.92,
+      "text": "visited and path visited as well got it"
+    },
+    {
+      "start": 962.0,
+      "end": 966.96,
+      "duration": 4.96,
+      "text": "it's not a part of the cycle because"
+    },
+    {
+      "start": 964.96,
+      "end": 967.76,
+      "duration": 2.8,
+      "text": "if you'd have encountered a cycle like"
+    },
+    {
+      "start": 966.96,
+      "end": 969.28,
+      "duration": 2.32,
+      "text": "this"
+    },
+    {
+      "start": 967.76,
+      "end": 971.68,
+      "duration": 3.92,
+      "text": "the moment you encountered cyclone"
+    },
+    {
+      "start": 969.28,
+      "end": 974.24,
+      "duration": 4.96,
+      "text": "returned i would have returned so the"
+    },
+    {
+      "start": 971.68,
+      "end": 975.84,
+      "duration": 4.16,
+      "text": "path visited for this guy would have"
+    },
+    {
+      "start": 974.24,
+      "end": 977.36,
+      "duration": 3.12,
+      "text": "also been one because"
+    },
+    {
+      "start": 975.84,
+      "end": 980.16,
+      "duration": 4.32,
+      "text": "anytime you get a cycle you break and"
+    },
+    {
+      "start": 977.36,
+      "end": 982.88,
+      "duration": 5.52,
+      "text": "return you do not reset the path visit"
+    },
+    {
+      "start": 980.16,
+      "end": 985.2,
+      "duration": 5.04,
+      "text": "you only reset the path visit if and"
+    },
+    {
+      "start": 982.88,
+      "end": 988.88,
+      "duration": 6.0,
+      "text": "only if you did not get a cycle got it"
+    },
+    {
+      "start": 985.2,
+      "end": 990.64,
+      "duration": 5.44,
+      "text": "cycle detection video so eight states"
+    },
+    {
+      "start": 988.88,
+      "end": 993.28,
+      "duration": 4.4,
+      "text": "one"
+    },
+    {
+      "start": 990.64,
+      "end": 996.32,
+      "duration": 5.68,
+      "text": "you just visited you did not get a cycle"
+    },
+    {
+      "start": 993.28,
+      "end": 998.32,
+      "duration": 5.04,
+      "text": "so fine this path is safe i'll not call"
+    },
+    {
+      "start": 996.32,
+      "end": 1000.48,
+      "duration": 4.16,
+      "text": "it but this part is safe i still have a"
+    },
+    {
+      "start": 998.32,
+      "end": 1002.72,
+      "duration": 4.4,
+      "text": "path to explore which is dfs of nine"
+    },
+    {
+      "start": 1000.48,
+      "end": 1003.92,
+      "duration": 3.44,
+      "text": "let's explore so i go to nine and i say"
+    },
+    {
+      "start": 1002.72,
+      "end": 1005.6,
+      "duration": 2.88,
+      "text": "fine"
+    },
+    {
+      "start": 1003.92,
+      "end": 1009.04,
+      "duration": 5.12,
+      "text": "visited path visited"
+    },
+    {
+      "start": 1005.6,
+      "end": 1010.72,
+      "duration": 5.12,
+      "text": "nine says i go to dfs of ten"
+    },
+    {
+      "start": 1009.04,
+      "end": 1013.84,
+      "duration": 4.8,
+      "text": "tenses okay"
+    },
+    {
+      "start": 1010.72,
+      "end": 1015.6,
+      "duration": 4.88,
+      "text": "visited path visited this is"
+    },
+    {
+      "start": 1013.84,
+      "end": 1019.36,
+      "duration": 5.52,
+      "text": "the next guy that i have"
+    },
+    {
+      "start": 1015.6,
+      "end": 1021.12,
+      "duration": 5.52,
+      "text": "is eight and that guy is saying"
+    },
+    {
+      "start": 1019.36,
+      "end": 1023.52,
+      "duration": 4.16,
+      "text": "visited"
+    },
+    {
+      "start": 1021.12,
+      "end": 1024.4,
+      "duration": 3.28,
+      "text": "bath visited which means"
+    },
+    {
+      "start": 1023.52,
+      "end": 1026.8,
+      "duration": 3.28,
+      "text": "false"
+    },
+    {
+      "start": 1024.4,
+      "end": 1028.16,
+      "duration": 3.76,
+      "text": "which means false so"
+    },
+    {
+      "start": 1026.8,
+      "end": 1031.84,
+      "duration": 5.04,
+      "text": "this guy"
+    },
+    {
+      "start": 1028.16,
+      "end": 1034.72,
+      "duration": 6.56,
+      "text": "cannot be a safe note because 10"
+    },
+    {
+      "start": 1031.84,
+      "end": 1039.12,
+      "duration": 7.28,
+      "text": "encountered an 8"
+    },
+    {
+      "start": 1034.72,
+      "end": 1041.2,
+      "duration": 6.48,
+      "text": "cycle cannot be saved thereby it doesn't"
+    },
+    {
+      "start": 1039.12,
+      "end": 1043.28,
+      "duration": 4.16,
+      "text": "doesn't really marks it itself as zero"
+    },
+    {
+      "start": 1041.2,
+      "end": 1044.64,
+      "duration": 3.44,
+      "text": "doesn't it just goes back you just"
+    },
+    {
+      "start": 1043.28,
+      "end": 1047.68,
+      "duration": 4.4,
+      "text": "return the moment you get a cycle you"
+    },
+    {
+      "start": 1044.64,
+      "end": 1049.52,
+      "duration": 4.88,
+      "text": "determine do not reset nine says you got"
+    },
+    {
+      "start": 1047.68,
+      "end": 1052.08,
+      "duration": 4.4,
+      "text": "a cycle ten got a cycle"
+    },
+    {
+      "start": 1049.52,
+      "end": 1053.2,
+      "duration": 3.68,
+      "text": "return eight says you guys got a cycle"
+    },
+    {
+      "start": 1052.08,
+      "end": 1055.6,
+      "duration": 3.52,
+      "text": "i'll return"
+    },
+    {
+      "start": 1053.2,
+      "end": 1057.28,
+      "duration": 4.08,
+      "text": "no one unmarked themselves so all of"
+    },
+    {
+      "start": 1055.6,
+      "end": 1058.48,
+      "duration": 2.88,
+      "text": "them are marked as visited and paths"
+    },
+    {
+      "start": 1057.28,
+      "end": 1060.4,
+      "duration": 3.12,
+      "text": "visited"
+    },
+    {
+      "start": 1058.48,
+      "end": 1063.12,
+      "duration": 4.64,
+      "text": "nothing that i was explaining everyone"
+    },
+    {
+      "start": 1060.4,
+      "end": 1064.24,
+      "duration": 3.84,
+      "text": "returned and none of them were"
+    },
+    {
+      "start": 1063.12,
+      "end": 1065.52,
+      "duration": 2.4,
+      "text": "safe notes"
+    },
+    {
+      "start": 1064.24,
+      "end": 1067.2,
+      "duration": 2.96,
+      "text": "perfect"
+    },
+    {
+      "start": 1065.52,
+      "end": 1069.52,
+      "duration": 4.0,
+      "text": "so we have"
+    },
+    {
+      "start": 1067.2,
+      "end": 1071.76,
+      "duration": 4.56,
+      "text": "we're done with this next"
+    },
+    {
+      "start": 1069.52,
+      "end": 1073.84,
+      "duration": 4.32,
+      "text": "this will go to like eight nine ten"
+    },
+    {
+      "start": 1071.76,
+      "end": 1076.24,
+      "duration": 4.48,
+      "text": "that's number eleven at the moment you"
+    },
+    {
+      "start": 1073.84,
+      "end": 1078.08,
+      "duration": 4.24,
+      "text": "try for eleven see what will happen 11"
+    },
+    {
+      "start": 1076.24,
+      "end": 1078.96,
+      "duration": 2.72,
+      "text": "says i have a nine"
+    },
+    {
+      "start": 1078.08,
+      "end": 1081.12,
+      "duration": 3.04,
+      "text": "the woman"
+    },
+    {
+      "start": 1078.96,
+      "end": 1083.44,
+      "duration": 4.48,
+      "text": "the next one he tried to go to 11th"
+    },
+    {
+      "start": 1081.12,
+      "end": 1085.76,
+      "duration": 4.64,
+      "text": "neighbor which is nine it says i'm"
+    },
+    {
+      "start": 1083.44,
+      "end": 1088.32,
+      "duration": 4.88,
+      "text": "visited and i'm path visited which means"
+    },
+    {
+      "start": 1085.76,
+      "end": 1090.4,
+      "duration": 4.64,
+      "text": "i got a cycle that's why i'm still path"
+    },
+    {
+      "start": 1088.32,
+      "end": 1093.84,
+      "duration": 5.52,
+      "text": "visited there's someone returned someone"
+    },
+    {
+      "start": 1090.4,
+      "end": 1096.16,
+      "duration": 5.76,
+      "text": "did not unmark me thereby this is also"
+    },
+    {
+      "start": 1093.84,
+      "end": 1098.56,
+      "duration": 4.72,
+      "text": "not safe node eventually you'd have"
+    },
+    {
+      "start": 1096.16,
+      "end": 1099.36,
+      "duration": 3.2,
+      "text": "marked all the safe nodes and you can"
+    },
+    {
+      "start": 1098.56,
+      "end": 1101.44,
+      "duration": 2.88,
+      "text": "just"
+    },
+    {
+      "start": 1099.36,
+      "end": 1103.68,
+      "duration": 4.32,
+      "text": "store them very simple very"
+    },
+    {
+      "start": 1101.44,
+      "end": 1105.2,
+      "duration": 3.76,
+      "text": "straightforward okay so guys i hope you"
+    },
+    {
+      "start": 1103.68,
+      "end": 1107.12,
+      "duration": 3.44,
+      "text": "understood the explanation now the"
+    },
+    {
+      "start": 1105.2,
+      "end": 1109.44,
+      "duration": 4.24,
+      "text": "moment i'll start coding this you'll see"
+    },
+    {
+      "start": 1107.12,
+      "end": 1112.0,
+      "duration": 4.88,
+      "text": "that this sticks into your head in a"
+    },
+    {
+      "start": 1109.44,
+      "end": 1114.32,
+      "duration": 4.88,
+      "text": "much better way so i'll go to the"
+    },
+    {
+      "start": 1112.0,
+      "end": 1116.4,
+      "duration": 4.4,
+      "text": "detector cycle in a directed graph i'll"
+    },
+    {
+      "start": 1114.32,
+      "end": 1119.52,
+      "duration": 5.2,
+      "text": "go to the summations and i'll pick the"
+    },
+    {
+      "start": 1116.4,
+      "end": 1121.36,
+      "duration": 4.96,
+      "text": "dfs code from there so this was the code"
+    },
+    {
+      "start": 1119.52,
+      "end": 1124.24,
+      "duration": 4.72,
+      "text": "if you remember this was the dfs that i"
+    },
+    {
+      "start": 1121.36,
+      "end": 1125.76,
+      "duration": 4.4,
+      "text": "wrote so i'll just pick up that and i'll"
+    },
+    {
+      "start": 1124.24,
+      "end": 1126.8,
+      "duration": 2.56,
+      "text": "paste it here that's the first thing"
+    },
+    {
+      "start": 1125.76,
+      "end": 1129.36,
+      "duration": 3.6,
+      "text": "that i'll do"
+    },
+    {
+      "start": 1126.8,
+      "end": 1131.04,
+      "duration": 4.24,
+      "text": "next thing i'll do is i'll just pick up"
+    },
+    {
+      "start": 1129.36,
+      "end": 1133.6,
+      "duration": 4.24,
+      "text": "the internal"
+    },
+    {
+      "start": 1131.04,
+      "end": 1135.52,
+      "duration": 4.48,
+      "text": "thing for cycle check okay so once"
+    },
+    {
+      "start": 1133.6,
+      "end": 1137.76,
+      "duration": 4.16,
+      "text": "you've pasted it it's very important to"
+    },
+    {
+      "start": 1135.52,
+      "end": 1140.08,
+      "duration": 4.56,
+      "text": "analyze that you need to return a"
+    },
+    {
+      "start": 1137.76,
+      "end": 1141.44,
+      "duration": 3.68,
+      "text": "vector or a list as an answer so"
+    },
+    {
+      "start": 1140.08,
+      "end": 1142.56,
+      "duration": 2.48,
+      "text": "probably you can just store it as safe"
+    },
+    {
+      "start": 1141.44,
+      "end": 1145.2,
+      "duration": 3.76,
+      "text": "notes"
+    },
+    {
+      "start": 1142.56,
+      "end": 1147.28,
+      "duration": 4.72,
+      "text": "right and we need to keep a mark which"
+    },
+    {
+      "start": 1145.2,
+      "end": 1149.04,
+      "duration": 3.84,
+      "text": "are the same notes so just make sure"
+    },
+    {
+      "start": 1147.28,
+      "end": 1151.28,
+      "duration": 4.0,
+      "text": "they are marked just make sure they are"
+    },
+    {
+      "start": 1149.04,
+      "end": 1153.84,
+      "duration": 4.8,
+      "text": "marked okay now something very important"
+    },
+    {
+      "start": 1151.28,
+      "end": 1155.36,
+      "duration": 4.08,
+      "text": "over here we do not break whenever we"
+    },
+    {
+      "start": 1153.84,
+      "end": 1158.32,
+      "duration": 4.48,
+      "text": "get"
+    },
+    {
+      "start": 1155.36,
+      "end": 1160.4,
+      "duration": 5.04,
+      "text": "a cycle because we need to continue all"
+    },
+    {
+      "start": 1158.32,
+      "end": 1162.24,
+      "duration": 3.92,
+      "text": "the defense calls remember this"
+    },
+    {
+      "start": 1160.4,
+      "end": 1164.0,
+      "duration": 3.6,
+      "text": "we need to do all the defaults because"
+    },
+    {
+      "start": 1162.24,
+      "end": 1165.6,
+      "duration": 3.36,
+      "text": "we need to check for all the roots so"
+    },
+    {
+      "start": 1164.0,
+      "end": 1167.52,
+      "duration": 3.52,
+      "text": "it's not like you get a cycle and you"
+    },
+    {
+      "start": 1165.6,
+      "end": 1169.44,
+      "duration": 3.84,
+      "text": "break out do not do that over here you"
+    },
+    {
+      "start": 1167.52,
+      "end": 1171.52,
+      "duration": 4.0,
+      "text": "need to check for"
+    },
+    {
+      "start": 1169.44,
+      "end": 1173.76,
+      "duration": 4.32,
+      "text": "all the possible notes okay all the"
+    },
+    {
+      "start": 1171.52,
+      "end": 1175.52,
+      "duration": 4.0,
+      "text": "possible unvisited notes rather that's a"
+    },
+    {
+      "start": 1173.76,
+      "end": 1177.52,
+      "duration": 3.76,
+      "text": "small thing that you'll do at the end of"
+    },
+    {
+      "start": 1175.52,
+      "end": 1180.16,
+      "duration": 4.64,
+      "text": "the day you'll see okay let's quickly"
+    },
+    {
+      "start": 1177.52,
+      "end": 1182.88,
+      "duration": 5.36,
+      "text": "have a check for all the notes and"
+    },
+    {
+      "start": 1180.16,
+      "end": 1185.04,
+      "duration": 4.88,
+      "text": "something like if the check uh comes out"
+    },
+    {
+      "start": 1182.88,
+      "end": 1186.24,
+      "duration": 3.36,
+      "text": "to be one then i'll put them into the"
+    },
+    {
+      "start": 1185.04,
+      "end": 1188.88,
+      "duration": 3.84,
+      "text": "same notes"
+    },
+    {
+      "start": 1186.24,
+      "end": 1191.2,
+      "duration": 4.96,
+      "text": "we will see how we mark seat nodes"
+    },
+    {
+      "start": 1188.88,
+      "end": 1194.16,
+      "duration": 5.28,
+      "text": "and then i'll return the sequence very"
+    },
+    {
+      "start": 1191.2,
+      "end": 1197.04,
+      "duration": 5.84,
+      "text": "simple very simple and easy now the"
+    },
+    {
+      "start": 1194.16,
+      "end": 1199.12,
+      "duration": 4.96,
+      "text": "question is how does check work so in"
+    },
+    {
+      "start": 1197.04,
+      "end": 1200.16,
+      "duration": 3.12,
+      "text": "order to do that let's carry check as"
+    },
+    {
+      "start": 1199.12,
+      "end": 1201.28,
+      "duration": 2.16,
+      "text": "well"
+    },
+    {
+      "start": 1200.16,
+      "end": 1202.64,
+      "duration": 2.48,
+      "text": "over here"
+    },
+    {
+      "start": 1201.28,
+      "end": 1204.48,
+      "duration": 3.2,
+      "text": "and"
+    },
+    {
+      "start": 1202.64,
+      "end": 1206.4,
+      "duration": 3.76,
+      "text": "over here as well"
+    },
+    {
+      "start": 1204.48,
+      "end": 1208.4,
+      "duration": 3.92,
+      "text": "and pass it over here"
+    },
+    {
+      "start": 1206.4,
+      "end": 1209.28,
+      "duration": 2.88,
+      "text": "so what did i tell you"
+    },
+    {
+      "start": 1208.4,
+      "end": 1212.0,
+      "duration": 3.6,
+      "text": "that"
+    },
+    {
+      "start": 1209.28,
+      "end": 1215.44,
+      "duration": 6.16,
+      "text": "if the dfs is successfully completed for"
+    },
+    {
+      "start": 1212.0,
+      "end": 1217.92,
+      "duration": 5.92,
+      "text": "a node you always see it as"
+    },
+    {
+      "start": 1215.44,
+      "end": 1220.24,
+      "duration": 4.8,
+      "text": "safe not because if there is a cycle it"
+    },
+    {
+      "start": 1217.92,
+      "end": 1222.24,
+      "duration": 4.32,
+      "text": "will always break out either here or"
+    },
+    {
+      "start": 1220.24,
+      "end": 1224.0,
+      "duration": 3.76,
+      "text": "either here if there is a cycle it will"
+    },
+    {
+      "start": 1222.24,
+      "end": 1226.08,
+      "duration": 3.84,
+      "text": "always break out either here"
+    },
+    {
+      "start": 1224.0,
+      "end": 1229.36,
+      "duration": 5.36,
+      "text": "or either on this portion that is for"
+    },
+    {
+      "start": 1226.08,
+      "end": 1230.16,
+      "duration": 4.08,
+      "text": "sure and if there is no cycle then it"
+    },
+    {
+      "start": 1229.36,
+      "end": 1232.96,
+      "duration": 3.6,
+      "text": "will"
+    },
+    {
+      "start": 1230.16,
+      "end": 1234.96,
+      "duration": 4.8,
+      "text": "explore all the adjacent parts"
+    },
+    {
+      "start": 1232.96,
+      "end": 1237.04,
+      "duration": 4.08,
+      "text": "over on this for loop it will explore"
+    },
+    {
+      "start": 1234.96,
+      "end": 1239.6,
+      "duration": 4.64,
+      "text": "all the adjacent parts over the for loop"
+    },
+    {
+      "start": 1237.04,
+      "end": 1241.28,
+      "duration": 4.24,
+      "text": "and if it reaches the line number 31 it"
+    },
+    {
+      "start": 1239.6,
+      "end": 1243.84,
+      "duration": 4.24,
+      "text": "means it did not find the cycle so you"
+    },
+    {
+      "start": 1241.28,
+      "end": 1246.16,
+      "duration": 4.88,
+      "text": "can say that it is true so whenever you"
+    },
+    {
+      "start": 1243.84,
+      "end": 1248.32,
+      "duration": 4.48,
+      "text": "just enter just make sure"
+    },
+    {
+      "start": 1246.16,
+      "end": 1250.88,
+      "duration": 4.72,
+      "text": "whenever you enter this guy just make"
+    },
+    {
+      "start": 1248.32,
+      "end": 1252.96,
+      "duration": 4.64,
+      "text": "sure you see it as zero perfect now"
+    },
+    {
+      "start": 1250.88,
+      "end": 1254.32,
+      "duration": 3.44,
+      "text": "whenever i get a cycle whenever i get a"
+    },
+    {
+      "start": 1252.96,
+      "end": 1256.4,
+      "duration": 3.44,
+      "text": "cycle it means"
+    },
+    {
+      "start": 1254.32,
+      "end": 1259.2,
+      "duration": 4.88,
+      "text": "for this particular node for this"
+    },
+    {
+      "start": 1256.4,
+      "end": 1262.48,
+      "duration": 6.08,
+      "text": "particular node on this id i got a cycle"
+    },
+    {
+      "start": 1259.2,
+      "end": 1264.72,
+      "duration": 5.52,
+      "text": "so this node definitely cannot be a part"
+    },
+    {
+      "start": 1262.48,
+      "end": 1266.72,
+      "duration": 4.24,
+      "text": "of it this now definitely cannot be part"
+    },
+    {
+      "start": 1264.72,
+      "end": 1268.8,
+      "duration": 4.08,
+      "text": "of it so"
+    },
+    {
+      "start": 1266.72,
+      "end": 1271.04,
+      "duration": 4.32,
+      "text": "take notes so what you'll do is just"
+    },
+    {
+      "start": 1268.8,
+      "end": 1273.2,
+      "duration": 4.4,
+      "text": "take the return node inside it and right"
+    },
+    {
+      "start": 1271.04,
+      "end": 1277.2,
+      "duration": 6.16,
+      "text": "before this you will say this though"
+    },
+    {
+      "start": 1273.2,
+      "end": 1278.48,
+      "duration": 5.28,
+      "text": "cannot be a sequel no no way"
+    },
+    {
+      "start": 1277.2,
+      "end": 1280.0,
+      "duration": 2.8,
+      "text": "this is not required because you're"
+    },
+    {
+      "start": 1278.48,
+      "end": 1282.32,
+      "duration": 3.84,
+      "text": "initializing it but still i want to"
+    },
+    {
+      "start": 1280.0,
+      "end": 1285.04,
+      "duration": 5.04,
+      "text": "explain it if there's a cycle it cannot"
+    },
+    {
+      "start": 1282.32,
+      "end": 1288.24,
+      "duration": 5.92,
+      "text": "be similarly if it is a cycle this guy"
+    },
+    {
+      "start": 1285.04,
+      "end": 1289.2,
+      "duration": 4.16,
+      "text": "can not be if the cycle this guy cannot"
+    },
+    {
+      "start": 1288.24,
+      "end": 1292.0,
+      "duration": 3.76,
+      "text": "be because"
+    },
+    {
+      "start": 1289.2,
+      "end": 1294.4,
+      "duration": 5.2,
+      "text": "it tried to explore a part of id it"
+    },
+    {
+      "start": 1292.0,
+      "end": 1296.24,
+      "duration": 4.24,
+      "text": "found the cycle so it cannot be and if"
+    },
+    {
+      "start": 1294.4,
+      "end": 1297.28,
+      "duration": 2.88,
+      "text": "it explode all the parts then you say"
+    },
+    {
+      "start": 1296.24,
+      "end": 1299.6,
+      "duration": 3.36,
+      "text": "yes"
+    },
+    {
+      "start": 1297.28,
+      "end": 1303.12,
+      "duration": 5.84,
+      "text": "this is the minor gene that you needed"
+    },
+    {
+      "start": 1299.6,
+      "end": 1304.48,
+      "duration": 4.88,
+      "text": "to do on the cycle detection and it does"
+    },
+    {
+      "start": 1303.12,
+      "end": 1306.64,
+      "duration": 3.52,
+      "text": "work fine so"
+    },
+    {
+      "start": 1304.48,
+      "end": 1309.36,
+      "duration": 4.88,
+      "text": "that is the reason i see you that having"
+    },
+    {
+      "start": 1306.64,
+      "end": 1312.0,
+      "duration": 5.36,
+      "text": "concepts so strong that you can modify"
+    },
+    {
+      "start": 1309.36,
+      "end": 1314.88,
+      "duration": 5.52,
+      "text": "it in whatever way you like and you can"
+    },
+    {
+      "start": 1312.0,
+      "end": 1316.4,
+      "duration": 4.4,
+      "text": "always submit your quotes so"
+    },
+    {
+      "start": 1314.88,
+      "end": 1319.52,
+      "duration": 4.64,
+      "text": "let's discuss the"
+    },
+    {
+      "start": 1316.4,
+      "end": 1322.56,
+      "duration": 6.16,
+      "text": "space complexity we're using uh three"
+    },
+    {
+      "start": 1319.52,
+      "end": 1325.2,
+      "duration": 5.68,
+      "text": "arrays and it might take like three n"
+    },
+    {
+      "start": 1322.56,
+      "end": 1328.4,
+      "duration": 5.84,
+      "text": "but we can do this in a single array as"
+    },
+    {
+      "start": 1325.2,
+      "end": 1330.96,
+      "duration": 5.76,
+      "text": "well if you try to maintain counters but"
+    },
+    {
+      "start": 1328.4,
+      "end": 1333.28,
+      "duration": 4.88,
+      "text": "then i'll not go that way i'll keep it"
+    },
+    {
+      "start": 1330.96,
+      "end": 1335.12,
+      "duration": 4.16,
+      "text": "very simple because this is what"
+    },
+    {
+      "start": 1333.28,
+      "end": 1337.68,
+      "duration": 4.4,
+      "text": "industry requires industry doesn't"
+    },
+    {
+      "start": 1335.12,
+      "end": 1338.88,
+      "duration": 3.76,
+      "text": "requires like doing it in one area they"
+    },
+    {
+      "start": 1337.68,
+      "end": 1341.84,
+      "duration": 4.16,
+      "text": "require something which is"
+    },
+    {
+      "start": 1338.88,
+      "end": 1344.24,
+      "duration": 5.36,
+      "text": "understandable so this is code quality"
+    },
+    {
+      "start": 1341.84,
+      "end": 1346.72,
+      "duration": 4.88,
+      "text": "in interviews do not go for a single"
+    },
+    {
+      "start": 1344.24,
+      "end": 1348.8,
+      "duration": 4.56,
+      "text": "array where you do 0 1 2 3 4 and certain"
+    },
+    {
+      "start": 1346.72,
+      "end": 1350.08,
+      "duration": 3.36,
+      "text": "stuffs because that is not poor quality"
+    },
+    {
+      "start": 1348.8,
+      "end": 1352.64,
+      "duration": 3.84,
+      "text": "that is where the interview might give"
+    },
+    {
+      "start": 1350.08,
+      "end": 1354.32,
+      "duration": 4.24,
+      "text": "you lesser number of points yes you can"
+    },
+    {
+      "start": 1352.64,
+      "end": 1356.64,
+      "duration": 4.0,
+      "text": "state that like"
+    },
+    {
+      "start": 1354.32,
+      "end": 1358.16,
+      "duration": 3.84,
+      "text": "in interview always state this approach"
+    },
+    {
+      "start": 1356.64,
+      "end": 1360.0,
+      "duration": 3.36,
+      "text": "and then you can tell the interview that"
+    },
+    {
+      "start": 1358.16,
+      "end": 1362.32,
+      "duration": 4.16,
+      "text": "maybe i can optimize this to a single"
+    },
+    {
+      "start": 1360.0,
+      "end": 1364.16,
+      "duration": 4.16,
+      "text": "array in the space complexity by keeping"
+    },
+    {
+      "start": 1362.32,
+      "end": 1365.76,
+      "duration": 3.44,
+      "text": "like a count of zero one two three four"
+    },
+    {
+      "start": 1364.16,
+      "end": 1367.68,
+      "duration": 3.52,
+      "text": "certain stuff so you can try that out"
+    },
+    {
+      "start": 1365.76,
+      "end": 1369.28,
+      "duration": 3.52,
+      "text": "definitely by yourself but that is"
+    },
+    {
+      "start": 1367.68,
+      "end": 1371.2,
+      "duration": 3.52,
+      "text": "something which you you should not"
+    },
+    {
+      "start": 1369.28,
+      "end": 1373.28,
+      "duration": 4.0,
+      "text": "propose at the first stage because the"
+    },
+    {
+      "start": 1371.2,
+      "end": 1375.52,
+      "duration": 4.32,
+      "text": "code quality goes down the readability"
+    },
+    {
+      "start": 1373.28,
+      "end": 1378.32,
+      "duration": 5.04,
+      "text": "goes very very down whatever the space"
+    },
+    {
+      "start": 1375.52,
+      "end": 1379.92,
+      "duration": 4.4,
+      "text": "complexity it's the same what dfs takes"
+    },
+    {
+      "start": 1378.32,
+      "end": 1381.04,
+      "duration": 2.72,
+      "text": "i'm not going to discuss this any"
+    },
+    {
+      "start": 1379.92,
+      "end": 1383.92,
+      "duration": 4.0,
+      "text": "further"
+    },
+    {
+      "start": 1381.04,
+      "end": 1385.92,
+      "duration": 4.88,
+      "text": "so that should be it for this problem"
+    },
+    {
+      "start": 1383.92,
+      "end": 1388.48,
+      "duration": 4.56,
+      "text": "so uh in the next video i'll be solving"
+    },
+    {
+      "start": 1385.92,
+      "end": 1389.84,
+      "duration": 3.92,
+      "text": "this using the toposort method so guys i"
+    },
+    {
+      "start": 1388.48,
+      "end": 1391.36,
+      "duration": 2.88,
+      "text": "hope you have understood this problem"
+    },
+    {
+      "start": 1389.84,
+      "end": 1392.88,
+      "duration": 3.04,
+      "text": "and the entire code so just in case you"
+    },
+    {
+      "start": 1391.36,
+      "end": 1394.48,
+      "duration": 3.12,
+      "text": "did please please please make sure you"
+    },
+    {
+      "start": 1392.88,
+      "end": 1396.56,
+      "duration": 3.68,
+      "text": "like this video and if you haven't"
+    },
+    {
+      "start": 1394.48,
+      "end": 1398.24,
+      "duration": 3.76,
+      "text": "checked out our dp series and the hdc"
+    },
+    {
+      "start": 1396.56,
+      "end": 1399.44,
+      "duration": 2.88,
+      "text": "what are you doing the links are in the"
+    },
+    {
+      "start": 1398.24,
+      "end": 1401.04,
+      "duration": 2.8,
+      "text": "description please make sure you check"
+    },
+    {
+      "start": 1399.44,
+      "end": 1403.52,
+      "duration": 4.08,
+      "text": "them out and if you haven't subscribed"
+    },
+    {
+      "start": 1401.04,
+      "end": 1405.36,
+      "duration": 4.32,
+      "text": "to our channel it has a very very"
+    },
+    {
+      "start": 1403.52,
+      "end": 1406.96,
+      "duration": 3.44,
+      "text": "earnest request that please do consider"
+    },
+    {
+      "start": 1405.36,
+      "end": 1408.56,
+      "duration": 3.2,
+      "text": "subscribing to us because that is the"
+    },
+    {
+      "start": 1406.96,
+      "end": 1410.24,
+      "duration": 3.28,
+      "text": "only thing that keeps you motivated to"
+    },
+    {
+      "start": 1408.56,
+      "end": 1411.44,
+      "duration": 2.88,
+      "text": "make these kind of content i know what"
+    },
+    {
+      "start": 1410.24,
+      "end": 1413.04,
+      "duration": 2.8,
+      "text": "this will be wrapping up this video"
+    },
+    {
+      "start": 1411.44,
+      "end": 1414.4,
+      "duration": 2.96,
+      "text": "let's put in some other video till then"
+    },
+    {
+      "start": 1413.04,
+      "end": 1417.6,
+      "duration": 4.56,
+      "text": "bye take care"
+    },
+    {
+      "start": 1414.4,
+      "end": 1421.24,
+      "duration": 6.84,
+      "text": "whenever your heart is broken"
+    },
+    {
+      "start": 1417.6,
+      "end": 1421.24,
+      "duration": 3.64,
+      "text": "don't ever forget"
+    }
+  ]
+}

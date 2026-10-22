@@ -1,0 +1,3002 @@
+{
+  "video_id": "-vu34sct1g8",
+  "title": "G-17. Bipartite Graph | BFS | C++ | Java",
+  "duration_sec": 1109,
+  "num_segments": 499,
+  "segments": [
+    {
+      "start": 3.52,
+      "end": 6.56,
+      "duration": 3.04,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.88,
+      "end": 8.0,
+      "duration": 3.12,
+      "text": "i hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.56,
+      "end": 11.2,
+      "duration": 4.64,
+      "text": "so in this video we are going to learn"
+    },
+    {
+      "start": 8.0,
+      "end": 15.44,
+      "duration": 7.44,
+      "text": "about bipartite graph and we're going to"
+    },
+    {
+      "start": 11.2,
+      "end": 17.12,
+      "duration": 5.92,
+      "text": "uh solve this using the bfs technique so"
+    },
+    {
+      "start": 15.44,
+      "end": 18.8,
+      "duration": 3.36,
+      "text": "if you haven't watched the vfs video go"
+    },
+    {
+      "start": 17.12,
+      "end": 21.68,
+      "duration": 4.56,
+      "text": "back and watch it out so what is the"
+    },
+    {
+      "start": 18.8,
+      "end": 23.44,
+      "duration": 4.64,
+      "text": "definition of vipertite graph it states"
+    },
+    {
+      "start": 21.68,
+      "end": 24.96,
+      "duration": 3.28,
+      "text": "if you can color the graph"
+    },
+    {
+      "start": 23.44,
+      "end": 27.36,
+      "duration": 3.92,
+      "text": "with two colors"
+    },
+    {
+      "start": 24.96,
+      "end": 29.68,
+      "duration": 4.72,
+      "text": "such that no adjacent nodes have same"
+    },
+    {
+      "start": 27.36,
+      "end": 31.44,
+      "duration": 4.08,
+      "text": "color like you are given a graph and you"
+    },
+    {
+      "start": 29.68,
+      "end": 34.32,
+      "duration": 4.64,
+      "text": "can take any two colors"
+    },
+    {
+      "start": 31.44,
+      "end": 36.64,
+      "duration": 5.2,
+      "text": "black and white yellow and green any two"
+    },
+    {
+      "start": 34.32,
+      "end": 38.96,
+      "duration": 4.64,
+      "text": "colors in the world and if you are able"
+    },
+    {
+      "start": 36.64,
+      "end": 41.6,
+      "duration": 4.96,
+      "text": "to color it with those two colors"
+    },
+    {
+      "start": 38.96,
+      "end": 44.24,
+      "duration": 5.28,
+      "text": "such that none of the adjacent notes or"
+    },
+    {
+      "start": 41.6,
+      "end": 46.64,
+      "duration": 5.04,
+      "text": "you can call them as neighbor notes have"
+    },
+    {
+      "start": 44.24,
+      "end": 48.88,
+      "duration": 4.64,
+      "text": "the same color so for an example if you"
+    },
+    {
+      "start": 46.64,
+      "end": 51.04,
+      "duration": 4.4,
+      "text": "uh see this particular graph you see"
+    },
+    {
+      "start": 48.88,
+      "end": 52.96,
+      "duration": 4.08,
+      "text": "this right so let's take the color"
+    },
+    {
+      "start": 51.04,
+      "end": 55.44,
+      "duration": 4.4,
+      "text": "yellow and green and let's try to color"
+    },
+    {
+      "start": 52.96,
+      "end": 57.36,
+      "duration": 4.4,
+      "text": "it so imagine i give this a color yellow"
+    },
+    {
+      "start": 55.44,
+      "end": 59.12,
+      "duration": 3.68,
+      "text": "definitely this is the adjacent node i"
+    },
+    {
+      "start": 57.36,
+      "end": 60.0,
+      "duration": 2.64,
+      "text": "cannot color it with yellow color"
+    },
+    {
+      "start": 59.12,
+      "end": 62.32,
+      "duration": 3.2,
+      "text": "because"
+    },
+    {
+      "start": 60.0,
+      "end": 64.24,
+      "duration": 4.24,
+      "text": "the condition clearly states no two"
+    },
+    {
+      "start": 62.32,
+      "end": 66.64,
+      "duration": 4.32,
+      "text": "adjacent nodes have the same color so i"
+    },
+    {
+      "start": 64.24,
+      "end": 69.2,
+      "duration": 4.96,
+      "text": "have to color this with green so this is"
+    },
+    {
+      "start": 66.64,
+      "end": 71.6,
+      "duration": 4.96,
+      "text": "the next adjacent i cannot color it with"
+    },
+    {
+      "start": 69.2,
+      "end": 73.12,
+      "duration": 3.92,
+      "text": "green i have to color it with yellow so"
+    },
+    {
+      "start": 71.6,
+      "end": 74.64,
+      "duration": 3.04,
+      "text": "i'll color that with yellow and"
+    },
+    {
+      "start": 73.12,
+      "end": 78.4,
+      "duration": 5.28,
+      "text": "similarly green"
+    },
+    {
+      "start": 74.64,
+      "end": 80.48,
+      "duration": 5.84,
+      "text": "yellow green yellow green and over here"
+    },
+    {
+      "start": 78.4,
+      "end": 82.48,
+      "duration": 4.08,
+      "text": "it will be yellow because the previous"
+    },
+    {
+      "start": 80.48,
+      "end": 84.64,
+      "duration": 4.16,
+      "text": "one was green so this cannot be green so"
+    },
+    {
+      "start": 82.48,
+      "end": 87.28,
+      "duration": 4.8,
+      "text": "this will be a yellow and this will be a"
+    },
+    {
+      "start": 84.64,
+      "end": 88.88,
+      "duration": 4.24,
+      "text": "green and if you see for this particular"
+    },
+    {
+      "start": 87.28,
+      "end": 91.12,
+      "duration": 3.84,
+      "text": "graph i was able to color this"
+    },
+    {
+      "start": 88.88,
+      "end": 93.84,
+      "duration": 4.96,
+      "text": "particular graph but just two colors do"
+    },
+    {
+      "start": 91.12,
+      "end": 95.76,
+      "duration": 4.64,
+      "text": "you see that yes i took two colors and i"
+    },
+    {
+      "start": 93.84,
+      "end": 98.48,
+      "duration": 4.64,
+      "text": "was able to color this graph with two"
+    },
+    {
+      "start": 95.76,
+      "end": 102.48,
+      "duration": 6.72,
+      "text": "colors so thereby i can say that this"
+    },
+    {
+      "start": 98.48,
+      "end": 105.04,
+      "duration": 6.56,
+      "text": "graph is nothing but a bipartite graph"
+    },
+    {
+      "start": 102.48,
+      "end": 107.68,
+      "duration": 5.2,
+      "text": "yes this graph can be called as a"
+    },
+    {
+      "start": 105.04,
+      "end": 111.2,
+      "duration": 6.16,
+      "text": "bipartite graph"
+    },
+    {
+      "start": 107.68,
+      "end": 113.44,
+      "duration": 5.76,
+      "text": "now let's look at the next example"
+    },
+    {
+      "start": 111.2,
+      "end": 116.0,
+      "duration": 4.8,
+      "text": "now if you see this example and i again"
+    },
+    {
+      "start": 113.44,
+      "end": 118.16,
+      "duration": 4.72,
+      "text": "take the same color yellow and green and"
+    },
+    {
+      "start": 116.0,
+      "end": 120.0,
+      "duration": 4.0,
+      "text": "i try to color this will be yellow this"
+    },
+    {
+      "start": 118.16,
+      "end": 121.44,
+      "duration": 3.28,
+      "text": "cannot be yellow so it will be green the"
+    },
+    {
+      "start": 120.0,
+      "end": 123.28,
+      "duration": 3.28,
+      "text": "next one cannot be green so it will be"
+    },
+    {
+      "start": 121.44,
+      "end": 125.92,
+      "duration": 4.48,
+      "text": "yellow then it will be green then it"
+    },
+    {
+      "start": 123.28,
+      "end": 128.08,
+      "duration": 4.8,
+      "text": "will be yellow then it will be green so"
+    },
+    {
+      "start": 125.92,
+      "end": 130.08,
+      "duration": 4.16,
+      "text": "if you go over here this is green so"
+    },
+    {
+      "start": 128.08,
+      "end": 131.92,
+      "duration": 3.84,
+      "text": "this cannot be green so this will be"
+    },
+    {
+      "start": 130.08,
+      "end": 134.16,
+      "duration": 4.08,
+      "text": "yellow now"
+    },
+    {
+      "start": 131.92,
+      "end": 135.2,
+      "duration": 3.28,
+      "text": "the moment you try to color this with"
+    },
+    {
+      "start": 134.16,
+      "end": 137.12,
+      "duration": 2.96,
+      "text": "green"
+    },
+    {
+      "start": 135.2,
+      "end": 138.8,
+      "duration": 3.6,
+      "text": "because you cannot color it with yellow"
+    },
+    {
+      "start": 137.12,
+      "end": 140.24,
+      "duration": 3.12,
+      "text": "because this was yellow so you have to"
+    },
+    {
+      "start": 138.8,
+      "end": 142.48,
+      "duration": 3.68,
+      "text": "color it with the other color which is"
+    },
+    {
+      "start": 140.24,
+      "end": 145.04,
+      "duration": 4.8,
+      "text": "green but if you try to color it with"
+    },
+    {
+      "start": 142.48,
+      "end": 148.0,
+      "duration": 5.52,
+      "text": "the other color green you see that the"
+    },
+    {
+      "start": 145.04,
+      "end": 149.76,
+      "duration": 4.72,
+      "text": "next adjacent node also has a green so"
+    },
+    {
+      "start": 148.0,
+      "end": 150.56,
+      "duration": 2.56,
+      "text": "you need to color it with yellow but"
+    },
+    {
+      "start": 149.76,
+      "end": 152.88,
+      "duration": 3.12,
+      "text": "wait"
+    },
+    {
+      "start": 150.56,
+      "end": 154.8,
+      "duration": 4.24,
+      "text": "this is having a yellow color so you are"
+    },
+    {
+      "start": 152.88,
+      "end": 156.88,
+      "duration": 4.0,
+      "text": "somewhere in between where one of your"
+    },
+    {
+      "start": 154.8,
+      "end": 159.2,
+      "duration": 4.4,
+      "text": "adjacent notes has a green one of your"
+    },
+    {
+      "start": 156.88,
+      "end": 160.64,
+      "duration": 3.76,
+      "text": "artisan notes has in yellow thereby you"
+    },
+    {
+      "start": 159.2,
+      "end": 162.72,
+      "duration": 3.52,
+      "text": "cannot color it"
+    },
+    {
+      "start": 160.64,
+      "end": 165.04,
+      "duration": 4.4,
+      "text": "with any of the colors because the"
+    },
+    {
+      "start": 162.72,
+      "end": 167.68,
+      "duration": 4.96,
+      "text": "moment you color any of the two notes"
+    },
+    {
+      "start": 165.04,
+      "end": 170.84,
+      "duration": 5.8,
+      "text": "will have the same color thereby i can"
+    },
+    {
+      "start": 167.68,
+      "end": 174.88,
+      "duration": 7.2,
+      "text": "say this graph is not a"
+    },
+    {
+      "start": 170.84,
+      "end": 176.56,
+      "duration": 5.72,
+      "text": "bipartite graph i hope that makes sense"
+    },
+    {
+      "start": 174.88,
+      "end": 179.2,
+      "duration": 4.32,
+      "text": "something to observe something to"
+    },
+    {
+      "start": 176.56,
+      "end": 181.52,
+      "duration": 4.96,
+      "text": "observe very deeply we can always color"
+    },
+    {
+      "start": 179.2,
+      "end": 184.32,
+      "duration": 5.12,
+      "text": "a graph which is a linear graph imagine"
+    },
+    {
+      "start": 181.52,
+      "end": 186.24,
+      "duration": 4.72,
+      "text": "you're given a graph like this linear"
+    },
+    {
+      "start": 184.32,
+      "end": 188.72,
+      "duration": 4.4,
+      "text": "graphs now these are called linear"
+    },
+    {
+      "start": 186.24,
+      "end": 190.96,
+      "duration": 4.72,
+      "text": "graphs which will never have a cycle"
+    },
+    {
+      "start": 188.72,
+      "end": 192.96,
+      "duration": 4.24,
+      "text": "which will never have a cycle so you can"
+    },
+    {
+      "start": 190.96,
+      "end": 194.56,
+      "duration": 3.6,
+      "text": "always take two colors"
+    },
+    {
+      "start": 192.96,
+      "end": 197.28,
+      "duration": 4.32,
+      "text": "since they do not have a cycle you can"
+    },
+    {
+      "start": 194.56,
+      "end": 200.24,
+      "duration": 5.68,
+      "text": "just go on coloring them so"
+    },
+    {
+      "start": 197.28,
+      "end": 203.2,
+      "duration": 5.92,
+      "text": "linear graphs with no cycles"
+    },
+    {
+      "start": 200.24,
+      "end": 205.84,
+      "duration": 5.6,
+      "text": "are always bipartite are always"
+    },
+    {
+      "start": 203.2,
+      "end": 208.48,
+      "duration": 5.28,
+      "text": "pi per tight remember this they're"
+    },
+    {
+      "start": 205.84,
+      "end": 210.84,
+      "duration": 5.0,
+      "text": "always bipartite graph now what is the"
+    },
+    {
+      "start": 208.48,
+      "end": 214.56,
+      "duration": 6.08,
+      "text": "next step the next step is uh"
+    },
+    {
+      "start": 210.84,
+      "end": 216.48,
+      "duration": 5.64,
+      "text": "but this is a graph of the cycle but the"
+    },
+    {
+      "start": 214.56,
+      "end": 219.52,
+      "duration": 4.96,
+      "text": "cycle length let's count the cycle"
+    },
+    {
+      "start": 216.48,
+      "end": 221.44,
+      "duration": 4.96,
+      "text": "length the cycle length is one two three"
+    },
+    {
+      "start": 219.52,
+      "end": 223.76,
+      "duration": 4.24,
+      "text": "four five six"
+    },
+    {
+      "start": 221.44,
+      "end": 226.4,
+      "duration": 4.96,
+      "text": "so any graph with an even cycle length"
+    },
+    {
+      "start": 223.76,
+      "end": 228.8,
+      "duration": 5.04,
+      "text": "can also be vipetite very very important"
+    },
+    {
+      "start": 226.4,
+      "end": 232.8,
+      "duration": 6.4,
+      "text": "any graph with the even cycle length"
+    },
+    {
+      "start": 228.8,
+      "end": 236.48,
+      "duration": 7.68,
+      "text": "any graph with a evil is a even cycle"
+    },
+    {
+      "start": 232.8,
+      "end": 238.8,
+      "duration": 6.0,
+      "text": "length can also be pipette"
+    },
+    {
+      "start": 236.48,
+      "end": 242.32,
+      "duration": 5.84,
+      "text": "so i can say that any graph with the"
+    },
+    {
+      "start": 238.8,
+      "end": 243.12,
+      "duration": 4.32,
+      "text": "even cycle length can also be bipartite"
+    },
+    {
+      "start": 242.32,
+      "end": 246.56,
+      "duration": 4.24,
+      "text": "so"
+    },
+    {
+      "start": 243.12,
+      "end": 248.48,
+      "duration": 5.36,
+      "text": "which graphs cannot be vipetite yes"
+    },
+    {
+      "start": 246.56,
+      "end": 250.08,
+      "duration": 3.52,
+      "text": "any graph with"
+    },
+    {
+      "start": 248.48,
+      "end": 254.08,
+      "duration": 5.6,
+      "text": "a length of"
+    },
+    {
+      "start": 250.08,
+      "end": 255.44,
+      "duration": 5.36,
+      "text": "odd if you count the length 1 two three"
+    },
+    {
+      "start": 254.08,
+      "end": 258.08,
+      "duration": 4.0,
+      "text": "four five"
+    },
+    {
+      "start": 255.44,
+      "end": 261.2,
+      "duration": 5.76,
+      "text": "any graph which has an odd length cycle"
+    },
+    {
+      "start": 258.08,
+      "end": 262.96,
+      "duration": 4.88,
+      "text": "can never be a bipartite any graph with"
+    },
+    {
+      "start": 261.2,
+      "end": 266.8,
+      "duration": 5.6,
+      "text": "odd length"
+    },
+    {
+      "start": 262.96,
+      "end": 267.6,
+      "duration": 4.64,
+      "text": "cycle can never be a bipartite"
+    },
+    {
+      "start": 266.8,
+      "end": 270.08,
+      "duration": 3.28,
+      "text": "so"
+    },
+    {
+      "start": 267.6,
+      "end": 272.16,
+      "duration": 4.56,
+      "text": "if you're checking for bipartiteness and"
+    },
+    {
+      "start": 270.08,
+      "end": 274.48,
+      "duration": 4.4,
+      "text": "the graph is not a bipartite graph then"
+    },
+    {
+      "start": 272.16,
+      "end": 276.96,
+      "duration": 4.8,
+      "text": "you can say that the graph has a odd"
+    },
+    {
+      "start": 274.48,
+      "end": 279.36,
+      "duration": 4.88,
+      "text": "length cycle thereby it is a"
+    },
+    {
+      "start": 276.96,
+      "end": 281.92,
+      "duration": 4.96,
+      "text": "non-bipartite graph i hope the"
+    },
+    {
+      "start": 279.36,
+      "end": 282.88,
+      "duration": 3.52,
+      "text": "definition of bipartite is clear to you"
+    },
+    {
+      "start": 281.92,
+      "end": 285.92,
+      "duration": 4.0,
+      "text": "so we are going to check for"
+    },
+    {
+      "start": 282.88,
+      "end": 287.12,
+      "duration": 4.24,
+      "text": "bipediteness using the bfs algorithm and"
+    },
+    {
+      "start": 285.92,
+      "end": 289.68,
+      "duration": 3.76,
+      "text": "you know what are the requirements of a"
+    },
+    {
+      "start": 287.12,
+      "end": 291.76,
+      "duration": 4.64,
+      "text": "bfs algorithm it requires a"
+    },
+    {
+      "start": 289.68,
+      "end": 294.16,
+      "duration": 4.48,
+      "text": "queue data structure it requires a"
+    },
+    {
+      "start": 291.76,
+      "end": 296.56,
+      "duration": 4.8,
+      "text": "visited array but instead of visited we"
+    },
+    {
+      "start": 294.16,
+      "end": 298.64,
+      "duration": 4.48,
+      "text": "will take a color array where we have"
+    },
+    {
+      "start": 296.56,
+      "end": 301.44,
+      "duration": 4.88,
+      "text": "all the eight notes and everything is"
+    },
+    {
+      "start": 298.64,
+      "end": 303.92,
+      "duration": 5.28,
+      "text": "non-colored and minus one means not"
+    },
+    {
+      "start": 301.44,
+      "end": 305.84,
+      "duration": 4.4,
+      "text": "colored yet yes minus one means not"
+    },
+    {
+      "start": 303.92,
+      "end": 307.6,
+      "duration": 3.68,
+      "text": "colored yet and what we will try to do"
+    },
+    {
+      "start": 305.84,
+      "end": 309.84,
+      "duration": 4.0,
+      "text": "is we will try to color it with color"
+    },
+    {
+      "start": 307.6,
+      "end": 311.68,
+      "duration": 4.08,
+      "text": "zero or color one you can take any other"
+    },
+    {
+      "start": 309.84,
+      "end": 314.0,
+      "duration": 4.16,
+      "text": "colors as well but i'll try to color it"
+    },
+    {
+      "start": 311.68,
+      "end": 316.08,
+      "duration": 4.4,
+      "text": "with color zero and color one these are"
+    },
+    {
+      "start": 314.0,
+      "end": 317.76,
+      "duration": 3.76,
+      "text": "my two different colors and for this"
+    },
+    {
+      "start": 316.08,
+      "end": 320.8,
+      "duration": 4.72,
+      "text": "particular graph this is the"
+    },
+    {
+      "start": 317.76,
+      "end": 322.64,
+      "duration": 4.88,
+      "text": "corresponding adjacency list okay now"
+    },
+    {
+      "start": 320.8,
+      "end": 324.56,
+      "duration": 3.76,
+      "text": "let's quickly start off you can start"
+    },
+    {
+      "start": 322.64,
+      "end": 326.32,
+      "duration": 3.68,
+      "text": "with any of the given notes what i'll do"
+    },
+    {
+      "start": 324.56,
+      "end": 328.4,
+      "duration": 3.84,
+      "text": "is i'll start with this particular node"
+    },
+    {
+      "start": 326.32,
+      "end": 330.08,
+      "duration": 3.76,
+      "text": "one and i'll try to put that into the"
+    },
+    {
+      "start": 328.4,
+      "end": 331.92,
+      "duration": 3.52,
+      "text": "queue now whenever i try to put that"
+    },
+    {
+      "start": 330.08,
+      "end": 334.72,
+      "duration": 4.64,
+      "text": "into the queue what i'll try to do is"
+    },
+    {
+      "start": 331.92,
+      "end": 336.64,
+      "duration": 4.72,
+      "text": "i'll try to assign it a color so let's"
+    },
+    {
+      "start": 334.72,
+      "end": 338.56,
+      "duration": 3.84,
+      "text": "assume we start with color zero so i'll"
+    },
+    {
+      "start": 336.64,
+      "end": 340.48,
+      "duration": 3.84,
+      "text": "go over here and say hey listen you have"
+    },
+    {
+      "start": 338.56,
+      "end": 342.88,
+      "duration": 4.32,
+      "text": "a color zero he's like okay fine i have"
+    },
+    {
+      "start": 340.48,
+      "end": 345.52,
+      "duration": 5.04,
+      "text": "a color zero so apparently this guy has"
+    },
+    {
+      "start": 342.88,
+      "end": 347.44,
+      "duration": 4.56,
+      "text": "a color zero so that's the starting"
+    },
+    {
+      "start": 345.52,
+      "end": 349.12,
+      "duration": 3.6,
+      "text": "that's the initial stuff now you start"
+    },
+    {
+      "start": 347.44,
+      "end": 350.96,
+      "duration": 3.52,
+      "text": "to iterate on the cube now you start to"
+    },
+    {
+      "start": 349.12,
+      "end": 352.96,
+      "duration": 3.84,
+      "text": "iterate on the queue and you always get"
+    },
+    {
+      "start": 350.96,
+      "end": 354.8,
+      "duration": 3.84,
+      "text": "the top most element out is you always"
+    },
+    {
+      "start": 352.96,
+      "end": 356.96,
+      "duration": 4.0,
+      "text": "get the top most element out so what is"
+    },
+    {
+      "start": 354.8,
+      "end": 359.04,
+      "duration": 4.24,
+      "text": "your node the node is now"
+    },
+    {
+      "start": 356.96,
+      "end": 360.72,
+      "duration": 3.76,
+      "text": "one for you right the node is one so if"
+    },
+    {
+      "start": 359.04,
+      "end": 362.88,
+      "duration": 3.84,
+      "text": "i ask you who are the neighbor nodes of"
+    },
+    {
+      "start": 360.72,
+      "end": 365.12,
+      "duration": 4.4,
+      "text": "one that's two and you can easily get"
+    },
+    {
+      "start": 362.88,
+      "end": 367.28,
+      "duration": 4.4,
+      "text": "that by the adjacency list so the"
+    },
+    {
+      "start": 365.12,
+      "end": 369.76,
+      "duration": 4.64,
+      "text": "neighbor node is two now what we do is"
+    },
+    {
+      "start": 367.28,
+      "end": 372.72,
+      "duration": 5.44,
+      "text": "we check is the neighbor node colored"
+    },
+    {
+      "start": 369.76,
+      "end": 375.28,
+      "duration": 5.52,
+      "text": "and we see that the neighbor node is yet"
+    },
+    {
+      "start": 372.72,
+      "end": 377.28,
+      "duration": 4.56,
+      "text": "not colored so according to the biper"
+    },
+    {
+      "start": 375.28,
+      "end": 379.04,
+      "duration": 3.76,
+      "text": "tightness definition what is the"
+    },
+    {
+      "start": 377.28,
+      "end": 381.52,
+      "duration": 4.24,
+      "text": "definition"
+    },
+    {
+      "start": 379.04,
+      "end": 385.44,
+      "duration": 6.4,
+      "text": "no adjacent notes must have same colors"
+    },
+    {
+      "start": 381.52,
+      "end": 387.44,
+      "duration": 5.92,
+      "text": "so if this node one has a color zero so"
+    },
+    {
+      "start": 385.44,
+      "end": 390.24,
+      "duration": 4.8,
+      "text": "the adjacent node should have which"
+    },
+    {
+      "start": 387.44,
+      "end": 392.56,
+      "duration": 5.12,
+      "text": "color the opposite of it which is one so"
+    },
+    {
+      "start": 390.24,
+      "end": 395.04,
+      "duration": 4.8,
+      "text": "what you do is you color it with one yes"
+    },
+    {
+      "start": 392.56,
+      "end": 396.96,
+      "duration": 4.4,
+      "text": "you color this with one and not minus"
+    },
+    {
+      "start": 395.04,
+      "end": 398.64,
+      "duration": 3.6,
+      "text": "one you color this with one"
+    },
+    {
+      "start": 396.96,
+      "end": 400.96,
+      "duration": 4.0,
+      "text": "and you put that note into the queue"
+    },
+    {
+      "start": 398.64,
+      "end": 403.84,
+      "duration": 5.2,
+      "text": "data structure once you've done this i"
+    },
+    {
+      "start": 400.96,
+      "end": 406.08,
+      "duration": 5.12,
+      "text": "can say that this particular node does"
+    },
+    {
+      "start": 403.84,
+      "end": 407.84,
+      "duration": 4.0,
+      "text": "not have any further adjacent nodes"
+    },
+    {
+      "start": 406.08,
+      "end": 410.24,
+      "duration": 4.16,
+      "text": "thereby"
+    },
+    {
+      "start": 407.84,
+      "end": 413.04,
+      "duration": 5.2,
+      "text": "it's done next again you get the next"
+    },
+    {
+      "start": 410.24,
+      "end": 414.96,
+      "duration": 4.72,
+      "text": "guy too so let's see the next guy too"
+    },
+    {
+      "start": 413.04,
+      "end": 417.52,
+      "duration": 4.48,
+      "text": "and now let's check out for two for the"
+    },
+    {
+      "start": 414.96,
+      "end": 419.68,
+      "duration": 4.72,
+      "text": "adjacent notes of two for two the first"
+    },
+    {
+      "start": 417.52,
+      "end": 421.76,
+      "duration": 4.24,
+      "text": "adjacent note that you get is one which"
+    },
+    {
+      "start": 419.68,
+      "end": 424.0,
+      "duration": 4.32,
+      "text": "is already colored so there is no need"
+    },
+    {
+      "start": 421.76,
+      "end": 426.8,
+      "duration": 5.04,
+      "text": "of coloring this which is the next one"
+    },
+    {
+      "start": 424.0,
+      "end": 428.48,
+      "duration": 4.48,
+      "text": "three which is the next one six so there"
+    },
+    {
+      "start": 426.8,
+      "end": 431.04,
+      "duration": 4.24,
+      "text": "are two adjacent notes which have not"
+    },
+    {
+      "start": 428.48,
+      "end": 432.88,
+      "duration": 4.4,
+      "text": "been colored one is three one is six"
+    },
+    {
+      "start": 431.04,
+      "end": 435.04,
+      "duration": 4.0,
+      "text": "which color will you give three which"
+    },
+    {
+      "start": 432.88,
+      "end": 437.04,
+      "duration": 4.16,
+      "text": "color will you give three obviously the"
+    },
+    {
+      "start": 435.04,
+      "end": 439.12,
+      "duration": 4.08,
+      "text": "color that this guy has the opposite of"
+    },
+    {
+      "start": 437.04,
+      "end": 442.08,
+      "duration": 5.04,
+      "text": "it so that is zero so you give the"
+    },
+    {
+      "start": 439.12,
+      "end": 444.16,
+      "duration": 5.04,
+      "text": "opposite color zero and you just put"
+    },
+    {
+      "start": 442.08,
+      "end": 446.4,
+      "duration": 4.32,
+      "text": "that into the queue which is the next"
+    },
+    {
+      "start": 444.16,
+      "end": 448.8,
+      "duration": 4.64,
+      "text": "adjacent node fix you give it the color"
+    },
+    {
+      "start": 446.4,
+      "end": 451.12,
+      "duration": 4.72,
+      "text": "zero and you put it into the cube so you"
+    },
+    {
+      "start": 448.8,
+      "end": 453.2,
+      "duration": 4.4,
+      "text": "can just give 6 the color 0 and put that"
+    },
+    {
+      "start": 451.12,
+      "end": 455.84,
+      "duration": 4.72,
+      "text": "into the queue so i can see the"
+    },
+    {
+      "start": 453.2,
+      "end": 457.84,
+      "duration": 4.64,
+      "text": "iteration for the node 2 is also"
+    },
+    {
+      "start": 455.84,
+      "end": 460.0,
+      "duration": 4.16,
+      "text": "completed let's get the next node which"
+    },
+    {
+      "start": 457.84,
+      "end": 461.76,
+      "duration": 3.92,
+      "text": "is node 3."
+    },
+    {
+      "start": 460.0,
+      "end": 463.92,
+      "duration": 3.92,
+      "text": "now let's check for node 3. who are the"
+    },
+    {
+      "start": 461.76,
+      "end": 466.56,
+      "duration": 4.8,
+      "text": "adjacent nodes of node 3 let's quickly"
+    },
+    {
+      "start": 463.92,
+      "end": 469.04,
+      "duration": 5.12,
+      "text": "check it's 2 and 4 but we see 2 is"
+    },
+    {
+      "start": 466.56,
+      "end": 471.44,
+      "duration": 4.88,
+      "text": "already colored and is the color correct"
+    },
+    {
+      "start": 469.04,
+      "end": 474.0,
+      "duration": 4.96,
+      "text": "is the color correct have a check"
+    },
+    {
+      "start": 471.44,
+      "end": 476.8,
+      "duration": 5.36,
+      "text": "this node had a 3 0 color and the"
+    },
+    {
+      "start": 474.0,
+      "end": 479.12,
+      "duration": 5.12,
+      "text": "adjacent node has a color 1 so it's ok"
+    },
+    {
+      "start": 476.8,
+      "end": 481.92,
+      "duration": 5.12,
+      "text": "the adjacent notes do not have the same"
+    },
+    {
+      "start": 479.12,
+      "end": 484.8,
+      "duration": 5.68,
+      "text": "color which is the next adjacent node"
+    },
+    {
+      "start": 481.92,
+      "end": 487.52,
+      "duration": 5.6,
+      "text": "four does it have a color no please"
+    },
+    {
+      "start": 484.8,
+      "end": 489.76,
+      "duration": 4.96,
+      "text": "color it with which color opposite of it"
+    },
+    {
+      "start": 487.52,
+      "end": 491.52,
+      "duration": 4.0,
+      "text": "so that will be one so you go to four"
+    },
+    {
+      "start": 489.76,
+      "end": 493.68,
+      "duration": 3.92,
+      "text": "and you say okay can i give it a color"
+    },
+    {
+      "start": 491.52,
+      "end": 495.28,
+      "duration": 3.76,
+      "text": "one i will i will give it a color one"
+    },
+    {
+      "start": 493.68,
+      "end": 496.88,
+      "duration": 3.2,
+      "text": "and at the same time i'll put that into"
+    },
+    {
+      "start": 495.28,
+      "end": 499.52,
+      "duration": 4.24,
+      "text": "the queue data structure"
+    },
+    {
+      "start": 496.88,
+      "end": 501.12,
+      "duration": 4.24,
+      "text": "so i can say the node three is completed"
+    },
+    {
+      "start": 499.52,
+      "end": 502.96,
+      "duration": 3.44,
+      "text": "now i can see that the node three is"
+    },
+    {
+      "start": 501.12,
+      "end": 505.6,
+      "duration": 4.48,
+      "text": "completed now let's get the next node"
+    },
+    {
+      "start": 502.96,
+      "end": 507.44,
+      "duration": 4.48,
+      "text": "which is node six they'll get the node"
+    },
+    {
+      "start": 505.6,
+      "end": 510.48,
+      "duration": 4.88,
+      "text": "so the note 6 is here which is already"
+    },
+    {
+      "start": 507.44,
+      "end": 512.08,
+      "duration": 4.64,
+      "text": "colored with color 0. so note 6 says my"
+    },
+    {
+      "start": 510.48,
+      "end": 513.92,
+      "duration": 3.44,
+      "text": "adjacent node is 2"
+    },
+    {
+      "start": 512.08,
+      "end": 515.44,
+      "duration": 3.36,
+      "text": "which is having an opposite color so"
+    },
+    {
+      "start": 513.92,
+      "end": 518.32,
+      "duration": 4.4,
+      "text": "that is ok"
+    },
+    {
+      "start": 515.44,
+      "end": 520.72,
+      "duration": 5.28,
+      "text": "we have a node 5 which is yet not"
+    },
+    {
+      "start": 518.32,
+      "end": 523.04,
+      "duration": 4.72,
+      "text": "colored we have a note 5 which is yet"
+    },
+    {
+      "start": 520.72,
+      "end": 524.64,
+      "duration": 3.92,
+      "text": "not colored so this is color 0 you need"
+    },
+    {
+      "start": 523.04,
+      "end": 526.96,
+      "duration": 3.92,
+      "text": "to color it with color 1 you need to"
+    },
+    {
+      "start": 524.64,
+      "end": 529.44,
+      "duration": 4.8,
+      "text": "color it with color 1 so this takes the"
+    },
+    {
+      "start": 526.96,
+      "end": 531.76,
+      "duration": 4.8,
+      "text": "color 1 and you can just put on the note"
+    },
+    {
+      "start": 529.44,
+      "end": 533.92,
+      "duration": 4.48,
+      "text": "5 perfect so i can say the note 6 is"
+    },
+    {
+      "start": 531.76,
+      "end": 535.92,
+      "duration": 4.16,
+      "text": "also done let's see the next one which"
+    },
+    {
+      "start": 533.92,
+      "end": 539.04,
+      "duration": 5.12,
+      "text": "is node four"
+    },
+    {
+      "start": 535.92,
+      "end": 540.72,
+      "duration": 4.8,
+      "text": "this is the node four and here is"
+    },
+    {
+      "start": 539.04,
+      "end": 543.12,
+      "duration": 4.08,
+      "text": "you see a problem but this is where the"
+    },
+    {
+      "start": 540.72,
+      "end": 545.04,
+      "duration": 4.32,
+      "text": "node four will come in and give and will"
+    },
+    {
+      "start": 543.12,
+      "end": 547.28,
+      "duration": 4.16,
+      "text": "tell you that okay"
+    },
+    {
+      "start": 545.04,
+      "end": 551.04,
+      "duration": 6.0,
+      "text": "there was a problem so let's see for"
+    },
+    {
+      "start": 547.28,
+      "end": 553.68,
+      "duration": 6.4,
+      "text": "note 4 note 4 has a color one note 4 has"
+    },
+    {
+      "start": 551.04,
+      "end": 555.84,
+      "duration": 4.8,
+      "text": "an adjacent node of 3 so this adjacent"
+    },
+    {
+      "start": 553.68,
+      "end": 557.2,
+      "duration": 3.52,
+      "text": "node has an opposite color to this color"
+    },
+    {
+      "start": 555.84,
+      "end": 559.6,
+      "duration": 3.76,
+      "text": "which is okay"
+    },
+    {
+      "start": 557.2,
+      "end": 563.12,
+      "duration": 5.92,
+      "text": "next note 4 has a 5"
+    },
+    {
+      "start": 559.6,
+      "end": 564.72,
+      "duration": 5.12,
+      "text": "but this 5 which is already colored has"
+    },
+    {
+      "start": 563.12,
+      "end": 566.32,
+      "duration": 3.2,
+      "text": "the same color"
+    },
+    {
+      "start": 564.72,
+      "end": 569.2,
+      "duration": 4.48,
+      "text": "has the same color"
+    },
+    {
+      "start": 566.32,
+      "end": 571.76,
+      "duration": 5.44,
+      "text": "thereby i say hey wait"
+    },
+    {
+      "start": 569.2,
+      "end": 573.84,
+      "duration": 4.64,
+      "text": "this guy has an adjacent node which was"
+    },
+    {
+      "start": 571.76,
+      "end": 576.16,
+      "duration": 4.4,
+      "text": "colored in some other direction and it"
+    },
+    {
+      "start": 573.84,
+      "end": 577.52,
+      "duration": 3.68,
+      "text": "apparently has the same color as i do"
+    },
+    {
+      "start": 576.16,
+      "end": 580.24,
+      "duration": 4.08,
+      "text": "have"
+    },
+    {
+      "start": 577.52,
+      "end": 581.52,
+      "duration": 4.0,
+      "text": "not a bipartite graph and you straight"
+    },
+    {
+      "start": 580.24,
+      "end": 582.24,
+      "duration": 2.0,
+      "text": "away say"
+    },
+    {
+      "start": 581.52,
+      "end": 585.2,
+      "duration": 3.68,
+      "text": "no"
+    },
+    {
+      "start": 582.24,
+      "end": 588.08,
+      "duration": 5.84,
+      "text": "you straight away return false saying it"
+    },
+    {
+      "start": 585.2,
+      "end": 590.8,
+      "duration": 5.6,
+      "text": "is not a bipartite graph if at any"
+    },
+    {
+      "start": 588.08,
+      "end": 593.2,
+      "duration": 5.12,
+      "text": "moment you find that any of the two"
+    },
+    {
+      "start": 590.8,
+      "end": 595.2,
+      "duration": 4.4,
+      "text": "adjacent notes are having"
+    },
+    {
+      "start": 593.2,
+      "end": 597.12,
+      "duration": 3.92,
+      "text": "are having the same colors you straight"
+    },
+    {
+      "start": 595.2,
+      "end": 600.24,
+      "duration": 5.04,
+      "text": "away tell them go back"
+    },
+    {
+      "start": 597.12,
+      "end": 602.32,
+      "duration": 5.2,
+      "text": "go back yes that is what you do so i"
+    },
+    {
+      "start": 600.24,
+      "end": 604.8,
+      "duration": 4.56,
+      "text": "will quickly take an example"
+    },
+    {
+      "start": 602.32,
+      "end": 606.56,
+      "duration": 4.24,
+      "text": "to show you what if it had an even"
+    },
+    {
+      "start": 604.8,
+      "end": 608.56,
+      "duration": 3.76,
+      "text": "length of cycle so let's quickly take an"
+    },
+    {
+      "start": 606.56,
+      "end": 611.2,
+      "duration": 4.64,
+      "text": "example four"
+    },
+    {
+      "start": 608.56,
+      "end": 612.88,
+      "duration": 4.32,
+      "text": "five perfect this is an even lens cycle"
+    },
+    {
+      "start": 611.2,
+      "end": 614.56,
+      "duration": 3.36,
+      "text": "so if you would have done uh if you"
+    },
+    {
+      "start": 612.88,
+      "end": 617.6,
+      "duration": 4.72,
+      "text": "would have taken the q data structure"
+    },
+    {
+      "start": 614.56,
+      "end": 620.4,
+      "duration": 5.84,
+      "text": "assuming you have this entire bfs"
+    },
+    {
+      "start": 617.6,
+      "end": 621.6,
+      "duration": 4.0,
+      "text": "algorithm into your head so node 1"
+    },
+    {
+      "start": 620.4,
+      "end": 624.72,
+      "duration": 4.32,
+      "text": "color 0"
+    },
+    {
+      "start": 621.6,
+      "end": 624.72,
+      "duration": 3.12,
+      "text": "node 1 will go to now"
+    },
+    {
+      "start": 625.76,
+      "end": 629.44,
+      "duration": 3.68,
+      "text": "that is the node will be 2"
+    },
+    {
+      "start": 627.52,
+      "end": 631.52,
+      "duration": 4.0,
+      "text": "color 1"
+    },
+    {
+      "start": 629.44,
+      "end": 633.84,
+      "duration": 4.4,
+      "text": "node 1 is done and push is 2"
+    },
+    {
+      "start": 631.52,
+      "end": 636.32,
+      "duration": 4.8,
+      "text": "so node 1 is done next"
+    },
+    {
+      "start": 633.84,
+      "end": 636.32,
+      "duration": 2.48,
+      "text": "node 2"
+    },
+    {
+      "start": 636.64,
+      "end": 641.52,
+      "duration": 4.88,
+      "text": "right node 2 says"
+    },
+    {
+      "start": 638.56,
+      "end": 644.24,
+      "duration": 5.68,
+      "text": "my adjacent is 1 which is color 0 okay"
+    },
+    {
+      "start": 641.52,
+      "end": 647.84,
+      "duration": 6.32,
+      "text": "we have a 3 we have a 5 opposite colors"
+    },
+    {
+      "start": 644.24,
+      "end": 651.36,
+      "duration": 7.12,
+      "text": "opposite colors three and five done"
+    },
+    {
+      "start": 647.84,
+      "end": 653.52,
+      "duration": 5.68,
+      "text": "next we get a note three"
+    },
+    {
+      "start": 651.36,
+      "end": 655.76,
+      "duration": 4.4,
+      "text": "the moment we get a note three no three"
+    },
+    {
+      "start": 653.52,
+      "end": 658.0,
+      "duration": 4.48,
+      "text": "says our color zero i have an adjacent"
+    },
+    {
+      "start": 655.76,
+      "end": 660.32,
+      "duration": 4.56,
+      "text": "two which is an opposite color so okay i"
+    },
+    {
+      "start": 658.0,
+      "end": 662.8,
+      "duration": 4.8,
+      "text": "have an adjacent four which is not"
+    },
+    {
+      "start": 660.32,
+      "end": 665.68,
+      "duration": 5.36,
+      "text": "colored color it with the opposite color"
+    },
+    {
+      "start": 662.8,
+      "end": 667.68,
+      "duration": 4.88,
+      "text": "colored so now this 4 will go here"
+    },
+    {
+      "start": 665.68,
+      "end": 668.72,
+      "duration": 3.04,
+      "text": "perfect done"
+    },
+    {
+      "start": 667.68,
+      "end": 670.24,
+      "duration": 2.56,
+      "text": "next"
+    },
+    {
+      "start": 668.72,
+      "end": 672.08,
+      "duration": 3.36,
+      "text": "node 5"
+    },
+    {
+      "start": 670.24,
+      "end": 674.24,
+      "duration": 4.0,
+      "text": "so node 5 says"
+    },
+    {
+      "start": 672.08,
+      "end": 676.72,
+      "duration": 4.64,
+      "text": "i have two adjacent nodes and both of"
+    },
+    {
+      "start": 674.24,
+      "end": 680.16,
+      "duration": 5.92,
+      "text": "them have opposite colors to what i have"
+    },
+    {
+      "start": 676.72,
+      "end": 681.68,
+      "duration": 4.96,
+      "text": "so that is okay so note 5 is done next"
+    },
+    {
+      "start": 680.16,
+      "end": 684.24,
+      "duration": 4.08,
+      "text": "node 4 comes in"
+    },
+    {
+      "start": 681.68,
+      "end": 687.36,
+      "duration": 5.68,
+      "text": "now when node 4 comes in it says okay we"
+    },
+    {
+      "start": 684.24,
+      "end": 689.28,
+      "duration": 5.04,
+      "text": "have one and this one has zero this one"
+    },
+    {
+      "start": 687.36,
+      "end": 691.44,
+      "duration": 4.08,
+      "text": "has zero only one is there which is"
+    },
+    {
+      "start": 689.28,
+      "end": 693.84,
+      "duration": 4.56,
+      "text": "uncolored color it with zero and put"
+    },
+    {
+      "start": 691.44,
+      "end": 696.96,
+      "duration": 5.52,
+      "text": "that into the queue node four is done"
+    },
+    {
+      "start": 693.84,
+      "end": 699.68,
+      "duration": 5.84,
+      "text": "next node six comes in"
+    },
+    {
+      "start": 696.96,
+      "end": 701.68,
+      "duration": 4.72,
+      "text": "and it says hey listen i have zero my"
+    },
+    {
+      "start": 699.68,
+      "end": 704.16,
+      "duration": 4.48,
+      "text": "adjacent node has one and i don't have"
+    },
+    {
+      "start": 701.68,
+      "end": 707.68,
+      "duration": 6.0,
+      "text": "any further adjusted notes so i'm done"
+    },
+    {
+      "start": 704.16,
+      "end": 709.44,
+      "duration": 5.28,
+      "text": "so ultimately ultimately yes the queue"
+    },
+    {
+      "start": 707.68,
+      "end": 711.44,
+      "duration": 3.76,
+      "text": "if you carefully see the queue becomes"
+    },
+    {
+      "start": 709.44,
+      "end": 713.52,
+      "duration": 4.08,
+      "text": "empty and you are able to color the"
+    },
+    {
+      "start": 711.44,
+      "end": 715.92,
+      "duration": 4.48,
+      "text": "color sorry you were able to color the"
+    },
+    {
+      "start": 713.52,
+      "end": 717.76,
+      "duration": 4.24,
+      "text": "graph and that will be stored in the"
+    },
+    {
+      "start": 715.92,
+      "end": 719.2,
+      "duration": 3.28,
+      "text": "color array and that will be stored in"
+    },
+    {
+      "start": 717.76,
+      "end": 721.6,
+      "duration": 3.84,
+      "text": "the color array"
+    },
+    {
+      "start": 719.2,
+      "end": 722.8,
+      "duration": 3.6,
+      "text": "so if you are able to color the graph"
+    },
+    {
+      "start": 721.6,
+      "end": 725.12,
+      "duration": 3.52,
+      "text": "and there is"
+    },
+    {
+      "start": 722.8,
+      "end": 727.04,
+      "duration": 4.24,
+      "text": "not a place where two adjacent nodes"
+    },
+    {
+      "start": 725.12,
+      "end": 730.72,
+      "duration": 5.6,
+      "text": "have the same color you can say that"
+    },
+    {
+      "start": 727.04,
+      "end": 732.4,
+      "duration": 5.36,
+      "text": "that graph is a bipartite graph i hope"
+    },
+    {
+      "start": 730.72,
+      "end": 735.28,
+      "duration": 4.56,
+      "text": "that makes sense"
+    },
+    {
+      "start": 732.4,
+      "end": 737.36,
+      "duration": 4.96,
+      "text": "so you might think okay bfs did work but"
+    },
+    {
+      "start": 735.28,
+      "end": 739.76,
+      "duration": 4.48,
+      "text": "what is the intuition the intuition is"
+    },
+    {
+      "start": 737.36,
+      "end": 742.32,
+      "duration": 4.96,
+      "text": "very simple it has brute force"
+    },
+    {
+      "start": 739.76,
+      "end": 745.28,
+      "duration": 5.52,
+      "text": "yes it is brute force what i did was"
+    },
+    {
+      "start": 742.32,
+      "end": 747.2,
+      "duration": 4.88,
+      "text": "very simple i started by coloring it uh"
+    },
+    {
+      "start": 745.28,
+      "end": 748.8,
+      "duration": 3.52,
+      "text": "coloring it with zero and whenever i"
+    },
+    {
+      "start": 747.2,
+      "end": 750.88,
+      "duration": 3.68,
+      "text": "found an adjacent note i gave him an"
+    },
+    {
+      "start": 748.8,
+      "end": 752.72,
+      "duration": 3.92,
+      "text": "opposite color at the next time whenever"
+    },
+    {
+      "start": 750.88,
+      "end": 754.64,
+      "duration": 3.76,
+      "text": "i had someone with color zero i give the"
+    },
+    {
+      "start": 752.72,
+      "end": 757.12,
+      "duration": 4.4,
+      "text": "adjacent notes zero and during the"
+    },
+    {
+      "start": 754.64,
+      "end": 760.56,
+      "duration": 5.92,
+      "text": "traversal if at any moment any two"
+    },
+    {
+      "start": 757.12,
+      "end": 763.04,
+      "duration": 5.92,
+      "text": "adjacent notes have been by mistakenly"
+    },
+    {
+      "start": 760.56,
+      "end": 765.76,
+      "duration": 5.2,
+      "text": "colored with the same colors i say it's"
+    },
+    {
+      "start": 763.04,
+      "end": 768.0,
+      "duration": 4.96,
+      "text": "not bipartite simple brute force of"
+    },
+    {
+      "start": 765.76,
+      "end": 769.6,
+      "duration": 3.84,
+      "text": "filling up colors zero one just keeping"
+    },
+    {
+      "start": 768.0,
+      "end": 771.92,
+      "duration": 3.92,
+      "text": "in mind two adjacent notes cannot have"
+    },
+    {
+      "start": 769.6,
+      "end": 773.44,
+      "duration": 3.84,
+      "text": "same color at any moment of traversal"
+    },
+    {
+      "start": 771.92,
+      "end": 774.96,
+      "duration": 3.04,
+      "text": "you get two adjacent notes having same"
+    },
+    {
+      "start": 773.44,
+      "end": 777.6,
+      "duration": 4.16,
+      "text": "color that means there has been a"
+    },
+    {
+      "start": 774.96,
+      "end": 779.04,
+      "duration": 4.08,
+      "text": "mistake and it's not a paper type simple"
+    },
+    {
+      "start": 777.6,
+      "end": 781.2,
+      "duration": 3.6,
+      "text": "there is no intuition it's a simple"
+    },
+    {
+      "start": 779.04,
+      "end": 783.36,
+      "duration": 4.32,
+      "text": "brute force of filling up colors using"
+    },
+    {
+      "start": 781.2,
+      "end": 785.92,
+      "duration": 4.72,
+      "text": "the traversal technique so now let's"
+    },
+    {
+      "start": 783.36,
+      "end": 787.28,
+      "duration": 3.92,
+      "text": "quickly get to the code so as usual i'll"
+    },
+    {
+      "start": 785.92,
+      "end": 790.16,
+      "duration": 4.24,
+      "text": "be writing the c plus plus code and the"
+    },
+    {
+      "start": 787.28,
+      "end": 793.36,
+      "duration": 6.08,
+      "text": "java code is on the left so we're given"
+    },
+    {
+      "start": 790.16,
+      "end": 796.32,
+      "duration": 6.16,
+      "text": "the adjacency uh list and the number of"
+    },
+    {
+      "start": 793.36,
+      "end": 797.76,
+      "duration": 4.4,
+      "text": "notes so we're going to follow a pfs"
+    },
+    {
+      "start": 796.32,
+      "end": 800.8,
+      "duration": 4.48,
+      "text": "technique so"
+    },
+    {
+      "start": 797.76,
+      "end": 802.64,
+      "duration": 4.88,
+      "text": "q we can secure that push uh it's a zero"
+    },
+    {
+      "start": 800.8,
+      "end": 803.92,
+      "duration": 3.12,
+      "text": "based indexing so zero"
+    },
+    {
+      "start": 802.64,
+      "end": 805.6,
+      "duration": 2.96,
+      "text": "we need a color"
+    },
+    {
+      "start": 803.92,
+      "end": 807.28,
+      "duration": 3.36,
+      "text": "so color of this"
+    },
+    {
+      "start": 805.6,
+      "end": 809.92,
+      "duration": 4.32,
+      "text": "please make sure all of these are"
+    },
+    {
+      "start": 807.28,
+      "end": 809.92,
+      "duration": 2.64,
+      "text": "colored with"
+    },
+    {
+      "start": 810.32,
+      "end": 815.52,
+      "duration": 5.2,
+      "text": "color of i equal to minus one so color"
+    },
+    {
+      "start": 812.56,
+      "end": 816.64,
+      "duration": 4.08,
+      "text": "is also done now let's quickly go on uh"
+    },
+    {
+      "start": 815.52,
+      "end": 819.68,
+      "duration": 4.16,
+      "text": "to"
+    },
+    {
+      "start": 816.64,
+      "end": 821.36,
+      "duration": 4.72,
+      "text": "travis the queue i can say node equal to"
+    },
+    {
+      "start": 819.68,
+      "end": 823.36,
+      "duration": 3.68,
+      "text": "q dot front"
+    },
+    {
+      "start": 821.36,
+      "end": 825.44,
+      "duration": 4.08,
+      "text": "right then i can secure that pop"
+    },
+    {
+      "start": 823.36,
+      "end": 827.44,
+      "duration": 4.08,
+      "text": "up now let's quickly travel"
+    },
+    {
+      "start": 825.44,
+      "end": 828.4,
+      "duration": 2.96,
+      "text": "in the adjacent nodes which is these"
+    },
+    {
+      "start": 827.44,
+      "end": 830.32,
+      "duration": 2.88,
+      "text": "guys"
+    },
+    {
+      "start": 828.4,
+      "end": 832.56,
+      "duration": 4.16,
+      "text": "and i say hey listen"
+    },
+    {
+      "start": 830.32,
+      "end": 834.72,
+      "duration": 4.4,
+      "text": "if you're yet not colored very very"
+    },
+    {
+      "start": 832.56,
+      "end": 836.0,
+      "duration": 3.44,
+      "text": "important if you are yet not colored"
+    },
+    {
+      "start": 834.72,
+      "end": 838.32,
+      "duration": 3.6,
+      "text": "that means this"
+    },
+    {
+      "start": 836.0,
+      "end": 840.32,
+      "duration": 4.32,
+      "text": "so at the first step make sure you color"
+    },
+    {
+      "start": 838.32,
+      "end": 842.48,
+      "duration": 4.16,
+      "text": "the zeroth guy with"
+    },
+    {
+      "start": 840.32,
+      "end": 845.68,
+      "duration": 5.36,
+      "text": "initial color zero so remember if the"
+    },
+    {
+      "start": 842.48,
+      "end": 848.24,
+      "duration": 5.76,
+      "text": "adjacent node is yet not color if the"
+    },
+    {
+      "start": 845.68,
+      "end": 850.88,
+      "duration": 5.2,
+      "text": "adjacent node is"
+    },
+    {
+      "start": 848.24,
+      "end": 852.56,
+      "duration": 4.32,
+      "text": "yet not colored what will you do you"
+    },
+    {
+      "start": 850.88,
+      "end": 855.44,
+      "duration": 4.56,
+      "text": "will get the opposite color will give"
+    },
+    {
+      "start": 852.56,
+      "end": 857.04,
+      "duration": 4.48,
+      "text": "the opposite color"
+    },
+    {
+      "start": 855.44,
+      "end": 859.76,
+      "duration": 4.32,
+      "text": "of the node"
+    },
+    {
+      "start": 857.04,
+      "end": 861.84,
+      "duration": 4.8,
+      "text": "so can i say the adjacent node is i t so"
+    },
+    {
+      "start": 859.76,
+      "end": 864.8,
+      "duration": 5.04,
+      "text": "the opposite color of the node will be"
+    },
+    {
+      "start": 861.84,
+      "end": 867.28,
+      "duration": 5.44,
+      "text": "not of this zero becomes one or one"
+    },
+    {
+      "start": 864.8,
+      "end": 868.16,
+      "duration": 3.36,
+      "text": "becomes zero but what if it has been"
+    },
+    {
+      "start": 867.28,
+      "end": 870.24,
+      "duration": 2.96,
+      "text": "colored"
+    },
+    {
+      "start": 868.16,
+      "end": 872.4,
+      "duration": 4.24,
+      "text": "what if it has been colored you just"
+    },
+    {
+      "start": 870.24,
+      "end": 873.84,
+      "duration": 3.6,
+      "text": "check hey adjacent note"
+    },
+    {
+      "start": 872.4,
+      "end": 878.64,
+      "duration": 6.24,
+      "text": "is your color"
+    },
+    {
+      "start": 873.84,
+      "end": 881.04,
+      "duration": 7.2,
+      "text": "equal to michael k adjacent node check"
+    },
+    {
+      "start": 878.64,
+      "end": 884.08,
+      "duration": 5.44,
+      "text": "so you just go ahead and say hey"
+    },
+    {
+      "start": 881.04,
+      "end": 884.88,
+      "duration": 3.84,
+      "text": "is the adjacent"
+    },
+    {
+      "start": 884.08,
+      "end": 886.72,
+      "duration": 2.64,
+      "text": "guy"
+    },
+    {
+      "start": 884.88,
+      "end": 887.84,
+      "duration": 2.96,
+      "text": "having the same color"
+    },
+    {
+      "start": 886.72,
+      "end": 889.2,
+      "duration": 2.48,
+      "text": "if it is"
+    },
+    {
+      "start": 887.84,
+      "end": 890.08,
+      "duration": 2.24,
+      "text": "that means someone would have colored"
+    },
+    {
+      "start": 889.2,
+      "end": 891.68,
+      "duration": 2.48,
+      "text": "before"
+    },
+    {
+      "start": 890.08,
+      "end": 894.24,
+      "duration": 4.16,
+      "text": "someone did"
+    },
+    {
+      "start": 891.68,
+      "end": 895.68,
+      "duration": 4.0,
+      "text": "color it on some other"
+    },
+    {
+      "start": 894.24,
+      "end": 897.92,
+      "duration": 3.68,
+      "text": "part"
+    },
+    {
+      "start": 895.68,
+      "end": 899.92,
+      "duration": 4.24,
+      "text": "like you saw in the example that we took"
+    },
+    {
+      "start": 897.92,
+      "end": 902.0,
+      "duration": 4.08,
+      "text": "this was colored in this direction so"
+    },
+    {
+      "start": 899.92,
+      "end": 904.4,
+      "duration": 4.48,
+      "text": "someone would have colored it but if it"
+    },
+    {
+      "start": 902.0,
+      "end": 906.24,
+      "duration": 4.24,
+      "text": "violates then i say it is not a"
+    },
+    {
+      "start": 904.4,
+      "end": 908.88,
+      "duration": 4.48,
+      "text": "bipartite and i say it is not a"
+    },
+    {
+      "start": 906.24,
+      "end": 910.56,
+      "duration": 4.32,
+      "text": "bipartite remember this and over here if"
+    },
+    {
+      "start": 908.88,
+      "end": 911.68,
+      "duration": 2.8,
+      "text": "you're coloring just make sure you push"
+    },
+    {
+      "start": 910.56,
+      "end": 914.48,
+      "duration": 3.92,
+      "text": "that"
+    },
+    {
+      "start": 911.68,
+      "end": 916.4,
+      "duration": 4.72,
+      "text": "node over here and once everything is"
+    },
+    {
+      "start": 914.48,
+      "end": 919.44,
+      "duration": 4.96,
+      "text": "done and if you find that you have"
+    },
+    {
+      "start": 916.4,
+      "end": 920.32,
+      "duration": 3.92,
+      "text": "travis everyone and this never appeared"
+    },
+    {
+      "start": 919.44,
+      "end": 921.76,
+      "duration": 2.32,
+      "text": "and you"
+    },
+    {
+      "start": 920.32,
+      "end": 923.6,
+      "duration": 3.28,
+      "text": "you're able to"
+    },
+    {
+      "start": 921.76,
+      "end": 925.92,
+      "duration": 4.16,
+      "text": "put in colors that means it is a"
+    },
+    {
+      "start": 923.6,
+      "end": 927.92,
+      "duration": 4.32,
+      "text": "bipartite and you can just return a true"
+    },
+    {
+      "start": 925.92,
+      "end": 930.48,
+      "duration": 4.56,
+      "text": "so let's quickly compile this and check"
+    },
+    {
+      "start": 927.92,
+      "end": 932.16,
+      "duration": 4.24,
+      "text": "if it is working fine it looks like our"
+    },
+    {
+      "start": 930.48,
+      "end": 933.84,
+      "duration": 3.36,
+      "text": "code is failing on a very large test"
+    },
+    {
+      "start": 932.16,
+      "end": 935.76,
+      "duration": 3.6,
+      "text": "case now"
+    },
+    {
+      "start": 933.84,
+      "end": 938.72,
+      "duration": 4.88,
+      "text": "since there is no mention that there can"
+    },
+    {
+      "start": 935.76,
+      "end": 940.48,
+      "duration": 4.72,
+      "text": "be different components as well so i'm"
+    },
+    {
+      "start": 938.72,
+      "end": 943.28,
+      "duration": 4.56,
+      "text": "assuming that there are multiple"
+    },
+    {
+      "start": 940.48,
+      "end": 945.84,
+      "duration": 5.36,
+      "text": "components and we are just checking for"
+    },
+    {
+      "start": 943.28,
+      "end": 947.84,
+      "duration": 4.56,
+      "text": "starting with zero so"
+    },
+    {
+      "start": 945.84,
+      "end": 949.92,
+      "duration": 4.08,
+      "text": "if you remember the components"
+    },
+    {
+      "start": 947.84,
+      "end": 951.92,
+      "duration": 4.08,
+      "text": "code you just need to run a for loop and"
+    },
+    {
+      "start": 949.92,
+      "end": 954.24,
+      "duration": 4.32,
+      "text": "if we are able to run a for loop i think"
+    },
+    {
+      "start": 951.92,
+      "end": 957.84,
+      "duration": 5.92,
+      "text": "we should be able to check it so public"
+    },
+    {
+      "start": 954.24,
+      "end": 957.84,
+      "duration": 3.6,
+      "text": "or we can do it private"
+    },
+    {
+      "start": 957.92,
+      "end": 962.16,
+      "duration": 4.24,
+      "text": "bull"
+    },
+    {
+      "start": 959.92,
+      "end": 965.12,
+      "duration": 5.2,
+      "text": "check and we can just take the starting"
+    },
+    {
+      "start": 962.16,
+      "end": 967.6,
+      "duration": 5.44,
+      "text": "node and we can take the same thing yes"
+    },
+    {
+      "start": 965.12,
+      "end": 969.28,
+      "duration": 4.16,
+      "text": "just make sure you take the same thing"
+    },
+    {
+      "start": 967.6,
+      "end": 971.36,
+      "duration": 3.76,
+      "text": "so usually whenever it feels on larger"
+    },
+    {
+      "start": 969.28,
+      "end": 973.28,
+      "duration": 4.0,
+      "text": "test cases it's generally the component"
+    },
+    {
+      "start": 971.36,
+      "end": 975.92,
+      "duration": 4.56,
+      "text": "thing so what you'll do is you'll just"
+    },
+    {
+      "start": 973.28,
+      "end": 977.84,
+      "duration": 4.56,
+      "text": "take it back if you'll just take it back"
+    },
+    {
+      "start": 975.92,
+      "end": 978.88,
+      "duration": 2.96,
+      "text": "and over here instead of zero you'll say"
+    },
+    {
+      "start": 977.84,
+      "end": 982.16,
+      "duration": 4.32,
+      "text": "start"
+    },
+    {
+      "start": 978.88,
+      "end": 983.76,
+      "duration": 4.88,
+      "text": "perfect and over here you'll say start"
+    },
+    {
+      "start": 982.16,
+      "end": 985.68,
+      "duration": 3.52,
+      "text": "and this color is something which you"
+    },
+    {
+      "start": 983.76,
+      "end": 987.36,
+      "duration": 3.6,
+      "text": "can define maybe here"
+    },
+    {
+      "start": 985.68,
+      "end": 988.64,
+      "duration": 2.96,
+      "text": "perfect and"
+    },
+    {
+      "start": 987.36,
+      "end": 989.36,
+      "duration": 2.0,
+      "text": "that's done"
+    },
+    {
+      "start": 988.64,
+      "end": 992.4,
+      "duration": 3.76,
+      "text": "so"
+    },
+    {
+      "start": 989.36,
+      "end": 994.48,
+      "duration": 5.12,
+      "text": "this color is a component these colors"
+    },
+    {
+      "start": 992.4,
+      "end": 997.28,
+      "duration": 4.88,
+      "text": "are component individual right"
+    },
+    {
+      "start": 994.48,
+      "end": 999.04,
+      "duration": 4.56,
+      "text": "individual component is what it now this"
+    },
+    {
+      "start": 997.28,
+      "end": 1001.12,
+      "duration": 3.84,
+      "text": "particular bull check well just check"
+    },
+    {
+      "start": 999.04,
+      "end": 1003.44,
+      "duration": 4.4,
+      "text": "for component so now you can take the"
+    },
+    {
+      "start": 1001.12,
+      "end": 1005.2,
+      "duration": 4.08,
+      "text": "color away again these things uh"
+    },
+    {
+      "start": 1003.44,
+      "end": 1006.96,
+      "duration": 3.52,
+      "text": "component stuff i've already done in the"
+    },
+    {
+      "start": 1005.2,
+      "end": 1009.52,
+      "duration": 4.32,
+      "text": "previous videos please go back and watch"
+    },
+    {
+      "start": 1006.96,
+      "end": 1011.52,
+      "duration": 4.56,
+      "text": "it please please go back and watch it so"
+    },
+    {
+      "start": 1009.52,
+      "end": 1014.0,
+      "duration": 4.48,
+      "text": "over here it's very simple now you know"
+    },
+    {
+      "start": 1011.52,
+      "end": 1016.32,
+      "duration": 4.8,
+      "text": "the notes are from 0 to v so just go"
+    },
+    {
+      "start": 1014.0,
+      "end": 1018.4,
+      "duration": 4.4,
+      "text": "something like this and say if it is not"
+    },
+    {
+      "start": 1016.32,
+      "end": 1019.84,
+      "duration": 3.52,
+      "text": "colored it means this component has not"
+    },
+    {
+      "start": 1018.4,
+      "end": 1023.44,
+      "duration": 5.04,
+      "text": "yet been touched"
+    },
+    {
+      "start": 1019.84,
+      "end": 1026.56,
+      "duration": 6.72,
+      "text": "so check for the check whether not i"
+    },
+    {
+      "start": 1023.44,
+      "end": 1029.6,
+      "duration": 6.16,
+      "text": "and v adjacent and the color guy"
+    },
+    {
+      "start": 1026.56,
+      "end": 1031.92,
+      "duration": 5.36,
+      "text": "and once you have checked it if if"
+    },
+    {
+      "start": 1029.6,
+      "end": 1034.16,
+      "duration": 4.56,
+      "text": "this comes out to be false that means"
+    },
+    {
+      "start": 1031.92,
+      "end": 1036.0,
+      "duration": 4.08,
+      "text": "this is not a vipertide and you can"
+    },
+    {
+      "start": 1034.16,
+      "end": 1037.2,
+      "duration": 3.04,
+      "text": "return or else at the end of the day if"
+    },
+    {
+      "start": 1036.0,
+      "end": 1039.2,
+      "duration": 3.2,
+      "text": "you have checked for all the components"
+    },
+    {
+      "start": 1037.2,
+      "end": 1040.64,
+      "duration": 3.44,
+      "text": "you can just return a true it's the same"
+    },
+    {
+      "start": 1039.2,
+      "end": 1042.16,
+      "duration": 2.96,
+      "text": "for loop that i've been teaching you in"
+    },
+    {
+      "start": 1040.64,
+      "end": 1043.84,
+      "duration": 3.2,
+      "text": "connected components"
+    },
+    {
+      "start": 1042.16,
+      "end": 1045.44,
+      "duration": 3.28,
+      "text": "like sorry components that if there are"
+    },
+    {
+      "start": 1043.84,
+      "end": 1048.0,
+      "duration": 4.16,
+      "text": "multiple components you always write the"
+    },
+    {
+      "start": 1045.44,
+      "end": 1050.08,
+      "duration": 4.64,
+      "text": "logic inside of for loop so what i'll do"
+    },
+    {
+      "start": 1048.0,
+      "end": 1052.56,
+      "duration": 4.56,
+      "text": "is i'll just quickly uh run this off it"
+    },
+    {
+      "start": 1050.08,
+      "end": 1054.48,
+      "duration": 4.4,
+      "text": "does it does run fine so it was for the"
+    },
+    {
+      "start": 1052.56,
+      "end": 1056.88,
+      "duration": 4.32,
+      "text": "component so remember whenever your code"
+    },
+    {
+      "start": 1054.48,
+      "end": 1058.8,
+      "duration": 4.32,
+      "text": "usually fails for larger test cases uh"
+    },
+    {
+      "start": 1056.88,
+      "end": 1060.64,
+      "duration": 3.76,
+      "text": "try this stuff out check for all the"
+    },
+    {
+      "start": 1058.8,
+      "end": 1062.72,
+      "duration": 3.92,
+      "text": "components what you can do is you can"
+    },
+    {
+      "start": 1060.64,
+      "end": 1065.28,
+      "duration": 4.64,
+      "text": "always start off with writing like this"
+    },
+    {
+      "start": 1062.72,
+      "end": 1066.96,
+      "duration": 4.24,
+      "text": "just in order to be safe so this is how"
+    },
+    {
+      "start": 1065.28,
+      "end": 1068.48,
+      "duration": 3.2,
+      "text": "we can easily check for piper tightness"
+    },
+    {
+      "start": 1066.96,
+      "end": 1069.92,
+      "duration": 2.96,
+      "text": "so what is the time complexity in the"
+    },
+    {
+      "start": 1068.48,
+      "end": 1072.56,
+      "duration": 4.08,
+      "text": "space complexity of this particular"
+    },
+    {
+      "start": 1069.92,
+      "end": 1074.8,
+      "duration": 4.88,
+      "text": "approach it's a similar to the pfs"
+    },
+    {
+      "start": 1072.56,
+      "end": 1076.08,
+      "duration": 3.52,
+      "text": "algorithm whatever bfs algorithm takes"
+    },
+    {
+      "start": 1074.8,
+      "end": 1077.68,
+      "duration": 2.88,
+      "text": "it's a similar over here so if you"
+    },
+    {
+      "start": 1076.08,
+      "end": 1079.6,
+      "duration": 3.52,
+      "text": "haven't checked out our bfs video you"
+    },
+    {
+      "start": 1077.68,
+      "end": 1081.04,
+      "duration": 3.36,
+      "text": "can go back and check it out so guys i"
+    },
+    {
+      "start": 1079.6,
+      "end": 1083.6,
+      "duration": 4.0,
+      "text": "hope i was able to explain you what is a"
+    },
+    {
+      "start": 1081.04,
+      "end": 1085.04,
+      "duration": 4.0,
+      "text": "bipartite graph so just in case i was"
+    },
+    {
+      "start": 1083.6,
+      "end": 1087.12,
+      "duration": 3.52,
+      "text": "please please make sure you like this"
+    },
+    {
+      "start": 1085.04,
+      "end": 1088.8,
+      "duration": 3.76,
+      "text": "video and if you're new to our channel"
+    },
+    {
+      "start": 1087.12,
+      "end": 1090.32,
+      "duration": 3.2,
+      "text": "what are you waiting for hit that"
+    },
+    {
+      "start": 1088.8,
+      "end": 1091.92,
+      "duration": 3.12,
+      "text": "subscribe button please please do hit"
+    },
+    {
+      "start": 1090.32,
+      "end": 1093.6,
+      "duration": 3.28,
+      "text": "that subscribe button if you haven't"
+    },
+    {
+      "start": 1091.92,
+      "end": 1095.36,
+      "duration": 3.44,
+      "text": "checked out our dpc's and the hd sheet"
+    },
+    {
+      "start": 1093.6,
+      "end": 1096.56,
+      "duration": 2.96,
+      "text": "the links are in the description with"
+    },
+    {
+      "start": 1095.36,
+      "end": 1098.16,
+      "duration": 2.8,
+      "text": "this i'll be wrapping up this video"
+    },
+    {
+      "start": 1096.56,
+      "end": 1099.92,
+      "duration": 3.36,
+      "text": "let's read some other video till then"
+    },
+    {
+      "start": 1098.16,
+      "end": 1102.01,
+      "duration": 3.85,
+      "text": "bye bye take care"
+    },
+    {
+      "start": 1099.92,
+      "end": 1107.04,
+      "duration": 7.12,
+      "text": "whenever your heart is"
+    },
+    {
+      "start": 1102.01,
+      "end": 1104.52,
+      "duration": 2.51,
+      "text": "[Music]"
+    },
+    {
+      "start": 1107.04,
+      "end": 1107.04,
+      "duration": 0.0,
+      "text": "a light broken"
+    }
+  ]
+}

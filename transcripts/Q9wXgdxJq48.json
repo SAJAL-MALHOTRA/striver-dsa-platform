@@ -1,0 +1,2767 @@
+{
+  "video_id": "Q9wXgdxJq48",
+  "title": "BS-27. Median in a Row Wise Sorted Matrix",
+  "duration_sec": 1393,
+  "segments": [
+    {
+      "start": 2.94,
+      "end": 6.3,
+      "text": "okay so let's continue with our one"
+    },
+    {
+      "start": 4.8,
+      "end": 7.44,
+      "text": "research playlist but for that hey we"
+    },
+    {
+      "start": 6.3,
+      "end": 9.24,
+      "text": "welcome back to the channel I hope you"
+    },
+    {
+      "start": 7.44,
+      "end": 10.44,
+      "text": "guys are doing extremely well so the"
+    },
+    {
+      "start": 9.24,
+      "end": 14.16,
+      "text": "problem that we are going to solve today"
+    },
+    {
+      "start": 10.44,
+      "end": 16.62,
+      "text": "is finding the median of a given row"
+    },
+    {
+      "start": 14.16,
+      "end": 18.84,
+      "text": "wise sorted Matrix so what is the"
+    },
+    {
+      "start": 16.62,
+      "end": 21.48,
+      "text": "problem stating it is stating that it"
+    },
+    {
+      "start": 18.84,
+      "end": 25.92,
+      "text": "will be given a 2d Matrix of size n"
+    },
+    {
+      "start": 21.48,
+      "end": 29.04,
+      "text": "cross M where n is odd and M is also odd"
+    },
+    {
+      "start": 25.92,
+      "end": 31.02,
+      "text": "so both of them are odd integers and you"
+    },
+    {
+      "start": 29.04,
+      "end": 33.84,
+      "text": "know when odd integers are multiplied"
+    },
+    {
+      "start": 31.02,
+      "end": 37.86,
+      "text": "the total number of elements will always"
+    },
+    {
+      "start": 33.84,
+      "end": 40.8,
+      "text": "be odd imagine n is 3 and ms5 in that"
+    },
+    {
+      "start": 37.86,
+      "end": 43.74,
+      "text": "case the result will be 15 and this will"
+    },
+    {
+      "start": 40.8,
+      "end": 47.64,
+      "text": "also be odd because 3 is odd and 5 is"
+    },
+    {
+      "start": 43.74,
+      "end": 50.4,
+      "text": "odd odd into odd is always odd so what"
+    },
+    {
+      "start": 47.64,
+      "end": 52.74,
+      "text": "you've given is a 2d Matrix which has"
+    },
+    {
+      "start": 50.4,
+      "end": 54.0,
+      "text": "odd number of integers what is the"
+    },
+    {
+      "start": 52.74,
+      "end": 56.76,
+      "text": "problem stating"
+    },
+    {
+      "start": 54.0,
+      "end": 58.98,
+      "text": "The Matrix is row y sorted what does"
+    },
+    {
+      "start": 56.76,
+      "end": 62.4,
+      "text": "that mean if you look at this first row"
+    },
+    {
+      "start": 58.98,
+      "end": 64.8,
+      "text": "this entire row is sorted if you look at"
+    },
+    {
+      "start": 62.4,
+      "end": 66.84,
+      "text": "the second row the entire row is sorted"
+    },
+    {
+      "start": 64.8,
+      "end": 69.06,
+      "text": "if you look at the third row the entire"
+    },
+    {
+      "start": 66.84,
+      "end": 72.24,
+      "text": "row is sorted now your task is to figure"
+    },
+    {
+      "start": 69.06,
+      "end": 73.74,
+      "text": "out the median now what is the median I"
+    },
+    {
+      "start": 72.24,
+      "end": 76.14,
+      "text": "can technically say"
+    },
+    {
+      "start": 73.74,
+      "end": 78.18,
+      "text": "let me quickly write down all the"
+    },
+    {
+      "start": 76.14,
+      "end": 79.86,
+      "text": "elements so what is the definition of"
+    },
+    {
+      "start": 78.18,
+      "end": 82.74,
+      "text": "median median is nothing but the middle"
+    },
+    {
+      "start": 79.86,
+      "end": 84.6,
+      "text": "value in a sorted set of numbers so if I"
+    },
+    {
+      "start": 82.74,
+      "end": 86.58,
+      "text": "take down all the integers in this"
+    },
+    {
+      "start": 84.6,
+      "end": 89.88,
+      "text": "particular 2D Matrix and I write them"
+    },
+    {
+      "start": 86.58,
+      "end": 91.56,
+      "text": "down in a sorted linear fashion it looks"
+    },
+    {
+      "start": 89.88,
+      "end": 93.42,
+      "text": "something like this I've asked you which"
+    },
+    {
+      "start": 91.56,
+      "end": 96.24,
+      "text": "is the middle one over here the middle"
+    },
+    {
+      "start": 93.42,
+      "end": 98.76,
+      "text": "value is 9 why because on the left of it"
+    },
+    {
+      "start": 96.24,
+      "end": 100.74,
+      "text": "it has exactly Seven Elements and on the"
+    },
+    {
+      "start": 98.76,
+      "end": 103.86,
+      "text": "right of it it also has exactly Seven"
+    },
+    {
+      "start": 100.74,
+      "end": 106.2,
+      "text": "Elements so on the left and the right it"
+    },
+    {
+      "start": 103.86,
+      "end": 107.94,
+      "text": "has equal number of elements thereby"
+    },
+    {
+      "start": 106.2,
+      "end": 111.12,
+      "text": "this one can be called as the middle"
+    },
+    {
+      "start": 107.94,
+      "end": 113.46,
+      "text": "value in a sorted set of numbers hence"
+    },
+    {
+      "start": 111.12,
+      "end": 116.1,
+      "text": "this will be my median and this is what"
+    },
+    {
+      "start": 113.46,
+      "end": 117.42,
+      "text": "the problem is asking you to return so"
+    },
+    {
+      "start": 116.1,
+      "end": 119.04,
+      "text": "this problem comes up in an interview"
+    },
+    {
+      "start": 117.42,
+      "end": 120.96,
+      "text": "you'll be starting off with the Brute"
+    },
+    {
+      "start": 119.04,
+      "end": 122.76,
+      "text": "Force solution so what is the extreme"
+    },
+    {
+      "start": 120.96,
+      "end": 124.74,
+      "text": "name solution that you can think of what"
+    },
+    {
+      "start": 122.76,
+      "end": 127.32,
+      "text": "I can think of is I'll be going through"
+    },
+    {
+      "start": 124.74,
+      "end": 130.62,
+      "text": "each and every element in the 2D Matrix"
+    },
+    {
+      "start": 127.32,
+      "end": 132.84,
+      "text": "I'll be putting that into a 1D I'll be"
+    },
+    {
+      "start": 130.62,
+      "end": 134.4,
+      "text": "putting that into a 1D array this 1D"
+    },
+    {
+      "start": 132.84,
+      "end": 136.68,
+      "text": "array will be containing all the"
+    },
+    {
+      "start": 134.4,
+      "end": 139.56,
+      "text": "elements of the 2D Matrix but it will"
+    },
+    {
+      "start": 136.68,
+      "end": 142.68,
+      "text": "not be be sorted and I know that the"
+    },
+    {
+      "start": 139.56,
+      "end": 145.26,
+      "text": "median is the middle value of the sorted"
+    },
+    {
+      "start": 142.68,
+      "end": 148.2,
+      "text": "set of numbers so what I'll do is I will"
+    },
+    {
+      "start": 145.26,
+      "end": 151.08,
+      "text": "quickly apply the Sorting algorithm I'll"
+    },
+    {
+      "start": 148.2,
+      "end": 153.3,
+      "text": "get this particular 1D array so what I"
+    },
+    {
+      "start": 151.08,
+      "end": 155.46,
+      "text": "have as of now is this particular 1D"
+    },
+    {
+      "start": 153.3,
+      "end": 157.92,
+      "text": "array which has the sorted set of"
+    },
+    {
+      "start": 155.46,
+      "end": 160.62,
+      "text": "numbers either the definition of median"
+    },
+    {
+      "start": 157.92,
+      "end": 163.44,
+      "text": "is middle value among all the set of"
+    },
+    {
+      "start": 160.62,
+      "end": 166.44,
+      "text": "numbers thereby I can straight away pick"
+    },
+    {
+      "start": 163.44,
+      "end": 168.3,
+      "text": "up the middle index now will be the"
+    },
+    {
+      "start": 166.44,
+      "end": 171.36,
+      "text": "middle index the total number of"
+    },
+    {
+      "start": 168.3,
+      "end": 174.54,
+      "text": "elements is 15. the first index will be"
+    },
+    {
+      "start": 171.36,
+      "end": 177.72,
+      "text": "0 the last index will be 14 the middle"
+    },
+    {
+      "start": 174.54,
+      "end": 180.96,
+      "text": "will always be 7 which is nothing but 15"
+    },
+    {
+      "start": 177.72,
+      "end": 182.88,
+      "text": "by 2 the integer value will be 7 15 by 2"
+    },
+    {
+      "start": 180.96,
+      "end": 185.52,
+      "text": "the integer value will be 7 so you pick"
+    },
+    {
+      "start": 182.88,
+      "end": 188.16,
+      "text": "up the value at the seventh index"
+    },
+    {
+      "start": 185.52,
+      "end": 191.16,
+      "text": "or you can say I'll be pick I'll be"
+    },
+    {
+      "start": 188.16,
+      "end": 193.32,
+      "text": "picking up the value at n into M by 2"
+    },
+    {
+      "start": 191.16,
+      "end": 195.06,
+      "text": "this will be immediate if I have to"
+    },
+    {
+      "start": 193.32,
+      "end": 196.86,
+      "text": "write down the Brute Force code it's"
+    },
+    {
+      "start": 195.06,
+      "end": 199.26,
+      "text": "going to be super simple I'll be"
+    },
+    {
+      "start": 196.86,
+      "end": 201.0,
+      "text": "defining an emptiness after that I have"
+    },
+    {
+      "start": 199.26,
+      "end": 204.12,
+      "text": "to go through every element in the 2D"
+    },
+    {
+      "start": 201.0,
+      "end": 206.58,
+      "text": "Matrix so I'll be scanning through 0 to"
+    },
+    {
+      "start": 204.12,
+      "end": 209.58,
+      "text": "n which is the rows I'll be scanning"
+    },
+    {
+      "start": 206.58,
+      "end": 212.28,
+      "text": "through 0 to M which is the columns"
+    },
+    {
+      "start": 209.58,
+      "end": 215.46,
+      "text": "right after that what I'll be doing is"
+    },
+    {
+      "start": 212.28,
+      "end": 219.3,
+      "text": "I'll be adding all the values into the"
+    },
+    {
+      "start": 215.46,
+      "end": 222.42,
+      "text": "1D list so Matrix of i j"
+    },
+    {
+      "start": 219.3,
+      "end": 225.12,
+      "text": "so after after these nested moves have"
+    },
+    {
+      "start": 222.42,
+      "end": 226.92,
+      "text": "operated I'll be having a list with all"
+    },
+    {
+      "start": 225.12,
+      "end": 229.14,
+      "text": "the numbers but it will not be in the"
+    },
+    {
+      "start": 226.92,
+      "end": 231.42,
+      "text": "sorted manner so what I'll what I'll do"
+    },
+    {
+      "start": 229.14,
+      "end": 232.86,
+      "text": "is I'll apply the Sorting algorithm so"
+    },
+    {
+      "start": 231.42,
+      "end": 235.26,
+      "text": "you can just apply the Sorting algorithm"
+    },
+    {
+      "start": 232.86,
+      "end": 237.0,
+      "text": "if it is C plus plus sort there's an"
+    },
+    {
+      "start": 235.26,
+      "end": 238.86,
+      "text": "internal function as sort if it is Java"
+    },
+    {
+      "start": 237.0,
+      "end": 239.76,
+      "text": "you can use RS dot sort I'll link that"
+    },
+    {
+      "start": 238.86,
+      "end": 241.92,
+      "text": "to you"
+    },
+    {
+      "start": 239.76,
+      "end": 246.3,
+      "text": "right after that you can straight away"
+    },
+    {
+      "start": 241.92,
+      "end": 248.04,
+      "text": "return or maybe you can straight away"
+    },
+    {
+      "start": 246.3,
+      "end": 252.3,
+      "text": "print or return whatever you want to do"
+    },
+    {
+      "start": 248.04,
+      "end": 254.7,
+      "text": "list of M into n by 2 and this will be"
+    },
+    {
+      "start": 252.3,
+      "end": 256.8,
+      "text": "your median if I ask you about the time"
+    },
+    {
+      "start": 254.7,
+      "end": 259.5,
+      "text": "complexity can I say that the time"
+    },
+    {
+      "start": 256.8,
+      "end": 260.64,
+      "text": "complexity will be n into n because you"
+    },
+    {
+      "start": 259.5,
+      "end": 262.86,
+      "text": "are scanning through each and every"
+    },
+    {
+      "start": 260.64,
+      "end": 264.6,
+      "text": "element after that you're applying a"
+    },
+    {
+      "start": 262.86,
+      "end": 268.32,
+      "text": "sorting algorithm"
+    },
+    {
+      "start": 264.6,
+      "end": 271.14,
+      "text": "in N into M elements so n into M into"
+    },
+    {
+      "start": 268.32,
+      "end": 273.3,
+      "text": "logarithmic of total elements so that"
+    },
+    {
+      "start": 271.14,
+      "end": 276.06,
+      "text": "will be the Sorting complexity so the"
+    },
+    {
+      "start": 273.3,
+      "end": 278.64,
+      "text": "overall complexity will be n into M plus"
+    },
+    {
+      "start": 276.06,
+      "end": 281.1,
+      "text": "n into M into logarithmic so somewhere"
+    },
+    {
+      "start": 278.64,
+      "end": 283.32,
+      "text": "it's it's near about n into n so the"
+    },
+    {
+      "start": 281.1,
+      "end": 285.54,
+      "text": "brute force is taking n cross M plus n"
+    },
+    {
+      "start": 283.32,
+      "end": 287.16,
+      "text": "cross M into logarithmic of n cross n"
+    },
+    {
+      "start": 285.54,
+      "end": 288.54,
+      "text": "this is where the interview will not be"
+    },
+    {
+      "start": 287.16,
+      "end": 290.16,
+      "text": "happy with this and it'll ask you to"
+    },
+    {
+      "start": 288.54,
+      "end": 292.26,
+      "text": "optimize it so if I'm looking for"
+    },
+    {
+      "start": 290.16,
+      "end": 294.84,
+      "text": "optimizations what can I optimize"
+    },
+    {
+      "start": 292.26,
+      "end": 297.42,
+      "text": "probably I can remove this n cross n"
+    },
+    {
+      "start": 294.84,
+      "end": 299.94,
+      "text": "sorry logarithmic of n cross M which"
+    },
+    {
+      "start": 297.42,
+      "end": 302.7,
+      "text": "will mean that the complexity will be"
+    },
+    {
+      "start": 299.94,
+      "end": 304.56,
+      "text": "reducing to 2 into n cross M I can think"
+    },
+    {
+      "start": 302.7,
+      "end": 306.54,
+      "text": "in this direction but is that a"
+    },
+    {
+      "start": 304.56,
+      "end": 309.6,
+      "text": "significant Improvement I don't see any"
+    },
+    {
+      "start": 306.54,
+      "end": 312.12,
+      "text": "significant Improvement so maybe just"
+    },
+    {
+      "start": 309.6,
+      "end": 314.28,
+      "text": "removing logarithmic might not be what"
+    },
+    {
+      "start": 312.12,
+      "end": 316.92,
+      "text": "the interviewer is expecting so I start"
+    },
+    {
+      "start": 314.28,
+      "end": 320.16,
+      "text": "thinking in other directions"
+    },
+    {
+      "start": 316.92,
+      "end": 321.78,
+      "text": "what is the other direction going below"
+    },
+    {
+      "start": 320.16,
+      "end": 323.76,
+      "text": "n cross M because"
+    },
+    {
+      "start": 321.78,
+      "end": 326.94,
+      "text": "I'm somewhere near n cross N I have to"
+    },
+    {
+      "start": 323.76,
+      "end": 330.78,
+      "text": "go below n cross n what does that mean"
+    },
+    {
+      "start": 326.94,
+      "end": 333.36,
+      "text": "the 2D Matrix has n cross M total number"
+    },
+    {
+      "start": 330.78,
+      "end": 336.48,
+      "text": "of elements if I'm going below it which"
+    },
+    {
+      "start": 333.36,
+      "end": 338.34,
+      "text": "means I'll have to skip some elements I"
+    },
+    {
+      "start": 336.48,
+      "end": 340.62,
+      "text": "can not definitely go through every"
+    },
+    {
+      "start": 338.34,
+      "end": 342.48,
+      "text": "element that is for sure if I'm going"
+    },
+    {
+      "start": 340.62,
+      "end": 345.24,
+      "text": "underneath I have to escape I have to"
+    },
+    {
+      "start": 342.48,
+      "end": 349.04,
+      "text": "skip delete some portion right"
+    },
+    {
+      "start": 345.24,
+      "end": 352.5,
+      "text": "second thing it's given sorted to delete"
+    },
+    {
+      "start": 349.04,
+      "end": 355.68,
+      "text": "sorted median which algorithm comes to"
+    },
+    {
+      "start": 352.5,
+      "end": 356.94,
+      "text": "your brain binary search yes by research"
+    },
+    {
+      "start": 355.68,
+      "end": 358.38,
+      "text": "is the algorithm you should start"
+    },
+    {
+      "start": 356.94,
+      "end": 361.98,
+      "text": "thinking"
+    },
+    {
+      "start": 358.38,
+      "end": 364.32,
+      "text": "before that let's look at the 1D sorted"
+    },
+    {
+      "start": 361.98,
+      "end": 367.14,
+      "text": "version of this 2D Matrix please"
+    },
+    {
+      "start": 364.32,
+      "end": 369.6,
+      "text": "carefully observe that this is the"
+    },
+    {
+      "start": 367.14,
+      "end": 372.24,
+      "text": "median and on the left of it it has"
+    },
+    {
+      "start": 369.6,
+      "end": 374.46,
+      "text": "seven elements on the right of it it has"
+    },
+    {
+      "start": 372.24,
+      "end": 376.62,
+      "text": "seven elements this will be helping us"
+    },
+    {
+      "start": 374.46,
+      "end": 378.84,
+      "text": "to form our binary search approach on"
+    },
+    {
+      "start": 376.62,
+      "end": 380.28,
+      "text": "the left seven on the right seven I'll"
+    },
+    {
+      "start": 378.84,
+      "end": 382.32,
+      "text": "tell you one thing"
+    },
+    {
+      "start": 380.28,
+      "end": 384.78,
+      "text": "whenever we do binary search on an"
+    },
+    {
+      "start": 382.32,
+      "end": 388.02,
+      "text": "answer what do we initially have we have"
+    },
+    {
+      "start": 384.78,
+      "end": 391.02,
+      "text": "the search space so let's quickly Define"
+    },
+    {
+      "start": 388.02,
+      "end": 394.26,
+      "text": "the search space tell me one thing where"
+    },
+    {
+      "start": 391.02,
+      "end": 395.64,
+      "text": "can your answer lie can I surely see the"
+    },
+    {
+      "start": 394.26,
+      "end": 398.64,
+      "text": "answer will be"
+    },
+    {
+      "start": 395.64,
+      "end": 400.62,
+      "text": "between the smallest till the largest"
+    },
+    {
+      "start": 398.64,
+      "end": 404.76,
+      "text": "element the answer will be somewhere"
+    },
+    {
+      "start": 400.62,
+      "end": 406.32,
+      "text": "between 1 and 16. can I definitely say"
+    },
+    {
+      "start": 404.76,
+      "end": 409.38,
+      "text": "that the answer will be somewhere"
+    },
+    {
+      "start": 406.32,
+      "end": 411.54,
+      "text": "between 1 and 16. I can definitely say"
+    },
+    {
+      "start": 409.38,
+      "end": 413.34,
+      "text": "that let's try to apply binary search"
+    },
+    {
+      "start": 411.54,
+      "end": 415.08,
+      "text": "and then we'll try to optimize it okay"
+    },
+    {
+      "start": 413.34,
+      "end": 417.12,
+      "text": "so what I've done is I've written down"
+    },
+    {
+      "start": 415.08,
+      "end": 420.84,
+      "text": "all the numbers and right at the bottom"
+    },
+    {
+      "start": 417.12,
+      "end": 423.3,
+      "text": "of it is the number of numbers"
+    },
+    {
+      "start": 420.84,
+      "end": 425.94,
+      "text": "less than equal to for an example if I"
+    },
+    {
+      "start": 423.3,
+      "end": 429.66,
+      "text": "pick up this 7 I'm counting how many are"
+    },
+    {
+      "start": 425.94,
+      "end": 431.88,
+      "text": "lesser than equal to in this 2D Matrix"
+    },
+    {
+      "start": 429.66,
+      "end": 433.38,
+      "text": "this one is this one is this one is this"
+    },
+    {
+      "start": 431.88,
+      "end": 436.02,
+      "text": "one is this one is this one is this one"
+    },
+    {
+      "start": 433.38,
+      "end": 438.3,
+      "text": "is seven numbers and that is what I have"
+    },
+    {
+      "start": 436.02,
+      "end": 440.34,
+      "text": "stated over here so before moving on to"
+    },
+    {
+      "start": 438.3,
+      "end": 442.56,
+      "text": "the thought process let me explain you"
+    },
+    {
+      "start": 440.34,
+      "end": 444.9,
+      "text": "certain things now this was the median"
+    },
+    {
+      "start": 442.56,
+      "end": 447.12,
+      "text": "right on the left of it we had seven"
+    },
+    {
+      "start": 444.9,
+      "end": 450.78,
+      "text": "elements on the right of it we had seven"
+    },
+    {
+      "start": 447.12,
+      "end": 453.78,
+      "text": "elements can I surely say everything on"
+    },
+    {
+      "start": 450.78,
+      "end": 455.46,
+      "text": "the left is smaller I cannot what if"
+    },
+    {
+      "start": 453.78,
+      "end": 457.32,
+      "text": "there was a 9 here they could have been"
+    },
+    {
+      "start": 455.46,
+      "end": 459.78,
+      "text": "so I cannot"
+    },
+    {
+      "start": 457.32,
+      "end": 462.36,
+      "text": "surely say that everything on the left"
+    },
+    {
+      "start": 459.78,
+      "end": 464.34,
+      "text": "is smaller at the same time I cannot"
+    },
+    {
+      "start": 462.36,
+      "end": 466.74,
+      "text": "surely say that everything on the right"
+    },
+    {
+      "start": 464.34,
+      "end": 470.1,
+      "text": "is greater I cannot say that as well"
+    },
+    {
+      "start": 466.74,
+      "end": 472.5,
+      "text": "thereby and keeping this equal to sine"
+    },
+    {
+      "start": 470.1,
+      "end": 475.5,
+      "text": "intact now how will I use that let's"
+    },
+    {
+      "start": 472.5,
+      "end": 478.14,
+      "text": "understand so if I'm having a 9 here if"
+    },
+    {
+      "start": 475.5,
+      "end": 481.14,
+      "text": "I'm having a nine here can I say one"
+    },
+    {
+      "start": 478.14,
+      "end": 484.26,
+      "text": "thing for sure I know there are seven"
+    },
+    {
+      "start": 481.14,
+      "end": 486.6,
+      "text": "elements on the left of nine this can be"
+    },
+    {
+      "start": 484.26,
+      "end": 488.58,
+      "text": "nine I don't care I don't care but I'm"
+    },
+    {
+      "start": 486.6,
+      "end": 492.0,
+      "text": "very much sure that there are seven"
+    },
+    {
+      "start": 488.58,
+      "end": 495.6,
+      "text": "elements on the left of nine at the same"
+    },
+    {
+      "start": 492.0,
+      "end": 499.08,
+      "text": "time if I include these couple of nines"
+    },
+    {
+      "start": 495.6,
+      "end": 501.9,
+      "text": "that makes it a total of nine elements"
+    },
+    {
+      "start": 499.08,
+      "end": 503.7,
+      "text": "nine elements lesser than equal to nine"
+    },
+    {
+      "start": 501.9,
+      "end": 505.38,
+      "text": "can I say that"
+    },
+    {
+      "start": 503.7,
+      "end": 508.26,
+      "text": "what if this was ten"
+    },
+    {
+      "start": 505.38,
+      "end": 510.36,
+      "text": "then including this 7 and including this"
+    },
+    {
+      "start": 508.26,
+      "end": 512.94,
+      "text": "one there'd be a minimum of eight"
+    },
+    {
+      "start": 510.36,
+      "end": 515.76,
+      "text": "element for short there'll be minimum of"
+    },
+    {
+      "start": 512.94,
+      "end": 517.26,
+      "text": "eight elements that is for sure okay"
+    },
+    {
+      "start": 515.76,
+      "end": 519.06,
+      "text": "what if"
+    },
+    {
+      "start": 517.26,
+      "end": 522.3,
+      "text": "we had this as"
+    },
+    {
+      "start": 519.06,
+      "end": 524.94,
+      "text": "seven in that case 7 would have been my"
+    },
+    {
+      "start": 522.3,
+      "end": 526.26,
+      "text": "median and how many would have been less"
+    },
+    {
+      "start": 524.94,
+      "end": 530.34,
+      "text": "than equal to seven"
+    },
+    {
+      "start": 526.26,
+      "end": 532.56,
+      "text": "seven for sure and this one including so"
+    },
+    {
+      "start": 530.34,
+      "end": 536.28,
+      "text": "eight elements lesser than equal to"
+    },
+    {
+      "start": 532.56,
+      "end": 538.62,
+      "text": "seven for sure for sure okay a single"
+    },
+    {
+      "start": 536.28,
+      "end": 540.66,
+      "text": "pattern what if this was seven this was"
+    },
+    {
+      "start": 538.62,
+      "end": 541.92,
+      "text": "seven this was seven this was seven in"
+    },
+    {
+      "start": 540.66,
+      "end": 544.56,
+      "text": "that case"
+    },
+    {
+      "start": 541.92,
+      "end": 547.44,
+      "text": "I'm definitely sure there'll be seven"
+    },
+    {
+      "start": 544.56,
+      "end": 549.78,
+      "text": "elements for sure and whatever is the"
+    },
+    {
+      "start": 547.44,
+      "end": 550.86,
+      "text": "median if I include this then we in"
+    },
+    {
+      "start": 549.78,
+      "end": 554.64,
+      "text": "total of"
+    },
+    {
+      "start": 550.86,
+      "end": 558.12,
+      "text": "11 Elements 11 elements smaller than"
+    },
+    {
+      "start": 554.64,
+      "end": 561.06,
+      "text": "seven one thing I'm very sure is it's"
+    },
+    {
+      "start": 558.12,
+      "end": 563.58,
+      "text": "somewhere greater than seven it cannot"
+    },
+    {
+      "start": 561.06,
+      "end": 565.68,
+      "text": "be seven it just cannot be seven even if"
+    },
+    {
+      "start": 563.58,
+      "end": 568.2,
+      "text": "I take this as nine it just cannot be"
+    },
+    {
+      "start": 565.68,
+      "end": 569.1,
+      "text": "seven it has to be somewhere greater"
+    },
+    {
+      "start": 568.2,
+      "end": 571.92,
+      "text": "than seven"
+    },
+    {
+      "start": 569.1,
+      "end": 575.22,
+      "text": "the number of elements smaller than"
+    },
+    {
+      "start": 571.92,
+      "end": 577.5,
+      "text": "median if I write this down number of"
+    },
+    {
+      "start": 575.22,
+      "end": 582.06,
+      "text": "elements"
+    },
+    {
+      "start": 577.5,
+      "end": 584.64,
+      "text": "smaller than median has to be somewhere"
+    },
+    {
+      "start": 582.06,
+      "end": 587.82,
+      "text": "greater than 7 it can be 8 it can be"
+    },
+    {
+      "start": 584.64,
+      "end": 590.76,
+      "text": "nine it can be 10 11 anything I know it"
+    },
+    {
+      "start": 587.82,
+      "end": 593.22,
+      "text": "has to be greater than 7 so what my task"
+    },
+    {
+      "start": 590.76,
+      "end": 595.74,
+      "text": "will be my task will be"
+    },
+    {
+      "start": 593.22,
+      "end": 598.86,
+      "text": "in this bottom line which is basically"
+    },
+    {
+      "start": 595.74,
+      "end": 602.58,
+      "text": "storing the numbers lesser than equal to"
+    },
+    {
+      "start": 598.86,
+      "end": 605.46,
+      "text": "find out the first occurrence find in"
+    },
+    {
+      "start": 602.58,
+      "end": 608.16,
+      "text": "the first occurrence where it is greater"
+    },
+    {
+      "start": 605.46,
+      "end": 610.8,
+      "text": "than 7 and this is this place which is"
+    },
+    {
+      "start": 608.16,
+      "end": 613.2,
+      "text": "having nine elements thereby the first"
+    },
+    {
+      "start": 610.8,
+      "end": 616.26,
+      "text": "element which is having more than seven"
+    },
+    {
+      "start": 613.2,
+      "end": 618.12,
+      "text": "occurs will be my median got the thought"
+    },
+    {
+      "start": 616.26,
+      "end": 621.06,
+      "text": "process now"
+    },
+    {
+      "start": 618.12,
+      "end": 622.86,
+      "text": "explain you how will I solve this so"
+    },
+    {
+      "start": 621.06,
+      "end": 625.2,
+      "text": "I've got the thought process what I have"
+    },
+    {
+      "start": 622.86,
+      "end": 626.58,
+      "text": "to do is I have to figure out the first"
+    },
+    {
+      "start": 625.2,
+      "end": 629.04,
+      "text": "element"
+    },
+    {
+      "start": 626.58,
+      "end": 631.16,
+      "text": "which has"
+    },
+    {
+      "start": 629.04,
+      "end": 634.86,
+      "text": "lesser than equal to numbers"
+    },
+    {
+      "start": 631.16,
+      "end": 638.1,
+      "text": "greater than 7 which is basically M into"
+    },
+    {
+      "start": 634.86,
+      "end": 640.86,
+      "text": "n by 2 which in this case is having nine"
+    },
+    {
+      "start": 638.1,
+      "end": 643.26,
+      "text": "elements hence nine is the answer"
+    },
+    {
+      "start": 640.86,
+      "end": 646.26,
+      "text": "how will I figure out the first element"
+    },
+    {
+      "start": 643.26,
+      "end": 649.2,
+      "text": "let's look at this"
+    },
+    {
+      "start": 646.26,
+      "end": 651.24,
+      "text": "remember this this we don't have I've"
+    },
+    {
+      "start": 649.2,
+      "end": 653.34,
+      "text": "written it manually we don't have it we"
+    },
+    {
+      "start": 651.24,
+      "end": 656.76,
+      "text": "just have the third space so let's deal"
+    },
+    {
+      "start": 653.34,
+      "end": 660.0,
+      "text": "with it at the third space low at one at"
+    },
+    {
+      "start": 656.76,
+      "end": 662.04,
+      "text": "the third space high at 16. would be the"
+    },
+    {
+      "start": 660.0,
+      "end": 665.7,
+      "text": "first middle the first middle will be"
+    },
+    {
+      "start": 662.04,
+      "end": 667.44,
+      "text": "eight the first middle will be eight I"
+    },
+    {
+      "start": 665.7,
+      "end": 670.44,
+      "text": "know over here from like the manual"
+    },
+    {
+      "start": 667.44,
+      "end": 673.26,
+      "text": "calculations then there are seven"
+    },
+    {
+      "start": 670.44,
+      "end": 675.36,
+      "text": "elements lesser than equal to there are"
+    },
+    {
+      "start": 673.26,
+      "end": 677.34,
+      "text": "seven elements lesser than equal to and"
+    },
+    {
+      "start": 675.36,
+      "end": 680.04,
+      "text": "I need more than seven I need more than"
+    },
+    {
+      "start": 677.34,
+      "end": 682.38,
+      "text": "seven so I know for sure I'll have to"
+    },
+    {
+      "start": 680.04,
+      "end": 684.54,
+      "text": "eliminate this section this section"
+    },
+    {
+      "start": 682.38,
+      "end": 686.64,
+      "text": "cannot be my answer because I am looking"
+    },
+    {
+      "start": 684.54,
+      "end": 689.04,
+      "text": "for more than seven and this has seven"
+    },
+    {
+      "start": 686.64,
+      "end": 690.78,
+      "text": "how will I figure out the seven how will"
+    },
+    {
+      "start": 689.04,
+      "end": 693.3,
+      "text": "I figure out the seven is my question"
+    },
+    {
+      "start": 690.78,
+      "end": 695.28,
+      "text": "I'll tell you that but first let's do"
+    },
+    {
+      "start": 693.3,
+      "end": 697.2,
+      "text": "the binary search then I'll tell you how"
+    },
+    {
+      "start": 695.28,
+      "end": 698.94,
+      "text": "to figure out how many and less than"
+    },
+    {
+      "start": 697.2,
+      "end": 701.22,
+      "text": "equal to that's not a big thing so what"
+    },
+    {
+      "start": 698.94,
+      "end": 704.88,
+      "text": "I'll do is I will eliminate this sort"
+    },
+    {
+      "start": 701.22,
+      "end": 707.88,
+      "text": "space hence the low will move to"
+    },
+    {
+      "start": 704.88,
+      "end": 710.04,
+      "text": "straight here right one place ahead of"
+    },
+    {
+      "start": 707.88,
+      "end": 713.76,
+      "text": "mid"
+    },
+    {
+      "start": 710.04,
+      "end": 716.64,
+      "text": "what will be the mid it's 9 plus 16 25"
+    },
+    {
+      "start": 713.76,
+      "end": 720.24,
+      "text": "by 2 that's a twelve so the mid will be"
+    },
+    {
+      "start": 716.64,
+      "end": 723.06,
+      "text": "at 12. how many does it have"
+    },
+    {
+      "start": 720.24,
+      "end": 725.28,
+      "text": "13 less than equal to but I just need"
+    },
+    {
+      "start": 723.06,
+      "end": 728.16,
+      "text": "greater than 7 I just need greater than"
+    },
+    {
+      "start": 725.28,
+      "end": 731.46,
+      "text": "7. so maybe I can eliminate this portion"
+    },
+    {
+      "start": 728.16,
+      "end": 734.7,
+      "text": "maybe let's eliminate this portion"
+    },
+    {
+      "start": 731.46,
+      "end": 737.12,
+      "text": "let's move the high to one place before"
+    },
+    {
+      "start": 734.7,
+      "end": 737.12,
+      "text": "mid"
+    },
+    {
+      "start": 739.32,
+      "end": 744.96,
+      "text": "now what's my job I have to find the mid"
+    },
+    {
+      "start": 741.54,
+      "end": 748.5,
+      "text": "and this time the mid will be 11. quite"
+    },
+    {
+      "start": 744.96,
+      "end": 751.92,
+      "text": "simple how many does it have 11 but I"
+    },
+    {
+      "start": 748.5,
+      "end": 754.8,
+      "text": "need greater than 7 so again eliminate"
+    },
+    {
+      "start": 751.92,
+      "end": 756.0,
+      "text": "and the moment you eliminate the high"
+    },
+    {
+      "start": 754.8,
+      "end": 758.4,
+      "text": "and mid"
+    },
+    {
+      "start": 756.0,
+      "end": 760.2,
+      "text": "everything goes here and the next time"
+    },
+    {
+      "start": 758.4,
+      "end": 762.78,
+      "text": "the mid is also here"
+    },
+    {
+      "start": 760.2,
+      "end": 764.88,
+      "text": "how many does it have nine but I need"
+    },
+    {
+      "start": 762.78,
+      "end": 767.46,
+      "text": "greater than seven maybe not on the"
+    },
+    {
+      "start": 764.88,
+      "end": 770.04,
+      "text": "right so I'll eliminate this and when I"
+    },
+    {
+      "start": 767.46,
+      "end": 772.74,
+      "text": "eliminate this the high goes one plays"
+    },
+    {
+      "start": 770.04,
+      "end": 774.84,
+      "text": "below mid the high goes one place below"
+    },
+    {
+      "start": 772.74,
+      "end": 777.3,
+      "text": "mid and this is where you stop the bind"
+    },
+    {
+      "start": 774.84,
+      "end": 780.24,
+      "text": "research because the high has crossed"
+    },
+    {
+      "start": 777.3,
+      "end": 783.96,
+      "text": "your low if it has crossed I know that"
+    },
+    {
+      "start": 780.24,
+      "end": 786.02,
+      "text": "this is my partition I know that this is"
+    },
+    {
+      "start": 783.96,
+      "end": 789.24,
+      "text": "my partition and if this is my partition"
+    },
+    {
+      "start": 786.02,
+      "end": 791.46,
+      "text": "this is going to be my answer which is"
+    },
+    {
+      "start": 789.24,
+      "end": 792.48,
+      "text": "low because I was looking for greater"
+    },
+    {
+      "start": 791.46,
+      "end": 797.22,
+      "text": "than"
+    },
+    {
+      "start": 792.48,
+      "end": 800.16,
+      "text": "M cross n by 2 so first place of stop"
+    },
+    {
+      "start": 797.22,
+      "end": 802.92,
+      "text": "is this and this one will be my answer"
+    },
+    {
+      "start": 800.16,
+      "end": 804.36,
+      "text": "so you might be thinking hey strave if"
+    },
+    {
+      "start": 802.92,
+      "end": 806.22,
+      "text": "you're going to compute this entire"
+    },
+    {
+      "start": 804.36,
+      "end": 808.44,
+      "text": "array the complexity will be"
+    },
+    {
+      "start": 806.22,
+      "end": 810.96,
+      "text": "significantly higher we don't need this"
+    },
+    {
+      "start": 808.44,
+      "end": 812.94,
+      "text": "manual computation of each and every"
+    },
+    {
+      "start": 810.96,
+      "end": 815.7,
+      "text": "element in the third space what we need"
+    },
+    {
+      "start": 812.94,
+      "end": 818.28,
+      "text": "is just for the middle element eight"
+    },
+    {
+      "start": 815.7,
+      "end": 820.5,
+      "text": "first middle was it after that the"
+    },
+    {
+      "start": 818.28,
+      "end": 822.54,
+      "text": "middle was 12 meaning for 12 and after"
+    },
+    {
+      "start": 820.5,
+      "end": 825.18,
+      "text": "that the middle was 10 we need for 10"
+    },
+    {
+      "start": 822.54,
+      "end": 827.1,
+      "text": "and after that the middle was 9 so at"
+    },
+    {
+      "start": 825.18,
+      "end": 830.16,
+      "text": "the max if we don't need for every"
+    },
+    {
+      "start": 827.1,
+      "end": 832.56,
+      "text": "element in the search space so how do we"
+    },
+    {
+      "start": 830.16,
+      "end": 834.66,
+      "text": "compute this is the question as this"
+    },
+    {
+      "start": 832.56,
+      "end": 837.3,
+      "text": "easiest thing to do trust me I'll do"
+    },
+    {
+      "start": 834.66,
+      "end": 840.18,
+      "text": "that afterwards what uh as of now what"
+    },
+    {
+      "start": 837.3,
+      "end": 843.6,
+      "text": "I'll do is I'll just assume it to be a"
+    },
+    {
+      "start": 840.18,
+      "end": 845.7,
+      "text": "black box when if I just pass on the"
+    },
+    {
+      "start": 843.6,
+      "end": 847.92,
+      "text": "number it will tell me how many years"
+    },
+    {
+      "start": 845.7,
+      "end": 849.72,
+      "text": "smaller than equal to without that let's"
+    },
+    {
+      "start": 847.92,
+      "end": 851.64,
+      "text": "write the binary search Once the binary"
+    },
+    {
+      "start": 849.72,
+      "end": 853.62,
+      "text": "search gets into your head I don't think"
+    },
+    {
+      "start": 851.64,
+      "end": 855.48,
+      "text": "it's tough to figure out what is the"
+    },
+    {
+      "start": 853.62,
+      "end": 857.88,
+      "text": "total number of elements smaller than"
+    },
+    {
+      "start": 855.48,
+      "end": 859.56,
+      "text": "equal to so let's quickly the pseudo"
+    },
+    {
+      "start": 857.88,
+      "end": 860.94,
+      "text": "code but before that I've been hearing"
+    },
+    {
+      "start": 859.56,
+      "end": 862.74,
+      "text": "this a lot in the community that people"
+    },
+    {
+      "start": 860.94,
+      "end": 865.02,
+      "text": "are saying that the course is in C plus"
+    },
+    {
+      "start": 862.74,
+      "end": 867.18,
+      "text": "plus please correct them and tell them"
+    },
+    {
+      "start": 865.02,
+      "end": 868.92,
+      "text": "that Raj is writing pseudocode he"
+    },
+    {
+      "start": 867.18,
+      "end": 871.14,
+      "text": "doesn't focuses on any language"
+    },
+    {
+      "start": 868.92,
+      "end": 873.72,
+      "text": "whatsoever all the codes that I'm"
+    },
+    {
+      "start": 871.14,
+      "end": 876.18,
+      "text": "writing is in pseudocode you have been"
+    },
+    {
+      "start": 873.72,
+      "end": 878.04,
+      "text": "observing that so please correct anyone"
+    },
+    {
+      "start": 876.18,
+      "end": 879.06,
+      "text": "who's saying that this course is in C"
+    },
+    {
+      "start": 878.04,
+      "end": 881.16,
+      "text": "plus plus"
+    },
+    {
+      "start": 879.06,
+      "end": 883.14,
+      "text": "so I'll be writing the code"
+    },
+    {
+      "start": 881.16,
+      "end": 885.78,
+      "text": "so let's write down the function which"
+    },
+    {
+      "start": 883.14,
+      "end": 887.64,
+      "text": "will be taking a matrix the size of the"
+    },
+    {
+      "start": 885.78,
+      "end": 890.16,
+      "text": "uh the number of rows and the number of"
+    },
+    {
+      "start": 887.64,
+      "end": 893.04,
+      "text": "columns well the first thing I need the"
+    },
+    {
+      "start": 890.16,
+      "end": 894.66,
+      "text": "low I need the high so can I say the low"
+    },
+    {
+      "start": 893.04,
+      "end": 896.88,
+      "text": "will be nothing but"
+    },
+    {
+      "start": 894.66,
+      "end": 898.2,
+      "text": "the smallest don't need to go through"
+    },
+    {
+      "start": 896.88,
+      "end": 900.48,
+      "text": "like you don't have to go through the"
+    },
+    {
+      "start": 898.2,
+      "end": 903.06,
+      "text": "entire Matrix just go through this"
+    },
+    {
+      "start": 900.48,
+      "end": 906.06,
+      "text": "zeroth column and you'll get the lowest"
+    },
+    {
+      "start": 903.06,
+      "end": 908.16,
+      "text": "just go through the M minus one column"
+    },
+    {
+      "start": 906.06,
+      "end": 910.62,
+      "text": "you'll get the highest and that will be"
+    },
+    {
+      "start": 908.16,
+      "end": 912.12,
+      "text": "done I am assuming you can write that"
+    },
+    {
+      "start": 910.62,
+      "end": 915.48,
+      "text": "let's quickly write down the binary"
+    },
+    {
+      "start": 912.12,
+      "end": 918.0,
+      "text": "search be while low lesser than equal to"
+    },
+    {
+      "start": 915.48,
+      "end": 918.9,
+      "text": "I right that is what it will be after"
+    },
+    {
+      "start": 918.0,
+      "end": 921.12,
+      "text": "this"
+    },
+    {
+      "start": 918.9,
+      "end": 924.84,
+      "text": "you'll be taking a mid and the mid will"
+    },
+    {
+      "start": 921.12,
+      "end": 927.3,
+      "text": "be nothing but low plus High by two"
+    },
+    {
+      "start": 924.84,
+      "end": 930.36,
+      "text": "correct what after this I need to"
+    },
+    {
+      "start": 927.3,
+      "end": 933.96,
+      "text": "compute smaller equals so maybe let's"
+    },
+    {
+      "start": 930.36,
+      "end": 936.36,
+      "text": "assume smaller equals and assume it to"
+    },
+    {
+      "start": 933.96,
+      "end": 939.78,
+      "text": "be a black box so I'll call this black"
+    },
+    {
+      "start": 936.36,
+      "end": 942.48,
+      "text": "box which will compute me this small and"
+    },
+    {
+      "start": 939.78,
+      "end": 943.8,
+      "text": "equals I will tell them that this is the"
+    },
+    {
+      "start": 942.48,
+      "end": 946.5,
+      "text": "Matrix"
+    },
+    {
+      "start": 943.8,
+      "end": 949.38,
+      "text": "and I need to compute how many are"
+    },
+    {
+      "start": 946.5,
+      "end": 951.66,
+      "text": "smaller equals than mid then mid right"
+    },
+    {
+      "start": 949.38,
+      "end": 953.94,
+      "text": "after compute how many are smaller"
+    },
+    {
+      "start": 951.66,
+      "end": 956.94,
+      "text": "equals than mid and this is what the"
+    },
+    {
+      "start": 953.94,
+      "end": 960.24,
+      "text": "Black Box will give me all right once"
+    },
+    {
+      "start": 956.94,
+      "end": 963.84,
+      "text": "I've got this if the smaller equal"
+    },
+    {
+      "start": 960.24,
+      "end": 967.32,
+      "text": "I know the required is"
+    },
+    {
+      "start": 963.84,
+      "end": 969.42,
+      "text": "n into M cross 2 I have to find greater"
+    },
+    {
+      "start": 967.32,
+      "end": 972.8,
+      "text": "than this I to find greater than this so"
+    },
+    {
+      "start": 969.42,
+      "end": 972.8,
+      "text": "if the smaller equals"
+    },
+    {
+      "start": 973.26,
+      "end": 979.92,
+      "text": "is smaller than equal to this required"
+    },
+    {
+      "start": 976.86,
+      "end": 981.9,
+      "text": "which means it is smaller than 7 smaller"
+    },
+    {
+      "start": 979.92,
+      "end": 984.78,
+      "text": "than equal to 7 smaller than equal to 7"
+    },
+    {
+      "start": 981.9,
+      "end": 987.42,
+      "text": "in that case any I need more than seven"
+    },
+    {
+      "start": 984.78,
+      "end": 991.08,
+      "text": "go front go and look for a bigger value"
+    },
+    {
+      "start": 987.42,
+      "end": 993.9,
+      "text": "because this cannot be my median or else"
+    },
+    {
+      "start": 991.08,
+      "end": 996.24,
+      "text": "maybe look for a smaller value that's it"
+    },
+    {
+      "start": 993.9,
+      "end": 999.24,
+      "text": "that's your binary search quite simple"
+    },
+    {
+      "start": 996.24,
+      "end": 1001.88,
+      "text": "what will be your answer if you remember"
+    },
+    {
+      "start": 999.24,
+      "end": 1004.22,
+      "text": "the high is standing at seven or"
+    },
+    {
+      "start": 1001.88,
+      "end": 1006.5,
+      "text": "anything lesser than 7 and the low will"
+    },
+    {
+      "start": 1004.22,
+      "end": 1008.72,
+      "text": "always be standing at the first point so"
+    },
+    {
+      "start": 1006.5,
+      "end": 1011.18,
+      "text": "what you'll do is you will simply return"
+    },
+    {
+      "start": 1008.72,
+      "end": 1014.54,
+      "text": "the low"
+    },
+    {
+      "start": 1011.18,
+      "end": 1016.4,
+      "text": "which will be your answer then if if I"
+    },
+    {
+      "start": 1014.54,
+      "end": 1018.08,
+      "text": "just write the black box"
+    },
+    {
+      "start": 1016.4,
+      "end": 1020.12,
+      "text": "the logic is done the code is also"
+    },
+    {
+      "start": 1018.08,
+      "end": 1022.16,
+      "text": "completed okay so time to discuss the"
+    },
+    {
+      "start": 1020.12,
+      "end": 1025.76,
+      "text": "blank box what is the black box doing"
+    },
+    {
+      "start": 1022.16,
+      "end": 1028.28,
+      "text": "it's basically taking a matrix and a"
+    },
+    {
+      "start": 1025.76,
+      "end": 1030.86,
+      "text": "number X I will be returning you how"
+    },
+    {
+      "start": 1028.28,
+      "end": 1033.68,
+      "text": "many elements are smaller than equal to"
+    },
+    {
+      "start": 1030.86,
+      "end": 1037.22,
+      "text": "X right so over here let's assume this"
+    },
+    {
+      "start": 1033.68,
+      "end": 1039.44,
+      "text": "is the Matrix and X let's take it as 8."
+    },
+    {
+      "start": 1037.22,
+      "end": 1041.24,
+      "text": "so I'll ask you how many number are"
+    },
+    {
+      "start": 1039.44,
+      "end": 1043.16,
+      "text": "smaller than equal to 8 in this"
+    },
+    {
+      "start": 1041.24,
+      "end": 1045.5,
+      "text": "particular Matrix one of the easiest way"
+    },
+    {
+      "start": 1043.16,
+      "end": 1047.84,
+      "text": "is you go through every number and you"
+    },
+    {
+      "start": 1045.5,
+      "end": 1050.3,
+      "text": "basically compute how many are smaller"
+    },
+    {
+      "start": 1047.84,
+      "end": 1052.7,
+      "text": "than equal to but will you be doing it"
+    },
+    {
+      "start": 1050.3,
+      "end": 1054.68,
+      "text": "if you do it then it'll end up taking n"
+    },
+    {
+      "start": 1052.7,
+      "end": 1057.8,
+      "text": "cross M and you don't want this time"
+    },
+    {
+      "start": 1054.68,
+      "end": 1060.62,
+      "text": "complexity can we optimize yes we can so"
+    },
+    {
+      "start": 1057.8,
+      "end": 1063.56,
+      "text": "it's given that every row is sorted"
+    },
+    {
+      "start": 1060.62,
+      "end": 1066.56,
+      "text": "since every row is sorted I can use"
+    },
+    {
+      "start": 1063.56,
+      "end": 1069.32,
+      "text": "binary search yes I can what I'll do is"
+    },
+    {
+      "start": 1066.56,
+      "end": 1071.42,
+      "text": "at first I'll go to the zero through so"
+    },
+    {
+      "start": 1069.32,
+      "end": 1075.56,
+      "text": "I'll go to the zeroth row and I'll ask"
+    },
+    {
+      "start": 1071.42,
+      "end": 1078.38,
+      "text": "hey how many are lesser than eight I can"
+    },
+    {
+      "start": 1075.56,
+      "end": 1080.48,
+      "text": "do a binary search and I know we have"
+    },
+    {
+      "start": 1078.38,
+      "end": 1082.34,
+      "text": "read about upper Bound in this"
+    },
+    {
+      "start": 1080.48,
+      "end": 1085.72,
+      "text": "particular playlist and the upper bound"
+    },
+    {
+      "start": 1082.34,
+      "end": 1090.02,
+      "text": "will always point to the first element"
+    },
+    {
+      "start": 1085.72,
+      "end": 1092.66,
+      "text": "greater than eight if I say upper bound"
+    },
+    {
+      "start": 1090.02,
+      "end": 1094.4,
+      "text": "if I call the function that I have"
+    },
+    {
+      "start": 1092.66,
+      "end": 1097.46,
+      "text": "already written previously in the"
+    },
+    {
+      "start": 1094.4,
+      "end": 1100.94,
+      "text": "previous videos upper bound Matrix of 0"
+    },
+    {
+      "start": 1097.46,
+      "end": 1104.72,
+      "text": "because this is the 1D array which is"
+    },
+    {
+      "start": 1100.94,
+      "end": 1107.42,
+      "text": "Matrix of 0 and I pass on 8 this will be"
+    },
+    {
+      "start": 1104.72,
+      "end": 1110.86,
+      "text": "basically pointing me to this 9 which is"
+    },
+    {
+      "start": 1107.42,
+      "end": 1113.02,
+      "text": "at the index 3 which is at the index 3"
+    },
+    {
+      "start": 1110.86,
+      "end": 1116.24,
+      "text": "first element greater than 8"
+    },
+    {
+      "start": 1113.02,
+      "end": 1120.02,
+      "text": "corresponding me to index 3 it means it"
+    },
+    {
+      "start": 1116.24,
+      "end": 1123.38,
+      "text": "has three elements smaller than equal to"
+    },
+    {
+      "start": 1120.02,
+      "end": 1125.42,
+      "text": "8 smaller than equal to eight hence I"
+    },
+    {
+      "start": 1123.38,
+      "end": 1126.56,
+      "text": "can say on the Zero throw we have three"
+    },
+    {
+      "start": 1125.42,
+      "end": 1128.24,
+      "text": "elements"
+    },
+    {
+      "start": 1126.56,
+      "end": 1130.46,
+      "text": "let's do the similar thing on the first"
+    },
+    {
+      "start": 1128.24,
+      "end": 1134.0,
+      "text": "row what I'll do is I'll pass on the"
+    },
+    {
+      "start": 1130.46,
+      "end": 1135.8,
+      "text": "upper bound Matrix one and eight this"
+    },
+    {
+      "start": 1134.0,
+      "end": 1138.8,
+      "text": "time it will be pointing to 10 because"
+    },
+    {
+      "start": 1135.8,
+      "end": 1141.98,
+      "text": "10 is the first element which is greater"
+    },
+    {
+      "start": 1138.8,
+      "end": 1144.92,
+      "text": "than 8 which is at index 4 so on the"
+    },
+    {
+      "start": 1141.98,
+      "end": 1146.84,
+      "text": "first row we are having four elements"
+    },
+    {
+      "start": 1144.92,
+      "end": 1149.54,
+      "text": "which are"
+    },
+    {
+      "start": 1146.84,
+      "end": 1151.7,
+      "text": "smaller than equal to eight let's go to"
+    },
+    {
+      "start": 1149.54,
+      "end": 1154.58,
+      "text": "the next row which is the second row on"
+    },
+    {
+      "start": 1151.7,
+      "end": 1156.56,
+      "text": "the second row the passing Matrix of two"
+    },
+    {
+      "start": 1154.58,
+      "end": 1159.26,
+      "text": "this time it will be pointing to 9"
+    },
+    {
+      "start": 1156.56,
+      "end": 1161.66,
+      "text": "because 9 is the first element which is"
+    },
+    {
+      "start": 1159.26,
+      "end": 1165.44,
+      "text": "greater than eight"
+    },
+    {
+      "start": 1161.66,
+      "end": 1168.26,
+      "text": "hence zero elements so overall the total"
+    },
+    {
+      "start": 1165.44,
+      "end": 1170.84,
+      "text": "will be Seven Elements and this is what"
+    },
+    {
+      "start": 1168.26,
+      "end": 1173.24,
+      "text": "was expected straight away return this"
+    },
+    {
+      "start": 1170.84,
+      "end": 1175.48,
+      "text": "was it that tough if you know the"
+    },
+    {
+      "start": 1173.24,
+      "end": 1178.88,
+      "text": "concept of upper bound it is just about"
+    },
+    {
+      "start": 1175.48,
+      "end": 1180.92,
+      "text": "iterating through every Row in The"
+    },
+    {
+      "start": 1178.88,
+      "end": 1182.06,
+      "text": "Matrix so time to write down the black"
+    },
+    {
+      "start": 1180.92,
+      "end": 1184.16,
+      "text": "box"
+    },
+    {
+      "start": 1182.06,
+      "end": 1185.9,
+      "text": "so what I'll do is I'll quickly uh maybe"
+    },
+    {
+      "start": 1184.16,
+      "end": 1188.96,
+      "text": "I'll just call it Bland box as of now"
+    },
+    {
+      "start": 1185.9,
+      "end": 1191.42,
+      "text": "black box is taking a matrix and taking"
+    },
+    {
+      "start": 1188.96,
+      "end": 1194.24,
+      "text": "the value X and probably let's keep the"
+    },
+    {
+      "start": 1191.42,
+      "end": 1197.78,
+      "text": "count as zero and I know that I have to"
+    },
+    {
+      "start": 1194.24,
+      "end": 1201.38,
+      "text": "go through every row so 0 to n and the"
+    },
+    {
+      "start": 1197.78,
+      "end": 1203.0,
+      "text": "count plus equal to Upper bound maybe we"
+    },
+    {
+      "start": 1201.38,
+      "end": 1205.82,
+      "text": "can just call the upper bound function"
+    },
+    {
+      "start": 1203.0,
+      "end": 1207.44,
+      "text": "that we have already discussed in this"
+    },
+    {
+      "start": 1205.82,
+      "end": 1210.44,
+      "text": "particular playlist just copy paste that"
+    },
+    {
+      "start": 1207.44,
+      "end": 1213.14,
+      "text": "upper bound function and pass on the"
+    },
+    {
+      "start": 1210.44,
+      "end": 1216.2,
+      "text": "Matrix of I because that will be the 1D"
+    },
+    {
+      "start": 1213.14,
+      "end": 1218.36,
+      "text": "array comma your value X it'll be giving"
+    },
+    {
+      "start": 1216.2,
+      "end": 1221.66,
+      "text": "you this count once you have added count"
+    },
+    {
+      "start": 1218.36,
+      "end": 1223.7,
+      "text": "for all the rows return the count"
+    },
+    {
+      "start": 1221.66,
+      "end": 1225.26,
+      "text": "so what you have done is you have"
+    },
+    {
+      "start": 1223.7,
+      "end": 1228.44,
+      "text": "technically written down a black box"
+    },
+    {
+      "start": 1225.26,
+      "end": 1231.68,
+      "text": "that tells you how many are smaller than"
+    },
+    {
+      "start": 1228.44,
+      "end": 1234.02,
+      "text": "equal to X in the entire Matrix and what"
+    },
+    {
+      "start": 1231.68,
+      "end": 1236.84,
+      "text": "is the time complexity of this time"
+    },
+    {
+      "start": 1234.02,
+      "end": 1238.7,
+      "text": "complexity of this is n to go through"
+    },
+    {
+      "start": 1236.84,
+      "end": 1241.46,
+      "text": "every row and then you are doing a"
+    },
+    {
+      "start": 1238.7,
+      "end": 1244.7,
+      "text": "binary search of upper Bound in every"
+    },
+    {
+      "start": 1241.46,
+      "end": 1247.1,
+      "text": "row so that's a logarithmic base M while"
+    },
+    {
+      "start": 1244.7,
+      "end": 1251.66,
+      "text": "logarithmic base M because"
+    },
+    {
+      "start": 1247.1,
+      "end": 1254.84,
+      "text": "the length is M thereby so this is the"
+    },
+    {
+      "start": 1251.66,
+      "end": 1256.88,
+      "text": "time complexity let's look at uh the"
+    },
+    {
+      "start": 1254.84,
+      "end": 1258.86,
+      "text": "binary search time complexity what did"
+    },
+    {
+      "start": 1256.88,
+      "end": 1261.44,
+      "text": "the binary search term complexity can I"
+    },
+    {
+      "start": 1258.86,
+      "end": 1263.24,
+      "text": "say the smallest number so in the"
+    },
+    {
+      "start": 1261.44,
+      "end": 1266.6,
+      "text": "constraints it is given that the"
+    },
+    {
+      "start": 1263.24,
+      "end": 1269.36,
+      "text": "smallest number can be as small as 1 and"
+    },
+    {
+      "start": 1266.6,
+      "end": 1272.84,
+      "text": "the largest number can be as large as 10"
+    },
+    {
+      "start": 1269.36,
+      "end": 1276.44,
+      "text": "to the power 9 so at Max the third space"
+    },
+    {
+      "start": 1272.84,
+      "end": 1280.82,
+      "text": "can be of size 10 to the power 9. so the"
+    },
+    {
+      "start": 1276.44,
+      "end": 1284.06,
+      "text": "binary search is taking logarithmic base"
+    },
+    {
+      "start": 1280.82,
+      "end": 1286.76,
+      "text": "10 to the power 9 somewhere near about"
+    },
+    {
+      "start": 1284.06,
+      "end": 1289.04,
+      "text": "that and for every binary search for"
+    },
+    {
+      "start": 1286.76,
+      "end": 1291.68,
+      "text": "every binary search you're calling the"
+    },
+    {
+      "start": 1289.04,
+      "end": 1294.2,
+      "text": "black box which is taking let's look at"
+    },
+    {
+      "start": 1291.68,
+      "end": 1298.1,
+      "text": "this n into log"
+    },
+    {
+      "start": 1294.2,
+      "end": 1301.58,
+      "text": "2m so this will be your time complexity"
+    },
+    {
+      "start": 1298.1,
+      "end": 1305.8,
+      "text": "again I am repeating this is for"
+    },
+    {
+      "start": 1301.58,
+      "end": 1308.42,
+      "text": "binary search this is for the Black Box"
+    },
+    {
+      "start": 1305.8,
+      "end": 1312.08,
+      "text": "on every binary search you're calling"
+    },
+    {
+      "start": 1308.42,
+      "end": 1313.58,
+      "text": "the black box once got this so let's"
+    },
+    {
+      "start": 1312.08,
+      "end": 1315.38,
+      "text": "quickly get back into the code editor"
+    },
+    {
+      "start": 1313.58,
+      "end": 1317.78,
+      "text": "just in case you want the C plus plus"
+    },
+    {
+      "start": 1315.38,
+      "end": 1318.92,
+      "text": "Java python JavaScript codes all the"
+    },
+    {
+      "start": 1317.78,
+      "end": 1321.02,
+      "text": "links will be in the description make"
+    },
+    {
+      "start": 1318.92,
+      "end": 1323.42,
+      "text": "sure you check it out I'll just be doing"
+    },
+    {
+      "start": 1321.02,
+      "end": 1325.76,
+      "text": "the quick work through we figure out the"
+    },
+    {
+      "start": 1323.42,
+      "end": 1328.7,
+      "text": "minimum and the maximum in The Matrix"
+    },
+    {
+      "start": 1325.76,
+      "end": 1330.74,
+      "text": "and assign it to low and high once I've"
+    },
+    {
+      "start": 1328.7,
+      "end": 1333.02,
+      "text": "done this it's a pretty simple how many"
+    },
+    {
+      "start": 1330.74,
+      "end": 1335.42,
+      "text": "are required that's seven stuff so it's"
+    },
+    {
+      "start": 1333.02,
+      "end": 1338.0,
+      "text": "basically an into M by 2 simple binary"
+    },
+    {
+      "start": 1335.42,
+      "end": 1340.46,
+      "text": "search find at the mid have the black"
+    },
+    {
+      "start": 1338.0,
+      "end": 1342.86,
+      "text": "box as count small equal if it is"
+    },
+    {
+      "start": 1340.46,
+      "end": 1345.02,
+      "text": "smaller than equal to require you go for"
+    },
+    {
+      "start": 1342.86,
+      "end": 1346.88,
+      "text": "a bigger value so go on the right or"
+    },
+    {
+      "start": 1345.02,
+      "end": 1350.06,
+      "text": "else go on the left and this is what you"
+    },
+    {
+      "start": 1346.88,
+      "end": 1351.86,
+      "text": "return the black box is the exact same"
+    },
+    {
+      "start": 1350.06,
+      "end": 1354.74,
+      "text": "thing we have written and this one has"
+    },
+    {
+      "start": 1351.86,
+      "end": 1356.36,
+      "text": "been copy pasted from the previous video"
+    },
+    {
+      "start": 1354.74,
+      "end": 1358.64,
+      "text": "in case you don't know about upper bound"
+    },
+    {
+      "start": 1356.36,
+      "end": 1360.38,
+      "text": "please go back in the playlist and watch"
+    },
+    {
+      "start": 1358.64,
+      "end": 1361.82,
+      "text": "it out so if I quickly go ahead and"
+    },
+    {
+      "start": 1360.38,
+      "end": 1364.28,
+      "text": "submit this this will be run running"
+    },
+    {
+      "start": 1361.82,
+      "end": 1365.9,
+      "text": "fine so if you are still watching I hope"
+    },
+    {
+      "start": 1364.28,
+      "end": 1367.88,
+      "text": "you have understood the entire intuition"
+    },
+    {
+      "start": 1365.9,
+      "end": 1369.26,
+      "text": "and just in case you have please do"
+    },
+    {
+      "start": 1367.88,
+      "end": 1370.4,
+      "text": "consider giving us a like and if you"
+    },
+    {
+      "start": 1369.26,
+      "end": 1371.72,
+      "text": "haven't checked out our merchandise"
+    },
+    {
+      "start": 1370.4,
+      "end": 1373.34,
+      "text": "store the link will be in the"
+    },
+    {
+      "start": 1371.72,
+      "end": 1375.62,
+      "text": "description and if you're new to our"
+    },
+    {
+      "start": 1373.34,
+      "end": 1377.06,
+      "text": "channel do consider subscribing to us as"
+    },
+    {
+      "start": 1375.62,
+      "end": 1379.04,
+      "text": "well if you haven't followed me on"
+    },
+    {
+      "start": 1377.06,
+      "end": 1381.14,
+      "text": "Instagram LinkedIn Twitter please do"
+    },
+    {
+      "start": 1379.04,
+      "end": 1382.4,
+      "text": "that as well yeah with this I'll be"
+    },
+    {
+      "start": 1381.14,
+      "end": 1384.5,
+      "text": "wrapping up this video it's been in some"
+    },
+    {
+      "start": 1382.4,
+      "end": 1388.46,
+      "text": "other video till then bye take care"
+    },
+    {
+      "start": 1384.5,
+      "end": 1392.0,
+      "text": "whenever your heart is broken don't ever"
+    },
+    {
+      "start": 1388.46,
+      "end": 1394.12,
+      "text": "forget your golden I I will find the"
+    },
+    {
+      "start": 1392.0,
+      "end": 1394.12,
+      "text": "light"
+    }
+  ]
+}

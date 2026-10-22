@@ -1,0 +1,1557 @@
+{
+  "video_id": "w2G2W8l__pc",
+  "title": "BS-5. Search Element in Rotated Sorted Array II",
+  "duration_sec": 764,
+  "segments": [
+    {
+      "start": 3.12,
+      "end": 6.3,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.68,
+      "end": 8.1,
+      "text": "I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.3,
+      "end": 9.9,
+      "text": "so we will be continuing with our binary"
+    },
+    {
+      "start": 8.1,
+      "end": 12.96,
+      "text": "search playlist which is the part of the"
+    },
+    {
+      "start": 9.9,
+      "end": 14.28,
+      "text": "Strivers A to Z DSA course so till now"
+    },
+    {
+      "start": 12.96,
+      "end": 16.26,
+      "text": "I've covered up till this particular"
+    },
+    {
+      "start": 14.28,
+      "end": 18.42,
+      "text": "problem and in this video I'll be"
+    },
+    {
+      "start": 16.26,
+      "end": 21.78,
+      "text": "covering up the problem search in"
+    },
+    {
+      "start": 18.42,
+      "end": 23.94,
+      "text": "rotated sorted array part 2 but please"
+    },
+    {
+      "start": 21.78,
+      "end": 26.04,
+      "text": "please make sure that you watch the part"
+    },
+    {
+      "start": 23.94,
+      "end": 27.6,
+      "text": "one because if you haven't seen the part"
+    },
+    {
+      "start": 26.04,
+      "end": 29.7,
+      "text": "one you will not understand the part two"
+    },
+    {
+      "start": 27.6,
+      "end": 31.62,
+      "text": "because I'll be reusing the same code"
+    },
+    {
+      "start": 29.7,
+      "end": 34.44,
+      "text": "that I've written in the part one"
+    },
+    {
+      "start": 31.62,
+      "end": 36.72,
+      "text": "so what does the problem state it states"
+    },
+    {
+      "start": 34.44,
+      "end": 39.96,
+      "text": "that you have to again perform a search"
+    },
+    {
+      "start": 36.72,
+      "end": 42.42,
+      "text": "in a rotated sorted array but this time"
+    },
+    {
+      "start": 39.96,
+      "end": 46.26,
+      "text": "the array might have duplicates if you"
+    },
+    {
+      "start": 42.42,
+      "end": 49.26,
+      "text": "remember in part one it only had unique"
+    },
+    {
+      "start": 46.26,
+      "end": 51.66,
+      "text": "elements so we did write a solution for"
+    },
+    {
+      "start": 49.26,
+      "end": 55.14,
+      "text": "that and if I have to give a short recap"
+    },
+    {
+      "start": 51.66,
+      "end": 57.78,
+      "text": "the solution was quite simple we did the"
+    },
+    {
+      "start": 55.14,
+      "end": 60.18,
+      "text": "simple binary search thing and right"
+    },
+    {
+      "start": 57.78,
+      "end": 63.06,
+      "text": "after that we figured out which is the"
+    },
+    {
+      "start": 60.18,
+      "end": 65.58,
+      "text": "sorted half either the left half will be"
+    },
+    {
+      "start": 63.06,
+      "end": 68.58,
+      "text": "sorted or the right half will be sorted"
+    },
+    {
+      "start": 65.58,
+      "end": 72.24,
+      "text": "if the laptop is sorted we then checked"
+    },
+    {
+      "start": 68.58,
+      "end": 74.16,
+      "text": "if in the laptop we have the element if"
+    },
+    {
+      "start": 72.24,
+      "end": 76.38,
+      "text": "we have the element then we trim down"
+    },
+    {
+      "start": 74.16,
+      "end": 78.48,
+      "text": "the right half and if we did not then we"
+    },
+    {
+      "start": 76.38,
+      "end": 80.52,
+      "text": "trim down the left half and if it was"
+    },
+    {
+      "start": 78.48,
+      "end": 83.34,
+      "text": "right sorted we checked if the element"
+    },
+    {
+      "start": 80.52,
+      "end": 86.04,
+      "text": "is in the right half if it is then we"
+    },
+    {
+      "start": 83.34,
+      "end": 88.14,
+      "text": "trim down the left half or else we trim"
+    },
+    {
+      "start": 86.04,
+      "end": 92.52,
+      "text": "down the right half now my question is"
+    },
+    {
+      "start": 88.14,
+      "end": 94.68,
+      "text": "why will that approach not work so over"
+    },
+    {
+      "start": 92.52,
+      "end": 96.6,
+      "text": "here in this problem we do not need to"
+    },
+    {
+      "start": 94.68,
+      "end": 99.48,
+      "text": "return the index so if they're asking us"
+    },
+    {
+      "start": 96.6,
+      "end": 101.58,
+      "text": "Target 3 it does occur at three"
+    },
+    {
+      "start": 99.48,
+      "end": 103.26,
+      "text": "different indexes we do not have to"
+    },
+    {
+      "start": 101.58,
+      "end": 105.96,
+      "text": "return the index where it talks because"
+    },
+    {
+      "start": 103.26,
+      "end": 108.24,
+      "text": "if you try to do it using battery search"
+    },
+    {
+      "start": 105.96,
+      "end": 110.88,
+      "text": "that will not be possible you have to"
+    },
+    {
+      "start": 108.24,
+      "end": 113.58,
+      "text": "use the proper linear search now"
+    },
+    {
+      "start": 110.88,
+      "end": 116.34,
+      "text": "they are asking you does it exist or not"
+    },
+    {
+      "start": 113.58,
+      "end": 118.98,
+      "text": "so you have to tell me yes or no you do"
+    },
+    {
+      "start": 116.34,
+      "end": 121.68,
+      "text": "not have to tell me the index so why"
+    },
+    {
+      "start": 118.98,
+      "end": 124.44,
+      "text": "does the previous solution for Unique"
+    },
+    {
+      "start": 121.68,
+      "end": 125.52,
+      "text": "elements doesn't work so what was the"
+    },
+    {
+      "start": 124.44,
+      "end": 128.52,
+      "text": "first step that we were doing"
+    },
+    {
+      "start": 125.52,
+      "end": 128.52,
+      "text": "identifying"
+    },
+    {
+      "start": 128.82,
+      "end": 133.8,
+      "text": "the sorted half"
+    },
+    {
+      "start": 131.82,
+      "end": 136.68,
+      "text": "that was the first step that we had or"
+    },
+    {
+      "start": 133.8,
+      "end": 139.86,
+      "text": "that was The crucial step because if we"
+    },
+    {
+      "start": 136.68,
+      "end": 142.56,
+      "text": "do not know which part is sorted how can"
+    },
+    {
+      "start": 139.86,
+      "end": 145.5,
+      "text": "we eliminate how can we check in that"
+    },
+    {
+      "start": 142.56,
+      "end": 148.08,
+      "text": "part so that is why identifying the"
+    },
+    {
+      "start": 145.5,
+      "end": 150.3,
+      "text": "sorted half was very very important now"
+    },
+    {
+      "start": 148.08,
+      "end": 153.18,
+      "text": "the question comes well then it should"
+    },
+    {
+      "start": 150.3,
+      "end": 154.86,
+      "text": "work for this one as well but this for"
+    },
+    {
+      "start": 153.18,
+      "end": 157.08,
+      "text": "this one it doesn't work now let me"
+    },
+    {
+      "start": 154.86,
+      "end": 161.1,
+      "text": "write you some examples"
+    },
+    {
+      "start": 157.08,
+      "end": 164.16,
+      "text": "so let's write one two three four four"
+    },
+    {
+      "start": 161.1,
+      "end": 166.46,
+      "text": "five and six seven so assume this is an"
+    },
+    {
+      "start": 164.16,
+      "end": 166.46,
+      "text": "array"
+    },
+    {
+      "start": 166.56,
+      "end": 171.12,
+      "text": "it does have duplicates"
+    },
+    {
+      "start": 168.54,
+      "end": 173.46,
+      "text": "but over here imagine you start the low"
+    },
+    {
+      "start": 171.12,
+      "end": 176.82,
+      "text": "over here imagine you start the high"
+    },
+    {
+      "start": 173.46,
+      "end": 179.28,
+      "text": "over here and the mid is pointing here"
+    },
+    {
+      "start": 176.82,
+      "end": 181.74,
+      "text": "in that case you can say that this"
+    },
+    {
+      "start": 179.28,
+      "end": 183.72,
+      "text": "portion is sorted why can you say that"
+    },
+    {
+      "start": 181.74,
+      "end": 186.24,
+      "text": "it's a very simple thing because low was"
+    },
+    {
+      "start": 183.72,
+      "end": 188.16,
+      "text": "your middle was here and I was here you"
+    },
+    {
+      "start": 186.24,
+      "end": 191.04,
+      "text": "can easily say that this section is"
+    },
+    {
+      "start": 188.16,
+      "end": 196.14,
+      "text": "sorted why because this 2 is lesser than"
+    },
+    {
+      "start": 191.04,
+      "end": 198.6,
+      "text": "this 5 or this 6 is not lesser than 2"
+    },
+    {
+      "start": 196.14,
+      "end": 202.2,
+      "text": "thereby the left half can never be"
+    },
+    {
+      "start": 198.6,
+      "end": 205.26,
+      "text": "sorted I did have duplicates but still I"
+    },
+    {
+      "start": 202.2,
+      "end": 206.88,
+      "text": "could easily compare right now let me"
+    },
+    {
+      "start": 205.26,
+      "end": 209.12,
+      "text": "give you some other example"
+    },
+    {
+      "start": 206.88,
+      "end": 214.38,
+      "text": "imagine I write"
+    },
+    {
+      "start": 209.12,
+      "end": 216.84,
+      "text": "one two three three four four four five"
+    },
+    {
+      "start": 214.38,
+      "end": 219.24,
+      "text": "so even if I take this array"
+    },
+    {
+      "start": 216.84,
+      "end": 222.12,
+      "text": "even if I take this array and I write"
+    },
+    {
+      "start": 219.24,
+      "end": 224.04,
+      "text": "low here and I write higher so the mid"
+    },
+    {
+      "start": 222.12,
+      "end": 226.92,
+      "text": "will be somewhere here"
+    },
+    {
+      "start": 224.04,
+      "end": 231.24,
+      "text": "over here again I can say that this"
+    },
+    {
+      "start": 226.92,
+      "end": 233.46,
+      "text": "portion is not sorted by doing some"
+    },
+    {
+      "start": 231.24,
+      "end": 235.92,
+      "text": "simple comparisons between two and four"
+    },
+    {
+      "start": 233.46,
+      "end": 238.56,
+      "text": "and two and four this two and four is"
+    },
+    {
+      "start": 235.92,
+      "end": 240.66,
+      "text": "lesser while as this is greater so this"
+    },
+    {
+      "start": 238.56,
+      "end": 242.88,
+      "text": "is definitely not the sorted part again"
+    },
+    {
+      "start": 240.66,
+      "end": 244.08,
+      "text": "I can do it even if I had duplicates"
+    },
+    {
+      "start": 242.88,
+      "end": 246.6,
+      "text": "like four four"
+    },
+    {
+      "start": 244.08,
+      "end": 248.52,
+      "text": "when can I not do it as my question I'll"
+    },
+    {
+      "start": 246.6,
+      "end": 250.92,
+      "text": "show you an example so if I have"
+    },
+    {
+      "start": 248.52,
+      "end": 253.68,
+      "text": "something like just think of this Edge"
+    },
+    {
+      "start": 250.92,
+      "end": 255.32,
+      "text": "case what if I have something like one"
+    },
+    {
+      "start": 253.68,
+      "end": 259.2,
+      "text": "two three"
+    },
+    {
+      "start": 255.32,
+      "end": 260.88,
+      "text": "and goes on like or other I'll give you"
+    },
+    {
+      "start": 259.2,
+      "end": 262.34,
+      "text": "a very simple one three three three"
+    },
+    {
+      "start": 260.88,
+      "end": 266.04,
+      "text": "three"
+    },
+    {
+      "start": 262.34,
+      "end": 269.04,
+      "text": "three one two imagine this is my array"
+    },
+    {
+      "start": 266.04,
+      "end": 271.5,
+      "text": "just imagine and in that case the low"
+    },
+    {
+      "start": 269.04,
+      "end": 274.38,
+      "text": "will be pointing here the high will be"
+    },
+    {
+      "start": 271.5,
+      "end": 276.84,
+      "text": "pointing somewhere here and the mid will"
+    },
+    {
+      "start": 274.38,
+      "end": 278.7,
+      "text": "be pointing somewhere here"
+    },
+    {
+      "start": 276.84,
+      "end": 281.16,
+      "text": "now analyze over here"
+    },
+    {
+      "start": 278.7,
+      "end": 284.64,
+      "text": "you are standing at a position which is"
+    },
+    {
+      "start": 281.16,
+      "end": 288.24,
+      "text": "three and just because this entire thing"
+    },
+    {
+      "start": 284.64,
+      "end": 291.54,
+      "text": "yes just because this entire thing was"
+    },
+    {
+      "start": 288.24,
+      "end": 294.48,
+      "text": "equal so the last element tends to be"
+    },
+    {
+      "start": 291.54,
+      "end": 296.88,
+      "text": "same as the mid element right and over"
+    },
+    {
+      "start": 294.48,
+      "end": 298.62,
+      "text": "here the first element tends to be the"
+    },
+    {
+      "start": 296.88,
+      "end": 301.68,
+      "text": "same as the mid element"
+    },
+    {
+      "start": 298.62,
+      "end": 303.72,
+      "text": "and how were you identifying the sorted"
+    },
+    {
+      "start": 301.68,
+      "end": 306.0,
+      "text": "half by doing a comparison between"
+    },
+    {
+      "start": 303.72,
+      "end": 308.82,
+      "text": "middle and low and by doing a comparison"
+    },
+    {
+      "start": 306.0,
+      "end": 310.92,
+      "text": "between middle and height which cannot"
+    },
+    {
+      "start": 308.82,
+      "end": 312.48,
+      "text": "be done here because the mid is also"
+    },
+    {
+      "start": 310.92,
+      "end": 313.5,
+      "text": "three the low is also three the high is"
+    },
+    {
+      "start": 312.48,
+      "end": 316.08,
+      "text": "also three"
+    },
+    {
+      "start": 313.5,
+      "end": 319.5,
+      "text": "from the naked eye you can say that this"
+    },
+    {
+      "start": 316.08,
+      "end": 323.58,
+      "text": "portion is not okay not sorted and this"
+    },
+    {
+      "start": 319.5,
+      "end": 326.58,
+      "text": "portion is sorted but programmatically"
+    },
+    {
+      "start": 323.58,
+      "end": 330.18,
+      "text": "can you say this because all of them are"
+    },
+    {
+      "start": 326.58,
+      "end": 333.78,
+      "text": "three can you identify just by comparing"
+    },
+    {
+      "start": 330.18,
+      "end": 334.98,
+      "text": "these three elements you cannot yes you"
+    },
+    {
+      "start": 333.78,
+      "end": 336.78,
+      "text": "cannot"
+    },
+    {
+      "start": 334.98,
+      "end": 338.22,
+      "text": "say hi bye"
+    },
+    {
+      "start": 336.78,
+      "end": 340.38,
+      "text": "it fails"
+    },
+    {
+      "start": 338.22,
+      "end": 341.28,
+      "text": "so how can I make this work might be my"
+    },
+    {
+      "start": 340.38,
+      "end": 343.56,
+      "text": "question"
+    },
+    {
+      "start": 341.28,
+      "end": 347.34,
+      "text": "so one of the ways"
+    },
+    {
+      "start": 343.56,
+      "end": 349.32,
+      "text": "can be said as hey sorry what if"
+    },
+    {
+      "start": 347.34,
+      "end": 351.78,
+      "text": "we straight away"
+    },
+    {
+      "start": 349.32,
+      "end": 354.72,
+      "text": "like if the target is"
+    },
+    {
+      "start": 351.78,
+      "end": 357.42,
+      "text": "one we take that one and we check over"
+    },
+    {
+      "start": 354.72,
+      "end": 359.34,
+      "text": "here because they are same but again the"
+    },
+    {
+      "start": 357.42,
+      "end": 361.26,
+      "text": "question comes how do you know that the"
+    },
+    {
+      "start": 359.34,
+      "end": 363.9,
+      "text": "right half only contains consecutive"
+    },
+    {
+      "start": 361.26,
+      "end": 366.54,
+      "text": "threes it might happen this half as"
+    },
+    {
+      "start": 363.9,
+      "end": 370.56,
+      "text": "something like this so you are not sure"
+    },
+    {
+      "start": 366.54,
+      "end": 372.84,
+      "text": "so the better scenario is try to trim"
+    },
+    {
+      "start": 370.56,
+      "end": 374.1,
+      "text": "down those things try to trim down those"
+    },
+    {
+      "start": 372.84,
+      "end": 378.98,
+      "text": "things"
+    },
+    {
+      "start": 374.1,
+      "end": 378.98,
+      "text": "try to trim down this condition"
+    },
+    {
+      "start": 379.62,
+      "end": 382.92,
+      "text": "how will you trim down this Condition"
+    },
+    {
+      "start": 381.06,
+      "end": 384.18,
+      "text": "it's super simple"
+    },
+    {
+      "start": 382.92,
+      "end": 386.64,
+      "text": "I'll tell you"
+    },
+    {
+      "start": 384.18,
+      "end": 389.34,
+      "text": "why do I say trim down because you don't"
+    },
+    {
+      "start": 386.64,
+      "end": 390.66,
+      "text": "know like which because over here in the"
+    },
+    {
+      "start": 389.34,
+      "end": 392.34,
+      "text": "Naked Eyes you can see there is three"
+    },
+    {
+      "start": 390.66,
+      "end": 394.02,
+      "text": "three but while standing here while"
+    },
+    {
+      "start": 392.34,
+      "end": 396.78,
+      "text": "standing here you cannot just say that"
+    },
+    {
+      "start": 394.02,
+      "end": 398.82,
+      "text": "we have two on this side you have to do"
+    },
+    {
+      "start": 396.78,
+      "end": 401.1,
+      "text": "multiple checks and when the array"
+    },
+    {
+      "start": 398.82,
+      "end": 402.78,
+      "text": "shrinks it might be a problem the only"
+    },
+    {
+      "start": 401.1,
+      "end": 404.64,
+      "text": "problem we have is"
+    },
+    {
+      "start": 402.78,
+      "end": 407.4,
+      "text": "array low"
+    },
+    {
+      "start": 404.64,
+      "end": 410.76,
+      "text": "is equal to array mid"
+    },
+    {
+      "start": 407.4,
+      "end": 413.64,
+      "text": "is equal to array High"
+    },
+    {
+      "start": 410.76,
+      "end": 416.76,
+      "text": "that is the only problem I have and due"
+    },
+    {
+      "start": 413.64,
+      "end": 420.18,
+      "text": "to this reason I cannot successfully"
+    },
+    {
+      "start": 416.76,
+      "end": 424.14,
+      "text": "identify the sorted Hub if I can get rid"
+    },
+    {
+      "start": 420.18,
+      "end": 426.78,
+      "text": "of this condition if I can somehow solve"
+    },
+    {
+      "start": 424.14,
+      "end": 429.36,
+      "text": "this condition my job will be done can I"
+    },
+    {
+      "start": 426.78,
+      "end": 431.34,
+      "text": "say let's stand admit and let's take"
+    },
+    {
+      "start": 429.36,
+      "end": 433.2,
+      "text": "this three this three is equivalent to"
+    },
+    {
+      "start": 431.34,
+      "end": 434.76,
+      "text": "this 3 and this three so what I'll do is"
+    },
+    {
+      "start": 433.2,
+      "end": 437.04,
+      "text": "I will say"
+    },
+    {
+      "start": 434.76,
+      "end": 438.12,
+      "text": "I've already compared this three with my"
+    },
+    {
+      "start": 437.04,
+      "end": 440.76,
+      "text": "target"
+    },
+    {
+      "start": 438.12,
+      "end": 443.16,
+      "text": "that's what I always do whatever is that"
+    },
+    {
+      "start": 440.76,
+      "end": 445.38,
+      "text": "made whatever is at Mid"
+    },
+    {
+      "start": 443.16,
+      "end": 447.6,
+      "text": "I compare with Target don't we do that"
+    },
+    {
+      "start": 445.38,
+      "end": 449.82,
+      "text": "if I go back don't we do that over here"
+    },
+    {
+      "start": 447.6,
+      "end": 451.2,
+      "text": "we compare with Target so can I say one"
+    },
+    {
+      "start": 449.82,
+      "end": 452.82,
+      "text": "thing for short"
+    },
+    {
+      "start": 451.2,
+      "end": 453.72,
+      "text": "since I know all of the three elements"
+    },
+    {
+      "start": 452.82,
+      "end": 456.78,
+      "text": "are equal"
+    },
+    {
+      "start": 453.72,
+      "end": 458.88,
+      "text": "can I actually trim down my search space"
+    },
+    {
+      "start": 456.78,
+      "end": 460.32,
+      "text": "from this"
+    },
+    {
+      "start": 458.88,
+      "end": 462.12,
+      "text": "to this"
+    },
+    {
+      "start": 460.32,
+      "end": 464.76,
+      "text": "and from this"
+    },
+    {
+      "start": 462.12,
+      "end": 468.84,
+      "text": "do this can I trim down my search space"
+    },
+    {
+      "start": 464.76,
+      "end": 470.94,
+      "text": "I can because if this is not equivalent"
+    },
+    {
+      "start": 468.84,
+      "end": 472.92,
+      "text": "to the Target neither will be this"
+    },
+    {
+      "start": 470.94,
+      "end": 474.96,
+      "text": "neither will be this because all of them"
+    },
+    {
+      "start": 472.92,
+      "end": 477.6,
+      "text": "are equal if this is not equal this will"
+    },
+    {
+      "start": 474.96,
+      "end": 480.3,
+      "text": "also not be equal taking advantage of"
+    },
+    {
+      "start": 477.6,
+      "end": 481.86,
+      "text": "the condition right that's not I'll just"
+    },
+    {
+      "start": 480.3,
+      "end": 484.32,
+      "text": "shrink my"
+    },
+    {
+      "start": 481.86,
+      "end": 487.08,
+      "text": "third space I'll just shrink my search"
+    },
+    {
+      "start": 484.32,
+      "end": 489.54,
+      "text": "space that's what I'll do I'll shrink my"
+    },
+    {
+      "start": 487.08,
+      "end": 491.52,
+      "text": "search space and I'll continue on the"
+    },
+    {
+      "start": 489.54,
+      "end": 494.64,
+      "text": "next step so basically what I do is"
+    },
+    {
+      "start": 491.52,
+      "end": 497.16,
+      "text": "whenever we end up with this condition"
+    },
+    {
+      "start": 494.64,
+      "end": 499.68,
+      "text": "because this is what is stopping me to"
+    },
+    {
+      "start": 497.16,
+      "end": 500.88,
+      "text": "identify the sorted up whenever we get"
+    },
+    {
+      "start": 499.68,
+      "end": 503.1,
+      "text": "this condition"
+    },
+    {
+      "start": 500.88,
+      "end": 505.56,
+      "text": "shrink your search space and go ahead"
+    },
+    {
+      "start": 503.1,
+      "end": 508.68,
+      "text": "again you can shrink it again you can"
+    },
+    {
+      "start": 505.56,
+      "end": 511.14,
+      "text": "shrink it again you get shrink it so"
+    },
+    {
+      "start": 508.68,
+      "end": 512.94,
+      "text": "what I will do is I'll go back to the"
+    },
+    {
+      "start": 511.14,
+      "end": 515.88,
+      "text": "previous code that I've written remember"
+    },
+    {
+      "start": 512.94,
+      "end": 519.9,
+      "text": "this was the code so over here I will"
+    },
+    {
+      "start": 515.88,
+      "end": 522.48,
+      "text": "say I will attach the lines just here"
+    },
+    {
+      "start": 519.9,
+      "end": 525.78,
+      "text": "because this"
+    },
+    {
+      "start": 522.48,
+      "end": 528.66,
+      "text": "it works seamlessly the only problem"
+    },
+    {
+      "start": 525.78,
+      "end": 531.54,
+      "text": "that I have is when this will happen"
+    },
+    {
+      "start": 528.66,
+      "end": 533.46,
+      "text": "because if this happens then you cannot"
+    },
+    {
+      "start": 531.54,
+      "end": 535.98,
+      "text": "do an comparison you cannot do a"
+    },
+    {
+      "start": 533.46,
+      "end": 538.68,
+      "text": "comparison so what I'll do is I'll try"
+    },
+    {
+      "start": 535.98,
+      "end": 540.84,
+      "text": "to insert some lines and that lines I'll"
+    },
+    {
+      "start": 538.68,
+      "end": 544.92,
+      "text": "write it over here so those lines will"
+    },
+    {
+      "start": 540.84,
+      "end": 546.72,
+      "text": "be I'll be like Hey listen if array of"
+    },
+    {
+      "start": 544.92,
+      "end": 551.28,
+      "text": "flow"
+    },
+    {
+      "start": 546.72,
+      "end": 555.0,
+      "text": "is equal to equal to arr[mid] and"
+    },
+    {
+      "start": 551.28,
+      "end": 558.12,
+      "text": "similarly if arr[mid] is equal to"
+    },
+    {
+      "start": 555.0,
+      "end": 561.42,
+      "text": "equal to array of high"
+    },
+    {
+      "start": 558.12,
+      "end": 564.42,
+      "text": "can I say this I can in that case what"
+    },
+    {
+      "start": 561.42,
+      "end": 567.9,
+      "text": "I'll do is I will say please please go"
+    },
+    {
+      "start": 564.42,
+      "end": 570.96,
+      "text": "ahead buy one like I don't need you and"
+    },
+    {
+      "start": 567.9,
+      "end": 572.58,
+      "text": "please please go down one because I"
+    },
+    {
+      "start": 570.96,
+      "end": 575.94,
+      "text": "don't need you once you've done this"
+    },
+    {
+      "start": 572.58,
+      "end": 578.22,
+      "text": "continue why continue"
+    },
+    {
+      "start": 575.94,
+      "end": 581.16,
+      "text": "because I'm still not sure I'm still not"
+    },
+    {
+      "start": 578.22,
+      "end": 583.68,
+      "text": "sure it might be possible that this is"
+    },
+    {
+      "start": 581.16,
+      "end": 585.6,
+      "text": "also a three in that case again you'll"
+    },
+    {
+      "start": 583.68,
+      "end": 587.7,
+      "text": "come back to the same so it's better"
+    },
+    {
+      "start": 585.6,
+      "end": 590.7,
+      "text": "repeat the process so the next step"
+    },
+    {
+      "start": 587.7,
+      "end": 592.86,
+      "text": "you'll again get the same so again this"
+    },
+    {
+      "start": 590.7,
+      "end": 594.42,
+      "text": "can work out and again you will do a"
+    },
+    {
+      "start": 592.86,
+      "end": 596.94,
+      "text": "continue so basically what you'll do is"
+    },
+    {
+      "start": 594.42,
+      "end": 599.46,
+      "text": "instead of Performing this you'll again"
+    },
+    {
+      "start": 596.94,
+      "end": 602.16,
+      "text": "go back and start these steps and if you"
+    },
+    {
+      "start": 599.46,
+      "end": 604.74,
+      "text": "get these lines again again go back so"
+    },
+    {
+      "start": 602.16,
+      "end": 607.2,
+      "text": "until unless you get these conditions to"
+    },
+    {
+      "start": 604.74,
+      "end": 609.48,
+      "text": "be valid you never go here just keep on"
+    },
+    {
+      "start": 607.2,
+      "end": 611.4,
+      "text": "shrinking shrinking shrinking got it so"
+    },
+    {
+      "start": 609.48,
+      "end": 612.96,
+      "text": "within the C plus plus code in case you"
+    },
+    {
+      "start": 611.4,
+      "end": 614.82,
+      "text": "want the Java Python and JavaScript code"
+    },
+    {
+      "start": 612.96,
+      "end": 616.26,
+      "text": "you can find them in the description and"
+    },
+    {
+      "start": 614.82,
+      "end": 618.3,
+      "text": "you can also find out the problem Link"
+    },
+    {
+      "start": 616.26,
+      "end": 620.34,
+      "text": "in the description so this gets"
+    },
+    {
+      "start": 618.3,
+      "end": 623.34,
+      "text": "submitted but if I ask you the time"
+    },
+    {
+      "start": 620.34,
+      "end": 625.8,
+      "text": "complexity of this what will be that now"
+    },
+    {
+      "start": 623.34,
+      "end": 628.5,
+      "text": "on average I can say it's a binary"
+    },
+    {
+      "start": 625.8,
+      "end": 629.34,
+      "text": "search like for most of the cases it"
+    },
+    {
+      "start": 628.5,
+      "end": 633.84,
+      "text": "will be"
+    },
+    {
+      "start": 629.34,
+      "end": 636.9,
+      "text": "we go off login log base to n"
+    },
+    {
+      "start": 633.84,
+      "end": 638.94,
+      "text": "that will be the average case that means"
+    },
+    {
+      "start": 636.9,
+      "end": 641.88,
+      "text": "the most of like in most of the cases"
+    },
+    {
+      "start": 638.94,
+      "end": 646.4,
+      "text": "what if I give you a test case like"
+    },
+    {
+      "start": 641.88,
+      "end": 648.96,
+      "text": "three three one three three three three"
+    },
+    {
+      "start": 646.4,
+      "end": 649.92,
+      "text": "so in this case what will happen can you"
+    },
+    {
+      "start": 648.96,
+      "end": 651.66,
+      "text": "tell me"
+    },
+    {
+      "start": 649.92,
+      "end": 653.28,
+      "text": "if I give you a test case like this what"
+    },
+    {
+      "start": 651.66,
+      "end": 656.28,
+      "text": "will happen think"
+    },
+    {
+      "start": 653.28,
+      "end": 658.26,
+      "text": "so first you take the low as this you"
+    },
+    {
+      "start": 656.28,
+      "end": 660.3,
+      "text": "take the high as this and you take the"
+    },
+    {
+      "start": 658.26,
+      "end": 663.3,
+      "text": "mid as this correct"
+    },
+    {
+      "start": 660.3,
+      "end": 667.14,
+      "text": "for the first time you do this"
+    },
+    {
+      "start": 663.3,
+      "end": 669.42,
+      "text": "for the next time you can do this"
+    },
+    {
+      "start": 667.14,
+      "end": 672.06,
+      "text": "for the next sign you again basically"
+    },
+    {
+      "start": 669.42,
+      "end": 674.52,
+      "text": "now you perform the binary search so if"
+    },
+    {
+      "start": 672.06,
+      "end": 676.14,
+      "text": "there are a lot of duplicates you"
+    },
+    {
+      "start": 674.52,
+      "end": 678.06,
+      "text": "basically keep shrinking keep shrinking"
+    },
+    {
+      "start": 676.14,
+      "end": 680.94,
+      "text": "keep shrinking till you are tell you"
+    },
+    {
+      "start": 678.06,
+      "end": 683.46,
+      "text": "about that so at the worst case you"
+    },
+    {
+      "start": 680.94,
+      "end": 684.96,
+      "text": "might end up shrinking like near about"
+    },
+    {
+      "start": 683.46,
+      "end": 687.06,
+      "text": "the half the size of the array near"
+    },
+    {
+      "start": 684.96,
+      "end": 689.52,
+      "text": "above near above not exactly not exactly"
+    },
+    {
+      "start": 687.06,
+      "end": 693.18,
+      "text": "near about half the size of the array"
+    },
+    {
+      "start": 689.52,
+      "end": 695.94,
+      "text": "you might so the worst case can be the"
+    },
+    {
+      "start": 693.18,
+      "end": 697.68,
+      "text": "go of n by 2 where you shrink almost the"
+    },
+    {
+      "start": 695.94,
+      "end": 699.18,
+      "text": "half and then you are left out with some"
+    },
+    {
+      "start": 697.68,
+      "end": 701.52,
+      "text": "elements and then then you do the"
+    },
+    {
+      "start": 699.18,
+      "end": 703.5,
+      "text": "comparisons got that in the future if"
+    },
+    {
+      "start": 701.52,
+      "end": 705.72,
+      "text": "you get problems which have duplicates"
+    },
+    {
+      "start": 703.5,
+      "end": 708.54,
+      "text": "always try to solve the problem in terms"
+    },
+    {
+      "start": 705.72,
+      "end": 710.52,
+      "text": "of unique and then see where the unique"
+    },
+    {
+      "start": 708.54,
+      "end": 712.98,
+      "text": "will fail because whatever conditions"
+    },
+    {
+      "start": 710.52,
+      "end": 715.26,
+      "text": "like in this case we took this condition"
+    },
+    {
+      "start": 712.98,
+      "end": 718.2,
+      "text": "so we saw that that condition is failing"
+    },
+    {
+      "start": 715.26,
+      "end": 720.72,
+      "text": "for certain test cases and try to fit in"
+    },
+    {
+      "start": 718.2,
+      "end": 723.06,
+      "text": "that test case on that particular uh"
+    },
+    {
+      "start": 720.72,
+      "end": 724.88,
+      "text": "solution that you did for unique and"
+    },
+    {
+      "start": 723.06,
+      "end": 727.74,
+      "text": "eventually you will be able to solve for"
+    },
+    {
+      "start": 724.88,
+      "end": 730.02,
+      "text": "duplicates as well so this is how you"
+    },
+    {
+      "start": 727.74,
+      "end": 732.36,
+      "text": "generically approach problems which has"
+    },
+    {
+      "start": 730.02,
+      "end": 734.22,
+      "text": "duplicates in it so I hope you've"
+    },
+    {
+      "start": 732.36,
+      "end": 735.78,
+      "text": "understood the problem solving approach"
+    },
+    {
+      "start": 734.22,
+      "end": 738.12,
+      "text": "so going back to the sheet I can mark"
+    },
+    {
+      "start": 735.78,
+      "end": 740.16,
+      "text": "this one as done as well in case you're"
+    },
+    {
+      "start": 738.12,
+      "end": 741.42,
+      "text": "still watching please please please do"
+    },
+    {
+      "start": 740.16,
+      "end": 743.1,
+      "text": "consider giving us that like because"
+    },
+    {
+      "start": 741.42,
+      "end": 744.72,
+      "text": "that highly motivates me to make these"
+    },
+    {
+      "start": 743.1,
+      "end": 746.64,
+      "text": "kind of videos and if you're new to our"
+    },
+    {
+      "start": 744.72,
+      "end": 747.96,
+      "text": "Channel what are you waiting for hit"
+    },
+    {
+      "start": 746.64,
+      "end": 748.86,
+      "text": "that subscribe button right away and if"
+    },
+    {
+      "start": 747.96,
+      "end": 750.6,
+      "text": "you haven't followed me on Instagram"
+    },
+    {
+      "start": 748.86,
+      "end": 751.8,
+      "text": "Twitter and Linkedin all the links will"
+    },
+    {
+      "start": 750.6,
+      "end": 752.94,
+      "text": "be in the description with this I'll be"
+    },
+    {
+      "start": 751.8,
+      "end": 754.8,
+      "text": "wrapping up this video let's read in"
+    },
+    {
+      "start": 752.94,
+      "end": 759.12,
+      "text": "some other video till then bye bye take"
+    },
+    {
+      "start": 754.8,
+      "end": 762.72,
+      "text": "care whenever your heart is broken don't"
+    },
+    {
+      "start": 759.12,
+      "end": 765.02,
+      "text": "ever forget your golden I I will find"
+    },
+    {
+      "start": 762.72,
+      "end": 765.02,
+      "text": "the light"
+    }
+  ]
+}

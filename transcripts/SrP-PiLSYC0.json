@@ -1,0 +1,5546 @@
+{
+  "video_id": "SrP-PiLSYC0",
+  "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+  "duration_sec": 2079,
+  "num_segments": 923,
+  "segments": [
+    {
+      "start": 0.4,
+      "end": 3.52,
+      "duration": 3.12,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 1.76,
+      "end": 5.44,
+      "duration": 3.68,
+      "text": "i hope you guys are doing extremely well"
+    },
+    {
+      "start": 3.52,
+      "end": 8.08,
+      "duration": 4.56,
+      "text": "so this is the 11th lecture of the"
+    },
+    {
+      "start": 5.44,
+      "end": 11.28,
+      "duration": 5.84,
+      "text": "dynamic programming playlist yes"
+    },
+    {
+      "start": 8.08,
+      "end": 12.96,
+      "duration": 4.88,
+      "text": "till now we have done uh dp on grids"
+    },
+    {
+      "start": 11.28,
+      "end": 14.56,
+      "duration": 3.28,
+      "text": "like we have done three problems on the"
+    },
+    {
+      "start": 12.96,
+      "end": 16.96,
+      "duration": 4.0,
+      "text": "dp on grids"
+    },
+    {
+      "start": 14.56,
+      "end": 19.36,
+      "duration": 4.8,
+      "text": "where there was a shuttle pattern where"
+    },
+    {
+      "start": 16.96,
+      "end": 23.68,
+      "duration": 6.72,
+      "text": "we always stated that the starting point"
+    },
+    {
+      "start": 19.36,
+      "end": 26.72,
+      "duration": 7.36,
+      "text": "is 0 0 and the ending point is n minus 1"
+    },
+    {
+      "start": 23.68,
+      "end": 28.64,
+      "duration": 4.96,
+      "text": "and m minus 1 this was the pattern of"
+    },
+    {
+      "start": 26.72,
+      "end": 30.56,
+      "duration": 3.84,
+      "text": "questions that we have done now going"
+    },
+    {
+      "start": 28.64,
+      "end": 33.76,
+      "duration": 5.12,
+      "text": "forward i will be solving three problems"
+    },
+    {
+      "start": 30.56,
+      "end": 36.72,
+      "duration": 6.16,
+      "text": "yes three problems where we will be"
+    },
+    {
+      "start": 33.76,
+      "end": 38.56,
+      "duration": 4.8,
+      "text": "having variable starting points yes"
+    },
+    {
+      "start": 36.72,
+      "end": 40.8,
+      "duration": 4.08,
+      "text": "might be there like there might be a"
+    },
+    {
+      "start": 38.56,
+      "end": 43.44,
+      "duration": 4.88,
+      "text": "variable or a fixed starting point and"
+    },
+    {
+      "start": 40.8,
+      "end": 45.28,
+      "duration": 4.48,
+      "text": "the ending point will also be variable"
+    },
+    {
+      "start": 43.44,
+      "end": 47.6,
+      "duration": 4.16,
+      "text": "when we will see the questions you will"
+    },
+    {
+      "start": 45.28,
+      "end": 49.76,
+      "duration": 4.48,
+      "text": "understand what does variable mean but"
+    },
+    {
+      "start": 47.6,
+      "end": 51.68,
+      "duration": 4.08,
+      "text": "yeah the variable it will be variable"
+    },
+    {
+      "start": 49.76,
+      "end": 54.0,
+      "duration": 4.24,
+      "text": "that's that's going to be the next set"
+    },
+    {
+      "start": 51.68,
+      "end": 56.64,
+      "duration": 4.96,
+      "text": "of three questions so in order to start"
+    },
+    {
+      "start": 54.0,
+      "end": 57.68,
+      "duration": 3.68,
+      "text": "off we will be taking the first question"
+    },
+    {
+      "start": 56.64,
+      "end": 59.68,
+      "duration": 3.04,
+      "text": "which is"
+    },
+    {
+      "start": 57.68,
+      "end": 61.92,
+      "duration": 4.24,
+      "text": "triangle so yeah without without wasting"
+    },
+    {
+      "start": 59.68,
+      "end": 64.08,
+      "duration": 4.4,
+      "text": "any time let's get started"
+    },
+    {
+      "start": 61.92,
+      "end": 66.64,
+      "duration": 4.72,
+      "text": "it states that you're given a triangular"
+    },
+    {
+      "start": 64.08,
+      "end": 68.64,
+      "duration": 4.56,
+      "text": "array that's basically a triangle your"
+    },
+    {
+      "start": 66.64,
+      "end": 71.04,
+      "duration": 4.4,
+      "text": "task is to return the minimum path sum"
+    },
+    {
+      "start": 68.64,
+      "end": 74.72,
+      "duration": 6.08,
+      "text": "to reach from the top until the bottom"
+    },
+    {
+      "start": 71.04,
+      "end": 77.84,
+      "duration": 6.8,
+      "text": "row the triangle array will have n rows"
+    },
+    {
+      "start": 74.72,
+      "end": 79.52,
+      "duration": 4.8,
+      "text": "and the ith row will have i plus one"
+    },
+    {
+      "start": 77.84,
+      "end": 81.92,
+      "duration": 4.08,
+      "text": "element so let's understand this so"
+    },
+    {
+      "start": 79.52,
+      "end": 84.24,
+      "duration": 4.72,
+      "text": "basically there will be n roots and the"
+    },
+    {
+      "start": 81.92,
+      "end": 86.88,
+      "duration": 4.96,
+      "text": "ith row will be having"
+    },
+    {
+      "start": 84.24,
+      "end": 89.52,
+      "duration": 5.28,
+      "text": "i plus one elements now you can move"
+    },
+    {
+      "start": 86.88,
+      "end": 92.48,
+      "duration": 5.6,
+      "text": "only to adjacent number of row below"
+    },
+    {
+      "start": 89.52,
+      "end": 93.52,
+      "duration": 4.0,
+      "text": "each step for example if you are at an"
+    },
+    {
+      "start": 92.48,
+      "end": 97.12,
+      "duration": 4.64,
+      "text": "index"
+    },
+    {
+      "start": 93.52,
+      "end": 98.4,
+      "duration": 4.88,
+      "text": "j in a row i then you can move to"
+    },
+    {
+      "start": 97.12,
+      "end": 100.8,
+      "duration": 3.68,
+      "text": "i"
+    },
+    {
+      "start": 98.4,
+      "end": 102.8,
+      "duration": 4.4,
+      "text": "or i plus one index in the row j plus"
+    },
+    {
+      "start": 100.8,
+      "end": 105.84,
+      "duration": 5.04,
+      "text": "one and it's each step i'll explain you"
+    },
+    {
+      "start": 102.8,
+      "end": 107.6,
+      "duration": 4.8,
+      "text": "this so this is the example so let me"
+    },
+    {
+      "start": 105.84,
+      "end": 108.64,
+      "duration": 2.8,
+      "text": "just quickly write this down over in the"
+    },
+    {
+      "start": 107.6,
+      "end": 111.04,
+      "duration": 3.44,
+      "text": "ipad"
+    },
+    {
+      "start": 108.64,
+      "end": 112.88,
+      "duration": 4.24,
+      "text": "so if you see over here what the"
+    },
+    {
+      "start": 111.04,
+      "end": 115.6,
+      "duration": 4.56,
+      "text": "question stated was"
+    },
+    {
+      "start": 112.88,
+      "end": 117.6,
+      "duration": 4.72,
+      "text": "this is the zeroth row it will have"
+    },
+    {
+      "start": 115.6,
+      "end": 119.12,
+      "duration": 3.52,
+      "text": "one element this is the first row it"
+    },
+    {
+      "start": 117.6,
+      "end": 120.96,
+      "duration": 3.36,
+      "text": "will have two elements"
+    },
+    {
+      "start": 119.12,
+      "end": 122.88,
+      "duration": 3.76,
+      "text": "second row will have three elements so"
+    },
+    {
+      "start": 120.96,
+      "end": 125.6,
+      "duration": 4.64,
+      "text": "that's why it's"
+    },
+    {
+      "start": 122.88,
+      "end": 128.56,
+      "duration": 5.68,
+      "text": "right angle triangle got this now it"
+    },
+    {
+      "start": 125.6,
+      "end": 129.92,
+      "duration": 4.32,
+      "text": "states that if you are over here yes if"
+    },
+    {
+      "start": 128.56,
+      "end": 132.24,
+      "duration": 3.68,
+      "text": "you're over here"
+    },
+    {
+      "start": 129.92,
+      "end": 135.12,
+      "duration": 5.2,
+      "text": "on a given row you can move"
+    },
+    {
+      "start": 132.24,
+      "end": 136.24,
+      "duration": 4.0,
+      "text": "right to the bottom of the next row or"
+    },
+    {
+      "start": 135.12,
+      "end": 140.16,
+      "duration": 5.04,
+      "text": "you can move"
+    },
+    {
+      "start": 136.24,
+      "end": 142.8,
+      "duration": 6.56,
+      "text": "diagonally to the next row so basically"
+    },
+    {
+      "start": 140.16,
+      "end": 145.12,
+      "duration": 4.96,
+      "text": "assume you are standing over here"
+    },
+    {
+      "start": 142.8,
+      "end": 147.28,
+      "duration": 4.48,
+      "text": "you can move either to here or you can"
+    },
+    {
+      "start": 145.12,
+      "end": 149.68,
+      "duration": 4.56,
+      "text": "move either to six but you can't move to"
+    },
+    {
+      "start": 147.28,
+      "end": 151.92,
+      "duration": 4.64,
+      "text": "ten and either you can move to eight so"
+    },
+    {
+      "start": 149.68,
+      "end": 155.52,
+      "duration": 5.84,
+      "text": "either you can move uh diagonally"
+    },
+    {
+      "start": 151.92,
+      "end": 157.6,
+      "duration": 5.68,
+      "text": "diagonally or right straight bottom"
+    },
+    {
+      "start": 155.52,
+      "end": 160.4,
+      "duration": 4.88,
+      "text": "so they have said that there is a"
+    },
+    {
+      "start": 157.6,
+      "end": 162.72,
+      "duration": 5.12,
+      "text": "starting point okay so over here we need"
+    },
+    {
+      "start": 160.4,
+      "end": 166.32,
+      "duration": 5.92,
+      "text": "to understand that the starting point is"
+    },
+    {
+      "start": 162.72,
+      "end": 168.8,
+      "duration": 6.08,
+      "text": "fixed okay so the starting point is"
+    },
+    {
+      "start": 166.32,
+      "end": 171.04,
+      "duration": 4.72,
+      "text": "fixed what about the ending point"
+    },
+    {
+      "start": 168.8,
+      "end": 172.88,
+      "duration": 4.08,
+      "text": "they're saying that the ending point"
+    },
+    {
+      "start": 171.04,
+      "end": 175.76,
+      "duration": 4.72,
+      "text": "might vary is the ending point might"
+    },
+    {
+      "start": 172.88,
+      "end": 178.0,
+      "duration": 5.12,
+      "text": "vary because what they are concerned is"
+    },
+    {
+      "start": 175.76,
+      "end": 180.48,
+      "duration": 4.72,
+      "text": "as long as you are reaching the last row"
+    },
+    {
+      "start": 178.0,
+      "end": 182.24,
+      "duration": 4.24,
+      "text": "you can either reach here you can either"
+    },
+    {
+      "start": 180.48,
+      "end": 184.0,
+      "duration": 3.52,
+      "text": "reach here or you can either reach here"
+    },
+    {
+      "start": 182.24,
+      "end": 186.24,
+      "duration": 4.0,
+      "text": "or you can either reach out as long as"
+    },
+    {
+      "start": 184.0,
+      "end": 188.88,
+      "duration": 4.88,
+      "text": "you're reaching the start ending ending"
+    },
+    {
+      "start": 186.24,
+      "end": 191.36,
+      "duration": 5.12,
+      "text": "row we are satisfied and in order to"
+    },
+    {
+      "start": 188.88,
+      "end": 193.84,
+      "duration": 4.96,
+      "text": "reach from the first row till the last"
+    },
+    {
+      "start": 191.36,
+      "end": 195.44,
+      "duration": 4.08,
+      "text": "row there might be a path uh how many"
+    },
+    {
+      "start": 193.84,
+      "end": 197.68,
+      "duration": 3.84,
+      "text": "different paths can be there you might"
+    },
+    {
+      "start": 195.44,
+      "end": 199.92,
+      "duration": 4.48,
+      "text": "go from here to here then from here to"
+    },
+    {
+      "start": 197.68,
+      "end": 202.56,
+      "duration": 4.88,
+      "text": "here then from here to here there can be"
+    },
+    {
+      "start": 199.92,
+      "end": 204.4,
+      "duration": 4.48,
+      "text": "some path like one two three three two"
+    },
+    {
+      "start": 202.56,
+      "end": 206.8,
+      "duration": 4.24,
+      "text": "seven seven to ten there can be"
+    },
+    {
+      "start": 204.4,
+      "end": 210.08,
+      "duration": 5.68,
+      "text": "something like one two three eight right"
+    },
+    {
+      "start": 206.8,
+      "end": 213.36,
+      "duration": 6.56,
+      "text": "bottom there can be a lot of parts okay"
+    },
+    {
+      "start": 210.08,
+      "end": 216.16,
+      "duration": 6.08,
+      "text": "and in these parts whichever path takes"
+    },
+    {
+      "start": 213.36,
+      "end": 218.4,
+      "duration": 5.04,
+      "text": "the minimum path sum you have to tell me"
+    },
+    {
+      "start": 216.16,
+      "end": 223.28,
+      "duration": 7.12,
+      "text": "that so for an example i can say i can"
+    },
+    {
+      "start": 218.4,
+      "end": 227.12,
+      "duration": 8.72,
+      "text": "go from 1 to 2 to 3 and to 8 and this is"
+    },
+    {
+      "start": 223.28,
+      "end": 228.96,
+      "duration": 5.68,
+      "text": "like 8 plus 2 is 10 13 14 so 14 is the"
+    },
+    {
+      "start": 227.12,
+      "end": 230.96,
+      "duration": 3.84,
+      "text": "minimum path sum you can try out all the"
+    },
+    {
+      "start": 228.96,
+      "end": 234.32,
+      "duration": 5.36,
+      "text": "paths and the minimum that you will get"
+    },
+    {
+      "start": 230.96,
+      "end": 234.32,
+      "duration": 3.36,
+      "text": "is indeed 14."
+    },
+    {
+      "start": 234.8,
+      "end": 238.08,
+      "duration": 3.28,
+      "text": "so going across"
+    },
+    {
+      "start": 236.32,
+      "end": 240.72,
+      "duration": 4.4,
+      "text": "how do you identify that a greedy"
+    },
+    {
+      "start": 238.08,
+      "end": 242.96,
+      "duration": 4.88,
+      "text": "solution is will fail again uniformity"
+    },
+    {
+      "start": 240.72,
+      "end": 245.44,
+      "duration": 4.72,
+      "text": "concept that i have explained you in the"
+    },
+    {
+      "start": 242.96,
+      "end": 247.92,
+      "duration": 4.96,
+      "text": "previous videos if you have seen"
+    },
+    {
+      "start": 245.44,
+      "end": 250.56,
+      "duration": 5.12,
+      "text": "it's not uniform because it might happen"
+    },
+    {
+      "start": 247.92,
+      "end": 252.96,
+      "duration": 5.04,
+      "text": "over here greedily you choose to"
+    },
+    {
+      "start": 250.56,
+      "end": 254.88,
+      "duration": 4.32,
+      "text": "and again greedily you choose three"
+    },
+    {
+      "start": 252.96,
+      "end": 257.84,
+      "duration": 4.88,
+      "text": "and uh like greedily you're choosing"
+    },
+    {
+      "start": 254.88,
+      "end": 260.0,
+      "duration": 5.12,
+      "text": "right and might happen somewhere down"
+    },
+    {
+      "start": 257.84,
+      "end": 261.52,
+      "duration": 3.68,
+      "text": "the line there is a very smaller value"
+    },
+    {
+      "start": 260.0,
+      "end": 263.28,
+      "duration": 3.28,
+      "text": "you miss out just because you're"
+    },
+    {
+      "start": 261.52,
+      "end": 266.0,
+      "duration": 4.48,
+      "text": "choosing something which is very very"
+    },
+    {
+      "start": 263.28,
+      "end": 267.68,
+      "duration": 4.4,
+      "text": "small on the upper half so uniformity is"
+    },
+    {
+      "start": 266.0,
+      "end": 269.76,
+      "duration": 3.76,
+      "text": "not there because the values"
+    },
+    {
+      "start": 267.68,
+      "end": 271.92,
+      "duration": 4.24,
+      "text": "might be bigger might be lesser so"
+    },
+    {
+      "start": 269.76,
+      "end": 273.84,
+      "duration": 4.08,
+      "text": "whenever there is no uniformity in the"
+    },
+    {
+      "start": 271.92,
+      "end": 276.56,
+      "duration": 4.64,
+      "text": "increa increment of values or decrement"
+    },
+    {
+      "start": 273.84,
+      "end": 279.68,
+      "duration": 5.84,
+      "text": "of values then we can see that something"
+    },
+    {
+      "start": 276.56,
+      "end": 281.12,
+      "duration": 4.56,
+      "text": "like a greedy cannot be applied"
+    },
+    {
+      "start": 279.68,
+      "end": 283.12,
+      "duration": 3.44,
+      "text": "something like a greedy cannot be"
+    },
+    {
+      "start": 281.12,
+      "end": 286.48,
+      "duration": 5.36,
+      "text": "applied so what do we tend to apply over"
+    },
+    {
+      "start": 283.12,
+      "end": 288.8,
+      "duration": 5.68,
+      "text": "there yes we try out all the parts we"
+    },
+    {
+      "start": 286.48,
+      "end": 290.48,
+      "duration": 4.0,
+      "text": "try out"
+    },
+    {
+      "start": 288.8,
+      "end": 293.2,
+      "duration": 4.4,
+      "text": "all the"
+    },
+    {
+      "start": 290.48,
+      "end": 295.44,
+      "duration": 4.96,
+      "text": "parts right and um how do you do that"
+    },
+    {
+      "start": 293.2,
+      "end": 297.52,
+      "duration": 4.32,
+      "text": "again very simple we know we just have"
+    },
+    {
+      "start": 295.44,
+      "end": 299.36,
+      "duration": 3.92,
+      "text": "one way to try out all the parts that is"
+    },
+    {
+      "start": 297.52,
+      "end": 302.0,
+      "duration": 4.48,
+      "text": "we travel through all the paths and that"
+    },
+    {
+      "start": 299.36,
+      "end": 303.76,
+      "duration": 4.4,
+      "text": "can be done using recursion and by using"
+    },
+    {
+      "start": 302.0,
+      "end": 305.92,
+      "duration": 3.92,
+      "text": "recursion what you need to do is you"
+    },
+    {
+      "start": 303.76,
+      "end": 308.48,
+      "duration": 4.72,
+      "text": "need to find the path which gives you"
+    },
+    {
+      "start": 305.92,
+      "end": 310.32,
+      "duration": 4.4,
+      "text": "the minimum sum and once you've done"
+    },
+    {
+      "start": 308.48,
+      "end": 312.48,
+      "duration": 4.0,
+      "text": "this you are done so in the great grid"
+    },
+    {
+      "start": 310.32,
+      "end": 315.76,
+      "duration": 5.44,
+      "text": "problems what have i told you i've told"
+    },
+    {
+      "start": 312.48,
+      "end": 317.52,
+      "duration": 5.04,
+      "text": "you represent everything in terms of"
+    },
+    {
+      "start": 315.76,
+      "end": 319.68,
+      "duration": 3.92,
+      "text": "indexes and what are the indexes over"
+    },
+    {
+      "start": 317.52,
+      "end": 321.52,
+      "duration": 4.0,
+      "text": "here intj because in a grid we will"
+    },
+    {
+      "start": 319.68,
+      "end": 323.28,
+      "duration": 3.6,
+      "text": "always have the row number and the"
+    },
+    {
+      "start": 321.52,
+      "end": 324.48,
+      "duration": 2.96,
+      "text": "column number what is the next thing"
+    },
+    {
+      "start": 323.28,
+      "end": 327.52,
+      "duration": 4.24,
+      "text": "that i have told you"
+    },
+    {
+      "start": 324.48,
+      "end": 328.72,
+      "duration": 4.24,
+      "text": "explore all the parts so if you remember"
+    },
+    {
+      "start": 327.52,
+      "end": 331.2,
+      "duration": 3.68,
+      "text": "over here"
+    },
+    {
+      "start": 328.72,
+      "end": 333.28,
+      "duration": 4.56,
+      "text": "yes over here the paths what kind of"
+    },
+    {
+      "start": 331.2,
+      "end": 335.76,
+      "duration": 4.56,
+      "text": "paths are there either you can go here"
+    },
+    {
+      "start": 333.28,
+      "end": 339.28,
+      "duration": 6.0,
+      "text": "or either you can go diagonally right"
+    },
+    {
+      "start": 335.76,
+      "end": 341.92,
+      "duration": 6.16,
+      "text": "and after that you take the minimal of"
+    },
+    {
+      "start": 339.28,
+      "end": 344.56,
+      "duration": 5.28,
+      "text": "all the paths and if you write these"
+    },
+    {
+      "start": 341.92,
+      "end": 346.4,
+      "duration": 4.48,
+      "text": "three steps down you can easily write"
+    },
+    {
+      "start": 344.56,
+      "end": 348.96,
+      "duration": 4.4,
+      "text": "any recurrence can you write any"
+    },
+    {
+      "start": 346.4,
+      "end": 351.6,
+      "duration": 5.2,
+      "text": "recurrence right you can but now the"
+    },
+    {
+      "start": 348.96,
+      "end": 354.4,
+      "duration": 5.44,
+      "text": "question arises striver in all the"
+    },
+    {
+      "start": 351.6,
+      "end": 357.36,
+      "duration": 5.76,
+      "text": "previous videos we did know that the"
+    },
+    {
+      "start": 354.4,
+      "end": 359.44,
+      "duration": 5.04,
+      "text": "ending point was something like n minus"
+    },
+    {
+      "start": 357.36,
+      "end": 361.52,
+      "duration": 4.16,
+      "text": "one and m minus one so striver we"
+    },
+    {
+      "start": 359.44,
+      "end": 363.68,
+      "duration": 4.24,
+      "text": "started from the back like f of n minus"
+    },
+    {
+      "start": 361.52,
+      "end": 366.64,
+      "duration": 5.12,
+      "text": "one m minus one and we did write the"
+    },
+    {
+      "start": 363.68,
+      "end": 369.28,
+      "duration": 5.6,
+      "text": "recursion but over here there is not a"
+    },
+    {
+      "start": 366.64,
+      "end": 372.16,
+      "duration": 5.52,
+      "text": "fixed ending point that is very obvious"
+    },
+    {
+      "start": 369.28,
+      "end": 375.6,
+      "duration": 6.32,
+      "text": "because we can either end here we can"
+    },
+    {
+      "start": 372.16,
+      "end": 379.04,
+      "duration": 6.88,
+      "text": "either end here we can either end here"
+    },
+    {
+      "start": 375.6,
+      "end": 381.44,
+      "duration": 5.84,
+      "text": "we can either end here so there is no"
+    },
+    {
+      "start": 379.04,
+      "end": 385.36,
+      "duration": 6.32,
+      "text": "fixed ending point so"
+    },
+    {
+      "start": 381.44,
+      "end": 387.92,
+      "duration": 6.48,
+      "text": "logically it will not make sense if i"
+    },
+    {
+      "start": 385.36,
+      "end": 390.88,
+      "duration": 5.52,
+      "text": "write the recurrence because"
+    },
+    {
+      "start": 387.92,
+      "end": 393.04,
+      "duration": 5.12,
+      "text": "i might be ending here i might be ending"
+    },
+    {
+      "start": 390.88,
+      "end": 396.56,
+      "duration": 5.68,
+      "text": "here so there can be four different"
+    },
+    {
+      "start": 393.04,
+      "end": 398.96,
+      "duration": 5.92,
+      "text": "recurrence one that starts from here the"
+    },
+    {
+      "start": 396.56,
+      "end": 401.2,
+      "duration": 4.64,
+      "text": "other that starts from here the other"
+    },
+    {
+      "start": 398.96,
+      "end": 402.72,
+      "duration": 3.76,
+      "text": "that starts from here the other that"
+    },
+    {
+      "start": 401.2,
+      "end": 404.4,
+      "duration": 3.2,
+      "text": "starts from here there'll be four"
+    },
+    {
+      "start": 402.72,
+      "end": 405.6,
+      "duration": 2.88,
+      "text": "different kind of recurrence in the"
+    },
+    {
+      "start": 404.4,
+      "end": 408.16,
+      "duration": 3.76,
+      "text": "previous"
+    },
+    {
+      "start": 405.6,
+      "end": 410.24,
+      "duration": 4.64,
+      "text": "video there was only one recurrence that"
+    },
+    {
+      "start": 408.16,
+      "end": 412.0,
+      "duration": 3.84,
+      "text": "you called and you got the answer but"
+    },
+    {
+      "start": 410.24,
+      "end": 414.0,
+      "duration": 3.76,
+      "text": "over here you have to call four"
+    },
+    {
+      "start": 412.0,
+      "end": 416.48,
+      "duration": 4.48,
+      "text": "different recurrence one is from here"
+    },
+    {
+      "start": 414.0,
+      "end": 419.36,
+      "duration": 5.36,
+      "text": "one is from here one is from here one is"
+    },
+    {
+      "start": 416.48,
+      "end": 422.08,
+      "duration": 5.6,
+      "text": "from here and in all the four recurrence"
+    },
+    {
+      "start": 419.36,
+      "end": 424.32,
+      "duration": 4.96,
+      "text": "whichever recurrence gives you the"
+    },
+    {
+      "start": 422.08,
+      "end": 427.28,
+      "duration": 5.2,
+      "text": "minimum path that will be your answer"
+    },
+    {
+      "start": 424.32,
+      "end": 430.32,
+      "duration": 6.0,
+      "text": "right but whenever you see that there is"
+    },
+    {
+      "start": 427.28,
+      "end": 433.04,
+      "duration": 5.76,
+      "text": "a single fixed point like i can see"
+    },
+    {
+      "start": 430.32,
+      "end": 436.24,
+      "duration": 5.92,
+      "text": "that there is a single fixed point"
+    },
+    {
+      "start": 433.04,
+      "end": 439.68,
+      "duration": 6.64,
+      "text": "logically it is preferable that you"
+    },
+    {
+      "start": 436.24,
+      "end": 442.48,
+      "duration": 6.24,
+      "text": "start from right the top and you"
+    },
+    {
+      "start": 439.68,
+      "end": 445.2,
+      "duration": 5.52,
+      "text": "try to go down that's the preferable"
+    },
+    {
+      "start": 442.48,
+      "end": 447.2,
+      "duration": 4.72,
+      "text": "logic so we will try to implement that"
+    },
+    {
+      "start": 445.2,
+      "end": 449.44,
+      "duration": 4.24,
+      "text": "preferable logic instead of starting"
+    },
+    {
+      "start": 447.2,
+      "end": 451.52,
+      "duration": 4.32,
+      "text": "from the back which we have usually done"
+    },
+    {
+      "start": 449.44,
+      "end": 453.12,
+      "duration": 3.68,
+      "text": "in all the problems we will not do"
+    },
+    {
+      "start": 451.52,
+      "end": 454.0,
+      "duration": 2.48,
+      "text": "because over here we have to start from"
+    },
+    {
+      "start": 453.12,
+      "end": 455.76,
+      "duration": 2.64,
+      "text": "four"
+    },
+    {
+      "start": 454.0,
+      "end": 457.52,
+      "duration": 3.52,
+      "text": "different columns basically the number"
+    },
+    {
+      "start": 455.76,
+      "end": 459.52,
+      "duration": 3.76,
+      "text": "of columns is what i have to start"
+    },
+    {
+      "start": 457.52,
+      "end": 462.4,
+      "duration": 4.88,
+      "text": "that's not preferable that's why what we"
+    },
+    {
+      "start": 459.52,
+      "end": 466.08,
+      "duration": 6.56,
+      "text": "do is we start the recursion"
+    },
+    {
+      "start": 462.4,
+      "end": 467.2,
+      "duration": 4.8,
+      "text": "from f of 0 0 and what we say is hey"
+    },
+    {
+      "start": 466.08,
+      "end": 471.28,
+      "duration": 5.2,
+      "text": "listen"
+    },
+    {
+      "start": 467.2,
+      "end": 472.16,
+      "duration": 4.96,
+      "text": "over here f of 0 0 signifies the minimum"
+    },
+    {
+      "start": 471.28,
+      "end": 473.36,
+      "duration": 2.08,
+      "text": "pass"
+    },
+    {
+      "start": 472.16,
+      "end": 475.12,
+      "duration": 2.96,
+      "text": "minimum"
+    },
+    {
+      "start": 473.36,
+      "end": 476.56,
+      "duration": 3.2,
+      "text": "path sum"
+    },
+    {
+      "start": 475.12,
+      "end": 480.32,
+      "duration": 5.2,
+      "text": "from"
+    },
+    {
+      "start": 476.56,
+      "end": 482.32,
+      "duration": 5.76,
+      "text": "0 0 to last true"
+    },
+    {
+      "start": 480.32,
+      "end": 485.04,
+      "duration": 4.72,
+      "text": "and in last row it can be any column i"
+    },
+    {
+      "start": 482.32,
+      "end": 487.28,
+      "duration": 4.96,
+      "text": "don't i don't care it can start from 0 0"
+    },
+    {
+      "start": 485.04,
+      "end": 489.2,
+      "duration": 4.16,
+      "text": "and go till the last row so we have"
+    },
+    {
+      "start": 487.28,
+      "end": 491.84,
+      "duration": 4.56,
+      "text": "figured out that the recurrence has to"
+    },
+    {
+      "start": 489.2,
+      "end": 493.68,
+      "duration": 4.48,
+      "text": "start from instead of f of n minus 1 m"
+    },
+    {
+      "start": 491.84,
+      "end": 496.16,
+      "duration": 4.32,
+      "text": "minus 1 we know the recurrence will"
+    },
+    {
+      "start": 493.68,
+      "end": 498.08,
+      "duration": 4.4,
+      "text": "start from 0 0 that is something which"
+    },
+    {
+      "start": 496.16,
+      "end": 499.76,
+      "duration": 3.6,
+      "text": "we have figured out and i've told you"
+    },
+    {
+      "start": 498.08,
+      "end": 501.92,
+      "duration": 3.84,
+      "text": "the reason right it's time to write the"
+    },
+    {
+      "start": 499.76,
+      "end": 504.08,
+      "duration": 4.32,
+      "text": "recurrence so we know the recurrence is"
+    },
+    {
+      "start": 501.92,
+      "end": 507.36,
+      "duration": 5.44,
+      "text": "something like i comma j"
+    },
+    {
+      "start": 504.08,
+      "end": 510.0,
+      "duration": 5.92,
+      "text": "correct so what do we initially write if"
+    },
+    {
+      "start": 507.36,
+      "end": 512.0,
+      "duration": 4.64,
+      "text": "i'm writing this represent i j then you"
+    },
+    {
+      "start": 510.0,
+      "end": 514.32,
+      "duration": 4.32,
+      "text": "have to write the base case what is the"
+    },
+    {
+      "start": 512.0,
+      "end": 517.12,
+      "duration": 5.12,
+      "text": "base case what am i doing try to think"
+    },
+    {
+      "start": 514.32,
+      "end": 519.52,
+      "duration": 5.2,
+      "text": "in that direction what am i doing i know"
+    },
+    {
+      "start": 517.12,
+      "end": 521.6,
+      "duration": 4.48,
+      "text": "that i'm starting from here i know that"
+    },
+    {
+      "start": 519.52,
+      "end": 524.88,
+      "duration": 5.36,
+      "text": "i'm starting from here and i am going"
+    },
+    {
+      "start": 521.6,
+      "end": 527.84,
+      "duration": 6.24,
+      "text": "down i will go down and when do i end"
+    },
+    {
+      "start": 524.88,
+      "end": 530.24,
+      "duration": 5.36,
+      "text": "from this row can i go further down"
+    },
+    {
+      "start": 527.84,
+      "end": 532.64,
+      "duration": 4.8,
+      "text": "where is your destination generally the"
+    },
+    {
+      "start": 530.24,
+      "end": 536.08,
+      "duration": 5.84,
+      "text": "destination is your base case i know the"
+    },
+    {
+      "start": 532.64,
+      "end": 538.56,
+      "duration": 5.92,
+      "text": "destination is the n minus one through"
+    },
+    {
+      "start": 536.08,
+      "end": 540.8,
+      "duration": 4.72,
+      "text": "so i know whenever i reach n minus one"
+    },
+    {
+      "start": 538.56,
+      "end": 543.12,
+      "duration": 4.56,
+      "text": "at row whichever value is there that"
+    },
+    {
+      "start": 540.8,
+      "end": 545.6,
+      "duration": 4.8,
+      "text": "will simply get added to the answer"
+    },
+    {
+      "start": 543.12,
+      "end": 547.28,
+      "duration": 4.16,
+      "text": "so what i can do is okay"
+    },
+    {
+      "start": 545.6,
+      "end": 548.56,
+      "duration": 2.96,
+      "text": "if"
+    },
+    {
+      "start": 547.28,
+      "end": 551.6,
+      "duration": 4.32,
+      "text": "i reach"
+    },
+    {
+      "start": 548.56,
+      "end": 554.96,
+      "duration": 6.4,
+      "text": "n minus 1 through by any chance if i"
+    },
+    {
+      "start": 551.6,
+      "end": 556.48,
+      "duration": 4.88,
+      "text": "reach n minus 1 through i can say that"
+    },
+    {
+      "start": 554.96,
+      "end": 557.6,
+      "duration": 2.64,
+      "text": "please please"
+    },
+    {
+      "start": 556.48,
+      "end": 560.4,
+      "duration": 3.92,
+      "text": "return"
+    },
+    {
+      "start": 557.6,
+      "end": 562.96,
+      "duration": 5.36,
+      "text": "whatever is there on that jth column"
+    },
+    {
+      "start": 560.4,
+      "end": 565.28,
+      "duration": 4.88,
+      "text": "like if i'm reaching any of the columns"
+    },
+    {
+      "start": 562.96,
+      "end": 567.44,
+      "duration": 4.48,
+      "text": "yes if i'm reaching this guy i'll return"
+    },
+    {
+      "start": 565.28,
+      "end": 569.44,
+      "duration": 4.16,
+      "text": "8 to be added to the answer i'll write a"
+    },
+    {
+      "start": 567.44,
+      "end": 571.28,
+      "duration": 3.84,
+      "text": "9 i'll written 6 i'll written 10"
+    },
+    {
+      "start": 569.44,
+      "end": 573.12,
+      "duration": 3.68,
+      "text": "whichever column i ended i'll be"
+    },
+    {
+      "start": 571.28,
+      "end": 575.44,
+      "duration": 4.16,
+      "text": "returning that so that is how we will be"
+    },
+    {
+      "start": 573.12,
+      "end": 577.76,
+      "duration": 4.64,
+      "text": "doing this correct so we have figured"
+    },
+    {
+      "start": 575.44,
+      "end": 580.48,
+      "duration": 5.04,
+      "text": "out the first base case what can be the"
+    },
+    {
+      "start": 577.76,
+      "end": 583.2,
+      "duration": 5.44,
+      "text": "other base case can you try to think yes"
+    },
+    {
+      "start": 580.48,
+      "end": 585.2,
+      "duration": 4.72,
+      "text": "you probably can try to think so if i"
+    },
+    {
+      "start": 583.2,
+      "end": 588.8,
+      "duration": 5.6,
+      "text": "talk about where am i moving"
+    },
+    {
+      "start": 585.2,
+      "end": 592.16,
+      "duration": 6.96,
+      "text": "i'm moving till bottom and to the right"
+    },
+    {
+      "start": 588.8,
+      "end": 594.64,
+      "duration": 5.84,
+      "text": "will we ever uh go out of boundary try"
+    },
+    {
+      "start": 592.16,
+      "end": 597.36,
+      "duration": 5.2,
+      "text": "to think for this guy"
+    },
+    {
+      "start": 594.64,
+      "end": 598.96,
+      "duration": 4.32,
+      "text": "this is the extremist guy on the zeroth"
+    },
+    {
+      "start": 597.36,
+      "end": 600.96,
+      "duration": 3.6,
+      "text": "row does it have a"
+    },
+    {
+      "start": 598.96,
+      "end": 602.88,
+      "duration": 3.92,
+      "text": "diagonal yes does this guy have a"
+    },
+    {
+      "start": 600.96,
+      "end": 605.36,
+      "duration": 4.4,
+      "text": "diagonal yes does this guy have a"
+    },
+    {
+      "start": 602.88,
+      "end": 607.6,
+      "duration": 4.72,
+      "text": "diagonal yes we've reached the last row"
+    },
+    {
+      "start": 605.36,
+      "end": 609.52,
+      "duration": 4.16,
+      "text": "so i know no matter"
+    },
+    {
+      "start": 607.6,
+      "end": 612.96,
+      "duration": 5.36,
+      "text": "how you move because we can only move"
+    },
+    {
+      "start": 609.52,
+      "end": 615.2,
+      "duration": 5.68,
+      "text": "down and diagonal we will never"
+    },
+    {
+      "start": 612.96,
+      "end": 617.52,
+      "duration": 4.56,
+      "text": "never go outside this boundary so we"
+    },
+    {
+      "start": 615.2,
+      "end": 619.36,
+      "duration": 4.16,
+      "text": "know that there will be no out"
+    },
+    {
+      "start": 617.52,
+      "end": 622.0,
+      "duration": 4.48,
+      "text": "outside boundary condition so there is"
+    },
+    {
+      "start": 619.36,
+      "end": 623.28,
+      "duration": 3.92,
+      "text": "only one base case so"
+    },
+    {
+      "start": 622.0,
+      "end": 624.64,
+      "duration": 2.64,
+      "text": "step one"
+    },
+    {
+      "start": 623.28,
+      "end": 626.0,
+      "duration": 2.72,
+      "text": "complete it"
+    },
+    {
+      "start": 624.64,
+      "end": 628.96,
+      "duration": 4.32,
+      "text": "now step two"
+    },
+    {
+      "start": 626.0,
+      "end": 631.28,
+      "duration": 5.28,
+      "text": "explore all the parts and we know we are"
+    },
+    {
+      "start": 628.96,
+      "end": 632.4,
+      "duration": 3.44,
+      "text": "looking for minimum parts of what kind"
+    },
+    {
+      "start": 631.28,
+      "end": 634.96,
+      "duration": 3.68,
+      "text": "of path is there"
+    },
+    {
+      "start": 632.4,
+      "end": 637.68,
+      "duration": 5.28,
+      "text": "one is this i know this is nothing but i"
+    },
+    {
+      "start": 634.96,
+      "end": 640.72,
+      "duration": 5.76,
+      "text": "plus 1 j we go to the next row and the"
+    },
+    {
+      "start": 637.68,
+      "end": 642.8,
+      "duration": 5.12,
+      "text": "same column and we know this is i plus 1"
+    },
+    {
+      "start": 640.72,
+      "end": 645.04,
+      "duration": 4.32,
+      "text": "next row but the right column right"
+    },
+    {
+      "start": 642.8,
+      "end": 647.12,
+      "duration": 4.32,
+      "text": "column will mean i plus 1 j plus 1"
+    },
+    {
+      "start": 645.04,
+      "end": 649.2,
+      "duration": 4.16,
+      "text": "everyone knows that right what's the"
+    },
+    {
+      "start": 647.12,
+      "end": 651.92,
+      "duration": 4.8,
+      "text": "next step the next step is very simple"
+    },
+    {
+      "start": 649.2,
+      "end": 653.76,
+      "duration": 4.56,
+      "text": "explore all the paths so what paths do"
+    },
+    {
+      "start": 651.92,
+      "end": 654.8,
+      "duration": 2.88,
+      "text": "you have you have one down path which"
+    },
+    {
+      "start": 653.76,
+      "end": 657.04,
+      "duration": 3.28,
+      "text": "states"
+    },
+    {
+      "start": 654.8,
+      "end": 659.28,
+      "duration": 4.48,
+      "text": "the current you will take and you will"
+    },
+    {
+      "start": 657.04,
+      "end": 661.12,
+      "duration": 4.08,
+      "text": "ask like basically you took the current"
+    },
+    {
+      "start": 659.28,
+      "end": 663.44,
+      "duration": 4.16,
+      "text": "and you said go down and figure out the"
+    },
+    {
+      "start": 661.12,
+      "end": 664.64,
+      "duration": 3.52,
+      "text": "answer for the rest of matrix you took"
+    },
+    {
+      "start": 663.44,
+      "end": 665.84,
+      "duration": 2.4,
+      "text": "the current and you said go down and"
+    },
+    {
+      "start": 664.64,
+      "end": 668.72,
+      "duration": 4.08,
+      "text": "figure out the answer for the rest of"
+    },
+    {
+      "start": 665.84,
+      "end": 670.48,
+      "duration": 4.64,
+      "text": "the matrix so you're saying okay go down"
+    },
+    {
+      "start": 668.72,
+      "end": 672.84,
+      "duration": 4.12,
+      "text": "and figure out the answer for the rest"
+    },
+    {
+      "start": 670.48,
+      "end": 675.84,
+      "duration": 5.36,
+      "text": "of the matrix or you're saying go"
+    },
+    {
+      "start": 672.84,
+      "end": 678.88,
+      "duration": 6.04,
+      "text": "diagonal and figure out the answer for"
+    },
+    {
+      "start": 675.84,
+      "end": 680.32,
+      "duration": 4.48,
+      "text": "the rest of the matrix from that step so"
+    },
+    {
+      "start": 678.88,
+      "end": 682.08,
+      "duration": 3.2,
+      "text": "that's what you've done"
+    },
+    {
+      "start": 680.32,
+      "end": 685.2,
+      "duration": 4.88,
+      "text": "so basically what does this condition"
+    },
+    {
+      "start": 682.08,
+      "end": 686.4,
+      "duration": 4.32,
+      "text": "mean you're basically saying okay listen"
+    },
+    {
+      "start": 685.2,
+      "end": 688.4,
+      "duration": 3.2,
+      "text": "take one"
+    },
+    {
+      "start": 686.4,
+      "end": 690.64,
+      "duration": 4.24,
+      "text": "and go to this guy so this guy states i"
+    },
+    {
+      "start": 688.4,
+      "end": 693.68,
+      "duration": 5.28,
+      "text": "have to figure out the answer"
+    },
+    {
+      "start": 690.64,
+      "end": 695.12,
+      "duration": 4.48,
+      "text": "that i'll take from here to reach here"
+    },
+    {
+      "start": 693.68,
+      "end": 696.4,
+      "duration": 2.72,
+      "text": "right or if you would have gone"
+    },
+    {
+      "start": 695.12,
+      "end": 698.24,
+      "duration": 3.12,
+      "text": "diagonally"
+    },
+    {
+      "start": 696.4,
+      "end": 699.68,
+      "duration": 3.28,
+      "text": "would have been going here so yes you"
+    },
+    {
+      "start": 698.24,
+      "end": 702.72,
+      "duration": 4.48,
+      "text": "have taken one and you're saying you're"
+    },
+    {
+      "start": 699.68,
+      "end": 705.04,
+      "duration": 5.36,
+      "text": "here now you're asking in this triangle"
+    },
+    {
+      "start": 702.72,
+      "end": 707.52,
+      "duration": 4.8,
+      "text": "from here in order to reach you figure"
+    },
+    {
+      "start": 705.04,
+      "end": 708.48,
+      "duration": 3.44,
+      "text": "out the minimal cost path sum so you"
+    },
+    {
+      "start": 707.52,
+      "end": 710.72,
+      "duration": 3.2,
+      "text": "have written"
+    },
+    {
+      "start": 708.48,
+      "end": 712.96,
+      "duration": 4.48,
+      "text": "one down and one diagonal and you've"
+    },
+    {
+      "start": 710.72,
+      "end": 714.16,
+      "duration": 3.44,
+      "text": "taken the paths up the current and the"
+    },
+    {
+      "start": 712.96,
+      "end": 716.56,
+      "duration": 3.6,
+      "text": "remaining"
+    },
+    {
+      "start": 714.16,
+      "end": 718.8,
+      "duration": 4.64,
+      "text": "that it will give so what we have done"
+    },
+    {
+      "start": 716.56,
+      "end": 721.2,
+      "duration": 4.64,
+      "text": "the next step is also done explore all"
+    },
+    {
+      "start": 718.8,
+      "end": 724.4,
+      "duration": 5.6,
+      "text": "the paths what is the third step"
+    },
+    {
+      "start": 721.2,
+      "end": 725.28,
+      "duration": 4.08,
+      "text": "minimal of all the paths yes so can i"
+    },
+    {
+      "start": 724.4,
+      "end": 726.88,
+      "duration": 2.48,
+      "text": "say"
+    },
+    {
+      "start": 725.28,
+      "end": 728.96,
+      "duration": 3.68,
+      "text": "i will return"
+    },
+    {
+      "start": 726.88,
+      "end": 733.2,
+      "duration": 6.32,
+      "text": "the minimal of"
+    },
+    {
+      "start": 728.96,
+      "end": 735.12,
+      "duration": 6.16,
+      "text": "di d and dg which is down and diagonal"
+    },
+    {
+      "start": 733.2,
+      "end": 737.68,
+      "duration": 4.48,
+      "text": "so i can just"
+    },
+    {
+      "start": 735.12,
+      "end": 739.36,
+      "duration": 4.24,
+      "text": "complete the function this is how the"
+    },
+    {
+      "start": 737.68,
+      "end": 740.8,
+      "duration": 3.12,
+      "text": "recurrence will be pretty"
+    },
+    {
+      "start": 739.36,
+      "end": 742.56,
+      "duration": 3.2,
+      "text": "straightforward"
+    },
+    {
+      "start": 740.8,
+      "end": 744.64,
+      "duration": 3.84,
+      "text": "right so we have written down the"
+    },
+    {
+      "start": 742.56,
+      "end": 746.56,
+      "duration": 4.0,
+      "text": "recurrence now if i ask you the time"
+    },
+    {
+      "start": 744.64,
+      "end": 749.84,
+      "duration": 5.2,
+      "text": "complexity what will be the time"
+    },
+    {
+      "start": 746.56,
+      "end": 749.84,
+      "duration": 3.28,
+      "text": "complexity of this recursion"
+    },
+    {
+      "start": 751.76,
+      "end": 756.24,
+      "duration": 4.48,
+      "text": "now how many uh like if i if i ask you"
+    },
+    {
+      "start": 754.24,
+      "end": 758.4,
+      "duration": 4.16,
+      "text": "how many rows and columns are there then"
+    },
+    {
+      "start": 756.24,
+      "end": 761.12,
+      "duration": 4.88,
+      "text": "the first row has one column so"
+    },
+    {
+      "start": 758.4,
+      "end": 763.52,
+      "duration": 5.12,
+      "text": "basically one column then the next row"
+    },
+    {
+      "start": 761.12,
+      "end": 766.24,
+      "duration": 5.12,
+      "text": "has two column next row has three column"
+    },
+    {
+      "start": 763.52,
+      "end": 770.8,
+      "duration": 7.28,
+      "text": "and so on we have n plus"
+    },
+    {
+      "start": 766.24,
+      "end": 772.4,
+      "duration": 6.16,
+      "text": "one columns at the last nth row that's i"
+    },
+    {
+      "start": 770.8,
+      "end": 775.12,
+      "duration": 4.32,
+      "text": "think n n column rather"
+    },
+    {
+      "start": 772.4,
+      "end": 776.88,
+      "duration": 4.48,
+      "text": "we have exactly n column at the"
+    },
+    {
+      "start": 775.12,
+      "end": 779.6,
+      "duration": 4.48,
+      "text": "last"
+    },
+    {
+      "start": 776.88,
+      "end": 782.48,
+      "duration": 5.6,
+      "text": "row so what we know is these are the"
+    },
+    {
+      "start": 779.6,
+      "end": 784.64,
+      "duration": 5.04,
+      "text": "number of rows and for every column we"
+    },
+    {
+      "start": 782.48,
+      "end": 787.36,
+      "duration": 4.88,
+      "text": "have couple of options either to go down"
+    },
+    {
+      "start": 784.64,
+      "end": 790.24,
+      "duration": 5.6,
+      "text": "or to go bottom so we can say twice into"
+    },
+    {
+      "start": 787.36,
+      "end": 792.56,
+      "duration": 5.2,
+      "text": "twice across every one"
+    },
+    {
+      "start": 790.24,
+      "end": 794.24,
+      "duration": 4.0,
+      "text": "right so 2 to the power"
+    },
+    {
+      "start": 792.56,
+      "end": 796.56,
+      "duration": 4.0,
+      "text": "the summation of this"
+    },
+    {
+      "start": 794.24,
+      "end": 798.48,
+      "duration": 4.24,
+      "text": "2 to the power summation of this which"
+    },
+    {
+      "start": 796.56,
+      "end": 800.72,
+      "duration": 4.16,
+      "text": "is exponential in nature because you're"
+    },
+    {
+      "start": 798.48,
+      "end": 803.12,
+      "duration": 4.64,
+      "text": "going twice for every one right"
+    },
+    {
+      "start": 800.72,
+      "end": 805.12,
+      "duration": 4.4,
+      "text": "recursion and the space complexity"
+    },
+    {
+      "start": 803.12,
+      "end": 806.8,
+      "duration": 3.68,
+      "text": "there'll be a stack space involved one"
+    },
+    {
+      "start": 805.12,
+      "end": 809.44,
+      "duration": 4.32,
+      "text": "with the stack space you're going from"
+    },
+    {
+      "start": 806.8,
+      "end": 812.64,
+      "duration": 5.84,
+      "text": "the zeroth row to the bottom so the"
+    },
+    {
+      "start": 809.44,
+      "end": 815.2,
+      "duration": 5.76,
+      "text": "length of the rows which is b go of"
+    },
+    {
+      "start": 812.64,
+      "end": 816.96,
+      "duration": 4.32,
+      "text": "n so i can say the recursion is this and"
+    },
+    {
+      "start": 815.2,
+      "end": 820.4,
+      "duration": 5.2,
+      "text": "you know how to"
+    },
+    {
+      "start": 816.96,
+      "end": 823.36,
+      "duration": 6.4,
+      "text": "convert a recursion like how to optimize"
+    },
+    {
+      "start": 820.4,
+      "end": 824.24,
+      "duration": 3.84,
+      "text": "this the best way is to figure out are"
+    },
+    {
+      "start": 823.36,
+      "end": 825.92,
+      "duration": 2.56,
+      "text": "there"
+    },
+    {
+      "start": 824.24,
+      "end": 826.84,
+      "duration": 2.6,
+      "text": "overlapping"
+    },
+    {
+      "start": 825.92,
+      "end": 830.24,
+      "duration": 4.32,
+      "text": "sub"
+    },
+    {
+      "start": 826.84,
+      "end": 833.2,
+      "duration": 6.36,
+      "text": "problems and i will not be doing any"
+    },
+    {
+      "start": 830.24,
+      "end": 835.04,
+      "duration": 4.8,
+      "text": "more recursion tree because this is the"
+    },
+    {
+      "start": 833.2,
+      "end": 837.44,
+      "duration": 4.24,
+      "text": "11th lecture"
+    },
+    {
+      "start": 835.04,
+      "end": 839.12,
+      "duration": 4.08,
+      "text": "of the dp series and i am of the"
+    },
+    {
+      "start": 837.44,
+      "end": 841.28,
+      "duration": 3.84,
+      "text": "assumption that you have been seeing the"
+    },
+    {
+      "start": 839.12,
+      "end": 842.8,
+      "duration": 3.68,
+      "text": "dp series from the first lecture so you"
+    },
+    {
+      "start": 841.28,
+      "end": 845.12,
+      "duration": 3.84,
+      "text": "all know what is overlapping sub"
+    },
+    {
+      "start": 842.8,
+      "end": 846.96,
+      "duration": 4.16,
+      "text": "problems if you want to figure out are"
+    },
+    {
+      "start": 845.12,
+      "end": 848.16,
+      "duration": 3.04,
+      "text": "there overlapping sub problems what you"
+    },
+    {
+      "start": 846.96,
+      "end": 849.92,
+      "duration": 2.96,
+      "text": "just need to do is you need to start"
+    },
+    {
+      "start": 848.16,
+      "end": 852.96,
+      "duration": 4.8,
+      "text": "from f of 0 0"
+    },
+    {
+      "start": 849.92,
+      "end": 855.76,
+      "duration": 5.84,
+      "text": "go across to f of 1 comma 0 go across to"
+    },
+    {
+      "start": 852.96,
+      "end": 858.32,
+      "duration": 5.36,
+      "text": "f of 1 comma 1 keep on going this will"
+    },
+    {
+      "start": 855.76,
+      "end": 860.4,
+      "duration": 4.64,
+      "text": "be f of the next one will be two comma"
+    },
+    {
+      "start": 858.32,
+      "end": 863.28,
+      "duration": 4.96,
+      "text": "zero the next one will be f of two comma"
+    },
+    {
+      "start": 860.4,
+      "end": 866.08,
+      "duration": 5.68,
+      "text": "one this will be like f of two comma one"
+    },
+    {
+      "start": 863.28,
+      "end": 868.8,
+      "duration": 5.52,
+      "text": "this will be f of uh something like one"
+    },
+    {
+      "start": 866.08,
+      "end": 870.72,
+      "duration": 4.64,
+      "text": "sorry two comma two so you see the first"
+    },
+    {
+      "start": 868.8,
+      "end": 872.72,
+      "duration": 3.92,
+      "text": "step this is the first step where you"
+    },
+    {
+      "start": 870.72,
+      "end": 874.48,
+      "duration": 3.76,
+      "text": "get overlapping sub problems so we are"
+    },
+    {
+      "start": 872.72,
+      "end": 876.72,
+      "duration": 4.0,
+      "text": "saying there will always be overlapping"
+    },
+    {
+      "start": 874.48,
+      "end": 879.6,
+      "duration": 5.12,
+      "text": "sub problems if you draw the tree i said"
+    },
+    {
+      "start": 876.72,
+      "end": 881.52,
+      "duration": 4.8,
+      "text": "i'll not draw but still i did draw so if"
+    },
+    {
+      "start": 879.6,
+      "end": 883.52,
+      "duration": 3.92,
+      "text": "you draw this you will see that there"
+    },
+    {
+      "start": 881.52,
+      "end": 884.96,
+      "duration": 3.44,
+      "text": "are overlapping sub problems and you"
+    },
+    {
+      "start": 883.52,
+      "end": 887.12,
+      "duration": 3.6,
+      "text": "know whenever there are overlapping sub"
+    },
+    {
+      "start": 884.96,
+      "end": 888.0,
+      "duration": 3.04,
+      "text": "problems what can you apply"
+    },
+    {
+      "start": 887.12,
+      "end": 890.28,
+      "duration": 3.16,
+      "text": "yes"
+    },
+    {
+      "start": 888.0,
+      "end": 892.48,
+      "duration": 4.48,
+      "text": "you can apply something as"
+    },
+    {
+      "start": 890.28,
+      "end": 895.28,
+      "duration": 5.0,
+      "text": "memoration yes you can apply something"
+    },
+    {
+      "start": 892.48,
+      "end": 897.44,
+      "duration": 4.96,
+      "text": "as memoization now what's the next step"
+    },
+    {
+      "start": 895.28,
+      "end": 899.44,
+      "duration": 4.16,
+      "text": "can i say this can i say this"
+    },
+    {
+      "start": 897.44,
+      "end": 901.12,
+      "duration": 3.68,
+      "text": "but if i can apply memory action i had"
+    },
+    {
+      "start": 899.44,
+      "end": 902.96,
+      "duration": 3.52,
+      "text": "to figure out"
+    },
+    {
+      "start": 901.12,
+      "end": 905.28,
+      "duration": 4.16,
+      "text": "what can be the maximum value of i what"
+    },
+    {
+      "start": 902.96,
+      "end": 908.56,
+      "duration": 5.6,
+      "text": "can be the maximum value of j i know we"
+    },
+    {
+      "start": 905.28,
+      "end": 913.2,
+      "duration": 7.92,
+      "text": "can at max have n rows and n columns so"
+    },
+    {
+      "start": 908.56,
+      "end": 915.6,
+      "duration": 7.04,
+      "text": "we will be requiring an n cross n dp so"
+    },
+    {
+      "start": 913.2,
+      "end": 919.68,
+      "duration": 6.48,
+      "text": "what's the next step very simple guys"
+    },
+    {
+      "start": 915.6,
+      "end": 921.52,
+      "duration": 5.92,
+      "text": "you just take dp of i j"
+    },
+    {
+      "start": 919.68,
+      "end": 922.4,
+      "duration": 2.72,
+      "text": "done next"
+    },
+    {
+      "start": 921.52,
+      "end": 924.8,
+      "duration": 3.28,
+      "text": "if"
+    },
+    {
+      "start": 922.4,
+      "end": 928.48,
+      "duration": 6.08,
+      "text": "dp of i j"
+    },
+    {
+      "start": 924.8,
+      "end": 930.56,
+      "duration": 5.76,
+      "text": "is not equal to minus 1 you can return"
+    },
+    {
+      "start": 928.48,
+      "end": 933.28,
+      "duration": 4.8,
+      "text": "dp of i"
+    },
+    {
+      "start": 930.56,
+      "end": 934.88,
+      "duration": 4.32,
+      "text": "j that's what all that's that's that's"
+    },
+    {
+      "start": 933.28,
+      "end": 937.52,
+      "duration": 4.24,
+      "text": "what you just need to do and if you're"
+    },
+    {
+      "start": 934.88,
+      "end": 939.36,
+      "duration": 4.48,
+      "text": "able to do this it should be absolutely"
+    },
+    {
+      "start": 937.52,
+      "end": 941.28,
+      "duration": 3.76,
+      "text": "fine with the memorization solution so"
+    },
+    {
+      "start": 939.36,
+      "end": 944.0,
+      "duration": 4.64,
+      "text": "once you convert it into a memorization"
+    },
+    {
+      "start": 941.28,
+      "end": 945.52,
+      "duration": 4.24,
+      "text": "solution what is the time complexity can"
+    },
+    {
+      "start": 944.0,
+      "end": 949.44,
+      "duration": 5.44,
+      "text": "i say the time complexity will be the"
+    },
+    {
+      "start": 945.52,
+      "end": 951.28,
+      "duration": 5.76,
+      "text": "number of states which is n into n"
+    },
+    {
+      "start": 949.44,
+      "end": 954.48,
+      "duration": 5.04,
+      "text": "and the space complexity like it will"
+    },
+    {
+      "start": 951.28,
+      "end": 956.24,
+      "duration": 4.96,
+      "text": "not be exactly n into n because so it's"
+    },
+    {
+      "start": 954.48,
+      "end": 958.56,
+      "duration": 4.08,
+      "text": "a triangle right uh like if you if you"
+    },
+    {
+      "start": 956.24,
+      "end": 960.32,
+      "duration": 4.08,
+      "text": "think it properly it's a triangle so one"
+    },
+    {
+      "start": 958.56,
+      "end": 962.56,
+      "duration": 4.0,
+      "text": "state two states so these will be the"
+    },
+    {
+      "start": 960.32,
+      "end": 964.72,
+      "duration": 4.4,
+      "text": "number of states which is one plus two"
+    },
+    {
+      "start": 962.56,
+      "end": 966.72,
+      "duration": 4.16,
+      "text": "plus three plus this portion of the dp"
+    },
+    {
+      "start": 964.72,
+      "end": 968.88,
+      "duration": 4.16,
+      "text": "will not be required but i'm not going"
+    },
+    {
+      "start": 966.72,
+      "end": 970.88,
+      "duration": 4.16,
+      "text": "into depth you will you can understand"
+    },
+    {
+      "start": 968.88,
+      "end": 973.04,
+      "duration": 4.16,
+      "text": "if you just do a dry iron on yourself"
+    },
+    {
+      "start": 970.88,
+      "end": 974.96,
+      "duration": 4.08,
+      "text": "i'm not going into the depth so the time"
+    },
+    {
+      "start": 973.04,
+      "end": 976.88,
+      "duration": 3.84,
+      "text": "complexity like you can just generally"
+    },
+    {
+      "start": 974.96,
+      "end": 979.52,
+      "duration": 4.56,
+      "text": "see this is the time complexity and the"
+    },
+    {
+      "start": 976.88,
+      "end": 982.08,
+      "duration": 5.2,
+      "text": "space complexity will be this which is"
+    },
+    {
+      "start": 979.52,
+      "end": 983.76,
+      "duration": 4.24,
+      "text": "recursion stack space and i've already"
+    },
+    {
+      "start": 982.08,
+      "end": 986.0,
+      "duration": 3.92,
+      "text": "told you about what is recursion stack"
+    },
+    {
+      "start": 983.76,
+      "end": 988.72,
+      "duration": 4.96,
+      "text": "space so this is the time complexity and"
+    },
+    {
+      "start": 986.0,
+      "end": 990.0,
+      "duration": 4.0,
+      "text": "the recursion stack space"
+    },
+    {
+      "start": 988.72,
+      "end": 992.8,
+      "duration": 4.08,
+      "text": "perfect guys"
+    },
+    {
+      "start": 990.0,
+      "end": 994.72,
+      "duration": 4.72,
+      "text": "okay so how do you"
+    },
+    {
+      "start": 992.8,
+      "end": 997.36,
+      "duration": 4.56,
+      "text": "remove the stack space"
+    },
+    {
+      "start": 994.72,
+      "end": 999.84,
+      "duration": 5.12,
+      "text": "because you know in a lot of platforms"
+    },
+    {
+      "start": 997.36,
+      "end": 1001.68,
+      "duration": 4.32,
+      "text": "you will get dla time limit exceeded so"
+    },
+    {
+      "start": 999.84,
+      "end": 1004.8,
+      "duration": 4.96,
+      "text": "in order to do that you just need to"
+    },
+    {
+      "start": 1001.68,
+      "end": 1006.24,
+      "duration": 4.56,
+      "text": "write the tabulation"
+    },
+    {
+      "start": 1004.8,
+      "end": 1008.0,
+      "duration": 3.2,
+      "text": "method"
+    },
+    {
+      "start": 1006.24,
+      "end": 1009.52,
+      "duration": 3.28,
+      "text": "so first"
+    },
+    {
+      "start": 1008.0,
+      "end": 1011.52,
+      "duration": 3.52,
+      "text": "this is going to be slightly different"
+    },
+    {
+      "start": 1009.52,
+      "end": 1015.36,
+      "duration": 5.84,
+      "text": "from the previous ones in the previous"
+    },
+    {
+      "start": 1011.52,
+      "end": 1017.36,
+      "duration": 5.84,
+      "text": "problems we did recursion from n minus 1"
+    },
+    {
+      "start": 1015.36,
+      "end": 1018.8,
+      "duration": 3.44,
+      "text": "till 0 and over here we did the"
+    },
+    {
+      "start": 1017.36,
+      "end": 1021.6,
+      "duration": 4.24,
+      "text": "recursion from"
+    },
+    {
+      "start": 1018.8,
+      "end": 1023.84,
+      "duration": 5.04,
+      "text": "0 to rather the last row so it isn't"
+    },
+    {
+      "start": 1021.6,
+      "end": 1027.04,
+      "duration": 5.44,
+      "text": "like now we will be calling just because"
+    },
+    {
+      "start": 1023.84,
+      "end": 1029.6,
+      "duration": 5.76,
+      "text": "we wrote the recursion from zero to uh"
+    },
+    {
+      "start": 1027.04,
+      "end": 1030.88,
+      "duration": 3.84,
+      "text": "and last row it doesn't mean it's"
+    },
+    {
+      "start": 1029.6,
+      "end": 1034.16,
+      "duration": 4.56,
+      "text": "bottom up"
+    },
+    {
+      "start": 1030.88,
+      "end": 1036.16,
+      "duration": 5.28,
+      "text": "right recursion always is top down is"
+    },
+    {
+      "start": 1034.16,
+      "end": 1038.64,
+      "duration": 4.48,
+      "text": "always top down because this is where"
+    },
+    {
+      "start": 1036.16,
+      "end": 1041.24,
+      "duration": 5.08,
+      "text": "you start you go down you go down then"
+    },
+    {
+      "start": 1038.64,
+      "end": 1044.48,
+      "duration": 5.84,
+      "text": "you compute the base case then you"
+    },
+    {
+      "start": 1041.24,
+      "end": 1048.0,
+      "duration": 6.76,
+      "text": "re-accommodate to get the final answer"
+    },
+    {
+      "start": 1044.48,
+      "end": 1049.76,
+      "duration": 5.28,
+      "text": "top down then you go so never ever right"
+    },
+    {
+      "start": 1048.0,
+      "end": 1050.88,
+      "duration": 2.88,
+      "text": "so"
+    },
+    {
+      "start": 1049.76,
+      "end": 1052.8,
+      "duration": 3.04,
+      "text": "over here"
+    },
+    {
+      "start": 1050.88,
+      "end": 1054.64,
+      "duration": 3.76,
+      "text": "the recursion that you wrote was from 0"
+    },
+    {
+      "start": 1052.8,
+      "end": 1056.4,
+      "duration": 3.6,
+      "text": "to n minus 1"
+    },
+    {
+      "start": 1054.64,
+      "end": 1058.72,
+      "duration": 4.08,
+      "text": "so the base case"
+    },
+    {
+      "start": 1056.4,
+      "end": 1061.76,
+      "duration": 5.36,
+      "text": "will be like the"
+    },
+    {
+      "start": 1058.72,
+      "end": 1064.0,
+      "duration": 5.28,
+      "text": "tabulation will be the opposite it's a"
+    },
+    {
+      "start": 1061.76,
+      "end": 1066.64,
+      "duration": 4.88,
+      "text": "thumb rule whatever you write for"
+    },
+    {
+      "start": 1064.0,
+      "end": 1068.48,
+      "duration": 4.48,
+      "text": "recursion the opposite is the tabulation"
+    },
+    {
+      "start": 1066.64,
+      "end": 1071.04,
+      "duration": 4.4,
+      "text": "right so that's something which is a"
+    },
+    {
+      "start": 1068.48,
+      "end": 1073.84,
+      "duration": 5.36,
+      "text": "thumb rule now let's look at the base"
+    },
+    {
+      "start": 1071.04,
+      "end": 1075.44,
+      "duration": 4.4,
+      "text": "case let's go across so by the way uh"
+    },
+    {
+      "start": 1073.84,
+      "end": 1076.56,
+      "duration": 2.72,
+      "text": "the first thing in tabulation everyone"
+    },
+    {
+      "start": 1075.44,
+      "end": 1079.2,
+      "duration": 3.76,
+      "text": "knows is"
+    },
+    {
+      "start": 1076.56,
+      "end": 1081.84,
+      "duration": 5.28,
+      "text": "declare a dp of size"
+    },
+    {
+      "start": 1079.2,
+      "end": 1085.12,
+      "duration": 5.92,
+      "text": "n cross n is something which you have to"
+    },
+    {
+      "start": 1081.84,
+      "end": 1087.6,
+      "duration": 5.76,
+      "text": "declare correct now going across"
+    },
+    {
+      "start": 1085.12,
+      "end": 1089.52,
+      "duration": 4.4,
+      "text": "what do i see in the recursion"
+    },
+    {
+      "start": 1087.6,
+      "end": 1092.16,
+      "duration": 4.56,
+      "text": "this is the base case"
+    },
+    {
+      "start": 1089.52,
+      "end": 1095.2,
+      "duration": 5.68,
+      "text": "how many base cases can we have"
+    },
+    {
+      "start": 1092.16,
+      "end": 1096.96,
+      "duration": 4.8,
+      "text": "if i'm saying i is n minus 1 what will"
+    },
+    {
+      "start": 1095.2,
+      "end": 1099.44,
+      "duration": 4.24,
+      "text": "the possible values of j"
+    },
+    {
+      "start": 1096.96,
+      "end": 1100.64,
+      "duration": 3.68,
+      "text": "the possible values of j if i just go to"
+    },
+    {
+      "start": 1099.44,
+      "end": 1103.36,
+      "duration": 3.92,
+      "text": "the example"
+    },
+    {
+      "start": 1100.64,
+      "end": 1104.56,
+      "duration": 3.92,
+      "text": "0 1 2 3."
+    },
+    {
+      "start": 1103.36,
+      "end": 1106.24,
+      "duration": 2.88,
+      "text": "there can be"
+    },
+    {
+      "start": 1104.56,
+      "end": 1107.68,
+      "duration": 3.12,
+      "text": "four different rows"
+    },
+    {
+      "start": 1106.24,
+      "end": 1109.12,
+      "duration": 2.88,
+      "text": "there can be four sorry four different"
+    },
+    {
+      "start": 1107.68,
+      "end": 1111.12,
+      "duration": 3.44,
+      "text": "columns"
+    },
+    {
+      "start": 1109.12,
+      "end": 1112.72,
+      "duration": 3.6,
+      "text": "because once you might reach here this"
+    },
+    {
+      "start": 1111.12,
+      "end": 1114.88,
+      "duration": 3.76,
+      "text": "might be a base case"
+    },
+    {
+      "start": 1112.72,
+      "end": 1116.88,
+      "duration": 4.16,
+      "text": "you might reach here this is a base case"
+    },
+    {
+      "start": 1114.88,
+      "end": 1118.56,
+      "duration": 3.68,
+      "text": "you might reach here this is a base case"
+    },
+    {
+      "start": 1116.88,
+      "end": 1120.8,
+      "duration": 3.92,
+      "text": "you might reach here this is a beast"
+    },
+    {
+      "start": 1118.56,
+      "end": 1123.44,
+      "duration": 4.88,
+      "text": "case so there can be four different base"
+    },
+    {
+      "start": 1120.8,
+      "end": 1125.52,
+      "duration": 4.72,
+      "text": "cases agreed so if i'm saying that there"
+    },
+    {
+      "start": 1123.44,
+      "end": 1127.12,
+      "duration": 3.68,
+      "text": "can be four different base cases"
+    },
+    {
+      "start": 1125.52,
+      "end": 1128.4,
+      "duration": 2.88,
+      "text": "i just need to write it"
+    },
+    {
+      "start": 1127.12,
+      "end": 1129.6,
+      "duration": 2.48,
+      "text": "so i know"
+    },
+    {
+      "start": 1128.4,
+      "end": 1130.8,
+      "duration": 2.4,
+      "text": "for sure"
+    },
+    {
+      "start": 1129.6,
+      "end": 1133.6,
+      "duration": 4.0,
+      "text": "that"
+    },
+    {
+      "start": 1130.8,
+      "end": 1134.88,
+      "duration": 4.08,
+      "text": "j there can be j equal to zero"
+    },
+    {
+      "start": 1133.6,
+      "end": 1136.48,
+      "duration": 2.88,
+      "text": "till j"
+    },
+    {
+      "start": 1134.88,
+      "end": 1138.08,
+      "duration": 3.2,
+      "text": "lesser than n"
+    },
+    {
+      "start": 1136.48,
+      "end": 1140.0,
+      "duration": 3.52,
+      "text": "all the columns"
+    },
+    {
+      "start": 1138.08,
+      "end": 1142.32,
+      "duration": 4.24,
+      "text": "and i know"
+    },
+    {
+      "start": 1140.0,
+      "end": 1144.4,
+      "duration": 4.4,
+      "text": "n minus 1 will stay common"
+    },
+    {
+      "start": 1142.32,
+      "end": 1146.08,
+      "duration": 3.76,
+      "text": "but this column number will always"
+    },
+    {
+      "start": 1144.4,
+      "end": 1146.96,
+      "duration": 2.56,
+      "text": "change because it might be the first"
+    },
+    {
+      "start": 1146.08,
+      "end": 1149.52,
+      "duration": 3.44,
+      "text": "column"
+    },
+    {
+      "start": 1146.96,
+      "end": 1151.84,
+      "duration": 4.88,
+      "text": "and every time i just need to make sure"
+    },
+    {
+      "start": 1149.52,
+      "end": 1153.44,
+      "duration": 3.92,
+      "text": "i take the value from the matrix because"
+    },
+    {
+      "start": 1151.84,
+      "end": 1154.64,
+      "duration": 2.8,
+      "text": "this is what i have been doing in the"
+    },
+    {
+      "start": 1153.44,
+      "end": 1156.56,
+      "duration": 3.12,
+      "text": "recursion"
+    },
+    {
+      "start": 1154.64,
+      "end": 1157.36,
+      "duration": 2.72,
+      "text": "right we have been writing this only"
+    },
+    {
+      "start": 1156.56,
+      "end": 1158.8,
+      "duration": 2.24,
+      "text": "right"
+    },
+    {
+      "start": 1157.36,
+      "end": 1162.64,
+      "duration": 5.28,
+      "text": "return this"
+    },
+    {
+      "start": 1158.8,
+      "end": 1165.12,
+      "duration": 6.32,
+      "text": "what can be dj j can be 0 1 2 and 3"
+    },
+    {
+      "start": 1162.64,
+      "end": 1167.52,
+      "duration": 4.88,
+      "text": "which is up till n minus 1"
+    },
+    {
+      "start": 1165.12,
+      "end": 1169.52,
+      "duration": 4.4,
+      "text": "that's what i wrote in the base case"
+    },
+    {
+      "start": 1167.52,
+      "end": 1171.04,
+      "duration": 3.52,
+      "text": "so something different from the previous"
+    },
+    {
+      "start": 1169.52,
+      "end": 1172.72,
+      "duration": 3.2,
+      "text": "ones we have written the base case"
+    },
+    {
+      "start": 1171.04,
+      "end": 1174.24,
+      "duration": 3.2,
+      "text": "ourselves so you have written this"
+    },
+    {
+      "start": 1172.72,
+      "end": 1176.4,
+      "duration": 3.68,
+      "text": "particular base case"
+    },
+    {
+      "start": 1174.24,
+      "end": 1179.04,
+      "duration": 4.8,
+      "text": "what is the next step the next step is"
+    },
+    {
+      "start": 1176.4,
+      "end": 1180.96,
+      "duration": 4.56,
+      "text": "definitely writing the for loop so we"
+    },
+    {
+      "start": 1179.04,
+      "end": 1183.28,
+      "duration": 4.24,
+      "text": "need to understand"
+    },
+    {
+      "start": 1180.96,
+      "end": 1186.08,
+      "duration": 5.12,
+      "text": "if we write the recurrence from 0 to n"
+    },
+    {
+      "start": 1183.28,
+      "end": 1188.88,
+      "duration": 5.6,
+      "text": "minus 1 the tabulation will be opposite"
+    },
+    {
+      "start": 1186.08,
+      "end": 1191.68,
+      "duration": 5.6,
+      "text": "why because you know the base cases and"
+    },
+    {
+      "start": 1188.88,
+      "end": 1194.16,
+      "duration": 5.28,
+      "text": "at n minus 1 so you fill the table from"
+    },
+    {
+      "start": 1191.68,
+      "end": 1197.2,
+      "duration": 5.52,
+      "text": "n minus 1 then to n minus 2 then to n"
+    },
+    {
+      "start": 1194.16,
+      "end": 1201.36,
+      "duration": 7.2,
+      "text": "minus 3 and so on you go until 0 0 so"
+    },
+    {
+      "start": 1197.2,
+      "end": 1204.16,
+      "duration": 6.96,
+      "text": "you go opposite right so what i know is"
+    },
+    {
+      "start": 1201.36,
+      "end": 1206.08,
+      "duration": 4.72,
+      "text": "there will be the row number i"
+    },
+    {
+      "start": 1204.16,
+      "end": 1208.0,
+      "duration": 3.84,
+      "text": "will definitely start from n minus 2"
+    },
+    {
+      "start": 1206.08,
+      "end": 1210.08,
+      "duration": 4.0,
+      "text": "there's no need to do for n minus 1"
+    },
+    {
+      "start": 1208.0,
+      "end": 1213.04,
+      "duration": 5.04,
+      "text": "because you've already done for it"
+    },
+    {
+      "start": 1210.08,
+      "end": 1215.44,
+      "duration": 5.36,
+      "text": "we go till 0 and i minus minus now"
+    },
+    {
+      "start": 1213.04,
+      "end": 1218.64,
+      "duration": 5.6,
+      "text": "remember whenever you you write"
+    },
+    {
+      "start": 1215.44,
+      "end": 1220.56,
+      "duration": 5.12,
+      "text": "tabulation you go and see what are the"
+    },
+    {
+      "start": 1218.64,
+      "end": 1221.36,
+      "duration": 2.72,
+      "text": "recurrences there is the i and there's a"
+    },
+    {
+      "start": 1220.56,
+      "end": 1224.24,
+      "duration": 3.68,
+      "text": "j"
+    },
+    {
+      "start": 1221.36,
+      "end": 1228.0,
+      "duration": 6.64,
+      "text": "so for an i what can be the particular"
+    },
+    {
+      "start": 1224.24,
+      "end": 1231.52,
+      "duration": 7.28,
+      "text": "js you think in your brain so if i see"
+    },
+    {
+      "start": 1228.0,
+      "end": 1232.72,
+      "duration": 4.72,
+      "text": "if i is zero what can be the possible j"
+    },
+    {
+      "start": 1231.52,
+      "end": 1234.8,
+      "duration": 3.28,
+      "text": "maybe like"
+    },
+    {
+      "start": 1232.72,
+      "end": 1236.8,
+      "duration": 4.08,
+      "text": "for zeroth row there will be zero"
+    },
+    {
+      "start": 1234.8,
+      "end": 1240.24,
+      "duration": 5.44,
+      "text": "columns i'd be like yes"
+    },
+    {
+      "start": 1236.8,
+      "end": 1242.96,
+      "duration": 6.16,
+      "text": "if i is one how many j's can be there"
+    },
+    {
+      "start": 1240.24,
+      "end": 1245.04,
+      "duration": 4.8,
+      "text": "zero and one if i is two how many j's"
+    },
+    {
+      "start": 1242.96,
+      "end": 1246.56,
+      "duration": 3.6,
+      "text": "can be there zero one two if i is three"
+    },
+    {
+      "start": 1245.04,
+      "end": 1249.76,
+      "duration": 4.72,
+      "text": "how many j's can be there zero one two"
+    },
+    {
+      "start": 1246.56,
+      "end": 1251.76,
+      "duration": 5.2,
+      "text": "three it's a triangle it's a triangle"
+    },
+    {
+      "start": 1249.76,
+      "end": 1254.64,
+      "duration": 4.88,
+      "text": "so can i say"
+    },
+    {
+      "start": 1251.76,
+      "end": 1256.4,
+      "duration": 4.64,
+      "text": "whatever is the value of i"
+    },
+    {
+      "start": 1254.64,
+      "end": 1258.96,
+      "duration": 4.32,
+      "text": "that's equivalent to the number of"
+    },
+    {
+      "start": 1256.4,
+      "end": 1261.2,
+      "duration": 4.8,
+      "text": "columns it can have"
+    },
+    {
+      "start": 1258.96,
+      "end": 1264.64,
+      "duration": 5.68,
+      "text": "so i figured out how many possible"
+    },
+    {
+      "start": 1261.2,
+      "end": 1266.96,
+      "duration": 5.76,
+      "text": "columns will i have for a particular i"
+    },
+    {
+      "start": 1264.64,
+      "end": 1268.88,
+      "duration": 4.24,
+      "text": "so first variable you will write and"
+    },
+    {
+      "start": 1266.96,
+      "end": 1271.36,
+      "duration": 4.4,
+      "text": "then you will create a nested loop"
+    },
+    {
+      "start": 1268.88,
+      "end": 1272.56,
+      "duration": 3.68,
+      "text": "that's a tabulation concept for j so"
+    },
+    {
+      "start": 1271.36,
+      "end": 1275.04,
+      "duration": 3.68,
+      "text": "create the nested loop for the"
+    },
+    {
+      "start": 1272.56,
+      "end": 1277.12,
+      "duration": 4.56,
+      "text": "tabulation concept"
+    },
+    {
+      "start": 1275.04,
+      "end": 1279.2,
+      "duration": 4.16,
+      "text": "so i create a nested loop for the"
+    },
+    {
+      "start": 1277.12,
+      "end": 1281.92,
+      "duration": 4.8,
+      "text": "tabulation concept and what did i tell"
+    },
+    {
+      "start": 1279.2,
+      "end": 1283.92,
+      "duration": 4.72,
+      "text": "you the nested now you might ask okay"
+    },
+    {
+      "start": 1281.92,
+      "end": 1286.08,
+      "duration": 4.16,
+      "text": "strive now how will the nested loop run"
+    },
+    {
+      "start": 1283.92,
+      "end": 1289.04,
+      "duration": 5.12,
+      "text": "now the nested loop will also run in the"
+    },
+    {
+      "start": 1286.08,
+      "end": 1291.76,
+      "duration": 5.68,
+      "text": "similar fashion how did j move j move"
+    },
+    {
+      "start": 1289.04,
+      "end": 1293.36,
+      "duration": 4.32,
+      "text": "like plus plus right plus one something"
+    },
+    {
+      "start": 1291.76,
+      "end": 1296.56,
+      "duration": 4.8,
+      "text": "you run the nested loop in the opposite"
+    },
+    {
+      "start": 1293.36,
+      "end": 1298.56,
+      "duration": 5.2,
+      "text": "direction which is j equal to i"
+    },
+    {
+      "start": 1296.56,
+      "end": 1299.44,
+      "duration": 2.88,
+      "text": "g greater than equal to zero j minus"
+    },
+    {
+      "start": 1298.56,
+      "end": 1300.72,
+      "duration": 2.16,
+      "text": "minus"
+    },
+    {
+      "start": 1299.44,
+      "end": 1302.4,
+      "duration": 2.96,
+      "text": "if you're moving both of them in the"
+    },
+    {
+      "start": 1300.72,
+      "end": 1304.8,
+      "duration": 4.08,
+      "text": "plus plus the tabulation will be the"
+    },
+    {
+      "start": 1302.4,
+      "end": 1308.4,
+      "duration": 6.0,
+      "text": "opposite that's it that's the simple"
+    },
+    {
+      "start": 1304.8,
+      "end": 1310.48,
+      "duration": 5.68,
+      "text": "tabulation nested for every i you write"
+    },
+    {
+      "start": 1308.4,
+      "end": 1312.32,
+      "duration": 3.92,
+      "text": "the particular j that's it and after"
+    },
+    {
+      "start": 1310.48,
+      "end": 1313.44,
+      "duration": 2.96,
+      "text": "that copy p is the recurrence what is"
+    },
+    {
+      "start": 1312.32,
+      "end": 1315.2,
+      "duration": 2.88,
+      "text": "the recurrence"
+    },
+    {
+      "start": 1313.44,
+      "end": 1317.28,
+      "duration": 3.84,
+      "text": "a of ig"
+    },
+    {
+      "start": 1315.2,
+      "end": 1318.88,
+      "duration": 3.68,
+      "text": "plus f of i plus 1 j that's the"
+    },
+    {
+      "start": 1317.28,
+      "end": 1320.4,
+      "duration": 3.12,
+      "text": "recurrence relationship right so you"
+    },
+    {
+      "start": 1318.88,
+      "end": 1322.0,
+      "duration": 3.12,
+      "text": "write dp of"
+    },
+    {
+      "start": 1320.4,
+      "end": 1325.68,
+      "duration": 5.28,
+      "text": "i plus 1"
+    },
+    {
+      "start": 1322.0,
+      "end": 1326.72,
+      "duration": 4.72,
+      "text": "j was the other one you wrote dg"
+    },
+    {
+      "start": 1325.68,
+      "end": 1329.92,
+      "duration": 4.24,
+      "text": "equal to"
+    },
+    {
+      "start": 1326.72,
+      "end": 1331.68,
+      "duration": 4.96,
+      "text": "a of ij is a of ij"
+    },
+    {
+      "start": 1329.92,
+      "end": 1333.44,
+      "duration": 3.52,
+      "text": "plus dp of"
+    },
+    {
+      "start": 1331.68,
+      "end": 1335.28,
+      "duration": 3.6,
+      "text": "i plus 1"
+    },
+    {
+      "start": 1333.44,
+      "end": 1337.44,
+      "duration": 4.0,
+      "text": "and j plus 1"
+    },
+    {
+      "start": 1335.28,
+      "end": 1339.76,
+      "duration": 4.48,
+      "text": "perfect and then you wrote"
+    },
+    {
+      "start": 1337.44,
+      "end": 1341.36,
+      "duration": 3.92,
+      "text": "dp of i j"
+    },
+    {
+      "start": 1339.76,
+      "end": 1342.88,
+      "duration": 3.12,
+      "text": "equal to"
+    },
+    {
+      "start": 1341.36,
+      "end": 1344.96,
+      "duration": 3.6,
+      "text": "minimum of"
+    },
+    {
+      "start": 1342.88,
+      "end": 1346.48,
+      "duration": 3.6,
+      "text": "d comma d g"
+    },
+    {
+      "start": 1344.96,
+      "end": 1347.92,
+      "duration": 2.96,
+      "text": "what will be answer what is the"
+    },
+    {
+      "start": 1346.48,
+      "end": 1350.08,
+      "duration": 3.6,
+      "text": "recursion that you call to get the"
+    },
+    {
+      "start": 1347.92,
+      "end": 1353.28,
+      "duration": 5.36,
+      "text": "answer the recursion that you called to"
+    },
+    {
+      "start": 1350.08,
+      "end": 1355.92,
+      "duration": 5.84,
+      "text": "get the answer was f of 0 comma 0. so"
+    },
+    {
+      "start": 1353.28,
+      "end": 1357.36,
+      "duration": 4.08,
+      "text": "over here the answer will be print of"
+    },
+    {
+      "start": 1355.92,
+      "end": 1361.84,
+      "duration": 5.92,
+      "text": "dp of"
+    },
+    {
+      "start": 1357.36,
+      "end": 1361.84,
+      "duration": 4.48,
+      "text": "0 and 0 that's it"
+    },
+    {
+      "start": 1361.92,
+      "end": 1364.56,
+      "duration": 2.64,
+      "text": "that is the answer yes that is the"
+    },
+    {
+      "start": 1363.52,
+      "end": 1365.68,
+      "duration": 2.16,
+      "text": "answer"
+    },
+    {
+      "start": 1364.56,
+      "end": 1368.16,
+      "duration": 3.6,
+      "text": "perfect"
+    },
+    {
+      "start": 1365.68,
+      "end": 1371.12,
+      "duration": 5.44,
+      "text": "so what is the time complexity now"
+    },
+    {
+      "start": 1368.16,
+      "end": 1372.56,
+      "duration": 4.4,
+      "text": "again we go of n into n because"
+    },
+    {
+      "start": 1371.12,
+      "end": 1374.8,
+      "duration": 3.68,
+      "text": "that's that's the kind of like near"
+    },
+    {
+      "start": 1372.56,
+      "end": 1378.08,
+      "duration": 5.52,
+      "text": "about n into n because over here it's"
+    },
+    {
+      "start": 1374.8,
+      "end": 1380.24,
+      "duration": 5.44,
+      "text": "not exactly n loop it's the number of"
+    },
+    {
+      "start": 1378.08,
+      "end": 1382.88,
+      "duration": 4.8,
+      "text": "rows so you can say that it's slightly"
+    },
+    {
+      "start": 1380.24,
+      "end": 1385.52,
+      "duration": 5.28,
+      "text": "less than that by a near about what with"
+    },
+    {
+      "start": 1382.88,
+      "end": 1387.84,
+      "duration": 4.96,
+      "text": "the space complexity normal recursion"
+    },
+    {
+      "start": 1385.52,
+      "end": 1389.36,
+      "duration": 3.84,
+      "text": "stack space by the way i think in the"
+    },
+    {
+      "start": 1387.84,
+      "end": 1391.84,
+      "duration": 4.0,
+      "text": "memoration part"
+    },
+    {
+      "start": 1389.36,
+      "end": 1394.48,
+      "duration": 5.12,
+      "text": "oh we just wrote a recursion text piece"
+    },
+    {
+      "start": 1391.84,
+      "end": 1396.8,
+      "duration": 4.96,
+      "text": "we did not write the uh tabulation that"
+    },
+    {
+      "start": 1394.48,
+      "end": 1399.76,
+      "duration": 5.28,
+      "text": "was used so the recursion stack space"
+    },
+    {
+      "start": 1396.8,
+      "end": 1402.32,
+      "duration": 5.52,
+      "text": "has been omitted and i just left off"
+    },
+    {
+      "start": 1399.76,
+      "end": 1403.52,
+      "duration": 3.76,
+      "text": "with this n cross it n matrix that"
+    },
+    {
+      "start": 1402.32,
+      "end": 1405.36,
+      "duration": 3.04,
+      "text": "you're using"
+    },
+    {
+      "start": 1403.52,
+      "end": 1406.32,
+      "duration": 2.8,
+      "text": "for this particular"
+    },
+    {
+      "start": 1405.36,
+      "end": 1407.84,
+      "duration": 2.48,
+      "text": "dp"
+    },
+    {
+      "start": 1406.32,
+      "end": 1409.92,
+      "duration": 3.6,
+      "text": "table"
+    },
+    {
+      "start": 1407.84,
+      "end": 1412.32,
+      "duration": 4.48,
+      "text": "so we have made sure"
+    },
+    {
+      "start": 1409.92,
+      "end": 1414.72,
+      "duration": 4.8,
+      "text": "that the space complexity of the"
+    },
+    {
+      "start": 1412.32,
+      "end": 1416.88,
+      "duration": 4.56,
+      "text": "recursion of the stack space has been"
+    },
+    {
+      "start": 1414.72,
+      "end": 1419.44,
+      "duration": 4.72,
+      "text": "removed"
+    },
+    {
+      "start": 1416.88,
+      "end": 1422.24,
+      "duration": 5.36,
+      "text": "can we optimize this yes"
+    },
+    {
+      "start": 1419.44,
+      "end": 1424.4,
+      "duration": 4.96,
+      "text": "why i did tell you if there is something"
+    },
+    {
+      "start": 1422.24,
+      "end": 1427.28,
+      "duration": 5.04,
+      "text": "like i plus 1 if there is something like"
+    },
+    {
+      "start": 1424.4,
+      "end": 1428.48,
+      "duration": 4.08,
+      "text": "i plus 1 you can always do it so why"
+    },
+    {
+      "start": 1427.28,
+      "end": 1431.28,
+      "duration": 4.0,
+      "text": "don't you do it"
+    },
+    {
+      "start": 1428.48,
+      "end": 1433.44,
+      "duration": 4.96,
+      "text": "i was the rule just store the previous"
+    },
+    {
+      "start": 1431.28,
+      "end": 1435.36,
+      "duration": 4.08,
+      "text": "keep exchanging remember so what is the"
+    },
+    {
+      "start": 1433.44,
+      "end": 1437.28,
+      "duration": 3.84,
+      "text": "next thing space optimization and"
+    },
+    {
+      "start": 1435.36,
+      "end": 1438.24,
+      "duration": 2.88,
+      "text": "there's a speciality about this series"
+    },
+    {
+      "start": 1437.28,
+      "end": 1439.76,
+      "duration": 2.48,
+      "text": "isn't it"
+    },
+    {
+      "start": 1438.24,
+      "end": 1441.84,
+      "duration": 3.6,
+      "text": "what have i told you"
+    },
+    {
+      "start": 1439.76,
+      "end": 1444.56,
+      "duration": 4.8,
+      "text": "whenever you see something like"
+    },
+    {
+      "start": 1441.84,
+      "end": 1446.56,
+      "duration": 4.72,
+      "text": "i minus one like till now it was i minus"
+    },
+    {
+      "start": 1444.56,
+      "end": 1449.44,
+      "duration": 4.88,
+      "text": "1 because it was a previous"
+    },
+    {
+      "start": 1446.56,
+      "end": 1452.48,
+      "duration": 5.92,
+      "text": "over here we are seeing something as"
+    },
+    {
+      "start": 1449.44,
+      "end": 1455.36,
+      "duration": 5.92,
+      "text": "what are we seeing i plus 1 so how how"
+    },
+    {
+      "start": 1452.48,
+      "end": 1456.96,
+      "duration": 4.48,
+      "text": "will this dp table fill up so"
+    },
+    {
+      "start": 1455.36,
+      "end": 1459.68,
+      "duration": 4.32,
+      "text": "i'll always recommend in order to"
+    },
+    {
+      "start": 1456.96,
+      "end": 1462.32,
+      "duration": 5.36,
+      "text": "understand space complexity better"
+    },
+    {
+      "start": 1459.68,
+      "end": 1464.56,
+      "duration": 4.88,
+      "text": "like our space optimization better try"
+    },
+    {
+      "start": 1462.32,
+      "end": 1467.28,
+      "duration": 4.96,
+      "text": "to do a dry run of this table format"
+    },
+    {
+      "start": 1464.56,
+      "end": 1468.96,
+      "duration": 4.4,
+      "text": "that the guy tushar roy does like we"
+    },
+    {
+      "start": 1467.28,
+      "end": 1471.04,
+      "duration": 3.76,
+      "text": "have seen his videos"
+    },
+    {
+      "start": 1468.96,
+      "end": 1472.48,
+      "duration": 3.52,
+      "text": "you will understand how he like he just"
+    },
+    {
+      "start": 1471.04,
+      "end": 1475.12,
+      "duration": 4.08,
+      "text": "comes up and writes the formula and"
+    },
+    {
+      "start": 1472.48,
+      "end": 1477.28,
+      "duration": 4.8,
+      "text": "fills up the dp table so now you know"
+    },
+    {
+      "start": 1475.12,
+      "end": 1478.88,
+      "duration": 3.76,
+      "text": "how to how to derive this particular"
+    },
+    {
+      "start": 1477.28,
+      "end": 1480.8,
+      "duration": 3.52,
+      "text": "formula now"
+    },
+    {
+      "start": 1478.88,
+      "end": 1482.96,
+      "duration": 4.08,
+      "text": "you can just fill up the dp table so if"
+    },
+    {
+      "start": 1480.8,
+      "end": 1484.08,
+      "duration": 3.28,
+      "text": "you try to fill up the dp table what"
+    },
+    {
+      "start": 1482.96,
+      "end": 1486.56,
+      "duration": 3.6,
+      "text": "happens is"
+    },
+    {
+      "start": 1484.08,
+      "end": 1489.36,
+      "duration": 5.28,
+      "text": "the last row is the base case"
+    },
+    {
+      "start": 1486.56,
+      "end": 1491.76,
+      "duration": 5.2,
+      "text": "which is automatically like i'm just"
+    },
+    {
+      "start": 1489.36,
+      "end": 1493.28,
+      "duration": 3.92,
+      "text": "filling up like random numbers it's not"
+    },
+    {
+      "start": 1491.76,
+      "end": 1494.8,
+      "duration": 3.04,
+      "text": "zero it's some dots"
+    },
+    {
+      "start": 1493.28,
+      "end": 1497.2,
+      "duration": 3.92,
+      "text": "and then"
+    },
+    {
+      "start": 1494.8,
+      "end": 1499.12,
+      "duration": 4.32,
+      "text": "you start from this guy and then you are"
+    },
+    {
+      "start": 1497.2,
+      "end": 1501.28,
+      "duration": 4.08,
+      "text": "like fill up this fill up this fill up"
+    },
+    {
+      "start": 1499.12,
+      "end": 1503.04,
+      "duration": 3.92,
+      "text": "this then you go to this guy and you"
+    },
+    {
+      "start": 1501.28,
+      "end": 1505.28,
+      "duration": 4.0,
+      "text": "like fill up this fill up this then you"
+    },
+    {
+      "start": 1503.04,
+      "end": 1508.08,
+      "duration": 5.04,
+      "text": "go to this guy and you say fill up this"
+    },
+    {
+      "start": 1505.28,
+      "end": 1509.04,
+      "duration": 3.76,
+      "text": "and whatever is here you say this is my"
+    },
+    {
+      "start": 1508.08,
+      "end": 1511.92,
+      "duration": 3.84,
+      "text": "answer"
+    },
+    {
+      "start": 1509.04,
+      "end": 1515.04,
+      "duration": 6.0,
+      "text": "so how did the dp table fill up"
+    },
+    {
+      "start": 1511.92,
+      "end": 1518.24,
+      "duration": 6.32,
+      "text": "first the base case and in order to get"
+    },
+    {
+      "start": 1515.04,
+      "end": 1519.76,
+      "duration": 4.72,
+      "text": "this what you did was you took this guy"
+    },
+    {
+      "start": 1518.24,
+      "end": 1522.56,
+      "duration": 4.32,
+      "text": "plus this"
+    },
+    {
+      "start": 1519.76,
+      "end": 1523.92,
+      "duration": 4.16,
+      "text": "or this guy plus this right"
+    },
+    {
+      "start": 1522.56,
+      "end": 1526.0,
+      "duration": 3.44,
+      "text": "in order to fill up this guy what you"
+    },
+    {
+      "start": 1523.92,
+      "end": 1527.2,
+      "duration": 3.28,
+      "text": "did was you took this"
+    },
+    {
+      "start": 1526.0,
+      "end": 1528.96,
+      "duration": 2.96,
+      "text": "plus this"
+    },
+    {
+      "start": 1527.2,
+      "end": 1530.88,
+      "duration": 3.68,
+      "text": "or this plus this"
+    },
+    {
+      "start": 1528.96,
+      "end": 1532.24,
+      "duration": 3.28,
+      "text": "that is what this line is doing"
+    },
+    {
+      "start": 1530.88,
+      "end": 1534.56,
+      "duration": 3.68,
+      "text": "f i j"
+    },
+    {
+      "start": 1532.24,
+      "end": 1536.88,
+      "duration": 4.64,
+      "text": "plus d p like the next guy"
+    },
+    {
+      "start": 1534.56,
+      "end": 1539.12,
+      "duration": 4.56,
+      "text": "f i j plus d p that's what it is doing"
+    },
+    {
+      "start": 1536.88,
+      "end": 1541.84,
+      "duration": 4.96,
+      "text": "if you try to do a dragon in order to"
+    },
+    {
+      "start": 1539.12,
+      "end": 1543.44,
+      "duration": 4.32,
+      "text": "fill up this it's taking this plus this"
+    },
+    {
+      "start": 1541.84,
+      "end": 1545.52,
+      "duration": 3.68,
+      "text": "or this plus this"
+    },
+    {
+      "start": 1543.44,
+      "end": 1547.84,
+      "duration": 4.4,
+      "text": "similarly in order to fill up this"
+    },
+    {
+      "start": 1545.52,
+      "end": 1550.08,
+      "duration": 4.56,
+      "text": "it's taking this plus this on this plus"
+    },
+    {
+      "start": 1547.84,
+      "end": 1552.4,
+      "duration": 4.56,
+      "text": "this so can i say"
+    },
+    {
+      "start": 1550.08,
+      "end": 1553.52,
+      "duration": 3.44,
+      "text": "in order for like in order to solve any"
+    },
+    {
+      "start": 1552.4,
+      "end": 1555.84,
+      "duration": 3.44,
+      "text": "row"
+    },
+    {
+      "start": 1553.52,
+      "end": 1557.84,
+      "duration": 4.32,
+      "text": "i'm just requiring this particular row"
+    },
+    {
+      "start": 1555.84,
+      "end": 1559.84,
+      "duration": 4.0,
+      "text": "in order to solve this row i'm just"
+    },
+    {
+      "start": 1557.84,
+      "end": 1561.84,
+      "duration": 4.0,
+      "text": "requiring this particular row in order"
+    },
+    {
+      "start": 1559.84,
+      "end": 1564.96,
+      "duration": 5.12,
+      "text": "to solve this row i'm just requiring"
+    },
+    {
+      "start": 1561.84,
+      "end": 1568.16,
+      "duration": 6.32,
+      "text": "this particular row so can i say"
+    },
+    {
+      "start": 1564.96,
+      "end": 1570.4,
+      "duration": 5.44,
+      "text": "once this is the base case"
+    },
+    {
+      "start": 1568.16,
+      "end": 1573.04,
+      "duration": 4.88,
+      "text": "i compute this particular row"
+    },
+    {
+      "start": 1570.4,
+      "end": 1575.68,
+      "duration": 5.28,
+      "text": "and i'm not requiring this i'll just"
+    },
+    {
+      "start": 1573.04,
+      "end": 1577.68,
+      "duration": 4.64,
+      "text": "delete it then i compute this row i'll"
+    },
+    {
+      "start": 1575.68,
+      "end": 1579.12,
+      "duration": 3.44,
+      "text": "not require this deleted then i'll"
+    },
+    {
+      "start": 1577.68,
+      "end": 1581.44,
+      "duration": 3.76,
+      "text": "compute this row i'll not require it"
+    },
+    {
+      "start": 1579.12,
+      "end": 1584.4,
+      "duration": 5.28,
+      "text": "delete it so can i say"
+    },
+    {
+      "start": 1581.44,
+      "end": 1586.96,
+      "duration": 5.52,
+      "text": "instead of storing the entire triangle i"
+    },
+    {
+      "start": 1584.4,
+      "end": 1588.0,
+      "duration": 3.6,
+      "text": "just need to store two rows"
+    },
+    {
+      "start": 1586.96,
+      "end": 1589.28,
+      "duration": 2.32,
+      "text": "two rows"
+    },
+    {
+      "start": 1588.0,
+      "end": 1591.2,
+      "duration": 3.2,
+      "text": "one is the"
+    },
+    {
+      "start": 1589.28,
+      "end": 1593.68,
+      "duration": 4.4,
+      "text": "previous or like the"
+    },
+    {
+      "start": 1591.2,
+      "end": 1595.68,
+      "duration": 4.48,
+      "text": "front row and one is the current row"
+    },
+    {
+      "start": 1593.68,
+      "end": 1597.52,
+      "duration": 3.84,
+      "text": "that you are traversing and once this"
+    },
+    {
+      "start": 1595.68,
+      "end": 1598.4,
+      "duration": 2.72,
+      "text": "current row is computed and you move to"
+    },
+    {
+      "start": 1597.52,
+      "end": 1600.88,
+      "duration": 3.36,
+      "text": "this guy"
+    },
+    {
+      "start": 1598.4,
+      "end": 1602.72,
+      "duration": 4.32,
+      "text": "this current row becomes the front row"
+    },
+    {
+      "start": 1600.88,
+      "end": 1604.24,
+      "duration": 3.36,
+      "text": "can i see this i can"
+    },
+    {
+      "start": 1602.72,
+      "end": 1607.28,
+      "duration": 4.56,
+      "text": "that's what you have to just do in the"
+    },
+    {
+      "start": 1604.24,
+      "end": 1609.36,
+      "duration": 5.12,
+      "text": "code just make sure you"
+    },
+    {
+      "start": 1607.28,
+      "end": 1612.4,
+      "duration": 5.12,
+      "text": "store this particular guy like what you"
+    },
+    {
+      "start": 1609.36,
+      "end": 1615.04,
+      "duration": 5.68,
+      "text": "can do is always remember always always"
+    },
+    {
+      "start": 1612.4,
+      "end": 1617.12,
+      "duration": 4.72,
+      "text": "uh try to create a like over here you"
+    },
+    {
+      "start": 1615.04,
+      "end": 1619.2,
+      "duration": 4.16,
+      "text": "can say the front row so you can write"
+    },
+    {
+      "start": 1617.12,
+      "end": 1621.28,
+      "duration": 4.16,
+      "text": "something as front row"
+    },
+    {
+      "start": 1619.2,
+      "end": 1623.12,
+      "duration": 3.92,
+      "text": "of size n"
+    },
+    {
+      "start": 1621.28,
+      "end": 1625.52,
+      "duration": 4.24,
+      "text": "and over here instead of this you can"
+    },
+    {
+      "start": 1623.12,
+      "end": 1626.48,
+      "duration": 3.36,
+      "text": "write front of j and the front row is"
+    },
+    {
+      "start": 1625.52,
+      "end": 1630.48,
+      "duration": 4.96,
+      "text": "computed"
+    },
+    {
+      "start": 1626.48,
+      "end": 1632.32,
+      "duration": 5.84,
+      "text": "so the front is computed by this next"
+    },
+    {
+      "start": 1630.48,
+      "end": 1634.08,
+      "duration": 3.6,
+      "text": "this is front"
+    },
+    {
+      "start": 1632.32,
+      "end": 1636.32,
+      "duration": 4.0,
+      "text": "i plus 1 is front"
+    },
+    {
+      "start": 1634.08,
+      "end": 1637.84,
+      "duration": 3.76,
+      "text": "the entire i plus 1 is front so right"
+    },
+    {
+      "start": 1636.32,
+      "end": 1640.88,
+      "duration": 4.56,
+      "text": "front correct"
+    },
+    {
+      "start": 1637.84,
+      "end": 1644.4,
+      "duration": 6.56,
+      "text": "now instead of carrying dp of ij because"
+    },
+    {
+      "start": 1640.88,
+      "end": 1646.96,
+      "duration": 6.08,
+      "text": "dp of ij means understand dp of ig means"
+    },
+    {
+      "start": 1644.4,
+      "end": 1650.4,
+      "duration": 6.0,
+      "text": "this guy this guy this guy so instead of"
+    },
+    {
+      "start": 1646.96,
+      "end": 1652.48,
+      "duration": 5.52,
+      "text": "dp of ij what you say is you just create"
+    },
+    {
+      "start": 1650.4,
+      "end": 1655.76,
+      "duration": 5.36,
+      "text": "this particular row just create one more"
+    },
+    {
+      "start": 1652.48,
+      "end": 1657.6,
+      "duration": 5.12,
+      "text": "row so what you basically do is you say"
+    },
+    {
+      "start": 1655.76,
+      "end": 1660.24,
+      "duration": 4.48,
+      "text": "okay what i'm going to do is i'm not"
+    },
+    {
+      "start": 1657.6,
+      "end": 1662.08,
+      "duration": 4.48,
+      "text": "going to do anything i'll be like let's"
+    },
+    {
+      "start": 1660.24,
+      "end": 1663.76,
+      "duration": 3.52,
+      "text": "create the current row"
+    },
+    {
+      "start": 1662.08,
+      "end": 1664.96,
+      "duration": 2.88,
+      "text": "like you can trade off a lesser size but"
+    },
+    {
+      "start": 1663.76,
+      "end": 1666.96,
+      "duration": 3.2,
+      "text": "i'll just take it"
+    },
+    {
+      "start": 1664.96,
+      "end": 1670.0,
+      "duration": 5.04,
+      "text": "and instead of dp of i j you'll be like"
+    },
+    {
+      "start": 1666.96,
+      "end": 1670.88,
+      "duration": 3.92,
+      "text": "car of j and once the entire row has"
+    },
+    {
+      "start": 1670.0,
+      "end": 1674.0,
+      "duration": 4.0,
+      "text": "been"
+    },
+    {
+      "start": 1670.88,
+      "end": 1676.24,
+      "duration": 5.36,
+      "text": "created by this particular for loop"
+    },
+    {
+      "start": 1674.0,
+      "end": 1678.56,
+      "duration": 4.56,
+      "text": "you know this particular current for the"
+    },
+    {
+      "start": 1676.24,
+      "end": 1680.4,
+      "duration": 4.16,
+      "text": "next i will become the front so you will"
+    },
+    {
+      "start": 1678.56,
+      "end": 1682.4,
+      "duration": 3.84,
+      "text": "say front who's the front"
+    },
+    {
+      "start": 1680.4,
+      "end": 1685.6,
+      "duration": 5.2,
+      "text": "the current will be the front for the"
+    },
+    {
+      "start": 1682.4,
+      "end": 1687.52,
+      "duration": 5.12,
+      "text": "next i because i will go minus minus"
+    },
+    {
+      "start": 1685.6,
+      "end": 1689.84,
+      "duration": 4.24,
+      "text": "that's the space optimization and once"
+    },
+    {
+      "start": 1687.52,
+      "end": 1690.96,
+      "duration": 3.44,
+      "text": "you do the space optimization you can be"
+    },
+    {
+      "start": 1689.84,
+      "end": 1693.44,
+      "duration": 3.6,
+      "text": "like okay i've done the space"
+    },
+    {
+      "start": 1690.96,
+      "end": 1695.76,
+      "duration": 4.8,
+      "text": "optimization so now the time complexity"
+    },
+    {
+      "start": 1693.44,
+      "end": 1698.8,
+      "duration": 5.36,
+      "text": "is still the same but the space"
+    },
+    {
+      "start": 1695.76,
+      "end": 1700.72,
+      "duration": 4.96,
+      "text": "complexity has boiled down to big o of n"
+    },
+    {
+      "start": 1698.8,
+      "end": 1702.8,
+      "duration": 4.0,
+      "text": "like it's twice of n but yeah it's near"
+    },
+    {
+      "start": 1700.72,
+      "end": 1704.72,
+      "duration": 4.0,
+      "text": "about b of n we're not using an n cross"
+    },
+    {
+      "start": 1702.8,
+      "end": 1706.56,
+      "duration": 3.76,
+      "text": "and matrix so we're just using couple of"
+    },
+    {
+      "start": 1704.72,
+      "end": 1709.52,
+      "duration": 4.8,
+      "text": "rows and we're able to compute the"
+    },
+    {
+      "start": 1706.56,
+      "end": 1711.36,
+      "duration": 4.8,
+      "text": "entire answer and can i say can i say at"
+    },
+    {
+      "start": 1709.52,
+      "end": 1714.24,
+      "duration": 4.72,
+      "text": "the end of the day whenever you're doing"
+    },
+    {
+      "start": 1711.36,
+      "end": 1716.16,
+      "duration": 4.8,
+      "text": "i minus minus in the first loop"
+    },
+    {
+      "start": 1714.24,
+      "end": 1718.32,
+      "duration": 4.08,
+      "text": "you're doing i minus minus over here"
+    },
+    {
+      "start": 1716.16,
+      "end": 1721.2,
+      "duration": 5.04,
+      "text": "what is the ending point of i when this"
+    },
+    {
+      "start": 1718.32,
+      "end": 1725.04,
+      "duration": 6.72,
+      "text": "loop ends i will be minus 1"
+    },
+    {
+      "start": 1721.2,
+      "end": 1728.0,
+      "duration": 6.8,
+      "text": "and the current will be stored in front"
+    },
+    {
+      "start": 1725.04,
+      "end": 1730.56,
+      "duration": 5.52,
+      "text": "so the answer will be stored in"
+    },
+    {
+      "start": 1728.0,
+      "end": 1731.92,
+      "duration": 3.92,
+      "text": "front of zero"
+    },
+    {
+      "start": 1730.56,
+      "end": 1733.44,
+      "duration": 2.88,
+      "text": "right"
+    },
+    {
+      "start": 1731.92,
+      "end": 1735.92,
+      "duration": 4.0,
+      "text": "very obvious"
+    },
+    {
+      "start": 1733.44,
+      "end": 1738.08,
+      "duration": 4.64,
+      "text": "that's how you can space optimize this"
+    },
+    {
+      "start": 1735.92,
+      "end": 1740.16,
+      "duration": 4.24,
+      "text": "particular stuff so i've already written"
+    },
+    {
+      "start": 1738.08,
+      "end": 1741.92,
+      "duration": 3.84,
+      "text": "the pseudo codes in the ipad but i'll"
+    },
+    {
+      "start": 1740.16,
+      "end": 1743.92,
+      "duration": 3.76,
+      "text": "still write the code so that you have a"
+    },
+    {
+      "start": 1741.92,
+      "end": 1746.72,
+      "duration": 4.8,
+      "text": "quick revision kind of a thing so"
+    },
+    {
+      "start": 1743.92,
+      "end": 1749.28,
+      "duration": 5.36,
+      "text": "basically given the triangle and n which"
+    },
+    {
+      "start": 1746.72,
+      "end": 1751.12,
+      "duration": 4.4,
+      "text": "recommends the number of rows so what"
+    },
+    {
+      "start": 1749.28,
+      "end": 1752.4,
+      "duration": 3.12,
+      "text": "you can do is you can definitely write a"
+    },
+    {
+      "start": 1751.12,
+      "end": 1754.64,
+      "duration": 3.52,
+      "text": "function so let's quickly write a"
+    },
+    {
+      "start": 1752.4,
+      "end": 1756.24,
+      "duration": 3.84,
+      "text": "function where we will we know that we"
+    },
+    {
+      "start": 1754.64,
+      "end": 1760.16,
+      "duration": 5.52,
+      "text": "will have couple of changing parameters"
+    },
+    {
+      "start": 1756.24,
+      "end": 1761.6,
+      "duration": 5.36,
+      "text": "which is rtij we will be requiring this"
+    },
+    {
+      "start": 1760.16,
+      "end": 1764.88,
+      "duration": 4.72,
+      "text": "vector triangle"
+    },
+    {
+      "start": 1761.6,
+      "end": 1767.12,
+      "duration": 5.52,
+      "text": "and the n so let's quickly take this off"
+    },
+    {
+      "start": 1764.88,
+      "end": 1769.12,
+      "duration": 4.24,
+      "text": "i know that if we reach the last row"
+    },
+    {
+      "start": 1767.12,
+      "end": 1771.6,
+      "duration": 4.48,
+      "text": "that's over right"
+    },
+    {
+      "start": 1769.12,
+      "end": 1773.2,
+      "duration": 4.08,
+      "text": "so we can definitely return triangle n"
+    },
+    {
+      "start": 1771.6,
+      "end": 1774.4,
+      "duration": 2.8,
+      "text": "minus 1 j so that's the base case that"
+    },
+    {
+      "start": 1773.2,
+      "end": 1776.8,
+      "duration": 3.6,
+      "text": "we have covered"
+    },
+    {
+      "start": 1774.4,
+      "end": 1778.0,
+      "duration": 3.6,
+      "text": "and there will be a d which will be a"
+    },
+    {
+      "start": 1776.8,
+      "end": 1781.28,
+      "duration": 4.48,
+      "text": "triangle"
+    },
+    {
+      "start": 1778.0,
+      "end": 1784.08,
+      "duration": 6.08,
+      "text": "i j plus f of i plus 1 j which is"
+    },
+    {
+      "start": 1781.28,
+      "end": 1785.04,
+      "duration": 3.76,
+      "text": "basically the down path there will be a"
+    },
+    {
+      "start": 1784.08,
+      "end": 1787.12,
+      "duration": 3.04,
+      "text": "dg"
+    },
+    {
+      "start": 1785.04,
+      "end": 1789.44,
+      "duration": 4.4,
+      "text": "which will be triangle"
+    },
+    {
+      "start": 1787.12,
+      "end": 1794.0,
+      "duration": 6.88,
+      "text": "i j plus"
+    },
+    {
+      "start": 1789.44,
+      "end": 1796.4,
+      "duration": 6.96,
+      "text": "f of i plus 1 and j plus 1 correct and"
+    },
+    {
+      "start": 1794.0,
+      "end": 1799.28,
+      "duration": 5.28,
+      "text": "uh don't forget to uh pass on the extra"
+    },
+    {
+      "start": 1796.4,
+      "end": 1800.64,
+      "duration": 4.24,
+      "text": "parameters that's important"
+    },
+    {
+      "start": 1799.28,
+      "end": 1802.64,
+      "duration": 3.36,
+      "text": "at the end of the day you know you have"
+    },
+    {
+      "start": 1800.64,
+      "end": 1804.96,
+      "duration": 4.32,
+      "text": "to return the minimal of down and the"
+    },
+    {
+      "start": 1802.64,
+      "end": 1807.6,
+      "duration": 4.96,
+      "text": "diagonal path so can you return that"
+    },
+    {
+      "start": 1804.96,
+      "end": 1810.48,
+      "duration": 5.52,
+      "text": "over here you can return the function"
+    },
+    {
+      "start": 1807.6,
+      "end": 1813.28,
+      "duration": 5.68,
+      "text": "zero comma zero the triangle and the"
+    },
+    {
+      "start": 1810.48,
+      "end": 1815.52,
+      "duration": 5.04,
+      "text": "size and you can quickly run it off"
+    },
+    {
+      "start": 1813.28,
+      "end": 1817.36,
+      "duration": 4.08,
+      "text": "it does run but it will give you a tle"
+    },
+    {
+      "start": 1815.52,
+      "end": 1818.8,
+      "duration": 3.28,
+      "text": "uh because it's a recursive solution and"
+    },
+    {
+      "start": 1817.36,
+      "end": 1821.36,
+      "duration": 4.0,
+      "text": "it will be exponential so what you need"
+    },
+    {
+      "start": 1818.8,
+      "end": 1824.48,
+      "duration": 5.68,
+      "text": "to do is you definitely need to create a"
+    },
+    {
+      "start": 1821.36,
+      "end": 1827.12,
+      "duration": 5.76,
+      "text": "dp's array so please create a dp array"
+    },
+    {
+      "start": 1824.48,
+      "end": 1827.92,
+      "duration": 3.44,
+      "text": "of size n cross n initialize with minus"
+    },
+    {
+      "start": 1827.12,
+      "end": 1830.72,
+      "duration": 3.6,
+      "text": "1"
+    },
+    {
+      "start": 1827.92,
+      "end": 1831.68,
+      "duration": 3.76,
+      "text": "pass it as the next parameter"
+    },
+    {
+      "start": 1830.72,
+      "end": 1834.88,
+      "duration": 4.16,
+      "text": "so"
+    },
+    {
+      "start": 1831.68,
+      "end": 1834.88,
+      "duration": 3.2,
+      "text": "you can just copy paste this"
+    },
+    {
+      "start": 1835.2,
+      "end": 1839.44,
+      "duration": 4.24,
+      "text": "and this will be dp so just make sure"
+    },
+    {
+      "start": 1837.2,
+      "end": 1842.0,
+      "duration": 4.8,
+      "text": "it's a dp"
+    },
+    {
+      "start": 1839.44,
+      "end": 1844.16,
+      "duration": 4.72,
+      "text": "over here make sure you pass one more dp"
+    },
+    {
+      "start": 1842.0,
+      "end": 1846.08,
+      "duration": 4.08,
+      "text": "so first step is done by just declaring"
+    },
+    {
+      "start": 1844.16,
+      "end": 1848.4,
+      "duration": 4.24,
+      "text": "and passing the parameter what's the"
+    },
+    {
+      "start": 1846.08,
+      "end": 1850.48,
+      "duration": 4.4,
+      "text": "next step initialize the answer so"
+    },
+    {
+      "start": 1848.4,
+      "end": 1853.84,
+      "duration": 5.44,
+      "text": "please initialize the answer what is the"
+    },
+    {
+      "start": 1850.48,
+      "end": 1856.56,
+      "duration": 6.08,
+      "text": "next step if dp of i j is"
+    },
+    {
+      "start": 1853.84,
+      "end": 1858.72,
+      "duration": 4.88,
+      "text": "not equal to minus 1 you can return dp"
+    },
+    {
+      "start": 1856.56,
+      "end": 1860.96,
+      "duration": 4.4,
+      "text": "of i j and that should be perfect now"
+    },
+    {
+      "start": 1858.72,
+      "end": 1863.52,
+      "duration": 4.8,
+      "text": "you can run this code running fine and"
+    },
+    {
+      "start": 1860.96,
+      "end": 1866.0,
+      "duration": 5.04,
+      "text": "if i try to submit this"
+    },
+    {
+      "start": 1863.52,
+      "end": 1868.16,
+      "duration": 4.64,
+      "text": "say partially accepted"
+    },
+    {
+      "start": 1866.0,
+      "end": 1870.64,
+      "duration": 4.64,
+      "text": "uh because it's getting time limit"
+    },
+    {
+      "start": 1868.16,
+      "end": 1872.24,
+      "duration": 4.08,
+      "text": "exceeded as i said a lot of times it"
+    },
+    {
+      "start": 1870.64,
+      "end": 1873.76,
+      "duration": 3.12,
+      "text": "will happen that the recursive"
+    },
+    {
+      "start": 1872.24,
+      "end": 1875.76,
+      "duration": 3.52,
+      "text": "memoration will give you time limit"
+    },
+    {
+      "start": 1873.76,
+      "end": 1877.04,
+      "duration": 3.28,
+      "text": "exceeded that is when"
+    },
+    {
+      "start": 1875.76,
+      "end": 1880.32,
+      "duration": 4.56,
+      "text": "you need to do is you just need to"
+    },
+    {
+      "start": 1877.04,
+      "end": 1881.76,
+      "duration": 4.72,
+      "text": "convert that into a tabulation format so"
+    },
+    {
+      "start": 1880.32,
+      "end": 1884.64,
+      "duration": 4.32,
+      "text": "over here what i can do is you can just"
+    },
+    {
+      "start": 1881.76,
+      "end": 1886.48,
+      "duration": 4.72,
+      "text": "put in an n of zero and i know there is"
+    },
+    {
+      "start": 1884.64,
+      "end": 1888.56,
+      "duration": 3.92,
+      "text": "a last row that has to be filled so"
+    },
+    {
+      "start": 1886.48,
+      "end": 1891.28,
+      "duration": 4.8,
+      "text": "kindly fill up the last row that's very"
+    },
+    {
+      "start": 1888.56,
+      "end": 1893.36,
+      "duration": 4.8,
+      "text": "simple dp of the last row"
+    },
+    {
+      "start": 1891.28,
+      "end": 1896.8,
+      "duration": 5.52,
+      "text": "and the column will be nothing but the"
+    },
+    {
+      "start": 1893.36,
+      "end": 1899.2,
+      "duration": 5.84,
+      "text": "triangle of the last row and the column"
+    },
+    {
+      "start": 1896.8,
+      "end": 1900.56,
+      "duration": 3.76,
+      "text": "that's how you can easily fill that up"
+    },
+    {
+      "start": 1899.2,
+      "end": 1902.32,
+      "duration": 3.12,
+      "text": "and apart from that there will be a"
+    },
+    {
+      "start": 1900.56,
+      "end": 1904.48,
+      "duration": 3.92,
+      "text": "couple of nested loops"
+    },
+    {
+      "start": 1902.32,
+      "end": 1906.88,
+      "duration": 4.56,
+      "text": "right starting from the back so you can"
+    },
+    {
+      "start": 1904.48,
+      "end": 1909.84,
+      "duration": 5.36,
+      "text": "just run it off there'll also be a for"
+    },
+    {
+      "start": 1906.88,
+      "end": 1911.68,
+      "duration": 4.8,
+      "text": "intj equal to starting from the back and"
+    },
+    {
+      "start": 1909.84,
+      "end": 1912.96,
+      "duration": 3.12,
+      "text": "it can go on"
+    },
+    {
+      "start": 1911.68,
+      "end": 1914.24,
+      "duration": 2.56,
+      "text": "something like this"
+    },
+    {
+      "start": 1912.96,
+      "end": 1916.08,
+      "duration": 3.12,
+      "text": "and i know there will be a couple of"
+    },
+    {
+      "start": 1914.24,
+      "end": 1918.08,
+      "duration": 3.84,
+      "text": "parts which is intrd"
+    },
+    {
+      "start": 1916.08,
+      "end": 1920.64,
+      "duration": 4.56,
+      "text": "so basically uh you just need to make"
+    },
+    {
+      "start": 1918.08,
+      "end": 1922.72,
+      "duration": 4.64,
+      "text": "sure you copy this stuff that's it"
+    },
+    {
+      "start": 1920.64,
+      "end": 1925.12,
+      "duration": 4.48,
+      "text": "nothing special just make sure you copy"
+    },
+    {
+      "start": 1922.72,
+      "end": 1925.12,
+      "duration": 2.4,
+      "text": "this stuff"
+    },
+    {
+      "start": 1925.28,
+      "end": 1930.0,
+      "duration": 4.72,
+      "text": "and instead of f you need to create a dp"
+    },
+    {
+      "start": 1928.24,
+      "end": 1933.12,
+      "duration": 4.88,
+      "text": "of i plus 1"
+    },
+    {
+      "start": 1930.0,
+      "end": 1935.44,
+      "duration": 5.44,
+      "text": "and j that's the shuttle change that you"
+    },
+    {
+      "start": 1933.12,
+      "end": 1937.36,
+      "duration": 4.24,
+      "text": "need to do instead of f i will always be"
+    },
+    {
+      "start": 1935.44,
+      "end": 1939.44,
+      "duration": 4.0,
+      "text": "dp of the"
+    },
+    {
+      "start": 1937.36,
+      "end": 1941.92,
+      "duration": 4.56,
+      "text": "recurrence that you're calling so just"
+    },
+    {
+      "start": 1939.44,
+      "end": 1944.96,
+      "duration": 5.52,
+      "text": "carry it on dp of i plus 1"
+    },
+    {
+      "start": 1941.92,
+      "end": 1946.64,
+      "duration": 4.72,
+      "text": "r2 j plus 1 that's how you'll do it and"
+    },
+    {
+      "start": 1944.96,
+      "end": 1949.68,
+      "duration": 4.72,
+      "text": "at the end of the day you can say dp of"
+    },
+    {
+      "start": 1946.64,
+      "end": 1951.36,
+      "duration": 4.72,
+      "text": "i j will be minimal of d comma d g so"
+    },
+    {
+      "start": 1949.68,
+      "end": 1954.72,
+      "duration": 5.04,
+      "text": "once you've done this you know what will"
+    },
+    {
+      "start": 1951.36,
+      "end": 1957.76,
+      "duration": 6.4,
+      "text": "you return you will always return dp of"
+    },
+    {
+      "start": 1954.72,
+      "end": 1959.92,
+      "duration": 5.2,
+      "text": "zero zero because that's sorry dp of is"
+    },
+    {
+      "start": 1957.76,
+      "end": 1961.68,
+      "duration": 3.92,
+      "text": "it zero zero that's zero zero so zero"
+    },
+    {
+      "start": 1959.92,
+      "end": 1963.2,
+      "duration": 3.28,
+      "text": "zero is what you're going to return"
+    },
+    {
+      "start": 1961.68,
+      "end": 1964.8,
+      "duration": 3.12,
+      "text": "let's quickly run this off should be"
+    },
+    {
+      "start": 1963.2,
+      "end": 1966.8,
+      "duration": 3.6,
+      "text": "running fine"
+    },
+    {
+      "start": 1964.8,
+      "end": 1968.48,
+      "duration": 3.68,
+      "text": "yeah that's run let's quickly submit"
+    },
+    {
+      "start": 1966.8,
+      "end": 1970.0,
+      "duration": 3.2,
+      "text": "this off let's see if this is getting"
+    },
+    {
+      "start": 1968.48,
+      "end": 1972.8,
+      "duration": 4.32,
+      "text": "your tle"
+    },
+    {
+      "start": 1970.0,
+      "end": 1974.8,
+      "duration": 4.8,
+      "text": "oh this is not giving okay so this uh"
+    },
+    {
+      "start": 1972.8,
+      "end": 1977.76,
+      "duration": 4.96,
+      "text": "appears to be the correct answer and"
+    },
+    {
+      "start": 1974.8,
+      "end": 1979.52,
+      "duration": 4.72,
+      "text": "you're getting your 100 score so"
+    },
+    {
+      "start": 1977.76,
+      "end": 1981.44,
+      "duration": 3.68,
+      "text": "now what are the changes that i require"
+    },
+    {
+      "start": 1979.52,
+      "end": 1982.96,
+      "duration": 3.44,
+      "text": "what's the next step space optimization"
+    },
+    {
+      "start": 1981.44,
+      "end": 1984.96,
+      "duration": 3.52,
+      "text": "let me quickly raise this off to get"
+    },
+    {
+      "start": 1982.96,
+      "end": 1987.68,
+      "duration": 4.72,
+      "text": "some space it's peace optimization right"
+    },
+    {
+      "start": 1984.96,
+      "end": 1989.68,
+      "duration": 4.72,
+      "text": "so we need to delete this and we just"
+    },
+    {
+      "start": 1987.68,
+      "end": 1992.4,
+      "duration": 4.72,
+      "text": "need to store the last row so what we"
+    },
+    {
+      "start": 1989.68,
+      "end": 1994.0,
+      "duration": 4.32,
+      "text": "can do is we can say vector of end"
+    },
+    {
+      "start": 1992.4,
+      "end": 1996.32,
+      "duration": 3.92,
+      "text": "front row"
+    },
+    {
+      "start": 1994.0,
+      "end": 1998.24,
+      "duration": 4.24,
+      "text": "we can call it as front rather of n"
+    },
+    {
+      "start": 1996.32,
+      "end": 2000.48,
+      "duration": 4.16,
+      "text": "comma zero okay"
+    },
+    {
+      "start": 1998.24,
+      "end": 2002.8,
+      "duration": 4.56,
+      "text": "and instead of dp of n minus one we call"
+    },
+    {
+      "start": 2000.48,
+      "end": 2006.56,
+      "duration": 6.08,
+      "text": "it as front and make sure you also have"
+    },
+    {
+      "start": 2002.8,
+      "end": 2009.52,
+      "duration": 6.72,
+      "text": "a current row initialized as n cross 0"
+    },
+    {
+      "start": 2006.56,
+      "end": 2012.08,
+      "duration": 5.52,
+      "text": "now what i know is triangle of i j plus"
+    },
+    {
+      "start": 2009.52,
+      "end": 2014.88,
+      "duration": 5.36,
+      "text": "dp of i plus 1 so instead of i plus 1"
+    },
+    {
+      "start": 2012.08,
+      "end": 2017.12,
+      "duration": 5.04,
+      "text": "i'll say front instead of again i plus 1"
+    },
+    {
+      "start": 2014.88,
+      "end": 2020.16,
+      "duration": 5.28,
+      "text": "i'll say front very obvious instead of"
+    },
+    {
+      "start": 2017.12,
+      "end": 2022.72,
+      "duration": 5.6,
+      "text": "dp of i i'll always say car"
+    },
+    {
+      "start": 2020.16,
+      "end": 2024.48,
+      "duration": 4.32,
+      "text": "and over here i'll make sure the front"
+    },
+    {
+      "start": 2022.72,
+      "end": 2026.64,
+      "duration": 3.92,
+      "text": "is reinitialized with"
+    },
+    {
+      "start": 2024.48,
+      "end": 2028.56,
+      "duration": 4.08,
+      "text": "that's what i just need to do and over"
+    },
+    {
+      "start": 2026.64,
+      "end": 2030.16,
+      "duration": 3.52,
+      "text": "here instead of dp of zero i'll say"
+    },
+    {
+      "start": 2028.56,
+      "end": 2032.8,
+      "duration": 4.24,
+      "text": "front because that is where it will be"
+    },
+    {
+      "start": 2030.16,
+      "end": 2034.88,
+      "duration": 4.72,
+      "text": "stored you can also do it that is fine"
+    },
+    {
+      "start": 2032.8,
+      "end": 2036.4,
+      "duration": 3.6,
+      "text": "so we just run it it is running fine and"
+    },
+    {
+      "start": 2034.88,
+      "end": 2038.96,
+      "duration": 4.08,
+      "text": "if i submit this"
+    },
+    {
+      "start": 2036.4,
+      "end": 2040.72,
+      "duration": 4.32,
+      "text": "it's going to be working fine if you see"
+    },
+    {
+      "start": 2038.96,
+      "end": 2043.28,
+      "duration": 4.32,
+      "text": "is it is indeed working right you're"
+    },
+    {
+      "start": 2040.72,
+      "end": 2045.2,
+      "duration": 4.48,
+      "text": "getting a correct answer uh that is how"
+    },
+    {
+      "start": 2043.28,
+      "end": 2047.28,
+      "duration": 4.0,
+      "text": "you can easily space optimize this"
+    },
+    {
+      "start": 2045.2,
+      "end": 2049.84,
+      "duration": 4.64,
+      "text": "particular stuff so guys i hope you have"
+    },
+    {
+      "start": 2047.28,
+      "end": 2051.84,
+      "duration": 4.56,
+      "text": "understood all the threes so guys i hope"
+    },
+    {
+      "start": 2049.84,
+      "end": 2053.92,
+      "duration": 4.08,
+      "text": "you have understood the recursion the"
+    },
+    {
+      "start": 2051.84,
+      "end": 2055.84,
+      "duration": 4.0,
+      "text": "memoration the tabulation and the space"
+    },
+    {
+      "start": 2053.92,
+      "end": 2057.28,
+      "duration": 3.36,
+      "text": "optimization so just in case you did"
+    },
+    {
+      "start": 2055.84,
+      "end": 2059.76,
+      "duration": 3.92,
+      "text": "please please please make sure you like"
+    },
+    {
+      "start": 2057.28,
+      "end": 2061.68,
+      "duration": 4.4,
+      "text": "this video and to follow our tradition"
+    },
+    {
+      "start": 2059.76,
+      "end": 2063.2,
+      "duration": 3.44,
+      "text": "please make sure you comment understood"
+    },
+    {
+      "start": 2061.68,
+      "end": 2065.44,
+      "duration": 3.76,
+      "text": "under the comment section that does give"
+    },
+    {
+      "start": 2063.2,
+      "end": 2067.04,
+      "duration": 3.84,
+      "text": "me a lot of motivation to keep making"
+    },
+    {
+      "start": 2065.44,
+      "end": 2068.64,
+      "duration": 3.2,
+      "text": "such kind of videos and yeah with this"
+    },
+    {
+      "start": 2067.04,
+      "end": 2071.01,
+      "duration": 3.97,
+      "text": "i'll be wrapping up this video let's"
+    },
+    {
+      "start": 2068.64,
+      "end": 2074.08,
+      "duration": 5.44,
+      "text": "meet in the next one bye take care"
+    },
+    {
+      "start": 2071.01,
+      "end": 2077.15,
+      "duration": 6.14,
+      "text": "[Music]"
+    },
+    {
+      "start": 2074.08,
+      "end": 2080.6,
+      "duration": 6.52,
+      "text": "ever forget"
+    },
+    {
+      "start": 2077.15,
+      "end": 2080.6,
+      "duration": 3.45,
+      "text": "[Music]"
+    }
+  ]
+}

@@ -1,0 +1,2612 @@
+{
+  "video_id": "rxKcepXQgU4",
+  "title": "G-15. Number of Enclaves | Multi-source BFS | C++ | Java",
+  "duration_sec": 934,
+  "num_segments": 434,
+  "segments": [
+    {
+      "start": 2.96,
+      "end": 6.16,
+      "duration": 3.2,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.4,
+      "end": 8.32,
+      "duration": 3.92,
+      "text": "i hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.16,
+      "end": 10.72,
+      "duration": 4.56,
+      "text": "so today we will be solving the problem"
+    },
+    {
+      "start": 8.32,
+      "end": 12.4,
+      "duration": 4.08,
+      "text": "number of enclaves now what does the"
+    },
+    {
+      "start": 10.72,
+      "end": 15.52,
+      "duration": 4.8,
+      "text": "problem state the problem states are"
+    },
+    {
+      "start": 12.4,
+      "end": 17.84,
+      "duration": 5.44,
+      "text": "given an n cross m binary matrix grid"
+    },
+    {
+      "start": 15.52,
+      "end": 19.76,
+      "duration": 4.24,
+      "text": "where zero represents a c cell and one"
+    },
+    {
+      "start": 17.84,
+      "end": 21.92,
+      "duration": 4.08,
+      "text": "represents a land cell"
+    },
+    {
+      "start": 19.76,
+      "end": 24.0,
+      "duration": 4.24,
+      "text": "a move consists of working from one land"
+    },
+    {
+      "start": 21.92,
+      "end": 26.96,
+      "duration": 5.04,
+      "text": "cell to another adjacent"
+    },
+    {
+      "start": 24.0,
+      "end": 28.64,
+      "duration": 4.64,
+      "text": "land cell or working off the boundary of"
+    },
+    {
+      "start": 26.96,
+      "end": 30.48,
+      "duration": 3.52,
+      "text": "the grid"
+    },
+    {
+      "start": 28.64,
+      "end": 32.96,
+      "duration": 4.32,
+      "text": "now the point to notice is you're"
+    },
+    {
+      "start": 30.48,
+      "end": 35.28,
+      "duration": 4.8,
+      "text": "allowed to move in four directions"
+    },
+    {
+      "start": 32.96,
+      "end": 37.52,
+      "duration": 4.56,
+      "text": "find the number of land cells in grid"
+    },
+    {
+      "start": 35.28,
+      "end": 39.52,
+      "duration": 4.24,
+      "text": "for which we cannot walk off the"
+    },
+    {
+      "start": 37.52,
+      "end": 41.92,
+      "duration": 4.4,
+      "text": "boundary of the grid in any number of"
+    },
+    {
+      "start": 39.52,
+      "end": 44.96,
+      "duration": 5.44,
+      "text": "moves so basically"
+    },
+    {
+      "start": 41.92,
+      "end": 46.56,
+      "duration": 4.64,
+      "text": "if you stand over here and since there"
+    },
+    {
+      "start": 44.96,
+      "end": 48.24,
+      "duration": 3.28,
+      "text": "are like"
+    },
+    {
+      "start": 46.56,
+      "end": 50.16,
+      "duration": 3.6,
+      "text": "four kind of movements"
+    },
+    {
+      "start": 48.24,
+      "end": 52.32,
+      "duration": 4.08,
+      "text": "you can try moving in you cannot move"
+    },
+    {
+      "start": 50.16,
+      "end": 54.8,
+      "duration": 4.64,
+      "text": "here you cannot move here you can move"
+    },
+    {
+      "start": 52.32,
+      "end": 56.16,
+      "duration": 3.84,
+      "text": "here but after this you might move here"
+    },
+    {
+      "start": 54.8,
+      "end": 58.32,
+      "duration": 3.52,
+      "text": "after this you cannot move here because"
+    },
+    {
+      "start": 56.16,
+      "end": 60.96,
+      "duration": 4.8,
+      "text": "this is not a land so if you start from"
+    },
+    {
+      "start": 58.32,
+      "end": 63.52,
+      "duration": 5.2,
+      "text": "here you cannot move out of this"
+    },
+    {
+      "start": 60.96,
+      "end": 64.48,
+      "duration": 3.52,
+      "text": "particular boundary if you use these"
+    },
+    {
+      "start": 63.52,
+      "end": 66.8,
+      "duration": 3.28,
+      "text": "four"
+    },
+    {
+      "start": 64.48,
+      "end": 68.88,
+      "duration": 4.4,
+      "text": "directions you cannot move but whereas"
+    },
+    {
+      "start": 66.8,
+      "end": 70.96,
+      "duration": 4.16,
+      "text": "if you take this particular one and if"
+    },
+    {
+      "start": 68.88,
+      "end": 73.12,
+      "duration": 4.24,
+      "text": "you move to the right you will be able"
+    },
+    {
+      "start": 70.96,
+      "end": 75.2,
+      "duration": 4.24,
+      "text": "to move out of the boundary if you take"
+    },
+    {
+      "start": 73.12,
+      "end": 77.04,
+      "duration": 3.92,
+      "text": "this one and you move to the right you"
+    },
+    {
+      "start": 75.2,
+      "end": 79.12,
+      "duration": 3.92,
+      "text": "will be able to move out of the boundary"
+    },
+    {
+      "start": 77.04,
+      "end": 81.36,
+      "duration": 4.32,
+      "text": "if you take this one and you move to the"
+    },
+    {
+      "start": 79.12,
+      "end": 84.24,
+      "duration": 5.12,
+      "text": "bottom you will be able to move out of"
+    },
+    {
+      "start": 81.36,
+      "end": 85.6,
+      "duration": 4.24,
+      "text": "the boundary same with this so these"
+    },
+    {
+      "start": 84.24,
+      "end": 88.16,
+      "duration": 3.92,
+      "text": "four ones"
+    },
+    {
+      "start": 85.6,
+      "end": 91.2,
+      "duration": 5.6,
+      "text": "you will be able to move out of the"
+    },
+    {
+      "start": 88.16,
+      "end": 93.52,
+      "duration": 5.36,
+      "text": "boundary but from these four ones you"
+    },
+    {
+      "start": 91.2,
+      "end": 95.12,
+      "duration": 3.92,
+      "text": "will not be able to move out of the"
+    },
+    {
+      "start": 93.52,
+      "end": 96.4,
+      "duration": 2.88,
+      "text": "boundary so the question is very"
+    },
+    {
+      "start": 95.12,
+      "end": 98.72,
+      "duration": 3.6,
+      "text": "straightforward"
+    },
+    {
+      "start": 96.4,
+      "end": 101.52,
+      "duration": 5.12,
+      "text": "count the number of"
+    },
+    {
+      "start": 98.72,
+      "end": 102.48,
+      "duration": 3.76,
+      "text": "ones yes or the number of lands"
+    },
+    {
+      "start": 101.52,
+      "end": 104.4,
+      "duration": 2.88,
+      "text": "this is"
+    },
+    {
+      "start": 102.48,
+      "end": 107.04,
+      "duration": 4.56,
+      "text": "this is what the question states so for"
+    },
+    {
+      "start": 104.4,
+      "end": 109.6,
+      "duration": 5.2,
+      "text": "me from here i cannot move out of the"
+    },
+    {
+      "start": 107.04,
+      "end": 112.24,
+      "duration": 5.2,
+      "text": "boundary from here i cannot move out"
+    },
+    {
+      "start": 109.6,
+      "end": 114.8,
+      "duration": 5.2,
+      "text": "from here i cannot from here i cannot"
+    },
+    {
+      "start": 112.24,
+      "end": 117.2,
+      "duration": 4.96,
+      "text": "but if i tweak the example a bit let's"
+    },
+    {
+      "start": 114.8,
+      "end": 119.52,
+      "duration": 4.72,
+      "text": "tweak the example and let's change it to"
+    },
+    {
+      "start": 117.2,
+      "end": 122.24,
+      "duration": 5.04,
+      "text": "one so if i change it to one now"
+    },
+    {
+      "start": 119.52,
+      "end": 123.52,
+      "duration": 4.0,
+      "text": "whatever you took like all these ones uh"
+    },
+    {
+      "start": 122.24,
+      "end": 124.4,
+      "duration": 2.16,
+      "text": "let's see these"
+    },
+    {
+      "start": 123.52,
+      "end": 126.24,
+      "duration": 2.72,
+      "text": "yeah"
+    },
+    {
+      "start": 124.4,
+      "end": 127.6,
+      "duration": 3.2,
+      "text": "so if i change this to one"
+    },
+    {
+      "start": 126.24,
+      "end": 130.08,
+      "duration": 3.84,
+      "text": "you will see"
+    },
+    {
+      "start": 127.6,
+      "end": 131.68,
+      "duration": 4.08,
+      "text": "from here you can go up you can go up"
+    },
+    {
+      "start": 130.08,
+      "end": 133.12,
+      "duration": 3.04,
+      "text": "and you can move out of the boundary"
+    },
+    {
+      "start": 131.68,
+      "end": 134.4,
+      "duration": 2.72,
+      "text": "from here you can go here then you can"
+    },
+    {
+      "start": 133.12,
+      "end": 136.32,
+      "duration": 3.2,
+      "text": "go here then you can go here out of the"
+    },
+    {
+      "start": 134.4,
+      "end": 138.24,
+      "duration": 3.84,
+      "text": "boundary from here you can go here then"
+    },
+    {
+      "start": 136.32,
+      "end": 138.96,
+      "duration": 2.64,
+      "text": "here then here then out of the boundary"
+    },
+    {
+      "start": 138.24,
+      "end": 141.6,
+      "duration": 3.36,
+      "text": "so"
+    },
+    {
+      "start": 138.96,
+      "end": 142.72,
+      "duration": 3.76,
+      "text": "all of these guys can actually go out of"
+    },
+    {
+      "start": 141.6,
+      "end": 144.24,
+      "duration": 2.64,
+      "text": "the boundary"
+    },
+    {
+      "start": 142.72,
+      "end": 145.68,
+      "duration": 2.96,
+      "text": "this can also go out of the boundary"
+    },
+    {
+      "start": 144.24,
+      "end": 147.6,
+      "duration": 3.36,
+      "text": "this can also go out of the boundary"
+    },
+    {
+      "start": 145.68,
+      "end": 149.04,
+      "duration": 3.36,
+      "text": "this can also go up out of the boundary"
+    },
+    {
+      "start": 147.6,
+      "end": 151.68,
+      "duration": 4.08,
+      "text": "so if i place one"
+    },
+    {
+      "start": 149.04,
+      "end": 153.68,
+      "duration": 4.64,
+      "text": "here then everyone can go out of the"
+    },
+    {
+      "start": 151.68,
+      "end": 156.08,
+      "duration": 4.4,
+      "text": "boundary so in that case the answer will"
+    },
+    {
+      "start": 153.68,
+      "end": 158.88,
+      "duration": 5.2,
+      "text": "be zero saying there are zero lands from"
+    },
+    {
+      "start": 156.08,
+      "end": 161.28,
+      "duration": 5.2,
+      "text": "where you cannot go out of the boundary"
+    },
+    {
+      "start": 158.88,
+      "end": 163.68,
+      "duration": 4.8,
+      "text": "so you need to be careful"
+    },
+    {
+      "start": 161.28,
+      "end": 165.28,
+      "duration": 4.0,
+      "text": "right so what is the first intuition"
+    },
+    {
+      "start": 163.68,
+      "end": 167.44,
+      "duration": 3.76,
+      "text": "that comes to your brain"
+    },
+    {
+      "start": 165.28,
+      "end": 169.52,
+      "duration": 4.24,
+      "text": "that's definitely something that is"
+    },
+    {
+      "start": 167.44,
+      "end": 170.72,
+      "duration": 3.28,
+      "text": "connected to the boundary"
+    },
+    {
+      "start": 169.52,
+      "end": 171.76,
+      "duration": 2.24,
+      "text": "something that is connected to the"
+    },
+    {
+      "start": 170.72,
+      "end": 172.8,
+      "duration": 2.08,
+      "text": "boundary"
+    },
+    {
+      "start": 171.76,
+      "end": 175.52,
+      "duration": 3.76,
+      "text": "they will"
+    },
+    {
+      "start": 172.8,
+      "end": 177.52,
+      "duration": 4.72,
+      "text": "never be your answer they will"
+    },
+    {
+      "start": 175.52,
+      "end": 179.04,
+      "duration": 3.52,
+      "text": "never be your answer"
+    },
+    {
+      "start": 177.52,
+      "end": 181.36,
+      "duration": 3.84,
+      "text": "write something that is connected to the"
+    },
+    {
+      "start": 179.04,
+      "end": 182.32,
+      "duration": 3.28,
+      "text": "boundary now can i elongate this to"
+    },
+    {
+      "start": 181.36,
+      "end": 184.48,
+      "duration": 3.12,
+      "text": "saying"
+    },
+    {
+      "start": 182.32,
+      "end": 186.96,
+      "duration": 4.64,
+      "text": "something that is connected to this this"
+    },
+    {
+      "start": 184.48,
+      "end": 188.96,
+      "duration": 4.48,
+      "text": "this this will also be not part of your"
+    },
+    {
+      "start": 186.96,
+      "end": 192.0,
+      "duration": 5.04,
+      "text": "answer because from there also you can"
+    },
+    {
+      "start": 188.96,
+      "end": 194.08,
+      "duration": 5.12,
+      "text": "move out so for an example if i put a 1"
+    },
+    {
+      "start": 192.0,
+      "end": 195.52,
+      "duration": 3.52,
+      "text": "here let's put a 1 here"
+    },
+    {
+      "start": 194.08,
+      "end": 198.24,
+      "duration": 4.16,
+      "text": "and let's understand"
+    },
+    {
+      "start": 195.52,
+      "end": 200.0,
+      "duration": 4.48,
+      "text": "so as of now these are the boundaries"
+    },
+    {
+      "start": 198.24,
+      "end": 201.68,
+      "duration": 3.44,
+      "text": "which are connected right these are the"
+    },
+    {
+      "start": 200.0,
+      "end": 203.76,
+      "duration": 3.76,
+      "text": "boundaries"
+    },
+    {
+      "start": 201.68,
+      "end": 206.16,
+      "duration": 4.48,
+      "text": "ones which are connected boundary ones"
+    },
+    {
+      "start": 203.76,
+      "end": 208.64,
+      "duration": 4.88,
+      "text": "which are connected so can i see from"
+    },
+    {
+      "start": 206.16,
+      "end": 210.32,
+      "duration": 4.16,
+      "text": "these boundary ones"
+    },
+    {
+      "start": 208.64,
+      "end": 213.2,
+      "duration": 4.56,
+      "text": "all those ones which are connected so"
+    },
+    {
+      "start": 210.32,
+      "end": 214.96,
+      "duration": 4.64,
+      "text": "for this guy this is connected directly"
+    },
+    {
+      "start": 213.2,
+      "end": 216.96,
+      "duration": 3.76,
+      "text": "then for this guy this is connected"
+    },
+    {
+      "start": 214.96,
+      "end": 218.64,
+      "duration": 3.68,
+      "text": "directly for this guy this is connected"
+    },
+    {
+      "start": 216.96,
+      "end": 221.28,
+      "duration": 4.32,
+      "text": "directly and for this guy this is"
+    },
+    {
+      "start": 218.64,
+      "end": 223.12,
+      "duration": 4.48,
+      "text": "connected directly can i see this or you"
+    },
+    {
+      "start": 221.28,
+      "end": 225.28,
+      "duration": 4.0,
+      "text": "can be like for this guy this is"
+    },
+    {
+      "start": 223.12,
+      "end": 227.36,
+      "duration": 4.24,
+      "text": "connected directly for this guy this and"
+    },
+    {
+      "start": 225.28,
+      "end": 228.8,
+      "duration": 3.52,
+      "text": "this is connected directly for this this"
+    },
+    {
+      "start": 227.36,
+      "end": 230.0,
+      "duration": 2.64,
+      "text": "is connected directly"
+    },
+    {
+      "start": 228.8,
+      "end": 231.6,
+      "duration": 2.8,
+      "text": "in short"
+    },
+    {
+      "start": 230.0,
+      "end": 233.2,
+      "duration": 3.2,
+      "text": "anything that is connected to the"
+    },
+    {
+      "start": 231.6,
+      "end": 236.4,
+      "duration": 4.8,
+      "text": "boundary ones"
+    },
+    {
+      "start": 233.2,
+      "end": 238.88,
+      "duration": 5.68,
+      "text": "from that land you will always go out so"
+    },
+    {
+      "start": 236.4,
+      "end": 240.8,
+      "duration": 4.4,
+      "text": "they will never be part of your answer"
+    },
+    {
+      "start": 238.88,
+      "end": 243.36,
+      "duration": 4.48,
+      "text": "because you need to count the ones from"
+    },
+    {
+      "start": 240.8,
+      "end": 246.32,
+      "duration": 5.52,
+      "text": "where you cannot go out from where you"
+    },
+    {
+      "start": 243.36,
+      "end": 247.2,
+      "duration": 3.84,
+      "text": "cannot go out so we got an intuition"
+    },
+    {
+      "start": 246.32,
+      "end": 250.24,
+      "duration": 3.92,
+      "text": "that"
+    },
+    {
+      "start": 247.2,
+      "end": 252.48,
+      "duration": 5.28,
+      "text": "if we figure out the boundary once"
+    },
+    {
+      "start": 250.24,
+      "end": 255.76,
+      "duration": 5.52,
+      "text": "we figure out the boundary once"
+    },
+    {
+      "start": 252.48,
+      "end": 257.28,
+      "duration": 4.8,
+      "text": "and then connect"
+    },
+    {
+      "start": 255.76,
+      "end": 259.44,
+      "duration": 3.68,
+      "text": "all the ones"
+    },
+    {
+      "start": 257.28,
+      "end": 262.48,
+      "duration": 5.2,
+      "text": "and then connect all the ones"
+    },
+    {
+      "start": 259.44,
+      "end": 262.48,
+      "duration": 3.04,
+      "text": "connected to it"
+    },
+    {
+      "start": 262.56,
+      "end": 265.84,
+      "duration": 3.28,
+      "text": "at the end of the day the remaining ones"
+    },
+    {
+      "start": 264.72,
+      "end": 268.32,
+      "duration": 3.6,
+      "text": "that are not"
+    },
+    {
+      "start": 265.84,
+      "end": 270.48,
+      "duration": 4.64,
+      "text": "connected to the boundary ones will be"
+    },
+    {
+      "start": 268.32,
+      "end": 272.24,
+      "duration": 3.92,
+      "text": "my answer isn't it"
+    },
+    {
+      "start": 270.48,
+      "end": 273.84,
+      "duration": 3.36,
+      "text": "so let's take this particular example"
+    },
+    {
+      "start": 272.24,
+      "end": 275.68,
+      "duration": 3.44,
+      "text": "and figure out how many lands will be"
+    },
+    {
+      "start": 273.84,
+      "end": 277.84,
+      "duration": 4.0,
+      "text": "part of your answer can i say these"
+    },
+    {
+      "start": 275.68,
+      "end": 280.48,
+      "duration": 4.8,
+      "text": "three lands will always be part of your"
+    },
+    {
+      "start": 277.84,
+      "end": 281.84,
+      "duration": 4.0,
+      "text": "answer obviously why because if you take"
+    },
+    {
+      "start": 280.48,
+      "end": 283.52,
+      "duration": 3.04,
+      "text": "these guys"
+    },
+    {
+      "start": 281.84,
+      "end": 285.36,
+      "duration": 3.52,
+      "text": "all of these guys you can actually walk"
+    },
+    {
+      "start": 283.52,
+      "end": 287.92,
+      "duration": 4.4,
+      "text": "out again if you take these you can walk"
+    },
+    {
+      "start": 285.36,
+      "end": 289.52,
+      "duration": 4.16,
+      "text": "out but from here you cannot so i can"
+    },
+    {
+      "start": 287.92,
+      "end": 291.68,
+      "duration": 3.76,
+      "text": "say these three lands"
+    },
+    {
+      "start": 289.52,
+      "end": 293.84,
+      "duration": 4.32,
+      "text": "will be part of your answer but the"
+    },
+    {
+      "start": 291.68,
+      "end": 296.8,
+      "duration": 5.12,
+      "text": "answer is three for this so how will you"
+    },
+    {
+      "start": 293.84,
+      "end": 299.12,
+      "duration": 5.28,
+      "text": "start which which algorithm will we use"
+    },
+    {
+      "start": 296.8,
+      "end": 301.36,
+      "duration": 4.56,
+      "text": "so in the previous video we did use the"
+    },
+    {
+      "start": 299.12,
+      "end": 303.68,
+      "duration": 4.56,
+      "text": "dfs algorithm to traverse from the"
+    },
+    {
+      "start": 301.36,
+      "end": 305.76,
+      "duration": 4.4,
+      "text": "boundary things so over here we will try"
+    },
+    {
+      "start": 303.68,
+      "end": 307.92,
+      "duration": 4.24,
+      "text": "to implement the bfs just to get a"
+    },
+    {
+      "start": 305.76,
+      "end": 310.08,
+      "duration": 4.32,
+      "text": "clarity about these algorithms so what"
+    },
+    {
+      "start": 307.92,
+      "end": 311.92,
+      "duration": 4.0,
+      "text": "is bfs bfs is basically you start off"
+    },
+    {
+      "start": 310.08,
+      "end": 314.48,
+      "duration": 4.4,
+      "text": "from a node and then you move across to"
+    },
+    {
+      "start": 311.92,
+      "end": 316.4,
+      "duration": 4.48,
+      "text": "everyone so how many boundary nodes are"
+    },
+    {
+      "start": 314.48,
+      "end": 318.64,
+      "duration": 4.16,
+      "text": "there can i say we have a boundary node"
+    },
+    {
+      "start": 316.4,
+      "end": 320.56,
+      "duration": 4.16,
+      "text": "here we have a boundary node here we"
+    },
+    {
+      "start": 318.64,
+      "end": 322.64,
+      "duration": 4.0,
+      "text": "have a boundary node here and we have a"
+    },
+    {
+      "start": 320.56,
+      "end": 325.92,
+      "duration": 5.36,
+      "text": "boundary node here can i see this so"
+    },
+    {
+      "start": 322.64,
+      "end": 327.92,
+      "duration": 5.28,
+      "text": "what you do is let's quickly mark down"
+    },
+    {
+      "start": 325.92,
+      "end": 329.28,
+      "duration": 3.36,
+      "text": "the"
+    },
+    {
+      "start": 327.92,
+      "end": 331.2,
+      "duration": 3.28,
+      "text": "row numbers"
+    },
+    {
+      "start": 329.28,
+      "end": 332.88,
+      "duration": 3.6,
+      "text": "and the column numbers"
+    },
+    {
+      "start": 331.2,
+      "end": 334.96,
+      "duration": 3.76,
+      "text": "so can i say"
+    },
+    {
+      "start": 332.88,
+      "end": 336.88,
+      "duration": 4.0,
+      "text": "all of these are the boundary the blue"
+    },
+    {
+      "start": 334.96,
+      "end": 338.72,
+      "duration": 3.76,
+      "text": "ones are the boundary ones so let's take"
+    },
+    {
+      "start": 336.88,
+      "end": 341.04,
+      "duration": 4.16,
+      "text": "a q data structure if i take a q data"
+    },
+    {
+      "start": 338.72,
+      "end": 342.88,
+      "duration": 4.16,
+      "text": "structure and let's put down all these"
+    },
+    {
+      "start": 341.04,
+      "end": 345.36,
+      "duration": 4.32,
+      "text": "boundary guys the first boundary guy"
+    },
+    {
+      "start": 342.88,
+      "end": 348.08,
+      "duration": 5.2,
+      "text": "will be 0 3 let's put it next will be 0"
+    },
+    {
+      "start": 345.36,
+      "end": 351.52,
+      "duration": 6.16,
+      "text": "4 let's put it next will be 4 3 next"
+    },
+    {
+      "start": 348.08,
+      "end": 354.72,
+      "duration": 6.64,
+      "text": "will be 4 4. so i have put down all"
+    },
+    {
+      "start": 351.52,
+      "end": 356.24,
+      "duration": 4.72,
+      "text": "these four boundary guys done and if you"
+    },
+    {
+      "start": 354.72,
+      "end": 358.0,
+      "duration": 3.28,
+      "text": "remember well enough if you remember"
+    },
+    {
+      "start": 356.24,
+      "end": 360.48,
+      "duration": 4.24,
+      "text": "well enough one thing you can do is you"
+    },
+    {
+      "start": 358.0,
+      "end": 362.56,
+      "duration": 4.56,
+      "text": "can convert this to zero zero that is"
+    },
+    {
+      "start": 360.48,
+      "end": 364.16,
+      "duration": 3.68,
+      "text": "something you can do but you know we"
+    },
+    {
+      "start": 362.56,
+      "end": 366.32,
+      "duration": 3.76,
+      "text": "never ever touch"
+    },
+    {
+      "start": 364.16,
+      "end": 367.84,
+      "duration": 3.68,
+      "text": "these guys because this is the data so"
+    },
+    {
+      "start": 366.32,
+      "end": 369.76,
+      "duration": 3.44,
+      "text": "what i will do is i'll create the"
+    },
+    {
+      "start": 367.84,
+      "end": 371.84,
+      "duration": 4.0,
+      "text": "corresponding visited array so let's"
+    },
+    {
+      "start": 369.76,
+      "end": 372.96,
+      "duration": 3.2,
+      "text": "quickly create the corresponding visited"
+    },
+    {
+      "start": 371.84,
+      "end": 374.8,
+      "duration": 2.96,
+      "text": "array so once you've created the"
+    },
+    {
+      "start": 372.96,
+      "end": 377.04,
+      "duration": 4.08,
+      "text": "corresponding visited array for zero"
+    },
+    {
+      "start": 374.8,
+      "end": 379.2,
+      "duration": 4.4,
+      "text": "three mark it as one for zero four mark"
+    },
+    {
+      "start": 377.04,
+      "end": 381.12,
+      "duration": 4.08,
+      "text": "it as one this one mark it as one this"
+    },
+    {
+      "start": 379.2,
+      "end": 383.2,
+      "duration": 4.0,
+      "text": "one mark it as one so this will be your"
+    },
+    {
+      "start": 381.12,
+      "end": 386.0,
+      "duration": 4.88,
+      "text": "visited array done now what is your next"
+    },
+    {
+      "start": 383.2,
+      "end": 388.4,
+      "duration": 5.2,
+      "text": "step perform the bfs travis the briefest"
+    },
+    {
+      "start": 386.0,
+      "end": 391.04,
+      "duration": 5.04,
+      "text": "travis what does it say get out the"
+    },
+    {
+      "start": 388.4,
+      "end": 393.2,
+      "duration": 4.8,
+      "text": "first guy so that's zero comma three and"
+    },
+    {
+      "start": 391.04,
+      "end": 394.8,
+      "duration": 3.76,
+      "text": "you know it will be in four directions"
+    },
+    {
+      "start": 393.2,
+      "end": 396.56,
+      "duration": 3.36,
+      "text": "check for the four directions from zero"
+    },
+    {
+      "start": 394.8,
+      "end": 398.56,
+      "duration": 3.76,
+      "text": "three so there is one direction here"
+    },
+    {
+      "start": 396.56,
+      "end": 400.88,
+      "duration": 4.32,
+      "text": "which is invalid there's one direction"
+    },
+    {
+      "start": 398.56,
+      "end": 403.28,
+      "duration": 4.72,
+      "text": "here which is having a zero there is one"
+    },
+    {
+      "start": 400.88,
+      "end": 404.64,
+      "duration": 3.76,
+      "text": "here which is already marked as visited"
+    },
+    {
+      "start": 403.28,
+      "end": 407.52,
+      "duration": 4.24,
+      "text": "and there is someone in the bottom which"
+    },
+    {
+      "start": 404.64,
+      "end": 409.6,
+      "duration": 4.96,
+      "text": "is unvisited so take this bottom guy and"
+    },
+    {
+      "start": 407.52,
+      "end": 411.92,
+      "duration": 4.4,
+      "text": "put this into your queue data structure"
+    },
+    {
+      "start": 409.6,
+      "end": 414.16,
+      "duration": 4.56,
+      "text": "at the same time mark this as one so"
+    },
+    {
+      "start": 411.92,
+      "end": 416.48,
+      "duration": 4.56,
+      "text": "what i can say is okay fine for zero"
+    },
+    {
+      "start": 414.16,
+      "end": 418.8,
+      "duration": 4.64,
+      "text": "comma three i've done the bfs travis"
+    },
+    {
+      "start": 416.48,
+      "end": 421.36,
+      "duration": 4.88,
+      "text": "let's see the next guy out which is zero"
+    },
+    {
+      "start": 418.8,
+      "end": 423.92,
+      "duration": 5.12,
+      "text": "comma four so we have zero comma four"
+    },
+    {
+      "start": 421.36,
+      "end": 425.36,
+      "duration": 4.0,
+      "text": "where does it lie here does it have"
+    },
+    {
+      "start": 423.92,
+      "end": 427.36,
+      "duration": 3.44,
+      "text": "someone in the top no does it have"
+    },
+    {
+      "start": 425.36,
+      "end": 429.2,
+      "duration": 3.84,
+      "text": "someone on the left yes but that is"
+    },
+    {
+      "start": 427.36,
+      "end": 430.72,
+      "duration": 3.36,
+      "text": "already visited does it have someone on"
+    },
+    {
+      "start": 429.2,
+      "end": 432.72,
+      "duration": 3.52,
+      "text": "the right no does it have someone on the"
+    },
+    {
+      "start": 430.72,
+      "end": 434.88,
+      "duration": 4.16,
+      "text": "bottom zero so apparently this zero"
+    },
+    {
+      "start": 432.72,
+      "end": 436.72,
+      "duration": 4.0,
+      "text": "comma four will not be connected to"
+    },
+    {
+      "start": 434.88,
+      "end": 438.88,
+      "duration": 4.0,
+      "text": "anyone else let's see the next guy which"
+    },
+    {
+      "start": 436.72,
+      "end": 442.0,
+      "duration": 5.28,
+      "text": "is 4 comma 3 so if i take 4 comma 3"
+    },
+    {
+      "start": 438.88,
+      "end": 443.6,
+      "duration": 4.72,
+      "text": "which is this guy not connected"
+    },
+    {
+      "start": 442.0,
+      "end": 446.64,
+      "duration": 4.64,
+      "text": "not connected"
+    },
+    {
+      "start": 443.6,
+      "end": 448.72,
+      "duration": 5.12,
+      "text": "invalid already visited so 4 comma 3 is"
+    },
+    {
+      "start": 446.64,
+      "end": 451.84,
+      "duration": 5.2,
+      "text": "also not connected to any one let's see"
+    },
+    {
+      "start": 448.72,
+      "end": 453.68,
+      "duration": 4.96,
+      "text": "the next guy four comma four let's see"
+    },
+    {
+      "start": 451.84,
+      "end": 456.8,
+      "duration": 4.96,
+      "text": "for four comma four this is four comma"
+    },
+    {
+      "start": 453.68,
+      "end": 459.6,
+      "duration": 5.92,
+      "text": "four top not connected already visited"
+    },
+    {
+      "start": 456.8,
+      "end": 461.52,
+      "duration": 4.72,
+      "text": "invalid nothing the four comma four is"
+    },
+    {
+      "start": 459.6,
+      "end": 463.28,
+      "duration": 3.68,
+      "text": "also not connected to any one let's take"
+    },
+    {
+      "start": 461.52,
+      "end": 464.96,
+      "duration": 3.44,
+      "text": "the next guy one comma three so that"
+    },
+    {
+      "start": 463.28,
+      "end": 467.44,
+      "duration": 4.16,
+      "text": "take one comma three where is one comma"
+    },
+    {
+      "start": 464.96,
+      "end": 468.96,
+      "duration": 4.0,
+      "text": "three one comma three is here so if i"
+    },
+    {
+      "start": 467.44,
+      "end": 471.2,
+      "duration": 3.76,
+      "text": "carefully observe"
+    },
+    {
+      "start": 468.96,
+      "end": 473.04,
+      "duration": 4.08,
+      "text": "on the top already visited over here"
+    },
+    {
+      "start": 471.2,
+      "end": 475.44,
+      "duration": 4.24,
+      "text": "zero over here zero and there's a one"
+    },
+    {
+      "start": 473.04,
+      "end": 477.52,
+      "duration": 4.48,
+      "text": "over here which is on which is unvisited"
+    },
+    {
+      "start": 475.44,
+      "end": 480.16,
+      "duration": 4.72,
+      "text": "which is unvisited so i'll visit this"
+    },
+    {
+      "start": 477.52,
+      "end": 482.64,
+      "duration": 5.12,
+      "text": "particular one and that is one comma two"
+    },
+    {
+      "start": 480.16,
+      "end": 484.24,
+      "duration": 4.08,
+      "text": "and i'll mark it as visited so i can say"
+    },
+    {
+      "start": 482.64,
+      "end": 486.32,
+      "duration": 3.68,
+      "text": "i have connected everything that was"
+    },
+    {
+      "start": 484.24,
+      "end": 488.72,
+      "duration": 4.48,
+      "text": "connected to one comma three the next"
+    },
+    {
+      "start": 486.32,
+      "end": 490.0,
+      "duration": 3.68,
+      "text": "step i'll get one comma two"
+    },
+    {
+      "start": 488.72,
+      "end": 491.68,
+      "duration": 2.96,
+      "text": "once you have one comma two which is"
+    },
+    {
+      "start": 490.0,
+      "end": 492.72,
+      "duration": 2.72,
+      "text": "this"
+    },
+    {
+      "start": 491.68,
+      "end": 494.88,
+      "duration": 3.2,
+      "text": "0"
+    },
+    {
+      "start": 492.72,
+      "end": 495.84,
+      "duration": 3.12,
+      "text": "already visited"
+    },
+    {
+      "start": 494.88,
+      "end": 498.32,
+      "duration": 3.44,
+      "text": "0"
+    },
+    {
+      "start": 495.84,
+      "end": 500.48,
+      "duration": 4.64,
+      "text": "0 so 1 comma 2 is no more connected to"
+    },
+    {
+      "start": 498.32,
+      "end": 504.0,
+      "duration": 5.68,
+      "text": "any one so as of now if you carefully"
+    },
+    {
+      "start": 500.48,
+      "end": 505.52,
+      "duration": 5.04,
+      "text": "see this particular queue is empty and"
+    },
+    {
+      "start": 504.0,
+      "end": 507.28,
+      "duration": 3.28,
+      "text": "what i have done is"
+    },
+    {
+      "start": 505.52,
+      "end": 509.6,
+      "duration": 4.08,
+      "text": "these guys were connected to these guys"
+    },
+    {
+      "start": 507.28,
+      "end": 512.24,
+      "duration": 4.96,
+      "text": "so i've marked these guys all also"
+    },
+    {
+      "start": 509.6,
+      "end": 514.48,
+      "duration": 4.88,
+      "text": "because those were directly connected so"
+    },
+    {
+      "start": 512.24,
+      "end": 516.4,
+      "duration": 4.16,
+      "text": "once the queue is empty if you carefully"
+    },
+    {
+      "start": 514.48,
+      "end": 518.4,
+      "duration": 3.92,
+      "text": "observe there was a one here which is"
+    },
+    {
+      "start": 516.4,
+      "end": 520.32,
+      "duration": 3.92,
+      "text": "unvisited there was a one here which is"
+    },
+    {
+      "start": 518.4,
+      "end": 522.16,
+      "duration": 3.76,
+      "text": "unvisited there was a one here which is"
+    },
+    {
+      "start": 520.32,
+      "end": 523.84,
+      "duration": 3.52,
+      "text": "unvisited there was a one here which is"
+    },
+    {
+      "start": 522.16,
+      "end": 526.56,
+      "duration": 4.4,
+      "text": "visited there was a one here which is"
+    },
+    {
+      "start": 523.84,
+      "end": 529.52,
+      "duration": 5.68,
+      "text": "visited so apparently only these three"
+    },
+    {
+      "start": 526.56,
+      "end": 531.68,
+      "duration": 5.12,
+      "text": "ones are unvisited in the visited matrix"
+    },
+    {
+      "start": 529.52,
+      "end": 533.92,
+      "duration": 4.4,
+      "text": "thereby from like"
+    },
+    {
+      "start": 531.68,
+      "end": 536.16,
+      "duration": 4.48,
+      "text": "you can't go to the boundary from these"
+    },
+    {
+      "start": 533.92,
+      "end": 538.64,
+      "duration": 4.72,
+      "text": "ones because you always took all the"
+    },
+    {
+      "start": 536.16,
+      "end": 540.0,
+      "duration": 3.84,
+      "text": "boundary ones and you expanded your"
+    },
+    {
+      "start": 538.64,
+      "end": 541.92,
+      "duration": 3.28,
+      "text": "connections you expanded your"
+    },
+    {
+      "start": 540.0,
+      "end": 544.48,
+      "duration": 4.48,
+      "text": "connections and these ones were never"
+    },
+    {
+      "start": 541.92,
+      "end": 546.48,
+      "duration": 4.56,
+      "text": "reached which means that from these"
+    },
+    {
+      "start": 544.48,
+      "end": 548.88,
+      "duration": 4.4,
+      "text": "places you cannot"
+    },
+    {
+      "start": 546.48,
+      "end": 550.64,
+      "duration": 4.16,
+      "text": "go to the boundaries thereby what you"
+    },
+    {
+      "start": 548.88,
+      "end": 552.96,
+      "duration": 4.08,
+      "text": "can do is you can just count the answer"
+    },
+    {
+      "start": 550.64,
+      "end": 554.72,
+      "duration": 4.08,
+      "text": "and the answer will be three just do a"
+    },
+    {
+      "start": 552.96,
+      "end": 556.32,
+      "duration": 3.36,
+      "text": "traversal and for this one there's a"
+    },
+    {
+      "start": 554.72,
+      "end": 558.0,
+      "duration": 3.28,
+      "text": "zero for this one there's a zero for"
+    },
+    {
+      "start": 556.32,
+      "end": 560.0,
+      "duration": 3.68,
+      "text": "this one there is a zero just do a"
+    },
+    {
+      "start": 558.0,
+      "end": 562.32,
+      "duration": 4.32,
+      "text": "counter plus plus and you can always"
+    },
+    {
+      "start": 560.0,
+      "end": 564.08,
+      "duration": 4.08,
+      "text": "count the particular answer just take a"
+    },
+    {
+      "start": 562.32,
+      "end": 566.4,
+      "duration": 4.08,
+      "text": "counter and do a counter plus plus and"
+    },
+    {
+      "start": 564.08,
+      "end": 568.48,
+      "duration": 4.4,
+      "text": "you can always count your answer so as"
+    },
+    {
+      "start": 566.4,
+      "end": 570.08,
+      "duration": 3.68,
+      "text": "usual we will write the c plus plus code"
+    },
+    {
+      "start": 568.48,
+      "end": 572.56,
+      "duration": 4.08,
+      "text": "on the right and the java code is"
+    },
+    {
+      "start": 570.08,
+      "end": 574.32,
+      "duration": 4.24,
+      "text": "visible on the left so what do we have"
+    },
+    {
+      "start": 572.56,
+      "end": 577.2,
+      "duration": 4.64,
+      "text": "we have the number of enclaves and we"
+    },
+    {
+      "start": 574.32,
+      "end": 579.44,
+      "duration": 5.12,
+      "text": "have the grid correct so what i will do"
+    },
+    {
+      "start": 577.2,
+      "end": 580.88,
+      "duration": 3.68,
+      "text": "is i will at first figure out the"
+    },
+    {
+      "start": 579.44,
+      "end": 582.56,
+      "duration": 3.12,
+      "text": "boundary once and you have to put that"
+    },
+    {
+      "start": 580.88,
+      "end": 584.16,
+      "duration": 3.28,
+      "text": "into the queue data structure so let's"
+    },
+    {
+      "start": 582.56,
+      "end": 586.4,
+      "duration": 3.84,
+      "text": "take a q data structure which will be"
+    },
+    {
+      "start": 584.16,
+      "end": 589.12,
+      "duration": 4.96,
+      "text": "storing the row and columns"
+    },
+    {
+      "start": 586.4,
+      "end": 590.8,
+      "duration": 4.4,
+      "text": "perfect and at the same time please"
+    },
+    {
+      "start": 589.12,
+      "end": 594.16,
+      "duration": 5.04,
+      "text": "please do this"
+    },
+    {
+      "start": 590.8,
+      "end": 594.58,
+      "duration": 3.78,
+      "text": "get this size of the grid"
+    },
+    {
+      "start": 594.16,
+      "end": 596.0,
+      "duration": 1.84,
+      "text": "and"
+    },
+    {
+      "start": 594.58,
+      "end": 597.92,
+      "duration": 3.34,
+      "text": "[Music]"
+    },
+    {
+      "start": 596.0,
+      "end": 599.52,
+      "duration": 3.52,
+      "text": "yeah perfect you've got the size of the"
+    },
+    {
+      "start": 597.92,
+      "end": 602.4,
+      "duration": 4.48,
+      "text": "grid"
+    },
+    {
+      "start": 599.52,
+      "end": 605.6,
+      "duration": 6.08,
+      "text": "next thing please create this visited"
+    },
+    {
+      "start": 602.4,
+      "end": 608.0,
+      "duration": 5.6,
+      "text": "matrix i'll just do int visited of n m"
+    },
+    {
+      "start": 605.6,
+      "end": 610.24,
+      "duration": 4.64,
+      "text": "and i'll mark everything else unvisited"
+    },
+    {
+      "start": 608.0,
+      "end": 612.88,
+      "duration": 4.88,
+      "text": "perfect now what you will do is please"
+    },
+    {
+      "start": 610.24,
+      "end": 614.8,
+      "duration": 4.56,
+      "text": "go across to all the boundary guys so"
+    },
+    {
+      "start": 612.88,
+      "end": 617.36,
+      "duration": 4.48,
+      "text": "one thing you can do is you can either"
+    },
+    {
+      "start": 614.8,
+      "end": 620.56,
+      "duration": 5.76,
+      "text": "traverse for first row first column last"
+    },
+    {
+      "start": 617.36,
+      "end": 622.56,
+      "duration": 5.2,
+      "text": "row last column or you can traverse"
+    },
+    {
+      "start": 620.56,
+      "end": 625.04,
+      "duration": 4.48,
+      "text": "through the entire matrix"
+    },
+    {
+      "start": 622.56,
+      "end": 626.96,
+      "duration": 4.4,
+      "text": "and we know the first column"
+    },
+    {
+      "start": 625.04,
+      "end": 628.4,
+      "duration": 3.36,
+      "text": "first row will always have the i value"
+    },
+    {
+      "start": 626.96,
+      "end": 629.52,
+      "duration": 2.56,
+      "text": "as 0"
+    },
+    {
+      "start": 628.4,
+      "end": 632.56,
+      "duration": 4.16,
+      "text": "or"
+    },
+    {
+      "start": 629.52,
+      "end": 635.12,
+      "duration": 5.6,
+      "text": "the column value as 0 or the row value"
+    },
+    {
+      "start": 632.56,
+      "end": 637.44,
+      "duration": 4.88,
+      "text": "will be n minus 1 or the column value"
+    },
+    {
+      "start": 635.12,
+      "end": 639.92,
+      "duration": 4.8,
+      "text": "will be m minus 1 this is when you can"
+    },
+    {
+      "start": 637.44,
+      "end": 640.72,
+      "duration": 3.28,
+      "text": "say it's a part of first"
+    },
+    {
+      "start": 639.92,
+      "end": 643.6,
+      "duration": 3.68,
+      "text": "row"
+    },
+    {
+      "start": 640.72,
+      "end": 645.76,
+      "duration": 5.04,
+      "text": "first column"
+    },
+    {
+      "start": 643.6,
+      "end": 648.0,
+      "duration": 4.4,
+      "text": "last row and last call this is what you"
+    },
+    {
+      "start": 645.76,
+      "end": 650.8,
+      "duration": 5.04,
+      "text": "can say right so over here what you'll"
+    },
+    {
+      "start": 648.0,
+      "end": 654.24,
+      "duration": 6.24,
+      "text": "say is if this is the case except this"
+    },
+    {
+      "start": 650.8,
+      "end": 656.88,
+      "duration": 6.08,
+      "text": "is the case and you find out that the"
+    },
+    {
+      "start": 654.24,
+      "end": 659.52,
+      "duration": 5.28,
+      "text": "grid of ij is one which means it is a"
+    },
+    {
+      "start": 656.88,
+      "end": 662.0,
+      "duration": 5.12,
+      "text": "land if it is a land can you please ask"
+    },
+    {
+      "start": 659.52,
+      "end": 663.68,
+      "duration": 4.16,
+      "text": "the queue to store this guy and once"
+    },
+    {
+      "start": 662.0,
+      "end": 666.0,
+      "duration": 4.0,
+      "text": "you've asked the queue can you say this"
+    },
+    {
+      "start": 663.68,
+      "end": 667.84,
+      "duration": 4.16,
+      "text": "to be visited perfect once you've done"
+    },
+    {
+      "start": 666.0,
+      "end": 670.16,
+      "duration": 4.16,
+      "text": "everything let's do the bfs traversal"
+    },
+    {
+      "start": 667.84,
+      "end": 672.88,
+      "duration": 5.04,
+      "text": "which is super simple which is q dot"
+    },
+    {
+      "start": 670.16,
+      "end": 675.6,
+      "duration": 5.44,
+      "text": "empty right and you say okay what's the"
+    },
+    {
+      "start": 672.88,
+      "end": 677.68,
+      "duration": 4.8,
+      "text": "row number can i say as q dot front dot"
+    },
+    {
+      "start": 675.6,
+      "end": 681.04,
+      "duration": 5.44,
+      "text": "first yes and can i see the column"
+    },
+    {
+      "start": 677.68,
+      "end": 683.92,
+      "duration": 6.24,
+      "text": "number as q dot front dot second i can"
+    },
+    {
+      "start": 681.04,
+      "end": 686.48,
+      "duration": 5.44,
+      "text": "and now what i will say is q dot pop"
+    },
+    {
+      "start": 683.92,
+      "end": 687.84,
+      "duration": 3.92,
+      "text": "and i need to visit the neighbors and"
+    },
+    {
+      "start": 686.48,
+      "end": 690.48,
+      "duration": 4.0,
+      "text": "you know how to visit the neighbors how"
+    },
+    {
+      "start": 687.84,
+      "end": 692.24,
+      "duration": 4.4,
+      "text": "many uh kinds of neighbors are there one"
+    },
+    {
+      "start": 690.48,
+      "end": 694.56,
+      "duration": 4.08,
+      "text": "at the top one on the right one at the"
+    },
+    {
+      "start": 692.24,
+      "end": 697.76,
+      "duration": 5.52,
+      "text": "bottom one on the left and if this is"
+    },
+    {
+      "start": 694.56,
+      "end": 700.32,
+      "duration": 5.76,
+      "text": "your row and column the upper one is row"
+    },
+    {
+      "start": 697.76,
+      "end": 702.8,
+      "duration": 5.04,
+      "text": "minus one column the right one is row"
+    },
+    {
+      "start": 700.32,
+      "end": 705.44,
+      "duration": 5.12,
+      "text": "comma column plus one the down one is"
+    },
+    {
+      "start": 702.8,
+      "end": 707.92,
+      "duration": 5.12,
+      "text": "row plus one column the this one is row"
+    },
+    {
+      "start": 705.44,
+      "end": 710.08,
+      "duration": 4.64,
+      "text": "comma column minus one so what are the"
+    },
+    {
+      "start": 707.92,
+      "end": 712.16,
+      "duration": 4.24,
+      "text": "changes in one column for this the"
+    },
+    {
+      "start": 710.08,
+      "end": 715.44,
+      "duration": 5.36,
+      "text": "change is minus one zero for this the"
+    },
+    {
+      "start": 712.16,
+      "end": 717.92,
+      "duration": 5.76,
+      "text": "changes plus zero plus one for this the"
+    },
+    {
+      "start": 715.44,
+      "end": 720.48,
+      "duration": 5.04,
+      "text": "changes plus one plus zero for this the"
+    },
+    {
+      "start": 717.92,
+      "end": 722.4,
+      "duration": 4.48,
+      "text": "changes plus zero minus one so these are"
+    },
+    {
+      "start": 720.48,
+      "end": 724.72,
+      "duration": 4.24,
+      "text": "the delta changes that you have to do"
+    },
+    {
+      "start": 722.4,
+      "end": 726.16,
+      "duration": 3.76,
+      "text": "well you can just store them in some"
+    },
+    {
+      "start": 724.72,
+      "end": 728.16,
+      "duration": 3.44,
+      "text": "delta rho"
+    },
+    {
+      "start": 726.16,
+      "end": 729.92,
+      "duration": 3.76,
+      "text": "and delta column and this can be the"
+    },
+    {
+      "start": 728.16,
+      "end": 732.08,
+      "duration": 3.92,
+      "text": "zeroth index first index second index"
+    },
+    {
+      "start": 729.92,
+      "end": 733.76,
+      "duration": 3.84,
+      "text": "and third index this way you can easily"
+    },
+    {
+      "start": 732.08,
+      "end": 735.36,
+      "duration": 3.28,
+      "text": "pick them up so i'll just store them in"
+    },
+    {
+      "start": 733.76,
+      "end": 737.12,
+      "duration": 3.36,
+      "text": "delta rho"
+    },
+    {
+      "start": 735.36,
+      "end": 739.28,
+      "duration": 3.92,
+      "text": "i just went through very fast because"
+    },
+    {
+      "start": 737.12,
+      "end": 741.2,
+      "duration": 4.08,
+      "text": "i've explained this a lot of times so i"
+    },
+    {
+      "start": 739.28,
+      "end": 743.04,
+      "duration": 3.76,
+      "text": "don't want to waste any further time"
+    },
+    {
+      "start": 741.2,
+      "end": 746.4,
+      "duration": 5.2,
+      "text": "i've explained this in the graph series"
+    },
+    {
+      "start": 743.04,
+      "end": 749.76,
+      "duration": 6.72,
+      "text": "a lot of times so del column equal to"
+    },
+    {
+      "start": 746.4,
+      "end": 751.84,
+      "duration": 5.44,
+      "text": "zero plus one plus zero minus one this"
+    },
+    {
+      "start": 749.76,
+      "end": 752.88,
+      "duration": 3.12,
+      "text": "is something which you will do done and"
+    },
+    {
+      "start": 751.84,
+      "end": 755.36,
+      "duration": 3.52,
+      "text": "now what you'll do is you have to"
+    },
+    {
+      "start": 752.88,
+      "end": 758.24,
+      "duration": 5.36,
+      "text": "traverse all the four directions because"
+    },
+    {
+      "start": 755.36,
+      "end": 759.84,
+      "duration": 4.48,
+      "text": "for this guy for this cell the land will"
+    },
+    {
+      "start": 758.24,
+      "end": 761.92,
+      "duration": 3.68,
+      "text": "get connected to every one of the four"
+    },
+    {
+      "start": 759.84,
+      "end": 764.32,
+      "duration": 4.48,
+      "text": "directions so just make sure it"
+    },
+    {
+      "start": 761.92,
+      "end": 767.12,
+      "duration": 5.2,
+      "text": "traverses all the four directions"
+    },
+    {
+      "start": 764.32,
+      "end": 769.84,
+      "duration": 5.52,
+      "text": "travis's all four directions that should"
+    },
+    {
+      "start": 767.12,
+      "end": 772.16,
+      "duration": 5.04,
+      "text": "be your first priority that it traverses"
+    },
+    {
+      "start": 769.84,
+      "end": 775.12,
+      "duration": 5.28,
+      "text": "all four directions so just go as like"
+    },
+    {
+      "start": 772.16,
+      "end": 777.36,
+      "duration": 5.2,
+      "text": "indi equal to zero i lesser than four i"
+    },
+    {
+      "start": 775.12,
+      "end": 779.76,
+      "duration": 4.64,
+      "text": "plus plus and i can see the neighboring"
+    },
+    {
+      "start": 777.36,
+      "end": 782.8,
+      "duration": 5.44,
+      "text": "row is very simple it's the current row"
+    },
+    {
+      "start": 779.76,
+      "end": 784.48,
+      "duration": 4.72,
+      "text": "plus the del the change that we figured"
+    },
+    {
+      "start": 782.8,
+      "end": 787.2,
+      "duration": 4.4,
+      "text": "out the neighboring column is column"
+    },
+    {
+      "start": 784.48,
+      "end": 788.96,
+      "duration": 4.48,
+      "text": "plus the del column of i and i'll just"
+    },
+    {
+      "start": 787.2,
+      "end": 791.28,
+      "duration": 4.08,
+      "text": "have a check if this is greater than"
+    },
+    {
+      "start": 788.96,
+      "end": 793.92,
+      "duration": 4.96,
+      "text": "equal to 0 and if this is lesser than n"
+    },
+    {
+      "start": 791.28,
+      "end": 797.28,
+      "duration": 6.0,
+      "text": "and and n column is greater than equal"
+    },
+    {
+      "start": 793.92,
+      "end": 799.36,
+      "duration": 5.44,
+      "text": "to 0 and and n column is lesser than m"
+    },
+    {
+      "start": 797.28,
+      "end": 801.6,
+      "duration": 4.32,
+      "text": "once this is checked have the next check"
+    },
+    {
+      "start": 799.36,
+      "end": 802.64,
+      "duration": 3.28,
+      "text": "as visited row and visited column are"
+    },
+    {
+      "start": 801.6,
+      "end": 804.64,
+      "duration": 3.04,
+      "text": "they"
+    },
+    {
+      "start": 802.64,
+      "end": 807.36,
+      "duration": 4.72,
+      "text": "not previously visited once this is"
+    },
+    {
+      "start": 804.64,
+      "end": 809.76,
+      "duration": 5.12,
+      "text": "checked it has to be a land as well so"
+    },
+    {
+      "start": 807.36,
+      "end": 812.16,
+      "duration": 4.8,
+      "text": "have a check if this is a land if all of"
+    },
+    {
+      "start": 809.76,
+      "end": 814.56,
+      "duration": 4.8,
+      "text": "these satisfy what you need to do is you"
+    },
+    {
+      "start": 812.16,
+      "end": 816.88,
+      "duration": 4.72,
+      "text": "need to say q can you please store these"
+    },
+    {
+      "start": 814.56,
+      "end": 818.56,
+      "duration": 4.0,
+      "text": "new guys which is n row and and column"
+    },
+    {
+      "start": 816.88,
+      "end": 821.52,
+      "duration": 4.64,
+      "text": "at the same time can you please go and"
+    },
+    {
+      "start": 818.56,
+      "end": 823.36,
+      "duration": 4.8,
+      "text": "mark these n row and n column to be true"
+    },
+    {
+      "start": 821.52,
+      "end": 824.72,
+      "duration": 3.2,
+      "text": "once you have done all of these things"
+    },
+    {
+      "start": 823.36,
+      "end": 827.36,
+      "duration": 4.0,
+      "text": "at the end of the day you need a counter"
+    },
+    {
+      "start": 824.72,
+      "end": 831.52,
+      "duration": 6.8,
+      "text": "to count so take a counter as zero and"
+    },
+    {
+      "start": 827.36,
+      "end": 834.4,
+      "duration": 7.04,
+      "text": "just go across this idi equal to 0"
+    },
+    {
+      "start": 831.52,
+      "end": 837.12,
+      "duration": 5.6,
+      "text": "and i lesser than n i plus plus and you"
+    },
+    {
+      "start": 834.4,
+      "end": 839.44,
+      "duration": 5.04,
+      "text": "can just do for j equal to 0 j lesser"
+    },
+    {
+      "start": 837.12,
+      "end": 841.84,
+      "duration": 4.72,
+      "text": "than m j plus plus at the same time you"
+    },
+    {
+      "start": 839.44,
+      "end": 843.88,
+      "duration": 4.44,
+      "text": "can say if the grid is containing this"
+    },
+    {
+      "start": 841.84,
+      "end": 846.48,
+      "duration": 4.64,
+      "text": "one and it is"
+    },
+    {
+      "start": 843.88,
+      "end": 849.36,
+      "duration": 5.48,
+      "text": "unvisited okay then i can say counter"
+    },
+    {
+      "start": 846.48,
+      "end": 851.36,
+      "duration": 4.88,
+      "text": "plus plus at the end of the day i can go"
+    },
+    {
+      "start": 849.36,
+      "end": 853.44,
+      "duration": 4.08,
+      "text": "and return that counter which will be my"
+    },
+    {
+      "start": 851.36,
+      "end": 855.92,
+      "duration": 4.56,
+      "text": "answer so this is how the entire code"
+    },
+    {
+      "start": 853.44,
+      "end": 858.08,
+      "duration": 4.64,
+      "text": "will look like so let's talk about the"
+    },
+    {
+      "start": 855.92,
+      "end": 860.48,
+      "duration": 4.56,
+      "text": "space complexity that we're using we're"
+    },
+    {
+      "start": 858.08,
+      "end": 861.28,
+      "duration": 3.2,
+      "text": "definitely using a visited matrix and a"
+    },
+    {
+      "start": 860.48,
+      "end": 864.16,
+      "duration": 3.68,
+      "text": "q"
+    },
+    {
+      "start": 861.28,
+      "end": 866.64,
+      "duration": 5.36,
+      "text": "so at max the space complexity will be n"
+    },
+    {
+      "start": 864.16,
+      "end": 868.8,
+      "duration": 4.64,
+      "text": "cross m plus the q space that we're"
+    },
+    {
+      "start": 866.64,
+      "end": 870.8,
+      "duration": 4.16,
+      "text": "using so we can say it as n cross m to"
+    },
+    {
+      "start": 868.8,
+      "end": 872.32,
+      "duration": 3.52,
+      "text": "be the space complexity what about the"
+    },
+    {
+      "start": 870.8,
+      "end": 875.36,
+      "duration": 4.56,
+      "text": "time complexity"
+    },
+    {
+      "start": 872.32,
+      "end": 877.84,
+      "duration": 5.52,
+      "text": "q dot empty assuming all the pieces to"
+    },
+    {
+      "start": 875.36,
+      "end": 879.12,
+      "duration": 3.76,
+      "text": "be land assume you have a matrix like 1"
+    },
+    {
+      "start": 877.84,
+      "end": 880.16,
+      "duration": 2.32,
+      "text": "1 1 1"
+    },
+    {
+      "start": 879.12,
+      "end": 882.56,
+      "duration": 3.44,
+      "text": "and 1"
+    },
+    {
+      "start": 880.16,
+      "end": 885.04,
+      "duration": 4.88,
+      "text": "1 1 1 so you're going to visit all the"
+    },
+    {
+      "start": 882.56,
+      "end": 887.92,
+      "duration": 5.36,
+      "text": "matrix so the q is going to run over all"
+    },
+    {
+      "start": 885.04,
+      "end": 889.6,
+      "duration": 4.56,
+      "text": "the matrix so n cross m"
+    },
+    {
+      "start": 887.92,
+      "end": 891.52,
+      "duration": 3.6,
+      "text": "is what the number of matrix will run"
+    },
+    {
+      "start": 889.6,
+      "end": 893.84,
+      "duration": 4.24,
+      "text": "across and for every time you have four"
+    },
+    {
+      "start": 891.52,
+      "end": 895.68,
+      "duration": 4.16,
+      "text": "directions to travel so for so this will"
+    },
+    {
+      "start": 893.84,
+      "end": 897.84,
+      "duration": 4.0,
+      "text": "be the time complexity and yeah this is"
+    },
+    {
+      "start": 895.68,
+      "end": 901.04,
+      "duration": 5.36,
+      "text": "n cross m and this is n cross m so"
+    },
+    {
+      "start": 897.84,
+      "end": 903.76,
+      "duration": 5.92,
+      "text": "overall if you near by it it'll be"
+    },
+    {
+      "start": 901.04,
+      "end": 905.12,
+      "duration": 4.08,
+      "text": "somewhere near to n cross m so guys i"
+    },
+    {
+      "start": 903.76,
+      "end": 906.64,
+      "duration": 2.88,
+      "text": "hope i was able to explain you this"
+    },
+    {
+      "start": 905.12,
+      "end": 908.72,
+      "duration": 3.6,
+      "text": "particular question so just in case i"
+    },
+    {
+      "start": 906.64,
+      "end": 910.48,
+      "duration": 3.84,
+      "text": "was please make sure you like this video"
+    },
+    {
+      "start": 908.72,
+      "end": 912.48,
+      "duration": 3.76,
+      "text": "and if you're new to our channel what"
+    },
+    {
+      "start": 910.48,
+      "end": 914.32,
+      "duration": 3.84,
+      "text": "are you waiting for like what are you"
+    },
+    {
+      "start": 912.48,
+      "end": 915.76,
+      "duration": 3.28,
+      "text": "waiting for hit that subscribe button"
+    },
+    {
+      "start": 914.32,
+      "end": 917.92,
+      "duration": 3.6,
+      "text": "right away and if you haven't checked"
+    },
+    {
+      "start": 915.76,
+      "end": 919.04,
+      "duration": 3.28,
+      "text": "out our dp series 3 series and the hd"
+    },
+    {
+      "start": 917.92,
+      "end": 920.96,
+      "duration": 3.04,
+      "text": "sheet"
+    },
+    {
+      "start": 919.04,
+      "end": 922.08,
+      "duration": 3.04,
+      "text": "links are in the description with this"
+    },
+    {
+      "start": 920.96,
+      "end": 923.52,
+      "duration": 2.56,
+      "text": "i'll be wrapping up this video let's"
+    },
+    {
+      "start": 922.08,
+      "end": 925.04,
+      "duration": 2.96,
+      "text": "meet in some other video till then bye"
+    },
+    {
+      "start": 923.52,
+      "end": 928.24,
+      "duration": 4.72,
+      "text": "take"
+    },
+    {
+      "start": 925.04,
+      "end": 932.1,
+      "duration": 7.06,
+      "text": "whenever care heart is broken"
+    },
+    {
+      "start": 928.24,
+      "end": 935.02,
+      "duration": 6.78,
+      "text": "don't ever forget your goal then"
+    },
+    {
+      "start": 932.1,
+      "end": 935.02,
+      "duration": 2.92,
+      "text": "[Music]"
+    }
+  ]
+}

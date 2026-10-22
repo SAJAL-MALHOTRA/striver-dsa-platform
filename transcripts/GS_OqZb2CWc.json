@@ -1,0 +1,4856 @@
+{
+  "video_id": "GS_OqZb2CWc",
+  "title": "Dp 16. Partition A Set Into Two Subsets With Minimum Absolute Sum Difference | DP on Subsequences",
+  "duration_sec": 1790,
+  "num_segments": 808,
+  "segments": [
+    {
+      "start": 0.48,
+      "end": 3.68,
+      "duration": 3.2,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 1.84,
+      "end": 7.44,
+      "duration": 5.6,
+      "text": "i hope you guys are doing extremely well"
+    },
+    {
+      "start": 3.68,
+      "end": 10.4,
+      "duration": 6.72,
+      "text": "so today we will be solving dp 16 and"
+    },
+    {
+      "start": 7.44,
+      "end": 13.76,
+      "duration": 6.32,
+      "text": "the prerequisite to this dp16 is"
+    },
+    {
+      "start": 10.4,
+      "end": 16.4,
+      "duration": 6.0,
+      "text": "you must have seen the dp14"
+    },
+    {
+      "start": 13.76,
+      "end": 18.88,
+      "duration": 5.12,
+      "text": "which is the subset sum problem because"
+    },
+    {
+      "start": 16.4,
+      "end": 21.44,
+      "duration": 5.04,
+      "text": "this problem will entirely be solved"
+    },
+    {
+      "start": 18.88,
+      "end": 23.68,
+      "duration": 4.8,
+      "text": "with the idea of subset sum"
+    },
+    {
+      "start": 21.44,
+      "end": 26.24,
+      "duration": 4.8,
+      "text": "so let's check out the question so the"
+    },
+    {
+      "start": 23.68,
+      "end": 27.36,
+      "duration": 3.68,
+      "text": "question says partition set into two"
+    },
+    {
+      "start": 26.24,
+      "end": 29.76,
+      "duration": 3.52,
+      "text": "subsets"
+    },
+    {
+      "start": 27.36,
+      "end": 30.4,
+      "duration": 3.04,
+      "text": "such that the difference of subset sums"
+    },
+    {
+      "start": 29.76,
+      "end": 31.68,
+      "duration": 1.92,
+      "text": "is"
+    },
+    {
+      "start": 30.4,
+      "end": 33.44,
+      "duration": 3.04,
+      "text": "minimum"
+    },
+    {
+      "start": 31.68,
+      "end": 36.32,
+      "duration": 4.64,
+      "text": "so you're given an array"
+    },
+    {
+      "start": 33.44,
+      "end": 38.24,
+      "duration": 4.8,
+      "text": "containing n non-negative integers again"
+    },
+    {
+      "start": 36.32,
+      "end": 39.28,
+      "duration": 2.96,
+      "text": "very important it has all non-negative"
+    },
+    {
+      "start": 38.24,
+      "end": 41.92,
+      "duration": 3.68,
+      "text": "integers"
+    },
+    {
+      "start": 39.28,
+      "end": 44.4,
+      "duration": 5.12,
+      "text": "your task is to partition uh that array"
+    },
+    {
+      "start": 41.92,
+      "end": 46.08,
+      "duration": 4.16,
+      "text": "into two subsets so basically subset one"
+    },
+    {
+      "start": 44.4,
+      "end": 48.24,
+      "duration": 3.84,
+      "text": "and subset two"
+    },
+    {
+      "start": 46.08,
+      "end": 50.96,
+      "duration": 4.88,
+      "text": "such that the absolute difference"
+    },
+    {
+      "start": 48.24,
+      "end": 53.28,
+      "duration": 5.04,
+      "text": "between both of the subset sums is as"
+    },
+    {
+      "start": 50.96,
+      "end": 55.28,
+      "duration": 4.32,
+      "text": "minimal as possible"
+    },
+    {
+      "start": 53.28,
+      "end": 58.08,
+      "duration": 4.8,
+      "text": "your task is to find the minimum"
+    },
+    {
+      "start": 55.28,
+      "end": 61.12,
+      "duration": 5.84,
+      "text": "absolute difference considering it any"
+    },
+    {
+      "start": 58.08,
+      "end": 63.12,
+      "duration": 5.04,
+      "text": "valid division of array elements so"
+    },
+    {
+      "start": 61.12,
+      "end": 66.24,
+      "duration": 5.12,
+      "text": "let's quickly check out an example so if"
+    },
+    {
+      "start": 63.12,
+      "end": 69.04,
+      "duration": 5.92,
+      "text": "we see this example one two three four"
+    },
+    {
+      "start": 66.24,
+      "end": 71.44,
+      "duration": 5.2,
+      "text": "let's uh discuss over here so if i take"
+    },
+    {
+      "start": 69.04,
+      "end": 72.96,
+      "duration": 3.92,
+      "text": "this example one two three four what are"
+    },
+    {
+      "start": 71.44,
+      "end": 75.36,
+      "duration": 3.92,
+      "text": "the different kind of subsets that you"
+    },
+    {
+      "start": 72.96,
+      "end": 78.72,
+      "duration": 5.76,
+      "text": "can divide it into so you can say one of"
+    },
+    {
+      "start": 75.36,
+      "end": 81.36,
+      "duration": 6.0,
+      "text": "the subsets is one two the other subsets"
+    },
+    {
+      "start": 78.72,
+      "end": 83.52,
+      "duration": 4.8,
+      "text": "uh is three four and the summation of"
+    },
+    {
+      "start": 81.36,
+      "end": 86.08,
+      "duration": 4.72,
+      "text": "this guy will be three and the summation"
+    },
+    {
+      "start": 83.52,
+      "end": 87.12,
+      "duration": 3.6,
+      "text": "of this guy is seven and the absolute"
+    },
+    {
+      "start": 86.08,
+      "end": 90.08,
+      "duration": 4.0,
+      "text": "difference"
+    },
+    {
+      "start": 87.12,
+      "end": 92.4,
+      "duration": 5.28,
+      "text": "is seven minus three and that's four so"
+    },
+    {
+      "start": 90.08,
+      "end": 95.6,
+      "duration": 5.52,
+      "text": "this can be one of the partitions or you"
+    },
+    {
+      "start": 92.4,
+      "end": 97.76,
+      "duration": 5.36,
+      "text": "can say the other partition is one three"
+    },
+    {
+      "start": 95.6,
+      "end": 100.56,
+      "duration": 4.96,
+      "text": "and two fourth where you say one three"
+    },
+    {
+      "start": 97.76,
+      "end": 102.96,
+      "duration": 5.2,
+      "text": "belong to a subset and 2 4 belong to a"
+    },
+    {
+      "start": 100.56,
+      "end": 106.24,
+      "duration": 5.68,
+      "text": "subset so the summation is 6 over here"
+    },
+    {
+      "start": 102.96,
+      "end": 108.8,
+      "duration": 5.84,
+      "text": "and the summation is 4 so 6 minus 4 is"
+    },
+    {
+      "start": 106.24,
+      "end": 111.04,
+      "duration": 4.8,
+      "text": "equal to 2. similarly there can be a lot"
+    },
+    {
+      "start": 108.8,
+      "end": 113.6,
+      "duration": 4.8,
+      "text": "of different patterns"
+    },
+    {
+      "start": 111.04,
+      "end": 115.92,
+      "duration": 4.88,
+      "text": "different partitions rather not patterns"
+    },
+    {
+      "start": 113.6,
+      "end": 118.56,
+      "duration": 4.96,
+      "text": "so i can be like okay can i divide this"
+    },
+    {
+      "start": 115.92,
+      "end": 120.16,
+      "duration": 4.24,
+      "text": "into something where we have"
+    },
+    {
+      "start": 118.56,
+      "end": 122.0,
+      "duration": 3.44,
+      "text": "one and four"
+    },
+    {
+      "start": 120.16,
+      "end": 124.4,
+      "duration": 4.24,
+      "text": "and the other place we have two and"
+    },
+    {
+      "start": 122.0,
+      "end": 126.56,
+      "duration": 4.56,
+      "text": "three so again make sense and this time"
+    },
+    {
+      "start": 124.4,
+      "end": 129.28,
+      "duration": 4.88,
+      "text": "the summation over here will be five and"
+    },
+    {
+      "start": 126.56,
+      "end": 131.92,
+      "duration": 5.36,
+      "text": "the summation over here will be 5 so 5"
+    },
+    {
+      "start": 129.28,
+      "end": 134.56,
+      "duration": 5.28,
+      "text": "minus 5 will be 0 and if you carefully"
+    },
+    {
+      "start": 131.92,
+      "end": 137.76,
+      "duration": 5.84,
+      "text": "see this is the minimal difference that"
+    },
+    {
+      "start": 134.56,
+      "end": 140.0,
+      "duration": 5.44,
+      "text": "you can obtain by dividing them into"
+    },
+    {
+      "start": 137.76,
+      "end": 142.16,
+      "duration": 4.4,
+      "text": "couple of partitions so in short you"
+    },
+    {
+      "start": 140.0,
+      "end": 144.08,
+      "duration": 4.08,
+      "text": "will be given an array you have to take"
+    },
+    {
+      "start": 142.16,
+      "end": 146.96,
+      "duration": 4.8,
+      "text": "all the elements and you put some"
+    },
+    {
+      "start": 144.08,
+      "end": 149.44,
+      "duration": 5.36,
+      "text": "elements in an subset one and you put"
+    },
+    {
+      "start": 146.96,
+      "end": 152.32,
+      "duration": 5.36,
+      "text": "some elements in in subset two and the"
+    },
+    {
+      "start": 149.44,
+      "end": 154.56,
+      "duration": 5.12,
+      "text": "subset one uh some assume it to be some"
+    },
+    {
+      "start": 152.32,
+      "end": 157.92,
+      "duration": 5.6,
+      "text": "one and the subset two some assumed to"
+    },
+    {
+      "start": 154.56,
+      "end": 161.36,
+      "duration": 6.8,
+      "text": "be sum too so the absolute of this"
+    },
+    {
+      "start": 157.92,
+      "end": 164.56,
+      "duration": 6.64,
+      "text": "is as minimal as possible this is what"
+    },
+    {
+      "start": 161.36,
+      "end": 166.4,
+      "duration": 5.04,
+      "text": "the question states right now how do you"
+    },
+    {
+      "start": 164.56,
+      "end": 168.0,
+      "duration": 3.44,
+      "text": "solve this question"
+    },
+    {
+      "start": 166.4,
+      "end": 169.52,
+      "duration": 3.12,
+      "text": "because uh"
+    },
+    {
+      "start": 168.0,
+      "end": 171.84,
+      "duration": 3.84,
+      "text": "this is something"
+    },
+    {
+      "start": 169.52,
+      "end": 173.92,
+      "duration": 4.4,
+      "text": "different than what we have been doing"
+    },
+    {
+      "start": 171.84,
+      "end": 176.16,
+      "duration": 4.32,
+      "text": "what have we done till now we have done"
+    },
+    {
+      "start": 173.92,
+      "end": 177.2,
+      "duration": 3.28,
+      "text": "a lecture 14 yes we have done a lecture"
+    },
+    {
+      "start": 176.16,
+      "end": 179.12,
+      "duration": 2.96,
+      "text": "14"
+    },
+    {
+      "start": 177.2,
+      "end": 182.16,
+      "duration": 4.96,
+      "text": "over there what have we discussed we"
+    },
+    {
+      "start": 179.12,
+      "end": 183.36,
+      "duration": 4.24,
+      "text": "have discussed a given an array is given"
+    },
+    {
+      "start": 182.16,
+      "end": 185.68,
+      "duration": 3.52,
+      "text": "an array"
+    },
+    {
+      "start": 183.36,
+      "end": 187.76,
+      "duration": 4.4,
+      "text": "and i will give you a target"
+    },
+    {
+      "start": 185.68,
+      "end": 190.96,
+      "duration": 5.28,
+      "text": "and your task is to tell me if this"
+    },
+    {
+      "start": 187.76,
+      "end": 192.96,
+      "duration": 5.2,
+      "text": "target like if there is a subset"
+    },
+    {
+      "start": 190.96,
+      "end": 195.44,
+      "duration": 4.48,
+      "text": "if there is a subset"
+    },
+    {
+      "start": 192.96,
+      "end": 196.48,
+      "duration": 3.52,
+      "text": "whose sum"
+    },
+    {
+      "start": 195.44,
+      "end": 198.56,
+      "duration": 3.12,
+      "text": "is"
+    },
+    {
+      "start": 196.48,
+      "end": 200.48,
+      "duration": 4.0,
+      "text": "equal to this target so you are given an"
+    },
+    {
+      "start": 198.56,
+      "end": 202.8,
+      "duration": 4.24,
+      "text": "array we have already done a problem"
+    },
+    {
+      "start": 200.48,
+      "end": 203.76,
+      "duration": 3.28,
+      "text": "where we have to tell is there a subset"
+    },
+    {
+      "start": 202.8,
+      "end": 206.48,
+      "duration": 3.68,
+      "text": "which is"
+    },
+    {
+      "start": 203.76,
+      "end": 208.96,
+      "duration": 5.2,
+      "text": "equivalent to the given sum target and"
+    },
+    {
+      "start": 206.48,
+      "end": 211.52,
+      "duration": 5.04,
+      "text": "if you remember what concept did we use"
+    },
+    {
+      "start": 208.96,
+      "end": 214.56,
+      "duration": 5.6,
+      "text": "we use the concept of"
+    },
+    {
+      "start": 211.52,
+      "end": 216.48,
+      "duration": 4.96,
+      "text": "pick and non pick or take or non take"
+    },
+    {
+      "start": 214.56,
+      "end": 218.8,
+      "duration": 4.24,
+      "text": "the concept that we used so if you"
+    },
+    {
+      "start": 216.48,
+      "end": 222.0,
+      "duration": 5.52,
+      "text": "remember the recurrence it was something"
+    },
+    {
+      "start": 218.8,
+      "end": 223.6,
+      "duration": 4.8,
+      "text": "like this we wrote int index then we"
+    },
+    {
+      "start": 222.0,
+      "end": 226.48,
+      "duration": 4.48,
+      "text": "wrote the target"
+    },
+    {
+      "start": 223.6,
+      "end": 229.84,
+      "duration": 6.24,
+      "text": "then it was something like if at any"
+    },
+    {
+      "start": 226.48,
+      "end": 232.56,
+      "duration": 6.08,
+      "text": "moment the target is achieved"
+    },
+    {
+      "start": 229.84,
+      "end": 233.68,
+      "duration": 3.84,
+      "text": "we will return a true"
+    },
+    {
+      "start": 232.56,
+      "end": 236.96,
+      "duration": 4.4,
+      "text": "and if"
+    },
+    {
+      "start": 233.68,
+      "end": 239.12,
+      "duration": 5.44,
+      "text": "the index reaches equal to equal to zero"
+    },
+    {
+      "start": 236.96,
+      "end": 242.24,
+      "duration": 5.28,
+      "text": "that means basically we started from f"
+    },
+    {
+      "start": 239.12,
+      "end": 244.08,
+      "duration": 4.96,
+      "text": "of n minus 1 and with the given target"
+    },
+    {
+      "start": 242.24,
+      "end": 245.36,
+      "duration": 3.12,
+      "text": "if you remember well and over here we"
+    },
+    {
+      "start": 244.08,
+      "end": 246.8,
+      "duration": 2.72,
+      "text": "returned"
+    },
+    {
+      "start": 245.36,
+      "end": 249.12,
+      "duration": 3.76,
+      "text": "array of"
+    },
+    {
+      "start": 246.8,
+      "end": 250.4,
+      "duration": 3.6,
+      "text": "0 is equal to equal to the remaining"
+    },
+    {
+      "start": 249.12,
+      "end": 252.08,
+      "duration": 2.96,
+      "text": "target because"
+    },
+    {
+      "start": 250.4,
+      "end": 254.56,
+      "duration": 4.16,
+      "text": "if we are standing at the last element"
+    },
+    {
+      "start": 252.08,
+      "end": 257.52,
+      "duration": 5.44,
+      "text": "and some target is yet to be achieved"
+    },
+    {
+      "start": 254.56,
+      "end": 260.16,
+      "duration": 5.6,
+      "text": "then the area has to the array of zeroth"
+    },
+    {
+      "start": 257.52,
+      "end": 261.68,
+      "duration": 4.16,
+      "text": "index has to have that target so you"
+    },
+    {
+      "start": 260.16,
+      "end": 263.68,
+      "duration": 3.52,
+      "text": "remember these were the couple of base"
+    },
+    {
+      "start": 261.68,
+      "end": 266.16,
+      "duration": 4.48,
+      "text": "cases then"
+    },
+    {
+      "start": 263.68,
+      "end": 268.32,
+      "duration": 4.64,
+      "text": "we wrote a non-take case where it was"
+    },
+    {
+      "start": 266.16,
+      "end": 270.0,
+      "duration": 3.84,
+      "text": "like we will move to the previous index"
+    },
+    {
+      "start": 268.32,
+      "end": 272.4,
+      "duration": 4.08,
+      "text": "with the similar target"
+    },
+    {
+      "start": 270.0,
+      "end": 276.08,
+      "duration": 6.08,
+      "text": "and similarly we wrote a take case which"
+    },
+    {
+      "start": 272.4,
+      "end": 279.28,
+      "duration": 6.88,
+      "text": "was initially false and we can only take"
+    },
+    {
+      "start": 276.08,
+      "end": 280.4,
+      "duration": 4.32,
+      "text": "the array of index into our subsequence"
+    },
+    {
+      "start": 279.28,
+      "end": 283.68,
+      "duration": 4.4,
+      "text": "if that's"
+    },
+    {
+      "start": 280.4,
+      "end": 286.0,
+      "duration": 5.6,
+      "text": "lesser than equal to target right and"
+    },
+    {
+      "start": 283.68,
+      "end": 289.76,
+      "duration": 6.08,
+      "text": "over here we said take will be if we"
+    },
+    {
+      "start": 286.0,
+      "end": 290.88,
+      "duration": 4.88,
+      "text": "take it it's index minus 1 and target"
+    },
+    {
+      "start": 289.76,
+      "end": 293.36,
+      "duration": 3.6,
+      "text": "minus"
+    },
+    {
+      "start": 290.88,
+      "end": 295.2,
+      "duration": 4.32,
+      "text": "array of index so i hope you remember"
+    },
+    {
+      "start": 293.36,
+      "end": 296.8,
+      "duration": 3.44,
+      "text": "this recurrence and at the end of the"
+    },
+    {
+      "start": 295.2,
+      "end": 297.76,
+      "duration": 2.56,
+      "text": "day we said"
+    },
+    {
+      "start": 296.8,
+      "end": 300.4,
+      "duration": 3.6,
+      "text": "take"
+    },
+    {
+      "start": 297.76,
+      "end": 302.72,
+      "duration": 4.96,
+      "text": "and non take so that was a quick"
+    },
+    {
+      "start": 300.4,
+      "end": 304.72,
+      "duration": 4.32,
+      "text": "revision so we have done this problem"
+    },
+    {
+      "start": 302.72,
+      "end": 307.36,
+      "duration": 4.64,
+      "text": "and we will be using this problems"
+    },
+    {
+      "start": 304.72,
+      "end": 308.88,
+      "duration": 4.16,
+      "text": "concept only to solve the given problem"
+    },
+    {
+      "start": 307.36,
+      "end": 311.92,
+      "duration": 4.56,
+      "text": "so let's forget about the current"
+    },
+    {
+      "start": 308.88,
+      "end": 314.88,
+      "duration": 6.0,
+      "text": "problem and let's analyze this uh"
+    },
+    {
+      "start": 311.92,
+      "end": 317.12,
+      "duration": 5.2,
+      "text": "recurrence relationship so what did we"
+    },
+    {
+      "start": 314.88,
+      "end": 319.12,
+      "duration": 4.24,
+      "text": "do on this recurrence relationship we"
+    },
+    {
+      "start": 317.12,
+      "end": 321.6,
+      "duration": 4.48,
+      "text": "did apply something as"
+    },
+    {
+      "start": 319.12,
+      "end": 324.4,
+      "duration": 5.28,
+      "text": "a memoization right and what after"
+    },
+    {
+      "start": 321.6,
+      "end": 327.04,
+      "duration": 5.44,
+      "text": "memoration after memoration you went on"
+    },
+    {
+      "start": 324.4,
+      "end": 328.88,
+      "duration": 4.48,
+      "text": "to write the tabulation if you remember"
+    },
+    {
+      "start": 327.04,
+      "end": 331.2,
+      "duration": 4.16,
+      "text": "and how was the tabulation written the"
+    },
+    {
+      "start": 328.88,
+      "end": 334.0,
+      "duration": 5.12,
+      "text": "tabulation clearly stated that hey"
+    },
+    {
+      "start": 331.2,
+      "end": 336.96,
+      "duration": 5.76,
+      "text": "listen if the target is equal to equal"
+    },
+    {
+      "start": 334.0,
+      "end": 340.64,
+      "duration": 6.64,
+      "text": "to 0 then over here the index can be n"
+    },
+    {
+      "start": 336.96,
+      "end": 343.2,
+      "duration": 6.24,
+      "text": "minus 1 n minus 2 anything till 0"
+    },
+    {
+      "start": 340.64,
+      "end": 346.0,
+      "duration": 5.36,
+      "text": "basically any index it can be any index"
+    },
+    {
+      "start": 343.2,
+      "end": 348.16,
+      "duration": 4.96,
+      "text": "so we went on to write the tabulation as"
+    },
+    {
+      "start": 346.0,
+      "end": 349.6,
+      "duration": 3.6,
+      "text": "firstly though we declared a dp of n of"
+    },
+    {
+      "start": 348.16,
+      "end": 351.44,
+      "duration": 3.28,
+      "text": "target"
+    },
+    {
+      "start": 349.6,
+      "end": 354.96,
+      "duration": 5.36,
+      "text": "and then we went on to write"
+    },
+    {
+      "start": 351.44,
+      "end": 357.28,
+      "duration": 5.84,
+      "text": "f of index equal to 0 till n minus 1"
+    },
+    {
+      "start": 354.96,
+      "end": 358.56,
+      "duration": 3.6,
+      "text": "and over here we went on to write dp of"
+    },
+    {
+      "start": 357.28,
+      "end": 360.64,
+      "duration": 3.36,
+      "text": "i"
+    },
+    {
+      "start": 358.56,
+      "end": 361.68,
+      "duration": 3.12,
+      "text": "and every index"
+    },
+    {
+      "start": 360.64,
+      "end": 363.2,
+      "duration": 2.56,
+      "text": "rather"
+    },
+    {
+      "start": 361.68,
+      "end": 365.68,
+      "duration": 4.0,
+      "text": "dp of index"
+    },
+    {
+      "start": 363.2,
+      "end": 366.48,
+      "duration": 3.28,
+      "text": "and every target 0 as"
+    },
+    {
+      "start": 365.68,
+      "end": 368.56,
+      "duration": 2.88,
+      "text": "true"
+    },
+    {
+      "start": 366.48,
+      "end": 371.04,
+      "duration": 4.56,
+      "text": "so this is what we wrote because it's"
+    },
+    {
+      "start": 368.56,
+      "end": 373.84,
+      "duration": 5.28,
+      "text": "almost equivalent to this if target is 0"
+    },
+    {
+      "start": 371.04,
+      "end": 375.68,
+      "duration": 4.64,
+      "text": "return true so if target is 0 on any"
+    },
+    {
+      "start": 373.84,
+      "end": 378.0,
+      "duration": 4.16,
+      "text": "given index you return true that's the"
+    },
+    {
+      "start": 375.68,
+      "end": 381.44,
+      "duration": 5.76,
+      "text": "first base case that you wrote and the"
+    },
+    {
+      "start": 378.0,
+      "end": 383.12,
+      "duration": 5.12,
+      "text": "next base case was if index is zero you"
+    },
+    {
+      "start": 381.44,
+      "end": 386.8,
+      "duration": 5.36,
+      "text": "are saying this array of zero to be"
+    },
+    {
+      "start": 383.12,
+      "end": 388.88,
+      "duration": 5.76,
+      "text": "equal to target so only at array of zero"
+    },
+    {
+      "start": 386.8,
+      "end": 390.8,
+      "duration": 4.0,
+      "text": "you can just write it true because"
+    },
+    {
+      "start": 388.88,
+      "end": 393.04,
+      "duration": 4.16,
+      "text": "if the target is equivalent to array of"
+    },
+    {
+      "start": 390.8,
+      "end": 394.48,
+      "duration": 3.68,
+      "text": "zero then only it will be true so if you"
+    },
+    {
+      "start": 393.04,
+      "end": 398.08,
+      "duration": 5.04,
+      "text": "remember the next base case was very"
+    },
+    {
+      "start": 394.48,
+      "end": 399.52,
+      "duration": 5.04,
+      "text": "straightforward uh you basically said"
+    },
+    {
+      "start": 398.08,
+      "end": 401.12,
+      "duration": 3.04,
+      "text": "dp of"
+    },
+    {
+      "start": 399.52,
+      "end": 402.96,
+      "duration": 3.44,
+      "text": "0 which is"
+    },
+    {
+      "start": 401.12,
+      "end": 405.04,
+      "duration": 3.92,
+      "text": "this case"
+    },
+    {
+      "start": 402.96,
+      "end": 408.96,
+      "duration": 6.0,
+      "text": "and then array of 0 being equivalent to"
+    },
+    {
+      "start": 405.04,
+      "end": 410.88,
+      "duration": 5.84,
+      "text": "target so array of 0 being equivalent to"
+    },
+    {
+      "start": 408.96,
+      "end": 411.92,
+      "duration": 2.96,
+      "text": "target which is true but we just need to"
+    },
+    {
+      "start": 410.88,
+      "end": 414.88,
+      "duration": 4.0,
+      "text": "make sure"
+    },
+    {
+      "start": 411.92,
+      "end": 417.68,
+      "duration": 5.76,
+      "text": "since we are declaring the dp array to"
+    },
+    {
+      "start": 414.88,
+      "end": 419.76,
+      "duration": 4.88,
+      "text": "be like the second dimension of a"
+    },
+    {
+      "start": 417.68,
+      "end": 422.64,
+      "duration": 4.96,
+      "text": "parameter target we just need to make"
+    },
+    {
+      "start": 419.76,
+      "end": 424.88,
+      "duration": 5.12,
+      "text": "sure this second dimension yes has to be"
+    },
+    {
+      "start": 422.64,
+      "end": 426.88,
+      "duration": 4.24,
+      "text": "uh lesser than target"
+    },
+    {
+      "start": 424.88,
+      "end": 429.12,
+      "duration": 4.24,
+      "text": "has to be lesser than equal to target"
+    },
+    {
+      "start": 426.88,
+      "end": 431.52,
+      "duration": 4.64,
+      "text": "just make sure this condition is written"
+    },
+    {
+      "start": 429.12,
+      "end": 434.08,
+      "duration": 4.96,
+      "text": "and yeah over here it will be of size"
+    },
+    {
+      "start": 431.52,
+      "end": 436.32,
+      "duration": 4.8,
+      "text": "plus one by the way"
+    },
+    {
+      "start": 434.08,
+      "end": 438.4,
+      "duration": 4.32,
+      "text": "perfect so that was the tabulation and"
+    },
+    {
+      "start": 436.32,
+      "end": 440.4,
+      "duration": 4.08,
+      "text": "what after that you basically wrote"
+    },
+    {
+      "start": 438.4,
+      "end": 442.32,
+      "duration": 3.92,
+      "text": "couple of loops"
+    },
+    {
+      "start": 440.4,
+      "end": 443.52,
+      "duration": 3.12,
+      "text": "which was starting from one is to n"
+    },
+    {
+      "start": 442.32,
+      "end": 445.04,
+      "duration": 2.72,
+      "text": "minus one"
+    },
+    {
+      "start": 443.52,
+      "end": 447.28,
+      "duration": 3.76,
+      "text": "and then you wrote something which"
+    },
+    {
+      "start": 445.04,
+      "end": 448.84,
+      "duration": 3.8,
+      "text": "started from the target from"
+    },
+    {
+      "start": 447.28,
+      "end": 452.08,
+      "duration": 4.8,
+      "text": "zero"
+    },
+    {
+      "start": 448.84,
+      "end": 453.84,
+      "duration": 5.0,
+      "text": "till since 0 was already done you can"
+    },
+    {
+      "start": 452.08,
+      "end": 457.6,
+      "duration": 5.52,
+      "text": "easily start from 1"
+    },
+    {
+      "start": 453.84,
+      "end": 459.36,
+      "duration": 5.52,
+      "text": "till the target k right that was it and"
+    },
+    {
+      "start": 457.6,
+      "end": 460.56,
+      "duration": 2.96,
+      "text": "you know the same thing"
+    },
+    {
+      "start": 459.36,
+      "end": 461.68,
+      "duration": 2.32,
+      "text": "not take"
+    },
+    {
+      "start": 460.56,
+      "end": 467.04,
+      "duration": 6.48,
+      "text": "equal to"
+    },
+    {
+      "start": 461.68,
+      "end": 469.68,
+      "duration": 8.0,
+      "text": "dp of f of i minus 1 so dp of i minus 1"
+    },
+    {
+      "start": 467.04,
+      "end": 469.68,
+      "duration": 2.64,
+      "text": "and target"
+    },
+    {
+      "start": 469.92,
+      "end": 473.6,
+      "duration": 3.68,
+      "text": "and the take was initially true"
+    },
+    {
+      "start": 474.32,
+      "end": 478.96,
+      "duration": 4.64,
+      "text": "just making sure if the array of"
+    },
+    {
+      "start": 476.8,
+      "end": 482.24,
+      "duration": 5.44,
+      "text": "index can be taken into account which is"
+    },
+    {
+      "start": 478.96,
+      "end": 484.72,
+      "duration": 5.76,
+      "text": "basically area of io if that's eq valid"
+    },
+    {
+      "start": 482.24,
+      "end": 486.24,
+      "duration": 4.0,
+      "text": "if that's lesser than target what you"
+    },
+    {
+      "start": 484.72,
+      "end": 488.0,
+      "duration": 3.28,
+      "text": "did was you said"
+    },
+    {
+      "start": 486.24,
+      "end": 489.2,
+      "duration": 2.96,
+      "text": "by the way take will be false over here"
+    },
+    {
+      "start": 488.0,
+      "end": 490.8,
+      "duration": 2.8,
+      "text": "not true"
+    },
+    {
+      "start": 489.2,
+      "end": 493.6,
+      "duration": 4.4,
+      "text": "it will be false"
+    },
+    {
+      "start": 490.8,
+      "end": 497.44,
+      "duration": 6.64,
+      "text": "and you then say take will be dp of"
+    },
+    {
+      "start": 493.6,
+      "end": 498.8,
+      "duration": 5.2,
+      "text": "i minus 1 and you know target minus"
+    },
+    {
+      "start": 497.44,
+      "end": 500.56,
+      "duration": 3.12,
+      "text": "array of"
+    },
+    {
+      "start": 498.8,
+      "end": 502.4,
+      "duration": 3.6,
+      "text": "index right that is something which you"
+    },
+    {
+      "start": 500.56,
+      "end": 504.32,
+      "duration": 3.76,
+      "text": "wrote and at the end of the day you said"
+    },
+    {
+      "start": 502.4,
+      "end": 505.52,
+      "duration": 3.12,
+      "text": "dp of i"
+    },
+    {
+      "start": 504.32,
+      "end": 507.04,
+      "duration": 2.72,
+      "text": "target"
+    },
+    {
+      "start": 505.52,
+      "end": 508.0,
+      "duration": 2.48,
+      "text": "is equal to"
+    },
+    {
+      "start": 507.04,
+      "end": 508.88,
+      "duration": 1.84,
+      "text": "take"
+    },
+    {
+      "start": 508.0,
+      "end": 511.04,
+      "duration": 3.04,
+      "text": "or"
+    },
+    {
+      "start": 508.88,
+      "end": 513.44,
+      "duration": 4.56,
+      "text": "not take similar recurrence i have copy"
+    },
+    {
+      "start": 511.04,
+      "end": 515.52,
+      "duration": 4.48,
+      "text": "pasted so this was the tabulation format"
+    },
+    {
+      "start": 513.44,
+      "end": 516.32,
+      "duration": 2.88,
+      "text": "right this was the tabulation format so"
+    },
+    {
+      "start": 515.52,
+      "end": 519.12,
+      "duration": 3.6,
+      "text": "what"
+    },
+    {
+      "start": 516.32,
+      "end": 522.16,
+      "duration": 5.84,
+      "text": "will this tabulation form matt create"
+    },
+    {
+      "start": 519.12,
+      "end": 523.2,
+      "duration": 4.08,
+      "text": "what does a dp of ij signify that's what"
+    },
+    {
+      "start": 522.16,
+      "end": 527.36,
+      "duration": 5.2,
+      "text": "my"
+    },
+    {
+      "start": 523.2,
+      "end": 529.84,
+      "duration": 6.64,
+      "text": "question is to you what does dp of ig"
+    },
+    {
+      "start": 527.36,
+      "end": 532.4,
+      "duration": 5.04,
+      "text": "signify if we are able to figure this"
+    },
+    {
+      "start": 529.84,
+      "end": 534.88,
+      "duration": 5.04,
+      "text": "out then that will help us immensely in"
+    },
+    {
+      "start": 532.4,
+      "end": 538.48,
+      "duration": 6.08,
+      "text": "solving the next problem so basically uh"
+    },
+    {
+      "start": 534.88,
+      "end": 540.96,
+      "duration": 6.08,
+      "text": "we would have taken something like this"
+    },
+    {
+      "start": 538.48,
+      "end": 542.4,
+      "duration": 3.92,
+      "text": "assume assume uh the number of elements"
+    },
+    {
+      "start": 540.96,
+      "end": 544.64,
+      "duration": 3.68,
+      "text": "to be five"
+    },
+    {
+      "start": 542.4,
+      "end": 547.2,
+      "duration": 4.8,
+      "text": "and the target that we have been asked"
+    },
+    {
+      "start": 544.64,
+      "end": 550.48,
+      "duration": 5.84,
+      "text": "is seven like for an example let's"
+    },
+    {
+      "start": 547.2,
+      "end": 552.24,
+      "duration": 5.04,
+      "text": "assume so can i say we will declare a dp"
+    },
+    {
+      "start": 550.48,
+      "end": 555.12,
+      "duration": 4.64,
+      "text": "of size five"
+    },
+    {
+      "start": 552.24,
+      "end": 558.96,
+      "duration": 6.72,
+      "text": "crossed eight so five"
+    },
+    {
+      "start": 555.12,
+      "end": 561.04,
+      "duration": 5.92,
+      "text": "uh rows is what i'll declare so"
+    },
+    {
+      "start": 558.96,
+      "end": 563.6,
+      "duration": 4.64,
+      "text": "let's quickly declare the five rows"
+    },
+    {
+      "start": 561.04,
+      "end": 566.0,
+      "duration": 4.96,
+      "text": "zero one two three i have to get the"
+    },
+    {
+      "start": 563.6,
+      "end": 568.56,
+      "duration": 4.96,
+      "text": "five rows and they'll be like zero one"
+    },
+    {
+      "start": 566.0,
+      "end": 569.92,
+      "duration": 3.92,
+      "text": "two three four five"
+    },
+    {
+      "start": 568.56,
+      "end": 572.8,
+      "duration": 4.24,
+      "text": "six"
+    },
+    {
+      "start": 569.92,
+      "end": 575.52,
+      "duration": 5.6,
+      "text": "seven so i'll also declare"
+    },
+    {
+      "start": 572.8,
+      "end": 577.6,
+      "duration": 4.8,
+      "text": "seven or rather eight columns so kindly"
+    },
+    {
+      "start": 575.52,
+      "end": 580.56,
+      "duration": 5.04,
+      "text": "declare all the eight columns so this is"
+    },
+    {
+      "start": 577.6,
+      "end": 581.52,
+      "duration": 3.92,
+      "text": "how the dp table is declared now can you"
+    },
+    {
+      "start": 580.56,
+      "end": 582.8,
+      "duration": 2.24,
+      "text": "tell me"
+    },
+    {
+      "start": 581.52,
+      "end": 584.24,
+      "duration": 2.72,
+      "text": "where did you find your answer at the"
+    },
+    {
+      "start": 582.8,
+      "end": 585.6,
+      "duration": 2.8,
+      "text": "end of the day"
+    },
+    {
+      "start": 584.24,
+      "end": 587.2,
+      "duration": 2.96,
+      "text": "you said"
+    },
+    {
+      "start": 585.6,
+      "end": 588.88,
+      "duration": 3.28,
+      "text": "you call the recurrence if you remember"
+    },
+    {
+      "start": 587.2,
+      "end": 590.48,
+      "duration": 3.28,
+      "text": "you call the recurrence with f of n"
+    },
+    {
+      "start": 588.88,
+      "end": 592.32,
+      "duration": 3.44,
+      "text": "minus 1 and target"
+    },
+    {
+      "start": 590.48,
+      "end": 593.28,
+      "duration": 2.8,
+      "text": "and you said"
+    },
+    {
+      "start": 592.32,
+      "end": 594.56,
+      "duration": 2.24,
+      "text": "can"
+    },
+    {
+      "start": 593.28,
+      "end": 597.36,
+      "duration": 4.08,
+      "text": "an array"
+    },
+    {
+      "start": 594.56,
+      "end": 598.88,
+      "duration": 4.32,
+      "text": "of n minus 1 like ending at n minus 1"
+    },
+    {
+      "start": 597.36,
+      "end": 600.72,
+      "duration": 3.36,
+      "text": "achieve a target"
+    },
+    {
+      "start": 598.88,
+      "end": 603.68,
+      "duration": 4.8,
+      "text": "can this entire array achieve this"
+    },
+    {
+      "start": 600.72,
+      "end": 606.56,
+      "duration": 5.84,
+      "text": "target that was the stuff so you also"
+    },
+    {
+      "start": 603.68,
+      "end": 608.96,
+      "duration": 5.28,
+      "text": "said that the answer will be lying at"
+    },
+    {
+      "start": 606.56,
+      "end": 609.92,
+      "duration": 3.36,
+      "text": "dp of n minus 1"
+    },
+    {
+      "start": 608.96,
+      "end": 613.28,
+      "duration": 4.32,
+      "text": "target"
+    },
+    {
+      "start": 609.92,
+      "end": 616.16,
+      "duration": 6.24,
+      "text": "so what does this mean you are saying"
+    },
+    {
+      "start": 613.28,
+      "end": 620.48,
+      "duration": 7.2,
+      "text": "for this guy if n is 5 and the target is"
+    },
+    {
+      "start": 616.16,
+      "end": 623.2,
+      "duration": 7.04,
+      "text": "7 you are saying if dp of four yes if dp"
+    },
+    {
+      "start": 620.48,
+      "end": 625.44,
+      "duration": 4.96,
+      "text": "of four and the target is eight"
+    },
+    {
+      "start": 623.2,
+      "end": 627.28,
+      "duration": 4.08,
+      "text": "so target is seven over here"
+    },
+    {
+      "start": 625.44,
+      "end": 628.88,
+      "duration": 3.44,
+      "text": "because if you carefully observe the"
+    },
+    {
+      "start": 627.28,
+      "end": 630.56,
+      "duration": 3.28,
+      "text": "target is seven so you're basically"
+    },
+    {
+      "start": 628.88,
+      "end": 632.56,
+      "duration": 3.68,
+      "text": "saying if this guy"
+    },
+    {
+      "start": 630.56,
+      "end": 633.52,
+      "duration": 2.96,
+      "text": "is equal to equal to"
+    },
+    {
+      "start": 632.56,
+      "end": 635.28,
+      "duration": 2.72,
+      "text": "true"
+    },
+    {
+      "start": 633.52,
+      "end": 636.96,
+      "duration": 3.44,
+      "text": "then we can have"
+    },
+    {
+      "start": 635.28,
+      "end": 638.08,
+      "duration": 2.8,
+      "text": "a subset"
+    },
+    {
+      "start": 636.96,
+      "end": 638.96,
+      "duration": 2.0,
+      "text": "sum"
+    },
+    {
+      "start": 638.08,
+      "end": 639.92,
+      "duration": 1.84,
+      "text": "of"
+    },
+    {
+      "start": 638.96,
+      "end": 640.8,
+      "duration": 1.84,
+      "text": "seven"
+    },
+    {
+      "start": 639.92,
+      "end": 643.12,
+      "duration": 3.2,
+      "text": "right"
+    },
+    {
+      "start": 640.8,
+      "end": 645.68,
+      "duration": 4.88,
+      "text": "so can i say how's the dp array being"
+    },
+    {
+      "start": 643.12,
+      "end": 648.08,
+      "duration": 4.96,
+      "text": "filled in tabulation form firstly all"
+    },
+    {
+      "start": 645.68,
+      "end": 649.52,
+      "duration": 3.84,
+      "text": "the base cases uh are filled"
+    },
+    {
+      "start": 648.08,
+      "end": 650.8,
+      "duration": 2.72,
+      "text": "like all the base cases what are the"
+    },
+    {
+      "start": 649.52,
+      "end": 653.2,
+      "duration": 3.68,
+      "text": "base cases"
+    },
+    {
+      "start": 650.8,
+      "end": 654.72,
+      "duration": 3.92,
+      "text": "index equal to uh something and target"
+    },
+    {
+      "start": 653.2,
+      "end": 656.0,
+      "duration": 2.8,
+      "text": "true so firstly though you are filling"
+    },
+    {
+      "start": 654.72,
+      "end": 659.84,
+      "duration": 5.12,
+      "text": "this"
+    },
+    {
+      "start": 656.0,
+      "end": 660.64,
+      "duration": 4.64,
+      "text": "true true true true true that is what i"
+    },
+    {
+      "start": 659.84,
+      "end": 663.76,
+      "duration": 3.92,
+      "text": "felt"
+    },
+    {
+      "start": 660.64,
+      "end": 665.92,
+      "duration": 5.28,
+      "text": "now you know that uh if if the array is"
+    },
+    {
+      "start": 663.76,
+      "end": 668.4,
+      "duration": 4.64,
+      "text": "something like let's assume there is"
+    },
+    {
+      "start": 665.92,
+      "end": 671.12,
+      "duration": 5.2,
+      "text": "so we know that the array is of five"
+    },
+    {
+      "start": 668.4,
+      "end": 673.44,
+      "duration": 5.04,
+      "text": "elements right so assume the array to be"
+    },
+    {
+      "start": 671.12,
+      "end": 675.6,
+      "duration": 4.48,
+      "text": "uh something as"
+    },
+    {
+      "start": 673.44,
+      "end": 676.88,
+      "duration": 3.44,
+      "text": "one three"
+    },
+    {
+      "start": 675.6,
+      "end": 678.56,
+      "duration": 2.96,
+      "text": "probably two"
+    },
+    {
+      "start": 676.88,
+      "end": 680.48,
+      "duration": 3.6,
+      "text": "five and six"
+    },
+    {
+      "start": 678.56,
+      "end": 682.96,
+      "duration": 4.4,
+      "text": "and the target to be"
+    },
+    {
+      "start": 680.48,
+      "end": 684.96,
+      "duration": 4.48,
+      "text": "seven okay and the target to be seven"
+    },
+    {
+      "start": 682.96,
+      "end": 686.64,
+      "duration": 3.68,
+      "text": "let's assume this uh is the area that we"
+    },
+    {
+      "start": 684.96,
+      "end": 688.4,
+      "duration": 3.44,
+      "text": "have taken and this is the target so"
+    },
+    {
+      "start": 686.64,
+      "end": 690.72,
+      "duration": 4.08,
+      "text": "what is the first tabulation that you"
+    },
+    {
+      "start": 688.4,
+      "end": 692.48,
+      "duration": 4.08,
+      "text": "wrote over here this is done and the"
+    },
+    {
+      "start": 690.72,
+      "end": 694.48,
+      "duration": 3.76,
+      "text": "next thing you're writing is dp of zero"
+    },
+    {
+      "start": 692.48,
+      "end": 696.88,
+      "duration": 4.4,
+      "text": "array of zero is equal to true so what"
+    },
+    {
+      "start": 694.48,
+      "end": 699.68,
+      "duration": 5.2,
+      "text": "is the array of zero over here it is one"
+    },
+    {
+      "start": 696.88,
+      "end": 702.0,
+      "duration": 5.12,
+      "text": "so you placed a true over here"
+    },
+    {
+      "start": 699.68,
+      "end": 704.4,
+      "duration": 4.72,
+      "text": "and rest everything will get filled"
+    },
+    {
+      "start": 702.0,
+      "end": 706.88,
+      "duration": 4.88,
+      "text": "filled filled filled filled filled then"
+    },
+    {
+      "start": 704.4,
+      "end": 708.8,
+      "duration": 4.4,
+      "text": "this will be filled"
+    },
+    {
+      "start": 706.88,
+      "end": 711.04,
+      "duration": 4.16,
+      "text": "then this will be filled"
+    },
+    {
+      "start": 708.8,
+      "end": 712.24,
+      "duration": 3.44,
+      "text": "then this will be filled then these guys"
+    },
+    {
+      "start": 711.04,
+      "end": 713.52,
+      "duration": 2.48,
+      "text": "will be filled"
+    },
+    {
+      "start": 712.24,
+      "end": 716.0,
+      "duration": 3.76,
+      "text": "at the end of the day this will be"
+    },
+    {
+      "start": 713.52,
+      "end": 719.04,
+      "duration": 5.52,
+      "text": "filled and whatever answer is over here"
+    },
+    {
+      "start": 716.0,
+      "end": 720.96,
+      "duration": 4.96,
+      "text": "yes if it is a true or if it is a false"
+    },
+    {
+      "start": 719.04,
+      "end": 723.36,
+      "duration": 4.32,
+      "text": "whatever answer is there you say"
+    },
+    {
+      "start": 720.96,
+      "end": 726.56,
+      "duration": 5.6,
+      "text": "according to this i get my answer that's"
+    },
+    {
+      "start": 723.36,
+      "end": 726.56,
+      "duration": 3.2,
+      "text": "what you told but"
+    },
+    {
+      "start": 726.88,
+      "end": 732.32,
+      "duration": 5.44,
+      "text": "in finding the target equal to seven"
+    },
+    {
+      "start": 730.24,
+      "end": 734.08,
+      "duration": 3.84,
+      "text": "if you write the tabulation"
+    },
+    {
+      "start": 732.32,
+      "end": 736.24,
+      "duration": 3.92,
+      "text": "you end up filling"
+    },
+    {
+      "start": 734.08,
+      "end": 738.0,
+      "duration": 3.92,
+      "text": "this guy because"
+    },
+    {
+      "start": 736.24,
+      "end": 740.32,
+      "duration": 4.08,
+      "text": "at the index 4 like"
+    },
+    {
+      "start": 738.0,
+      "end": 741.92,
+      "duration": 3.92,
+      "text": "in the entire array the target 0 can be"
+    },
+    {
+      "start": 740.32,
+      "end": 744.32,
+      "duration": 4.0,
+      "text": "achieved that's very common sense"
+    },
+    {
+      "start": 741.92,
+      "end": 745.84,
+      "duration": 3.92,
+      "text": "because if i do not pick up any element"
+    },
+    {
+      "start": 744.32,
+      "end": 747.76,
+      "duration": 3.44,
+      "text": "in the subset the target 0 can be"
+    },
+    {
+      "start": 745.84,
+      "end": 750.08,
+      "duration": 4.24,
+      "text": "achieved similarly whatever value will"
+    },
+    {
+      "start": 747.76,
+      "end": 752.32,
+      "duration": 4.56,
+      "text": "be here i can say i can achieve the"
+    },
+    {
+      "start": 750.08,
+      "end": 753.92,
+      "duration": 3.84,
+      "text": "target 1 or i cannot achieve the target"
+    },
+    {
+      "start": 752.32,
+      "end": 756.32,
+      "duration": 4.0,
+      "text": "2."
+    },
+    {
+      "start": 753.92,
+      "end": 758.48,
+      "duration": 4.56,
+      "text": "similarly whatever value is here i can"
+    },
+    {
+      "start": 756.32,
+      "end": 759.52,
+      "duration": 3.2,
+      "text": "say i can achieve the target one or i"
+    },
+    {
+      "start": 758.48,
+      "end": 761.36,
+      "duration": 2.88,
+      "text": "cannot"
+    },
+    {
+      "start": 759.52,
+      "end": 763.36,
+      "duration": 3.84,
+      "text": "similarly whatever value is here i can"
+    },
+    {
+      "start": 761.36,
+      "end": 765.84,
+      "duration": 4.48,
+      "text": "say i can achieve the target too or i"
+    },
+    {
+      "start": 763.36,
+      "end": 767.68,
+      "duration": 4.32,
+      "text": "cannot similarly whatever value is here"
+    },
+    {
+      "start": 765.84,
+      "end": 770.4,
+      "duration": 4.56,
+      "text": "i can say i can achieve the target three"
+    },
+    {
+      "start": 767.68,
+      "end": 773.36,
+      "duration": 5.68,
+      "text": "or i cannot so can i say"
+    },
+    {
+      "start": 770.4,
+      "end": 774.8,
+      "duration": 4.4,
+      "text": "i can i can"
+    },
+    {
+      "start": 773.36,
+      "end": 775.88,
+      "duration": 2.52,
+      "text": "tell"
+    },
+    {
+      "start": 774.8,
+      "end": 778.16,
+      "duration": 3.36,
+      "text": "yes or no"
+    },
+    {
+      "start": 775.88,
+      "end": 781.76,
+      "duration": 5.88,
+      "text": "[Music]"
+    },
+    {
+      "start": 778.16,
+      "end": 782.8,
+      "duration": 4.64,
+      "text": "for every target value"
+    },
+    {
+      "start": 781.76,
+      "end": 784.48,
+      "duration": 2.72,
+      "text": "from"
+    },
+    {
+      "start": 782.8,
+      "end": 785.92,
+      "duration": 3.12,
+      "text": "1 to 7"
+    },
+    {
+      "start": 784.48,
+      "end": 788.96,
+      "duration": 4.48,
+      "text": "can i achieve"
+    },
+    {
+      "start": 785.92,
+      "end": 790.8,
+      "duration": 4.88,
+      "text": "every target value from 1 to 7 i can"
+    },
+    {
+      "start": 788.96,
+      "end": 792.0,
+      "duration": 3.04,
+      "text": "definitely say yes"
+    },
+    {
+      "start": 790.8,
+      "end": 793.68,
+      "duration": 2.88,
+      "text": "or no"
+    },
+    {
+      "start": 792.0,
+      "end": 795.12,
+      "duration": 3.12,
+      "text": "if i write the tabulation because the"
+    },
+    {
+      "start": 793.68,
+      "end": 800.24,
+      "duration": 6.56,
+      "text": "tabulation"
+    },
+    {
+      "start": 795.12,
+      "end": 802.8,
+      "duration": 7.68,
+      "text": "makes sure that i fill the entire"
+    },
+    {
+      "start": 800.24,
+      "end": 805.28,
+      "duration": 5.04,
+      "text": "yes entire matrix and eventually i will"
+    },
+    {
+      "start": 802.8,
+      "end": 807.92,
+      "duration": 5.12,
+      "text": "get to know if i can achieve one if i"
+    },
+    {
+      "start": 805.28,
+      "end": 810.08,
+      "duration": 4.8,
+      "text": "can achieve two if i can achieve three"
+    },
+    {
+      "start": 807.92,
+      "end": 812.56,
+      "duration": 4.64,
+      "text": "if i can achieve four if i can achieve"
+    },
+    {
+      "start": 810.08,
+      "end": 814.96,
+      "duration": 4.88,
+      "text": "five if i can achieve six if i can"
+    },
+    {
+      "start": 812.56,
+      "end": 817.52,
+      "duration": 4.96,
+      "text": "achieve seven and just because the"
+    },
+    {
+      "start": 814.96,
+      "end": 819.6,
+      "duration": 4.64,
+      "text": "question asked seven we we picked up"
+    },
+    {
+      "start": 817.52,
+      "end": 821.76,
+      "duration": 4.24,
+      "text": "this guy and we said"
+    },
+    {
+      "start": 819.6,
+      "end": 824.56,
+      "duration": 4.96,
+      "text": "this is our answer is this is our answer"
+    },
+    {
+      "start": 821.76,
+      "end": 826.4,
+      "duration": 4.64,
+      "text": "dp of four of seven if the target was uh"
+    },
+    {
+      "start": 824.56,
+      "end": 828.24,
+      "duration": 3.68,
+      "text": "like if someone comes up and gives you a"
+    },
+    {
+      "start": 826.4,
+      "end": 830.88,
+      "duration": 4.48,
+      "text": "different target now you still can say"
+    },
+    {
+      "start": 828.24,
+      "end": 834.0,
+      "duration": 5.76,
+      "text": "without calling the tabulation again"
+    },
+    {
+      "start": 830.88,
+      "end": 835.92,
+      "duration": 5.04,
+      "text": "this dp will strictly help you to tell"
+    },
+    {
+      "start": 834.0,
+      "end": 837.76,
+      "duration": 3.76,
+      "text": "if you can achieve if you can achieve a"
+    },
+    {
+      "start": 835.92,
+      "end": 839.68,
+      "duration": 3.76,
+      "text": "target five or not so this is what i"
+    },
+    {
+      "start": 837.76,
+      "end": 840.84,
+      "duration": 3.08,
+      "text": "wanted to portray you this is what"
+    },
+    {
+      "start": 839.68,
+      "end": 844.32,
+      "duration": 4.64,
+      "text": "tabulation"
+    },
+    {
+      "start": 840.84,
+      "end": 846.96,
+      "duration": 6.12,
+      "text": "signifies for here three means"
+    },
+    {
+      "start": 844.32,
+      "end": 848.64,
+      "duration": 4.32,
+      "text": "till only the third index till only the"
+    },
+    {
+      "start": 846.96,
+      "end": 850.24,
+      "duration": 3.28,
+      "text": "third index a target of four can be"
+    },
+    {
+      "start": 848.64,
+      "end": 853.28,
+      "duration": 4.64,
+      "text": "achieved or not"
+    },
+    {
+      "start": 850.24,
+      "end": 855.12,
+      "duration": 4.88,
+      "text": "till only the third index that means"
+    },
+    {
+      "start": 853.28,
+      "end": 857.2,
+      "duration": 3.92,
+      "text": "till here a target of four can be"
+    },
+    {
+      "start": 855.12,
+      "end": 859.2,
+      "duration": 4.08,
+      "text": "achieved or not this is signifying"
+    },
+    {
+      "start": 857.2,
+      "end": 861.36,
+      "duration": 4.16,
+      "text": "signified by the third row similarly"
+    },
+    {
+      "start": 859.2,
+      "end": 863.68,
+      "duration": 4.48,
+      "text": "every row is signifying something"
+    },
+    {
+      "start": 861.36,
+      "end": 865.92,
+      "duration": 4.56,
+      "text": "makes sense okay that does make sense"
+    },
+    {
+      "start": 863.68,
+      "end": 868.24,
+      "duration": 4.56,
+      "text": "right okay so we have understood this so"
+    },
+    {
+      "start": 865.92,
+      "end": 870.56,
+      "duration": 4.64,
+      "text": "just keep this in your mind that"
+    },
+    {
+      "start": 868.24,
+      "end": 871.84,
+      "duration": 3.6,
+      "text": "as of now what have from subset sum what"
+    },
+    {
+      "start": 870.56,
+      "end": 873.76,
+      "duration": 3.2,
+      "text": "we have derived"
+    },
+    {
+      "start": 871.84,
+      "end": 875.92,
+      "duration": 4.08,
+      "text": "from subset"
+    },
+    {
+      "start": 873.76,
+      "end": 879.84,
+      "duration": 6.08,
+      "text": "sum"
+    },
+    {
+      "start": 875.92,
+      "end": 879.84,
+      "duration": 3.92,
+      "text": "the tabulation one what have we derived"
+    },
+    {
+      "start": 880.56,
+      "end": 889.28,
+      "duration": 8.72,
+      "text": "we can like if we check"
+    },
+    {
+      "start": 885.28,
+      "end": 889.28,
+      "duration": 4.0,
+      "text": "if we check for a target"
+    },
+    {
+      "start": 890.08,
+      "end": 895.2,
+      "duration": 5.12,
+      "text": "equal to k"
+    },
+    {
+      "start": 892.16,
+      "end": 896.8,
+      "duration": 4.64,
+      "text": "we can derive"
+    },
+    {
+      "start": 895.2,
+      "end": 897.68,
+      "duration": 2.48,
+      "text": "we can derive"
+    },
+    {
+      "start": 896.8,
+      "end": 900.88,
+      "duration": 4.08,
+      "text": "if"
+    },
+    {
+      "start": 897.68,
+      "end": 903.84,
+      "duration": 6.16,
+      "text": "every possible target i repeat"
+    },
+    {
+      "start": 900.88,
+      "end": 906.16,
+      "duration": 5.28,
+      "text": "if every possible target"
+    },
+    {
+      "start": 903.84,
+      "end": 907.68,
+      "duration": 3.84,
+      "text": "between"
+    },
+    {
+      "start": 906.16,
+      "end": 909.2,
+      "duration": 3.04,
+      "text": "one"
+    },
+    {
+      "start": 907.68,
+      "end": 910.0,
+      "duration": 2.32,
+      "text": "and k"
+    },
+    {
+      "start": 909.2,
+      "end": 912.72,
+      "duration": 3.52,
+      "text": "is"
+    },
+    {
+      "start": 910.0,
+      "end": 914.48,
+      "duration": 4.48,
+      "text": "possible or is not possible if i'm just"
+    },
+    {
+      "start": 912.72,
+      "end": 917.04,
+      "duration": 4.32,
+      "text": "checking for target equal to k the"
+    },
+    {
+      "start": 914.48,
+      "end": 919.68,
+      "duration": 5.2,
+      "text": "tabulation automatically will tell me"
+    },
+    {
+      "start": 917.04,
+      "end": 923.44,
+      "duration": 6.4,
+      "text": "for every value between 1 to k i don't"
+    },
+    {
+      "start": 919.68,
+      "end": 924.8,
+      "duration": 5.12,
+      "text": "need to do any extra steps make sense so"
+    },
+    {
+      "start": 923.44,
+      "end": 927.28,
+      "duration": 3.84,
+      "text": "with the help of this i'll solve the"
+    },
+    {
+      "start": 924.8,
+      "end": 929.44,
+      "duration": 4.64,
+      "text": "next problem okay so now let's come back"
+    },
+    {
+      "start": 927.28,
+      "end": 931.44,
+      "duration": 4.16,
+      "text": "to the dp 16 which was the original"
+    },
+    {
+      "start": 929.44,
+      "end": 934.96,
+      "duration": 5.52,
+      "text": "problem what did the original problem"
+    },
+    {
+      "start": 931.44,
+      "end": 936.8,
+      "duration": 5.36,
+      "text": "state divide them into couple of subsets"
+    },
+    {
+      "start": 934.96,
+      "end": 939.2,
+      "duration": 4.24,
+      "text": "like if one subset is containing some"
+    },
+    {
+      "start": 936.8,
+      "end": 941.28,
+      "duration": 4.48,
+      "text": "elements the other elements will be in"
+    },
+    {
+      "start": 939.2,
+      "end": 942.88,
+      "duration": 3.68,
+      "text": "the other subset this will have a sum 1"
+    },
+    {
+      "start": 941.28,
+      "end": 944.88,
+      "duration": 3.6,
+      "text": "this will have a sum 2"
+    },
+    {
+      "start": 942.88,
+      "end": 947.68,
+      "duration": 4.8,
+      "text": "so both of the sums"
+    },
+    {
+      "start": 944.88,
+      "end": 950.56,
+      "duration": 5.68,
+      "text": "sub like absolute difference"
+    },
+    {
+      "start": 947.68,
+      "end": 953.04,
+      "duration": 5.36,
+      "text": "should be as minimal as possible that"
+    },
+    {
+      "start": 950.56,
+      "end": 954.56,
+      "duration": 4.0,
+      "text": "was the question right so"
+    },
+    {
+      "start": 953.04,
+      "end": 957.2,
+      "duration": 4.16,
+      "text": "we were like how can we solve this"
+    },
+    {
+      "start": 954.56,
+      "end": 959.36,
+      "duration": 4.8,
+      "text": "because uh we have just now learned yes"
+    },
+    {
+      "start": 957.2,
+      "end": 962.8,
+      "duration": 5.6,
+      "text": "we have just now learned that we can"
+    },
+    {
+      "start": 959.36,
+      "end": 963.84,
+      "duration": 4.48,
+      "text": "easily check if any subset of any given"
+    },
+    {
+      "start": 962.8,
+      "end": 965.92,
+      "duration": 3.12,
+      "text": "sum"
+    },
+    {
+      "start": 963.84,
+      "end": 968.96,
+      "duration": 5.12,
+      "text": "is possible in an array or not with the"
+    },
+    {
+      "start": 965.92,
+      "end": 970.08,
+      "duration": 4.16,
+      "text": "use of the matrix right so can i say can"
+    },
+    {
+      "start": 968.96,
+      "end": 972.8,
+      "duration": 3.84,
+      "text": "i say"
+    },
+    {
+      "start": 970.08,
+      "end": 974.88,
+      "duration": 4.8,
+      "text": "if i can just figure out s1"
+    },
+    {
+      "start": 972.8,
+      "end": 977.2,
+      "duration": 4.4,
+      "text": "s2 i don't have to figure out"
+    },
+    {
+      "start": 974.88,
+      "end": 980.4,
+      "duration": 5.52,
+      "text": "think of yourself i repeat"
+    },
+    {
+      "start": 977.2,
+      "end": 983.28,
+      "duration": 6.08,
+      "text": "if i can figure out s1 i don't have to"
+    },
+    {
+      "start": 980.4,
+      "end": 984.72,
+      "duration": 4.32,
+      "text": "figure out s2 why"
+    },
+    {
+      "start": 983.28,
+      "end": 985.76,
+      "duration": 2.48,
+      "text": "let's"
+    },
+    {
+      "start": 984.72,
+      "end": 988.96,
+      "duration": 4.24,
+      "text": "realize"
+    },
+    {
+      "start": 985.76,
+      "end": 990.16,
+      "duration": 4.4,
+      "text": "if i give you an array like 3 2 7 okay"
+    },
+    {
+      "start": 988.96,
+      "end": 993.52,
+      "duration": 4.56,
+      "text": "and if i say"
+    },
+    {
+      "start": 990.16,
+      "end": 996.96,
+      "duration": 6.8,
+      "text": "1 of the partition contains 3"
+    },
+    {
+      "start": 993.52,
+      "end": 999.68,
+      "duration": 6.16,
+      "text": "so the summation is 3. do i need to find"
+    },
+    {
+      "start": 996.96,
+      "end": 1003.12,
+      "duration": 6.16,
+      "text": "the other partition like 2 7 do the"
+    },
+    {
+      "start": 999.68,
+      "end": 1005.36,
+      "duration": 5.68,
+      "text": "summation as 9 do i need to do that"
+    },
+    {
+      "start": 1003.12,
+      "end": 1006.32,
+      "duration": 3.2,
+      "text": "the answer to that is"
+    },
+    {
+      "start": 1005.36,
+      "end": 1007.36,
+      "duration": 2.0,
+      "text": "no"
+    },
+    {
+      "start": 1006.32,
+      "end": 1010.64,
+      "duration": 4.32,
+      "text": "why"
+    },
+    {
+      "start": 1007.36,
+      "end": 1013.04,
+      "duration": 5.68,
+      "text": "because if i know the total sum"
+    },
+    {
+      "start": 1010.64,
+      "end": 1015.28,
+      "duration": 4.64,
+      "text": "because the total sum over here is 12"
+    },
+    {
+      "start": 1013.04,
+      "end": 1018.24,
+      "duration": 5.2,
+      "text": "if i know the total sum"
+    },
+    {
+      "start": 1015.28,
+      "end": 1019.2,
+      "duration": 3.92,
+      "text": "so can i say can i say"
+    },
+    {
+      "start": 1018.24,
+      "end": 1021.28,
+      "duration": 3.04,
+      "text": "that"
+    },
+    {
+      "start": 1019.2,
+      "end": 1022.72,
+      "duration": 3.52,
+      "text": "the summation is 3 for the first"
+    },
+    {
+      "start": 1021.28,
+      "end": 1024.48,
+      "duration": 3.2,
+      "text": "partition"
+    },
+    {
+      "start": 1022.72,
+      "end": 1025.44,
+      "duration": 2.72,
+      "text": "the summation for the next partition"
+    },
+    {
+      "start": 1024.48,
+      "end": 1027.12,
+      "duration": 2.64,
+      "text": "will be"
+    },
+    {
+      "start": 1025.44,
+      "end": 1029.36,
+      "duration": 3.92,
+      "text": "total sum because"
+    },
+    {
+      "start": 1027.12,
+      "end": 1031.28,
+      "duration": 4.16,
+      "text": "total sum means all the elements"
+    },
+    {
+      "start": 1029.36,
+      "end": 1034.96,
+      "duration": 5.6,
+      "text": "minus the sum of the elements that are"
+    },
+    {
+      "start": 1031.28,
+      "end": 1037.52,
+      "duration": 6.24,
+      "text": "in the partition one so 12 minus 3 is 9"
+    },
+    {
+      "start": 1034.96,
+      "end": 1039.2,
+      "duration": 4.24,
+      "text": "again makes sense because if the total"
+    },
+    {
+      "start": 1037.52,
+      "end": 1041.76,
+      "duration": 4.24,
+      "text": "summation is 12 which is that all the"
+    },
+    {
+      "start": 1039.2,
+      "end": 1044.16,
+      "duration": 4.96,
+      "text": "elements if you take out 3 the remaining"
+    },
+    {
+      "start": 1041.76,
+      "end": 1046.88,
+      "duration": 5.12,
+      "text": "elements will be nothing but 12 minus 3"
+    },
+    {
+      "start": 1044.16,
+      "end": 1048.0,
+      "duration": 3.84,
+      "text": "so you get the easy sum of s"
+    },
+    {
+      "start": 1046.88,
+      "end": 1050.4,
+      "duration": 3.52,
+      "text": "2."
+    },
+    {
+      "start": 1048.0,
+      "end": 1052.32,
+      "duration": 4.32,
+      "text": "can i say can i say"
+    },
+    {
+      "start": 1050.4,
+      "end": 1054.88,
+      "duration": 4.48,
+      "text": "in this way"
+    },
+    {
+      "start": 1052.32,
+      "end": 1056.32,
+      "duration": 4.0,
+      "text": "can i also say if i take just two there"
+    },
+    {
+      "start": 1054.88,
+      "end": 1058.32,
+      "duration": 3.44,
+      "text": "will be two"
+    },
+    {
+      "start": 1056.32,
+      "end": 1060.48,
+      "duration": 4.16,
+      "text": "which will be s one will be two and the"
+    },
+    {
+      "start": 1058.32,
+      "end": 1062.56,
+      "duration": 4.24,
+      "text": "next partition will be ten like the"
+    },
+    {
+      "start": 1060.48,
+      "end": 1063.36,
+      "duration": 2.88,
+      "text": "summation will be ten because if i take"
+    },
+    {
+      "start": 1062.56,
+      "end": 1065.52,
+      "duration": 2.96,
+      "text": "two"
+    },
+    {
+      "start": 1063.36,
+      "end": 1067.52,
+      "duration": 4.16,
+      "text": "these guys will be in the next partition"
+    },
+    {
+      "start": 1065.52,
+      "end": 1070.08,
+      "duration": 4.56,
+      "text": "again make sense"
+    },
+    {
+      "start": 1067.52,
+      "end": 1074.08,
+      "duration": 6.56,
+      "text": "so can i say what am i looking for"
+    },
+    {
+      "start": 1070.08,
+      "end": 1075.68,
+      "duration": 5.6,
+      "text": "i'm looking for s 1 minus s 2 to be as"
+    },
+    {
+      "start": 1074.08,
+      "end": 1078.32,
+      "duration": 4.24,
+      "text": "minimal as possible"
+    },
+    {
+      "start": 1075.68,
+      "end": 1080.56,
+      "duration": 4.88,
+      "text": "so if i'm looking for s 1 minus s 2 to"
+    },
+    {
+      "start": 1078.32,
+      "end": 1083.36,
+      "duration": 5.04,
+      "text": "be as minimal as possible"
+    },
+    {
+      "start": 1080.56,
+      "end": 1084.8,
+      "duration": 4.24,
+      "text": "do we actually require is do we actually"
+    },
+    {
+      "start": 1083.36,
+      "end": 1087.36,
+      "duration": 4.0,
+      "text": "require"
+    },
+    {
+      "start": 1084.8,
+      "end": 1090.16,
+      "duration": 5.36,
+      "text": "all the possible if i can give you all"
+    },
+    {
+      "start": 1087.36,
+      "end": 1091.84,
+      "duration": 4.48,
+      "text": "the possible s ones"
+    },
+    {
+      "start": 1090.16,
+      "end": 1095.12,
+      "duration": 4.96,
+      "text": "then your job is done if i can give you"
+    },
+    {
+      "start": 1091.84,
+      "end": 1097.76,
+      "duration": 5.92,
+      "text": "all the possible s ones because"
+    },
+    {
+      "start": 1095.12,
+      "end": 1100.24,
+      "duration": 5.12,
+      "text": "i can say i'll try out all partitions of"
+    },
+    {
+      "start": 1097.76,
+      "end": 1102.0,
+      "duration": 4.24,
+      "text": "s one if you like but trevor"
+    },
+    {
+      "start": 1100.24,
+      "end": 1104.16,
+      "duration": 3.92,
+      "text": "how's it gonna work again it's gonna"
+    },
+    {
+      "start": 1102.0,
+      "end": 1105.92,
+      "duration": 3.92,
+      "text": "work if i ask you what can be the all"
+    },
+    {
+      "start": 1104.16,
+      "end": 1106.84,
+      "duration": 2.68,
+      "text": "the partitions of s1"
+    },
+    {
+      "start": 1105.92,
+      "end": 1111.04,
+      "duration": 5.12,
+      "text": "can i"
+    },
+    {
+      "start": 1106.84,
+      "end": 1113.2,
+      "duration": 6.36,
+      "text": "say the minimal summation"
+    },
+    {
+      "start": 1111.04,
+      "end": 1114.4,
+      "duration": 3.36,
+      "text": "the minimal summation"
+    },
+    {
+      "start": 1113.2,
+      "end": 1117.12,
+      "duration": 3.92,
+      "text": "of s1"
+    },
+    {
+      "start": 1114.4,
+      "end": 1119.44,
+      "duration": 5.04,
+      "text": "will be 0 when i say i don't pick up any"
+    },
+    {
+      "start": 1117.12,
+      "end": 1120.32,
+      "duration": 3.2,
+      "text": "element where i say i do not pick up an"
+    },
+    {
+      "start": 1119.44,
+      "end": 1123.92,
+      "duration": 4.48,
+      "text": "element"
+    },
+    {
+      "start": 1120.32,
+      "end": 1125.76,
+      "duration": 5.44,
+      "text": "make sense and the maximum summation"
+    },
+    {
+      "start": 1123.92,
+      "end": 1128.16,
+      "duration": 4.24,
+      "text": "will be when i say"
+    },
+    {
+      "start": 1125.76,
+      "end": 1130.48,
+      "duration": 4.72,
+      "text": "all the elements are in my partition"
+    },
+    {
+      "start": 1128.16,
+      "end": 1132.72,
+      "duration": 4.56,
+      "text": "okay 12."
+    },
+    {
+      "start": 1130.48,
+      "end": 1135.36,
+      "duration": 4.88,
+      "text": "so can i say the minimum value of the"
+    },
+    {
+      "start": 1132.72,
+      "end": 1136.48,
+      "duration": 3.76,
+      "text": "partition one summation will be zero"
+    },
+    {
+      "start": 1135.36,
+      "end": 1139.2,
+      "duration": 3.84,
+      "text": "when i say"
+    },
+    {
+      "start": 1136.48,
+      "end": 1141.76,
+      "duration": 5.28,
+      "text": "none of the elements are in my partition"
+    },
+    {
+      "start": 1139.2,
+      "end": 1143.44,
+      "duration": 4.24,
+      "text": "and the maximum value that i can get"
+    },
+    {
+      "start": 1141.76,
+      "end": 1145.44,
+      "duration": 3.68,
+      "text": "and the maximum value that i can get is"
+    },
+    {
+      "start": 1143.44,
+      "end": 1146.48,
+      "duration": 3.04,
+      "text": "12 but i say all the values are in my"
+    },
+    {
+      "start": 1145.44,
+      "end": 1148.72,
+      "duration": 3.28,
+      "text": "partition"
+    },
+    {
+      "start": 1146.48,
+      "end": 1150.96,
+      "duration": 4.48,
+      "text": "so i know the minimal value is zero and"
+    },
+    {
+      "start": 1148.72,
+      "end": 1151.68,
+      "duration": 2.96,
+      "text": "the maximal value is 12"
+    },
+    {
+      "start": 1150.96,
+      "end": 1159.12,
+      "duration": 8.16,
+      "text": "so"
+    },
+    {
+      "start": 1151.68,
+      "end": 1160.72,
+      "duration": 9.04,
+      "text": "0 1 2 3 4 5 6 7 8 9 10 11 12."
+    },
+    {
+      "start": 1159.12,
+      "end": 1163.52,
+      "duration": 4.4,
+      "text": "now i ask you"
+    },
+    {
+      "start": 1160.72,
+      "end": 1166.48,
+      "duration": 5.76,
+      "text": "i know the s1 will be in this range"
+    },
+    {
+      "start": 1163.52,
+      "end": 1168.64,
+      "duration": 5.12,
+      "text": "but i need to determine which are the"
+    },
+    {
+      "start": 1166.48,
+      "end": 1171.68,
+      "duration": 5.2,
+      "text": "valid s ones because everyone cannot be"
+    },
+    {
+      "start": 1168.64,
+      "end": 1173.36,
+      "duration": 4.72,
+      "text": "s1 all the partitions are not possible"
+    },
+    {
+      "start": 1171.68,
+      "end": 1177.12,
+      "duration": 5.44,
+      "text": "so you'll be like okay"
+    },
+    {
+      "start": 1173.36,
+      "end": 1179.2,
+      "duration": 5.84,
+      "text": "we remember dp14 just now i taught you"
+    },
+    {
+      "start": 1177.12,
+      "end": 1181.28,
+      "duration": 4.16,
+      "text": "just now i taught you the last row will"
+    },
+    {
+      "start": 1179.2,
+      "end": 1182.8,
+      "duration": 3.6,
+      "text": "tell you if 0 is possible if one is"
+    },
+    {
+      "start": 1181.28,
+      "end": 1184.8,
+      "duration": 3.52,
+      "text": "possible if 2 is possible if 3 is"
+    },
+    {
+      "start": 1182.8,
+      "end": 1186.4,
+      "duration": 3.6,
+      "text": "possible if 4 is possible if 5 is"
+    },
+    {
+      "start": 1184.8,
+      "end": 1187.6,
+      "duration": 2.8,
+      "text": "possible if 6 is possible if 7 is"
+    },
+    {
+      "start": 1186.4,
+      "end": 1189.28,
+      "duration": 2.88,
+      "text": "possible"
+    },
+    {
+      "start": 1187.6,
+      "end": 1190.8,
+      "duration": 3.2,
+      "text": "so can i say"
+    },
+    {
+      "start": 1189.28,
+      "end": 1192.8,
+      "duration": 3.52,
+      "text": "can i say"
+    },
+    {
+      "start": 1190.8,
+      "end": 1194.88,
+      "duration": 4.08,
+      "text": "i know one thing"
+    },
+    {
+      "start": 1192.8,
+      "end": 1196.0,
+      "duration": 3.2,
+      "text": "12 is possible because i will take all"
+    },
+    {
+      "start": 1194.88,
+      "end": 1198.96,
+      "duration": 4.08,
+      "text": "the elements"
+    },
+    {
+      "start": 1196.0,
+      "end": 1201.92,
+      "duration": 5.92,
+      "text": "so if i call the tabulation method"
+    },
+    {
+      "start": 1198.96,
+      "end": 1204.48,
+      "duration": 5.52,
+      "text": "for this which is size 3"
+    },
+    {
+      "start": 1201.92,
+      "end": 1204.48,
+      "duration": 2.56,
+      "text": "and 12"
+    },
+    {
+      "start": 1204.64,
+      "end": 1211.84,
+      "duration": 7.2,
+      "text": "if i call the tabulation for dp-14"
+    },
+    {
+      "start": 1208.88,
+      "end": 1214.24,
+      "duration": 5.36,
+      "text": "that dp-14's last row yes"
+    },
+    {
+      "start": 1211.84,
+      "end": 1215.76,
+      "duration": 3.92,
+      "text": "the dp-14's last row"
+    },
+    {
+      "start": 1214.24,
+      "end": 1217.6,
+      "duration": 3.36,
+      "text": "will tell me if zero is possible one is"
+    },
+    {
+      "start": 1215.76,
+      "end": 1219.52,
+      "duration": 3.76,
+      "text": "possible till till till"
+    },
+    {
+      "start": 1217.6,
+      "end": 1220.64,
+      "duration": 3.04,
+      "text": "12 in that case"
+    },
+    {
+      "start": 1219.52,
+      "end": 1222.88,
+      "duration": 3.36,
+      "text": "it will"
+    },
+    {
+      "start": 1220.64,
+      "end": 1224.88,
+      "duration": 4.24,
+      "text": "so now what i can say is okay let's"
+    },
+    {
+      "start": 1222.88,
+      "end": 1225.84,
+      "duration": 2.96,
+      "text": "check if 0 is possible"
+    },
+    {
+      "start": 1224.88,
+      "end": 1228.72,
+      "duration": 3.84,
+      "text": "and"
+    },
+    {
+      "start": 1225.84,
+      "end": 1230.64,
+      "duration": 4.8,
+      "text": "it will tell me yes 0 is possible"
+    },
+    {
+      "start": 1228.72,
+      "end": 1234.16,
+      "duration": 5.44,
+      "text": "let's check if one is possible it will"
+    },
+    {
+      "start": 1230.64,
+      "end": 1235.92,
+      "duration": 5.28,
+      "text": "tell me no let's check f2 as possible it"
+    },
+    {
+      "start": 1234.16,
+      "end": 1238.8,
+      "duration": 4.64,
+      "text": "will tell me yes why because 2 as"
+    },
+    {
+      "start": 1235.92,
+      "end": 1242.24,
+      "duration": 6.32,
+      "text": "possible 3 is possible yes 4 is possible"
+    },
+    {
+      "start": 1238.8,
+      "end": 1246.48,
+      "duration": 7.68,
+      "text": "no 5 is possible yes because 3 2"
+    },
+    {
+      "start": 1242.24,
+      "end": 1249.28,
+      "duration": 7.04,
+      "text": "6 is possible no 7 is possible yes 8 is"
+    },
+    {
+      "start": 1246.48,
+      "end": 1250.48,
+      "duration": 4.0,
+      "text": "possible no nine is possible because"
+    },
+    {
+      "start": 1249.28,
+      "end": 1253.68,
+      "duration": 4.4,
+      "text": "seven two"
+    },
+    {
+      "start": 1250.48,
+      "end": 1254.72,
+      "duration": 4.24,
+      "text": "n is possible yes because seven"
+    },
+    {
+      "start": 1253.68,
+      "end": 1256.24,
+      "duration": 2.56,
+      "text": "three"
+    },
+    {
+      "start": 1254.72,
+      "end": 1257.92,
+      "duration": 3.2,
+      "text": "eleven is possible"
+    },
+    {
+      "start": 1256.24,
+      "end": 1259.76,
+      "duration": 3.52,
+      "text": "uh i don't see"
+    },
+    {
+      "start": 1257.92,
+      "end": 1262.24,
+      "duration": 4.32,
+      "text": "i don't see any way i can make eleven"
+    },
+    {
+      "start": 1259.76,
+      "end": 1264.96,
+      "duration": 5.2,
+      "text": "can i seven three will be 10 no i can 12"
+    },
+    {
+      "start": 1262.24,
+      "end": 1267.6,
+      "duration": 5.36,
+      "text": "is possible so i figured out what values"
+    },
+    {
+      "start": 1264.96,
+      "end": 1269.84,
+      "duration": 4.88,
+      "text": "are possible and this can easily be done"
+    },
+    {
+      "start": 1267.6,
+      "end": 1272.88,
+      "duration": 5.28,
+      "text": "with the help of the last row that has"
+    },
+    {
+      "start": 1269.84,
+      "end": 1273.92,
+      "duration": 4.08,
+      "text": "been generated in this dp array if i"
+    },
+    {
+      "start": 1272.88,
+      "end": 1276.4,
+      "duration": 3.52,
+      "text": "call the"
+    },
+    {
+      "start": 1273.92,
+      "end": 1277.36,
+      "duration": 3.44,
+      "text": "tabulation method of subset"
+    },
+    {
+      "start": 1276.4,
+      "end": 1279.6,
+      "duration": 3.2,
+      "text": "sum"
+    },
+    {
+      "start": 1277.36,
+      "end": 1280.48,
+      "duration": 3.12,
+      "text": "so can i say can i say"
+    },
+    {
+      "start": 1279.6,
+      "end": 1283.2,
+      "duration": 3.6,
+      "text": "that"
+    },
+    {
+      "start": 1280.48,
+      "end": 1286.8,
+      "duration": 6.32,
+      "text": "0 is possible 4 is possible 6 is"
+    },
+    {
+      "start": 1283.2,
+      "end": 1289.84,
+      "duration": 6.64,
+      "text": "possible 8 is possible 11 is possible so"
+    },
+    {
+      "start": 1286.8,
+      "end": 1292.32,
+      "duration": 5.52,
+      "text": "these are the valid s ones which are"
+    },
+    {
+      "start": 1289.84,
+      "end": 1294.48,
+      "duration": 4.64,
+      "text": "possible these are the partitions"
+    },
+    {
+      "start": 1292.32,
+      "end": 1297.36,
+      "duration": 5.04,
+      "text": "that are possible for s1"
+    },
+    {
+      "start": 1294.48,
+      "end": 1300.16,
+      "duration": 5.68,
+      "text": "so can i find the corresponding s2"
+    },
+    {
+      "start": 1297.36,
+      "end": 1301.92,
+      "duration": 4.56,
+      "text": "just uh think uh inside your brain can i"
+    },
+    {
+      "start": 1300.16,
+      "end": 1303.2,
+      "duration": 3.04,
+      "text": "find the corresponding s2 and the answer"
+    },
+    {
+      "start": 1301.92,
+      "end": 1304.72,
+      "duration": 2.8,
+      "text": "to that will be yes"
+    },
+    {
+      "start": 1303.2,
+      "end": 1305.6,
+      "duration": 2.4,
+      "text": "this will be 12"
+    },
+    {
+      "start": 1304.72,
+      "end": 1307.76,
+      "duration": 3.04,
+      "text": "right"
+    },
+    {
+      "start": 1305.6,
+      "end": 1309.52,
+      "duration": 3.92,
+      "text": "this will be 10 right"
+    },
+    {
+      "start": 1307.76,
+      "end": 1310.48,
+      "duration": 2.72,
+      "text": "this will be a"
+    },
+    {
+      "start": 1309.52,
+      "end": 1312.16,
+      "duration": 2.64,
+      "text": "9"
+    },
+    {
+      "start": 1310.48,
+      "end": 1314.64,
+      "duration": 4.16,
+      "text": "this will be your 5"
+    },
+    {
+      "start": 1312.16,
+      "end": 1316.16,
+      "duration": 4.0,
+      "text": "7 this will be 5"
+    },
+    {
+      "start": 1314.64,
+      "end": 1319.2,
+      "duration": 4.56,
+      "text": "this will be 3"
+    },
+    {
+      "start": 1316.16,
+      "end": 1320.48,
+      "duration": 4.32,
+      "text": "this will be 2 this will be zero so i"
+    },
+    {
+      "start": 1319.2,
+      "end": 1322.4,
+      "duration": 3.2,
+      "text": "see"
+    },
+    {
+      "start": 1320.48,
+      "end": 1324.8,
+      "duration": 4.32,
+      "text": "so i see that"
+    },
+    {
+      "start": 1322.4,
+      "end": 1327.68,
+      "duration": 5.28,
+      "text": "i got for every s1 i got the"
+    },
+    {
+      "start": 1324.8,
+      "end": 1329.36,
+      "duration": 4.56,
+      "text": "corresponding s two for every s1 i got"
+    },
+    {
+      "start": 1327.68,
+      "end": 1331.2,
+      "duration": 3.52,
+      "text": "the corresponding s2"
+    },
+    {
+      "start": 1329.36,
+      "end": 1333.2,
+      "duration": 3.84,
+      "text": "can i say the difference the absolute"
+    },
+    {
+      "start": 1331.2,
+      "end": 1335.76,
+      "duration": 4.56,
+      "text": "difference over here is 12 absolute"
+    },
+    {
+      "start": 1333.2,
+      "end": 1336.64,
+      "duration": 3.44,
+      "text": "difference over here is 8 6"
+    },
+    {
+      "start": 1335.76,
+      "end": 1337.44,
+      "duration": 1.68,
+      "text": "2"
+    },
+    {
+      "start": 1336.64,
+      "end": 1338.24,
+      "duration": 1.6,
+      "text": "2"
+    },
+    {
+      "start": 1337.44,
+      "end": 1339.28,
+      "duration": 1.84,
+      "text": "6"
+    },
+    {
+      "start": 1338.24,
+      "end": 1340.24,
+      "duration": 2.0,
+      "text": "8"
+    },
+    {
+      "start": 1339.28,
+      "end": 1342.4,
+      "duration": 3.12,
+      "text": "12."
+    },
+    {
+      "start": 1340.24,
+      "end": 1344.08,
+      "duration": 3.84,
+      "text": "what do i need the minimal and what's"
+    },
+    {
+      "start": 1342.4,
+      "end": 1347.12,
+      "duration": 4.72,
+      "text": "the minimal that i see"
+    },
+    {
+      "start": 1344.08,
+      "end": 1349.68,
+      "duration": 5.6,
+      "text": "it's 2 so that's my answer"
+    },
+    {
+      "start": 1347.12,
+      "end": 1352.16,
+      "duration": 5.04,
+      "text": "using subset sum i did it"
+    },
+    {
+      "start": 1349.68,
+      "end": 1353.92,
+      "duration": 4.24,
+      "text": "super duper easily"
+    },
+    {
+      "start": 1352.16,
+      "end": 1355.84,
+      "duration": 3.68,
+      "text": "i don't know i don't find any problem in"
+    },
+    {
+      "start": 1353.92,
+      "end": 1359.04,
+      "duration": 5.12,
+      "text": "this and this is definitely going to be"
+    },
+    {
+      "start": 1355.84,
+      "end": 1361.6,
+      "duration": 5.76,
+      "text": "my answer now we we can probably write"
+    },
+    {
+      "start": 1359.04,
+      "end": 1364.08,
+      "duration": 5.04,
+      "text": "it assume you have called the subset sum"
+    },
+    {
+      "start": 1361.6,
+      "end": 1366.72,
+      "duration": 5.12,
+      "text": "problem that dp has been generated so"
+    },
+    {
+      "start": 1364.08,
+      "end": 1367.76,
+      "duration": 3.68,
+      "text": "it's basically you call that dp for"
+    },
+    {
+      "start": 1366.72,
+      "end": 1369.76,
+      "duration": 3.04,
+      "text": "n"
+    },
+    {
+      "start": 1367.76,
+      "end": 1371.76,
+      "duration": 4.0,
+      "text": "and summation plus 1 and you can say"
+    },
+    {
+      "start": 1369.76,
+      "end": 1373.84,
+      "duration": 4.08,
+      "text": "this is the total summation because"
+    },
+    {
+      "start": 1371.76,
+      "end": 1376.48,
+      "duration": 4.72,
+      "text": "that's the maximum value you can"
+    },
+    {
+      "start": 1373.84,
+      "end": 1378.24,
+      "duration": 4.4,
+      "text": "call the subset some code okay"
+    },
+    {
+      "start": 1376.48,
+      "end": 1380.88,
+      "duration": 4.4,
+      "text": "i'll show you in the code call the"
+    },
+    {
+      "start": 1378.24,
+      "end": 1381.92,
+      "duration": 3.68,
+      "text": "subset some code so the dp of the last"
+    },
+    {
+      "start": 1380.88,
+      "end": 1382.96,
+      "duration": 2.08,
+      "text": "row will be"
+    },
+    {
+      "start": 1381.92,
+      "end": 1385.84,
+      "duration": 3.92,
+      "text": "right there"
+    },
+    {
+      "start": 1382.96,
+      "end": 1387.12,
+      "duration": 4.16,
+      "text": "so now you can see that i know"
+    },
+    {
+      "start": 1385.84,
+      "end": 1390.08,
+      "duration": 4.24,
+      "text": "from 0"
+    },
+    {
+      "start": 1387.12,
+      "end": 1393.2,
+      "duration": 6.08,
+      "text": "till the total sum it is possible"
+    },
+    {
+      "start": 1390.08,
+      "end": 1395.2,
+      "duration": 5.12,
+      "text": "and assume you can keep the mini as 189"
+    },
+    {
+      "start": 1393.2,
+      "end": 1396.8,
+      "duration": 3.6,
+      "text": "can i say can i see"
+    },
+    {
+      "start": 1395.2,
+      "end": 1399.6,
+      "duration": 4.4,
+      "text": "if"
+    },
+    {
+      "start": 1396.8,
+      "end": 1401.6,
+      "duration": 4.8,
+      "text": "dp of the last row"
+    },
+    {
+      "start": 1399.6,
+      "end": 1402.56,
+      "duration": 2.96,
+      "text": "and this target i"
+    },
+    {
+      "start": 1401.6,
+      "end": 1404.08,
+      "duration": 2.48,
+      "text": "is"
+    },
+    {
+      "start": 1402.56,
+      "end": 1405.68,
+      "duration": 3.12,
+      "text": "possible"
+    },
+    {
+      "start": 1404.08,
+      "end": 1409.36,
+      "duration": 5.28,
+      "text": "then"
+    },
+    {
+      "start": 1405.68,
+      "end": 1411.84,
+      "duration": 6.16,
+      "text": "what will be s1 i know s1 like if i just"
+    },
+    {
+      "start": 1409.36,
+      "end": 1414.32,
+      "duration": 4.96,
+      "text": "write it s1 will be i"
+    },
+    {
+      "start": 1411.84,
+      "end": 1417.76,
+      "duration": 5.92,
+      "text": "s2 will be total sum"
+    },
+    {
+      "start": 1414.32,
+      "end": 1418.64,
+      "duration": 4.32,
+      "text": "minus i correct so thereby i can say"
+    },
+    {
+      "start": 1417.76,
+      "end": 1420.8,
+      "duration": 3.04,
+      "text": "minim"
+    },
+    {
+      "start": 1418.64,
+      "end": 1423.2,
+      "duration": 4.56,
+      "text": "because i need the minimal absolute"
+    },
+    {
+      "start": 1420.8,
+      "end": 1424.96,
+      "duration": 4.16,
+      "text": "difference mini comma"
+    },
+    {
+      "start": 1423.2,
+      "end": 1427.36,
+      "duration": 4.16,
+      "text": "absolute of"
+    },
+    {
+      "start": 1424.96,
+      "end": 1430.16,
+      "duration": 5.2,
+      "text": "s2 minus s1"
+    },
+    {
+      "start": 1427.36,
+      "end": 1432.56,
+      "duration": 5.2,
+      "text": "so that's that's how you can easily"
+    },
+    {
+      "start": 1430.16,
+      "end": 1435.2,
+      "duration": 5.04,
+      "text": "write this so if you try to write this"
+    },
+    {
+      "start": 1432.56,
+      "end": 1437.68,
+      "duration": 5.12,
+      "text": "in terms of formula it's it's going to"
+    },
+    {
+      "start": 1435.2,
+      "end": 1440.4,
+      "duration": 5.2,
+      "text": "be total sum minus"
+    },
+    {
+      "start": 1437.68,
+      "end": 1442.08,
+      "duration": 4.4,
+      "text": "2 into i so you can also write that but"
+    },
+    {
+      "start": 1440.4,
+      "end": 1444.48,
+      "duration": 4.08,
+      "text": "yeah in this way"
+    },
+    {
+      "start": 1442.08,
+      "end": 1446.48,
+      "duration": 4.4,
+      "text": "if it is possible if this summation is"
+    },
+    {
+      "start": 1444.48,
+      "end": 1449.12,
+      "duration": 4.64,
+      "text": "possible you directly check on the last"
+    },
+    {
+      "start": 1446.48,
+      "end": 1452.8,
+      "duration": 6.32,
+      "text": "row you take s1 you take s2 and you get"
+    },
+    {
+      "start": 1449.12,
+      "end": 1455.2,
+      "duration": 6.08,
+      "text": "the minimal possible value now can we"
+    },
+    {
+      "start": 1452.8,
+      "end": 1457.6,
+      "duration": 4.8,
+      "text": "optimize this yes"
+    },
+    {
+      "start": 1455.2,
+      "end": 1459.04,
+      "duration": 3.84,
+      "text": "if you carefully observe"
+    },
+    {
+      "start": 1457.6,
+      "end": 1460.88,
+      "duration": 3.28,
+      "text": "0 12"
+    },
+    {
+      "start": 1459.04,
+      "end": 1462.24,
+      "duration": 3.2,
+      "text": "12 0"
+    },
+    {
+      "start": 1460.88,
+      "end": 1463.44,
+      "duration": 2.56,
+      "text": "2 10"
+    },
+    {
+      "start": 1462.24,
+      "end": 1464.72,
+      "duration": 2.48,
+      "text": "10 2"
+    },
+    {
+      "start": 1463.44,
+      "end": 1465.84,
+      "duration": 2.4,
+      "text": "3 9"
+    },
+    {
+      "start": 1464.72,
+      "end": 1470.48,
+      "duration": 5.76,
+      "text": "9 3"
+    },
+    {
+      "start": 1465.84,
+      "end": 1472.8,
+      "duration": 6.96,
+      "text": "5 7 5 7 so basically what happens is"
+    },
+    {
+      "start": 1470.48,
+      "end": 1475.12,
+      "duration": 4.64,
+      "text": "the subsets so"
+    },
+    {
+      "start": 1472.8,
+      "end": 1477.92,
+      "duration": 5.12,
+      "text": "you had three two seven right so first"
+    },
+    {
+      "start": 1475.12,
+      "end": 1480.56,
+      "duration": 5.44,
+      "text": "time it might have taken three in the"
+    },
+    {
+      "start": 1477.92,
+      "end": 1483.12,
+      "duration": 5.2,
+      "text": "subset in the partition one in the next"
+    },
+    {
+      "start": 1480.56,
+      "end": 1484.72,
+      "duration": 4.16,
+      "text": "time the partition one might have two"
+    },
+    {
+      "start": 1483.12,
+      "end": 1486.72,
+      "duration": 3.6,
+      "text": "the next time the partition one might"
+    },
+    {
+      "start": 1484.72,
+      "end": 1488.88,
+      "duration": 4.16,
+      "text": "have seven"
+    },
+    {
+      "start": 1486.72,
+      "end": 1491.2,
+      "duration": 4.48,
+      "text": "going across there will be a moment"
+    },
+    {
+      "start": 1488.88,
+      "end": 1493.92,
+      "duration": 5.04,
+      "text": "there will be a moment the partition two"
+    },
+    {
+      "start": 1491.2,
+      "end": 1496.32,
+      "duration": 5.12,
+      "text": "will be having three"
+    },
+    {
+      "start": 1493.92,
+      "end": 1498.24,
+      "duration": 4.32,
+      "text": "partition two will be having two the"
+    },
+    {
+      "start": 1496.32,
+      "end": 1500.4,
+      "duration": 4.08,
+      "text": "partition three will be having seven"
+    },
+    {
+      "start": 1498.24,
+      "end": 1501.92,
+      "duration": 3.68,
+      "text": "like it can also have single elements so"
+    },
+    {
+      "start": 1500.4,
+      "end": 1503.92,
+      "duration": 3.52,
+      "text": "do we need to check because we're just"
+    },
+    {
+      "start": 1501.92,
+      "end": 1507.44,
+      "duration": 5.52,
+      "text": "checking for absolute difference so"
+    },
+    {
+      "start": 1503.92,
+      "end": 1508.48,
+      "duration": 4.56,
+      "text": "thereby i can say if i check for half of"
+    },
+    {
+      "start": 1507.44,
+      "end": 1510.64,
+      "duration": 3.2,
+      "text": "the sum"
+    },
+    {
+      "start": 1508.48,
+      "end": 1511.68,
+      "duration": 3.2,
+      "text": "if i check for the half of the sum"
+    },
+    {
+      "start": 1510.64,
+      "end": 1512.96,
+      "duration": 2.32,
+      "text": "then also"
+    },
+    {
+      "start": 1511.68,
+      "end": 1515.44,
+      "duration": 3.76,
+      "text": "we should be"
+    },
+    {
+      "start": 1512.96,
+      "end": 1517.36,
+      "duration": 4.4,
+      "text": "good enough because"
+    },
+    {
+      "start": 1515.44,
+      "end": 1519.52,
+      "duration": 4.08,
+      "text": "i know"
+    },
+    {
+      "start": 1517.36,
+      "end": 1521.12,
+      "duration": 3.76,
+      "text": "whatever partition one looks like if i"
+    },
+    {
+      "start": 1519.52,
+      "end": 1523.04,
+      "duration": 3.52,
+      "text": "make the partition two look like the"
+    },
+    {
+      "start": 1521.12,
+      "end": 1525.36,
+      "duration": 4.24,
+      "text": "same the answer is not gonna vary so"
+    },
+    {
+      "start": 1523.04,
+      "end": 1527.28,
+      "duration": 4.24,
+      "text": "much if you carefully observe"
+    },
+    {
+      "start": 1525.36,
+      "end": 1528.8,
+      "duration": 3.44,
+      "text": "we took a summation zero and going"
+    },
+    {
+      "start": 1527.28,
+      "end": 1530.8,
+      "duration": 3.52,
+      "text": "across we set the partition to have"
+    },
+    {
+      "start": 1528.8,
+      "end": 1532.88,
+      "duration": 4.08,
+      "text": "summation zero we took a summation two"
+    },
+    {
+      "start": 1530.8,
+      "end": 1534.8,
+      "duration": 4.0,
+      "text": "going across we set the partition to two"
+    },
+    {
+      "start": 1532.88,
+      "end": 1536.48,
+      "duration": 3.6,
+      "text": "to have a summation two so it doesn't"
+    },
+    {
+      "start": 1534.8,
+      "end": 1538.32,
+      "duration": 3.52,
+      "text": "really make sense that's why if you"
+    },
+    {
+      "start": 1536.48,
+      "end": 1542.64,
+      "duration": 6.16,
+      "text": "still do till the half"
+    },
+    {
+      "start": 1538.32,
+      "end": 1544.8,
+      "duration": 6.48,
+      "text": "you get your possible answer so that's"
+    },
+    {
+      "start": 1542.64,
+      "end": 1547.36,
+      "duration": 4.72,
+      "text": "how we can easily solve this problem"
+    },
+    {
+      "start": 1544.8,
+      "end": 1549.84,
+      "duration": 5.04,
+      "text": "let's try to show you the code so that"
+    },
+    {
+      "start": 1547.36,
+      "end": 1552.08,
+      "duration": 4.72,
+      "text": "it gets much more clear to you"
+    },
+    {
+      "start": 1549.84,
+      "end": 1554.08,
+      "duration": 4.24,
+      "text": "so by the way this was the lecture 14"
+    },
+    {
+      "start": 1552.08,
+      "end": 1556.4,
+      "duration": 4.32,
+      "text": "subset sum equal to and this was the"
+    },
+    {
+      "start": 1554.08,
+      "end": 1558.16,
+      "duration": 4.08,
+      "text": "entire code okay so"
+    },
+    {
+      "start": 1556.4,
+      "end": 1560.88,
+      "duration": 4.48,
+      "text": "what we will do is let's check out over"
+    },
+    {
+      "start": 1558.16,
+      "end": 1563.2,
+      "duration": 5.04,
+      "text": "here what's given array and then so at"
+    },
+    {
+      "start": 1560.88,
+      "end": 1565.68,
+      "duration": 4.8,
+      "text": "first let's keep a total uh sum okay"
+    },
+    {
+      "start": 1563.2,
+      "end": 1567.84,
+      "duration": 4.64,
+      "text": "let's just keep a total sum of zero and"
+    },
+    {
+      "start": 1565.68,
+      "end": 1570.48,
+      "duration": 4.8,
+      "text": "probably we can just sum it up uh by"
+    },
+    {
+      "start": 1567.84,
+      "end": 1573.2,
+      "duration": 5.36,
+      "text": "going to zero till n"
+    },
+    {
+      "start": 1570.48,
+      "end": 1575.76,
+      "duration": 5.28,
+      "text": "which is i plus plus and i can say total"
+    },
+    {
+      "start": 1573.2,
+      "end": 1577.52,
+      "duration": 4.32,
+      "text": "sum is equal to array of i that's"
+    },
+    {
+      "start": 1575.76,
+      "end": 1579.28,
+      "duration": 3.52,
+      "text": "something which we'll do right right"
+    },
+    {
+      "start": 1577.52,
+      "end": 1581.28,
+      "duration": 3.76,
+      "text": "after this what you will do is you just"
+    },
+    {
+      "start": 1579.28,
+      "end": 1583.44,
+      "duration": 4.16,
+      "text": "call this guy nothing else just call"
+    },
+    {
+      "start": 1581.28,
+      "end": 1585.36,
+      "duration": 4.08,
+      "text": "this just copy paste"
+    },
+    {
+      "start": 1583.44,
+      "end": 1588.48,
+      "duration": 5.04,
+      "text": "because this is the subset sum this is"
+    },
+    {
+      "start": 1585.36,
+      "end": 1591.12,
+      "duration": 5.76,
+      "text": "the n into k plus 1 vector so instead of"
+    },
+    {
+      "start": 1588.48,
+      "end": 1593.2,
+      "duration": 4.72,
+      "text": "k you know k will be the target over"
+    },
+    {
+      "start": 1591.12,
+      "end": 1595.28,
+      "duration": 4.16,
+      "text": "here is initially total sum because"
+    },
+    {
+      "start": 1593.2,
+      "end": 1596.4,
+      "duration": 3.2,
+      "text": "that's the maximum that's possible and"
+    },
+    {
+      "start": 1595.28,
+      "end": 1598.8,
+      "duration": 3.52,
+      "text": "yeah there was edge case that was"
+    },
+    {
+      "start": 1596.4,
+      "end": 1601.52,
+      "duration": 5.12,
+      "text": "missing over here the array of zero has"
+    },
+    {
+      "start": 1598.8,
+      "end": 1603.28,
+      "duration": 4.48,
+      "text": "to be lesser than equal to"
+    },
+    {
+      "start": 1601.52,
+      "end": 1606.32,
+      "duration": 4.8,
+      "text": "the target that you're looking for"
+    },
+    {
+      "start": 1603.28,
+      "end": 1607.92,
+      "duration": 4.64,
+      "text": "otherwise uh it will overflow so"
+    },
+    {
+      "start": 1606.32,
+      "end": 1610.96,
+      "duration": 4.64,
+      "text": "just make sure you do this uh the array"
+    },
+    {
+      "start": 1607.92,
+      "end": 1613.52,
+      "duration": 5.6,
+      "text": "of zero so i can say the entire vector"
+    },
+    {
+      "start": 1610.96,
+      "end": 1616.08,
+      "duration": 5.12,
+      "text": "is generated and over here can i see the"
+    },
+    {
+      "start": 1613.52,
+      "end": 1618.88,
+      "duration": 5.36,
+      "text": "array of or rather"
+    },
+    {
+      "start": 1616.08,
+      "end": 1620.96,
+      "duration": 4.88,
+      "text": "the dp of n minus 1 and"
+    },
+    {
+      "start": 1618.88,
+      "end": 1621.76,
+      "duration": 2.88,
+      "text": "the entire column"
+    },
+    {
+      "start": 1620.96,
+      "end": 1624.64,
+      "duration": 3.68,
+      "text": "from"
+    },
+    {
+      "start": 1621.76,
+      "end": 1627.76,
+      "duration": 6.0,
+      "text": "0 to the total sum will tell you"
+    },
+    {
+      "start": 1624.64,
+      "end": 1630.72,
+      "duration": 6.08,
+      "text": "the answer i can so i know uh i need the"
+    },
+    {
+      "start": 1627.76,
+      "end": 1633.28,
+      "duration": 5.52,
+      "text": "minimal so minimal can be 189"
+    },
+    {
+      "start": 1630.72,
+      "end": 1636.56,
+      "duration": 5.84,
+      "text": "and i know i can start the target like i"
+    },
+    {
+      "start": 1633.28,
+      "end": 1638.8,
+      "duration": 5.52,
+      "text": "can start the s1 rather from 0 and the"
+    },
+    {
+      "start": 1636.56,
+      "end": 1641.04,
+      "duration": 4.48,
+      "text": "s1 can go on till"
+    },
+    {
+      "start": 1638.8,
+      "end": 1643.92,
+      "duration": 5.12,
+      "text": "total sum by 2 you know that we have"
+    },
+    {
+      "start": 1641.04,
+      "end": 1647.2,
+      "duration": 6.16,
+      "text": "already proved that and s1 plus plus"
+    },
+    {
+      "start": 1643.92,
+      "end": 1649.28,
+      "duration": 5.36,
+      "text": "so can i say this if if dp of the last"
+    },
+    {
+      "start": 1647.2,
+      "end": 1650.0,
+      "duration": 2.8,
+      "text": "row in the last row"
+    },
+    {
+      "start": 1649.28,
+      "end": 1652.88,
+      "duration": 3.6,
+      "text": "if"
+    },
+    {
+      "start": 1650.0,
+      "end": 1654.64,
+      "duration": 4.64,
+      "text": "s1 is true then only it's possible then"
+    },
+    {
+      "start": 1652.88,
+      "end": 1657.52,
+      "duration": 4.64,
+      "text": "only it will be possible and if it is"
+    },
+    {
+      "start": 1654.64,
+      "end": 1658.64,
+      "duration": 4.0,
+      "text": "possible can i say mini will be"
+    },
+    {
+      "start": 1657.52,
+      "end": 1660.72,
+      "duration": 3.2,
+      "text": "min of"
+    },
+    {
+      "start": 1658.64,
+      "end": 1663.2,
+      "duration": 4.56,
+      "text": "mini comma"
+    },
+    {
+      "start": 1660.72,
+      "end": 1664.48,
+      "duration": 3.76,
+      "text": "total sum minus s1"
+    },
+    {
+      "start": 1663.2,
+      "end": 1665.92,
+      "duration": 2.72,
+      "text": "is what"
+    },
+    {
+      "start": 1664.48,
+      "end": 1667.04,
+      "duration": 2.56,
+      "text": "your s"
+    },
+    {
+      "start": 1665.92,
+      "end": 1670.24,
+      "duration": 4.32,
+      "text": "2 will be"
+    },
+    {
+      "start": 1667.04,
+      "end": 1672.4,
+      "duration": 5.36,
+      "text": "minus of s1 and an absolute of the"
+    },
+    {
+      "start": 1670.24,
+      "end": 1674.32,
+      "duration": 4.08,
+      "text": "entire stuff yes an absolute of the"
+    },
+    {
+      "start": 1672.4,
+      "end": 1677.28,
+      "duration": 4.88,
+      "text": "entire stuff at the end of the day can i"
+    },
+    {
+      "start": 1674.32,
+      "end": 1680.0,
+      "duration": 5.68,
+      "text": "say i will return the mini so if i just"
+    },
+    {
+      "start": 1677.28,
+      "end": 1681.68,
+      "duration": 4.4,
+      "text": "write this and let's run this off"
+    },
+    {
+      "start": 1680.0,
+      "end": 1683.92,
+      "duration": 3.92,
+      "text": "let's see if it's running fine"
+    },
+    {
+      "start": 1681.68,
+      "end": 1684.72,
+      "duration": 3.04,
+      "text": "it does run so let's quickly submit this"
+    },
+    {
+      "start": 1683.92,
+      "end": 1686.88,
+      "duration": 2.96,
+      "text": "off"
+    },
+    {
+      "start": 1684.72,
+      "end": 1688.72,
+      "duration": 4.0,
+      "text": "so you see it is running absolutely fine"
+    },
+    {
+      "start": 1686.88,
+      "end": 1691.44,
+      "duration": 4.56,
+      "text": "did we do anything extra"
+    },
+    {
+      "start": 1688.72,
+      "end": 1693.68,
+      "duration": 4.96,
+      "text": "just these couple of lines and just a"
+    },
+    {
+      "start": 1691.44,
+      "end": 1696.8,
+      "duration": 5.36,
+      "text": "total summation that i did apart from"
+    },
+    {
+      "start": 1693.68,
+      "end": 1698.64,
+      "duration": 4.96,
+      "text": "that the entire concept of subset sum"
+    },
+    {
+      "start": 1696.8,
+      "end": 1701.04,
+      "duration": 4.24,
+      "text": "was used so if you remember in subset"
+    },
+    {
+      "start": 1698.64,
+      "end": 1703.04,
+      "duration": 4.4,
+      "text": "sum we did a space optimization so you"
+    },
+    {
+      "start": 1701.04,
+      "end": 1703.92,
+      "duration": 2.88,
+      "text": "can do a space optimization over here as"
+    },
+    {
+      "start": 1703.04,
+      "end": 1706.0,
+      "duration": 2.96,
+      "text": "well"
+    },
+    {
+      "start": 1703.92,
+      "end": 1708.72,
+      "duration": 4.8,
+      "text": "so what i'll do is i'll just copy paste"
+    },
+    {
+      "start": 1706.0,
+      "end": 1710.24,
+      "duration": 4.24,
+      "text": "uh the pre the space optimization code"
+    },
+    {
+      "start": 1708.72,
+      "end": 1712.0,
+      "duration": 3.28,
+      "text": "this is the space optimization code so"
+    },
+    {
+      "start": 1710.24,
+      "end": 1713.44,
+      "duration": 3.2,
+      "text": "let's quickly take this off and copy"
+    },
+    {
+      "start": 1712.0,
+      "end": 1715.6,
+      "duration": 3.6,
+      "text": "paste"
+    },
+    {
+      "start": 1713.44,
+      "end": 1717.84,
+      "duration": 4.4,
+      "text": "copy paste the space optimization code"
+    },
+    {
+      "start": 1715.6,
+      "end": 1719.52,
+      "duration": 3.92,
+      "text": "so instead of dpf n minus one this will"
+    },
+    {
+      "start": 1717.84,
+      "end": 1722.56,
+      "duration": 4.72,
+      "text": "be previous because in space"
+    },
+    {
+      "start": 1719.52,
+      "end": 1724.4,
+      "duration": 4.88,
+      "text": "optimization this is what we usually do"
+    },
+    {
+      "start": 1722.56,
+      "end": 1725.76,
+      "duration": 3.2,
+      "text": "so let's quickly now run this off"
+    },
+    {
+      "start": 1724.4,
+      "end": 1727.76,
+      "duration": 3.36,
+      "text": "you can also try it with the space"
+    },
+    {
+      "start": 1725.76,
+      "end": 1729.28,
+      "duration": 3.52,
+      "text": "optimization that's your choice"
+    },
+    {
+      "start": 1727.76,
+      "end": 1732.8,
+      "duration": 5.04,
+      "text": "so we do the space optimization it will"
+    },
+    {
+      "start": 1729.28,
+      "end": 1734.8,
+      "duration": 5.52,
+      "text": "take a bit lesser space complexity the"
+    },
+    {
+      "start": 1732.8,
+      "end": 1739.2,
+      "duration": 6.4,
+      "text": "time complexity still will be equivalent"
+    },
+    {
+      "start": 1734.8,
+      "end": 1741.76,
+      "duration": 6.96,
+      "text": "to n into target plus total sum by 2"
+    },
+    {
+      "start": 1739.2,
+      "end": 1743.84,
+      "duration": 4.64,
+      "text": "plus a big off and linear loop so a"
+    },
+    {
+      "start": 1741.76,
+      "end": 1746.24,
+      "duration": 4.48,
+      "text": "couple of linear loops and the total sum"
+    },
+    {
+      "start": 1743.84,
+      "end": 1748.64,
+      "duration": 4.8,
+      "text": "n into k and the time space complexity"
+    },
+    {
+      "start": 1746.24,
+      "end": 1750.64,
+      "duration": 4.4,
+      "text": "will be b go of these guys that's a"
+    },
+    {
+      "start": 1748.64,
+      "end": 1752.72,
+      "duration": 4.08,
+      "text": "single linear loop that you a single"
+    },
+    {
+      "start": 1750.64,
+      "end": 1754.4,
+      "duration": 3.76,
+      "text": "linear area that you're using so guys i"
+    },
+    {
+      "start": 1752.72,
+      "end": 1757.28,
+      "duration": 4.56,
+      "text": "hope i was able to make this tough"
+    },
+    {
+      "start": 1754.4,
+      "end": 1759.2,
+      "duration": 4.8,
+      "text": "problem easy and just in case i was able"
+    },
+    {
+      "start": 1757.28,
+      "end": 1761.44,
+      "duration": 4.16,
+      "text": "to make it please please like this video"
+    },
+    {
+      "start": 1759.2,
+      "end": 1763.2,
+      "duration": 4.0,
+      "text": "because i'm recording this at 5 a.m in"
+    },
+    {
+      "start": 1761.44,
+      "end": 1765.2,
+      "duration": 3.76,
+      "text": "the morning and yeah i'll be editing it"
+    },
+    {
+      "start": 1763.2,
+      "end": 1767.2,
+      "duration": 4.0,
+      "text": "for the next one hour this video will go"
+    },
+    {
+      "start": 1765.2,
+      "end": 1768.88,
+      "duration": 3.68,
+      "text": "tomorrow morning so just make sure you"
+    },
+    {
+      "start": 1767.2,
+      "end": 1770.0,
+      "duration": 2.8,
+      "text": "like this video and if you're new to"
+    },
+    {
+      "start": 1768.88,
+      "end": 1772.08,
+      "duration": 3.2,
+      "text": "this channel please do consider"
+    },
+    {
+      "start": 1770.0,
+      "end": 1774.48,
+      "duration": 4.48,
+      "text": "subscribing and in the comment section"
+    },
+    {
+      "start": 1772.08,
+      "end": 1776.08,
+      "duration": 4.0,
+      "text": "please please do write uh understood if"
+    },
+    {
+      "start": 1774.48,
+      "end": 1777.84,
+      "duration": 3.36,
+      "text": "you have understood because that does"
+    },
+    {
+      "start": 1776.08,
+      "end": 1779.2,
+      "duration": 3.12,
+      "text": "motivate me a lot and there with this"
+    },
+    {
+      "start": 1777.84,
+      "end": 1780.48,
+      "duration": 2.64,
+      "text": "i'll be wrapping up this video let's fit"
+    },
+    {
+      "start": 1779.2,
+      "end": 1781.68,
+      "duration": 2.48,
+      "text": "in the next lecture till then bye bye"
+    },
+    {
+      "start": 1780.48,
+      "end": 1785.96,
+      "duration": 5.48,
+      "text": "take care"
+    },
+    {
+      "start": 1781.68,
+      "end": 1785.96,
+      "duration": 4.28,
+      "text": "whenever your heart is"
+    },
+    {
+      "start": 1786.0,
+      "end": 1791.62,
+      "duration": 5.62,
+      "text": "[Music]"
+    }
+  ]
+}

@@ -1,0 +1,6074 @@
+{
+  "video_id": "aBxjDBC4M1U",
+  "title": "G-46. Disjoint Set | Union by Rank | Union by Size | Path Compression",
+  "duration_sec": 2535,
+  "num_segments": 1011,
+  "segments": [
+    {
+      "start": 3.0,
+      "end": 6.12,
+      "duration": 3.12,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.5,
+      "end": 8.28,
+      "duration": 3.78,
+      "text": "I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.12,
+      "end": 10.86,
+      "duration": 4.74,
+      "text": "so in this video we're going to learn"
+    },
+    {
+      "start": 8.28,
+      "end": 12.78,
+      "duration": 4.5,
+      "text": "about the most important topic in the"
+    },
+    {
+      "start": 10.86,
+      "end": 14.88,
+      "duration": 4.02,
+      "text": "graph series which is the disjoint set"
+    },
+    {
+      "start": 12.78,
+      "end": 17.1,
+      "duration": 4.32,
+      "text": "data structure it's a very very"
+    },
+    {
+      "start": 14.88,
+      "end": 20.4,
+      "duration": 5.52,
+      "text": "important topic why this is commonly"
+    },
+    {
+      "start": 17.1,
+      "end": 22.38,
+      "duration": 5.28,
+      "text": "asked in almost all interviews and the"
+    },
+    {
+      "start": 20.4,
+      "end": 23.88,
+      "duration": 3.48,
+      "text": "online assessments as well so you need"
+    },
+    {
+      "start": 22.38,
+      "end": 25.62,
+      "duration": 3.24,
+      "text": "to master this topic and in order to"
+    },
+    {
+      "start": 23.88,
+      "end": 27.3,
+      "duration": 3.42,
+      "text": "master this topic you have to watch this"
+    },
+    {
+      "start": 25.62,
+      "end": 29.04,
+      "duration": 3.42,
+      "text": "video and all the follow-up problems"
+    },
+    {
+      "start": 27.3,
+      "end": 31.98,
+      "duration": 4.68,
+      "text": "that I'll be solving in the next part of"
+    },
+    {
+      "start": 29.04,
+      "end": 36.12,
+      "duration": 7.08,
+      "text": "this graph Series so let's understand"
+    },
+    {
+      "start": 31.98,
+      "end": 39.54,
+      "duration": 7.56,
+      "text": "why is this joints a data structure used"
+    },
+    {
+      "start": 36.12,
+      "end": 42.78,
+      "duration": 6.66,
+      "text": "so imagine I give you something like one"
+    },
+    {
+      "start": 39.54,
+      "end": 46.5,
+      "duration": 6.96,
+      "text": "two three four and I give you other"
+    },
+    {
+      "start": 42.78,
+      "end": 48.96,
+      "duration": 6.18,
+      "text": "portion like five six seven this is a"
+    },
+    {
+      "start": 46.5,
+      "end": 52.02,
+      "duration": 5.52,
+      "text": "single graph but it has two components"
+    },
+    {
+      "start": 48.96,
+      "end": 53.52,
+      "duration": 4.56,
+      "text": "first one is this second one is this now"
+    },
+    {
+      "start": 52.02,
+      "end": 57.66,
+      "duration": 5.64,
+      "text": "suddenly someone will come up and say"
+    },
+    {
+      "start": 53.52,
+      "end": 60.3,
+      "duration": 6.78,
+      "text": "hey does one and five belong to the same"
+    },
+    {
+      "start": 57.66,
+      "end": 62.64,
+      "duration": 4.98,
+      "text": "component or not I will determine you'll"
+    },
+    {
+      "start": 60.3,
+      "end": 66.6,
+      "duration": 6.3,
+      "text": "pick up one and you'll start a DFS"
+    },
+    {
+      "start": 62.64,
+      "end": 68.52,
+      "duration": 5.88,
+      "text": "travel one two three four and the"
+    },
+    {
+      "start": 66.6,
+      "end": 70.74,
+      "duration": 4.14,
+      "text": "traversal is complete you could not find"
+    },
+    {
+      "start": 68.52,
+      "end": 73.2,
+      "duration": 4.68,
+      "text": "five since you could not find five in"
+    },
+    {
+      "start": 70.74,
+      "end": 75.0,
+      "duration": 4.26,
+      "text": "the DFS traversal of one in that"
+    },
+    {
+      "start": 73.2,
+      "end": 77.28,
+      "duration": 4.08,
+      "text": "component you'll be like they do not"
+    },
+    {
+      "start": 75.0,
+      "end": 79.4,
+      "duration": 4.4,
+      "text": "belong to the same component you did a"
+    },
+    {
+      "start": 77.28,
+      "end": 81.84,
+      "duration": 4.56,
+      "text": "DFS traversal and that's a Brute Force"
+    },
+    {
+      "start": 79.4,
+      "end": 85.44,
+      "duration": 6.04,
+      "text": "how much time will the DFS traversal"
+    },
+    {
+      "start": 81.84,
+      "end": 87.66,
+      "duration": 5.82,
+      "text": "Take N plus e that's the complexity the"
+    },
+    {
+      "start": 85.44,
+      "end": 90.66,
+      "duration": 5.22,
+      "text": "DFS or the BFS"
+    },
+    {
+      "start": 87.66,
+      "end": 92.04,
+      "duration": 4.38,
+      "text": "takes already discussed this uh in the"
+    },
+    {
+      "start": 90.66,
+      "end": 94.14,
+      "duration": 3.48,
+      "text": "previous section of the graph series if"
+    },
+    {
+      "start": 92.04,
+      "end": 96.36,
+      "duration": 4.32,
+      "text": "you do not know DFS or BFS go back and"
+    },
+    {
+      "start": 94.14,
+      "end": 100.62,
+      "duration": 6.48,
+      "text": "watch it so the brute force is going to"
+    },
+    {
+      "start": 96.36,
+      "end": 102.6,
+      "duration": 6.24,
+      "text": "take a kind of linear time complexity so"
+    },
+    {
+      "start": 100.62,
+      "end": 104.76,
+      "duration": 4.14,
+      "text": "this is where something like disjoints"
+    },
+    {
+      "start": 102.6,
+      "end": 106.8,
+      "duration": 4.2,
+      "text": "that comes in and says hey I'm going to"
+    },
+    {
+      "start": 104.76,
+      "end": 108.9,
+      "duration": 4.14,
+      "text": "do the same thing in constant time you"
+    },
+    {
+      "start": 106.8,
+      "end": 111.48,
+      "duration": 4.68,
+      "text": "ask me does one and five belong to the"
+    },
+    {
+      "start": 108.9,
+      "end": 113.22,
+      "duration": 4.32,
+      "text": "same component I'm gonna tell you in"
+    },
+    {
+      "start": 111.48,
+      "end": 116.4,
+      "duration": 4.92,
+      "text": "constant time"
+    },
+    {
+      "start": 113.22,
+      "end": 119.34,
+      "duration": 6.12,
+      "text": "either a yes or a no that's the use case"
+    },
+    {
+      "start": 116.4,
+      "end": 123.3,
+      "duration": 6.9,
+      "text": "of this joint set data structure and one"
+    },
+    {
+      "start": 119.34,
+      "end": 126.12,
+      "duration": 6.78,
+      "text": "more thing it is usually used in dynamic"
+    },
+    {
+      "start": 123.3,
+      "end": 127.92,
+      "duration": 4.62,
+      "text": "graphs graphs which keep on changing"
+    },
+    {
+      "start": 126.12,
+      "end": 130.68,
+      "duration": 4.56,
+      "text": "graphs which keep on changing their"
+    },
+    {
+      "start": 127.92,
+      "end": 132.3,
+      "duration": 4.38,
+      "text": "configuration at every moment what do"
+    },
+    {
+      "start": 130.68,
+      "end": 134.28,
+      "duration": 3.6,
+      "text": "you mean by exactly changing"
+    },
+    {
+      "start": 132.3,
+      "end": 137.1,
+      "duration": 4.8,
+      "text": "configuration I'll explain you that in"
+    },
+    {
+      "start": 134.28,
+      "end": 139.92,
+      "duration": 5.64,
+      "text": "the later part so this joint set gives"
+    },
+    {
+      "start": 137.1,
+      "end": 143.7,
+      "duration": 6.6,
+      "text": "us two options one is finding the parent"
+    },
+    {
+      "start": 139.92,
+      "end": 145.62,
+      "duration": 5.7,
+      "text": "that's one of its main functionality and"
+    },
+    {
+      "start": 143.7,
+      "end": 148.8,
+      "duration": 5.1,
+      "text": "the other main functionality is union"
+    },
+    {
+      "start": 145.62,
+      "end": 153.24,
+      "duration": 7.62,
+      "text": "now this Union can be done with two"
+    },
+    {
+      "start": 148.8,
+      "end": 155.88,
+      "duration": 7.08,
+      "text": "methods one is rank other one is size"
+    },
+    {
+      "start": 153.24,
+      "end": 157.92,
+      "duration": 4.68,
+      "text": "I'll be discussing both of them but so"
+    },
+    {
+      "start": 155.88,
+      "end": 161.16,
+      "duration": 5.28,
+      "text": "primarily it gives you two functions"
+    },
+    {
+      "start": 157.92,
+      "end": 164.4,
+      "duration": 6.48,
+      "text": "find parent and Union now I did talk"
+    },
+    {
+      "start": 161.16,
+      "end": 166.62,
+      "duration": 5.46,
+      "text": "about dynamic graphs graph changing"
+    },
+    {
+      "start": 164.4,
+      "end": 168.66,
+      "duration": 4.26,
+      "text": "configurations so let's understand this"
+    },
+    {
+      "start": 166.62,
+      "end": 171.42,
+      "duration": 4.8,
+      "text": "now what do you mean by these things"
+    },
+    {
+      "start": 168.66,
+      "end": 173.76,
+      "duration": 5.1,
+      "text": "these are all edges there's an edge"
+    },
+    {
+      "start": 171.42,
+      "end": 176.24,
+      "duration": 4.82,
+      "text": "between five and six okay so initially"
+    },
+    {
+      "start": 173.76,
+      "end": 182.64,
+      "duration": 8.88,
+      "text": "what we assume is"
+    },
+    {
+      "start": 176.24,
+      "end": 186.06,
+      "duration": 9.82,
+      "text": "one two three four five six seven"
+    },
+    {
+      "start": 182.64,
+      "end": 189.48,
+      "duration": 6.84,
+      "text": "everyone is alone so initially before"
+    },
+    {
+      "start": 186.06,
+      "end": 192.9,
+      "duration": 6.84,
+      "text": "all these edges formation every node is"
+    },
+    {
+      "start": 189.48,
+      "end": 194.88,
+      "duration": 5.4,
+      "text": "single single right so you have one two"
+    },
+    {
+      "start": 192.9,
+      "end": 198.36,
+      "duration": 5.46,
+      "text": "what it means is I'm asking you to"
+    },
+    {
+      "start": 194.88,
+      "end": 201.12,
+      "duration": 6.24,
+      "text": "connect one two so that is what union"
+    },
+    {
+      "start": 198.36,
+      "end": 204.9,
+      "duration": 6.54,
+      "text": "does for you remember this whenever I"
+    },
+    {
+      "start": 201.12,
+      "end": 207.36,
+      "duration": 6.24,
+      "text": "say connect one to Union in disjoint set"
+    },
+    {
+      "start": 204.9,
+      "end": 210.78,
+      "duration": 5.88,
+      "text": "will do it for you we'll talk about uh"
+    },
+    {
+      "start": 207.36,
+      "end": 213.0,
+      "duration": 5.64,
+      "text": "Union in details but as of now uh know"
+    },
+    {
+      "start": 210.78,
+      "end": 214.86,
+      "duration": 4.08,
+      "text": "the higher level of Union Union will go"
+    },
+    {
+      "start": 213.0,
+      "end": 218.16,
+      "duration": 5.16,
+      "text": "and connect so what I'll do is I'll go"
+    },
+    {
+      "start": 214.86,
+      "end": 220.74,
+      "duration": 5.88,
+      "text": "and connect okay done next two and three"
+    },
+    {
+      "start": 218.16,
+      "end": 222.96,
+      "duration": 4.8,
+      "text": "connect one next four and five current"
+    },
+    {
+      "start": 220.74,
+      "end": 225.06,
+      "duration": 4.32,
+      "text": "four and five next six and seven connect"
+    },
+    {
+      "start": 222.96,
+      "end": 227.76,
+      "duration": 4.8,
+      "text": "six and seven so you see the graph is"
+    },
+    {
+      "start": 225.06,
+      "end": 230.1,
+      "duration": 5.04,
+      "text": "changing at every instant but you'll be"
+    },
+    {
+      "start": 227.76,
+      "end": 232.56,
+      "duration": 4.8,
+      "text": "like what's driver wait this is our"
+    },
+    {
+      "start": 230.1,
+      "end": 235.8,
+      "duration": 5.7,
+      "text": "graph is formed but"
+    },
+    {
+      "start": 232.56,
+      "end": 237.96,
+      "duration": 5.4,
+      "text": "what happens here is if I stop the"
+    },
+    {
+      "start": 235.8,
+      "end": 240.54,
+      "duration": 4.74,
+      "text": "formation over here and I give you a"
+    },
+    {
+      "start": 237.96,
+      "end": 242.22,
+      "duration": 4.26,
+      "text": "question where after this formation I"
+    },
+    {
+      "start": 240.54,
+      "end": 245.64,
+      "duration": 5.1,
+      "text": "suddenly ask you hey"
+    },
+    {
+      "start": 242.22,
+      "end": 248.58,
+      "duration": 6.36,
+      "text": "does 4 and 1 belong to the same"
+    },
+    {
+      "start": 245.64,
+      "end": 251.28,
+      "duration": 5.64,
+      "text": "component or not you will say no why"
+    },
+    {
+      "start": 248.58,
+      "end": 254.04,
+      "duration": 5.46,
+      "text": "because 4 as of now is here one as of"
+    },
+    {
+      "start": 251.28,
+      "end": 255.72,
+      "duration": 4.44,
+      "text": "now is here till this point they are not"
+    },
+    {
+      "start": 254.04,
+      "end": 258.78,
+      "duration": 4.74,
+      "text": "in the same component so the answer will"
+    },
+    {
+      "start": 255.72,
+      "end": 260.76,
+      "duration": 5.04,
+      "text": "be no so in any stage someone might come"
+    },
+    {
+      "start": 258.78,
+      "end": 263.16,
+      "duration": 4.38,
+      "text": "up and ask you because the graph is"
+    },
+    {
+      "start": 260.76,
+      "end": 266.16,
+      "duration": 5.4,
+      "text": "changing at every step but I can ask you"
+    },
+    {
+      "start": 263.16,
+      "end": 268.26,
+      "duration": 5.1,
+      "text": "a question at any step and you should be"
+    },
+    {
+      "start": 266.16,
+      "end": 270.72,
+      "duration": 4.56,
+      "text": "able to answer that in constant time"
+    },
+    {
+      "start": 268.26,
+      "end": 273.6,
+      "duration": 5.34,
+      "text": "that is what this joint set will do and"
+    },
+    {
+      "start": 270.72,
+      "end": 276.06,
+      "duration": 5.34,
+      "text": "I'll explain you how it does next five"
+    },
+    {
+      "start": 273.6,
+      "end": 278.04,
+      "duration": 4.44,
+      "text": "and six let's connect five and six next"
+    },
+    {
+      "start": 276.06,
+      "end": 280.02,
+      "duration": 3.96,
+      "text": "three and seven let's connect three and"
+    },
+    {
+      "start": 278.04,
+      "end": 282.78,
+      "duration": 4.74,
+      "text": "seven now if I ask you the same question"
+    },
+    {
+      "start": 280.02,
+      "end": 285.0,
+      "duration": 4.98,
+      "text": "does one and four belong two like after"
+    },
+    {
+      "start": 282.78,
+      "end": 286.38,
+      "duration": 3.6,
+      "text": "performing all the operation does one"
+    },
+    {
+      "start": 285.0,
+      "end": 289.74,
+      "duration": 4.74,
+      "text": "and four belong to the same component"
+    },
+    {
+      "start": 286.38,
+      "end": 292.44,
+      "duration": 6.06,
+      "text": "your answer to that will be yes they do"
+    },
+    {
+      "start": 289.74,
+      "end": 295.92,
+      "duration": 6.18,
+      "text": "belong to the same component"
+    },
+    {
+      "start": 292.44,
+      "end": 297.36,
+      "duration": 4.92,
+      "text": "understood so you saw till here the"
+    },
+    {
+      "start": 295.92,
+      "end": 299.4,
+      "duration": 3.48,
+      "text": "graph was something different the moment"
+    },
+    {
+      "start": 297.36,
+      "end": 300.42,
+      "duration": 3.06,
+      "text": "you perform the next two operations the"
+    },
+    {
+      "start": 299.4,
+      "end": 302.52,
+      "duration": 3.12,
+      "text": "graph was"
+    },
+    {
+      "start": 300.42,
+      "end": 304.86,
+      "duration": 4.44,
+      "text": "a combined one so I can ask you this"
+    },
+    {
+      "start": 302.52,
+      "end": 306.9,
+      "duration": 4.38,
+      "text": "particular question or any u and v"
+    },
+    {
+      "start": 304.86,
+      "end": 308.64,
+      "duration": 3.78,
+      "text": "belong to the same component at any"
+    },
+    {
+      "start": 306.9,
+      "end": 311.22,
+      "duration": 4.32,
+      "text": "particular time so this is the use case"
+    },
+    {
+      "start": 308.64,
+      "end": 313.2,
+      "duration": 4.56,
+      "text": "of disjoint set data structure now let's"
+    },
+    {
+      "start": 311.22,
+      "end": 316.74,
+      "duration": 5.52,
+      "text": "quickly check out what is find parent"
+    },
+    {
+      "start": 313.2,
+      "end": 319.08,
+      "duration": 5.88,
+      "text": "and what is Union exactly so in order to"
+    },
+    {
+      "start": 316.74,
+      "end": 322.26,
+      "duration": 5.52,
+      "text": "implement uh disjoint set data structure"
+    },
+    {
+      "start": 319.08,
+      "end": 325.56,
+      "duration": 6.48,
+      "text": "we can Implement Union in two ways one"
+    },
+    {
+      "start": 322.26,
+      "end": 327.78,
+      "duration": 5.52,
+      "text": "is the rank the other one is the size so"
+    },
+    {
+      "start": 325.56,
+      "end": 330.36,
+      "duration": 4.8,
+      "text": "I can follow two ways of doing it okay"
+    },
+    {
+      "start": 327.78,
+      "end": 332.46,
+      "duration": 4.68,
+      "text": "but initially I'll be teaching you the"
+    },
+    {
+      "start": 330.36,
+      "end": 334.32,
+      "duration": 3.96,
+      "text": "rank I'll be coding you up showing you"
+    },
+    {
+      "start": 332.46,
+      "end": 336.3,
+      "duration": 3.84,
+      "text": "how to write a clean code so that it can"
+    },
+    {
+      "start": 334.32,
+      "end": 338.04,
+      "duration": 3.72,
+      "text": "be reused in almost all the problems and"
+    },
+    {
+      "start": 336.3,
+      "end": 341.22,
+      "duration": 4.92,
+      "text": "then I'll be teaching you the size one"
+    },
+    {
+      "start": 338.04,
+      "end": 343.86,
+      "duration": 5.82,
+      "text": "so the video will be uh First Union by"
+    },
+    {
+      "start": 341.22,
+      "end": 345.54,
+      "duration": 4.32,
+      "text": "rank then Union by size okay so let's"
+    },
+    {
+      "start": 343.86,
+      "end": 347.46,
+      "duration": 3.6,
+      "text": "understand right so in order to"
+    },
+    {
+      "start": 345.54,
+      "end": 349.44,
+      "duration": 3.9,
+      "text": "implement Union by rank we will be"
+    },
+    {
+      "start": 347.46,
+      "end": 351.84,
+      "duration": 4.38,
+      "text": "requiring couple of arrays one is the"
+    },
+    {
+      "start": 349.44,
+      "end": 353.76,
+      "duration": 4.32,
+      "text": "rank array while the other one is the"
+    },
+    {
+      "start": 351.84,
+      "end": 355.86,
+      "duration": 4.02,
+      "text": "parent array which will serve for"
+    },
+    {
+      "start": 353.76,
+      "end": 357.66,
+      "duration": 3.9,
+      "text": "finding parent I'll explain you so let's"
+    },
+    {
+      "start": 355.86,
+      "end": 360.12,
+      "duration": 4.26,
+      "text": "quickly assign the rank and the parent"
+    },
+    {
+      "start": 357.66,
+      "end": 362.58,
+      "duration": 4.92,
+      "text": "arrays okay so the initial configuration"
+    },
+    {
+      "start": 360.12,
+      "end": 364.98,
+      "duration": 4.86,
+      "text": "is very very simple what we do is we"
+    },
+    {
+      "start": 362.58,
+      "end": 366.78,
+      "duration": 4.2,
+      "text": "assign a rank array with the same size"
+    },
+    {
+      "start": 364.98,
+      "end": 368.58,
+      "duration": 3.6,
+      "text": "of the number of nodes since the graph"
+    },
+    {
+      "start": 366.78,
+      "end": 371.58,
+      "duration": 4.8,
+      "text": "is one based indexing I start the array"
+    },
+    {
+      "start": 368.58,
+      "end": 374.04,
+      "duration": 5.46,
+      "text": "from one so everyone is assigned to zero"
+    },
+    {
+      "start": 371.58,
+      "end": 375.66,
+      "duration": 4.08,
+      "text": "okay so what does rank 0 mean so if you"
+    },
+    {
+      "start": 374.04,
+      "end": 377.94,
+      "duration": 3.9,
+      "text": "see this particular note there is no one"
+    },
+    {
+      "start": 375.66,
+      "end": 380.1,
+      "duration": 4.44,
+      "text": "beneath it so it means there is no one"
+    },
+    {
+      "start": 377.94,
+      "end": 382.38,
+      "duration": 4.44,
+      "text": "beneath it zero nodes beneath it but"
+    },
+    {
+      "start": 380.1,
+      "end": 384.24,
+      "duration": 4.14,
+      "text": "eventually with the optimizations that"
+    },
+    {
+      "start": 382.38,
+      "end": 385.74,
+      "duration": 3.36,
+      "text": "we will do the meaning will change so"
+    },
+    {
+      "start": 384.24,
+      "end": 387.42,
+      "duration": 3.18,
+      "text": "I'll explain you throughout the course"
+    },
+    {
+      "start": 385.74,
+      "end": 389.28,
+      "duration": 3.54,
+      "text": "so now"
+    },
+    {
+      "start": 387.42,
+      "end": 392.22,
+      "duration": 4.8,
+      "text": "we have a parent array now remember"
+    },
+    {
+      "start": 389.28,
+      "end": 395.82,
+      "duration": 6.54,
+      "text": "initially everyone is the parent of"
+    },
+    {
+      "start": 392.22,
+      "end": 399.24,
+      "duration": 7.02,
+      "text": "himself now what does parent mean parrot"
+    },
+    {
+      "start": 395.82,
+      "end": 401.64,
+      "duration": 5.82,
+      "text": "parent okay right above guy that is what"
+    },
+    {
+      "start": 399.24,
+      "end": 403.86,
+      "duration": 4.62,
+      "text": "is the definition of the parent which is"
+    },
+    {
+      "start": 401.64,
+      "end": 405.78,
+      "duration": 4.14,
+      "text": "stored here again over the course of"
+    },
+    {
+      "start": 403.86,
+      "end": 407.94,
+      "duration": 4.08,
+      "text": "this lecture the definition of parent"
+    },
+    {
+      "start": 405.78,
+      "end": 410.4,
+      "duration": 4.62,
+      "text": "will change as we do multiple"
+    },
+    {
+      "start": 407.94,
+      "end": 413.58,
+      "duration": 5.64,
+      "text": "optimizations in order to obtain a"
+    },
+    {
+      "start": 410.4,
+      "end": 415.38,
+      "duration": 4.98,
+      "text": "constant time complexity so this is what"
+    },
+    {
+      "start": 413.58,
+      "end": 417.3,
+      "duration": 3.72,
+      "text": "we currently have let's quickly start"
+    },
+    {
+      "start": 415.38,
+      "end": 421.02,
+      "duration": 5.64,
+      "text": "the operations so let's quickly write"
+    },
+    {
+      "start": 417.3,
+      "end": 423.66,
+      "duration": 6.36,
+      "text": "the pseudo code for the union of U comma"
+    },
+    {
+      "start": 421.02,
+      "end": 426.72,
+      "duration": 5.7,
+      "text": "V so remember the step one is very very"
+    },
+    {
+      "start": 423.66,
+      "end": 430.2,
+      "duration": 6.54,
+      "text": "simple the step one says find Ultimate"
+    },
+    {
+      "start": 426.72,
+      "end": 432.24,
+      "duration": 5.52,
+      "text": "parenthesis find Ultimate parent of u"
+    },
+    {
+      "start": 430.2,
+      "end": 434.34,
+      "duration": 4.14,
+      "text": "and v what is the meaning of ultimate"
+    },
+    {
+      "start": 432.24,
+      "end": 437.7,
+      "duration": 5.46,
+      "text": "parent I'll explain you and we can term"
+    },
+    {
+      "start": 434.34,
+      "end": 441.54,
+      "duration": 7.2,
+      "text": "this as uh ultimate apparently ultimate"
+    },
+    {
+      "start": 437.7,
+      "end": 445.08,
+      "duration": 7.38,
+      "text": "parent of u and v let's term this as pu"
+    },
+    {
+      "start": 441.54,
+      "end": 448.8,
+      "duration": 7.26,
+      "text": "and PV pu means ultimate parent of view"
+    },
+    {
+      "start": 445.08,
+      "end": 452.4,
+      "duration": 7.32,
+      "text": "PV means ultimate parent of PV Now find"
+    },
+    {
+      "start": 448.8,
+      "end": 456.06,
+      "duration": 7.26,
+      "text": "rank of those ultimate parents find rank"
+    },
+    {
+      "start": 452.4,
+      "end": 460.5,
+      "duration": 8.1,
+      "text": "of pu PV find rank of ultimate parents"
+    },
+    {
+      "start": 456.06,
+      "end": 464.16,
+      "duration": 8.1,
+      "text": "not u and v ultimate parents okay now"
+    },
+    {
+      "start": 460.5,
+      "end": 466.58,
+      "duration": 6.08,
+      "text": "connect smaller rank"
+    },
+    {
+      "start": 464.16,
+      "end": 472.74,
+      "duration": 8.58,
+      "text": "to larger rank"
+    },
+    {
+      "start": 466.58,
+      "end": 475.38,
+      "duration": 8.8,
+      "text": "smaller rank to larger rank always in"
+    },
+    {
+      "start": 472.74,
+      "end": 477.24,
+      "duration": 4.5,
+      "text": "case of equality you can connect anyone"
+    },
+    {
+      "start": 475.38,
+      "end": 479.82,
+      "duration": 4.44,
+      "text": "to anyone we will explain that as we"
+    },
+    {
+      "start": 477.24,
+      "end": 481.92,
+      "duration": 4.68,
+      "text": "move okay cool we have understood or"
+    },
+    {
+      "start": 479.82,
+      "end": 483.9,
+      "duration": 4.08,
+      "text": "I've written the pseudo code okay let's"
+    },
+    {
+      "start": 481.92,
+      "end": 486.42,
+      "duration": 4.5,
+      "text": "Now quickly uh check out the first"
+    },
+    {
+      "start": 483.9,
+      "end": 489.36,
+      "duration": 5.46,
+      "text": "operation that has been asked for us it"
+    },
+    {
+      "start": 486.42,
+      "end": 490.26,
+      "duration": 3.84,
+      "text": "says Union of one two so what I do is I"
+    },
+    {
+      "start": 489.36,
+      "end": 492.36,
+      "duration": 3.0,
+      "text": "have one"
+    },
+    {
+      "start": 490.26,
+      "end": 494.76,
+      "duration": 4.5,
+      "text": "so I go and look at the parent of one"
+    },
+    {
+      "start": 492.36,
+      "end": 497.04,
+      "duration": 4.68,
+      "text": "what is the ultimate parent you have a"
+    },
+    {
+      "start": 494.76,
+      "end": 499.14,
+      "duration": 4.38,
+      "text": "bunch of notes the guy at the top is"
+    },
+    {
+      "start": 497.04,
+      "end": 501.06,
+      "duration": 4.02,
+      "text": "known as the ultimate parent okay so for"
+    },
+    {
+      "start": 499.14,
+      "end": 504.0,
+      "duration": 4.86,
+      "text": "one who is the ultimate parent one"
+    },
+    {
+      "start": 501.06,
+      "end": 507.24,
+      "duration": 6.18,
+      "text": "itself for two two is the ultimate"
+    },
+    {
+      "start": 504.0,
+      "end": 509.16,
+      "duration": 5.16,
+      "text": "parent so I can see as of now the"
+    },
+    {
+      "start": 507.24,
+      "end": 511.62,
+      "duration": 4.38,
+      "text": "ultimate parent of one is one and the"
+    },
+    {
+      "start": 509.16,
+      "end": 513.6,
+      "duration": 4.44,
+      "text": "ultimate parent of two is two what is"
+    },
+    {
+      "start": 511.62,
+      "end": 516.06,
+      "duration": 4.44,
+      "text": "the rank of both can I say the rank of"
+    },
+    {
+      "start": 513.6,
+      "end": 519.36,
+      "duration": 5.76,
+      "text": "both is as of now zero if you carefully"
+    },
+    {
+      "start": 516.06,
+      "end": 521.16,
+      "duration": 5.1,
+      "text": "see both the ranks are zero so if they"
+    },
+    {
+      "start": 519.36,
+      "end": 523.26,
+      "duration": 3.9,
+      "text": "are equal rank you can actually connect"
+    },
+    {
+      "start": 521.16,
+      "end": 525.66,
+      "duration": 4.5,
+      "text": "any one to anyone very very important"
+    },
+    {
+      "start": 523.26,
+      "end": 527.76,
+      "duration": 4.5,
+      "text": "you can go ahead and connect either you"
+    },
+    {
+      "start": 525.66,
+      "end": 529.74,
+      "duration": 4.08,
+      "text": "can connect like one here or either you"
+    },
+    {
+      "start": 527.76,
+      "end": 532.08,
+      "duration": 4.32,
+      "text": "can connect to it is completely your"
+    },
+    {
+      "start": 529.74,
+      "end": 534.48,
+      "duration": 4.74,
+      "text": "choice so what you do is you will go"
+    },
+    {
+      "start": 532.08,
+      "end": 536.88,
+      "duration": 4.8,
+      "text": "ahead and take this two and say can you"
+    },
+    {
+      "start": 534.48,
+      "end": 538.62,
+      "duration": 4.14,
+      "text": "please connect with or I can change the"
+    },
+    {
+      "start": 536.88,
+      "end": 542.58,
+      "duration": 5.7,
+      "text": "color can you please collect connect"
+    },
+    {
+      "start": 538.62,
+      "end": 545.76,
+      "duration": 7.14,
+      "text": "with two and you'll go to that now your"
+    },
+    {
+      "start": 542.58,
+      "end": 547.02,
+      "duration": 4.44,
+      "text": "above parent is one now remember you"
+    },
+    {
+      "start": 545.76,
+      "end": 551.1,
+      "duration": 5.34,
+      "text": "connected"
+    },
+    {
+      "start": 547.02,
+      "end": 553.5,
+      "duration": 6.48,
+      "text": "two to one right both of them had same"
+    },
+    {
+      "start": 551.1,
+      "end": 555.66,
+      "duration": 4.56,
+      "text": "level both of them were equal height"
+    },
+    {
+      "start": 553.5,
+      "end": 557.88,
+      "duration": 4.38,
+      "text": "they took it and connected so the height"
+    },
+    {
+      "start": 555.66,
+      "end": 561.0,
+      "duration": 5.34,
+      "text": "increased and if the height increased"
+    },
+    {
+      "start": 557.88,
+      "end": 564.0,
+      "duration": 6.12,
+      "text": "the rank will also increase by one the"
+    },
+    {
+      "start": 561.0,
+      "end": 566.88,
+      "duration": 5.88,
+      "text": "rank will also increase by one done"
+    },
+    {
+      "start": 564.0,
+      "end": 568.92,
+      "duration": 4.92,
+      "text": "perfect next two three and this is where"
+    },
+    {
+      "start": 566.88,
+      "end": 571.2,
+      "duration": 4.32,
+      "text": "again the next thing comes who is the"
+    },
+    {
+      "start": 568.92,
+      "end": 573.12,
+      "duration": 4.2,
+      "text": "ultimate parent of two let's use the"
+    },
+    {
+      "start": 571.2,
+      "end": 576.78,
+      "duration": 5.58,
+      "text": "ultimate parent of two it's one over"
+    },
+    {
+      "start": 573.12,
+      "end": 579.48,
+      "duration": 6.36,
+      "text": "here and is the one the top guy it is so"
+    },
+    {
+      "start": 576.78,
+      "end": 581.7,
+      "duration": 4.92,
+      "text": "the ultimate parent of two is one who is"
+    },
+    {
+      "start": 579.48,
+      "end": 584.7,
+      "duration": 5.22,
+      "text": "the ultimate parent of three p itself"
+    },
+    {
+      "start": 581.7,
+      "end": 587.04,
+      "duration": 5.34,
+      "text": "what's the rank rank of uh this"
+    },
+    {
+      "start": 584.7,
+      "end": 588.66,
+      "duration": 3.96,
+      "text": "particular one is one rank of this"
+    },
+    {
+      "start": 587.04,
+      "end": 591.84,
+      "duration": 4.8,
+      "text": "particular three is three if c one is"
+    },
+    {
+      "start": 588.66,
+      "end": 594.24,
+      "duration": 5.58,
+      "text": "one three is zero sorry it will be zero"
+    },
+    {
+      "start": 591.84,
+      "end": 596.64,
+      "duration": 4.8,
+      "text": "who is the greater guy this one the"
+    },
+    {
+      "start": 594.24,
+      "end": 598.98,
+      "duration": 4.74,
+      "text": "three will come up and get connected the"
+    },
+    {
+      "start": 596.64,
+      "end": 602.4,
+      "duration": 5.76,
+      "text": "smaller guy comes up and gets connected"
+    },
+    {
+      "start": 598.98,
+      "end": 604.94,
+      "duration": 5.96,
+      "text": "to the larger one so three is connected"
+    },
+    {
+      "start": 602.4,
+      "end": 607.86,
+      "duration": 5.46,
+      "text": "to this now I'll go and erase this"
+    },
+    {
+      "start": 604.94,
+      "end": 610.56,
+      "duration": 5.62,
+      "text": "connected do I do anything to the ranks"
+    },
+    {
+      "start": 607.86,
+      "end": 614.16,
+      "duration": 6.3,
+      "text": "no you will not do anything to the ranks"
+    },
+    {
+      "start": 610.56,
+      "end": 616.32,
+      "duration": 5.76,
+      "text": "why because it still has a height of one"
+    },
+    {
+      "start": 614.16,
+      "end": 618.42,
+      "duration": 4.26,
+      "text": "because you connected a smaller to the"
+    },
+    {
+      "start": 616.32,
+      "end": 620.4,
+      "duration": 4.08,
+      "text": "larger so the larger is not going to"
+    },
+    {
+      "start": 618.42,
+      "end": 622.32,
+      "duration": 3.9,
+      "text": "increase it's not going to increase so"
+    },
+    {
+      "start": 620.4,
+      "end": 626.48,
+      "duration": 6.08,
+      "text": "thereby we keep the same height perfect"
+    },
+    {
+      "start": 622.32,
+      "end": 626.48,
+      "duration": 4.16,
+      "text": "next connect foreign"
+    },
+    {
+      "start": 627.3,
+      "end": 633.6,
+      "duration": 6.3,
+      "text": "4 was the ultimate pattern of five five"
+    },
+    {
+      "start": 629.58,
+      "end": 635.52,
+      "duration": 5.94,
+      "text": "what's the rank 0 0 connect anyone to"
+    },
+    {
+      "start": 633.6,
+      "end": 638.82,
+      "duration": 5.22,
+      "text": "anyone so what I'll do is I'll go ahead"
+    },
+    {
+      "start": 635.52,
+      "end": 641.28,
+      "duration": 5.76,
+      "text": "and connect five to four and I'll erase"
+    },
+    {
+      "start": 638.82,
+      "end": 643.38,
+      "duration": 4.56,
+      "text": "this I'll increase I'll update the"
+    },
+    {
+      "start": 641.28,
+      "end": 645.06,
+      "duration": 3.78,
+      "text": "parent of five to four and the other"
+    },
+    {
+      "start": 643.38,
+      "end": 647.22,
+      "duration": 3.84,
+      "text": "thing that uh by the way I forgot to"
+    },
+    {
+      "start": 645.06,
+      "end": 649.98,
+      "duration": 4.92,
+      "text": "update the parent of three it will be"
+    },
+    {
+      "start": 647.22,
+      "end": 651.3,
+      "duration": 4.08,
+      "text": "one so but the other thing I'll do is"
+    },
+    {
+      "start": 649.98,
+      "end": 653.46,
+      "duration": 3.48,
+      "text": "I'll increase the rank by one because"
+    },
+    {
+      "start": 651.3,
+      "end": 656.22,
+      "duration": 4.92,
+      "text": "two same guy is connected height"
+    },
+    {
+      "start": 653.46,
+      "end": 658.08,
+      "duration": 4.62,
+      "text": "increases so done"
+    },
+    {
+      "start": 656.22,
+      "end": 659.7,
+      "duration": 3.48,
+      "text": "of next"
+    },
+    {
+      "start": 658.08,
+      "end": 662.76,
+      "duration": 4.68,
+      "text": "connect so what is the next thing"
+    },
+    {
+      "start": 659.7,
+      "end": 664.62,
+      "duration": 4.92,
+      "text": "connect six and seven so ultimate parent"
+    },
+    {
+      "start": 662.76,
+      "end": 666.96,
+      "duration": 4.2,
+      "text": "of six is six ultimate parent of seven"
+    },
+    {
+      "start": 664.62,
+      "end": 669.84,
+      "duration": 5.22,
+      "text": "is seven the ranks are zero so what"
+    },
+    {
+      "start": 666.96,
+      "end": 672.3,
+      "duration": 5.34,
+      "text": "you'll do is you will connect seven to"
+    },
+    {
+      "start": 669.84,
+      "end": 676.38,
+      "duration": 6.54,
+      "text": "six you'll update seventh power into six"
+    },
+    {
+      "start": 672.3,
+      "end": 679.68,
+      "duration": 7.38,
+      "text": "it'll update the rank of six to one this"
+    },
+    {
+      "start": 676.38,
+      "end": 682.08,
+      "duration": 5.7,
+      "text": "is how you can easily connect okay done"
+    },
+    {
+      "start": 679.68,
+      "end": 684.6,
+      "duration": 4.92,
+      "text": "so apparently I can just remove this as"
+    },
+    {
+      "start": 682.08,
+      "end": 686.46,
+      "duration": 4.38,
+      "text": "well so as of now this is where we stand"
+    },
+    {
+      "start": 684.6,
+      "end": 690.66,
+      "duration": 6.06,
+      "text": "what's the next step it says connect"
+    },
+    {
+      "start": 686.46,
+      "end": 692.52,
+      "duration": 6.06,
+      "text": "five and six so perfect so who is the"
+    },
+    {
+      "start": 690.66,
+      "end": 696.24,
+      "duration": 5.58,
+      "text": "ultimate parent of five let's see"
+    },
+    {
+      "start": 692.52,
+      "end": 698.22,
+      "duration": 5.7,
+      "text": "ultimate parent of 5. 5 is here so 5's"
+    },
+    {
+      "start": 696.24,
+      "end": 700.44,
+      "duration": 4.2,
+      "text": "parent is four who is actually the top"
+    },
+    {
+      "start": 698.22,
+      "end": 702.18,
+      "duration": 3.96,
+      "text": "boss who's actually the top boss that is"
+    },
+    {
+      "start": 700.44,
+      "end": 705.72,
+      "duration": 5.28,
+      "text": "the Ultimate Fan now I've been asked to"
+    },
+    {
+      "start": 702.18,
+      "end": 708.3,
+      "duration": 6.12,
+      "text": "connect six so six parent is six six is"
+    },
+    {
+      "start": 705.72,
+      "end": 710.7,
+      "duration": 4.98,
+      "text": "parent is six himself so I'll give a"
+    },
+    {
+      "start": 708.3,
+      "end": 713.34,
+      "duration": 5.04,
+      "text": "parent is six let's write the rank rank"
+    },
+    {
+      "start": 710.7,
+      "end": 716.1,
+      "duration": 5.4,
+      "text": "of four if you see is one rank of six if"
+    },
+    {
+      "start": 713.34,
+      "end": 719.28,
+      "duration": 5.94,
+      "text": "you see is one do you agree you do agree"
+    },
+    {
+      "start": 716.1,
+      "end": 721.26,
+      "duration": 5.16,
+      "text": "so apparently I can say that okay fine"
+    },
+    {
+      "start": 719.28,
+      "end": 723.9,
+      "duration": 4.62,
+      "text": "we have someone"
+    },
+    {
+      "start": 721.26,
+      "end": 725.94,
+      "duration": 4.68,
+      "text": "of the same ranks so either this can go"
+    },
+    {
+      "start": 723.9,
+      "end": 727.74,
+      "duration": 3.84,
+      "text": "and get attached here either this can go"
+    },
+    {
+      "start": 725.94,
+      "end": 729.78,
+      "duration": 3.84,
+      "text": "and attach it so you can do as you wish"
+    },
+    {
+      "start": 727.74,
+      "end": 733.08,
+      "duration": 5.34,
+      "text": "so what I'll do is I will just go ahead"
+    },
+    {
+      "start": 729.78,
+      "end": 735.0,
+      "duration": 5.22,
+      "text": "and take the six and make it attached to"
+    },
+    {
+      "start": 733.08,
+      "end": 738.18,
+      "duration": 5.1,
+      "text": "seven oh sorry to four"
+    },
+    {
+      "start": 735.0,
+      "end": 741.06,
+      "duration": 6.06,
+      "text": "done and now I'll omit this remember one"
+    },
+    {
+      "start": 738.18,
+      "end": 743.28,
+      "duration": 5.1,
+      "text": "thing you attached six to four so the"
+    },
+    {
+      "start": 741.06,
+      "end": 745.92,
+      "duration": 4.86,
+      "text": "parent of six will be four the parent of"
+    },
+    {
+      "start": 743.28,
+      "end": 748.98,
+      "duration": 5.7,
+      "text": "six will be four remember this very very"
+    },
+    {
+      "start": 745.92,
+      "end": 750.66,
+      "duration": 4.74,
+      "text": "well okay next what is the other thing"
+    },
+    {
+      "start": 748.98,
+      "end": 752.7,
+      "duration": 3.72,
+      "text": "that you will do you will have to"
+    },
+    {
+      "start": 750.66,
+      "end": 753.84,
+      "duration": 3.18,
+      "text": "increase the rank why because you had"
+    },
+    {
+      "start": 752.7,
+      "end": 756.84,
+      "duration": 4.14,
+      "text": "four or five"
+    },
+    {
+      "start": 753.84,
+      "end": 758.88,
+      "duration": 5.04,
+      "text": "you got six seven both of the ranks if"
+    },
+    {
+      "start": 756.84,
+      "end": 761.58,
+      "duration": 4.74,
+      "text": "you carefully see four and six at a rank"
+    },
+    {
+      "start": 758.88,
+      "end": 763.26,
+      "duration": 4.38,
+      "text": "one so since you attached same guys"
+    },
+    {
+      "start": 761.58,
+      "end": 765.78,
+      "duration": 4.2,
+      "text": "height will if you see the height"
+    },
+    {
+      "start": 763.26,
+      "end": 768.0,
+      "duration": 4.74,
+      "text": "increased so apparently you go ahead and"
+    },
+    {
+      "start": 765.78,
+      "end": 770.16,
+      "duration": 4.38,
+      "text": "say the rank to increase by one more so"
+    },
+    {
+      "start": 768.0,
+      "end": 772.98,
+      "duration": 4.98,
+      "text": "the rank will be two so this is where we"
+    },
+    {
+      "start": 770.16,
+      "end": 777.3,
+      "duration": 7.14,
+      "text": "stand till we have not performed the"
+    },
+    {
+      "start": 772.98,
+      "end": 780.12,
+      "duration": 7.14,
+      "text": "last step now if if I kind of understood"
+    },
+    {
+      "start": 777.3,
+      "end": 784.04,
+      "duration": 6.74,
+      "text": "everything now suddenly if someone comes"
+    },
+    {
+      "start": 780.12,
+      "end": 788.76,
+      "duration": 8.64,
+      "text": "up and says does let me write it uh does"
+    },
+    {
+      "start": 784.04,
+      "end": 790.2,
+      "duration": 6.16,
+      "text": "one and seven or do one and seven belong"
+    },
+    {
+      "start": 788.76,
+      "end": 793.2,
+      "duration": 4.44,
+      "text": "to same"
+    },
+    {
+      "start": 790.2,
+      "end": 795.54,
+      "duration": 5.34,
+      "text": "compo if I ask you this question the"
+    },
+    {
+      "start": 793.2,
+      "end": 798.66,
+      "duration": 5.46,
+      "text": "answer is no but how will you find out"
+    },
+    {
+      "start": 795.54,
+      "end": 801.06,
+      "duration": 5.52,
+      "text": "this is where something like"
+    },
+    {
+      "start": 798.66,
+      "end": 802.56,
+      "duration": 3.9,
+      "text": "find parent will help this is where"
+    },
+    {
+      "start": 801.06,
+      "end": 804.72,
+      "duration": 3.66,
+      "text": "something like fine parent will come"
+    },
+    {
+      "start": 802.56,
+      "end": 806.7,
+      "duration": 4.14,
+      "text": "into picture okay so since I'm saying"
+    },
+    {
+      "start": 804.72,
+      "end": 809.04,
+      "duration": 4.32,
+      "text": "find parent will come into picture let's"
+    },
+    {
+      "start": 806.7,
+      "end": 811.32,
+      "duration": 4.62,
+      "text": "understand so when I'm saying does 1 and"
+    },
+    {
+      "start": 809.04,
+      "end": 813.72,
+      "duration": 4.68,
+      "text": "7 belong to the same component I look at"
+    },
+    {
+      "start": 811.32,
+      "end": 816.3,
+      "duration": 4.98,
+      "text": "the parent of one it's one I look at the"
+    },
+    {
+      "start": 813.72,
+      "end": 817.98,
+      "duration": 4.26,
+      "text": "parent of seven it is six so I'll be"
+    },
+    {
+      "start": 816.3,
+      "end": 820.38,
+      "duration": 4.08,
+      "text": "like okay the parents are different they"
+    },
+    {
+      "start": 817.98,
+      "end": 824.1,
+      "duration": 6.12,
+      "text": "are not a tweet you should not do like"
+    },
+    {
+      "start": 820.38,
+      "end": 826.92,
+      "duration": 6.54,
+      "text": "this just imagine you were having a ate"
+    },
+    {
+      "start": 824.1,
+      "end": 828.66,
+      "duration": 4.56,
+      "text": "here imagine nice I'll ask does eight"
+    },
+    {
+      "start": 826.92,
+      "end": 830.34,
+      "duration": 3.42,
+      "text": "and seven belong to the same component"
+    },
+    {
+      "start": 828.66,
+      "end": 832.08,
+      "duration": 3.42,
+      "text": "now something to notice we are not"
+    },
+    {
+      "start": 830.34,
+      "end": 833.64,
+      "duration": 3.3,
+      "text": "creating a graph we are creating a"
+    },
+    {
+      "start": 832.08,
+      "end": 835.26,
+      "duration": 3.18,
+      "text": "different data structure over here a"
+    },
+    {
+      "start": 833.64,
+      "end": 836.82,
+      "duration": 3.18,
+      "text": "graph is not being created okay"
+    },
+    {
+      "start": 835.26,
+      "end": 839.1,
+      "duration": 3.84,
+      "text": "different data structure is being"
+    },
+    {
+      "start": 836.82,
+      "end": 840.96,
+      "duration": 4.14,
+      "text": "created if I ask you if 8 and 7 belong"
+    },
+    {
+      "start": 839.1,
+      "end": 843.3,
+      "duration": 4.2,
+      "text": "to the same component ideally they"
+    },
+    {
+      "start": 840.96,
+      "end": 845.88,
+      "duration": 4.92,
+      "text": "should but if you will look at the"
+    },
+    {
+      "start": 843.3,
+      "end": 848.4,
+      "duration": 5.1,
+      "text": "parent then a would have stored five"
+    },
+    {
+      "start": 845.88,
+      "end": 850.44,
+      "duration": 4.56,
+      "text": "seven would have stored six both have"
+    },
+    {
+      "start": 848.4,
+      "end": 852.72,
+      "duration": 4.32,
+      "text": "different parents can you actually tell"
+    },
+    {
+      "start": 850.44,
+      "end": 855.66,
+      "duration": 5.22,
+      "text": "on the basis of parents or do you need"
+    },
+    {
+      "start": 852.72,
+      "end": 857.7,
+      "duration": 4.98,
+      "text": "the ultimate parent the top guy the boss"
+    },
+    {
+      "start": 855.66,
+      "end": 860.58,
+      "duration": 4.92,
+      "text": "need the boss you need the ultimate"
+    },
+    {
+      "start": 857.7,
+      "end": 862.68,
+      "duration": 4.98,
+      "text": "parent so this is why if I'm asking"
+    },
+    {
+      "start": 860.58,
+      "end": 864.78,
+      "duration": 4.2,
+      "text": "who's the parent of seven you say the"
+    },
+    {
+      "start": 862.68,
+      "end": 868.38,
+      "duration": 5.7,
+      "text": "parent of seven is four so you go seven"
+    },
+    {
+      "start": 864.78,
+      "end": 871.56,
+      "duration": 6.78,
+      "text": "and you see six you see six you see four"
+    },
+    {
+      "start": 868.38,
+      "end": 874.14,
+      "duration": 5.76,
+      "text": "uc4 uc4 oh I'm the boss that's why my"
+    },
+    {
+      "start": 871.56,
+      "end": 877.02,
+      "duration": 5.46,
+      "text": "parent is me that's why you say the"
+    },
+    {
+      "start": 874.14,
+      "end": 879.12,
+      "duration": 4.98,
+      "text": "parent ultimate parent boss is Sport and"
+    },
+    {
+      "start": 877.02,
+      "end": 881.4,
+      "duration": 4.38,
+      "text": "the boss for one is one so both have"
+    },
+    {
+      "start": 879.12,
+      "end": 884.16,
+      "duration": 5.04,
+      "text": "different ultimate parents if both have"
+    },
+    {
+      "start": 881.4,
+      "end": 886.32,
+      "duration": 4.92,
+      "text": "different ultimate parents you say they"
+    },
+    {
+      "start": 884.16,
+      "end": 889.32,
+      "duration": 5.16,
+      "text": "do not belong to the same component this"
+    },
+    {
+      "start": 886.32,
+      "end": 892.26,
+      "duration": 5.94,
+      "text": "is the use of fine pan now since you are"
+    },
+    {
+      "start": 889.32,
+      "end": 894.42,
+      "duration": 5.1,
+      "text": "creating a kind of a tree structure the"
+    },
+    {
+      "start": 892.26,
+      "end": 896.82,
+      "duration": 4.56,
+      "text": "tree will increase in depth with more"
+    },
+    {
+      "start": 894.42,
+      "end": 898.34,
+      "duration": 3.92,
+      "text": "number of edge additions the tree will"
+    },
+    {
+      "start": 896.82,
+      "end": 903.0,
+      "duration": 6.18,
+      "text": "increase increase increase"
+    },
+    {
+      "start": 898.34,
+      "end": 906.0,
+      "duration": 7.66,
+      "text": "so it will end up taking login"
+    },
+    {
+      "start": 903.0,
+      "end": 907.68,
+      "duration": 4.68,
+      "text": "it is theoretically proven the table uh"
+    },
+    {
+      "start": 906.0,
+      "end": 910.56,
+      "duration": 4.56,
+      "text": "the tree will increase and will end up"
+    },
+    {
+      "start": 907.68,
+      "end": 913.62,
+      "duration": 5.94,
+      "text": "taking logarithmic of n if you just"
+    },
+    {
+      "start": 910.56,
+      "end": 915.78,
+      "duration": 5.22,
+      "text": "apply Union by rank because in order to"
+    },
+    {
+      "start": 913.62,
+      "end": 918.66,
+      "duration": 5.04,
+      "text": "find the parent of 7 you have to go from"
+    },
+    {
+      "start": 915.78,
+      "end": 921.42,
+      "duration": 5.64,
+      "text": "seven to six from six you have to go to"
+    },
+    {
+      "start": 918.66,
+      "end": 923.1,
+      "duration": 4.44,
+      "text": "four and at 4 you find he is himself so"
+    },
+    {
+      "start": 921.42,
+      "end": 924.9,
+      "duration": 3.48,
+      "text": "you get the top boss or the ultimate"
+    },
+    {
+      "start": 923.1,
+      "end": 927.6,
+      "duration": 4.5,
+      "text": "parent that's going to take you a"
+    },
+    {
+      "start": 924.9,
+      "end": 931.2,
+      "duration": 6.3,
+      "text": "logarithmic of time but wait that's why"
+    },
+    {
+      "start": 927.6,
+      "end": 933.9,
+      "duration": 6.3,
+      "text": "you said it works in constant it does we"
+    },
+    {
+      "start": 931.2,
+      "end": 936.24,
+      "duration": 5.04,
+      "text": "apply something as path"
+    },
+    {
+      "start": 933.9,
+      "end": 940.08,
+      "duration": 6.18,
+      "text": "compression"
+    },
+    {
+      "start": 936.24,
+      "end": 942.42,
+      "duration": 6.18,
+      "text": "okay so what I do is I say okay someone"
+    },
+    {
+      "start": 940.08,
+      "end": 944.88,
+      "duration": 4.8,
+      "text": "did ask me to find the parent of seven"
+    },
+    {
+      "start": 942.42,
+      "end": 949.32,
+      "duration": 6.9,
+      "text": "so what did I do I went to six because"
+    },
+    {
+      "start": 944.88,
+      "end": 952.5,
+      "duration": 7.62,
+      "text": "six was his right father or the next"
+    },
+    {
+      "start": 949.32,
+      "end": 955.62,
+      "duration": 6.3,
+      "text": "parent and success parent was four and"
+    },
+    {
+      "start": 952.5,
+      "end": 958.02,
+      "duration": 5.52,
+      "text": "four says and the parent so you can"
+    },
+    {
+      "start": 955.62,
+      "end": 960.66,
+      "duration": 5.04,
+      "text": "write something like this okay I went"
+    },
+    {
+      "start": 958.02,
+      "end": 962.88,
+      "duration": 4.86,
+      "text": "from seven to six six to four so I know"
+    },
+    {
+      "start": 960.66,
+      "end": 965.22,
+      "duration": 4.56,
+      "text": "the four is the parent so once you have"
+    },
+    {
+      "start": 962.88,
+      "end": 966.78,
+      "duration": 3.9,
+      "text": "figured out Seven's parent is four and"
+    },
+    {
+      "start": 965.22,
+      "end": 969.0,
+      "duration": 3.78,
+      "text": "since we are just dealing with parents"
+    },
+    {
+      "start": 966.78,
+      "end": 972.3,
+      "duration": 5.52,
+      "text": "and that is what I require because of"
+    },
+    {
+      "start": 969.0,
+      "end": 974.82,
+      "duration": 5.82,
+      "text": "aim main goal is to figure out who is"
+    },
+    {
+      "start": 972.3,
+      "end": 977.76,
+      "duration": 5.46,
+      "text": "the ultimate parent so can I say once"
+    },
+    {
+      "start": 974.82,
+      "end": 979.56,
+      "duration": 4.74,
+      "text": "I've gone to seven to six to four and"
+    },
+    {
+      "start": 977.76,
+      "end": 982.2,
+      "duration": 4.44,
+      "text": "once I figured out the parent of seven"
+    },
+    {
+      "start": 979.56,
+      "end": 985.08,
+      "duration": 5.52,
+      "text": "is four can I actually say"
+    },
+    {
+      "start": 982.2,
+      "end": 987.24,
+      "duration": 5.04,
+      "text": "let's I don't need this link anymore uh"
+    },
+    {
+      "start": 985.08,
+      "end": 989.64,
+      "duration": 4.56,
+      "text": "I don't need this link anymore because I"
+    },
+    {
+      "start": 987.24,
+      "end": 992.58,
+      "duration": 5.34,
+      "text": "know Seven's parent is not food so can I"
+    },
+    {
+      "start": 989.64,
+      "end": 994.86,
+      "duration": 5.22,
+      "text": "change Seven's parent to four I can"
+    },
+    {
+      "start": 992.58,
+      "end": 997.74,
+      "duration": 5.16,
+      "text": "because the next time if someone again"
+    },
+    {
+      "start": 994.86,
+      "end": 1000.8,
+      "duration": 5.94,
+      "text": "comes up and says me hey does"
+    },
+    {
+      "start": 997.74,
+      "end": 1003.32,
+      "duration": 5.58,
+      "text": "2 and 7 belong to the same component and"
+    },
+    {
+      "start": 1000.8,
+      "end": 1005.06,
+      "duration": 4.26,
+      "text": "you again go and call find parent you"
+    },
+    {
+      "start": 1003.32,
+      "end": 1008.24,
+      "duration": 4.92,
+      "text": "will not move like seven six four"
+    },
+    {
+      "start": 1005.06,
+      "end": 1010.46,
+      "duration": 5.4,
+      "text": "because this time 7 will directly go to"
+    },
+    {
+      "start": 1008.24,
+      "end": 1013.88,
+      "duration": 5.64,
+      "text": "four and it will find him to be the boss"
+    },
+    {
+      "start": 1010.46,
+      "end": 1016.16,
+      "duration": 5.7,
+      "text": "so he did a path compression you did a"
+    },
+    {
+      "start": 1013.88,
+      "end": 1019.28,
+      "duration": 5.4,
+      "text": "path compression you said"
+    },
+    {
+      "start": 1016.16,
+      "end": 1020.9,
+      "duration": 4.74,
+      "text": "once I will just compress you and then I"
+    },
+    {
+      "start": 1019.28,
+      "end": 1023.18,
+      "duration": 3.9,
+      "text": "know that Hey listen"
+    },
+    {
+      "start": 1020.9,
+      "end": 1025.22,
+      "duration": 4.32,
+      "text": "your parent is this guy I know this I"
+    },
+    {
+      "start": 1023.18,
+      "end": 1027.44,
+      "duration": 4.26,
+      "text": "don't need to go via sex imagine the"
+    },
+    {
+      "start": 1025.22,
+      "end": 1028.64,
+      "duration": 3.42,
+      "text": "tree to be longer imagine the tree or"
+    },
+    {
+      "start": 1027.44,
+      "end": 1030.8,
+      "duration": 3.36,
+      "text": "something like this"
+    },
+    {
+      "start": 1028.64,
+      "end": 1033.02,
+      "duration": 4.38,
+      "text": "just imagine"
+    },
+    {
+      "start": 1030.8,
+      "end": 1034.7,
+      "duration": 3.9,
+      "text": "take it as an imagination imagine the"
+    },
+    {
+      "start": 1033.02,
+      "end": 1037.64,
+      "duration": 4.62,
+      "text": "tree was something like this and someone"
+    },
+    {
+      "start": 1034.7,
+      "end": 1040.34,
+      "duration": 5.64,
+      "text": "said find a parent of five so what would"
+    },
+    {
+      "start": 1037.64,
+      "end": 1041.9,
+      "duration": 4.26,
+      "text": "uh will you ideally do it'll go to Five"
+    },
+    {
+      "start": 1040.34,
+      "end": 1044.0,
+      "duration": 3.66,
+      "text": "you'll go to four you'll go to three"
+    },
+    {
+      "start": 1041.9,
+      "end": 1045.44,
+      "duration": 3.54,
+      "text": "you'll go to two you'll go to one and at"
+    },
+    {
+      "start": 1044.0,
+      "end": 1047.48,
+      "duration": 3.48,
+      "text": "one you'll find he's the parent himself"
+    },
+    {
+      "start": 1045.44,
+      "end": 1049.82,
+      "duration": 4.38,
+      "text": "and he'll say one is the parrot you will"
+    },
+    {
+      "start": 1047.48,
+      "end": 1052.58,
+      "duration": 5.1,
+      "text": "say one is the parent but what I will do"
+    },
+    {
+      "start": 1049.82,
+      "end": 1054.5,
+      "duration": 4.68,
+      "text": "is I'll do a path compression I know one"
+    },
+    {
+      "start": 1052.58,
+      "end": 1057.08,
+      "duration": 4.5,
+      "text": "is the parent and one will be the parent"
+    },
+    {
+      "start": 1054.5,
+      "end": 1059.42,
+      "duration": 4.92,
+      "text": "of two also so I'll say two is directly"
+    },
+    {
+      "start": 1057.08,
+      "end": 1061.94,
+      "duration": 4.86,
+      "text": "on it one will be the ultimate parent of"
+    },
+    {
+      "start": 1059.42,
+      "end": 1063.74,
+      "duration": 4.32,
+      "text": "three as well so I'll say"
+    },
+    {
+      "start": 1061.94,
+      "end": 1065.48,
+      "duration": 3.54,
+      "text": "one will be the ultimate parent of four"
+    },
+    {
+      "start": 1063.74,
+      "end": 1067.76,
+      "duration": 4.02,
+      "text": "as well so I'll just remove this and say"
+    },
+    {
+      "start": 1065.48,
+      "end": 1071.62,
+      "duration": 6.14,
+      "text": "and I know five ultimate parent will be"
+    },
+    {
+      "start": 1067.76,
+      "end": 1075.46,
+      "duration": 7.7,
+      "text": "one so apparently a tree which was"
+    },
+    {
+      "start": 1071.62,
+      "end": 1075.46,
+      "duration": 3.84,
+      "text": "something like this"
+    },
+    {
+      "start": 1075.5,
+      "end": 1082.28,
+      "duration": 6.78,
+      "text": "if you do path compression on finding"
+    },
+    {
+      "start": 1078.08,
+      "end": 1083.9,
+      "duration": 5.82,
+      "text": "parent of five four three two one and"
+    },
+    {
+      "start": 1082.28,
+      "end": 1085.52,
+      "duration": 3.24,
+      "text": "you get two as the parent"
+    },
+    {
+      "start": 1083.9,
+      "end": 1088.64,
+      "duration": 4.74,
+      "text": "it returns to"
+    },
+    {
+      "start": 1085.52,
+      "end": 1091.1,
+      "duration": 5.58,
+      "text": "sorry it returns one it returns one it"
+    },
+    {
+      "start": 1088.64,
+      "end": 1093.02,
+      "duration": 4.38,
+      "text": "returns one it returns one because you"
+    },
+    {
+      "start": 1091.1,
+      "end": 1095.36,
+      "duration": 4.26,
+      "text": "went when to end went and you"
+    },
+    {
+      "start": 1093.02,
+      "end": 1097.34,
+      "duration": 4.32,
+      "text": "backtracked to get one one one so what"
+    },
+    {
+      "start": 1095.36,
+      "end": 1099.2,
+      "duration": 3.84,
+      "text": "I'll do is when this guy will return"
+    },
+    {
+      "start": 1097.34,
+      "end": 1101.66,
+      "duration": 4.32,
+      "text": "basically when this guy will return one"
+    },
+    {
+      "start": 1099.2,
+      "end": 1103.64,
+      "duration": 4.44,
+      "text": "I'll say three your ultimate parent is"
+    },
+    {
+      "start": 1101.66,
+      "end": 1104.84,
+      "duration": 3.18,
+      "text": "one why are you connected to two why are"
+    },
+    {
+      "start": 1103.64,
+      "end": 1107.72,
+      "duration": 4.08,
+      "text": "you wasting your time getting connected"
+    },
+    {
+      "start": 1104.84,
+      "end": 1110.84,
+      "duration": 6.0,
+      "text": "to two could be like yes does make sense"
+    },
+    {
+      "start": 1107.72,
+      "end": 1112.7,
+      "duration": 4.98,
+      "text": "let me connect to one before I be like"
+    },
+    {
+      "start": 1110.84,
+      "end": 1115.94,
+      "duration": 5.1,
+      "text": "yes I'm also wasting time I will be like"
+    },
+    {
+      "start": 1112.7,
+      "end": 1118.1,
+      "duration": 5.4,
+      "text": "I'm wasting time everyone goes and gets"
+    },
+    {
+      "start": 1115.94,
+      "end": 1121.16,
+      "duration": 5.22,
+      "text": "connected so this is how the graph will"
+    },
+    {
+      "start": 1118.1,
+      "end": 1122.66,
+      "duration": 4.56,
+      "text": "change now under one we will have to we"
+    },
+    {
+      "start": 1121.16,
+      "end": 1126.74,
+      "duration": 5.58,
+      "text": "will have three we will have four we"
+    },
+    {
+      "start": 1122.66,
+      "end": 1129.32,
+      "duration": 6.66,
+      "text": "will have five directly directly yes so"
+    },
+    {
+      "start": 1126.74,
+      "end": 1131.0,
+      "duration": 4.26,
+      "text": "you know this is for sure and next time"
+    },
+    {
+      "start": 1129.32,
+      "end": 1133.1,
+      "duration": 3.78,
+      "text": "when someone comes up and says find"
+    },
+    {
+      "start": 1131.0,
+      "end": 1135.5,
+      "duration": 4.5,
+      "text": "parent of food I'll be like array one"
+    },
+    {
+      "start": 1133.1,
+      "end": 1137.54,
+      "duration": 4.44,
+      "text": "direct low one because four is connected"
+    },
+    {
+      "start": 1135.5,
+      "end": 1139.22,
+      "duration": 3.72,
+      "text": "to one and one is the ultimate parent"
+    },
+    {
+      "start": 1137.54,
+      "end": 1141.5,
+      "duration": 3.96,
+      "text": "someone comes up and says find parent of"
+    },
+    {
+      "start": 1139.22,
+      "end": 1144.26,
+      "duration": 5.04,
+      "text": "five take one one is directly connected"
+    },
+    {
+      "start": 1141.5,
+      "end": 1146.3,
+      "duration": 4.8,
+      "text": "ultimate parent so this is what the path"
+    },
+    {
+      "start": 1144.26,
+      "end": 1148.28,
+      "duration": 4.02,
+      "text": "compression technique is if someone is"
+    },
+    {
+      "start": 1146.3,
+      "end": 1150.38,
+      "duration": 4.08,
+      "text": "asking me parent everyone in the path"
+    },
+    {
+      "start": 1148.28,
+      "end": 1153.08,
+      "duration": 4.8,
+      "text": "whom I encounter I'll replace their"
+    },
+    {
+      "start": 1150.38,
+      "end": 1156.14,
+      "duration": 5.76,
+      "text": "links and attach it to the direct parent"
+    },
+    {
+      "start": 1153.08,
+      "end": 1157.88,
+      "duration": 4.8,
+      "text": "but here comes a slight twist I'll"
+    },
+    {
+      "start": 1156.14,
+      "end": 1159.2,
+      "duration": 3.06,
+      "text": "attach it to the direct parent so it's"
+    },
+    {
+      "start": 1157.88,
+      "end": 1162.44,
+      "duration": 4.56,
+      "text": "fine"
+    },
+    {
+      "start": 1159.2,
+      "end": 1163.7,
+      "duration": 4.5,
+      "text": "so what we usually do is we attach it to"
+    },
+    {
+      "start": 1162.44,
+      "end": 1166.76,
+      "duration": 4.32,
+      "text": "the direct parent and that's what we"
+    },
+    {
+      "start": 1163.7,
+      "end": 1168.14,
+      "duration": 4.44,
+      "text": "call as path compression okay"
+    },
+    {
+      "start": 1166.76,
+      "end": 1169.82,
+      "duration": 3.06,
+      "text": "remember this"
+    },
+    {
+      "start": 1168.14,
+      "end": 1171.68,
+      "duration": 3.54,
+      "text": "so as of now we have something like this"
+    },
+    {
+      "start": 1169.82,
+      "end": 1174.14,
+      "duration": 4.32,
+      "text": "now what will happen"
+    },
+    {
+      "start": 1171.68,
+      "end": 1176.24,
+      "duration": 4.56,
+      "text": "the next three and seven will come so"
+    },
+    {
+      "start": 1174.14,
+      "end": 1179.42,
+      "duration": 5.28,
+      "text": "I'll be like you have to attach Three N"
+    },
+    {
+      "start": 1176.24,
+      "end": 1181.64,
+      "duration": 5.4,
+      "text": "Sub so we know three ultimate parent is"
+    },
+    {
+      "start": 1179.42,
+      "end": 1184.88,
+      "duration": 5.46,
+      "text": "one and that's very easily found because"
+    },
+    {
+      "start": 1181.64,
+      "end": 1186.74,
+      "duration": 5.1,
+      "text": "3 is directly attached to one but when I"
+    },
+    {
+      "start": 1184.88,
+      "end": 1188.84,
+      "duration": 3.96,
+      "text": "try to found out I find out the seven"
+    },
+    {
+      "start": 1186.74,
+      "end": 1191.72,
+      "duration": 4.98,
+      "text": "I'll have to find the parent of seven"
+    },
+    {
+      "start": 1188.84,
+      "end": 1193.4,
+      "duration": 4.56,
+      "text": "which goes to 6 which goes to 4 and in"
+    },
+    {
+      "start": 1191.72,
+      "end": 1195.62,
+      "duration": 3.9,
+      "text": "order to find the parent we will end up"
+    },
+    {
+      "start": 1193.4,
+      "end": 1197.36,
+      "duration": 3.96,
+      "text": "doing a path compression we will end up"
+    },
+    {
+      "start": 1195.62,
+      "end": 1198.98,
+      "duration": 3.36,
+      "text": "doing a path compression so let's be"
+    },
+    {
+      "start": 1197.36,
+      "end": 1201.2,
+      "duration": 3.84,
+      "text": "honest let's do the path compression"
+    },
+    {
+      "start": 1198.98,
+      "end": 1203.78,
+      "duration": 4.8,
+      "text": "which will be something like this"
+    },
+    {
+      "start": 1201.2,
+      "end": 1204.8,
+      "duration": 3.6,
+      "text": "and I'll find the ultimate parent of 7"
+    },
+    {
+      "start": 1203.78,
+      "end": 1208.34,
+      "duration": 4.56,
+      "text": "to be"
+    },
+    {
+      "start": 1204.8,
+      "end": 1210.38,
+      "duration": 5.58,
+      "text": "4 who is connected to himself right but"
+    },
+    {
+      "start": 1208.34,
+      "end": 1212.98,
+      "duration": 4.64,
+      "text": "if you do this the tree will be"
+    },
+    {
+      "start": 1210.38,
+      "end": 1212.98,
+      "duration": 2.6,
+      "text": "something like this"
+    },
+    {
+      "start": 1213.86,
+      "end": 1219.74,
+      "duration": 5.88,
+      "text": "and the rank of four if you carefully"
+    },
+    {
+      "start": 1215.54,
+      "end": 1221.12,
+      "duration": 5.58,
+      "text": "observe is 2. but actually you have 5 6"
+    },
+    {
+      "start": 1219.74,
+      "end": 1223.58,
+      "duration": 3.84,
+      "text": "and 7."
+    },
+    {
+      "start": 1221.12,
+      "end": 1225.56,
+      "duration": 4.44,
+      "text": "ID the rank will also decrease but we"
+    },
+    {
+      "start": 1223.58,
+      "end": 1228.5,
+      "duration": 4.92,
+      "text": "cannot do it we cannot do it because we"
+    },
+    {
+      "start": 1225.56,
+      "end": 1231.14,
+      "duration": 5.58,
+      "text": "are not sure of it because"
+    },
+    {
+      "start": 1228.5,
+      "end": 1233.48,
+      "duration": 4.98,
+      "text": "the rank cannot be reduced in while path"
+    },
+    {
+      "start": 1231.14,
+      "end": 1236.32,
+      "duration": 5.18,
+      "text": "compression the simple reason is imagine"
+    },
+    {
+      "start": 1233.48,
+      "end": 1238.94,
+      "duration": 5.46,
+      "text": "you had something like this"
+    },
+    {
+      "start": 1236.32,
+      "end": 1241.04,
+      "duration": 4.72,
+      "text": "and someone asked you to find parent of"
+    },
+    {
+      "start": 1238.94,
+      "end": 1243.74,
+      "duration": 4.8,
+      "text": "eight so you went ahead and found parent"
+    },
+    {
+      "start": 1241.04,
+      "end": 1246.44,
+      "duration": 5.4,
+      "text": "of eight and path compressed see you"
+    },
+    {
+      "start": 1243.74,
+      "end": 1248.24,
+      "duration": 4.5,
+      "text": "reduced one section of the tree but the"
+    },
+    {
+      "start": 1246.44,
+      "end": 1253.4,
+      "duration": 6.96,
+      "text": "other section is still having a bigger"
+    },
+    {
+      "start": 1248.24,
+      "end": 1255.08,
+      "duration": 6.84,
+      "text": "length so the rank cannot be here"
+    },
+    {
+      "start": 1253.4,
+      "end": 1258.38,
+      "duration": 4.98,
+      "text": "uh"
+    },
+    {
+      "start": 1255.08,
+      "end": 1261.2,
+      "duration": 6.12,
+      "text": "cannot be reduced so that's why we call"
+    },
+    {
+      "start": 1258.38,
+      "end": 1263.06,
+      "duration": 4.68,
+      "text": "it as a rank and not height if we can"
+    },
+    {
+      "start": 1261.2,
+      "end": 1265.16,
+      "duration": 3.96,
+      "text": "reduce it we would have called it as a"
+    },
+    {
+      "start": 1263.06,
+      "end": 1267.02,
+      "duration": 3.96,
+      "text": "height but since it cannot be reduced we"
+    },
+    {
+      "start": 1265.16,
+      "end": 1270.08,
+      "duration": 4.92,
+      "text": "call it as a rank rank in the sense"
+    },
+    {
+      "start": 1267.02,
+      "end": 1272.84,
+      "duration": 5.82,
+      "text": "means this guy is bigger than this guy"
+    },
+    {
+      "start": 1270.08,
+      "end": 1274.46,
+      "duration": 4.38,
+      "text": "sorry opposite this guy is bigger than"
+    },
+    {
+      "start": 1272.84,
+      "end": 1276.92,
+      "duration": 4.08,
+      "text": "this guy that's it that's the meaning of"
+    },
+    {
+      "start": 1274.46,
+      "end": 1279.26,
+      "duration": 4.8,
+      "text": "right this guy is higher ranked than me"
+    },
+    {
+      "start": 1276.92,
+      "end": 1282.92,
+      "duration": 6.0,
+      "text": "got it so the moment you find the parent"
+    },
+    {
+      "start": 1279.26,
+      "end": 1284.78,
+      "duration": 5.52,
+      "text": "of 7 to be 4 I find the rank to be 2"
+    },
+    {
+      "start": 1282.92,
+      "end": 1286.46,
+      "duration": 3.54,
+      "text": "which means this is the bigger guy so"
+    },
+    {
+      "start": 1284.78,
+      "end": 1288.68,
+      "duration": 3.9,
+      "text": "the smaller guy will this time come up"
+    },
+    {
+      "start": 1286.46,
+      "end": 1291.26,
+      "duration": 4.8,
+      "text": "and get attached to the sky so what will"
+    },
+    {
+      "start": 1288.68,
+      "end": 1293.24,
+      "duration": 4.56,
+      "text": "happen is this guy will come up and get"
+    },
+    {
+      "start": 1291.26,
+      "end": 1294.38,
+      "duration": 3.12,
+      "text": "attached to this one so ultimately we"
+    },
+    {
+      "start": 1293.24,
+      "end": 1296.48,
+      "duration": 3.24,
+      "text": "will have"
+    },
+    {
+      "start": 1294.38,
+      "end": 1298.76,
+      "duration": 4.38,
+      "text": "so ultimately what we will have is uh"
+    },
+    {
+      "start": 1296.48,
+      "end": 1301.7,
+      "duration": 5.22,
+      "text": "the parent of seven will be 4 and I'll"
+    },
+    {
+      "start": 1298.76,
+      "end": 1304.22,
+      "duration": 5.46,
+      "text": "attach one two four so what will happen"
+    },
+    {
+      "start": 1301.7,
+      "end": 1308.48,
+      "duration": 6.78,
+      "text": "the parent of 1 will now become"
+    },
+    {
+      "start": 1304.22,
+      "end": 1312.02,
+      "duration": 7.8,
+      "text": "4 correct so if I just read uh draw it"
+    },
+    {
+      "start": 1308.48,
+      "end": 1315.2,
+      "duration": 6.72,
+      "text": "it's going to look something like this"
+    },
+    {
+      "start": 1312.02,
+      "end": 1318.92,
+      "duration": 6.9,
+      "text": "one attached here and two and three"
+    },
+    {
+      "start": 1315.2,
+      "end": 1321.2,
+      "duration": 6.0,
+      "text": "attached to this guy correct so will the"
+    },
+    {
+      "start": 1318.92,
+      "end": 1323.3,
+      "duration": 4.38,
+      "text": "rank change no it's still the larger guy"
+    },
+    {
+      "start": 1321.2,
+      "end": 1325.34,
+      "duration": 4.14,
+      "text": "attaching the smaller to the larger guy"
+    },
+    {
+      "start": 1323.3,
+      "end": 1327.56,
+      "duration": 4.26,
+      "text": "will not impact because the rank of one"
+    },
+    {
+      "start": 1325.34,
+      "end": 1329.9,
+      "duration": 4.56,
+      "text": "if you remember was one the rank of four"
+    },
+    {
+      "start": 1327.56,
+      "end": 1331.7,
+      "duration": 4.14,
+      "text": "was two so we are not"
+    },
+    {
+      "start": 1329.9,
+      "end": 1334.34,
+      "duration": 4.44,
+      "text": "storing the height because during path"
+    },
+    {
+      "start": 1331.7,
+      "end": 1338.72,
+      "duration": 7.02,
+      "text": "compression the height will shrink so"
+    },
+    {
+      "start": 1334.34,
+      "end": 1340.76,
+      "duration": 6.42,
+      "text": "this is how easily we can do it"
+    },
+    {
+      "start": 1338.72,
+      "end": 1344.24,
+      "duration": 5.52,
+      "text": "but after this someone comes up and says"
+    },
+    {
+      "start": 1340.76,
+      "end": 1346.28,
+      "duration": 5.52,
+      "text": "hey uh does three and uh six belong to"
+    },
+    {
+      "start": 1344.24,
+      "end": 1348.2,
+      "duration": 3.96,
+      "text": "the same component what you'll do we'll"
+    },
+    {
+      "start": 1346.28,
+      "end": 1349.82,
+      "duration": 3.54,
+      "text": "call the find parent for three"
+    },
+    {
+      "start": 1348.2,
+      "end": 1353.3,
+      "duration": 5.1,
+      "text": "and it will find you the parent to be"
+    },
+    {
+      "start": 1349.82,
+      "end": 1356.12,
+      "duration": 6.3,
+      "text": "ultimate ultimate tree one one four for"
+    },
+    {
+      "start": 1353.3,
+      "end": 1358.52,
+      "duration": 5.22,
+      "text": "himself so again a path compression will"
+    },
+    {
+      "start": 1356.12,
+      "end": 1360.74,
+      "duration": 4.62,
+      "text": "happen yes when you find the parent"
+    },
+    {
+      "start": 1358.52,
+      "end": 1362.24,
+      "duration": 3.72,
+      "text": "three will give you as four so the path"
+    },
+    {
+      "start": 1360.74,
+      "end": 1364.28,
+      "duration": 3.54,
+      "text": "compression will also happen Point"
+    },
+    {
+      "start": 1362.24,
+      "end": 1366.68,
+      "duration": 4.44,
+      "text": "Parent of three will give you four find"
+    },
+    {
+      "start": 1364.28,
+      "end": 1368.6,
+      "duration": 4.32,
+      "text": "parent of six will be directly four so"
+    },
+    {
+      "start": 1366.68,
+      "end": 1371.0,
+      "duration": 4.32,
+      "text": "both of them have same parent or"
+    },
+    {
+      "start": 1368.6,
+      "end": 1373.52,
+      "duration": 4.92,
+      "text": "ultimate parent so they belong to the C"
+    },
+    {
+      "start": 1371.0,
+      "end": 1375.08,
+      "duration": 4.08,
+      "text": "form quite easy you since you're"
+    },
+    {
+      "start": 1373.52,
+      "end": 1376.76,
+      "duration": 3.24,
+      "text": "compressing the tree since you're"
+    },
+    {
+      "start": 1375.08,
+      "end": 1379.28,
+      "duration": 4.2,
+      "text": "compressing the tree a tree will be"
+    },
+    {
+      "start": 1376.76,
+      "end": 1381.92,
+      "duration": 5.16,
+      "text": "always a very limited size in order to"
+    },
+    {
+      "start": 1379.28,
+      "end": 1384.5,
+      "duration": 5.22,
+      "text": "find parent if to do limited traversals"
+    },
+    {
+      "start": 1381.92,
+      "end": 1387.2,
+      "duration": 5.28,
+      "text": "always got it so thereby the time"
+    },
+    {
+      "start": 1384.5,
+      "end": 1390.68,
+      "duration": 6.18,
+      "text": "complexity in order to perform the union"
+    },
+    {
+      "start": 1387.2,
+      "end": 1392.42,
+      "duration": 5.22,
+      "text": "operation is bigo of 4 Alpha now this"
+    },
+    {
+      "start": 1390.68,
+      "end": 1394.28,
+      "duration": 3.6,
+      "text": "four Alpha has a huge mathematic"
+    },
+    {
+      "start": 1392.42,
+      "end": 1396.74,
+      "duration": 4.32,
+      "text": "derivation which is not required in"
+    },
+    {
+      "start": 1394.28,
+      "end": 1399.38,
+      "duration": 5.1,
+      "text": "interviews you can say four Alpha which"
+    },
+    {
+      "start": 1396.74,
+      "end": 1401.84,
+      "duration": 5.1,
+      "text": "is as good as constant because the"
+    },
+    {
+      "start": 1399.38,
+      "end": 1405.14,
+      "duration": 5.76,
+      "text": "Alpha's value is very very close to one"
+    },
+    {
+      "start": 1401.84,
+      "end": 1407.06,
+      "duration": 5.22,
+      "text": "so it is as good as a constant and in"
+    },
+    {
+      "start": 1405.14,
+      "end": 1409.22,
+      "duration": 4.08,
+      "text": "order to find parent it is also for"
+    },
+    {
+      "start": 1407.06,
+      "end": 1413.72,
+      "duration": 6.66,
+      "text": "Alpha so overall the data structure"
+    },
+    {
+      "start": 1409.22,
+      "end": 1415.16,
+      "duration": 5.94,
+      "text": "works in we go of 4 Alpha remember this"
+    },
+    {
+      "start": 1413.72,
+      "end": 1418.4,
+      "duration": 4.68,
+      "text": "okay"
+    },
+    {
+      "start": 1415.16,
+      "end": 1420.86,
+      "duration": 5.7,
+      "text": "so the question comes up whatsoever how"
+    },
+    {
+      "start": 1418.4,
+      "end": 1422.3,
+      "duration": 3.9,
+      "text": "do we do path compression you might be"
+    },
+    {
+      "start": 1420.86,
+      "end": 1425.48,
+      "duration": 4.62,
+      "text": "thinking how do you do path compression"
+    },
+    {
+      "start": 1422.3,
+      "end": 1426.86,
+      "duration": 4.56,
+      "text": "because it looks scary because if you"
+    },
+    {
+      "start": 1425.48,
+      "end": 1428.42,
+      "duration": 2.94,
+      "text": "are connected to this then you're"
+    },
+    {
+      "start": 1426.86,
+      "end": 1430.46,
+      "duration": 3.6,
+      "text": "connected to this then you're connected"
+    },
+    {
+      "start": 1428.42,
+      "end": 1433.4,
+      "duration": 4.98,
+      "text": "to this then you're connected to this"
+    },
+    {
+      "start": 1430.46,
+      "end": 1436.28,
+      "duration": 5.82,
+      "text": "how do you path comes it's very simple"
+    },
+    {
+      "start": 1433.4,
+      "end": 1437.72,
+      "duration": 4.32,
+      "text": "so price parent is for postparent is"
+    },
+    {
+      "start": 1436.28,
+      "end": 1440.12,
+      "duration": 3.84,
+      "text": "three threes parent is two two's parent"
+    },
+    {
+      "start": 1437.72,
+      "end": 1442.22,
+      "duration": 4.5,
+      "text": "is one and one's parent is one"
+    },
+    {
+      "start": 1440.12,
+      "end": 1443.72,
+      "duration": 3.6,
+      "text": "so what you can do is you can backtrack"
+    },
+    {
+      "start": 1442.22,
+      "end": 1447.02,
+      "duration": 4.8,
+      "text": "so you can write something as find"
+    },
+    {
+      "start": 1443.72,
+      "end": 1449.96,
+      "duration": 6.24,
+      "text": "parent and you can give the node U okay"
+    },
+    {
+      "start": 1447.02,
+      "end": 1453.74,
+      "duration": 6.72,
+      "text": "and what will happen is you will say If"
+    },
+    {
+      "start": 1449.96,
+      "end": 1457.88,
+      "duration": 7.92,
+      "text": "U is equal to equal to parent of U"
+    },
+    {
+      "start": 1453.74,
+      "end": 1460.34,
+      "duration": 6.6,
+      "text": "then return this U so basically what"
+    },
+    {
+      "start": 1457.88,
+      "end": 1462.44,
+      "duration": 4.56,
+      "text": "does this mean if at any moment one"
+    },
+    {
+      "start": 1460.34,
+      "end": 1464.48,
+      "duration": 4.14,
+      "text": "comes one will be equal to equal to"
+    },
+    {
+      "start": 1462.44,
+      "end": 1467.12,
+      "duration": 4.68,
+      "text": "parent of one because parent of one is"
+    },
+    {
+      "start": 1464.48,
+      "end": 1468.8,
+      "duration": 4.32,
+      "text": "himself I'll return the parent as one"
+    },
+    {
+      "start": 1467.12,
+      "end": 1471.86,
+      "duration": 4.74,
+      "text": "that's the piece because that is where"
+    },
+    {
+      "start": 1468.8,
+      "end": 1473.6,
+      "duration": 4.8,
+      "text": "you stop otherwise you will be like can"
+    },
+    {
+      "start": 1471.86,
+      "end": 1475.82,
+      "duration": 3.96,
+      "text": "you please return"
+    },
+    {
+      "start": 1473.6,
+      "end": 1477.14,
+      "duration": 3.54,
+      "text": "find parent"
+    },
+    {
+      "start": 1475.82,
+      "end": 1480.68,
+      "duration": 4.86,
+      "text": "of"
+    },
+    {
+      "start": 1477.14,
+      "end": 1482.9,
+      "duration": 5.76,
+      "text": "parent of you what does this mean"
+    },
+    {
+      "start": 1480.68,
+      "end": 1485.84,
+      "duration": 5.16,
+      "text": "imagine I give you five what will happen"
+    },
+    {
+      "start": 1482.9,
+      "end": 1487.94,
+      "duration": 5.04,
+      "text": "it will go and say parent of five what's"
+    },
+    {
+      "start": 1485.84,
+      "end": 1490.34,
+      "duration": 4.5,
+      "text": "parent of five four we'll go and say"
+    },
+    {
+      "start": 1487.94,
+      "end": 1492.68,
+      "duration": 4.74,
+      "text": "find parent of four so next time find"
+    },
+    {
+      "start": 1490.34,
+      "end": 1494.9,
+      "duration": 4.56,
+      "text": "parent of four will happen does not obey"
+    },
+    {
+      "start": 1492.68,
+      "end": 1497.48,
+      "duration": 4.8,
+      "text": "again it will say find parent of parent"
+    },
+    {
+      "start": 1494.9,
+      "end": 1499.46,
+      "duration": 4.56,
+      "text": "of four because parent of four three so"
+    },
+    {
+      "start": 1497.48,
+      "end": 1501.5,
+      "duration": 4.02,
+      "text": "it'll go on so the recursion will be"
+    },
+    {
+      "start": 1499.46,
+      "end": 1504.98,
+      "duration": 5.52,
+      "text": "something like this"
+    },
+    {
+      "start": 1501.5,
+      "end": 1508.16,
+      "duration": 6.66,
+      "text": "function of five calls function of 4"
+    },
+    {
+      "start": 1504.98,
+      "end": 1512.84,
+      "duration": 7.86,
+      "text": "calls function of three calls function"
+    },
+    {
+      "start": 1508.16,
+      "end": 1515.96,
+      "duration": 7.8,
+      "text": "of 2 calls function of 1 at 1 the base"
+    },
+    {
+      "start": 1512.84,
+      "end": 1519.88,
+      "duration": 7.04,
+      "text": "case is executed and when it is executed"
+    },
+    {
+      "start": 1515.96,
+      "end": 1522.62,
+      "duration": 6.66,
+      "text": "it returns one so this 2 which called"
+    },
+    {
+      "start": 1519.88,
+      "end": 1524.3,
+      "duration": 4.42,
+      "text": "which you would have called here what"
+    },
+    {
+      "start": 1522.62,
+      "end": 1527.66,
+      "duration": 5.04,
+      "text": "you'll do is you'll say parent of U will"
+    },
+    {
+      "start": 1524.3,
+      "end": 1532.1,
+      "duration": 7.8,
+      "text": "be 2. so when it will return up it will"
+    },
+    {
+      "start": 1527.66,
+      "end": 1532.1,
+      "duration": 4.44,
+      "text": "return with 1. next"
+    },
+    {
+      "start": 1534.26,
+      "end": 1538.88,
+      "duration": 4.62,
+      "text": "you'll again return one"
+    },
+    {
+      "start": 1536.42,
+      "end": 1540.86,
+      "duration": 4.44,
+      "text": "you'll again return one so now three"
+    },
+    {
+      "start": 1538.88,
+      "end": 1544.04,
+      "duration": 5.16,
+      "text": "will also keep one parent of three is"
+    },
+    {
+      "start": 1540.86,
+      "end": 1546.26,
+      "duration": 5.4,
+      "text": "one next you'll all also return one so"
+    },
+    {
+      "start": 1544.04,
+      "end": 1548.48,
+      "duration": 4.44,
+      "text": "now parent of four will also be one next"
+    },
+    {
+      "start": 1546.26,
+      "end": 1551.8,
+      "duration": 5.54,
+      "text": "you'll also return one so parent of five"
+    },
+    {
+      "start": 1548.48,
+      "end": 1555.38,
+      "duration": 6.9,
+      "text": "is equal to one so everyone in term will"
+    },
+    {
+      "start": 1551.8,
+      "end": 1558.98,
+      "duration": 7.18,
+      "text": "assign one to it in if everyone assigns"
+    },
+    {
+      "start": 1555.38,
+      "end": 1561.32,
+      "duration": 5.94,
+      "text": "one to it so automatically all the links"
+    },
+    {
+      "start": 1558.98,
+      "end": 1564.74,
+      "duration": 5.76,
+      "text": "will be path compressed and pointing to"
+    },
+    {
+      "start": 1561.32,
+      "end": 1566.84,
+      "duration": 5.52,
+      "text": "one and and all these links will be"
+    },
+    {
+      "start": 1564.74,
+      "end": 1569.44,
+      "duration": 4.7,
+      "text": "destroyed"
+    },
+    {
+      "start": 1566.84,
+      "end": 1569.44,
+      "duration": 2.6,
+      "text": "perfect"
+    },
+    {
+      "start": 1569.66,
+      "end": 1573.38,
+      "duration": 3.72,
+      "text": "so I hope you have understood everything"
+    },
+    {
+      "start": 1571.16,
+      "end": 1575.0,
+      "duration": 3.84,
+      "text": "about the Union by Rank and the path"
+    },
+    {
+      "start": 1573.38,
+      "end": 1577.22,
+      "duration": 3.84,
+      "text": "compression now it's time to code it up"
+    },
+    {
+      "start": 1575.0,
+      "end": 1579.92,
+      "duration": 4.92,
+      "text": "so I'll try to create the data structure"
+    },
+    {
+      "start": 1577.22,
+      "end": 1581.6,
+      "duration": 4.38,
+      "text": "in a class so that going forward in the"
+    },
+    {
+      "start": 1579.92,
+      "end": 1583.76,
+      "duration": 3.84,
+      "text": "upcoming problems we can use that"
+    },
+    {
+      "start": 1581.6,
+      "end": 1587.6,
+      "duration": 6.0,
+      "text": "snippet of code to solve almost all the"
+    },
+    {
+      "start": 1583.76,
+      "end": 1590.66,
+      "duration": 6.9,
+      "text": "problems so we have a class of uh this"
+    },
+    {
+      "start": 1587.6,
+      "end": 1592.64,
+      "duration": 5.04,
+      "text": "joint set nothing to worry like don't"
+    },
+    {
+      "start": 1590.66,
+      "end": 1594.32,
+      "duration": 3.66,
+      "text": "don't get too worried about a class very"
+    },
+    {
+      "start": 1592.64,
+      "end": 1596.12,
+      "duration": 3.48,
+      "text": "simple it's a very simple thing what's"
+    },
+    {
+      "start": 1594.32,
+      "end": 1597.56,
+      "duration": 3.24,
+      "text": "the initial configuration initial"
+    },
+    {
+      "start": 1596.12,
+      "end": 1600.5,
+      "duration": 4.38,
+      "text": "configuration required a rank and a"
+    },
+    {
+      "start": 1597.56,
+      "end": 1602.6,
+      "duration": 5.04,
+      "text": "parent so just have it and declare"
+    },
+    {
+      "start": 1600.5,
+      "end": 1605.3,
+      "duration": 4.8,
+      "text": "everything afterwards public so all the"
+    },
+    {
+      "start": 1602.6,
+      "end": 1606.86,
+      "duration": 4.26,
+      "text": "functions can be reused outside so now"
+    },
+    {
+      "start": 1605.3,
+      "end": 1608.9,
+      "duration": 3.6,
+      "text": "go ahead and declare the Constructor"
+    },
+    {
+      "start": 1606.86,
+      "end": 1610.94,
+      "duration": 4.08,
+      "text": "what's the construction uh what is the"
+    },
+    {
+      "start": 1608.9,
+      "end": 1613.22,
+      "duration": 4.32,
+      "text": "Constructor rather so if you remember I"
+    },
+    {
+      "start": 1610.94,
+      "end": 1614.96,
+      "duration": 4.02,
+      "text": "said you initially rank will be marked"
+    },
+    {
+      "start": 1613.22,
+      "end": 1617.36,
+      "duration": 4.14,
+      "text": "with zeros parent will be marked with"
+    },
+    {
+      "start": 1614.96,
+      "end": 1621.38,
+      "duration": 6.42,
+      "text": "themselves that is what we do so we say"
+    },
+    {
+      "start": 1617.36,
+      "end": 1623.78,
+      "duration": 6.42,
+      "text": "rank dot resize of n plus 1 comma 0 1"
+    },
+    {
+      "start": 1621.38,
+      "end": 1627.02,
+      "duration": 5.64,
+      "text": "plus 1 imagine it's a one based indexing"
+    },
+    {
+      "start": 1623.78,
+      "end": 1630.02,
+      "duration": 6.24,
+      "text": "graph we need the nth index as well if"
+    },
+    {
+      "start": 1627.02,
+      "end": 1632.36,
+      "duration": 5.34,
+      "text": "it's a zero based fine but declaring uh"
+    },
+    {
+      "start": 1630.02,
+      "end": 1634.88,
+      "duration": 4.86,
+      "text": "declaring it as one n plus one will work"
+    },
+    {
+      "start": 1632.36,
+      "end": 1637.52,
+      "duration": 5.16,
+      "text": "for both one base as well as zero based"
+    },
+    {
+      "start": 1634.88,
+      "end": 1641.36,
+      "duration": 6.48,
+      "text": "similarly we can Define parent dot"
+    },
+    {
+      "start": 1637.52,
+      "end": 1644.84,
+      "duration": 7.32,
+      "text": "resize of n plus 1 and we can keep it"
+    },
+    {
+      "start": 1641.36,
+      "end": 1647.18,
+      "duration": 5.82,
+      "text": "and then we can go ahead from 0 very"
+    },
+    {
+      "start": 1644.84,
+      "end": 1648.6,
+      "duration": 3.76,
+      "text": "very important to go till n or one based"
+    },
+    {
+      "start": 1647.18,
+      "end": 1649.96,
+      "duration": 2.78,
+      "text": "indexing"
+    },
+    {
+      "start": 1648.6,
+      "end": 1652.34,
+      "duration": 3.74,
+      "text": "[Music]"
+    },
+    {
+      "start": 1649.96,
+      "end": 1655.04,
+      "duration": 5.08,
+      "text": "this is how the Constructor will look"
+    },
+    {
+      "start": 1652.34,
+      "end": 1658.1,
+      "duration": 5.76,
+      "text": "like now what does disjoint set give you"
+    },
+    {
+      "start": 1655.04,
+      "end": 1660.56,
+      "duration": 5.52,
+      "text": "it gave you find Ultimate parent right"
+    },
+    {
+      "start": 1658.1,
+      "end": 1662.48,
+      "duration": 4.38,
+      "text": "so this will be the note and for this"
+    },
+    {
+      "start": 1660.56,
+      "end": 1664.22,
+      "duration": 3.66,
+      "text": "you have to find the ultimate parrot so"
+    },
+    {
+      "start": 1662.48,
+      "end": 1666.92,
+      "duration": 4.44,
+      "text": "we know one thing if node is equal to"
+    },
+    {
+      "start": 1664.22,
+      "end": 1668.96,
+      "duration": 4.74,
+      "text": "equal to the parent of node this is the"
+    },
+    {
+      "start": 1666.92,
+      "end": 1671.24,
+      "duration": 4.32,
+      "text": "ultimate parent for sure so you go ahead"
+    },
+    {
+      "start": 1668.96,
+      "end": 1673.34,
+      "duration": 4.38,
+      "text": "and return the node but if it is not"
+    },
+    {
+      "start": 1671.24,
+      "end": 1675.68,
+      "duration": 4.44,
+      "text": "then you call the ultimate parent and"
+    },
+    {
+      "start": 1673.34,
+      "end": 1678.14,
+      "duration": 4.8,
+      "text": "say go to its parent and then look for"
+    },
+    {
+      "start": 1675.68,
+      "end": 1680.72,
+      "duration": 5.04,
+      "text": "parent parent parent parent but this is"
+    },
+    {
+      "start": 1678.14,
+      "end": 1682.82,
+      "duration": 4.68,
+      "text": "the normal logarithmic guy we need the"
+    },
+    {
+      "start": 1680.72,
+      "end": 1685.58,
+      "duration": 4.86,
+      "text": "path compression so this is where I can"
+    },
+    {
+      "start": 1682.82,
+      "end": 1687.2,
+      "duration": 4.38,
+      "text": "say whenever it Returns the value I'll"
+    },
+    {
+      "start": 1685.58,
+      "end": 1688.82,
+      "duration": 3.24,
+      "text": "store it so that in future if someone"
+    },
+    {
+      "start": 1687.2,
+      "end": 1690.92,
+      "duration": 3.72,
+      "text": "comes up and does ask me the same"
+    },
+    {
+      "start": 1688.82,
+      "end": 1692.06,
+      "duration": 3.24,
+      "text": "question I can tell him that this is the"
+    },
+    {
+      "start": 1690.92,
+      "end": 1694.0,
+      "duration": 3.08,
+      "text": "parent so this is where the path"
+    },
+    {
+      "start": 1692.06,
+      "end": 1696.8,
+      "duration": 4.74,
+      "text": "compression comes in"
+    },
+    {
+      "start": 1694.0,
+      "end": 1699.38,
+      "duration": 5.38,
+      "text": "next what I'll do is I'll be like okay"
+    },
+    {
+      "start": 1696.8,
+      "end": 1702.26,
+      "duration": 5.46,
+      "text": "void Union by rank is what I need to"
+    },
+    {
+      "start": 1699.38,
+      "end": 1704.48,
+      "duration": 5.1,
+      "text": "implement Union by rank so I'll have"
+    },
+    {
+      "start": 1702.26,
+      "end": 1709.4,
+      "duration": 7.14,
+      "text": "node U and node V which I have to"
+    },
+    {
+      "start": 1704.48,
+      "end": 1712.28,
+      "duration": 7.8,
+      "text": "combine so ultimate parent of like it's"
+    },
+    {
+      "start": 1709.4,
+      "end": 1715.04,
+      "duration": 5.64,
+      "text": "the ultimate parent of U will be find"
+    },
+    {
+      "start": 1712.28,
+      "end": 1717.92,
+      "duration": 5.64,
+      "text": "Ultimate parent of U similarly you can"
+    },
+    {
+      "start": 1715.04,
+      "end": 1721.9,
+      "duration": 6.86,
+      "text": "say ultimate parent of V will be find"
+    },
+    {
+      "start": 1717.92,
+      "end": 1726.44,
+      "duration": 8.52,
+      "text": "Ultimate parent of V now I can say if"
+    },
+    {
+      "start": 1721.9,
+      "end": 1728.78,
+      "duration": 6.88,
+      "text": "ultimate of U is equal to Ultimate of v"
+    },
+    {
+      "start": 1726.44,
+      "end": 1730.16,
+      "duration": 3.72,
+      "text": "i can simply return what does this mean"
+    },
+    {
+      "start": 1728.78,
+      "end": 1732.86,
+      "duration": 4.08,
+      "text": "if they're belonging to the same"
+    },
+    {
+      "start": 1730.16,
+      "end": 1734.48,
+      "duration": 4.32,
+      "text": "component I don't need right but if they"
+    },
+    {
+      "start": 1732.86,
+      "end": 1737.42,
+      "duration": 4.56,
+      "text": "are not belonging to the same component"
+    },
+    {
+      "start": 1734.48,
+      "end": 1740.96,
+      "duration": 6.48,
+      "text": "I go ahead the first thing I do is I"
+    },
+    {
+      "start": 1737.42,
+      "end": 1742.58,
+      "duration": 5.16,
+      "text": "check if the guy U is smaller than the"
+    },
+    {
+      "start": 1740.96,
+      "end": 1747.14,
+      "duration": 6.18,
+      "text": "guy"
+    },
+    {
+      "start": 1742.58,
+      "end": 1749.36,
+      "duration": 6.78,
+      "text": "V right so if V is the greater guy the"
+    },
+    {
+      "start": 1747.14,
+      "end": 1752.9,
+      "duration": 5.76,
+      "text": "smaller goes and gets attached to the"
+    },
+    {
+      "start": 1749.36,
+      "end": 1756.74,
+      "duration": 7.38,
+      "text": "greater guy so the smaller will now say"
+    },
+    {
+      "start": 1752.9,
+      "end": 1759.02,
+      "duration": 6.12,
+      "text": "okay I'll go and have the parent as v no"
+    },
+    {
+      "start": 1756.74,
+      "end": 1761.84,
+      "duration": 5.1,
+      "text": "change in rank because if a smaller guy"
+    },
+    {
+      "start": 1759.02,
+      "end": 1764.3,
+      "duration": 5.28,
+      "text": "gets attached to the uh larger one there"
+    },
+    {
+      "start": 1761.84,
+      "end": 1769.0,
+      "duration": 7.16,
+      "text": "will be no increase or that still stays"
+    },
+    {
+      "start": 1764.3,
+      "end": 1773.24,
+      "duration": 8.94,
+      "text": "the larger right next else if rank of"
+    },
+    {
+      "start": 1769.0,
+      "end": 1776.6,
+      "duration": 7.6,
+      "text": "ultimate of V if this is the Lesser guy"
+    },
+    {
+      "start": 1773.24,
+      "end": 1779.0,
+      "duration": 5.76,
+      "text": "rank of ultimate of EU if this is the"
+    },
+    {
+      "start": 1776.6,
+      "end": 1781.64,
+      "duration": 5.04,
+      "text": "Lesser guy then I say the opposite I say"
+    },
+    {
+      "start": 1779.0,
+      "end": 1786.26,
+      "duration": 7.26,
+      "text": "parent of rank sorry parent of ultimate"
+    },
+    {
+      "start": 1781.64,
+      "end": 1789.02,
+      "duration": 7.38,
+      "text": "of V goes and gets attached to you of it"
+    },
+    {
+      "start": 1786.26,
+      "end": 1791.66,
+      "duration": 5.4,
+      "text": "done but what if they are same if"
+    },
+    {
+      "start": 1789.02,
+      "end": 1793.64,
+      "duration": 4.62,
+      "text": "they're same I'll sell attach V to U you"
+    },
+    {
+      "start": 1791.66,
+      "end": 1796.72,
+      "duration": 5.06,
+      "text": "can do the other way as well YouTube is"
+    },
+    {
+      "start": 1793.64,
+      "end": 1798.74,
+      "duration": 5.1,
+      "text": "okay as well and rank off"
+    },
+    {
+      "start": 1796.72,
+      "end": 1800.96,
+      "duration": 4.24,
+      "text": "ultimate of you"
+    },
+    {
+      "start": 1798.74,
+      "end": 1803.84,
+      "duration": 5.1,
+      "text": "will increase because that is where I am"
+    },
+    {
+      "start": 1800.96,
+      "end": 1806.18,
+      "duration": 5.22,
+      "text": "attaching it to be attached to you so"
+    },
+    {
+      "start": 1803.84,
+      "end": 1808.28,
+      "duration": 4.44,
+      "text": "the larger one will grow in size so this"
+    },
+    {
+      "start": 1806.18,
+      "end": 1810.2,
+      "duration": 4.02,
+      "text": "is what I will do once I've done this I"
+    },
+    {
+      "start": 1808.28,
+      "end": 1812.18,
+      "duration": 3.9,
+      "text": "can say the union is done this is how"
+    },
+    {
+      "start": 1810.2,
+      "end": 1814.7,
+      "duration": 4.5,
+      "text": "our data structure will look like how"
+    },
+    {
+      "start": 1812.18,
+      "end": 1816.86,
+      "duration": 4.68,
+      "text": "can we use this snippet of code so I'll"
+    },
+    {
+      "start": 1814.7,
+      "end": 1818.84,
+      "duration": 4.14,
+      "text": "just hard code it to show you how can we"
+    },
+    {
+      "start": 1816.86,
+      "end": 1821.3,
+      "duration": 4.44,
+      "text": "use it it's pretty simple so you can be"
+    },
+    {
+      "start": 1818.84,
+      "end": 1824.18,
+      "duration": 5.34,
+      "text": "like disjoints at DS what is the number"
+    },
+    {
+      "start": 1821.3,
+      "end": 1826.94,
+      "duration": 5.64,
+      "text": "of nodes so in our case it was one so I"
+    },
+    {
+      "start": 1824.18,
+      "end": 1829.4,
+      "duration": 5.22,
+      "text": "can have it as disjoint set of seven"
+    },
+    {
+      "start": 1826.94,
+      "end": 1831.44,
+      "duration": 4.5,
+      "text": "so it will call this Constructor and"
+    },
+    {
+      "start": 1829.4,
+      "end": 1834.38,
+      "duration": 4.98,
+      "text": "have the initial configuration ready for"
+    },
+    {
+      "start": 1831.44,
+      "end": 1836.48,
+      "duration": 5.04,
+      "text": "us next will be I'll call it Union by"
+    },
+    {
+      "start": 1834.38,
+      "end": 1839.0,
+      "duration": 4.62,
+      "text": "Rank and the first thing was 1 comma 2"
+    },
+    {
+      "start": 1836.48,
+      "end": 1840.8,
+      "duration": 4.32,
+      "text": "if you remember in our example right so"
+    },
+    {
+      "start": 1839.0,
+      "end": 1843.26,
+      "duration": 4.26,
+      "text": "we'll have it one comma two so I'll"
+    },
+    {
+      "start": 1840.8,
+      "end": 1845.12,
+      "duration": 4.32,
+      "text": "quickly add all these uh"
+    },
+    {
+      "start": 1843.26,
+      "end": 1845.96,
+      "duration": 2.7,
+      "text": "things so next was 2 comma three if you"
+    },
+    {
+      "start": 1845.12,
+      "end": 1848.72,
+      "duration": 3.6,
+      "text": "remember"
+    },
+    {
+      "start": 1845.96,
+      "end": 1850.88,
+      "duration": 4.92,
+      "text": "let's add 2 comma 3 next was uh four"
+    },
+    {
+      "start": 1848.72,
+      "end": 1853.34,
+      "duration": 4.62,
+      "text": "comma five so let's add four comma five"
+    },
+    {
+      "start": 1850.88,
+      "end": 1855.68,
+      "duration": 4.8,
+      "text": "next to a six comma seven let's add six"
+    },
+    {
+      "start": 1853.34,
+      "end": 1858.2,
+      "duration": 4.86,
+      "text": "comma seven next was five comma six"
+    },
+    {
+      "start": 1855.68,
+      "end": 1860.06,
+      "duration": 4.38,
+      "text": "let's add five comma six and the next to"
+    },
+    {
+      "start": 1858.2,
+      "end": 1863.48,
+      "duration": 5.28,
+      "text": "us if you remember well enough"
+    },
+    {
+      "start": 1860.06,
+      "end": 1866.18,
+      "duration": 6.12,
+      "text": "from the example the next was 3 comma"
+    },
+    {
+      "start": 1863.48,
+      "end": 1867.98,
+      "duration": 4.5,
+      "text": "seven so I'll be adding up this but"
+    },
+    {
+      "start": 1866.18,
+      "end": 1870.68,
+      "duration": 4.5,
+      "text": "before adding up three comma seven let's"
+    },
+    {
+      "start": 1867.98,
+      "end": 1872.42,
+      "duration": 4.44,
+      "text": "quickly check if 3 and 7 belong to the"
+    },
+    {
+      "start": 1870.68,
+      "end": 1875.66,
+      "duration": 4.98,
+      "text": "same component or not"
+    },
+    {
+      "start": 1872.42,
+      "end": 1878.06,
+      "duration": 5.64,
+      "text": "same or not okay so what I'll do is I'll"
+    },
+    {
+      "start": 1875.66,
+      "end": 1881.84,
+      "duration": 6.18,
+      "text": "call the find Ultimate parent for three"
+    },
+    {
+      "start": 1878.06,
+      "end": 1884.36,
+      "duration": 6.3,
+      "text": "and I will say okay do you have"
+    },
+    {
+      "start": 1881.84,
+      "end": 1886.28,
+      "duration": 4.44,
+      "text": "equal to equal to seven like d belong to"
+    },
+    {
+      "start": 1884.36,
+      "end": 1889.88,
+      "duration": 5.52,
+      "text": "the same like do you have the same boss"
+    },
+    {
+      "start": 1886.28,
+      "end": 1895.28,
+      "duration": 9.0,
+      "text": "same ultimate parent if you do then same"
+    },
+    {
+      "start": 1889.88,
+      "end": 1898.28,
+      "duration": 8.4,
+      "text": "as the same all else I will say not same"
+    },
+    {
+      "start": 1895.28,
+      "end": 1902.06,
+      "duration": 6.78,
+      "text": "I'll go and say not same right perfect"
+    },
+    {
+      "start": 1898.28,
+      "end": 1903.56,
+      "duration": 5.28,
+      "text": "done and after connecting them I will"
+    },
+    {
+      "start": 1902.06,
+      "end": 1906.68,
+      "duration": 4.62,
+      "text": "again check for the same so as of now"
+    },
+    {
+      "start": 1903.56,
+      "end": 1908.42,
+      "duration": 4.86,
+      "text": "let's uh have a quick run and see if it"
+    },
+    {
+      "start": 1906.68,
+      "end": 1910.94,
+      "duration": 4.26,
+      "text": "is giving us correct answer"
+    },
+    {
+      "start": 1908.42,
+      "end": 1913.16,
+      "duration": 4.74,
+      "text": "so I'll just go and compile this"
+    },
+    {
+      "start": 1910.94,
+      "end": 1915.26,
+      "duration": 4.32,
+      "text": "so on compiling it is saying no they do"
+    },
+    {
+      "start": 1913.16,
+      "end": 1917.54,
+      "duration": 4.38,
+      "text": "not belong to the same and if I go ahead"
+    },
+    {
+      "start": 1915.26,
+      "end": 1919.34,
+      "duration": 4.08,
+      "text": "and move it to the next guy it will"
+    },
+    {
+      "start": 1917.54,
+      "end": 1923.84,
+      "duration": 6.3,
+      "text": "actually say that they belong to the C"
+    },
+    {
+      "start": 1919.34,
+      "end": 1926.6,
+      "duration": 7.26,
+      "text": "first time it says uh not same then on"
+    },
+    {
+      "start": 1923.84,
+      "end": 1929.18,
+      "duration": 5.34,
+      "text": "combining it says same so this is how"
+    },
+    {
+      "start": 1926.6,
+      "end": 1932.36,
+      "duration": 5.76,
+      "text": "you can always use the data structure if"
+    },
+    {
+      "start": 1929.18,
+      "end": 1934.7,
+      "duration": 5.52,
+      "text": "you want to have two disjoint set data"
+    },
+    {
+      "start": 1932.36,
+      "end": 1937.4,
+      "duration": 5.04,
+      "text": "structure you can go as DS1 you can have"
+    },
+    {
+      "start": 1934.7,
+      "end": 1939.08,
+      "duration": 4.38,
+      "text": "two different objects of this class and"
+    },
+    {
+      "start": 1937.4,
+      "end": 1940.88,
+      "duration": 3.48,
+      "text": "you can have two different graphs in two"
+    },
+    {
+      "start": 1939.08,
+      "end": 1943.52,
+      "duration": 4.44,
+      "text": "different data structures so this code"
+    },
+    {
+      "start": 1940.88,
+      "end": 1945.98,
+      "duration": 5.1,
+      "text": "can always be reused in almost all the"
+    },
+    {
+      "start": 1943.52,
+      "end": 1948.02,
+      "duration": 4.5,
+      "text": "problems because it covers up zero based"
+    },
+    {
+      "start": 1945.98,
+      "end": 1949.64,
+      "duration": 3.66,
+      "text": "indexing graphs as well as one based"
+    },
+    {
+      "start": 1948.02,
+      "end": 1951.32,
+      "duration": 3.3,
+      "text": "indexing graphs"
+    },
+    {
+      "start": 1949.64,
+      "end": 1953.56,
+      "duration": 3.92,
+      "text": "now a question might be coming to your"
+    },
+    {
+      "start": 1951.32,
+      "end": 1957.08,
+      "duration": 5.76,
+      "text": "head but striver we did not understand"
+    },
+    {
+      "start": 1953.56,
+      "end": 1960.98,
+      "duration": 7.42,
+      "text": "why connect smaller to larger like"
+    },
+    {
+      "start": 1957.08,
+      "end": 1963.38,
+      "duration": 6.3,
+      "text": "what's the idea of connecting smaller to"
+    },
+    {
+      "start": 1960.98,
+      "end": 1965.72,
+      "duration": 4.74,
+      "text": "larger the first idea is I don't want to"
+    },
+    {
+      "start": 1963.38,
+      "end": 1969.26,
+      "duration": 5.88,
+      "text": "increase the height for an example if I"
+    },
+    {
+      "start": 1965.72,
+      "end": 1971.9,
+      "duration": 6.18,
+      "text": "have one two I have a three four five"
+    },
+    {
+      "start": 1969.26,
+      "end": 1974.0,
+      "duration": 4.74,
+      "text": "just for an example empty so if I"
+    },
+    {
+      "start": 1971.9,
+      "end": 1977.26,
+      "duration": 5.36,
+      "text": "connect the larger to the smaller see"
+    },
+    {
+      "start": 1974.0,
+      "end": 1982.28,
+      "duration": 8.28,
+      "text": "what will happen one two"
+    },
+    {
+      "start": 1977.26,
+      "end": 1984.26,
+      "duration": 7.0,
+      "text": "three four five six so basically the"
+    },
+    {
+      "start": 1982.28,
+      "end": 1986.24,
+      "duration": 3.96,
+      "text": "height increases and if the height"
+    },
+    {
+      "start": 1984.26,
+      "end": 1987.68,
+      "duration": 3.42,
+      "text": "increases like we will do path"
+    },
+    {
+      "start": 1986.24,
+      "end": 1990.14,
+      "duration": 3.9,
+      "text": "compression for sure but if the height"
+    },
+    {
+      "start": 1987.68,
+      "end": 1992.42,
+      "duration": 4.74,
+      "text": "increases what happens is now in order"
+    },
+    {
+      "start": 1990.14,
+      "end": 1994.82,
+      "duration": 4.68,
+      "text": "to find the parent of six we'll have to"
+    },
+    {
+      "start": 1992.42,
+      "end": 1997.46,
+      "duration": 5.04,
+      "text": "travel six five four"
+    },
+    {
+      "start": 1994.82,
+      "end": 1999.62,
+      "duration": 4.8,
+      "text": "three and then one so we're taking a"
+    },
+    {
+      "start": 1997.46,
+      "end": 2001.78,
+      "duration": 4.32,
+      "text": "longer distance so imagine someone would"
+    },
+    {
+      "start": 1999.62,
+      "end": 2004.6,
+      "duration": 4.98,
+      "text": "have said for four so yeah actually"
+    },
+    {
+      "start": 2001.78,
+      "end": 2007.24,
+      "duration": 5.46,
+      "text": "taking a longer distance and if you do"
+    },
+    {
+      "start": 2004.6,
+      "end": 2009.82,
+      "duration": 5.22,
+      "text": "the opposite way which is saying let's"
+    },
+    {
+      "start": 2007.24,
+      "end": 2013.72,
+      "duration": 6.48,
+      "text": "connect like you keep three four five"
+    },
+    {
+      "start": 2009.82,
+      "end": 2016.54,
+      "duration": 6.72,
+      "text": "six and let's connect one and two so if"
+    },
+    {
+      "start": 2013.72,
+      "end": 2019.06,
+      "duration": 5.34,
+      "text": "you see for six the distance taken is"
+    },
+    {
+      "start": 2016.54,
+      "end": 2020.44,
+      "duration": 3.9,
+      "text": "shorter even for five the distance taken"
+    },
+    {
+      "start": 2019.06,
+      "end": 2022.9,
+      "duration": 3.84,
+      "text": "is shorter even for four the distance"
+    },
+    {
+      "start": 2020.44,
+      "end": 2024.28,
+      "duration": 3.84,
+      "text": "taken is shorter but for these the"
+    },
+    {
+      "start": 2022.9,
+      "end": 2026.14,
+      "duration": 3.24,
+      "text": "distance will increase like for two the"
+    },
+    {
+      "start": 2024.28,
+      "end": 2028.48,
+      "duration": 4.2,
+      "text": "distance will be now more because over"
+    },
+    {
+      "start": 2026.14,
+      "end": 2030.04,
+      "duration": 3.9,
+      "text": "here towards just traveling once and"
+    },
+    {
+      "start": 2028.48,
+      "end": 2032.38,
+      "duration": 3.9,
+      "text": "getting the ultimate but over here it"
+    },
+    {
+      "start": 2030.04,
+      "end": 2035.08,
+      "duration": 5.04,
+      "text": "has to travel to one then to three but"
+    },
+    {
+      "start": 2032.38,
+      "end": 2037.9,
+      "duration": 5.52,
+      "text": "the number of nodes over here are lesser"
+    },
+    {
+      "start": 2035.08,
+      "end": 2040.24,
+      "duration": 5.16,
+      "text": "so the travel time to all the notes"
+    },
+    {
+      "start": 2037.9,
+      "end": 2042.22,
+      "duration": 4.32,
+      "text": "computed will be less so over here the"
+    },
+    {
+      "start": 2040.24,
+      "end": 2045.4,
+      "duration": 5.16,
+      "text": "number of nodes are larger the travel"
+    },
+    {
+      "start": 2042.22,
+      "end": 2047.44,
+      "duration": 5.22,
+      "text": "time all the nodes will be larger so to"
+    },
+    {
+      "start": 2045.4,
+      "end": 2049.3,
+      "duration": 3.9,
+      "text": "give you a Clear Vision"
+    },
+    {
+      "start": 2047.44,
+      "end": 2050.44,
+      "duration": 3.0,
+      "text": "imagine we had something like this"
+    },
+    {
+      "start": 2049.3,
+      "end": 2052.06,
+      "duration": 2.76,
+      "text": "imagine okay"
+    },
+    {
+      "start": 2050.44,
+      "end": 2054.64,
+      "duration": 4.2,
+      "text": "five"
+    },
+    {
+      "start": 2052.06,
+      "end": 2058.18,
+      "duration": 6.12,
+      "text": "six seven"
+    },
+    {
+      "start": 2054.64,
+      "end": 2060.88,
+      "duration": 6.24,
+      "text": "eight okay and we had one two now if you"
+    },
+    {
+      "start": 2058.18,
+      "end": 2062.44,
+      "duration": 4.26,
+      "text": "attach this guy to this guy what will"
+    },
+    {
+      "start": 2060.88,
+      "end": 2064.3,
+      "duration": 3.42,
+      "text": "happen is in order to find the parent of"
+    },
+    {
+      "start": 2062.44,
+      "end": 2066.88,
+      "duration": 4.44,
+      "text": "seven seven will go to six to four three"
+    },
+    {
+      "start": 2064.3,
+      "end": 2069.1,
+      "duration": 4.8,
+      "text": "to one similarly for eight six four"
+    },
+    {
+      "start": 2066.88,
+      "end": 2073.12,
+      "duration": 6.24,
+      "text": "three one similarly four five four three"
+    },
+    {
+      "start": 2069.1,
+      "end": 2074.8,
+      "duration": 5.7,
+      "text": "one right so this will take longer time"
+    },
+    {
+      "start": 2073.12,
+      "end": 2076.96,
+      "duration": 3.84,
+      "text": "this will take longer time this will"
+    },
+    {
+      "start": 2074.8,
+      "end": 2079.0,
+      "duration": 4.2,
+      "text": "take longer time more nodes will take"
+    },
+    {
+      "start": 2076.96,
+      "end": 2080.02,
+      "duration": 3.06,
+      "text": "longer time whereas if you attach this"
+    },
+    {
+      "start": 2079.0,
+      "end": 2081.64,
+      "duration": 2.64,
+      "text": "to this"
+    },
+    {
+      "start": 2080.02,
+      "end": 2084.1,
+      "duration": 4.08,
+      "text": "they will take the similar time that"
+    },
+    {
+      "start": 2081.64,
+      "end": 2085.96,
+      "duration": 4.32,
+      "text": "they were taking and only two notes will"
+    },
+    {
+      "start": 2084.1,
+      "end": 2089.98,
+      "duration": 5.88,
+      "text": "take slightly longer time which is okay"
+    },
+    {
+      "start": 2085.96,
+      "end": 2092.44,
+      "duration": 6.48,
+      "text": "this is the reason we attach smaller to"
+    },
+    {
+      "start": 2089.98,
+      "end": 2095.32,
+      "duration": 5.34,
+      "text": "larger first to keep it shrinked second"
+    },
+    {
+      "start": 2092.44,
+      "end": 2098.32,
+      "duration": 5.88,
+      "text": "is to make sure that the time taken and"
+    },
+    {
+      "start": 2095.32,
+      "end": 2100.36,
+      "duration": 5.04,
+      "text": "finding of the parents is as minimal as"
+    },
+    {
+      "start": 2098.32,
+      "end": 2102.58,
+      "duration": 4.26,
+      "text": "possible so you must be thinking striver"
+    },
+    {
+      "start": 2100.36,
+      "end": 2104.92,
+      "duration": 4.56,
+      "text": "if that's the case why are we using"
+    },
+    {
+      "start": 2102.58,
+      "end": 2106.72,
+      "duration": 4.14,
+      "text": "something like Union by rank because"
+    },
+    {
+      "start": 2104.92,
+      "end": 2108.1,
+      "duration": 3.18,
+      "text": "after path compression it doesn't even"
+    },
+    {
+      "start": 2106.72,
+      "end": 2110.8,
+      "duration": 4.08,
+      "text": "gives us the height because the height"
+    },
+    {
+      "start": 2108.1,
+      "end": 2112.54,
+      "duration": 4.44,
+      "text": "is distorted after path compression can"
+    },
+    {
+      "start": 2110.8,
+      "end": 2114.16,
+      "duration": 3.36,
+      "text": "we use something as size which keeps a"
+    },
+    {
+      "start": 2112.54,
+      "end": 2116.62,
+      "duration": 4.08,
+      "text": "track of what is the size of the"
+    },
+    {
+      "start": 2114.16,
+      "end": 2120.16,
+      "duration": 6.0,
+      "text": "component I think we can I think we can"
+    },
+    {
+      "start": 2116.62,
+      "end": 2122.8,
+      "duration": 6.18,
+      "text": "so that's what we will be doing okay so"
+    },
+    {
+      "start": 2120.16,
+      "end": 2126.52,
+      "duration": 6.36,
+      "text": "so what I will try to teach you now is"
+    },
+    {
+      "start": 2122.8,
+      "end": 2128.08,
+      "duration": 5.28,
+      "text": "Union by size we know find parent we"
+    },
+    {
+      "start": 2126.52,
+      "end": 2131.14,
+      "duration": 4.62,
+      "text": "know path compression but instead of"
+    },
+    {
+      "start": 2128.08,
+      "end": 2133.36,
+      "duration": 5.28,
+      "text": "rank we'll be using the Union by size so"
+    },
+    {
+      "start": 2131.14,
+      "end": 2135.46,
+      "duration": 4.32,
+      "text": "over here the same thing will happen we"
+    },
+    {
+      "start": 2133.36,
+      "end": 2137.86,
+      "duration": 4.5,
+      "text": "will have a size array of the same size"
+    },
+    {
+      "start": 2135.46,
+      "end": 2139.06,
+      "duration": 3.6,
+      "text": "so let's quickly declare the size array"
+    },
+    {
+      "start": 2137.86,
+      "end": 2140.68,
+      "duration": 2.82,
+      "text": "of seven size"
+    },
+    {
+      "start": 2139.06,
+      "end": 2142.48,
+      "duration": 3.42,
+      "text": "so the initial configuration will be"
+    },
+    {
+      "start": 2140.68,
+      "end": 2144.94,
+      "duration": 4.26,
+      "text": "very straightforward we will have a size"
+    },
+    {
+      "start": 2142.48,
+      "end": 2148.0,
+      "duration": 5.52,
+      "text": "and everyone will be of size 1 why"
+    },
+    {
+      "start": 2144.94,
+      "end": 2150.22,
+      "duration": 5.28,
+      "text": "because everyone is itself a component"
+    },
+    {
+      "start": 2148.0,
+      "end": 2153.46,
+      "duration": 5.46,
+      "text": "when we start off with so everyone is"
+    },
+    {
+      "start": 2150.22,
+      "end": 2155.14,
+      "duration": 4.92,
+      "text": "going to be having a size of one and we"
+    },
+    {
+      "start": 2153.46,
+      "end": 2156.82,
+      "duration": 3.36,
+      "text": "know one more thing that the parent will"
+    },
+    {
+      "start": 2155.14,
+      "end": 2159.64,
+      "duration": 4.5,
+      "text": "be themselves so this is what we take"
+    },
+    {
+      "start": 2156.82,
+      "end": 2162.16,
+      "duration": 5.34,
+      "text": "now to start off with very simple we say"
+    },
+    {
+      "start": 2159.64,
+      "end": 2164.32,
+      "duration": 4.68,
+      "text": "one comma two we say one has a size of"
+    },
+    {
+      "start": 2162.16,
+      "end": 2165.94,
+      "duration": 3.78,
+      "text": "one two also has a size of one so both"
+    },
+    {
+      "start": 2164.32,
+      "end": 2167.86,
+      "duration": 3.54,
+      "text": "are similar size so it doesn't matter"
+    },
+    {
+      "start": 2165.94,
+      "end": 2170.08,
+      "duration": 4.14,
+      "text": "whom you attach so I go ahead and attach"
+    },
+    {
+      "start": 2167.86,
+      "end": 2172.48,
+      "duration": 4.62,
+      "text": "two over here the moment you attach two"
+    },
+    {
+      "start": 2170.08,
+      "end": 2175.24,
+      "duration": 5.16,
+      "text": "to one size of one will increase to two"
+    },
+    {
+      "start": 2172.48,
+      "end": 2176.98,
+      "duration": 4.5,
+      "text": "because it took a size of one got"
+    },
+    {
+      "start": 2175.24,
+      "end": 2179.44,
+      "duration": 4.2,
+      "text": "attached to it so the size increased by"
+    },
+    {
+      "start": 2176.98,
+      "end": 2181.96,
+      "duration": 4.98,
+      "text": "it okay next is two to three very"
+    },
+    {
+      "start": 2179.44,
+      "end": 2183.88,
+      "duration": 4.44,
+      "text": "important point to realize now one has a"
+    },
+    {
+      "start": 2181.96,
+      "end": 2186.76,
+      "duration": 4.8,
+      "text": "size of two and remember the parent of"
+    },
+    {
+      "start": 2183.88,
+      "end": 2188.86,
+      "duration": 4.98,
+      "text": "two is this time one so one has the size"
+    },
+    {
+      "start": 2186.76,
+      "end": 2190.78,
+      "duration": 4.02,
+      "text": "of two and three has a size of one so"
+    },
+    {
+      "start": 2188.86,
+      "end": 2192.1,
+      "duration": 3.24,
+      "text": "this is the smaller goes and gets"
+    },
+    {
+      "start": 2190.78,
+      "end": 2194.68,
+      "duration": 3.9,
+      "text": "attached to one"
+    },
+    {
+      "start": 2192.1,
+      "end": 2196.84,
+      "duration": 4.74,
+      "text": "so goes and gets attached to one the"
+    },
+    {
+      "start": 2194.68,
+      "end": 2199.36,
+      "duration": 4.68,
+      "text": "size will again increase by one why"
+    },
+    {
+      "start": 2196.84,
+      "end": 2201.46,
+      "duration": 4.62,
+      "text": "because 3 was the size of one perfect"
+    },
+    {
+      "start": 2199.36,
+      "end": 2204.34,
+      "duration": 4.98,
+      "text": "done and three will be having a parent"
+    },
+    {
+      "start": 2201.46,
+      "end": 2206.2,
+      "duration": 4.74,
+      "text": "of one so this is also done next is four"
+    },
+    {
+      "start": 2204.34,
+      "end": 2209.68,
+      "duration": 5.34,
+      "text": "and five so what I'll do is I'll just"
+    },
+    {
+      "start": 2206.2,
+      "end": 2212.44,
+      "duration": 6.24,
+      "text": "omit this and I'll just assign 5 to the"
+    },
+    {
+      "start": 2209.68,
+      "end": 2214.48,
+      "duration": 4.8,
+      "text": "sky and 5 is parent will be 4 and 4 will"
+    },
+    {
+      "start": 2212.44,
+      "end": 2217.98,
+      "duration": 5.54,
+      "text": "increase the size of two next will be"
+    },
+    {
+      "start": 2214.48,
+      "end": 2217.98,
+      "duration": 3.5,
+      "text": "six and seven so I'll assign"
+    },
+    {
+      "start": 2219.48,
+      "end": 2224.92,
+      "duration": 5.44,
+      "text": "and I'll increase the size over here"
+    },
+    {
+      "start": 2221.74,
+      "end": 2227.08,
+      "duration": 5.34,
+      "text": "perfect done next is why you understand"
+    },
+    {
+      "start": 2224.92,
+      "end": 2230.32,
+      "duration": 5.4,
+      "text": "so next is so"
+    },
+    {
+      "start": 2227.08,
+      "end": 2232.66,
+      "duration": 5.58,
+      "text": "6 comma 7 is done next is 5 comma six so"
+    },
+    {
+      "start": 2230.32,
+      "end": 2235.9,
+      "duration": 5.58,
+      "text": "that is five five is here with four"
+    },
+    {
+      "start": 2232.66,
+      "end": 2239.44,
+      "duration": 6.78,
+      "text": "and six is here so both of them if you"
+    },
+    {
+      "start": 2235.9,
+      "end": 2241.42,
+      "duration": 5.52,
+      "text": "see out of size 2 size 2 theme size so"
+    },
+    {
+      "start": 2239.44,
+      "end": 2244.24,
+      "duration": 4.8,
+      "text": "what you'll do is probably you can take"
+    },
+    {
+      "start": 2241.42,
+      "end": 2247.42,
+      "duration": 6.0,
+      "text": "six and get attached to this"
+    },
+    {
+      "start": 2244.24,
+      "end": 2250.18,
+      "duration": 5.94,
+      "text": "done the sixes parent will be four six"
+    },
+    {
+      "start": 2247.42,
+      "end": 2253.06,
+      "duration": 5.64,
+      "text": "is parent will be four and since you're"
+    },
+    {
+      "start": 2250.18,
+      "end": 2256.3,
+      "duration": 6.12,
+      "text": "attaching a size 2 to 4 the size will"
+    },
+    {
+      "start": 2253.06,
+      "end": 2259.06,
+      "duration": 6.0,
+      "text": "increase by two not by one so basically"
+    },
+    {
+      "start": 2256.3,
+      "end": 2261.04,
+      "duration": 4.74,
+      "text": "this is keeping a track of how big is"
+    },
+    {
+      "start": 2259.06,
+      "end": 2263.44,
+      "duration": 4.38,
+      "text": "this this is keeping a track of how big"
+    },
+    {
+      "start": 2261.04,
+      "end": 2266.38,
+      "duration": 5.34,
+      "text": "is this this is also done next will be 3"
+    },
+    {
+      "start": 2263.44,
+      "end": 2269.26,
+      "duration": 5.82,
+      "text": "comma seven so for three it's one which"
+    },
+    {
+      "start": 2266.38,
+      "end": 2272.56,
+      "duration": 6.18,
+      "text": "is a size of three three size component"
+    },
+    {
+      "start": 2269.26,
+      "end": 2274.54,
+      "duration": 5.28,
+      "text": "for seven if you see seven has this"
+    },
+    {
+      "start": 2272.56,
+      "end": 2276.94,
+      "duration": 4.38,
+      "text": "which is nothing but a four size"
+    },
+    {
+      "start": 2274.54,
+      "end": 2278.74,
+      "duration": 4.2,
+      "text": "component this is a smaller one so this"
+    },
+    {
+      "start": 2276.94,
+      "end": 2280.6,
+      "duration": 3.66,
+      "text": "will go and attached so when you try to"
+    },
+    {
+      "start": 2278.74,
+      "end": 2283.36,
+      "duration": 4.62,
+      "text": "find the ultimate parent of seven"
+    },
+    {
+      "start": 2280.6,
+      "end": 2284.74,
+      "duration": 4.14,
+      "text": "definitely path compression will happen"
+    },
+    {
+      "start": 2283.36,
+      "end": 2286.24,
+      "duration": 2.88,
+      "text": "here's the first step"
+    },
+    {
+      "start": 2284.74,
+      "end": 2288.22,
+      "duration": 3.48,
+      "text": "next"
+    },
+    {
+      "start": 2286.24,
+      "end": 2289.54,
+      "duration": 3.3,
+      "text": "for three the parent is one so this goes"
+    },
+    {
+      "start": 2288.22,
+      "end": 2292.06,
+      "duration": 3.84,
+      "text": "and attach"
+    },
+    {
+      "start": 2289.54,
+      "end": 2293.92,
+      "duration": 4.38,
+      "text": "Force size will be increased by three"
+    },
+    {
+      "start": 2292.06,
+      "end": 2296.26,
+      "duration": 4.2,
+      "text": "the four will be having a size of seven"
+    },
+    {
+      "start": 2293.92,
+      "end": 2300.7,
+      "duration": 6.78,
+      "text": "so you can keep a track of size and this"
+    },
+    {
+      "start": 2296.26,
+      "end": 2302.68,
+      "duration": 6.42,
+      "text": "actually is much more uh like induced"
+    },
+    {
+      "start": 2300.7,
+      "end": 2304.42,
+      "duration": 3.72,
+      "text": "intuitive you can say instead of the"
+    },
+    {
+      "start": 2302.68,
+      "end": 2307.42,
+      "duration": 4.74,
+      "text": "rank I don't find the rank to be that"
+    },
+    {
+      "start": 2304.42,
+      "end": 2309.34,
+      "duration": 4.92,
+      "text": "much intuitive but I feel I find uh this"
+    },
+    {
+      "start": 2307.42,
+      "end": 2311.62,
+      "duration": 4.2,
+      "text": "Union by size to be much more intuitive"
+    },
+    {
+      "start": 2309.34,
+      "end": 2313.84,
+      "duration": 4.5,
+      "text": "than Union by rank because it kind of"
+    },
+    {
+      "start": 2311.62,
+      "end": 2316.54,
+      "duration": 4.92,
+      "text": "makes sense where you are storing the"
+    },
+    {
+      "start": 2313.84,
+      "end": 2318.7,
+      "duration": 4.86,
+      "text": "size because rank is distorted so what"
+    },
+    {
+      "start": 2316.54,
+      "end": 2320.86,
+      "duration": 4.32,
+      "text": "I'll do is I'll try to copy the same"
+    },
+    {
+      "start": 2318.7,
+      "end": 2323.32,
+      "duration": 4.62,
+      "text": "thing so I'll try to copy the same thing"
+    },
+    {
+      "start": 2320.86,
+      "end": 2326.2,
+      "duration": 5.34,
+      "text": "and I'll create in the same function"
+    },
+    {
+      "start": 2323.32,
+      "end": 2327.76,
+      "duration": 4.44,
+      "text": "I'll just create Union by size"
+    },
+    {
+      "start": 2326.2,
+      "end": 2330.88,
+      "duration": 4.68,
+      "text": "because everything else will stay same"
+    },
+    {
+      "start": 2327.76,
+      "end": 2333.4,
+      "duration": 5.64,
+      "text": "Union by size and now what I'll do is I"
+    },
+    {
+      "start": 2330.88,
+      "end": 2334.3,
+      "duration": 3.42,
+      "text": "will say okay fine I know one thing for"
+    },
+    {
+      "start": 2333.4,
+      "end": 2335.98,
+      "duration": 2.58,
+      "text": "sure"
+    },
+    {
+      "start": 2334.3,
+      "end": 2337.9,
+      "duration": 3.6,
+      "text": "now I'm doing a comparison on the size"
+    },
+    {
+      "start": 2335.98,
+      "end": 2342.42,
+      "duration": 6.44,
+      "text": "so size of"
+    },
+    {
+      "start": 2337.9,
+      "end": 2342.42,
+      "duration": 4.52,
+      "text": "this if lesser than size of"
+    },
+    {
+      "start": 2343.18,
+      "end": 2348.64,
+      "duration": 5.46,
+      "text": "this"
+    },
+    {
+      "start": 2344.86,
+      "end": 2352.66,
+      "duration": 7.8,
+      "text": "then I'll be like okay I will take the"
+    },
+    {
+      "start": 2348.64,
+      "end": 2354.1,
+      "duration": 5.46,
+      "text": "ulp you attach to the ultimate parent of"
+    },
+    {
+      "start": 2352.66,
+      "end": 2356.68,
+      "duration": 4.02,
+      "text": "V"
+    },
+    {
+      "start": 2354.1,
+      "end": 2358.9,
+      "duration": 4.8,
+      "text": "done next the size of the ultimate"
+    },
+    {
+      "start": 2356.68,
+      "end": 2361.54,
+      "duration": 4.86,
+      "text": "parent of V because it is getting"
+    },
+    {
+      "start": 2358.9,
+      "end": 2364.44,
+      "duration": 5.54,
+      "text": "attached to will be increased by"
+    },
+    {
+      "start": 2361.54,
+      "end": 2364.44,
+      "duration": 2.9,
+      "text": "ultimate parent interview"
+    },
+    {
+      "start": 2364.72,
+      "end": 2370.42,
+      "duration": 5.7,
+      "text": "else now will there be an equal case"
+    },
+    {
+      "start": 2368.38,
+      "end": 2374.62,
+      "duration": 6.24,
+      "text": "if there is an equal case you still"
+    },
+    {
+      "start": 2370.42,
+      "end": 2376.48,
+      "duration": 6.06,
+      "text": "attach it right so we can just write an"
+    },
+    {
+      "start": 2374.62,
+      "end": 2378.22,
+      "duration": 3.6,
+      "text": "else instead of writing else if greater"
+    },
+    {
+      "start": 2376.48,
+      "end": 2380.32,
+      "duration": 3.84,
+      "text": "and then else because an equal doesn't"
+    },
+    {
+      "start": 2378.22,
+      "end": 2382.48,
+      "duration": 4.26,
+      "text": "matter whom you attach to right so I'll"
+    },
+    {
+      "start": 2380.32,
+      "end": 2385.9,
+      "duration": 5.58,
+      "text": "just take this and I'll just change this"
+    },
+    {
+      "start": 2382.48,
+      "end": 2387.7,
+      "duration": 5.22,
+      "text": "to V I'll change this to U I'll change"
+    },
+    {
+      "start": 2385.9,
+      "end": 2388.96,
+      "duration": 3.06,
+      "text": "this to U and I'll change the story"
+    },
+    {
+      "start": 2387.7,
+      "end": 2390.64,
+      "duration": 2.94,
+      "text": "that's it"
+    },
+    {
+      "start": 2388.96,
+      "end": 2394.0,
+      "duration": 5.04,
+      "text": "so this is how the Union by size will"
+    },
+    {
+      "start": 2390.64,
+      "end": 2395.32,
+      "duration": 4.68,
+      "text": "work and what I'll do is now remember if"
+    },
+    {
+      "start": 2394.0,
+      "end": 2397.9,
+      "duration": 3.9,
+      "text": "you're implementing a data structure"
+    },
+    {
+      "start": 2395.32,
+      "end": 2400.06,
+      "duration": 4.74,
+      "text": "either use by rank or either use by size"
+    },
+    {
+      "start": 2397.9,
+      "end": 2403.06,
+      "duration": 5.16,
+      "text": "don't use both of them together don't"
+    },
+    {
+      "start": 2400.06,
+      "end": 2405.16,
+      "duration": 5.1,
+      "text": "use both of them together because we"
+    },
+    {
+      "start": 2403.06,
+      "end": 2407.44,
+      "duration": 4.38,
+      "text": "have to declare a size this time so"
+    },
+    {
+      "start": 2405.16,
+      "end": 2411.28,
+      "duration": 6.12,
+      "text": "let's quickly declare a size and over"
+    },
+    {
+      "start": 2407.44,
+      "end": 2413.86,
+      "duration": 6.42,
+      "text": "here what I can say is size dot resize n"
+    },
+    {
+      "start": 2411.28,
+      "end": 2416.8,
+      "duration": 5.52,
+      "text": "plus 1 and I can go ahead and say size"
+    },
+    {
+      "start": 2413.86,
+      "end": 2418.48,
+      "duration": 4.62,
+      "text": "of I is initially one that's the initial"
+    },
+    {
+      "start": 2416.8,
+      "end": 2420.46,
+      "duration": 3.66,
+      "text": "configuration and I've written the Union"
+    },
+    {
+      "start": 2418.48,
+      "end": 2422.74,
+      "duration": 4.26,
+      "text": "by size then I have everything as Union"
+    },
+    {
+      "start": 2420.46,
+      "end": 2425.32,
+      "duration": 4.86,
+      "text": "by size let's quickly do a compile and"
+    },
+    {
+      "start": 2422.74,
+      "end": 2428.32,
+      "duration": 5.58,
+      "text": "see if it is working fine"
+    },
+    {
+      "start": 2425.32,
+      "end": 2428.32,
+      "duration": 3.0,
+      "text": "foreign"
+    },
+    {
+      "start": 2436.24,
+      "end": 2441.3,
+      "duration": 5.06,
+      "text": "okay not same not same"
+    },
+    {
+      "start": 2438.7,
+      "end": 2441.3,
+      "duration": 2.6,
+      "text": "strange"
+    },
+    {
+      "start": 2449.56,
+      "end": 2453.64,
+      "duration": 4.08,
+      "text": "so over here there was a v you have to"
+    },
+    {
+      "start": 2451.6,
+      "end": 2455.74,
+      "duration": 4.14,
+      "text": "make it U again now we can compile and"
+    },
+    {
+      "start": 2453.64,
+      "end": 2458.08,
+      "duration": 4.44,
+      "text": "see if it is running fine yes not same"
+    },
+    {
+      "start": 2455.74,
+      "end": 2460.6,
+      "duration": 4.86,
+      "text": "and C so this is how you can easily"
+    },
+    {
+      "start": 2458.08,
+      "end": 2463.6,
+      "duration": 5.52,
+      "text": "create a snippet of code which has Union"
+    },
+    {
+      "start": 2460.6,
+      "end": 2465.04,
+      "duration": 4.44,
+      "text": "by rank as well as Union by size what is"
+    },
+    {
+      "start": 2463.6,
+      "end": 2467.68,
+      "duration": 4.08,
+      "text": "the time complexity which one is better"
+    },
+    {
+      "start": 2465.04,
+      "end": 2469.36,
+      "duration": 4.32,
+      "text": "both are of the same time complexity"
+    },
+    {
+      "start": 2467.68,
+      "end": 2471.22,
+      "duration": 3.54,
+      "text": "because we are still attaching them"
+    },
+    {
+      "start": 2469.36,
+      "end": 2472.9,
+      "duration": 3.54,
+      "text": "still creating trees still having the"
+    },
+    {
+      "start": 2471.22,
+      "end": 2475.06,
+      "duration": 3.84,
+      "text": "path compression so both of them will"
+    },
+    {
+      "start": 2472.9,
+      "end": 2477.34,
+      "duration": 4.44,
+      "text": "take we go of 4 Alpha which is as good"
+    },
+    {
+      "start": 2475.06,
+      "end": 2479.38,
+      "duration": 4.32,
+      "text": "as a constant will"
+    },
+    {
+      "start": 2477.34,
+      "end": 2482.56,
+      "duration": 5.22,
+      "text": "like will the interviewer ask you about"
+    },
+    {
+      "start": 2479.38,
+      "end": 2484.24,
+      "duration": 4.86,
+      "text": "for Alpha no because it's it has a very"
+    },
+    {
+      "start": 2482.56,
+      "end": 2486.4,
+      "duration": 3.84,
+      "text": "very huge mathematic derivation you can"
+    },
+    {
+      "start": 2484.24,
+      "end": 2488.02,
+      "duration": 3.78,
+      "text": "probably Google and read about it for"
+    },
+    {
+      "start": 2486.4,
+      "end": 2489.94,
+      "duration": 3.54,
+      "text": "interviews if you tell them that poor"
+    },
+    {
+      "start": 2488.02,
+      "end": 2491.5,
+      "duration": 3.48,
+      "text": "Alpha is near about constant that's more"
+    },
+    {
+      "start": 2489.94,
+      "end": 2492.82,
+      "duration": 2.88,
+      "text": "than okay because what they look for is"
+    },
+    {
+      "start": 2491.5,
+      "end": 2495.76,
+      "duration": 4.26,
+      "text": "do you know the logic do you understand"
+    },
+    {
+      "start": 2492.82,
+      "end": 2498.82,
+      "duration": 6.0,
+      "text": "this in depth or not that please focus"
+    },
+    {
+      "start": 2495.76,
+      "end": 2500.38,
+      "duration": 4.62,
+      "text": "on that part as much as you can so yeah"
+    },
+    {
+      "start": 2498.82,
+      "end": 2502.84,
+      "duration": 4.02,
+      "text": "before ending up this video I was"
+    },
+    {
+      "start": 2500.38,
+      "end": 2505.0,
+      "duration": 4.62,
+      "text": "checking out our Channel stats nearly 50"
+    },
+    {
+      "start": 2502.84,
+      "end": 2506.92,
+      "duration": 4.08,
+      "text": "of the people who watch our videos do"
+    },
+    {
+      "start": 2505.0,
+      "end": 2508.6,
+      "duration": 3.6,
+      "text": "not subscribe to us so please do"
+    },
+    {
+      "start": 2506.92,
+      "end": 2510.4,
+      "duration": 3.48,
+      "text": "consider subscribing to us it's a very"
+    },
+    {
+      "start": 2508.6,
+      "end": 2512.56,
+      "duration": 3.96,
+      "text": "very honest request and yes if you"
+    },
+    {
+      "start": 2510.4,
+      "end": 2515.44,
+      "duration": 5.04,
+      "text": "understood it in by rank even by size"
+    },
+    {
+      "start": 2512.56,
+      "end": 2516.64,
+      "duration": 4.08,
+      "text": "path compression the code snippet I"
+    },
+    {
+      "start": 2515.44,
+      "end": 2518.62,
+      "duration": 3.18,
+      "text": "think you should hit that like button"
+    },
+    {
+      "start": 2516.64,
+      "end": 2520.66,
+      "duration": 4.02,
+      "text": "and if you haven't uh checked out our DP"
+    },
+    {
+      "start": 2518.62,
+      "end": 2522.28,
+      "duration": 3.66,
+      "text": "series and the SDC the links will be in"
+    },
+    {
+      "start": 2520.66,
+      "end": 2523.36,
+      "duration": 2.7,
+      "text": "the description please make sure you"
+    },
+    {
+      "start": 2522.28,
+      "end": 2524.56,
+      "duration": 2.28,
+      "text": "check them out and here with this I'll"
+    },
+    {
+      "start": 2523.36,
+      "end": 2528.54,
+      "duration": 5.18,
+      "text": "be wrapping up this video let's put in"
+    },
+    {
+      "start": 2524.56,
+      "end": 2528.54,
+      "duration": 3.98,
+      "text": "some other video tell them I take care"
+    },
+    {
+      "start": 2528.79,
+      "end": 2536.66,
+      "duration": 7.87,
+      "text": "[Music]"
+    }
+  ]
+}

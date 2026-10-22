@@ -1,0 +1,3362 @@
+{
+  "video_id": "_eNhaDCr6P0",
+  "title": "L8. Longest Repeating Character Replacement | 2 Pointers and Sliding Window Playlist",
+  "duration_sec": 1521,
+  "num_segments": 559,
+  "segments": [
+    {
+      "start": 3.2,
+      "end": 7.16,
+      "duration": 3.96,
+      "text": "so let's continue with this ders a toz"
+    },
+    {
+      "start": 5.24,
+      "end": 9.12,
+      "duration": 3.88,
+      "text": "DSA course and the problem that we are"
+    },
+    {
+      "start": 7.16,
+      "end": 11.08,
+      "duration": 3.92,
+      "text": "solving today will be involving the"
+    },
+    {
+      "start": 9.12,
+      "end": 13.44,
+      "duration": 4.32,
+      "text": "concepts of two-pointer and sliding"
+    },
+    {
+      "start": 11.08,
+      "end": 14.64,
+      "duration": 3.56,
+      "text": "window but before starting hey welcome"
+    },
+    {
+      "start": 13.44,
+      "end": 16.76,
+      "duration": 3.32,
+      "text": "back to the channel I hope you guys are"
+    },
+    {
+      "start": 14.64,
+      "end": 19.24,
+      "duration": 4.6,
+      "text": "doing extremely well so the problem that"
+    },
+    {
+      "start": 16.76,
+      "end": 21.96,
+      "duration": 5.2,
+      "text": "we will be solving today is longest"
+    },
+    {
+      "start": 19.24,
+      "end": 23.8,
+      "duration": 4.56,
+      "text": "repeating character replacement so what"
+    },
+    {
+      "start": 21.96,
+      "end": 25.96,
+      "duration": 4.0,
+      "text": "is the problem exactly stating it's"
+    },
+    {
+      "start": 23.8,
+      "end": 27.68,
+      "duration": 3.88,
+      "text": "stating that it'll be given a string"
+    },
+    {
+      "start": 25.96,
+      "end": 31.32,
+      "duration": 5.36,
+      "text": "which will have all the uppercase"
+    },
+    {
+      "start": 27.68,
+      "end": 33.2,
+      "duration": 5.52,
+      "text": "letters it'll be given an integer K now"
+    },
+    {
+      "start": 31.32,
+      "end": 35.64,
+      "duration": 4.32,
+      "text": "what does this particular integer"
+    },
+    {
+      "start": 33.2,
+      "end": 39.84,
+      "duration": 6.64,
+      "text": "signify it signifies that you can pick"
+    },
+    {
+      "start": 35.64,
+      "end": 43.16,
+      "duration": 7.52,
+      "text": "up at most K characters at most two"
+    },
+    {
+      "start": 39.84,
+      "end": 45.56,
+      "duration": 5.72,
+      "text": "characters from this given string assume"
+    },
+    {
+      "start": 43.16,
+      "end": 48.8,
+      "duration": 5.64,
+      "text": "I can pick up this particular a I can"
+    },
+    {
+      "start": 45.56,
+      "end": 51.12,
+      "duration": 5.56,
+      "text": "pick up the last a any two characters at"
+    },
+    {
+      "start": 48.8,
+      "end": 53.2,
+      "duration": 4.4,
+      "text": "most any two characters and then I can"
+    },
+    {
+      "start": 51.12,
+      "end": 55.72,
+      "duration": 4.6,
+      "text": "convert them to any other possible"
+    },
+    {
+      "start": 53.2,
+      "end": 59.6,
+      "duration": 6.4,
+      "text": "uppercase letter I can convert this a to"
+    },
+    {
+      "start": 55.72,
+      "end": 62.8,
+      "duration": 7.08,
+      "text": "c i can convert this a to r or anything"
+    },
+    {
+      "start": 59.6,
+      "end": 66.24,
+      "duration": 6.64,
+      "text": "any thing yes once you have done this"
+    },
+    {
+      "start": 62.8,
+      "end": 70.24,
+      "duration": 7.44,
+      "text": "you'll have to figure out the longest"
+    },
+    {
+      "start": 66.24,
+      "end": 73.56,
+      "duration": 7.32,
+      "text": "substring which has all the characters"
+    },
+    {
+      "start": 70.24,
+      "end": 77.76,
+      "duration": 7.52,
+      "text": "as equal which has all the characters as"
+    },
+    {
+      "start": 73.56,
+      "end": 80.04,
+      "duration": 6.48,
+      "text": "equal so let's assume I pick up this so"
+    },
+    {
+      "start": 77.76,
+      "end": 83.0,
+      "duration": 5.24,
+      "text": "substring is basically a consecutive"
+    },
+    {
+      "start": 80.04,
+      "end": 85.52,
+      "duration": 5.48,
+      "text": "portion of the string the length is two"
+    },
+    {
+      "start": 83.0,
+      "end": 88.8,
+      "duration": 5.8,
+      "text": "and all the characters are equal but if"
+    },
+    {
+      "start": 85.52,
+      "end": 90.92,
+      "duration": 5.4,
+      "text": "I pick up this one the length is four"
+    },
+    {
+      "start": 88.8,
+      "end": 94.4,
+      "duration": 5.6,
+      "text": "but does it have all all the characters"
+    },
+    {
+      "start": 90.92,
+      "end": 97.04,
+      "duration": 6.12,
+      "text": "equal it doesn't but then I'm allowed to"
+    },
+    {
+      "start": 94.4,
+      "end": 100.08,
+      "duration": 5.68,
+      "text": "convert at most two characters so maybe"
+    },
+    {
+      "start": 97.04,
+      "end": 102.92,
+      "duration": 5.88,
+      "text": "I can convert this B to a and I can have"
+    },
+    {
+      "start": 100.08,
+      "end": 105.52,
+      "duration": 5.44,
+      "text": "all the characters as equal so I can"
+    },
+    {
+      "start": 102.92,
+      "end": 107.64,
+      "duration": 4.72,
+      "text": "pick up a subring of length four but the"
+    },
+    {
+      "start": 105.52,
+      "end": 110.28,
+      "duration": 4.76,
+      "text": "question is to pick up the longest"
+    },
+    {
+      "start": 107.64,
+      "end": 114.16,
+      "duration": 6.52,
+      "text": "substring so can I say if I pick up this"
+    },
+    {
+      "start": 110.28,
+      "end": 117.0,
+      "duration": 6.72,
+      "text": "one this is a length five and it is a a"
+    },
+    {
+      "start": 114.16,
+      "end": 120.36,
+      "duration": 6.2,
+      "text": "b a b and what I can do is I can convert"
+    },
+    {
+      "start": 117.0,
+      "end": 122.72,
+      "duration": 5.72,
+      "text": "this B to a I can convert this B to a so"
+    },
+    {
+      "start": 120.36,
+      "end": 124.4,
+      "duration": 4.04,
+      "text": "yes this is length five can I pick up"
+    },
+    {
+      "start": 122.72,
+      "end": 129.96,
+      "duration": 7.24,
+      "text": "more than that if I try to pick up"
+    },
+    {
+      "start": 124.4,
+      "end": 132.72,
+      "duration": 8.32,
+      "text": "length six this will have a a b a b b so"
+    },
+    {
+      "start": 129.96,
+      "end": 134.6,
+      "duration": 4.64,
+      "text": "over here I have three characters that I"
+    },
+    {
+      "start": 132.72,
+      "end": 137.2,
+      "duration": 4.48,
+      "text": "have to convert and that's not possible"
+    },
+    {
+      "start": 134.6,
+      "end": 139.84,
+      "duration": 5.24,
+      "text": "because at most you can convert K"
+    },
+    {
+      "start": 137.2,
+      "end": 142.52,
+      "duration": 5.32,
+      "text": "characters two characters over here so"
+    },
+    {
+      "start": 139.84,
+      "end": 144.8,
+      "duration": 4.96,
+      "text": "if you try out all the substrings you'll"
+    },
+    {
+      "start": 142.52,
+      "end": 148.2,
+      "duration": 5.68,
+      "text": "find out that at Max the length that"
+    },
+    {
+      "start": 144.8,
+      "end": 149.6,
+      "duration": 4.8,
+      "text": "you'll be able to achieve is five so"
+    },
+    {
+      "start": 148.2,
+      "end": 152.76,
+      "duration": 4.56,
+      "text": "this is what you'll have to return five"
+    },
+    {
+      "start": 149.6,
+      "end": 154.96,
+      "duration": 5.36,
+      "text": "is you have to return so what is the"
+    },
+    {
+      "start": 152.76,
+      "end": 158.16,
+      "duration": 5.4,
+      "text": "extreme root force that you can think of"
+    },
+    {
+      "start": 154.96,
+      "end": 160.32,
+      "duration": 5.36,
+      "text": "like what I can think of is generate all"
+    },
+    {
+      "start": 158.16,
+      "end": 163.04,
+      "duration": 4.88,
+      "text": "the substrings yes that is the extreme"
+    },
+    {
+      "start": 160.32,
+      "end": 167.4,
+      "duration": 7.08,
+      "text": "root Force so what I will do is I'll"
+    },
+    {
+      "start": 163.04,
+      "end": 170.16,
+      "duration": 7.12,
+      "text": "generate all the substrings yes and what"
+    },
+    {
+      "start": 167.4,
+      "end": 173.12,
+      "duration": 5.72,
+      "text": "I'll try to do is I'll try to figure out"
+    },
+    {
+      "start": 170.16,
+      "end": 175.48,
+      "duration": 5.32,
+      "text": "how many characters I need to"
+    },
+    {
+      "start": 173.12,
+      "end": 178.88,
+      "duration": 5.76,
+      "text": "change that's what I need to figure out"
+    },
+    {
+      "start": 175.48,
+      "end": 182.4,
+      "duration": 6.92,
+      "text": "right if I pick up this one double a b a"
+    },
+    {
+      "start": 178.88,
+      "end": 185.2,
+      "duration": 6.32,
+      "text": "b i I figured out that this B and this B"
+    },
+    {
+      "start": 182.4,
+      "end": 188.76,
+      "duration": 6.36,
+      "text": "is what I need to change now you you can"
+    },
+    {
+      "start": 185.2,
+      "end": 192.68,
+      "duration": 7.48,
+      "text": "also say that okay a a b a b maybe I can"
+    },
+    {
+      "start": 188.76,
+      "end": 195.68,
+      "duration": 6.92,
+      "text": "change all the A's to B's that's also a"
+    },
+    {
+      "start": 192.68,
+      "end": 198.64,
+      "duration": 5.96,
+      "text": "valid one right but what will you look"
+    },
+    {
+      "start": 195.68,
+      "end": 200.8,
+      "duration": 5.12,
+      "text": "to do since you're allowed at Max 2 you"
+    },
+    {
+      "start": 198.64,
+      "end": 203.6,
+      "duration": 4.96,
+      "text": "look to minimize the conversions you"
+    },
+    {
+      "start": 200.8,
+      "end": 205.56,
+      "duration": 4.76,
+      "text": "look to minimize the conversions thereby"
+    },
+    {
+      "start": 203.6,
+      "end": 208.4,
+      "duration": 4.8,
+      "text": "this is what you'll try to do try to"
+    },
+    {
+      "start": 205.56,
+      "end": 210.84,
+      "duration": 5.28,
+      "text": "pick up the minimal conversions correct"
+    },
+    {
+      "start": 208.4,
+      "end": 214.12,
+      "duration": 5.72,
+      "text": "now how do I figure out the minimal"
+    },
+    {
+      "start": 210.84,
+      "end": 220.72,
+      "duration": 9.88,
+      "text": "conversions very easy can I say double a"
+    },
+    {
+      "start": 214.12,
+      "end": 223.2,
+      "duration": 9.08,
+      "text": "b a b this has A3 times B two times so"
+    },
+    {
+      "start": 220.72,
+      "end": 226.36,
+      "duration": 5.64,
+      "text": "technically I should convert all the B's"
+    },
+    {
+      "start": 223.2,
+      "end": 228.92,
+      "duration": 5.72,
+      "text": "instead of converting all the a whatever"
+    },
+    {
+      "start": 226.36,
+      "end": 231.04,
+      "duration": 4.68,
+      "text": "like whichever character appears maximum"
+    },
+    {
+      "start": 228.92,
+      "end": 233.24,
+      "duration": 4.32,
+      "text": "number of times I'll not touch it I'll"
+    },
+    {
+      "start": 231.04,
+      "end": 234.76,
+      "duration": 3.72,
+      "text": "touch all the others imagine you have a"
+    },
+    {
+      "start": 233.24,
+      "end": 236.52,
+      "duration": 3.28,
+      "text": "substring which is looking something"
+    },
+    {
+      "start": 234.76,
+      "end": 239.48,
+      "duration": 4.72,
+      "text": "like a b a b"
+    },
+    {
+      "start": 236.52,
+      "end": 241.24,
+      "duration": 4.72,
+      "text": "c and a is appearing three times B is"
+    },
+    {
+      "start": 239.48,
+      "end": 243.08,
+      "duration": 3.6,
+      "text": "appearing appearing two times C is"
+    },
+    {
+      "start": 241.24,
+      "end": 245.6,
+      "duration": 4.36,
+      "text": "appearing one time so you'll try to"
+    },
+    {
+      "start": 243.08,
+      "end": 247.68,
+      "duration": 4.6,
+      "text": "convert B and C instead of converting a"
+    },
+    {
+      "start": 245.6,
+      "end": 249.84,
+      "duration": 4.24,
+      "text": "correct you'll try to convert B and C"
+    },
+    {
+      "start": 247.68,
+      "end": 252.8,
+      "duration": 5.12,
+      "text": "because that will take three operations"
+    },
+    {
+      "start": 249.84,
+      "end": 254.28,
+      "duration": 4.44,
+      "text": "understood so I know one thing the"
+    },
+    {
+      "start": 252.8,
+      "end": 257.36,
+      "duration": 4.56,
+      "text": "number of conversions if I have to"
+    },
+    {
+      "start": 254.28,
+      "end": 259.88,
+      "duration": 5.6,
+      "text": "figure out a formula double a b a b c"
+    },
+    {
+      "start": 257.36,
+      "end": 262.48,
+      "duration": 5.12,
+      "text": "for an example for the string if I ask"
+    },
+    {
+      "start": 259.88,
+      "end": 265.08,
+      "duration": 5.2,
+      "text": "you how many conversions do you require"
+    },
+    {
+      "start": 262.48,
+      "end": 268.88,
+      "duration": 6.4,
+      "text": "can I say Max frequency which is Max of"
+    },
+    {
+      "start": 265.08,
+      "end": 271.36,
+      "duration": 6.28,
+      "text": "f minus the length or can I say the"
+    },
+    {
+      "start": 268.88,
+      "end": 275.24,
+      "duration": 6.36,
+      "text": "opposite like length so the length is"
+    },
+    {
+      "start": 271.36,
+      "end": 277.36,
+      "duration": 6.0,
+      "text": "six minus Max frequency which is three"
+    },
+    {
+      "start": 275.24,
+      "end": 278.72,
+      "duration": 3.48,
+      "text": "hence comes out to be three three is the"
+    },
+    {
+      "start": 277.36,
+      "end": 283.36,
+      "duration": 6.0,
+      "text": "number of characters that you need to"
+    },
+    {
+      "start": 278.72,
+      "end": 285.44,
+      "duration": 6.72,
+      "text": "change length minus Max frequency is the"
+    },
+    {
+      "start": 283.36,
+      "end": 288.68,
+      "duration": 5.32,
+      "text": "number of characters that you need to"
+    },
+    {
+      "start": 285.44,
+      "end": 291.24,
+      "duration": 5.8,
+      "text": "convert okay I need I figured it out so"
+    },
+    {
+      "start": 288.68,
+      "end": 294.36,
+      "duration": 5.68,
+      "text": "what was my brute force my brute force"
+    },
+    {
+      "start": 291.24,
+      "end": 296.52,
+      "duration": 5.28,
+      "text": "was to generate all the substrings now I"
+    },
+    {
+      "start": 294.36,
+      "end": 298.72,
+      "duration": 4.36,
+      "text": "know that the first substring will start"
+    },
+    {
+      "start": 296.52,
+      "end": 301.84,
+      "duration": 5.32,
+      "text": "from this character which is a the next"
+    },
+    {
+      "start": 298.72,
+      "end": 304.88,
+      "duration": 6.16,
+      "text": "one will be double A able a b a a a and"
+    },
+    {
+      "start": 301.84,
+      "end": 307.04,
+      "duration": 5.2,
+      "text": "so on till the end the next set of"
+    },
+    {
+      "start": 304.88,
+      "end": 310.72,
+      "duration": 5.84,
+      "text": "substring will start from this"
+    },
+    {
+      "start": 307.04,
+      "end": 312.72,
+      "duration": 5.68,
+      "text": "particular a which is a a b a b a a a b"
+    },
+    {
+      "start": 310.72,
+      "end": 315.32,
+      "duration": 4.6,
+      "text": "and so on the next set of substrings"
+    },
+    {
+      "start": 312.72,
+      "end": 318.8,
+      "duration": 6.08,
+      "text": "will start from here which will be b b a"
+    },
+    {
+      "start": 315.32,
+      "end": 320.88,
+      "duration": 5.56,
+      "text": "b a b so what I can do is I'll be like"
+    },
+    {
+      "start": 318.8,
+      "end": 324.56,
+      "duration": 5.76,
+      "text": "okay I know the formula is length minus"
+    },
+    {
+      "start": 320.88,
+      "end": 327.4,
+      "duration": 6.52,
+      "text": "Max of f so I just need to figure out"
+    },
+    {
+      "start": 324.56,
+      "end": 329.72,
+      "duration": 5.16,
+      "text": "the maximum frequency and I know that we"
+    },
+    {
+      "start": 327.4,
+      "end": 332.4,
+      "duration": 5.0,
+      "text": "have uppercase characters so I can"
+    },
+    {
+      "start": 329.72,
+      "end": 334.12,
+      "duration": 4.4,
+      "text": "maintain an hash array of 26 size"
+    },
+    {
+      "start": 332.4,
+      "end": 336.12,
+      "duration": 3.72,
+      "text": "correct which is going to tell me how"
+    },
+    {
+      "start": 334.12,
+      "end": 338.6,
+      "duration": 4.48,
+      "text": "many times a particular character"
+    },
+    {
+      "start": 336.12,
+      "end": 341.12,
+      "duration": 5.0,
+      "text": "appears that's what it'll do let's try"
+    },
+    {
+      "start": 338.6,
+      "end": 344.0,
+      "duration": 5.4,
+      "text": "to pick up first I'll try to pick up a"
+    },
+    {
+      "start": 341.12,
+      "end": 346.24,
+      "duration": 5.12,
+      "text": "so that's my first substring right so"
+    },
+    {
+      "start": 344.0,
+      "end": 349.44,
+      "duration": 5.44,
+      "text": "I'll pick up a and I'll say a is"
+    },
+    {
+      "start": 346.24,
+      "end": 351.6,
+      "duration": 5.36,
+      "text": "appearing once next I'll pick up a a so"
+    },
+    {
+      "start": 349.44,
+      "end": 355.16,
+      "duration": 5.72,
+      "text": "that will make it two so I can keep on"
+    },
+    {
+      "start": 351.6,
+      "end": 357.88,
+      "duration": 6.28,
+      "text": "updating the frequency correct so let's"
+    },
+    {
+      "start": 355.16,
+      "end": 359.84,
+      "duration": 4.68,
+      "text": "try to write this in pseudo code so if I"
+    },
+    {
+      "start": 357.88,
+      "end": 362.52,
+      "duration": 4.64,
+      "text": "try to write this in pseudo code I know"
+    },
+    {
+      "start": 359.84,
+      "end": 365.68,
+      "duration": 5.84,
+      "text": "that I'll always start from zero and"
+    },
+    {
+      "start": 362.52,
+      "end": 368.68,
+      "duration": 6.16,
+      "text": "then every every possible character will"
+    },
+    {
+      "start": 365.68,
+      "end": 371.28,
+      "duration": 5.6,
+      "text": "be a starting point of any substring"
+    },
+    {
+      "start": 368.68,
+      "end": 373.68,
+      "duration": 5.0,
+      "text": "okay and after that I know that I need a"
+    },
+    {
+      "start": 371.28,
+      "end": 375.88,
+      "duration": 4.6,
+      "text": "hash array so maybe I can keep a hash"
+    },
+    {
+      "start": 373.68,
+      "end": 379.24,
+      "duration": 5.56,
+      "text": "array which is initially assigned to"
+    },
+    {
+      "start": 375.88,
+      "end": 382.12,
+      "duration": 6.24,
+      "text": "zero I also know that in substring"
+    },
+    {
+      "start": 379.24,
+      "end": 385.6,
+      "duration": 6.36,
+      "text": "question I start the J from I and I go"
+    },
+    {
+      "start": 382.12,
+      "end": 386.56,
+      "duration": 4.44,
+      "text": "on till n perfect can I say that the"
+    },
+    {
+      "start": 385.6,
+      "end": 390.36,
+      "duration": 4.76,
+      "text": "hash"
+    },
+    {
+      "start": 386.56,
+      "end": 392.36,
+      "duration": 5.8,
+      "text": "ofi will be updated hash of s of J"
+    },
+    {
+      "start": 390.36,
+      "end": 394.76,
+      "duration": 4.4,
+      "text": "because that is the character that's"
+    },
+    {
+      "start": 392.36,
+      "end": 398.92,
+      "duration": 6.56,
+      "text": "going to be updated I need to keep a"
+    },
+    {
+      "start": 394.76,
+      "end": 401.56,
+      "duration": 6.8,
+      "text": "track of the maximum frequency right so"
+    },
+    {
+      "start": 398.92,
+      "end": 404.64,
+      "duration": 5.72,
+      "text": "maybe I can also update I can also carry"
+    },
+    {
+      "start": 401.56,
+      "end": 407.52,
+      "duration": 5.96,
+      "text": "a Max of f which is initially zero and"
+    },
+    {
+      "start": 404.64,
+      "end": 409.68,
+      "duration": 5.04,
+      "text": "whenever I update whenever I update I"
+    },
+    {
+      "start": 407.52,
+      "end": 414.44,
+      "duration": 6.92,
+      "text": "can compute the max of frequency to be"
+    },
+    {
+      "start": 409.68,
+      "end": 416.76,
+      "duration": 7.08,
+      "text": "Max of the previous frequency hash of s"
+    },
+    {
+      "start": 414.44,
+      "end": 418.76,
+      "duration": 4.32,
+      "text": "of J you can write it in one statement"
+    },
+    {
+      "start": 416.76,
+      "end": 420.6,
+      "duration": 3.84,
+      "text": "as well I've written it in two"
+    },
+    {
+      "start": 418.76,
+      "end": 424.36,
+      "duration": 5.6,
+      "text": "statements to make you understand okay"
+    },
+    {
+      "start": 420.6,
+      "end": 426.84,
+      "duration": 6.24,
+      "text": "I've updated I've updated my maximum"
+    },
+    {
+      "start": 424.36,
+      "end": 429.04,
+      "duration": 4.68,
+      "text": "frequency as well what after this I need"
+    },
+    {
+      "start": 426.84,
+      "end": 430.8,
+      "duration": 3.96,
+      "text": "to figure out the number of changes can"
+    },
+    {
+      "start": 429.04,
+      "end": 432.32,
+      "duration": 3.28,
+      "text": "I say the number of changes will be the"
+    },
+    {
+      "start": 430.8,
+      "end": 435.8,
+      "duration": 5.0,
+      "text": "length what is the length of this"
+    },
+    {
+      "start": 432.32,
+      "end": 440.52,
+      "duration": 8.2,
+      "text": "particular substring J minus I + 1 very"
+    },
+    {
+      "start": 435.8,
+      "end": 445.12,
+      "duration": 9.32,
+      "text": "obvious minus Max of f correct now can I"
+    },
+    {
+      "start": 440.52,
+      "end": 449.16,
+      "duration": 8.64,
+      "text": "say this is only allowed if the"
+    },
+    {
+      "start": 445.12,
+      "end": 451.48,
+      "duration": 6.36,
+      "text": "changes are under K are lesser than"
+    },
+    {
+      "start": 449.16,
+      "end": 454.2,
+      "duration": 5.04,
+      "text": "equal to K okay then only it's allowed"
+    },
+    {
+      "start": 451.48,
+      "end": 457.48,
+      "duration": 6.0,
+      "text": "and in that case I'll have to keep the"
+    },
+    {
+      "start": 454.2,
+      "end": 462.96,
+      "duration": 8.76,
+      "text": "maximum lengths track so what I can do"
+    },
+    {
+      "start": 457.48,
+      "end": 466.8,
+      "duration": 9.32,
+      "text": "is I can say max length Max of max"
+    },
+    {
+      "start": 462.96,
+      "end": 470.2,
+      "duration": 7.24,
+      "text": "length comma G minus I + 1 if that is"
+    },
+    {
+      "start": 466.8,
+      "end": 472.68,
+      "duration": 5.88,
+      "text": "the case and if it doesn't satisfies if"
+    },
+    {
+      "start": 470.2,
+      "end": 474.88,
+      "duration": 4.68,
+      "text": "it doesn't satisfies in that case I'll"
+    },
+    {
+      "start": 472.68,
+      "end": 476.88,
+      "duration": 4.2,
+      "text": "go to else do I need to accumulate the"
+    },
+    {
+      "start": 474.88,
+      "end": 479.6,
+      "duration": 4.72,
+      "text": "other characters"
+    },
+    {
+      "start": 476.88,
+      "end": 481.28,
+      "duration": 4.4,
+      "text": "imagine you have accumulated this this"
+    },
+    {
+      "start": 479.6,
+      "end": 484.16,
+      "duration": 4.56,
+      "text": "this this and after this when you get"
+    },
+    {
+      "start": 481.28,
+      "end": 486.08,
+      "duration": 4.8,
+      "text": "this B and it doesn't satisfies your"
+    },
+    {
+      "start": 484.16,
+      "end": 488.24,
+      "duration": 4.08,
+      "text": "condition do you take this B Because if"
+    },
+    {
+      "start": 486.08,
+      "end": 490.24,
+      "duration": 4.16,
+      "text": "you take this B it's not meeting your"
+    },
+    {
+      "start": 488.24,
+      "end": 492.8,
+      "duration": 4.56,
+      "text": "condition of at Max K they'll not be"
+    },
+    {
+      "start": 490.24,
+      "end": 494.8,
+      "duration": 4.56,
+      "text": "able to take this so what you do is you"
+    },
+    {
+      "start": 492.8,
+      "end": 499.04,
+      "duration": 6.24,
+      "text": "straight away say Hey listen I'm going"
+    },
+    {
+      "start": 494.8,
+      "end": 501.2,
+      "duration": 6.4,
+      "text": "to break out and the fall Loop ends and"
+    },
+    {
+      "start": 499.04,
+      "end": 504.44,
+      "duration": 5.4,
+      "text": "eventually what you can do is you can"
+    },
+    {
+      "start": 501.2,
+      "end": 508.04,
+      "duration": 6.84,
+      "text": "head over and you can print uh the max"
+    },
+    {
+      "start": 504.44,
+      "end": 510.08,
+      "duration": 5.64,
+      "text": "lens that's it that is the extreme na"
+    },
+    {
+      "start": 508.04,
+      "end": 512.4,
+      "duration": 4.36,
+      "text": "solution that I can think of"
+    },
+    {
+      "start": 510.08,
+      "end": 515.24,
+      "duration": 5.16,
+      "text": "now what is the time complexity can I"
+    },
+    {
+      "start": 512.4,
+      "end": 518.64,
+      "duration": 6.24,
+      "text": "say initially I'm taking a b go of N I"
+    },
+    {
+      "start": 515.24,
+      "end": 522.76,
+      "duration": 7.52,
+      "text": "am and again I'm taking another B of n"
+    },
+    {
+      "start": 518.64,
+      "end": 526.48,
+      "duration": 7.84,
+      "text": "so that's an overall of beo of n squ am"
+    },
+    {
+      "start": 522.76,
+      "end": 529.48,
+      "duration": 6.72,
+      "text": "I using any external space yes I am beo"
+    },
+    {
+      "start": 526.48,
+      "end": 533.08,
+      "duration": 6.6,
+      "text": "of 26 but nothing more than that so"
+    },
+    {
+      "start": 529.48,
+      "end": 534.76,
+      "duration": 5.28,
+      "text": "that's what I am using that's it that's"
+    },
+    {
+      "start": 533.08,
+      "end": 536.24,
+      "duration": 3.16,
+      "text": "the brute force and this is where the"
+    },
+    {
+      "start": 534.76,
+      "end": 537.84,
+      "duration": 3.08,
+      "text": "interviewer will not be happy with you"
+    },
+    {
+      "start": 536.24,
+      "end": 541.32,
+      "duration": 5.08,
+      "text": "and he'll ask you to optimize it so"
+    },
+    {
+      "start": 537.84,
+      "end": 543.88,
+      "duration": 6.04,
+      "text": "you'll have to optimize beo of n square"
+    },
+    {
+      "start": 541.32,
+      "end": 545.56,
+      "duration": 4.24,
+      "text": "and if I'm looking to optimize n square"
+    },
+    {
+      "start": 543.88,
+      "end": 547.72,
+      "duration": 3.84,
+      "text": "that means I'm looking for an algorithm"
+    },
+    {
+      "start": 545.56,
+      "end": 551.32,
+      "duration": 5.76,
+      "text": "around bgo of N and the problem is"
+    },
+    {
+      "start": 547.72,
+      "end": 553.8,
+      "duration": 6.08,
+      "text": "involving subring or sub Aries right so"
+    },
+    {
+      "start": 551.32,
+      "end": 556.08,
+      "duration": 4.76,
+      "text": "which algorithm comes to your brain yes"
+    },
+    {
+      "start": 553.8,
+      "end": 558.08,
+      "duration": 4.28,
+      "text": "two pointer and the sliding window we've"
+    },
+    {
+      "start": 556.08,
+      "end": 559.76,
+      "duration": 3.68,
+      "text": "already done a lot of problems on 2.9"
+    },
+    {
+      "start": 558.08,
+      "end": 561.08,
+      "duration": 3.0,
+      "text": "sliding window you haven't seen it"
+    },
+    {
+      "start": 559.76,
+      "end": 563.24,
+      "duration": 3.48,
+      "text": "please go back and watch it because"
+    },
+    {
+      "start": 561.08,
+      "end": 565.56,
+      "duration": 4.48,
+      "text": "you're going to follow the same pattern"
+    },
+    {
+      "start": 563.24,
+      "end": 568.0,
+      "duration": 4.76,
+      "text": "so B go of N and two"
+    },
+    {
+      "start": 565.56,
+      "end": 570.04,
+      "duration": 4.48,
+      "text": "pointer initially we start with the left"
+    },
+    {
+      "start": 568.0,
+      "end": 572.6,
+      "duration": 4.6,
+      "text": "pointer and the right poter pointer and"
+    },
+    {
+      "start": 570.04,
+      "end": 574.8,
+      "duration": 4.76,
+      "text": "we keep it at the zeroth index what are"
+    },
+    {
+      "start": 572.6,
+      "end": 577.28,
+      "duration": 4.68,
+      "text": "we looking at we're looking at a maximum"
+    },
+    {
+      "start": 574.8,
+      "end": 580.44,
+      "duration": 5.64,
+      "text": "frequency so maybe I can keep a variable"
+    },
+    {
+      "start": 577.28,
+      "end": 582.48,
+      "duration": 5.2,
+      "text": "Max frequency which keeps a track of the"
+    },
+    {
+      "start": 580.44,
+      "end": 585.88,
+      "duration": 5.44,
+      "text": "maximum frequency we're looking for a"
+    },
+    {
+      "start": 582.48,
+      "end": 588.4,
+      "duration": 5.92,
+      "text": "longest substring so maybe a max length"
+    },
+    {
+      "start": 585.88,
+      "end": 591.04,
+      "duration": 5.16,
+      "text": "if I have to figure out the frequency"
+    },
+    {
+      "start": 588.4,
+      "end": 592.08,
+      "duration": 3.68,
+      "text": "I'll have to keep a hashmap as well of"
+    },
+    {
+      "start": 591.04,
+      "end": 597.0,
+      "duration": 5.96,
+      "text": "size"
+    },
+    {
+      "start": 592.08,
+      "end": 599.96,
+      "duration": 7.88,
+      "text": "26 so a hash so initially we standing at"
+    },
+    {
+      "start": 597.0,
+      "end": 602.4,
+      "duration": 5.4,
+      "text": "a which is the zeroth index put it into"
+    },
+    {
+      "start": 599.96,
+      "end": 603.6,
+      "duration": 3.64,
+      "text": "your hashmap e comma 1 so once you put"
+    },
+    {
+      "start": 602.4,
+      "end": 606.04,
+      "duration": 3.64,
+      "text": "it into your"
+    },
+    {
+      "start": 603.6,
+      "end": 608.56,
+      "duration": 4.96,
+      "text": "hashmap can I say that the max frequency"
+    },
+    {
+      "start": 606.04,
+      "end": 611.76,
+      "duration": 5.72,
+      "text": "will be updated to one I can now what is"
+    },
+    {
+      "start": 608.56,
+      "end": 614.16,
+      "duration": 5.6,
+      "text": "the next thing you check if this is a"
+    },
+    {
+      "start": 611.76,
+      "end": 616.0,
+      "duration": 4.24,
+      "text": "valid segment or not how do you check"
+    },
+    {
+      "start": 614.16,
+      "end": 617.76,
+      "duration": 3.6,
+      "text": "what is the length one what is the max"
+    },
+    {
+      "start": 616.0,
+      "end": 620.6,
+      "duration": 4.6,
+      "text": "frequency one what are the number of"
+    },
+    {
+      "start": 617.76,
+      "end": 623.52,
+      "duration": 5.76,
+      "text": "conversions required zero because this"
+    },
+    {
+      "start": 620.6,
+      "end": 625.76,
+      "duration": 5.16,
+      "text": "segment has all the characters same so I"
+    },
+    {
+      "start": 623.52,
+      "end": 627.68,
+      "duration": 4.16,
+      "text": "don't need any conversions thereby this"
+    },
+    {
+      "start": 625.76,
+      "end": 629.88,
+      "duration": 4.12,
+      "text": "is a valid segment and if this is a"
+    },
+    {
+      "start": 627.68,
+      "end": 631.56,
+      "duration": 3.88,
+      "text": "valid segment I update the lens to one"
+    },
+    {
+      "start": 629.88,
+      "end": 633.68,
+      "duration": 3.8,
+      "text": "because the length is greater than the"
+    },
+    {
+      "start": 631.56,
+      "end": 637.16,
+      "duration": 5.6,
+      "text": "max I already have what is the next"
+    },
+    {
+      "start": 633.68,
+      "end": 639.32,
+      "duration": 5.64,
+      "text": "thing I take this R and I move it to a I"
+    },
+    {
+      "start": 637.16,
+      "end": 641.56,
+      "duration": 4.4,
+      "text": "move it to a I update the frequency to"
+    },
+    {
+      "start": 639.32,
+      "end": 643.76,
+      "duration": 4.44,
+      "text": "two and if I update the frequency to two"
+    },
+    {
+      "start": 641.56,
+      "end": 646.04,
+      "duration": 4.48,
+      "text": "the max frequency gets updated what is"
+    },
+    {
+      "start": 643.76,
+      "end": 648.76,
+      "duration": 5.0,
+      "text": "the next thing check if this segment is"
+    },
+    {
+      "start": 646.04,
+      "end": 650.24,
+      "duration": 4.2,
+      "text": "a valid one or not the length is two the"
+    },
+    {
+      "start": 648.76,
+      "end": 653.48,
+      "duration": 4.72,
+      "text": "max frequency is two number of"
+    },
+    {
+      "start": 650.24,
+      "end": 655.88,
+      "duration": 5.64,
+      "text": "conversions is zero because double a no"
+    },
+    {
+      "start": 653.48,
+      "end": 659.56,
+      "duration": 6.08,
+      "text": "conversions needed thereby I can update"
+    },
+    {
+      "start": 655.88,
+      "end": 663.44,
+      "duration": 7.56,
+      "text": "the max ler two after this I'll take the"
+    },
+    {
+      "start": 659.56,
+      "end": 665.48,
+      "duration": 5.92,
+      "text": "r I'll move it here again a so you"
+    },
+    {
+      "start": 663.44,
+      "end": 667.6,
+      "duration": 4.16,
+      "text": "update this to three and if this gets"
+    },
+    {
+      "start": 665.48,
+      "end": 670.36,
+      "duration": 4.88,
+      "text": "updated to three max frequency gets"
+    },
+    {
+      "start": 667.6,
+      "end": 672.48,
+      "duration": 4.88,
+      "text": "updated to three next is the sub valid"
+    },
+    {
+      "start": 670.36,
+      "end": 674.36,
+      "duration": 4.0,
+      "text": "segment the length is three the max"
+    },
+    {
+      "start": 672.48,
+      "end": 676.6,
+      "duration": 4.12,
+      "text": "frequency is three number of conversions"
+    },
+    {
+      "start": 674.36,
+      "end": 678.76,
+      "duration": 4.4,
+      "text": "required is zero because all are a so"
+    },
+    {
+      "start": 676.6,
+      "end": 682.04,
+      "duration": 5.44,
+      "text": "can I say that the max then gets updated"
+    },
+    {
+      "start": 678.76,
+      "end": 684.36,
+      "duration": 5.6,
+      "text": "to three yes it does what is the next R"
+    },
+    {
+      "start": 682.04,
+      "end": 686.96,
+      "duration": 4.92,
+      "text": "goes over here that means I'm getting a"
+    },
+    {
+      "start": 684.36,
+      "end": 688.64,
+      "duration": 4.28,
+      "text": "b which is appearing once will I update"
+    },
+    {
+      "start": 686.96,
+      "end": 690.76,
+      "duration": 3.8,
+      "text": "the max frequency no because the max"
+    },
+    {
+      "start": 688.64,
+      "end": 693.4,
+      "duration": 4.76,
+      "text": "frequency is still three so I don't"
+    },
+    {
+      "start": 690.76,
+      "end": 696.48,
+      "duration": 5.72,
+      "text": "update the max frequency instead what I"
+    },
+    {
+      "start": 693.4,
+      "end": 698.88,
+      "duration": 5.48,
+      "text": "do is I check if this is a valid segment"
+    },
+    {
+      "start": 696.48,
+      "end": 700.96,
+      "duration": 4.48,
+      "text": "or not in order to do that the length is"
+    },
+    {
+      "start": 698.88,
+      "end": 702.84,
+      "duration": 3.96,
+      "text": "four of this segment the max frequency"
+    },
+    {
+      "start": 700.96,
+      "end": 704.32,
+      "duration": 3.36,
+      "text": "is three number of conversions required"
+    },
+    {
+      "start": 702.84,
+      "end": 706.44,
+      "duration": 3.6,
+      "text": "is one because I'll have to convert this"
+    },
+    {
+      "start": 704.32,
+      "end": 709.12,
+      "duration": 4.8,
+      "text": "B to a in order to make all the"
+    },
+    {
+      "start": 706.44,
+      "end": 711.56,
+      "duration": 5.12,
+      "text": "characters equal so thereby 10 can be"
+    },
+    {
+      "start": 709.12,
+      "end": 713.84,
+      "duration": 4.72,
+      "text": "updated to four perfect what is the next"
+    },
+    {
+      "start": 711.56,
+      "end": 717.4,
+      "duration": 5.84,
+      "text": "thing I'll take this R I'll move it to"
+    },
+    {
+      "start": 713.84,
+      "end": 720.28,
+      "duration": 6.44,
+      "text": "here b gets updated to two after that"
+    },
+    {
+      "start": 717.4,
+      "end": 721.92,
+      "duration": 4.52,
+      "text": "will the max frequency get updated no"
+    },
+    {
+      "start": 720.28,
+      "end": 726.08,
+      "duration": 5.8,
+      "text": "I'll check if this frequency this"
+    },
+    {
+      "start": 721.92,
+      "end": 728.92,
+      "duration": 7.0,
+      "text": "segment is valid or not 5 - 3 2 valid"
+    },
+    {
+      "start": 726.08,
+      "end": 731.12,
+      "duration": 5.04,
+      "text": "thereby the segment length will increase"
+    },
+    {
+      "start": 728.92,
+      "end": 733.6,
+      "duration": 4.68,
+      "text": "after that you'll move R now this time"
+    },
+    {
+      "start": 731.12,
+      "end": 735.96,
+      "duration": 4.84,
+      "text": "when you move R this is C which is"
+    },
+    {
+      "start": 733.6,
+      "end": 739.0,
+      "duration": 5.4,
+      "text": "appearing once the max frequency will"
+    },
+    {
+      "start": 735.96,
+      "end": 741.04,
+      "duration": 5.08,
+      "text": "not get but when you try to check if"
+    },
+    {
+      "start": 739.0,
+      "end": 745.08,
+      "duration": 6.08,
+      "text": "this is a valid segment or not the"
+    },
+    {
+      "start": 741.04,
+      "end": 748.12,
+      "duration": 7.08,
+      "text": "length is six and the max frequency that"
+    },
+    {
+      "start": 745.08,
+      "end": 751.04,
+      "duration": 5.96,
+      "text": "appears is three times number of changes"
+    },
+    {
+      "start": 748.12,
+      "end": 753.44,
+      "duration": 5.32,
+      "text": "required is three hence it's not"
+    },
+    {
+      "start": 751.04,
+      "end": 755.28,
+      "duration": 4.24,
+      "text": "possible hence it is not possible so"
+    },
+    {
+      "start": 753.44,
+      "end": 757.16,
+      "duration": 3.72,
+      "text": "what you will do is you'll be like fine"
+    },
+    {
+      "start": 755.28,
+      "end": 759.84,
+      "duration": 4.56,
+      "text": "if this is not possible I have to trim"
+    },
+    {
+      "start": 757.16,
+      "end": 761.72,
+      "duration": 4.56,
+      "text": "down my window because this is my window"
+    },
+    {
+      "start": 759.84,
+      "end": 763.6,
+      "duration": 3.76,
+      "text": "I have to trim it down if I'm trimming"
+    },
+    {
+      "start": 761.72,
+      "end": 765.84,
+      "duration": 4.12,
+      "text": "it down what I'll do is I'll take the"
+    },
+    {
+      "start": 763.6,
+      "end": 767.76,
+      "duration": 4.16,
+      "text": "cell I'll move it forward so if I move"
+    },
+    {
+      "start": 765.84,
+      "end": 770.04,
+      "duration": 4.2,
+      "text": "forward first thing that will happen is"
+    },
+    {
+      "start": 767.76,
+      "end": 773.64,
+      "duration": 5.88,
+      "text": "I'm removing 1 a so the frequency"
+    },
+    {
+      "start": 770.04,
+      "end": 776.32,
+      "duration": 6.28,
+      "text": "decreases so basically removed this a"
+    },
+    {
+      "start": 773.64,
+      "end": 778.76,
+      "duration": 5.12,
+      "text": "next if I remove this a we'll have to"
+    },
+    {
+      "start": 776.32,
+      "end": 781.28,
+      "duration": 4.96,
+      "text": "cross check the max frequency again what"
+    },
+    {
+      "start": 778.76,
+      "end": 783.8,
+      "duration": 5.04,
+      "text": "is the max frequency now in this hashmap"
+    },
+    {
+      "start": 781.28,
+      "end": 786.2,
+      "duration": 4.92,
+      "text": "that's two so what you'll do is you'll"
+    },
+    {
+      "start": 783.8,
+      "end": 786.92,
+      "duration": 3.12,
+      "text": "update it to two the max frequency now"
+    },
+    {
+      "start": 786.2,
+      "end": 791.0,
+      "duration": 4.8,
+      "text": "as"
+    },
+    {
+      "start": 786.92,
+      "end": 793.56,
+      "duration": 6.64,
+      "text": "two is this segment my bad is this"
+    },
+    {
+      "start": 791.0,
+      "end": 796.48,
+      "duration": 5.48,
+      "text": "segment possible what is the length the"
+    },
+    {
+      "start": 793.56,
+      "end": 797.88,
+      "duration": 4.32,
+      "text": "length is five the max frequency is two"
+    },
+    {
+      "start": 796.48,
+      "end": 799.2,
+      "duration": 2.72,
+      "text": "it's coming to be three number of"
+    },
+    {
+      "start": 797.88,
+      "end": 800.6,
+      "duration": 2.72,
+      "text": "conversions required is three which is"
+    },
+    {
+      "start": 799.2,
+      "end": 803.48,
+      "duration": 4.28,
+      "text": "not possible because I have to convert"
+    },
+    {
+      "start": 800.6,
+      "end": 806.4,
+      "duration": 5.8,
+      "text": "this this this to a a a hence not"
+    },
+    {
+      "start": 803.48,
+      "end": 808.44,
+      "duration": 4.96,
+      "text": "possible if it is not possible you'll"
+    },
+    {
+      "start": 806.4,
+      "end": 810.36,
+      "duration": 3.96,
+      "text": "again end up removing another a and if"
+    },
+    {
+      "start": 808.44,
+      "end": 813.36,
+      "duration": 4.92,
+      "text": "you remove another the a this will"
+    },
+    {
+      "start": 810.36,
+      "end": 815.68,
+      "duration": 5.32,
+      "text": "reduce to one and after that you'll move"
+    },
+    {
+      "start": 813.36,
+      "end": 818.16,
+      "duration": 4.8,
+      "text": "your Rod so you shrink down the window"
+    },
+    {
+      "start": 815.68,
+      "end": 820.52,
+      "duration": 4.84,
+      "text": "from the left you shrink it down again"
+    },
+    {
+      "start": 818.16,
+      "end": 823.32,
+      "duration": 5.16,
+      "text": "if you shrink it will the max frequency"
+    },
+    {
+      "start": 820.52,
+      "end": 825.2,
+      "duration": 4.68,
+      "text": "update no this time because we still"
+    },
+    {
+      "start": 823.32,
+      "end": 827.04,
+      "duration": 3.72,
+      "text": "have another two okay let's check if"
+    },
+    {
+      "start": 825.2,
+      "end": 828.84,
+      "duration": 3.64,
+      "text": "this is a valid segment the length is"
+    },
+    {
+      "start": 827.04,
+      "end": 831.64,
+      "duration": 4.6,
+      "text": "four the max frequency is two and this"
+    },
+    {
+      "start": 828.84,
+      "end": 833.24,
+      "duration": 4.4,
+      "text": "is valid so you can say this is valid"
+    },
+    {
+      "start": 831.64,
+      "end": 837.64,
+      "duration": 6.0,
+      "text": "but what is the length the length is"
+    },
+    {
+      "start": 833.24,
+      "end": 840.28,
+      "duration": 7.04,
+      "text": "coming to be F which is not allowed"
+    },
+    {
+      "start": 837.64,
+      "end": 843.64,
+      "duration": 6.0,
+      "text": "because I already have five so this is"
+    },
+    {
+      "start": 840.28,
+      "end": 846.0,
+      "duration": 5.72,
+      "text": "not the longest so I'll simply go ahead"
+    },
+    {
+      "start": 843.64,
+      "end": 848.52,
+      "duration": 4.88,
+      "text": "and take R over here and I can keep on"
+    },
+    {
+      "start": 846.0,
+      "end": 850.64,
+      "duration": 4.64,
+      "text": "doing this I can keep on doing this till"
+    },
+    {
+      "start": 848.52,
+      "end": 853.88,
+      "duration": 5.36,
+      "text": "this R exceeds my boundary and"
+    },
+    {
+      "start": 850.64,
+      "end": 855.48,
+      "duration": 4.84,
+      "text": "eventually I'll have my max length"
+    },
+    {
+      "start": 853.88,
+      "end": 858.48,
+      "duration": 4.6,
+      "text": "couple of points to"
+    },
+    {
+      "start": 855.48,
+      "end": 860.8,
+      "duration": 5.32,
+      "text": "remember whenever you are removing a"
+    },
+    {
+      "start": 858.48,
+      "end": 862.92,
+      "duration": 4.44,
+      "text": "make sure you update the max frequency"
+    },
+    {
+      "start": 860.8,
+      "end": 864.72,
+      "duration": 3.92,
+      "text": "by scanning through the entire map we"
+    },
+    {
+      "start": 862.92,
+      "end": 867.48,
+      "duration": 4.56,
+      "text": "can optimize that afterwards but as of"
+    },
+    {
+      "start": 864.72,
+      "end": 869.44,
+      "duration": 4.72,
+      "text": "now remember it so we know what we are"
+    },
+    {
+      "start": 867.48,
+      "end": 871.92,
+      "duration": 4.44,
+      "text": "looking forward to do right so can I"
+    },
+    {
+      "start": 869.44,
+      "end": 875.28,
+      "duration": 5.84,
+      "text": "write down the pseudo code may be"
+    },
+    {
+      "start": 871.92,
+      "end": 879.44,
+      "duration": 7.52,
+      "text": "yes so I'll have a function which takes"
+    },
+    {
+      "start": 875.28,
+      "end": 881.56,
+      "duration": 6.28,
+      "text": "my string and my variable K correct now"
+    },
+    {
+      "start": 879.44,
+      "end": 883.48,
+      "duration": 4.04,
+      "text": "what is the next thing I'll do first"
+    },
+    {
+      "start": 881.56,
+      "end": 886.04,
+      "duration": 4.48,
+      "text": "thing I'll do for sure is I'll take a l"
+    },
+    {
+      "start": 883.48,
+      "end": 888.4,
+      "duration": 4.92,
+      "text": "to be zero I'll take a r to be zero I'll"
+    },
+    {
+      "start": 886.04,
+      "end": 891.6,
+      "duration": 5.56,
+      "text": "take a max length to be zero I'll take a"
+    },
+    {
+      "start": 888.4,
+      "end": 895.6,
+      "duration": 7.2,
+      "text": "Max frequency to be zero and I'll take a"
+    },
+    {
+      "start": 891.6,
+      "end": 896.72,
+      "duration": 5.12,
+      "text": "hash map of 26 size because all of them"
+    },
+    {
+      "start": 895.6,
+      "end": 898.92,
+      "duration": 3.32,
+      "text": "all of them"
+    },
+    {
+      "start": 896.72,
+      "end": 900.96,
+      "duration": 4.24,
+      "text": "are all of them are initially zero so"
+    },
+    {
+      "start": 898.92,
+      "end": 905.52,
+      "duration": 6.6,
+      "text": "you all of them are uppercase characters"
+    },
+    {
+      "start": 900.96,
+      "end": 908.48,
+      "duration": 7.52,
+      "text": "so 26 will suffice now what I will do is"
+    },
+    {
+      "start": 905.52,
+      "end": 910.68,
+      "duration": 5.16,
+      "text": "I'll start while are lesser than the"
+    },
+    {
+      "start": 908.48,
+      "end": 911.68,
+      "duration": 3.2,
+      "text": "string size that's the first thing"
+    },
+    {
+      "start": 910.68,
+      "end": 914.72,
+      "duration": 4.04,
+      "text": "because"
+    },
+    {
+      "start": 911.68,
+      "end": 918.32,
+      "duration": 6.64,
+      "text": "that's that's that's the point which I"
+    },
+    {
+      "start": 914.72,
+      "end": 922.48,
+      "duration": 7.76,
+      "text": "will iterate after that I'll go to the"
+    },
+    {
+      "start": 918.32,
+      "end": 925.32,
+      "duration": 7.0,
+      "text": "hashmap and I'll say Hey listen s of"
+    },
+    {
+      "start": 922.48,
+      "end": 930.32,
+      "duration": 7.84,
+      "text": "whatever it is s of R please make sure"
+    },
+    {
+      "start": 925.32,
+      "end": 934.36,
+      "duration": 9.04,
+      "text": "you do a minus op it and then a Plus+"
+    },
+    {
+      "start": 930.32,
+      "end": 936.72,
+      "duration": 6.4,
+      "text": "perfect after this what happens is I'll"
+    },
+    {
+      "start": 934.36,
+      "end": 939.96,
+      "duration": 5.6,
+      "text": "have to update the max frequency so can"
+    },
+    {
+      "start": 936.72,
+      "end": 943.56,
+      "duration": 6.84,
+      "text": "I say Max frequency will be Max of"
+    },
+    {
+      "start": 939.96,
+      "end": 945.96,
+      "duration": 6.0,
+      "text": "whatever previously I had Max frequency"
+    },
+    {
+      "start": 943.56,
+      "end": 951.16,
+      "duration": 7.6,
+      "text": "comma whatever the current hashes which"
+    },
+    {
+      "start": 945.96,
+      "end": 954.28,
+      "duration": 8.32,
+      "text": "is Hash of s of G minus a can I say this"
+    },
+    {
+      "start": 951.16,
+      "end": 955.84,
+      "duration": 4.68,
+      "text": "I definitely can say this okay after"
+    },
+    {
+      "start": 954.28,
+      "end": 958.36,
+      "duration": 4.08,
+      "text": "this I'll have to check if this is a"
+    },
+    {
+      "start": 955.84,
+      "end": 960.08,
+      "duration": 4.24,
+      "text": "valid one or not and if this is not a"
+    },
+    {
+      "start": 958.36,
+      "end": 962.44,
+      "duration": 4.08,
+      "text": "valid one I have to trim it down from"
+    },
+    {
+      "start": 960.08,
+      "end": 964.44,
+      "duration": 4.36,
+      "text": "the left if this is not a valid one I'll"
+    },
+    {
+      "start": 962.44,
+      "end": 967.56,
+      "duration": 5.12,
+      "text": "have to trim it down from the left so"
+    },
+    {
+      "start": 964.44,
+      "end": 970.08,
+      "duration": 5.64,
+      "text": "maybe I can write a while loop which is"
+    },
+    {
+      "start": 967.56,
+      "end": 972.68,
+      "duration": 5.12,
+      "text": "going to check if it is a valid one or"
+    },
+    {
+      "start": 970.08,
+      "end": 977.4,
+      "duration": 7.32,
+      "text": "not so can I say that can I say that the"
+    },
+    {
+      "start": 972.68,
+      "end": 982.2,
+      "duration": 9.52,
+      "text": "length is r - L +1 that is the length"
+    },
+    {
+      "start": 977.4,
+      "end": 984.64,
+      "duration": 7.24,
+      "text": "minus Max frequency if that is greater"
+    },
+    {
+      "start": 982.2,
+      "end": 986.72,
+      "duration": 4.52,
+      "text": "than K which means it's not a valid one"
+    },
+    {
+      "start": 984.64,
+      "end": 988.64,
+      "duration": 4.0,
+      "text": "and if it is not a valid one I have to"
+    },
+    {
+      "start": 986.72,
+      "end": 991.2,
+      "duration": 4.48,
+      "text": "trim it down and if it is a valid one"
+    },
+    {
+      "start": 988.64,
+      "end": 994.92,
+      "duration": 6.28,
+      "text": "the Y F Loop never gets executed super"
+    },
+    {
+      "start": 991.2,
+      "end": 998.0,
+      "duration": 6.8,
+      "text": "simple what do I do I go across to Hash"
+    },
+    {
+      "start": 994.92,
+      "end": 1001.32,
+      "duration": 6.4,
+      "text": "of s of L because that is what I'm"
+    },
+    {
+      "start": 998.0,
+      "end": 1003.92,
+      "duration": 5.92,
+      "text": "trimming minus of a and I do a minus"
+    },
+    {
+      "start": 1001.32,
+      "end": 1006.64,
+      "duration": 5.32,
+      "text": "minus once I've trimmed it down I have"
+    },
+    {
+      "start": 1003.92,
+      "end": 1011.76,
+      "duration": 7.84,
+      "text": "to update my Max frequency so what I do"
+    },
+    {
+      "start": 1006.64,
+      "end": 1014.84,
+      "duration": 8.2,
+      "text": "is I assign Max frequency to be zero and"
+    },
+    {
+      "start": 1011.76,
+      "end": 1018.52,
+      "duration": 6.76,
+      "text": "I go ahead through the"
+    },
+    {
+      "start": 1014.84,
+      "end": 1019.68,
+      "duration": 4.84,
+      "text": "entire 26 like 25 indexes all the 26"
+    },
+    {
+      "start": 1018.52,
+      "end": 1023.56,
+      "duration": 5.04,
+      "text": "index"
+    },
+    {
+      "start": 1019.68,
+      "end": 1028.6,
+      "duration": 8.92,
+      "text": "and I say Max frequency equal to Max of"
+    },
+    {
+      "start": 1023.56,
+      "end": 1030.8,
+      "duration": 7.24,
+      "text": "Max frequency comma hash of I whatever"
+    },
+    {
+      "start": 1028.6,
+      "end": 1033.28,
+      "duration": 4.68,
+      "text": "it is so this will update my Max"
+    },
+    {
+      "start": 1030.8,
+      "end": 1036.16,
+      "duration": 5.36,
+      "text": "frequency the new Max frequency for that"
+    },
+    {
+      "start": 1033.28,
+      "end": 1038.28,
+      "duration": 5.0,
+      "text": "segment after that what I can do is I"
+    },
+    {
+      "start": 1036.16,
+      "end": 1041.08,
+      "duration": 4.92,
+      "text": "can take L equal to l + one I can move"
+    },
+    {
+      "start": 1038.28,
+      "end": 1043.48,
+      "duration": 5.2,
+      "text": "the L pointer and then I can finish off"
+    },
+    {
+      "start": 1041.08,
+      "end": 1046.68,
+      "duration": 5.6,
+      "text": "the while loop once the while loop is"
+    },
+    {
+      "start": 1043.48,
+      "end": 1050.84,
+      "duration": 7.36,
+      "text": "finished I'm very much sure about one"
+    },
+    {
+      "start": 1046.68,
+      "end": 1050.84,
+      "duration": 4.16,
+      "text": "thing what is that one thing that"
+    },
+    {
+      "start": 1051.12,
+      "end": 1056.92,
+      "duration": 5.8,
+      "text": "if now which is Rus L +1 the length"
+    },
+    {
+      "start": 1055.48,
+      "end": 1059.88,
+      "duration": 4.4,
+      "text": "minus the max"
+    },
+    {
+      "start": 1056.92,
+      "end": 1061.44,
+      "duration": 4.52,
+      "text": "frequency remember Max frequency is a"
+    },
+    {
+      "start": 1059.88,
+      "end": 1063.48,
+      "duration": 3.6,
+      "text": "variable which is declared over here so"
+    },
+    {
+      "start": 1061.44,
+      "end": 1065.84,
+      "duration": 4.4,
+      "text": "you can access it if that's lesser than"
+    },
+    {
+      "start": 1063.48,
+      "end": 1068.36,
+      "duration": 4.88,
+      "text": "equal to K which means this is a valid"
+    },
+    {
+      "start": 1065.84,
+      "end": 1072.16,
+      "duration": 6.32,
+      "text": "segment and if this is a valid segment"
+    },
+    {
+      "start": 1068.36,
+      "end": 1077.48,
+      "duration": 9.12,
+      "text": "you can compare it to Max of max length"
+    },
+    {
+      "start": 1072.16,
+      "end": 1077.48,
+      "duration": 5.32,
+      "text": "comma G minus my bad Rus L"
+    },
+    {
+      "start": 1077.84,
+      "end": 1084.24,
+      "duration": 6.4,
+      "text": "+1 done and you can complete the while"
+    },
+    {
+      "start": 1080.84,
+      "end": 1086.2,
+      "duration": 5.36,
+      "text": "loop but please make sure you move r++"
+    },
+    {
+      "start": 1084.24,
+      "end": 1091.0,
+      "duration": 6.76,
+      "text": "before completing the while loop and"
+    },
+    {
+      "start": 1086.2,
+      "end": 1094.08,
+      "duration": 7.88,
+      "text": "eventually you can return max length and"
+    },
+    {
+      "start": 1091.0,
+      "end": 1095.52,
+      "duration": 4.52,
+      "text": "the function will be terminated so this"
+    },
+    {
+      "start": 1094.08,
+      "end": 1098.64,
+      "duration": 4.56,
+      "text": "will be"
+    },
+    {
+      "start": 1095.52,
+      "end": 1101.32,
+      "duration": 5.8,
+      "text": "your a b go of someone near about a b of"
+    },
+    {
+      "start": 1098.64,
+      "end": 1103.96,
+      "duration": 5.32,
+      "text": "n approach but we will be Computing the"
+    },
+    {
+      "start": 1101.32,
+      "end": 1105.36,
+      "duration": 4.04,
+      "text": "time complexity now let's comput it so"
+    },
+    {
+      "start": 1103.96,
+      "end": 1107.2,
+      "duration": 3.24,
+      "text": "there's a while loop which is"
+    },
+    {
+      "start": 1105.36,
+      "end": 1109.56,
+      "duration": 4.2,
+      "text": "contributing to it and I know this is"
+    },
+    {
+      "start": 1107.2,
+      "end": 1112.0,
+      "duration": 4.8,
+      "text": "definitely going to run for B of because"
+    },
+    {
+      "start": 1109.56,
+      "end": 1114.24,
+      "duration": 4.68,
+      "text": "R starts from zero goes till the end"
+    },
+    {
+      "start": 1112.0,
+      "end": 1116.64,
+      "duration": 4.64,
+      "text": "there's another while loop which is"
+    },
+    {
+      "start": 1114.24,
+      "end": 1119.68,
+      "duration": 5.44,
+      "text": "trimming of L which is trimming of L but"
+    },
+    {
+      "start": 1116.64,
+      "end": 1122.68,
+      "duration": 6.04,
+      "text": "it have to be careful that L stands over"
+    },
+    {
+      "start": 1119.68,
+      "end": 1125.8,
+      "duration": 6.12,
+      "text": "here and it is not every time that L is"
+    },
+    {
+      "start": 1122.68,
+      "end": 1128.24,
+      "duration": 5.56,
+      "text": "going the entire distance for the first"
+    },
+    {
+      "start": 1125.8,
+      "end": 1130.88,
+      "duration": 5.08,
+      "text": "time it might go two places then three"
+    },
+    {
+      "start": 1128.24,
+      "end": 1133.32,
+      "duration": 5.08,
+      "text": "places then two places then one places"
+    },
+    {
+      "start": 1130.88,
+      "end": 1137.64,
+      "duration": 6.76,
+      "text": "overall throughout the journey it might"
+    },
+    {
+      "start": 1133.32,
+      "end": 1140.24,
+      "duration": 6.92,
+      "text": "go n places correct so can I say that"
+    },
+    {
+      "start": 1137.64,
+      "end": 1142.12,
+      "duration": 4.48,
+      "text": "the outer while loop is taking B of N"
+    },
+    {
+      "start": 1140.24,
+      "end": 1145.2,
+      "duration": 4.96,
+      "text": "and the inner while loop throughout the"
+    },
+    {
+      "start": 1142.12,
+      "end": 1148.44,
+      "duration": 6.32,
+      "text": "journey not individually is taking a b"
+    },
+    {
+      "start": 1145.2,
+      "end": 1151.92,
+      "duration": 6.72,
+      "text": "of N and inside this while loop I'm"
+    },
+    {
+      "start": 1148.44,
+      "end": 1156.12,
+      "duration": 7.68,
+      "text": "always doing a hash check for frequency"
+    },
+    {
+      "start": 1151.92,
+      "end": 1159.92,
+      "duration": 8.0,
+      "text": "for frequency correct so can I say this"
+    },
+    {
+      "start": 1156.12,
+      "end": 1162.96,
+      "duration": 6.84,
+      "text": "multiplied by 26 assuming"
+    },
+    {
+      "start": 1159.92,
+      "end": 1165.28,
+      "duration": 5.36,
+      "text": "that every time you go inside assuming"
+    },
+    {
+      "start": 1162.96,
+      "end": 1169.72,
+      "duration": 6.76,
+      "text": "that every time you go inside so I can"
+    },
+    {
+      "start": 1165.28,
+      "end": 1172.64,
+      "duration": 7.36,
+      "text": "say n + n into 26 correct what about the"
+    },
+    {
+      "start": 1169.72,
+      "end": 1174.36,
+      "duration": 4.64,
+      "text": "space that's a beo of 26 I cannot"
+    },
+    {
+      "start": 1172.64,
+      "end": 1176.8,
+      "duration": 4.16,
+      "text": "optimize the space because we need to"
+    },
+    {
+      "start": 1174.36,
+      "end": 1179.76,
+      "duration": 5.4,
+      "text": "store the frequency so this will be the"
+    },
+    {
+      "start": 1176.8,
+      "end": 1183.0,
+      "duration": 6.2,
+      "text": "time complexity and the space complexity"
+    },
+    {
+      "start": 1179.76,
+      "end": 1185.64,
+      "duration": 5.88,
+      "text": "now can I optimize I can because this is"
+    },
+    {
+      "start": 1183.0,
+      "end": 1188.92,
+      "duration": 5.92,
+      "text": "still taking a b go off to n so we are"
+    },
+    {
+      "start": 1185.64,
+      "end": 1192.32,
+      "duration": 6.68,
+      "text": "still taking a Time complexity of n + n"
+    },
+    {
+      "start": 1188.92,
+      "end": 1195.12,
+      "duration": 6.2,
+      "text": "into 26 let's try to optimize it so"
+    },
+    {
+      "start": 1192.32,
+      "end": 1199.04,
+      "duration": 6.72,
+      "text": "there is a beo of 26 that I'm still"
+    },
+    {
+      "start": 1195.12,
+      "end": 1202.24,
+      "duration": 7.12,
+      "text": "taking okay and that b of 26 is because"
+    },
+    {
+      "start": 1199.04,
+      "end": 1204.6,
+      "duration": 5.56,
+      "text": "I'm rescanning and updating my Max"
+    },
+    {
+      "start": 1202.24,
+      "end": 1208.16,
+      "duration": 5.92,
+      "text": "frequency value so what I'll do is I'll"
+    },
+    {
+      "start": 1204.6,
+      "end": 1212.48,
+      "duration": 7.88,
+      "text": "try to get rid of this rescanning let's"
+    },
+    {
+      "start": 1208.16,
+      "end": 1216.04,
+      "duration": 7.88,
+      "text": "understand why so I'll say hey there's"
+    },
+    {
+      "start": 1212.48,
+      "end": 1219.6,
+      "duration": 7.12,
+      "text": "no need to rescan and re-update the max"
+    },
+    {
+      "start": 1216.04,
+      "end": 1224.44,
+      "duration": 8.4,
+      "text": "frequency why so the condition was"
+    },
+    {
+      "start": 1219.6,
+      "end": 1226.8,
+      "duration": 7.2,
+      "text": "length minus Max F less than equal to K"
+    },
+    {
+      "start": 1224.44,
+      "end": 1229.88,
+      "duration": 5.44,
+      "text": "correct let's go back to the example we"
+    },
+    {
+      "start": 1226.8,
+      "end": 1233.36,
+      "duration": 6.56,
+      "text": "took in this example"
+    },
+    {
+      "start": 1229.88,
+      "end": 1236.64,
+      "duration": 6.76,
+      "text": "this was the segment which was valid"
+    },
+    {
+      "start": 1233.36,
+      "end": 1239.8,
+      "duration": 6.44,
+      "text": "correct and after that when I added C I"
+    },
+    {
+      "start": 1236.64,
+      "end": 1244.96,
+      "duration": 8.32,
+      "text": "started removing it from the back this"
+    },
+    {
+      "start": 1239.8,
+      "end": 1248.88,
+      "duration": 9.08,
+      "text": "is where I updated my Max frequency from"
+    },
+    {
+      "start": 1244.96,
+      "end": 1253.08,
+      "duration": 8.12,
+      "text": "three to two because I removed the C now"
+    },
+    {
+      "start": 1248.88,
+      "end": 1255.12,
+      "duration": 6.24,
+      "text": "what I say is do not do not down do not"
+    },
+    {
+      "start": 1253.08,
+      "end": 1257.68,
+      "duration": 4.6,
+      "text": "decrease the value of Max fre Max"
+    },
+    {
+      "start": 1255.12,
+      "end": 1259.96,
+      "duration": 4.84,
+      "text": "frequency only to decrease why do I say"
+    },
+    {
+      "start": 1257.68,
+      "end": 1263.4,
+      "duration": 5.72,
+      "text": "it let's understand"
+    },
+    {
+      "start": 1259.96,
+      "end": 1266.76,
+      "duration": 6.8,
+      "text": "stand so the length was five the max"
+    },
+    {
+      "start": 1263.4,
+      "end": 1268.88,
+      "duration": 5.48,
+      "text": "frequency was three when we were at Tri"
+    },
+    {
+      "start": 1266.76,
+      "end": 1273.64,
+      "duration": 6.88,
+      "text": "a double b this was the"
+    },
+    {
+      "start": 1268.88,
+      "end": 1278.16,
+      "duration": 9.28,
+      "text": "segment and this gave me my max length"
+    },
+    {
+      "start": 1273.64,
+      "end": 1281.76,
+      "duration": 8.12,
+      "text": "to be five so I have already I already"
+    },
+    {
+      "start": 1278.16,
+      "end": 1283.6,
+      "duration": 5.44,
+      "text": "have the longest substring of a length P"
+    },
+    {
+      "start": 1281.76,
+      "end": 1286.84,
+      "duration": 5.08,
+      "text": "I already have a long substring of"
+    },
+    {
+      "start": 1283.6,
+      "end": 1289.52,
+      "duration": 5.92,
+      "text": "length in order to get a better answer"
+    },
+    {
+      "start": 1286.84,
+      "end": 1291.28,
+      "duration": 4.44,
+      "text": "I'll be looking at a length six I'll be"
+    },
+    {
+      "start": 1289.52,
+      "end": 1293.68,
+      "duration": 4.16,
+      "text": "looking at a length seven I'll be"
+    },
+    {
+      "start": 1291.28,
+      "end": 1295.64,
+      "duration": 4.36,
+      "text": "looking at a length eight there's no"
+    },
+    {
+      "start": 1293.68,
+      "end": 1298.36,
+      "duration": 4.68,
+      "text": "point in looking for a length there's no"
+    },
+    {
+      "start": 1295.64,
+      "end": 1300.8,
+      "duration": 5.16,
+      "text": "point so what I will do is I'll try to"
+    },
+    {
+      "start": 1298.36,
+      "end": 1304.24,
+      "duration": 5.88,
+      "text": "look for a better length six if I'm"
+    },
+    {
+      "start": 1300.8,
+      "end": 1306.6,
+      "duration": 5.8,
+      "text": "looking for a better length six will"
+    },
+    {
+      "start": 1304.24,
+      "end": 1310.32,
+      "duration": 6.08,
+      "text": "three will the max frequency"
+    },
+    {
+      "start": 1306.6,
+      "end": 1313.08,
+      "duration": 6.48,
+      "text": "3 contribute to it no because if this is"
+    },
+    {
+      "start": 1310.32,
+      "end": 1316.4,
+      "duration": 6.08,
+      "text": "the last valid condition this can never"
+    },
+    {
+      "start": 1313.08,
+      "end": 1318.2,
+      "duration": 5.12,
+      "text": "be the valid condition I will have to"
+    },
+    {
+      "start": 1316.4,
+      "end": 1320.56,
+      "duration": 4.16,
+      "text": "increase the value of three I'll have to"
+    },
+    {
+      "start": 1318.2,
+      "end": 1323.28,
+      "duration": 5.08,
+      "text": "increase is the value of three so max"
+    },
+    {
+      "start": 1320.56,
+      "end": 1325.12,
+      "duration": 4.56,
+      "text": "frequency which was three there's no"
+    },
+    {
+      "start": 1323.28,
+      "end": 1327.48,
+      "duration": 4.2,
+      "text": "point in downgrading it to two there's"
+    },
+    {
+      "start": 1325.12,
+      "end": 1329.56,
+      "duration": 4.44,
+      "text": "no point because if if I have to"
+    },
+    {
+      "start": 1327.48,
+      "end": 1331.84,
+      "duration": 4.36,
+      "text": "increase 5 to six if I have Max"
+    },
+    {
+      "start": 1329.56,
+      "end": 1334.4,
+      "duration": 4.84,
+      "text": "frequency as two that is never going to"
+    },
+    {
+      "start": 1331.84,
+      "end": 1335.6,
+      "duration": 3.76,
+      "text": "be valid that's never going to be valid"
+    },
+    {
+      "start": 1334.4,
+      "end": 1338.8,
+      "duration": 4.4,
+      "text": "that's"
+    },
+    {
+      "start": 1335.6,
+      "end": 1341.08,
+      "duration": 5.48,
+      "text": "why because ultimately you're trimming"
+    },
+    {
+      "start": 1338.8,
+      "end": 1343.52,
+      "duration": 4.72,
+      "text": "down and the only reason you trim down"
+    },
+    {
+      "start": 1341.08,
+      "end": 1345.72,
+      "duration": 4.64,
+      "text": "is because it's invalid you figured out"
+    },
+    {
+      "start": 1343.52,
+      "end": 1346.88,
+      "duration": 3.36,
+      "text": "that Beyond 5 minus 3 it's invalid"
+    },
+    {
+      "start": 1345.72,
+      "end": 1349.28,
+      "duration": 3.56,
+      "text": "that's why you're trimming down and when"
+    },
+    {
+      "start": 1346.88,
+      "end": 1351.6,
+      "duration": 4.72,
+      "text": "you're trimming down there's no point in"
+    },
+    {
+      "start": 1349.28,
+      "end": 1353.2,
+      "duration": 3.92,
+      "text": "reducing 3 to2 there's no point because"
+    },
+    {
+      "start": 1351.6,
+      "end": 1356.56,
+      "duration": 4.96,
+      "text": "that's never going to contribute to my"
+    },
+    {
+      "start": 1353.2,
+      "end": 1359.56,
+      "duration": 6.36,
+      "text": "longest answer what will contribute is 6"
+    },
+    {
+      "start": 1356.56,
+      "end": 1362.2,
+      "duration": 5.64,
+      "text": "- 4 so I'll have to increase the value"
+    },
+    {
+      "start": 1359.56,
+      "end": 1363.72,
+      "duration": 4.16,
+      "text": "of three so what I say is there's no"
+    },
+    {
+      "start": 1362.2,
+      "end": 1366.64,
+      "duration": 4.44,
+      "text": "point in trimming down don't trim it"
+    },
+    {
+      "start": 1363.72,
+      "end": 1369.24,
+      "duration": 5.52,
+      "text": "down because when I'm removing this will"
+    },
+    {
+      "start": 1366.64,
+      "end": 1371.04,
+      "duration": 4.4,
+      "text": "only reduce this will only reduce and"
+    },
+    {
+      "start": 1369.24,
+      "end": 1374.8,
+      "duration": 5.56,
+      "text": "reduction never helps reduction never"
+    },
+    {
+      "start": 1371.04,
+      "end": 1377.96,
+      "duration": 6.92,
+      "text": "helps in increasing my answer I not do"
+    },
+    {
+      "start": 1374.8,
+      "end": 1379.28,
+      "duration": 4.48,
+      "text": "so as of now I have this Max frequency"
+    },
+    {
+      "start": 1377.96,
+      "end": 1381.12,
+      "duration": 3.16,
+      "text": "which is"
+    },
+    {
+      "start": 1379.28,
+      "end": 1384.24,
+      "duration": 4.96,
+      "text": "increasing every now and then and this"
+    },
+    {
+      "start": 1381.12,
+      "end": 1387.0,
+      "duration": 5.88,
+      "text": "is contributing to my answer perfect"
+    },
+    {
+      "start": 1384.24,
+      "end": 1389.64,
+      "duration": 5.4,
+      "text": "next answer six will be having a Max"
+    },
+    {
+      "start": 1387.0,
+      "end": 1391.16,
+      "duration": 4.16,
+      "text": "frequency B so it will contribute to it"
+    },
+    {
+      "start": 1389.64,
+      "end": 1394.08,
+      "duration": 4.44,
+      "text": "there's no point in trimming down so"
+    },
+    {
+      "start": 1391.16,
+      "end": 1397.0,
+      "duration": 5.84,
+      "text": "what I did was I removed this 26"
+    },
+    {
+      "start": 1394.08,
+      "end": 1399.84,
+      "duration": 5.76,
+      "text": "dependency I remov the scanning it is"
+    },
+    {
+      "start": 1397.0,
+      "end": 1402.2,
+      "duration": 5.2,
+      "text": "still taking a b go of 2 can I optimize"
+    },
+    {
+      "start": 1399.84,
+      "end": 1404.92,
+      "duration": 5.08,
+      "text": "it I can if you have seen my previous"
+    },
+    {
+      "start": 1402.2,
+      "end": 1407.28,
+      "duration": 5.08,
+      "text": "videos you know one thing till this"
+    },
+    {
+      "start": 1404.92,
+      "end": 1410.44,
+      "duration": 5.52,
+      "text": "point the length was five after that you"
+    },
+    {
+      "start": 1407.28,
+      "end": 1413.24,
+      "duration": 5.96,
+      "text": "added a c and it was invalid and this"
+    },
+    {
+      "start": 1410.44,
+      "end": 1417.6,
+      "duration": 7.16,
+      "text": "was a length six I already have my"
+    },
+    {
+      "start": 1413.24,
+      "end": 1420.96,
+      "duration": 7.72,
+      "text": "answer as five I have a length six and"
+    },
+    {
+      "start": 1417.6,
+      "end": 1424.12,
+      "duration": 6.52,
+      "text": "what the while loop does is it removes"
+    },
+    {
+      "start": 1420.96,
+      "end": 1427.0,
+      "duration": 6.04,
+      "text": "two a it removes two a do I need to"
+    },
+    {
+      "start": 1424.12,
+      "end": 1428.96,
+      "duration": 4.84,
+      "text": "remove two a no because if the answer is"
+    },
+    {
+      "start": 1427.0,
+      "end": 1431.28,
+      "duration": 4.28,
+      "text": "five the next answer will definitely be"
+    },
+    {
+      "start": 1428.96,
+      "end": 1433.4,
+      "duration": 4.44,
+      "text": "six which is a valid one I straight away"
+    },
+    {
+      "start": 1431.28,
+      "end": 1436.36,
+      "duration": 5.08,
+      "text": "cannot go to seven the next answer will"
+    },
+    {
+      "start": 1433.4,
+      "end": 1438.44,
+      "duration": 5.04,
+      "text": "be six so what I do is since I added"
+    },
+    {
+      "start": 1436.36,
+      "end": 1441.76,
+      "duration": 5.4,
+      "text": "this there was an the sliding window"
+    },
+    {
+      "start": 1438.44,
+      "end": 1444.76,
+      "duration": 6.32,
+      "text": "increased by one it went to become of a"
+    },
+    {
+      "start": 1441.76,
+      "end": 1446.44,
+      "duration": 4.68,
+      "text": "size six I'll went down to five again"
+    },
+    {
+      "start": 1444.76,
+      "end": 1449.52,
+      "duration": 4.76,
+      "text": "I'll went down to five again so what"
+    },
+    {
+      "start": 1446.44,
+      "end": 1452.48,
+      "duration": 6.04,
+      "text": "I'll do is I'll just remove one and I'll"
+    },
+    {
+      "start": 1449.52,
+      "end": 1454.72,
+      "duration": 5.2,
+      "text": "keep it as size five I'll again say add"
+    },
+    {
+      "start": 1452.48,
+      "end": 1459.48,
+      "duration": 7.0,
+      "text": "this and make it a size six I'll not let"
+    },
+    {
+      "start": 1454.72,
+      "end": 1462.24,
+      "duration": 7.52,
+      "text": "it go beyond six that's why instead of"
+    },
+    {
+      "start": 1459.48,
+      "end": 1464.4,
+      "duration": 4.92,
+      "text": "removing 2 A's 3 A's what I'll do is"
+    },
+    {
+      "start": 1462.24,
+      "end": 1467.2,
+      "duration": 4.96,
+      "text": "I'll remove one because that will make"
+    },
+    {
+      "start": 1464.4,
+      "end": 1469.92,
+      "duration": 5.52,
+      "text": "sure I'm still with length six I'm not"
+    },
+    {
+      "start": 1467.2,
+      "end": 1471.88,
+      "duration": 4.68,
+      "text": "increasing it to seven L 6666 six window"
+    },
+    {
+      "start": 1469.92,
+      "end": 1473.16,
+      "duration": 3.24,
+      "text": "let the six window go and whenever six"
+    },
+    {
+      "start": 1471.88,
+      "end": 1476.4,
+      "duration": 4.52,
+      "text": "window"
+    },
+    {
+      "start": 1473.16,
+      "end": 1479.64,
+      "duration": 6.48,
+      "text": "is meeting this condition I'll upgrade"
+    },
+    {
+      "start": 1476.4,
+      "end": 1483.0,
+      "duration": 6.6,
+      "text": "it I'll not move in at that perfect so"
+    },
+    {
+      "start": 1479.64,
+      "end": 1487.4,
+      "duration": 7.76,
+      "text": "if I remove the while this trims down to"
+    },
+    {
+      "start": 1483.0,
+      "end": 1491.72,
+      "duration": 8.72,
+      "text": "a p of end time complexity and a beo of"
+    },
+    {
+      "start": 1487.4,
+      "end": 1494.36,
+      "duration": 6.96,
+      "text": "26 space complexity and this is the most"
+    },
+    {
+      "start": 1491.72,
+      "end": 1496.24,
+      "duration": 4.52,
+      "text": "optimized solution again I've written"
+    },
+    {
+      "start": 1494.36,
+      "end": 1498.16,
+      "duration": 3.8,
+      "text": "down the pseudo code in case you want"
+    },
+    {
+      "start": 1496.24,
+      "end": 1500.24,
+      "duration": 4.0,
+      "text": "the language specific code you can find"
+    },
+    {
+      "start": 1498.16,
+      "end": 1501.6,
+      "duration": 3.44,
+      "text": "the below so if you're still now"
+    },
+    {
+      "start": 1500.24,
+      "end": 1503.48,
+      "duration": 3.24,
+      "text": "watching and if you understood"
+    },
+    {
+      "start": 1501.6,
+      "end": 1504.8,
+      "duration": 3.2,
+      "text": "everything please please do consider"
+    },
+    {
+      "start": 1503.48,
+      "end": 1506.76,
+      "duration": 3.28,
+      "text": "giving us a like and if you're new to"
+    },
+    {
+      "start": 1504.8,
+      "end": 1508.84,
+      "duration": 4.04,
+      "text": "our channel do consider subscribing to"
+    },
+    {
+      "start": 1506.76,
+      "end": 1510.0,
+      "duration": 3.24,
+      "text": "us as well with this I'll be wrapping up"
+    },
+    {
+      "start": 1508.84,
+      "end": 1513.08,
+      "duration": 4.24,
+      "text": "this video Let's Wait in some of the"
+    },
+    {
+      "start": 1510.0,
+      "end": 1513.08,
+      "duration": 3.08,
+      "text": "video till then bye-bye take"
+    },
+    {
+      "start": 1514.32,
+      "end": 1522.0,
+      "duration": 7.68,
+      "text": "careen don't forget your"
+    },
+    {
+      "start": 1517.6,
+      "end": 1522.0,
+      "duration": 4.4,
+      "text": "golden I will find light"
+    }
+  ]
+}

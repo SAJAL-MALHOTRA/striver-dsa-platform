@@ -1,0 +1,1994 @@
+{
+  "video_id": "3dINsjyfooY",
+  "title": "G-34. Dijkstra's Algorithm - Why PQ and not Q, Intuition, Time Complexity Derivation - Part 3",
+  "duration_sec": 870,
+  "num_segments": 331,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.18,
+      "duration": 3.18,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 1.56,
+      "end": 6.36,
+      "duration": 4.8,
+      "text": "I hope you guys are doing extremely well"
+    },
+    {
+      "start": 3.18,
+      "end": 8.1,
+      "duration": 4.92,
+      "text": "so in the previous couple of videos we"
+    },
+    {
+      "start": 6.36,
+      "end": 10.74,
+      "duration": 4.38,
+      "text": "have learned about a dijkstra's"
+    },
+    {
+      "start": 8.1,
+      "end": 14.22,
+      "duration": 6.12,
+      "text": "algorithm if you remember and we solved"
+    },
+    {
+      "start": 10.74,
+      "end": 17.1,
+      "duration": 6.36,
+      "text": "it using a priority queue and I'll set"
+    },
+    {
+      "start": 14.22,
+      "end": 19.74,
+      "duration": 5.52,
+      "text": "data structure and there were a bunch of"
+    },
+    {
+      "start": 17.1,
+      "end": 23.64,
+      "duration": 6.54,
+      "text": "questions uh revolving around your head"
+    },
+    {
+      "start": 19.74,
+      "end": 26.52,
+      "duration": 6.78,
+      "text": "why practicum because even if you take a"
+    },
+    {
+      "start": 23.64,
+      "end": 31.5,
+      "duration": 7.86,
+      "text": "q data structure it does work the time"
+    },
+    {
+      "start": 26.52,
+      "end": 35.64,
+      "duration": 9.12,
+      "text": "complexity I stated was e log v y e log"
+    },
+    {
+      "start": 31.5,
+      "end": 38.4,
+      "duration": 6.9,
+      "text": "v a proper derivation of that what is"
+    },
+    {
+      "start": 35.64,
+      "end": 40.62,
+      "duration": 4.98,
+      "text": "the intuition behind the extras"
+    },
+    {
+      "start": 38.4,
+      "end": 43.08,
+      "duration": 4.68,
+      "text": "algorithm that was another question that"
+    },
+    {
+      "start": 40.62,
+      "end": 46.14,
+      "duration": 5.52,
+      "text": "might would have come to your head so"
+    },
+    {
+      "start": 43.08,
+      "end": 48.18,
+      "duration": 5.1,
+      "text": "I'll discuss all of these three points"
+    },
+    {
+      "start": 46.14,
+      "end": 50.22,
+      "duration": 4.08,
+      "text": "in this particular video"
+    },
+    {
+      "start": 48.18,
+      "end": 53.28,
+      "duration": 5.1,
+      "text": "so coming across to the first question"
+    },
+    {
+      "start": 50.22,
+      "end": 55.62,
+      "duration": 5.4,
+      "text": "why a priority key or a set because even"
+    },
+    {
+      "start": 53.28,
+      "end": 58.08,
+      "duration": 4.8,
+      "text": "if you take a q data structure we do get"
+    },
+    {
+      "start": 55.62,
+      "end": 60.42,
+      "duration": 4.8,
+      "text": "the answer so let's take this particular"
+    },
+    {
+      "start": 58.08,
+      "end": 62.94,
+      "duration": 4.86,
+      "text": "graph and this will be the corresponding"
+    },
+    {
+      "start": 60.42,
+      "end": 64.56,
+      "duration": 4.14,
+      "text": "adjacency list so let's try this"
+    },
+    {
+      "start": 62.94,
+      "end": 67.68,
+      "duration": 4.74,
+      "text": "algorithm with with a queue data"
+    },
+    {
+      "start": 64.56,
+      "end": 69.84,
+      "duration": 5.28,
+      "text": "structure and a distance array okay so"
+    },
+    {
+      "start": 67.68,
+      "end": 71.94,
+      "duration": 4.26,
+      "text": "we're given the source zero so apart"
+    },
+    {
+      "start": 69.84,
+      "end": 75.6,
+      "duration": 5.76,
+      "text": "from zero everything we can initialize"
+    },
+    {
+      "start": 71.94,
+      "end": 78.6,
+      "duration": 6.66,
+      "text": "as Infinity right so source is put as 0"
+    },
+    {
+      "start": 75.6,
+      "end": 80.94,
+      "duration": 5.34,
+      "text": "and we'll put 0 comma 0 in the queue"
+    },
+    {
+      "start": 78.6,
+      "end": 85.08,
+      "duration": 6.48,
+      "text": "data structure let's take 0 comma 0 out"
+    },
+    {
+      "start": 80.94,
+      "end": 88.8,
+      "duration": 7.86,
+      "text": "so 0 at a node 0 where can node 0 go"
+    },
+    {
+      "start": 85.08,
+      "end": 93.6,
+      "duration": 8.52,
+      "text": "node 0 can go to Node 1 and node two"
+    },
+    {
+      "start": 88.8,
+      "end": 96.54,
+      "duration": 7.74,
+      "text": "remember first Node 1 then node 2 first"
+    },
+    {
+      "start": 93.6,
+      "end": 99.36,
+      "duration": 5.76,
+      "text": "Node 1 then node two so if you try to go"
+    },
+    {
+      "start": 96.54,
+      "end": 101.04,
+      "duration": 4.5,
+      "text": "to Node 1 the distance taken will be 3"
+    },
+    {
+      "start": 99.36,
+      "end": 103.74,
+      "duration": 4.38,
+      "text": "and the updated distance will be three"
+    },
+    {
+      "start": 101.04,
+      "end": 107.28,
+      "duration": 6.24,
+      "text": "so I can update this with three and I"
+    },
+    {
+      "start": 103.74,
+      "end": 109.56,
+      "duration": 5.82,
+      "text": "can say 3 comma node one right and if I"
+    },
+    {
+      "start": 107.28,
+      "end": 112.14,
+      "duration": 4.86,
+      "text": "try to go here I'll take a distance 1"
+    },
+    {
+      "start": 109.56,
+      "end": 115.56,
+      "duration": 6.0,
+      "text": "and the distance will be one so this"
+    },
+    {
+      "start": 112.14,
+      "end": 118.32,
+      "duration": 6.18,
+      "text": "will be 1 I'll be like 1 comma 2 is what"
+    },
+    {
+      "start": 115.56,
+      "end": 120.96,
+      "duration": 5.4,
+      "text": "I'll put into the Q now remember it's"
+    },
+    {
+      "start": 118.32,
+      "end": 123.9,
+      "duration": 5.58,
+      "text": "not a priority queue it's a queue data"
+    },
+    {
+      "start": 120.96,
+      "end": 127.02,
+      "duration": 6.06,
+      "text": "structure so we get the next element"
+    },
+    {
+      "start": 123.9,
+      "end": 130.92,
+      "duration": 7.02,
+      "text": "with a distance of 3 and a node of one"
+    },
+    {
+      "start": 127.02,
+      "end": 132.54,
+      "duration": 5.52,
+      "text": "where can one go one can go to node 0 by"
+    },
+    {
+      "start": 130.92,
+      "end": 135.0,
+      "duration": 4.08,
+      "text": "taking a distance of 3 which will make"
+    },
+    {
+      "start": 132.54,
+      "end": 138.6,
+      "duration": 6.06,
+      "text": "it a distance of 6 not to be considered"
+    },
+    {
+      "start": 135.0,
+      "end": 140.64,
+      "duration": 5.64,
+      "text": "one can also go to node three and that"
+    },
+    {
+      "start": 138.6,
+      "end": 144.12,
+      "duration": 5.52,
+      "text": "will take a distance of 4 which makes it"
+    },
+    {
+      "start": 140.64,
+      "end": 146.88,
+      "duration": 6.24,
+      "text": "a total distance of seven Update 7 and"
+    },
+    {
+      "start": 144.12,
+      "end": 148.26,
+      "duration": 4.14,
+      "text": "put seven comma 3 in the queue so this"
+    },
+    {
+      "start": 146.88,
+      "end": 150.6,
+      "duration": 3.72,
+      "text": "is also done"
+    },
+    {
+      "start": 148.26,
+      "end": 154.32,
+      "duration": 6.06,
+      "text": "now let's take the next element the next"
+    },
+    {
+      "start": 150.6,
+      "end": 157.86,
+      "duration": 7.26,
+      "text": "element comes out to be one node equal"
+    },
+    {
+      "start": 154.32,
+      "end": 160.26,
+      "duration": 5.94,
+      "text": "to 2 now I can to go 2 can go to node 0"
+    },
+    {
+      "start": 157.86,
+      "end": 162.66,
+      "duration": 4.8,
+      "text": "with another one which makes it a"
+    },
+    {
+      "start": 160.26,
+      "end": 165.3,
+      "duration": 5.04,
+      "text": "distance of 2 not to be considered two"
+    },
+    {
+      "start": 162.66,
+      "end": 166.92,
+      "duration": 4.26,
+      "text": "can also go to node 3 with a distance of"
+    },
+    {
+      "start": 165.3,
+      "end": 169.74,
+      "duration": 4.44,
+      "text": "2 which makes it a total distance of"
+    },
+    {
+      "start": 166.92,
+      "end": 174.18,
+      "duration": 7.26,
+      "text": "three so node 3 is having a better"
+    },
+    {
+      "start": 169.74,
+      "end": 175.92,
+      "duration": 6.18,
+      "text": "version three so three comma 3 perfect"
+    },
+    {
+      "start": 174.18,
+      "end": 179.52,
+      "duration": 5.34,
+      "text": "next"
+    },
+    {
+      "start": 175.92,
+      "end": 182.4,
+      "duration": 6.48,
+      "text": "so the point of observation observation"
+    },
+    {
+      "start": 179.52,
+      "end": 184.56,
+      "duration": 5.04,
+      "text": "one whenever you add three now you came"
+    },
+    {
+      "start": 182.4,
+      "end": 186.3,
+      "duration": 3.9,
+      "text": "by One path which took you something"
+    },
+    {
+      "start": 184.56,
+      "end": 188.4,
+      "duration": 3.84,
+      "text": "like three plus four seven so seven"
+    },
+    {
+      "start": 186.3,
+      "end": 189.42,
+      "duration": 3.12,
+      "text": "comma 3 is there and you came by other"
+    },
+    {
+      "start": 188.4,
+      "end": 193.02,
+      "duration": 4.62,
+      "text": "path"
+    },
+    {
+      "start": 189.42,
+      "end": 194.88,
+      "duration": 5.46,
+      "text": "1 plus 2 which is 3 so 3 is also there"
+    },
+    {
+      "start": 193.02,
+      "end": 196.92,
+      "duration": 3.9,
+      "text": "so there are two parts which are there"
+    },
+    {
+      "start": 194.88,
+      "end": 198.66,
+      "duration": 3.78,
+      "text": "now if you would have used priority"
+    },
+    {
+      "start": 196.92,
+      "end": 201.66,
+      "duration": 4.74,
+      "text": "queue you would have actually dealt with"
+    },
+    {
+      "start": 198.66,
+      "end": 203.22,
+      "duration": 4.56,
+      "text": "just three like this path instead of"
+    },
+    {
+      "start": 201.66,
+      "end": 205.26,
+      "duration": 3.6,
+      "text": "dealing with this part now since you're"
+    },
+    {
+      "start": 203.22,
+      "end": 208.74,
+      "duration": 5.52,
+      "text": "dealing with a queue you'll end up"
+    },
+    {
+      "start": 205.26,
+      "end": 212.16,
+      "duration": 6.9,
+      "text": "dealing with 7 comma 3. which is"
+    },
+    {
+      "start": 208.74,
+      "end": 214.14,
+      "duration": 5.4,
+      "text": "a bit of time consuming okay and now 3"
+    },
+    {
+      "start": 212.16,
+      "end": 217.14,
+      "duration": 4.98,
+      "text": "can go to one"
+    },
+    {
+      "start": 214.14,
+      "end": 220.5,
+      "duration": 6.36,
+      "text": "which will take it four"
+    },
+    {
+      "start": 217.14,
+      "end": 223.68,
+      "duration": 6.54,
+      "text": "and makes it a total distance of 11 3"
+    },
+    {
+      "start": 220.5,
+      "end": 225.3,
+      "duration": 4.8,
+      "text": "can go to 2 as well which will take it a"
+    },
+    {
+      "start": 223.68,
+      "end": 227.22,
+      "duration": 3.54,
+      "text": "distance of 2 which will make it nine"
+    },
+    {
+      "start": 225.3,
+      "end": 229.44,
+      "duration": 4.14,
+      "text": "both of them will not be considered and"
+    },
+    {
+      "start": 227.22,
+      "end": 232.02,
+      "duration": 4.8,
+      "text": "then it can go to four"
+    },
+    {
+      "start": 229.44,
+      "end": 235.14,
+      "duration": 5.7,
+      "text": "which will take a distance of 2 which"
+    },
+    {
+      "start": 232.02,
+      "end": 237.84,
+      "duration": 5.82,
+      "text": "will make it a distance of 9 so 9 comma"
+    },
+    {
+      "start": 235.14,
+      "end": 239.58,
+      "duration": 4.44,
+      "text": "4 it can also go to 5 which will take"
+    },
+    {
+      "start": 237.84,
+      "end": 241.68,
+      "duration": 3.84,
+      "text": "him a distance of one so the total"
+    },
+    {
+      "start": 239.58,
+      "end": 244.14,
+      "duration": 4.56,
+      "text": "distance will be 8 5 will be eight so"
+    },
+    {
+      "start": 241.68,
+      "end": 246.18,
+      "duration": 4.5,
+      "text": "eight comma 5. perfect"
+    },
+    {
+      "start": 244.14,
+      "end": 248.1,
+      "duration": 3.96,
+      "text": "so done"
+    },
+    {
+      "start": 246.18,
+      "end": 250.74,
+      "duration": 4.56,
+      "text": "next"
+    },
+    {
+      "start": 248.1,
+      "end": 252.54,
+      "duration": 4.44,
+      "text": "we'll just omit everything"
+    },
+    {
+      "start": 250.74,
+      "end": 254.82,
+      "duration": 4.08,
+      "text": "and next we'll come up with the next guy"
+    },
+    {
+      "start": 252.54,
+      "end": 258.78,
+      "duration": 6.24,
+      "text": "three comma three so again"
+    },
+    {
+      "start": 254.82,
+      "end": 261.24,
+      "duration": 6.42,
+      "text": "we have node three now zero will not be"
+    },
+    {
+      "start": 258.78,
+      "end": 263.64,
+      "duration": 4.86,
+      "text": "there 2 will not be there because these"
+    },
+    {
+      "start": 261.24,
+      "end": 265.44,
+      "duration": 4.2,
+      "text": "things are not possible like you you"
+    },
+    {
+      "start": 263.64,
+      "end": 267.12,
+      "duration": 3.48,
+      "text": "can't go back to there because the"
+    },
+    {
+      "start": 265.44,
+      "end": 270.12,
+      "duration": 4.68,
+      "text": "distance will be more but when I try to"
+    },
+    {
+      "start": 267.12,
+      "end": 272.76,
+      "duration": 5.64,
+      "text": "go to 4 this time it takes a 2 which"
+    },
+    {
+      "start": 270.12,
+      "end": 276.54,
+      "duration": 6.42,
+      "text": "makes it a better distance of five so"
+    },
+    {
+      "start": 272.76,
+      "end": 280.86,
+      "duration": 8.1,
+      "text": "four cuts a better distance of 5 comma"
+    },
+    {
+      "start": 276.54,
+      "end": 282.84,
+      "duration": 6.3,
+      "text": "4 right and you can also go to 5 which"
+    },
+    {
+      "start": 280.86,
+      "end": 286.92,
+      "duration": 6.06,
+      "text": "will be plus 1 which makes it a distance"
+    },
+    {
+      "start": 282.84,
+      "end": 288.96,
+      "duration": 6.12,
+      "text": "of 4 so 5 can also be uh done with four"
+    },
+    {
+      "start": 286.92,
+      "end": 292.1,
+      "duration": 5.18,
+      "text": "uh four distance"
+    },
+    {
+      "start": 288.96,
+      "end": 294.78,
+      "duration": 5.82,
+      "text": "so this is done did you see something"
+    },
+    {
+      "start": 292.1,
+      "end": 298.14,
+      "duration": 6.04,
+      "text": "unnecessary occurrence did you see"
+    },
+    {
+      "start": 294.78,
+      "end": 300.12,
+      "duration": 5.34,
+      "text": "something I can reach 5 using four but"
+    },
+    {
+      "start": 298.14,
+      "end": 303.48,
+      "duration": 5.34,
+      "text": "there is still An Occurrence of 8 comma"
+    },
+    {
+      "start": 300.12,
+      "end": 304.68,
+      "duration": 4.56,
+      "text": "five I can reach uh four with five but"
+    },
+    {
+      "start": 303.48,
+      "end": 306.54,
+      "duration": 3.06,
+      "text": "then there is still An Occurrence of"
+    },
+    {
+      "start": 304.68,
+      "end": 309.06,
+      "duration": 4.38,
+      "text": "nine comma four why did that happen"
+    },
+    {
+      "start": 306.54,
+      "end": 311.7,
+      "duration": 5.16,
+      "text": "because you also considered this path"
+    },
+    {
+      "start": 309.06,
+      "end": 314.76,
+      "duration": 5.7,
+      "text": "you also consider this path then you"
+    },
+    {
+      "start": 311.7,
+      "end": 317.22,
+      "duration": 5.52,
+      "text": "came and considered this and this had"
+    },
+    {
+      "start": 314.76,
+      "end": 319.68,
+      "duration": 4.92,
+      "text": "you used a practical instead of this"
+    },
+    {
+      "start": 317.22,
+      "end": 322.26,
+      "duration": 5.04,
+      "text": "then this 7 comma 3 would not have been"
+    },
+    {
+      "start": 319.68,
+      "end": 323.4,
+      "duration": 3.72,
+      "text": "considered this 7 comma 3 would not have"
+    },
+    {
+      "start": 322.26,
+      "end": 325.74,
+      "duration": 3.48,
+      "text": "been considered and you'd have"
+    },
+    {
+      "start": 323.4,
+      "end": 328.92,
+      "duration": 5.52,
+      "text": "considered just three comma 3 at the"
+    },
+    {
+      "start": 325.74,
+      "end": 331.92,
+      "duration": 6.18,
+      "text": "first so afterwards when seven comma 3"
+    },
+    {
+      "start": 328.92,
+      "end": 335.34,
+      "duration": 6.42,
+      "text": "would have arrived it would have not"
+    },
+    {
+      "start": 331.92,
+      "end": 338.52,
+      "duration": 6.6,
+      "text": "found shorter distances that's why using"
+    },
+    {
+      "start": 335.34,
+      "end": 340.04,
+      "duration": 4.7,
+      "text": "the minimal distance is preferred so"
+    },
+    {
+      "start": 338.52,
+      "end": 343.92,
+      "duration": 5.4,
+      "text": "that you don't"
+    },
+    {
+      "start": 340.04,
+      "end": 345.96,
+      "duration": 5.92,
+      "text": "encounter a lot of paths so you're just"
+    },
+    {
+      "start": 343.92,
+      "end": 348.42,
+      "duration": 4.5,
+      "text": "doing a Brute Force if you use Q data"
+    },
+    {
+      "start": 345.96,
+      "end": 350.52,
+      "duration": 4.56,
+      "text": "structure you're going on all parts all"
+    },
+    {
+      "start": 348.42,
+      "end": 352.86,
+      "duration": 4.44,
+      "text": "parts all parts and then figuring out"
+    },
+    {
+      "start": 350.52,
+      "end": 354.24,
+      "duration": 3.72,
+      "text": "the minimal and I'm like I'll go but"
+    },
+    {
+      "start": 352.86,
+      "end": 356.16,
+      "duration": 3.3,
+      "text": "I'll be like greedy I'll go to the"
+    },
+    {
+      "start": 354.24,
+      "end": 358.62,
+      "duration": 4.38,
+      "text": "minimal first minimal first minimal"
+    },
+    {
+      "start": 356.16,
+      "end": 360.36,
+      "duration": 4.2,
+      "text": "first so that I can mark all the minimal"
+    },
+    {
+      "start": 358.62,
+      "end": 362.46,
+      "duration": 3.84,
+      "text": "that I can reach then I'll go to the"
+    },
+    {
+      "start": 360.36,
+      "end": 364.74,
+      "duration": 4.38,
+      "text": "other guys that's why a minimal is"
+    },
+    {
+      "start": 362.46,
+      "end": 367.38,
+      "duration": 4.92,
+      "text": "important otherwise you end up exploring"
+    },
+    {
+      "start": 364.74,
+      "end": 369.54,
+      "duration": 4.8,
+      "text": "too many parts it will give you the"
+    },
+    {
+      "start": 367.38,
+      "end": 370.98,
+      "duration": 3.6,
+      "text": "answer I'm not saying that it won't it"
+    },
+    {
+      "start": 369.54,
+      "end": 373.74,
+      "duration": 4.2,
+      "text": "did give you over here but you're"
+    },
+    {
+      "start": 370.98,
+      "end": 376.92,
+      "duration": 5.94,
+      "text": "exploring too many parts unnecessary"
+    },
+    {
+      "start": 373.74,
+      "end": 379.08,
+      "duration": 5.34,
+      "text": "occurrence of these guys unnecessary"
+    },
+    {
+      "start": 376.92,
+      "end": 381.42,
+      "duration": 4.5,
+      "text": "exploration of Parts unnecessary"
+    },
+    {
+      "start": 379.08,
+      "end": 385.14,
+      "duration": 6.06,
+      "text": "iterations so I hope I was able to"
+    },
+    {
+      "start": 381.42,
+      "end": 387.12,
+      "duration": 5.7,
+      "text": "explain you why a queue is not preferred"
+    },
+    {
+      "start": 385.14,
+      "end": 389.28,
+      "duration": 4.14,
+      "text": "because it takes a lot more time"
+    },
+    {
+      "start": 387.12,
+      "end": 391.68,
+      "duration": 4.56,
+      "text": "complexity I hope the intuition is also"
+    },
+    {
+      "start": 389.28,
+      "end": 393.3,
+      "duration": 4.02,
+      "text": "clear now because of priority queue we"
+    },
+    {
+      "start": 391.68,
+      "end": 395.46,
+      "duration": 3.78,
+      "text": "always travel to the minimal guys first"
+    },
+    {
+      "start": 393.3,
+      "end": 397.98,
+      "duration": 4.68,
+      "text": "and we explore minimal minimal minimal"
+    },
+    {
+      "start": 395.46,
+      "end": 399.84,
+      "duration": 4.38,
+      "text": "and we ultimately have reached all"
+    },
+    {
+      "start": 397.98,
+      "end": 402.12,
+      "duration": 4.14,
+      "text": "minimals since we are doing a traversal"
+    },
+    {
+      "start": 399.84,
+      "end": 403.92,
+      "duration": 4.08,
+      "text": "thing we reach minimals always cool"
+    },
+    {
+      "start": 402.12,
+      "end": 406.74,
+      "duration": 4.62,
+      "text": "what's the next thing"
+    },
+    {
+      "start": 403.92,
+      "end": 411.18,
+      "duration": 7.26,
+      "text": "the time complexity why the time"
+    },
+    {
+      "start": 406.74,
+      "end": 412.92,
+      "duration": 6.18,
+      "text": "complexity is e log V where e is total"
+    },
+    {
+      "start": 411.18,
+      "end": 416.52,
+      "duration": 5.34,
+      "text": "number of edges very very important"
+    },
+    {
+      "start": 412.92,
+      "end": 420.42,
+      "duration": 7.5,
+      "text": "total number of edges and V is the"
+    },
+    {
+      "start": 416.52,
+      "end": 423.96,
+      "duration": 7.44,
+      "text": "number of notes why is that so is this"
+    },
+    {
+      "start": 420.42,
+      "end": 425.58,
+      "duration": 5.16,
+      "text": "the pseudo code of practicum it is this"
+    },
+    {
+      "start": 423.96,
+      "end": 428.52,
+      "duration": 4.56,
+      "text": "is how the pseudo code of the priority"
+    },
+    {
+      "start": 425.58,
+      "end": 430.8,
+      "duration": 5.22,
+      "text": "queue looks like so I'm saying while p q"
+    },
+    {
+      "start": 428.52,
+      "end": 433.5,
+      "duration": 4.98,
+      "text": "dot not empty so"
+    },
+    {
+      "start": 430.8,
+      "end": 436.26,
+      "duration": 5.46,
+      "text": "at Max I can say that this Loop will go"
+    },
+    {
+      "start": 433.5,
+      "end": 438.9,
+      "duration": 5.4,
+      "text": "through all the nodes which is V at Max"
+    },
+    {
+      "start": 436.26,
+      "end": 440.88,
+      "duration": 4.62,
+      "text": "like twice or Thrice it won't go like a"
+    },
+    {
+      "start": 438.9,
+      "end": 443.04,
+      "duration": 4.14,
+      "text": "lot of times because we're following the"
+    },
+    {
+      "start": 440.88,
+      "end": 445.26,
+      "duration": 4.38,
+      "text": "greedy strategy of going to every node"
+    },
+    {
+      "start": 443.04,
+      "end": 448.26,
+      "duration": 5.22,
+      "text": "every minimal node so I can say this"
+    },
+    {
+      "start": 445.26,
+      "end": 450.72,
+      "duration": 5.46,
+      "text": "while loop is going to run for the total"
+    },
+    {
+      "start": 448.26,
+      "end": 454.74,
+      "duration": 6.48,
+      "text": "number of nodes which is V so I can say"
+    },
+    {
+      "start": 450.72,
+      "end": 458.64,
+      "duration": 7.92,
+      "text": "this probably will run for V right so V"
+    },
+    {
+      "start": 454.74,
+      "end": 461.4,
+      "duration": 6.66,
+      "text": "into the entire thing V into this entire"
+    },
+    {
+      "start": 458.64,
+      "end": 463.74,
+      "duration": 5.1,
+      "text": "thing correct so we into what this is"
+    },
+    {
+      "start": 461.4,
+      "end": 466.68,
+      "duration": 5.28,
+      "text": "going to take a logarithmic of Heap size"
+    },
+    {
+      "start": 463.74,
+      "end": 469.74,
+      "duration": 6.0,
+      "text": "hip size is very important logarithmic"
+    },
+    {
+      "start": 466.68,
+      "end": 474.18,
+      "duration": 7.5,
+      "text": "of Heap size at the worst case this is"
+    },
+    {
+      "start": 469.74,
+      "end": 477.12,
+      "duration": 7.38,
+      "text": "number of edges this is number of edges"
+    },
+    {
+      "start": 474.18,
+      "end": 480.42,
+      "duration": 6.24,
+      "text": "of every node number of edges of every"
+    },
+    {
+      "start": 477.12,
+      "end": 483.84,
+      "duration": 6.72,
+      "text": "node let's take the densest like the"
+    },
+    {
+      "start": 480.42,
+      "end": 486.96,
+      "duration": 6.54,
+      "text": "dense uh the most dense graph where if"
+    },
+    {
+      "start": 483.84,
+      "end": 488.7,
+      "duration": 4.86,
+      "text": "there are four notes for an example this"
+    },
+    {
+      "start": 486.96,
+      "end": 490.5,
+      "duration": 3.54,
+      "text": "is one node this is connected to"
+    },
+    {
+      "start": 488.7,
+      "end": 493.2,
+      "duration": 4.5,
+      "text": "everyone and this guy is also connected"
+    },
+    {
+      "start": 490.5,
+      "end": 495.18,
+      "duration": 4.68,
+      "text": "to the this this and this this guy is"
+    },
+    {
+      "start": 493.2,
+      "end": 496.74,
+      "duration": 3.54,
+      "text": "also connected to this this and this"
+    },
+    {
+      "start": 495.18,
+      "end": 500.64,
+      "duration": 5.46,
+      "text": "this guy is also connected to everyone"
+    },
+    {
+      "start": 496.74,
+      "end": 503.46,
+      "duration": 6.72,
+      "text": "so this is the most dense node where"
+    },
+    {
+      "start": 500.64,
+      "end": 506.64,
+      "duration": 6.0,
+      "text": "everyone is having"
+    },
+    {
+      "start": 503.46,
+      "end": 510.0,
+      "duration": 6.54,
+      "text": "n minus one notes every guy is connected"
+    },
+    {
+      "start": 506.64,
+      "end": 513.12,
+      "duration": 6.48,
+      "text": "to all other notes possible that is the"
+    },
+    {
+      "start": 510.0,
+      "end": 516.0,
+      "duration": 6.0,
+      "text": "most dense graph possible if you avoid"
+    },
+    {
+      "start": 513.12,
+      "end": 518.94,
+      "duration": 5.82,
+      "text": "self Loops I don't want self Loops I"
+    },
+    {
+      "start": 516.0,
+      "end": 521.82,
+      "duration": 5.82,
+      "text": "won't this guy connected to everyone I"
+    },
+    {
+      "start": 518.94,
+      "end": 524.94,
+      "duration": 6.0,
+      "text": "want this guy connected to everyone I"
+    },
+    {
+      "start": 521.82,
+      "end": 527.28,
+      "duration": 5.46,
+      "text": "want this guy connected to everyone got"
+    },
+    {
+      "start": 524.94,
+      "end": 530.46,
+      "duration": 5.52,
+      "text": "it I want this guy connected to everyone"
+    },
+    {
+      "start": 527.28,
+      "end": 532.62,
+      "duration": 5.34,
+      "text": "that is what you call as a dense graph"
+    },
+    {
+      "start": 530.46,
+      "end": 536.1,
+      "duration": 5.64,
+      "text": "so I've taken dense graph and I'm saying"
+    },
+    {
+      "start": 532.62,
+      "end": 538.32,
+      "duration": 5.7,
+      "text": "any any is what this will iterate at the"
+    },
+    {
+      "start": 536.1,
+      "end": 540.84,
+      "duration": 4.74,
+      "text": "worst case what can be any if I ask you"
+    },
+    {
+      "start": 538.32,
+      "end": 543.78,
+      "duration": 5.46,
+      "text": "if every guy is connected to all the"
+    },
+    {
+      "start": 540.84,
+      "end": 545.28,
+      "duration": 4.44,
+      "text": "notes how many notes can one have so can"
+    },
+    {
+      "start": 543.78,
+      "end": 547.86,
+      "duration": 4.08,
+      "text": "I say"
+    },
+    {
+      "start": 545.28,
+      "end": 550.62,
+      "duration": 5.34,
+      "text": "it'll be V minus 1 because if you see"
+    },
+    {
+      "start": 547.86,
+      "end": 554.16,
+      "duration": 6.3,
+      "text": "this guy is connected to 3. in four"
+    },
+    {
+      "start": 550.62,
+      "end": 556.8,
+      "duration": 6.18,
+      "text": "notes Vani himself other three so V"
+    },
+    {
+      "start": 554.16,
+      "end": 560.64,
+      "duration": 6.48,
+      "text": "minus one so I can say this will run for"
+    },
+    {
+      "start": 556.8,
+      "end": 562.56,
+      "duration": 5.76,
+      "text": "at Max B minus 1 and then there is an"
+    },
+    {
+      "start": 560.64,
+      "end": 564.66,
+      "duration": 4.02,
+      "text": "update a conditional check which is okay"
+    },
+    {
+      "start": 562.56,
+      "end": 566.04,
+      "duration": 3.48,
+      "text": "and then there is another push which"
+    },
+    {
+      "start": 564.66,
+      "end": 570.06,
+      "duration": 5.4,
+      "text": "will go for"
+    },
+    {
+      "start": 566.04,
+      "end": 570.84,
+      "duration": 4.8,
+      "text": "log of keep size understood perfect till"
+    },
+    {
+      "start": 570.06,
+      "end": 573.24,
+      "duration": 3.18,
+      "text": "now"
+    },
+    {
+      "start": 570.84,
+      "end": 574.68,
+      "duration": 3.84,
+      "text": "so if I write it properly can I write it"
+    },
+    {
+      "start": 573.24,
+      "end": 577.98,
+      "duration": 4.74,
+      "text": "something like this"
+    },
+    {
+      "start": 574.68,
+      "end": 581.52,
+      "duration": 6.84,
+      "text": "V in overall into"
+    },
+    {
+      "start": 577.98,
+      "end": 583.98,
+      "duration": 6.0,
+      "text": "pop vertex from Min Heap number of edges"
+    },
+    {
+      "start": 581.52,
+      "end": 586.14,
+      "duration": 4.62,
+      "text": "on each vertex into push into the"
+    },
+    {
+      "start": 583.98,
+      "end": 587.52,
+      "duration": 3.54,
+      "text": "priority queue isn't it"
+    },
+    {
+      "start": 586.14,
+      "end": 591.6,
+      "duration": 5.46,
+      "text": "this"
+    },
+    {
+      "start": 587.52,
+      "end": 593.76,
+      "duration": 6.24,
+      "text": "and then any into push correct so if I"
+    },
+    {
+      "start": 591.6,
+      "end": 595.14,
+      "duration": 3.54,
+      "text": "go across and try to write it generate"
+    },
+    {
+      "start": 593.76,
+      "end": 599.22,
+      "duration": 5.46,
+      "text": "this as"
+    },
+    {
+      "start": 595.14,
+      "end": 601.86,
+      "duration": 6.72,
+      "text": "V into pop log of Heap size plus any"
+    },
+    {
+      "start": 599.22,
+      "end": 604.26,
+      "duration": 5.04,
+      "text": "interlock of Heap size I can"
+    },
+    {
+      "start": 601.86,
+      "end": 607.68,
+      "duration": 5.82,
+      "text": "I'll go and can I see"
+    },
+    {
+      "start": 604.26,
+      "end": 610.38,
+      "duration": 6.12,
+      "text": "any is nothing like can I just take"
+    },
+    {
+      "start": 607.68,
+      "end": 612.96,
+      "duration": 5.28,
+      "text": "logarithmic of Heap size to be common I"
+    },
+    {
+      "start": 610.38,
+      "end": 616.2,
+      "duration": 5.82,
+      "text": "can if I take logarithmic of these types"
+    },
+    {
+      "start": 612.96,
+      "end": 619.2,
+      "duration": 6.24,
+      "text": "to be common I'll have any plus one"
+    },
+    {
+      "start": 616.2,
+      "end": 623.22,
+      "duration": 7.02,
+      "text": "yes perfect next"
+    },
+    {
+      "start": 619.2,
+      "end": 627.48,
+      "duration": 8.28,
+      "text": "I figured out what was any any was"
+    },
+    {
+      "start": 623.22,
+      "end": 631.56,
+      "duration": 8.34,
+      "text": "V minus E because at Max everyone can"
+    },
+    {
+      "start": 627.48,
+      "end": 634.02,
+      "duration": 6.54,
+      "text": "have V minus 1 adjacent notes at Max so"
+    },
+    {
+      "start": 631.56,
+      "end": 636.18,
+      "duration": 4.62,
+      "text": "can I replace this with something like V"
+    },
+    {
+      "start": 634.02,
+      "end": 638.4,
+      "duration": 4.38,
+      "text": "minus one so minus 1 and plus one will"
+    },
+    {
+      "start": 636.18,
+      "end": 641.16,
+      "duration": 4.98,
+      "text": "go so will it be like"
+    },
+    {
+      "start": 638.4,
+      "end": 644.1,
+      "duration": 5.7,
+      "text": "V into V into logarithmic of Heap size"
+    },
+    {
+      "start": 641.16,
+      "end": 648.54,
+      "duration": 7.38,
+      "text": "it will be which is nothing but V square"
+    },
+    {
+      "start": 644.1,
+      "end": 651.48,
+      "duration": 7.38,
+      "text": "into logarithmic of each size indeed now"
+    },
+    {
+      "start": 648.54,
+      "end": 655.26,
+      "duration": 6.72,
+      "text": "what is this keep size we need to figure"
+    },
+    {
+      "start": 651.48,
+      "end": 658.62,
+      "duration": 7.14,
+      "text": "this out what is this keep size so"
+    },
+    {
+      "start": 655.26,
+      "end": 661.56,
+      "duration": 6.3,
+      "text": "when we are taking a practicum when we"
+    },
+    {
+      "start": 658.62,
+      "end": 663.24,
+      "duration": 4.62,
+      "text": "are taking a something like a priority"
+    },
+    {
+      "start": 661.56,
+      "end": 664.98,
+      "duration": 3.42,
+      "text": "QPS whenever we are taking something"
+    },
+    {
+      "start": 663.24,
+      "end": 668.88,
+      "duration": 5.64,
+      "text": "like a party queue"
+    },
+    {
+      "start": 664.98,
+      "end": 672.42,
+      "duration": 7.44,
+      "text": "at the first step if this guy"
+    },
+    {
+      "start": 668.88,
+      "end": 673.8,
+      "duration": 4.92,
+      "text": "goes to this this this and finds"
+    },
+    {
+      "start": 672.42,
+      "end": 677.7,
+      "duration": 5.28,
+      "text": "everyone"
+    },
+    {
+      "start": 673.8,
+      "end": 680.64,
+      "duration": 6.84,
+      "text": "to be having a smaller distance it will"
+    },
+    {
+      "start": 677.7,
+      "end": 683.46,
+      "duration": 5.76,
+      "text": "indeed push P nodes it'll indeed push"
+    },
+    {
+      "start": 680.64,
+      "end": 686.1,
+      "duration": 5.46,
+      "text": "three notes this guy will end up pushing"
+    },
+    {
+      "start": 683.46,
+      "end": 688.86,
+      "duration": 5.4,
+      "text": "three notes then what do you do you take"
+    },
+    {
+      "start": 686.1,
+      "end": 690.96,
+      "duration": 4.86,
+      "text": "out this first cat and imagine this guy"
+    },
+    {
+      "start": 688.86,
+      "end": 692.52,
+      "duration": 3.66,
+      "text": "is also connected to three notes again"
+    },
+    {
+      "start": 690.96,
+      "end": 695.58,
+      "duration": 4.62,
+      "text": "this guy is also connected to three"
+    },
+    {
+      "start": 692.52,
+      "end": 698.22,
+      "duration": 5.7,
+      "text": "notes again this guy again finds better"
+    },
+    {
+      "start": 695.58,
+      "end": 700.56,
+      "duration": 4.98,
+      "text": "better better so hypothetical like it's"
+    },
+    {
+      "start": 698.22,
+      "end": 703.2,
+      "duration": 4.98,
+      "text": "a worst case scenario it again will push"
+    },
+    {
+      "start": 700.56,
+      "end": 706.14,
+      "duration": 5.58,
+      "text": "three notes correct then we'll get this"
+    },
+    {
+      "start": 703.2,
+      "end": 708.3,
+      "duration": 5.1,
+      "text": "guy this guy is again connected to three"
+    },
+    {
+      "start": 706.14,
+      "end": 711.36,
+      "duration": 5.22,
+      "text": "guys hypothetical again"
+    },
+    {
+      "start": 708.3,
+      "end": 714.72,
+      "duration": 6.42,
+      "text": "it will get smaller distances and it'll"
+    },
+    {
+      "start": 711.36,
+      "end": 716.64,
+      "duration": 5.28,
+      "text": "again push three so otherwise like again"
+    },
+    {
+      "start": 714.72,
+      "end": 718.38,
+      "duration": 3.66,
+      "text": "you'll get this again you'll get this"
+    },
+    {
+      "start": 716.64,
+      "end": 719.52,
+      "duration": 2.88,
+      "text": "which will again be connected to three"
+    },
+    {
+      "start": 718.38,
+      "end": 723.48,
+      "duration": 5.1,
+      "text": "guys"
+    },
+    {
+      "start": 719.52,
+      "end": 725.64,
+      "duration": 6.12,
+      "text": "until again push all of these three"
+    },
+    {
+      "start": 723.48,
+      "end": 727.98,
+      "duration": 4.5,
+      "text": "I guess three guys to three separate"
+    },
+    {
+      "start": 725.64,
+      "end": 729.9,
+      "duration": 4.26,
+      "text": "notes pushing it again and again so can"
+    },
+    {
+      "start": 727.98,
+      "end": 734.52,
+      "duration": 6.54,
+      "text": "you see three plus three plus three"
+    },
+    {
+      "start": 729.9,
+      "end": 736.86,
+      "duration": 6.96,
+      "text": "which is EQ Valiant two n Square notes"
+    },
+    {
+      "start": 734.52,
+      "end": 740.58,
+      "duration": 6.06,
+      "text": "because everyone like it has something"
+    },
+    {
+      "start": 736.86,
+      "end": 742.26,
+      "duration": 5.4,
+      "text": "like n minus 1 plus n minus 1 plus n"
+    },
+    {
+      "start": 740.58,
+      "end": 744.3,
+      "duration": 3.72,
+      "text": "minus 1 keeps on pushing every time"
+    },
+    {
+      "start": 742.26,
+      "end": 747.96,
+      "duration": 5.7,
+      "text": "every time can I say somewhere near"
+    },
+    {
+      "start": 744.3,
+      "end": 750.24,
+      "duration": 5.94,
+      "text": "about V Square notes is the worst keep"
+    },
+    {
+      "start": 747.96,
+      "end": 752.28,
+      "duration": 4.32,
+      "text": "size again very hypothetical scenario"
+    },
+    {
+      "start": 750.24,
+      "end": 754.62,
+      "duration": 4.38,
+      "text": "will not happen but I'm taking the"
+    },
+    {
+      "start": 752.28,
+      "end": 755.82,
+      "duration": 3.54,
+      "text": "extremist case so can I say the Heap"
+    },
+    {
+      "start": 754.62,
+      "end": 757.56,
+      "duration": 2.94,
+      "text": "sizes"
+    },
+    {
+      "start": 755.82,
+      "end": 760.8,
+      "duration": 4.98,
+      "text": "nothing but"
+    },
+    {
+      "start": 757.56,
+      "end": 762.78,
+      "duration": 5.22,
+      "text": "V Square I can at the worst is everyone"
+    },
+    {
+      "start": 760.8,
+      "end": 766.26,
+      "duration": 5.46,
+      "text": "is pushing everyone into the Heap size"
+    },
+    {
+      "start": 762.78,
+      "end": 769.26,
+      "duration": 6.48,
+      "text": "okay cool now what is logarithmic of V"
+    },
+    {
+      "start": 766.26,
+      "end": 773.28,
+      "duration": 7.02,
+      "text": "square root generated as 2 log V I can"
+    },
+    {
+      "start": 769.26,
+      "end": 774.06,
+      "duration": 4.8,
+      "text": "right now what is V square is my"
+    },
+    {
+      "start": 773.28,
+      "end": 776.82,
+      "duration": 3.54,
+      "text": "question"
+    },
+    {
+      "start": 774.06,
+      "end": 779.4,
+      "duration": 5.34,
+      "text": "that's the total number of notes so can"
+    },
+    {
+      "start": 776.82,
+      "end": 782.88,
+      "duration": 6.06,
+      "text": "I convert this into E I might again Ask"
+    },
+    {
+      "start": 779.4,
+      "end": 785.4,
+      "duration": 6.0,
+      "text": "how come on assemble if one guy is"
+    },
+    {
+      "start": 782.88,
+      "end": 787.68,
+      "duration": 4.8,
+      "text": "connected to three"
+    },
+    {
+      "start": 785.4,
+      "end": 790.26,
+      "duration": 4.86,
+      "text": "and everyone is connected to three that"
+    },
+    {
+      "start": 787.68,
+      "end": 792.84,
+      "duration": 5.16,
+      "text": "is like one guy is connected to n minus"
+    },
+    {
+      "start": 790.26,
+      "end": 794.46,
+      "duration": 4.2,
+      "text": "one notes or V minus one notes right and"
+    },
+    {
+      "start": 792.84,
+      "end": 797.52,
+      "duration": 4.68,
+      "text": "there are V nodes there are V nodes"
+    },
+    {
+      "start": 794.46,
+      "end": 800.04,
+      "duration": 5.58,
+      "text": "everyone is having V minus one edges"
+    },
+    {
+      "start": 797.52,
+      "end": 802.14,
+      "duration": 4.62,
+      "text": "how many in total they will have V"
+    },
+    {
+      "start": 800.04,
+      "end": 805.2,
+      "duration": 5.16,
+      "text": "Square edges which is the total number"
+    },
+    {
+      "start": 802.14,
+      "end": 807.96,
+      "duration": 5.82,
+      "text": "of edges correct if one guy is having V"
+    },
+    {
+      "start": 805.2,
+      "end": 810.12,
+      "duration": 4.92,
+      "text": "minus one there are V nodes V minus 1"
+    },
+    {
+      "start": 807.96,
+      "end": 812.22,
+      "duration": 4.26,
+      "text": "into V is V Square which is the total"
+    },
+    {
+      "start": 810.12,
+      "end": 814.8,
+      "duration": 4.68,
+      "text": "number of nodes I can simply convert V"
+    },
+    {
+      "start": 812.22,
+      "end": 817.98,
+      "duration": 5.76,
+      "text": "square into e and be like e into two log"
+    },
+    {
+      "start": 814.8,
+      "end": 821.28,
+      "duration": 6.48,
+      "text": "V which can be written as e log V which"
+    },
+    {
+      "start": 817.98,
+      "end": 823.92,
+      "duration": 5.94,
+      "text": "is the time complexity first case worst"
+    },
+    {
+      "start": 821.28,
+      "end": 827.46,
+      "duration": 6.18,
+      "text": "case very hypothetical worst case"
+    },
+    {
+      "start": 823.92,
+      "end": 829.74,
+      "duration": 5.82,
+      "text": "scenario of dijkstra's algorithm"
+    },
+    {
+      "start": 827.46,
+      "end": 831.36,
+      "duration": 3.9,
+      "text": "so guys I hope I was able to explain you"
+    },
+    {
+      "start": 829.74,
+      "end": 833.64,
+      "duration": 3.9,
+      "text": "the time complexity of dextra's"
+    },
+    {
+      "start": 831.36,
+      "end": 835.26,
+      "duration": 3.9,
+      "text": "algorithm it did take me a lot of"
+    },
+    {
+      "start": 833.64,
+      "end": 837.24,
+      "duration": 3.6,
+      "text": "research because you can just scroll"
+    },
+    {
+      "start": 835.26,
+      "end": 840.0,
+      "duration": 4.74,
+      "text": "through YouTube you'll just find people"
+    },
+    {
+      "start": 837.24,
+      "end": 842.28,
+      "duration": 5.04,
+      "text": "saying e log B people will not derive or"
+    },
+    {
+      "start": 840.0,
+      "end": 844.5,
+      "duration": 4.5,
+      "text": "people will not explain you so I hope I"
+    },
+    {
+      "start": 842.28,
+      "end": 846.6,
+      "duration": 4.32,
+      "text": "was able to so just in case I was"
+    },
+    {
+      "start": 844.5,
+      "end": 848.28,
+      "duration": 3.78,
+      "text": "pleased it's an honest request hit that"
+    },
+    {
+      "start": 846.6,
+      "end": 850.44,
+      "duration": 3.84,
+      "text": "like button and if you're new to our"
+    },
+    {
+      "start": 848.28,
+      "end": 851.94,
+      "duration": 3.66,
+      "text": "Channel please please please do consider"
+    },
+    {
+      "start": 850.44,
+      "end": 853.92,
+      "duration": 3.48,
+      "text": "subscribing to us and if you haven't"
+    },
+    {
+      "start": 851.94,
+      "end": 855.6,
+      "duration": 3.66,
+      "text": "checked out our DP series and the SD"
+    },
+    {
+      "start": 853.92,
+      "end": 856.86,
+      "duration": 2.94,
+      "text": "sheet the links are in the description"
+    },
+    {
+      "start": 855.6,
+      "end": 858.3,
+      "duration": 2.7,
+      "text": "please make sure you check them out"
+    },
+    {
+      "start": 856.86,
+      "end": 859.56,
+      "duration": 2.7,
+      "text": "whatever this I'll be wrapping up this"
+    },
+    {
+      "start": 858.3,
+      "end": 862.56,
+      "duration": 4.26,
+      "text": "video let's read in some other video"
+    },
+    {
+      "start": 859.56,
+      "end": 866.4,
+      "duration": 6.84,
+      "text": "till then bye take care whenever your"
+    },
+    {
+      "start": 862.56,
+      "end": 869.54,
+      "duration": 6.98,
+      "text": "heart is broken don't ever forget you're"
+    },
+    {
+      "start": 866.4,
+      "end": 869.54,
+      "duration": 3.14,
+      "text": "golden I"
+    }
+  ]
+}

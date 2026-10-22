@@ -1,0 +1,2212 @@
+{
+  "video_id": "C2rRzz-JDk8",
+  "title": "BS 21: Median of two Sorted Arrays of Different Sizes | Brute and Better Approach",
+  "duration_sec": 959,
+  "segments": [
+    {
+      "start": 3.08,
+      "end": 5.64,
+      "text": "Okay, so we will be continuing with our"
+    },
+    {
+      "start": 4.36,
+      "end": 7.92,
+      "text": "binary search playlist. Now, this is a"
+    },
+    {
+      "start": 5.64,
+      "end": 9.52,
+      "text": "part of the strivers A to Z DSA course."
+    },
+    {
+      "start": 7.92,
+      "end": 11.08,
+      "text": "In case you haven't checked it out yet,"
+    },
+    {
+      "start": 9.52,
+      "end": 12.52,
+      "text": "there's a link in the description. Make"
+    },
+    {
+      "start": 11.08,
+      "end": 13.8,
+      "text": "sure you check it out. So, before"
+    },
+    {
+      "start": 12.52,
+      "end": 14.8,
+      "text": "starting, hey everyone, welcome back to"
+    },
+    {
+      "start": 13.8,
+      "end": 16.72,
+      "text": "the channel. I hope you guys are doing"
+    },
+    {
+      "start": 14.8,
+      "end": 18.48,
+      "text": "extremely well. So, the problem that"
+    },
+    {
+      "start": 16.72,
+      "end": 21.08,
+      "text": "you're going to solve today is finding"
+    },
+    {
+      "start": 18.48,
+      "end": 22.44,
+      "text": "out the median of two sorted arrays."
+    },
+    {
+      "start": 21.08,
+      "end": 24.2,
+      "text": "Now, this word is very important,"
+    },
+    {
+      "start": 22.44,
+      "end": 25.92,
+      "text": "sorted, because that is what will help"
+    },
+    {
+      "start": 24.2,
+      "end": 28.2,
+      "text": "us to solve this problem. Now, you can"
+    },
+    {
+      "start": 25.92,
+      "end": 30.0,
+      "text": "be given two arrays of equal size. You"
+    },
+    {
+      "start": 28.2,
+      "end": 31.84,
+      "text": "can also be given uh two arrays of"
+    },
+    {
+      "start": 30.0,
+      "end": 34.88,
+      "text": "different size. Like in this example,"
+    },
+    {
+      "start": 31.84,
+      "end": 37.4,
+      "text": "you can see this array is of size six"
+    },
+    {
+      "start": 34.88,
+      "end": 39.4,
+      "text": "and it is sorted. This array is of size"
+    },
+    {
+      "start": 37.4,
+      "end": 41.08,
+      "text": "four and it is sorted. Now, what you"
+    },
+    {
+      "start": 39.4,
+      "end": 43.72,
+      "text": "have to do is you have to find the"
+    },
+    {
+      "start": 41.08,
+      "end": 45.44,
+      "text": "median of these two sorted arrays. So,"
+    },
+    {
+      "start": 43.72,
+      "end": 47.4,
+      "text": "what you have to do is you have to take"
+    },
+    {
+      "start": 45.44,
+      "end": 49.48,
+      "text": "both of those sorted arrays and you have"
+    },
+    {
+      "start": 47.4,
+      "end": 57.88,
+      "text": "to combine them. So, if I combine them,"
+    },
+    {
+      "start": 49.48,
+      "end": 59.56,
+      "text": "what I get is 1 2 3 3 4 6 7 10 12 15."
+    },
+    {
+      "start": 57.88,
+      "end": 60.88,
+      "text": "What is the total number of elements?"
+    },
+    {
+      "start": 59.56,
+      "end": 64.6,
+      "text": "The total number of elements in this"
+    },
+    {
+      "start": 60.88,
+      "end": 66.0,
+      "text": "case is 10. Why? Because N1 was six. N2"
+    },
+    {
+      "start": 64.6,
+      "end": 67.4,
+      "text": "was four. So, the total number of"
+    },
+    {
+      "start": 66.0,
+      "end": 69.6,
+      "text": "elements is"
+    },
+    {
+      "start": 67.4,
+      "end": 71.32,
+      "text": "10, right? So, if I try to find out the"
+    },
+    {
+      "start": 69.6,
+      "end": 73.88,
+      "text": "median, can I find a median of 10"
+    },
+    {
+      "start": 71.32,
+      "end": 76.8,
+      "text": "elements? I cannot. Why? Because if I"
+    },
+    {
+      "start": 73.88,
+      "end": 79.32,
+      "text": "stand over at four, there are four"
+    },
+    {
+      "start": 76.8,
+      "end": 81.6,
+      "text": "elements on the left. There are five"
+    },
+    {
+      "start": 79.32,
+      "end": 83.56,
+      "text": "elements on the right. If I stand at"
+    },
+    {
+      "start": 81.6,
+      "end": 86.28,
+      "text": "six, there are five elements on the"
+    },
+    {
+      "start": 83.56,
+      "end": 88.24,
+      "text": "left, four elements on the right. So,"
+    },
+    {
+      "start": 86.28,
+      "end": 91.04,
+      "text": "there is no specific median, because"
+    },
+    {
+      "start": 88.24,
+      "end": 92.84,
+      "text": "median means on the left and on the"
+    },
+    {
+      "start": 91.04,
+      "end": 94.84,
+      "text": "right, there must be equal number of"
+    },
+    {
+      "start": 92.84,
+      "end": 96.32,
+      "text": "elements. Now, this is not in this case."
+    },
+    {
+      "start": 94.84,
+      "end": 98.96,
+      "text": "This is like five and four. They're not"
+    },
+    {
+      "start": 96.32,
+      "end": 100.72,
+      "text": "equal. So, can I say the median will be"
+    },
+    {
+      "start": 98.96,
+      "end": 102.76,
+      "text": "somewhere between four and six be-"
+    },
+    {
+      "start": 100.72,
+      "end": 105.56,
+      "text": "because if I take somewhere between four"
+    },
+    {
+      "start": 102.76,
+      "end": 107.0,
+      "text": "and six, on the left there are five, on"
+    },
+    {
+      "start": 105.56,
+      "end": 109.8,
+      "text": "the right there are five, which is"
+    },
+    {
+      "start": 107.0,
+      "end": 112.48,
+      "text": "equal. So, I can say that the median is"
+    },
+    {
+      "start": 109.8,
+      "end": 115.16,
+      "text": "somewhere between four and six. So, it's"
+    },
+    {
+      "start": 112.48,
+      "end": 118.4,
+      "text": "like the middle of four and six. So, 4 +"
+    },
+    {
+      "start": 115.16,
+      "end": 120.8,
+      "text": "6 / 2. Five is the median in this case."
+    },
+    {
+      "start": 118.4,
+      "end": 123.52,
+      "text": "Now, over here the point to notice was"
+    },
+    {
+      "start": 120.8,
+      "end": 125.76,
+      "text": "the total number of elements was even."
+    },
+    {
+      "start": 123.52,
+      "end": 127.48,
+      "text": "That is why it did not have a specific"
+    },
+    {
+      "start": 125.76,
+      "end": 129.68,
+      "text": "median. But, what if I take this"
+    },
+    {
+      "start": 127.48,
+      "end": 131.72,
+      "text": "example? There's like three elements."
+    },
+    {
+      "start": 129.68,
+      "end": 133.88,
+      "text": "There's like two elements. So, what is"
+    },
+    {
+      "start": 131.72,
+      "end": 135.8,
+      "text": "the total number of elements? Can I say"
+    },
+    {
+      "start": 133.88,
+      "end": 138.8,
+      "text": "that the total number of elements in"
+    },
+    {
+      "start": 135.8,
+      "end": 141.32,
+      "text": "this case is five? I can. So, if I try"
+    },
+    {
+      "start": 138.8,
+      "end": 142.64,
+      "text": "to combine them in this time, what will"
+    },
+    {
+      "start": 141.32,
+      "end": 146.76,
+      "text": "I get? If I try to combine them, I'll"
+    },
+    {
+      "start": 142.64,
+      "end": 148.8,
+      "text": "get one, two, three, three, four. If I"
+    },
+    {
+      "start": 146.76,
+      "end": 151.4,
+      "text": "ask you what is the median? Can I say"
+    },
+    {
+      "start": 148.8,
+      "end": 152.92,
+      "text": "this is the median? I can. Why? Because"
+    },
+    {
+      "start": 151.4,
+      "end": 155.16,
+      "text": "there's like two elements on the left."
+    },
+    {
+      "start": 152.92,
+      "end": 157.36,
+      "text": "There's like two elements on the right."
+    },
+    {
+      "start": 155.16,
+      "end": 160.64,
+      "text": "Thereby, the median is pretty simple,"
+    },
+    {
+      "start": 157.36,
+      "end": 162.16,
+      "text": "the midpoint. So, in case of"
+    },
+    {
+      "start": 160.64,
+      "end": 164.12,
+      "text": "the total number of elements being odd,"
+    },
+    {
+      "start": 162.16,
+      "end": 166.44,
+      "text": "it's very simple. In case the total"
+    },
+    {
+      "start": 164.12,
+      "end": 168.16,
+      "text": "number of elements is even, I have to"
+    },
+    {
+      "start": 166.44,
+      "end": 170.44,
+      "text": "consider two elements. I have to take"
+    },
+    {
+      "start": 168.16,
+      "end": 171.48,
+      "text": "the middle of it. Got it? Now, this is"
+    },
+    {
+      "start": 170.44,
+      "end": 173.84,
+      "text": "what we have to find. We have to find"
+    },
+    {
+      "start": 171.48,
+      "end": 175.0,
+      "text": "the median of two sorted arrays. So,"
+    },
+    {
+      "start": 173.84,
+      "end": 176.96,
+      "text": "what is the first solution that you can"
+    },
+    {
+      "start": 175.0,
+      "end": 179.48,
+      "text": "think of? The extreme brute force that"
+    },
+    {
+      "start": 176.96,
+      "end": 180.88,
+      "text": "comes to my mind is, okay, two sorted"
+    },
+    {
+      "start": 179.48,
+      "end": 183.56,
+      "text": "arrays."
+    },
+    {
+      "start": 180.88,
+      "end": 186.68,
+      "text": "Can I merge them into a third sorted"
+    },
+    {
+      "start": 183.56,
+      "end": 189.12,
+      "text": "array? And if I merge them, then I know"
+    },
+    {
+      "start": 186.68,
+      "end": 190.8,
+      "text": "I can solve it afterwards."
+    },
+    {
+      "start": 189.12,
+      "end": 193.28,
+      "text": "Now, the point to notice over here is"
+    },
+    {
+      "start": 190.8,
+      "end": 195.84,
+      "text": "both of them are sorted arrays. And you"
+    },
+    {
+      "start": 193.28,
+      "end": 197.32,
+      "text": "know how to merge two sorted arrays into"
+    },
+    {
+      "start": 195.84,
+      "end": 199.64,
+      "text": "one. We have done that in merge sort,"
+    },
+    {
+      "start": 197.32,
+      "end": 202.32,
+      "text": "isn't it? So, what I'll do is I'll stand"
+    },
+    {
+      "start": 199.64,
+      "end": 205.2,
+      "text": "at one and I'll stand at two. And I'll"
+    },
+    {
+      "start": 202.32,
+      "end": 207.08,
+      "text": "try to take another third array."
+    },
+    {
+      "start": 205.2,
+      "end": 209.8,
+      "text": "And I'll try to put it over there."
+    },
+    {
+      "start": 207.08,
+      "end": 211.32,
+      "text": "Will I take one or will I take two? I'll"
+    },
+    {
+      "start": 209.8,
+      "end": 212.96,
+      "text": "take one because I'm trying to form a"
+    },
+    {
+      "start": 211.32,
+      "end": 215.04,
+      "text": "sorted array. So, I'll take one. And"
+    },
+    {
+      "start": 212.96,
+      "end": 217.52,
+      "text": "I'll move. Will I take two or will I"
+    },
+    {
+      "start": 215.04,
+      "end": 219.24,
+      "text": "take three? I'll take two and I'll move."
+    },
+    {
+      "start": 217.52,
+      "end": 221.08,
+      "text": "Will I take three or three? I can take"
+    },
+    {
+      "start": 219.24,
+      "end": 222.92,
+      "text": "any one. I'll take three and move. Will"
+    },
+    {
+      "start": 221.08,
+      "end": 224.88,
+      "text": "I take three and four? I'll take three"
+    },
+    {
+      "start": 222.92,
+      "end": 226.76,
+      "text": "and I'll move. Will I take six and four?"
+    },
+    {
+      "start": 224.88,
+      "end": 229.0,
+      "text": "I'll take four and I'll move. Will I"
+    },
+    {
+      "start": 226.76,
+      "end": 231.52,
+      "text": "take six or seven? I'll take six and"
+    },
+    {
+      "start": 229.0,
+      "end": 234.44,
+      "text": "I'll move. Will I take seven or 15? I'll"
+    },
+    {
+      "start": 231.52,
+      "end": 237.52,
+      "text": "take seven. I'll move. Will I take 10?"
+    },
+    {
+      "start": 234.44,
+      "end": 238.96,
+      "text": "Yes. Will I take 12? Yes. Will I take"
+    },
+    {
+      "start": 237.52,
+      "end": 240.32,
+      "text": "After this, there's nothing. So,"
+    },
+    {
+      "start": 238.96,
+      "end": 242.12,
+      "text": "whatever is left on the right, I'll just"
+    },
+    {
+      "start": 240.32,
+      "end": 243.76,
+      "text": "take it. So, we have put two sorted"
+    },
+    {
+      "start": 242.12,
+      "end": 245.52,
+      "text": "arrays into the third one. Now, what is"
+    },
+    {
+      "start": 243.76,
+      "end": 247.76,
+      "text": "the next step? The next step is to find"
+    },
+    {
+      "start": 245.52,
+      "end": 249.8,
+      "text": "out the median. Can I say if the total"
+    },
+    {
+      "start": 247.76,
+      "end": 253.0,
+      "text": "number of elements is even, I need to"
+    },
+    {
+      "start": 249.8,
+      "end": 254.96,
+      "text": "find two median elements. One is four"
+    },
+    {
+      "start": 253.0,
+      "end": 257.32,
+      "text": "and the other one is six. And I need to"
+    },
+    {
+      "start": 254.96,
+      "end": 259.72,
+      "text": "basically add them and divide by two to"
+    },
+    {
+      "start": 257.32,
+      "end": 262.68,
+      "text": "get our median, right? And you know how"
+    },
+    {
+      "start": 259.72,
+      "end": 264.08,
+      "text": "to find it. The index is 0 1 2 3 4 5."
+    },
+    {
+      "start": 262.68,
+      "end": 266.44,
+      "text": "You need the fourth index and the fifth"
+    },
+    {
+      "start": 264.08,
+      "end": 269.12,
+      "text": "index. Fifth index is nothing but 10 by"
+    },
+    {
+      "start": 266.44,
+      "end": 271.08,
+      "text": "2. And the fourth index is nothing by 10"
+    },
+    {
+      "start": 269.12,
+      "end": 272.8,
+      "text": "by 2 minus 1. So, you get both the"
+    },
+    {
+      "start": 271.08,
+      "end": 274.08,
+      "text": "indexes and then you can do your job."
+    },
+    {
+      "start": 272.8,
+      "end": 276.48,
+      "text": "I'll write that in code, but before"
+    },
+    {
+      "start": 274.08,
+      "end": 278.08,
+      "text": "that, let's look at the other example."
+    },
+    {
+      "start": 276.48,
+      "end": 280.76,
+      "text": "In the other example, when you try to"
+    },
+    {
+      "start": 278.08,
+      "end": 283.88,
+      "text": "merge them, you'll get something as 1 2"
+    },
+    {
+      "start": 280.76,
+      "end": 286.56,
+      "text": "3 3 4. And over here,"
+    },
+    {
+      "start": 283.88,
+      "end": 288.68,
+      "text": "the total number of elements is odd. And"
+    },
+    {
+      "start": 286.56,
+      "end": 291.56,
+      "text": "which index do you require? You straight"
+    },
+    {
+      "start": 288.68,
+      "end": 294.64,
+      "text": "away require this one, which is the"
+    },
+    {
+      "start": 291.56,
+      "end": 296.64,
+      "text": "second index. Can I straight away write"
+    },
+    {
+      "start": 294.64,
+      "end": 298.72,
+      "text": "5 by 2? And that will be the second"
+    },
+    {
+      "start": 296.64,
+      "end": 301.24,
+      "text": "index. And that will be my only median."
+    },
+    {
+      "start": 298.72,
+      "end": 302.88,
+      "text": "I can, right? So, this is how the brute"
+    },
+    {
+      "start": 301.24,
+      "end": 304.24,
+      "text": "force will be. So, let's quickly write"
+    },
+    {
+      "start": 302.88,
+      "end": 305.84,
+      "text": "down So, let's quickly write down the"
+    },
+    {
+      "start": 304.24,
+      "end": 307.4,
+      "text": "pseudo code. So, what I've done is I've"
+    },
+    {
+      "start": 305.84,
+      "end": 309.76,
+      "text": "taken an array three, which is an empty"
+    },
+    {
+      "start": 307.4,
+      "end": 312.2,
+      "text": "array. I've taken index I, which points"
+    },
+    {
+      "start": 309.76,
+      "end": 314.56,
+      "text": "to the first element of array one. I've"
+    },
+    {
+      "start": 312.2,
+      "end": 316.4,
+      "text": "taken index J, which points to the first"
+    },
+    {
+      "start": 314.56,
+      "end": 318.6,
+      "text": "element of array two. Now, what I know"
+    },
+    {
+      "start": 316.4,
+      "end": 320.96,
+      "text": "is I have to merge them. So, I'll keep"
+    },
+    {
+      "start": 318.6,
+      "end": 323.08,
+      "text": "on going till I is lesser than N1, which"
+    },
+    {
+      "start": 320.96,
+      "end": 324.56,
+      "text": "is basically the size of the first one."
+    },
+    {
+      "start": 323.08,
+      "end": 326.64,
+      "text": "I'll keep on going till it is lesser"
+    },
+    {
+      "start": 324.56,
+      "end": 328.52,
+      "text": "than N2, which is the size of the next"
+    },
+    {
+      "start": 326.64,
+      "end": 332.52,
+      "text": "one. Now, what I'll do is"
+    },
+    {
+      "start": 328.52,
+      "end": 334.96,
+      "text": "if array of one of I is lesser than"
+    },
+    {
+      "start": 332.52,
+      "end": 337.96,
+      "text": "array of two of J,"
+    },
+    {
+      "start": 334.96,
+      "end": 341.44,
+      "text": "in that case, I'll ask array three to"
+    },
+    {
+      "start": 337.96,
+      "end": 344.16,
+      "text": "add array of one of I and do a plus"
+    },
+    {
+      "start": 341.44,
+      "end": 346.24,
+      "text": "plus. Basically, after you add, you move"
+    },
+    {
+      "start": 344.16,
+      "end": 350.4,
+      "text": "forward because we're done with you."
+    },
+    {
+      "start": 346.24,
+      "end": 353.16,
+      "text": "Else, I will say array three to add"
+    },
+    {
+      "start": 350.4,
+      "end": 355.96,
+      "text": "array two of J because that is the small"
+    },
+    {
+      "start": 353.16,
+      "end": 357.84,
+      "text": "element. At the same time, go ahead"
+    },
+    {
+      "start": 355.96,
+      "end": 359.36,
+      "text": "because you're done."
+    },
+    {
+      "start": 357.84,
+      "end": 362.0,
+      "text": "So, what this will do is this will make"
+    },
+    {
+      "start": 359.36,
+      "end": 364.72,
+      "text": "sure I end up adding up all the"
+    },
+    {
+      "start": 362.0,
+      "end": 366.6,
+      "text": "elements. But, once I'm done, like if"
+    },
+    {
+      "start": 364.72,
+      "end": 368.6,
+      "text": "this condition exhaust, if this"
+    },
+    {
+      "start": 366.6,
+      "end": 370.52,
+      "text": "condition exhaust, or this condition"
+    },
+    {
+      "start": 368.6,
+      "end": 374.12,
+      "text": "exhaust, there must be some elements"
+    },
+    {
+      "start": 370.52,
+      "end": 375.48,
+      "text": "left. So, I say if some element is left"
+    },
+    {
+      "start": 374.12,
+      "end": 376.68,
+      "text": "on the"
+    },
+    {
+      "start": 375.48,
+      "end": 379.12,
+      "text": "first array,"
+    },
+    {
+      "start": 376.68,
+      "end": 380.96,
+      "text": "then array three, can you just"
+    },
+    {
+      "start": 379.12,
+      "end": 383.92,
+      "text": "add up to yourself?"
+    },
+    {
+      "start": 380.96,
+      "end": 385.64,
+      "text": "Which is like array one of I plus plus."
+    },
+    {
+      "start": 383.92,
+      "end": 387.64,
+      "text": "I'm not going to explain this. It's a"
+    },
+    {
+      "start": 385.64,
+      "end": 388.84,
+      "text": "very very standard one, very very"
+    },
+    {
+      "start": 387.64,
+      "end": 391.68,
+      "text": "standard."
+    },
+    {
+      "start": 388.84,
+      "end": 394.08,
+      "text": "If J is lesser than N2, I say array"
+    },
+    {
+      "start": 391.68,
+      "end": 397.8,
+      "text": "three dot add"
+    },
+    {
+      "start": 394.08,
+      "end": 400.52,
+      "text": "array three J plus plus. Quite simple."
+    },
+    {
+      "start": 397.8,
+      "end": 403.0,
+      "text": "What this will do is this algorithm will"
+    },
+    {
+      "start": 400.52,
+      "end": 404.52,
+      "text": "make sure array three has the sorted"
+    },
+    {
+      "start": 403.0,
+      "end": 407.24,
+      "text": "array. Now, I just need to find the"
+    },
+    {
+      "start": 404.52,
+      "end": 410.16,
+      "text": "median. I know if"
+    },
+    {
+      "start": 407.24,
+      "end": 414.56,
+      "text": "So, maybe I can do one thing. I can say"
+    },
+    {
+      "start": 410.16,
+      "end": 416.68,
+      "text": "N is equal to N1 plus N2."
+    },
+    {
+      "start": 414.56,
+      "end": 418.24,
+      "text": "If"
+    },
+    {
+      "start": 416.68,
+      "end": 421.0,
+      "text": "N is"
+    },
+    {
+      "start": 418.24,
+      "end": 422.8,
+      "text": "e- rather odd, I know the answer will be"
+    },
+    {
+      "start": 421.0,
+      "end": 424.84,
+      "text": "very simple."
+    },
+    {
+      "start": 422.8,
+      "end": 426.16,
+      "text": "Array three of"
+    },
+    {
+      "start": 424.84,
+      "end": 429.4,
+      "text": "N by two."
+    },
+    {
+      "start": 426.16,
+      "end": 431.16,
+      "text": "Because in that case, it's exactly the"
+    },
+    {
+      "start": 429.4,
+      "end": 433.04,
+      "text": "middle. If you remember for five, the"
+    },
+    {
+      "start": 431.16,
+      "end": 434.56,
+      "text": "middle was two, which is five by two."
+    },
+    {
+      "start": 433.04,
+      "end": 435.52,
+      "text": "So, you just take out the middle and you"
+    },
+    {
+      "start": 434.56,
+      "end": 437.04,
+      "text": "send it back."
+    },
+    {
+      "start": 435.52,
+      "end": 439.48,
+      "text": "Or else,"
+    },
+    {
+      "start": 437.04,
+      "end": 442.08,
+      "text": "the median will be if I have to write,"
+    },
+    {
+      "start": 439.48,
+      "end": 444.48,
+      "text": "it's array three"
+    },
+    {
+      "start": 442.08,
+      "end": 447.08,
+      "text": "N by two. Because if you remember for"
+    },
+    {
+      "start": 444.48,
+      "end": 448.6,
+      "text": "10, you had to pick up the fourth index,"
+    },
+    {
+      "start": 447.08,
+      "end": 450.72,
+      "text": "you have to pick up the fifth fifth"
+    },
+    {
+      "start": 448.6,
+      "end": 451.84,
+      "text": "index. And the element were four and"
+    },
+    {
+      "start": 450.72,
+      "end": 453.16,
+      "text": "six."
+    },
+    {
+      "start": 451.84,
+      "end": 455.32,
+      "text": "And you added them and you divided them"
+    },
+    {
+      "start": 453.16,
+      "end": 457.44,
+      "text": "by two. So, this"
+    },
+    {
+      "start": 455.32,
+      "end": 460.2,
+      "text": "plus array of three"
+    },
+    {
+      "start": 457.44,
+      "end": 462.36,
+      "text": "N by two minus one divided by two is"
+    },
+    {
+      "start": 460.2,
+      "end": 464.52,
+      "text": "what you return. And this will be the"
+    },
+    {
+      "start": 462.36,
+      "end": 466.28,
+      "text": "pseudo code, simple as that. So, let's"
+    },
+    {
+      "start": 464.52,
+      "end": 467.92,
+      "text": "quickly jump into the code editor. As"
+    },
+    {
+      "start": 466.28,
+      "end": 470.88,
+      "text": "you can see that I've written the exact"
+    },
+    {
+      "start": 467.92,
+      "end": 472.44,
+      "text": "same code. The only minute difference is"
+    },
+    {
+      "start": 470.88,
+      "end": 474.0,
+      "text": "I'm type casting over here because the"
+    },
+    {
+      "start": 472.44,
+      "end": 476.4,
+      "text": "answer will be in double, and if you do"
+    },
+    {
+      "start": 474.0,
+      "end": 478.4,
+      "text": "not type cast, these are integers. You"
+    },
+    {
+      "start": 476.4,
+      "end": 480.08,
+      "text": "might end up getting incorrect answers."
+    },
+    {
+      "start": 478.4,
+      "end": 483.4,
+      "text": "So, if we try to submit this, you'll get"
+    },
+    {
+      "start": 480.08,
+      "end": 485.16,
+      "text": "a partially accepted. Why? Because it is"
+    },
+    {
+      "start": 483.4,
+      "end": 487.08,
+      "text": "it's taking a lot of time."
+    },
+    {
+      "start": 485.16,
+      "end": 488.8,
+      "text": "The total time taken over here will be"
+    },
+    {
+      "start": 487.08,
+      "end": 490.16,
+      "text": "you're going through every element in"
+    },
+    {
+      "start": 488.8,
+      "end": 491.84,
+      "text": "both the arrays, and you're putting them"
+    },
+    {
+      "start": 490.16,
+      "end": 493.96,
+      "text": "into a third array. So, since you're"
+    },
+    {
+      "start": 491.84,
+      "end": 495.32,
+      "text": "going through every element, that's N1 +"
+    },
+    {
+      "start": 493.96,
+      "end": 497.44,
+      "text": "N2 because that is the total number of"
+    },
+    {
+      "start": 495.32,
+      "end": 499.8,
+      "text": "elements. Using a third array to store"
+    },
+    {
+      "start": 497.44,
+      "end": 502.2,
+      "text": "all the elements, so that's a big of N1"
+    },
+    {
+      "start": 499.8,
+      "end": 504.68,
+      "text": "+ N2. Now, this is giving you a time"
+    },
+    {
+      "start": 502.2,
+      "end": 506.12,
+      "text": "limit exceeded. Now, can we do better?"
+    },
+    {
+      "start": 504.68,
+      "end": 508.36,
+      "text": "The next better solution will be to"
+    },
+    {
+      "start": 506.12,
+      "end": 510.56,
+      "text": "optimize the space, and after that we'll"
+    },
+    {
+      "start": 508.36,
+      "end": 512.72,
+      "text": "try to work on this time limit exceeded."
+    },
+    {
+      "start": 510.56,
+      "end": 514.88,
+      "text": "But as of now, can we optimize the"
+    },
+    {
+      "start": 512.72,
+      "end": 516.72,
+      "text": "space? Like get rid of this third array."
+    },
+    {
+      "start": 514.88,
+      "end": 518.0,
+      "text": "That is what we'll look forward. So, in"
+    },
+    {
+      "start": 516.72,
+      "end": 519.72,
+      "text": "the brute force solution, we were using"
+    },
+    {
+      "start": 518.0,
+      "end": 521.6,
+      "text": "an extra space. So, why was that?"
+    },
+    {
+      "start": 519.72,
+      "end": 523.6,
+      "text": "Because I was using an array three where"
+    },
+    {
+      "start": 521.6,
+      "end": 525.6,
+      "text": "I was storing all the elements. But if I"
+    },
+    {
+      "start": 523.6,
+      "end": 527.72,
+      "text": "just think logically, do I need all the"
+    },
+    {
+      "start": 525.6,
+      "end": 530.68,
+      "text": "elements? The answer to that is no."
+    },
+    {
+      "start": 527.72,
+      "end": 533.28,
+      "text": "If I can somehow just get four and six"
+    },
+    {
+      "start": 530.68,
+      "end": 536.0,
+      "text": "for this example, and then just divide"
+    },
+    {
+      "start": 533.28,
+      "end": 537.84,
+      "text": "them by two, that's done. I don't need"
+    },
+    {
+      "start": 536.0,
+      "end": 540.04,
+      "text": "all the elements. Why am I storing all"
+    },
+    {
+      "start": 537.84,
+      "end": 541.8,
+      "text": "the elements? I just need four and six."
+    },
+    {
+      "start": 540.04,
+      "end": 543.68,
+      "text": "In this particular example,"
+    },
+    {
+      "start": 541.8,
+      "end": 546.64,
+      "text": "I just need three. I don't need all the"
+    },
+    {
+      "start": 543.68,
+      "end": 549.32,
+      "text": "elements. So, let's focus on picking up"
+    },
+    {
+      "start": 546.64,
+      "end": 551.92,
+      "text": "four and six only, or let's focus on"
+    },
+    {
+      "start": 549.32,
+      "end": 554.24,
+      "text": "picking up three only. So, when you're"
+    },
+    {
+      "start": 551.92,
+      "end": 556.92,
+      "text": "doing the algorithm, if you remember, we"
+    },
+    {
+      "start": 554.24,
+      "end": 558.84,
+      "text": "we checked for N's value at the end. If"
+    },
+    {
+      "start": 556.92,
+      "end": 560.88,
+      "text": "it was odd, we did the computation. If"
+    },
+    {
+      "start": 558.84,
+      "end": 563.72,
+      "text": "it was even, we did the computation at"
+    },
+    {
+      "start": 560.88,
+      "end": 565.2,
+      "text": "the end. But before that, we merged them"
+    },
+    {
+      "start": 563.72,
+      "end": 567.16,
+      "text": "together. So, let's have some"
+    },
+    {
+      "start": 565.2,
+      "end": 569.32,
+      "text": "observations. The total number of"
+    },
+    {
+      "start": 567.16,
+      "end": 571.4,
+      "text": "elements are 10."
+    },
+    {
+      "start": 569.32,
+      "end": 573.92,
+      "text": "At the fourth index, I have the first"
+    },
+    {
+      "start": 571.4,
+      "end": 576.76,
+      "text": "index one element. At the fifth index, I"
+    },
+    {
+      "start": 573.92,
+      "end": 579.52,
+      "text": "have the index two element. And if it is"
+    },
+    {
+      "start": 576.76,
+      "end": 583.0,
+      "text": "even, I'm adding them up and dividing it"
+    },
+    {
+      "start": 579.52,
+      "end": 585.72,
+      "text": "by two. So, let's call index one as four"
+    },
+    {
+      "start": 583.0,
+      "end": 588.48,
+      "text": "because I am the fourth index element"
+    },
+    {
+      "start": 585.72,
+      "end": 590.08,
+      "text": "and index two as five. I am the fifth"
+    },
+    {
+      "start": 588.48,
+      "end": 592.24,
+      "text": "index"
+    },
+    {
+      "start": 590.08,
+      "end": 594.0,
+      "text": "element which is called as element one"
+    },
+    {
+      "start": 592.24,
+      "end": 595.12,
+      "text": "and element two. And what is these"
+    },
+    {
+      "start": 594.0,
+      "end": 597.56,
+      "text": "values?"
+    },
+    {
+      "start": 595.12,
+      "end": 599.92,
+      "text": "If you if you just do total by two,"
+    },
+    {
+      "start": 597.56,
+      "end": 602.44,
+      "text": "you'll get index two. And if you just"
+    },
+    {
+      "start": 599.92,
+      "end": 605.36,
+      "text": "subtract it by one, you'll get the index"
+    },
+    {
+      "start": 602.44,
+      "end": 607.68,
+      "text": "four. So, it's basically n by two and n"
+    },
+    {
+      "start": 605.36,
+      "end": 608.8,
+      "text": "by two minus one. And this is index one"
+    },
+    {
+      "start": 607.68,
+      "end": 609.92,
+      "text": "and this is index two."
+    },
+    {
+      "start": 608.8,
+      "end": 613.04,
+      "text": "Quite simple."
+    },
+    {
+      "start": 609.92,
+      "end": 615.6,
+      "text": "In this case, if you divide by two, you"
+    },
+    {
+      "start": 613.04,
+      "end": 617.08,
+      "text": "will get index two because the formulas"
+    },
+    {
+      "start": 615.6,
+      "end": 618.72,
+      "text": "are similar. I want to keep the same"
+    },
+    {
+      "start": 617.08,
+      "end": 621.4,
+      "text": "formula so that I don't have to write"
+    },
+    {
+      "start": 618.72,
+      "end": 622.84,
+      "text": "repetitive code. So, element two."
+    },
+    {
+      "start": 621.4,
+      "end": 625.44,
+      "text": "So, what I'll try to do is I'll try to"
+    },
+    {
+      "start": 622.84,
+      "end": 628.36,
+      "text": "find index one and index two."
+    },
+    {
+      "start": 625.44,
+      "end": 629.68,
+      "text": "In case n is even, I take both of these"
+    },
+    {
+      "start": 628.36,
+      "end": 632.92,
+      "text": "elements"
+    },
+    {
+      "start": 629.68,
+      "end": 634.96,
+      "text": "sum and divide by two. In case"
+    },
+    {
+      "start": 632.92,
+      "end": 636.4,
+      "text": "the element is odd, I will have index"
+    },
+    {
+      "start": 634.96,
+      "end": 638.0,
+      "text": "one and element one, but I'll discard"
+    },
+    {
+      "start": 636.4,
+      "end": 640.6,
+      "text": "it. I'll discard it and I'll just take"
+    },
+    {
+      "start": 638.0,
+      "end": 642.96,
+      "text": "element two. That will be my answer. So,"
+    },
+    {
+      "start": 640.6,
+      "end": 644.96,
+      "text": "let's quickly try to merge it and in the"
+    },
+    {
+      "start": 642.96,
+      "end": 646.96,
+      "text": "process try to find the fourth index"
+    },
+    {
+      "start": 644.96,
+      "end": 649.36,
+      "text": "element and in the process try to find"
+    },
+    {
+      "start": 646.96,
+      "end": 651.04,
+      "text": "the fifth index element. That is index"
+    },
+    {
+      "start": 649.36,
+      "end": 653.84,
+      "text": "one and index two."
+    },
+    {
+      "start": 651.04,
+      "end": 657.88,
+      "text": "So, we will not be merging it. And let's"
+    },
+    {
+      "start": 653.84,
+      "end": 660.32,
+      "text": "call the first index as count zero."
+    },
+    {
+      "start": 657.88,
+      "end": 662.76,
+      "text": "Count refers to the first index which is"
+    },
+    {
+      "start": 660.32,
+      "end": 664.28,
+      "text": "zero. How did we merge? We started at"
+    },
+    {
+      "start": 662.76,
+      "end": 666.96,
+      "text": "one and we started at two."
+    },
+    {
+      "start": 664.28,
+      "end": 668.48,
+      "text": "Hypothetically, which one will be your"
+    },
+    {
+      "start": 666.96,
+      "end": 669.48,
+      "text": "zeroth index guy?"
+    },
+    {
+      "start": 668.48,
+      "end": 670.84,
+      "text": "One."
+    },
+    {
+      "start": 669.48,
+      "end": 672.12,
+      "text": "One will be your zeroth index guy,"
+    },
+    {
+      "start": 670.84,
+      "end": 673.72,
+      "text": "right?"
+    },
+    {
+      "start": 672.12,
+      "end": 676.28,
+      "text": "Let's move to three."
+    },
+    {
+      "start": 673.72,
+      "end": 678.2,
+      "text": "And that means the count moves to first."
+    },
+    {
+      "start": 676.28,
+      "end": 679.84,
+      "text": "You're looking for your first index guy"
+    },
+    {
+      "start": 678.2,
+      "end": 681.24,
+      "text": "and that's two."
+    },
+    {
+      "start": 679.84,
+      "end": 684.16,
+      "text": "Let's take two."
+    },
+    {
+      "start": 681.24,
+      "end": 686.08,
+      "text": "And now let's move this and move the"
+    },
+    {
+      "start": 684.16,
+      "end": 687.92,
+      "text": "count to the second index. Now, you're"
+    },
+    {
+      "start": 686.08,
+      "end": 690.16,
+      "text": "looking for your third index guy. Who is"
+    },
+    {
+      "start": 687.92,
+      "end": 693.56,
+      "text": "your third index guy? Three. Let's take"
+    },
+    {
+      "start": 690.16,
+      "end": 694.8,
+      "text": "three and move count to three. Now, what"
+    },
+    {
+      "start": 693.56,
+      "end": 697.2,
+      "text": "are you looking for? You're looking for"
+    },
+    {
+      "start": 694.8,
+      "end": 699.72,
+      "text": "your third index guy. The third index"
+    },
+    {
+      "start": 697.2,
+      "end": 702.08,
+      "text": "guy will be three. Let's take three, and"
+    },
+    {
+      "start": 699.72,
+      "end": 704.36,
+      "text": "move the count to the fourth index. Here"
+    },
+    {
+      "start": 702.08,
+      "end": 709.12,
+      "text": "comes the twist."
+    },
+    {
+      "start": 704.36,
+      "end": 711.32,
+      "text": "Your count is looking for an index which"
+    },
+    {
+      "start": 709.12,
+      "end": 713.84,
+      "text": "you need, which you need. So, which one"
+    },
+    {
+      "start": 711.32,
+      "end": 715.72,
+      "text": "will it be? Four or six? It says four"
+    },
+    {
+      "start": 713.84,
+      "end": 717.52,
+      "text": "because of the comparison. So, I take"
+    },
+    {
+      "start": 715.72,
+      "end": 719.24,
+      "text": "four, and I say, \"Got my element one"
+    },
+    {
+      "start": 717.52,
+      "end": 721.4,
+      "text": "because I was looking for the fourth"
+    },
+    {
+      "start": 719.24,
+      "end": 723.92,
+      "text": "index guy.\" So, I got my element. I got"
+    },
+    {
+      "start": 721.4,
+      "end": 725.2,
+      "text": "my element. And after that, I'll move."
+    },
+    {
+      "start": 723.92,
+      "end": 726.64,
+      "text": "Now, the count will move to the fifth"
+    },
+    {
+      "start": 725.2,
+      "end": 728.4,
+      "text": "index because I'm looking for the fifth"
+    },
+    {
+      "start": 726.64,
+      "end": 730.28,
+      "text": "index guy. Again, it's happening"
+    },
+    {
+      "start": 728.4,
+      "end": 731.84,
+      "text": "hypothetically. You're not storing these"
+    },
+    {
+      "start": 730.28,
+      "end": 733.24,
+      "text": "elements. You're just not storing."
+    },
+    {
+      "start": 731.84,
+      "end": 734.92,
+      "text": "You're just playing with the pointers."
+    },
+    {
+      "start": 733.24,
+      "end": 738.2,
+      "text": "You just move the pointers. The count is"
+    },
+    {
+      "start": 734.92,
+      "end": 739.96,
+      "text": "at fifth, and it says six is the guy,"
+    },
+    {
+      "start": 738.2,
+      "end": 741.76,
+      "text": "and he stored the six."
+    },
+    {
+      "start": 739.96,
+      "end": 743.56,
+      "text": "Just stored the six. And then, you move"
+    },
+    {
+      "start": 741.76,
+      "end": 746.16,
+      "text": "to the count, and you keep on doing your"
+    },
+    {
+      "start": 743.56,
+      "end": 747.28,
+      "text": "process. You keep on doing your process."
+    },
+    {
+      "start": 746.16,
+      "end": 749.56,
+      "text": "And"
+    },
+    {
+      "start": 747.28,
+      "end": 751.36,
+      "text": "if you've figured out both the elements,"
+    },
+    {
+      "start": 749.56,
+      "end": 753.56,
+      "text": "if you've figured out both the elements,"
+    },
+    {
+      "start": 751.36,
+      "end": 755.88,
+      "text": "your job is done, and the answer will be"
+    },
+    {
+      "start": 753.56,
+      "end": 759.08,
+      "text": "element one plus element two by two. And"
+    },
+    {
+      "start": 755.88,
+      "end": 760.72,
+      "text": "that's it. In case n was odd, the answer"
+    },
+    {
+      "start": 759.08,
+      "end": 762.0,
+      "text": "will be element two."
+    },
+    {
+      "start": 760.72,
+      "end": 764.08,
+      "text": "You would have stored element one, but"
+    },
+    {
+      "start": 762.0,
+      "end": 766.32,
+      "text": "the answer will be element two."
+    },
+    {
+      "start": 764.08,
+      "end": 767.76,
+      "text": "Right? Got it? And let's quickly get"
+    },
+    {
+      "start": 766.32,
+      "end": 769.84,
+      "text": "back into the code editor because if I"
+    },
+    {
+      "start": 767.76,
+      "end": 771.68,
+      "text": "try to write down the code in the iPad,"
+    },
+    {
+      "start": 769.84,
+      "end": 774.2,
+      "text": "it's going to be super messy. And since"
+    },
+    {
+      "start": 771.68,
+      "end": 776.64,
+      "text": "we're just using increment operators and"
+    },
+    {
+      "start": 774.2,
+      "end": 777.92,
+      "text": "while loops, I think the C++ Java and"
+    },
+    {
+      "start": 776.64,
+      "end": 779.48,
+      "text": "all the versions will be similar, so"
+    },
+    {
+      "start": 777.92,
+      "end": 781.08,
+      "text": "you'll be understanding it. Doesn't"
+    },
+    {
+      "start": 779.48,
+      "end": 783.76,
+      "text": "matter which language you follow. So,"
+    },
+    {
+      "start": 781.08,
+      "end": 786.88,
+      "text": "what I am doing is at first, making sure"
+    },
+    {
+      "start": 783.76,
+      "end": 789.08,
+      "text": "I take n1, n2, and ini- initialize I and"
+    },
+    {
+      "start": 786.88,
+      "end": 791.32,
+      "text": "J pointers, and get the value of n."
+    },
+    {
+      "start": 789.08,
+      "end": 793.64,
+      "text": "After that, we know the values of index"
+    },
+    {
+      "start": 791.32,
+      "end": 795.84,
+      "text": "two will be half of the total length."
+    },
+    {
+      "start": 793.64,
+      "end": 797.84,
+      "text": "And index one will be one before that."
+    },
+    {
+      "start": 795.84,
+      "end": 799.76,
+      "text": "Simple. And we're keeping the index"
+    },
+    {
+      "start": 797.84,
+      "end": 800.96,
+      "text": "tracker. This is the tracker. The count"
+    },
+    {
+      "start": 799.76,
+      "end": 802.68,
+      "text": "is the tracker, which is basically"
+    },
+    {
+      "start": 800.96,
+      "end": 804.04,
+      "text": "saying, \"Okay, on array three, this is"
+    },
+    {
+      "start": 802.68,
+      "end": 805.28,
+      "text": "the index that I'm looking for.\""
+    },
+    {
+      "start": 804.04,
+      "end": 806.44,
+      "text": "Initially, you're looking for zeroth"
+    },
+    {
+      "start": 805.28,
+      "end": 808.4,
+      "text": "index, right? So, that's your index"
+    },
+    {
+      "start": 806.44,
+      "end": 811.04,
+      "text": "tracker. And we haven't figured out the"
+    },
+    {
+      "start": 808.4,
+      "end": 812.04,
+      "text": "element, so that can be stored as minus"
+    },
+    {
+      "start": 811.04,
+      "end": 814.08,
+      "text": "one."
+    },
+    {
+      "start": 812.04,
+      "end": 816.52,
+      "text": "What I do is I basically do the same"
+    },
+    {
+      "start": 814.08,
+      "end": 818.12,
+      "text": "loop where I try to merge both of them."
+    },
+    {
+      "start": 816.52,
+      "end": 820.64,
+      "text": "If"
+    },
+    {
+      "start": 818.12,
+      "end": 822.96,
+      "text": "for this index tracker count zero, this"
+    },
+    {
+      "start": 820.64,
+      "end": 825.6,
+      "text": "element is smaller, I go inside and I"
+    },
+    {
+      "start": 822.96,
+      "end": 828.88,
+      "text": "know arr[i] is the element that will"
+    },
+    {
+      "start": 825.6,
+      "end": 831.36,
+      "text": "be present at my current index. And if"
+    },
+    {
+      "start": 828.88,
+      "end": 833.64,
+      "text": "the index tracker is equivalent to one"
+    },
+    {
+      "start": 831.36,
+      "end": 836.12,
+      "text": "of my index that I'm looking for, I say,"
+    },
+    {
+      "start": 833.64,
+      "end": 838.76,
+      "text": "\"Hey, please assign yourself.\" If my"
+    },
+    {
+      "start": 836.12,
+      "end": 840.24,
+      "text": "index tracker is"
+    },
+    {
+      "start": 838.76,
+      "end": 842.44,
+      "text": "equivalent to the other index that I'm"
+    },
+    {
+      "start": 840.24,
+      "end": 844.32,
+      "text": "looking for, maybe assign yourself. So,"
+    },
+    {
+      "start": 842.44,
+      "end": 846.4,
+      "text": "either of these conditions."
+    },
+    {
+      "start": 844.32,
+      "end": 848.2,
+      "text": "And after that, count plus plus because"
+    },
+    {
+      "start": 846.4,
+      "end": 851.0,
+      "text": "this index is done. Let's find out the"
+    },
+    {
+      "start": 848.2,
+      "end": 852.84,
+      "text": "next index and I plus plus."
+    },
+    {
+      "start": 851.0,
+      "end": 854.24,
+      "text": "So, this is how this one will look."
+    },
+    {
+      "start": 852.84,
+      "end": 856.52,
+      "text": "The similar thing will happen for the"
+    },
+    {
+      "start": 854.24,
+      "end": 858.68,
+      "text": "else. What if we have taken B? In that"
+    },
+    {
+      "start": 856.52,
+      "end": 860.8,
+      "text": "case, the index tracker will just think"
+    },
+    {
+      "start": 858.68,
+      "end": 862.64,
+      "text": "the B and we move forward. Very"
+    },
+    {
+      "start": 860.8,
+      "end": 865.6,
+      "text": "straightforward, very simple. Again,"
+    },
+    {
+      "start": 862.64,
+      "end": 867.52,
+      "text": "this uh condition can be trimmed when"
+    },
+    {
+      "start": 865.6,
+      "end": 869.56,
+      "text": "you find index like you can also"
+    },
+    {
+      "start": 867.52,
+      "end": 871.2,
+      "text": "optimize this by saying, \"We will stop"
+    },
+    {
+      "start": 869.56,
+      "end": 873.12,
+      "text": "then and there the moment we find index"
+    },
+    {
+      "start": 871.2,
+      "end": 874.24,
+      "text": "one and index two both.\" And that is"
+    },
+    {
+      "start": 873.12,
+      "end": 876.0,
+      "text": "what we're looking for. The moment we"
+    },
+    {
+      "start": 874.24,
+      "end": 877.84,
+      "text": "find both, we can stop. You can do those"
+    },
+    {
+      "start": 876.0,
+      "end": 880.16,
+      "text": "optimizations by yourself. I'm over here"
+    },
+    {
+      "start": 877.84,
+      "end": 881.96,
+      "text": "to just explaining the concept. Right"
+    },
+    {
+      "start": 880.16,
+      "end": 884.44,
+      "text": "after that, the same thing. If there are"
+    },
+    {
+      "start": 881.96,
+      "end": 886.4,
+      "text": "leftover elements on the array one, you"
+    },
+    {
+      "start": 884.44,
+      "end": 888.12,
+      "text": "just do the same thing. Is index tracker"
+    },
+    {
+      "start": 886.4,
+      "end": 890.12,
+      "text": "equivalent? Then you pick it up. Or"
+    },
+    {
+      "start": 888.12,
+      "end": 892.88,
+      "text": "else, you just keep on moving."
+    },
+    {
+      "start": 890.12,
+      "end": 894.12,
+      "text": "Is on the right? If the index tracker is"
+    },
+    {
+      "start": 892.88,
+      "end": 896.08,
+      "text": "equivalent, you pick up from the right"
+    },
+    {
+      "start": 894.12,
+      "end": 898.16,
+      "text": "and you keep on moving. Again, the"
+    },
+    {
+      "start": 896.08,
+      "end": 900.0,
+      "text": "optimizations can be done. If you find"
+    },
+    {
+      "start": 898.16,
+      "end": 901.64,
+      "text": "index one and index two, like both have"
+    },
+    {
+      "start": 900.0,
+      "end": 904.4,
+      "text": "been found, you can just break out. You"
+    },
+    {
+      "start": 901.64,
+      "end": 906.6,
+      "text": "can break out. And instead of minus one,"
+    },
+    {
+      "start": 904.4,
+      "end": 908.44,
+      "text": "probably you have to give int min or int"
+    },
+    {
+      "start": 906.6,
+      "end": 910.2,
+      "text": "max something. Such an element which"
+    },
+    {
+      "start": 908.44,
+      "end": 911.72,
+      "text": "doesn't exist in the array. And then you"
+    },
+    {
+      "start": 910.2,
+      "end": 913.84,
+      "text": "can simply break out the moment you"
+    },
+    {
+      "start": 911.72,
+      "end": 915.52,
+      "text": "figured out both of them. And then these"
+    },
+    {
+      "start": 913.84,
+      "end": 917.88,
+      "text": "conditions will be executed. If it is an"
+    },
+    {
+      "start": 915.52,
+      "end": 920.08,
+      "text": "odd, I just need the index two. If it is"
+    },
+    {
+      "start": 917.88,
+      "end": 922.68,
+      "text": "an even, I have to do the type casting,"
+    },
+    {
+      "start": 920.08,
+      "end": 924.24,
+      "text": "sum it up, divide it by 2.0 and I"
+    },
+    {
+      "start": 922.68,
+      "end": 926.36,
+      "text": "return. So, if you try to submit it,"
+    },
+    {
+      "start": 924.24,
+      "end": 928.0,
+      "text": "this will also be partially accepted."
+    },
+    {
+      "start": 926.36,
+      "end": 929.92,
+      "text": "Why? Because we haven't reduced down the"
+    },
+    {
+      "start": 928.0,
+      "end": 931.64,
+      "text": "time complexity. What we have done is"
+    },
+    {
+      "start": 929.92,
+      "end": 933.32,
+      "text": "we've reduced the space. We're no more"
+    },
+    {
+      "start": 931.64,
+      "end": 935.48,
+      "text": "using the extra space that we are using"
+    },
+    {
+      "start": 933.32,
+      "end": 937.44,
+      "text": "for storing the entire array. We're just"
+    },
+    {
+      "start": 935.48,
+      "end": 938.52,
+      "text": "keeping the trackers, which tracks the"
+    },
+    {
+      "start": 937.44,
+      "end": 941.56,
+      "text": "element, because that is what we"
+    },
+    {
+      "start": 938.52,
+      "end": 941.56,
+      "text": "require. Got it?"
+    },
+    {
+      "start": 950.72,
+      "end": 954.92,
+      "text": "Whenever your heart is broken, don't"
+    },
+    {
+      "start": 952.48,
+      "end": 954.92,
+      "text": "ever forget you're golden."
+    },
+    {
+      "start": 957.04,
+      "end": 959.6,
+      "text": "I will find the"
+    }
+  ]
+}

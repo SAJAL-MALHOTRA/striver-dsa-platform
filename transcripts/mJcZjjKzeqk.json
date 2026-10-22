@@ -1,0 +1,2720 @@
+{
+  "video_id": "mJcZjjKzeqk",
+  "title": "G-45. Prim's Algorithm - Minimum Spanning Tree - C++ and Java",
+  "duration_sec": 1150,
+  "num_segments": 452,
+  "segments": [
+    {
+      "start": 2.88,
+      "end": 6.24,
+      "duration": 3.36,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.68,
+      "end": 8.1,
+      "duration": 3.42,
+      "text": "I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.24,
+      "end": 10.32,
+      "duration": 4.08,
+      "text": "so in this video we're going to learn"
+    },
+    {
+      "start": 8.1,
+      "end": 12.54,
+      "duration": 4.44,
+      "text": "about the prince algorithm which will"
+    },
+    {
+      "start": 10.32,
+      "end": 14.46,
+      "duration": 4.14,
+      "text": "help us to find the minimum spanning"
+    },
+    {
+      "start": 12.54,
+      "end": 16.56,
+      "duration": 4.02,
+      "text": "tree what is the minimum spanning tree"
+    },
+    {
+      "start": 14.46,
+      "end": 20.22,
+      "duration": 5.76,
+      "text": "I've already discussed in the previous"
+    },
+    {
+      "start": 16.56,
+      "end": 21.42,
+      "duration": 4.86,
+      "text": "video so you can just go back in this"
+    },
+    {
+      "start": 20.22,
+      "end": 23.7,
+      "duration": 3.48,
+      "text": "particular graph Series in the previous"
+    },
+    {
+      "start": 21.42,
+      "end": 26.52,
+      "duration": 5.1,
+      "text": "video understand what is the minimum"
+    },
+    {
+      "start": 23.7,
+      "end": 28.92,
+      "duration": 5.22,
+      "text": "spanning tree come back and start with"
+    },
+    {
+      "start": 26.52,
+      "end": 33.0,
+      "duration": 6.48,
+      "text": "the prims algorithm suprem's algorithm"
+    },
+    {
+      "start": 28.92,
+      "end": 36.24,
+      "duration": 7.32,
+      "text": "is an algorithm which helps you to find"
+    },
+    {
+      "start": 33.0,
+      "end": 38.58,
+      "duration": 5.58,
+      "text": "this particular MST now"
+    },
+    {
+      "start": 36.24,
+      "end": 40.98,
+      "duration": 4.74,
+      "text": "imagine this is the graph given to you"
+    },
+    {
+      "start": 38.58,
+      "end": 42.66,
+      "duration": 4.08,
+      "text": "so what will be the MST of this"
+    },
+    {
+      "start": 40.98,
+      "end": 45.36,
+      "duration": 4.38,
+      "text": "particular graph very simple if you"
+    },
+    {
+      "start": 42.66,
+      "end": 49.56,
+      "duration": 6.9,
+      "text": "remember from the previous lecture 0"
+    },
+    {
+      "start": 45.36,
+      "end": 51.24,
+      "duration": 5.88,
+      "text": "1 we have a two we have a 3 here and we"
+    },
+    {
+      "start": 49.56,
+      "end": 53.34,
+      "duration": 3.78,
+      "text": "have a 4 here so if you connect these"
+    },
+    {
+      "start": 51.24,
+      "end": 57.0,
+      "duration": 5.76,
+      "text": "guys and if you connect these guys it'll"
+    },
+    {
+      "start": 53.34,
+      "end": 59.46,
+      "duration": 6.12,
+      "text": "be six two five three and if you sum"
+    },
+    {
+      "start": 57.0,
+      "end": 64.56,
+      "duration": 7.56,
+      "text": "them up you will get 6 plus 2 8 plus 3"
+    },
+    {
+      "start": 59.46,
+      "end": 68.04,
+      "duration": 8.58,
+      "text": "11 plus 5 16 so 16 is what the summation"
+    },
+    {
+      "start": 64.56,
+      "end": 71.04,
+      "duration": 6.48,
+      "text": "is so Prince algorithm does help you to"
+    },
+    {
+      "start": 68.04,
+      "end": 74.88,
+      "duration": 6.84,
+      "text": "find this particular summation which is"
+    },
+    {
+      "start": 71.04,
+      "end": 77.64,
+      "duration": 6.6,
+      "text": "nothing but the MST is weight we can"
+    },
+    {
+      "start": 74.88,
+      "end": 80.04,
+      "duration": 5.16,
+      "text": "usually call this as mst's weight or"
+    },
+    {
+      "start": 77.64,
+      "end": 83.28,
+      "duration": 5.64,
+      "text": "even if you want the edges for example"
+    },
+    {
+      "start": 80.04,
+      "end": 88.74,
+      "duration": 8.7,
+      "text": "the edges involved in the tree are 0 1 0"
+    },
+    {
+      "start": 83.28,
+      "end": 90.72,
+      "duration": 7.44,
+      "text": "3 1 4 and 1 2 these are the N minus 1 or"
+    },
+    {
+      "start": 88.74,
+      "end": 94.86,
+      "duration": 6.12,
+      "text": "4 edges"
+    },
+    {
+      "start": 90.72,
+      "end": 97.98,
+      "duration": 7.26,
+      "text": "which are involved in MST so you can"
+    },
+    {
+      "start": 94.86,
+      "end": 100.44,
+      "duration": 5.58,
+      "text": "also get this particular thing if you"
+    },
+    {
+      "start": 97.98,
+      "end": 103.98,
+      "duration": 6.0,
+      "text": "are looking for suprimps algorithm does"
+    },
+    {
+      "start": 100.44,
+      "end": 107.16,
+      "duration": 6.72,
+      "text": "help you to find the sum as well as the"
+    },
+    {
+      "start": 103.98,
+      "end": 108.96,
+      "duration": 4.98,
+      "text": "particular tree which is indeed the MST"
+    },
+    {
+      "start": 107.16,
+      "end": 110.34,
+      "duration": 3.18,
+      "text": "so in order to understand prim's"
+    },
+    {
+      "start": 108.96,
+      "end": 112.38,
+      "duration": 3.42,
+      "text": "algorithm we will be using this"
+    },
+    {
+      "start": 110.34,
+      "end": 114.12,
+      "duration": 3.78,
+      "text": "particular graph so before starting"
+    },
+    {
+      "start": 112.38,
+      "end": 116.82,
+      "duration": 4.44,
+      "text": "primps algorithm we will be requiring"
+    },
+    {
+      "start": 114.12,
+      "end": 119.58,
+      "duration": 5.46,
+      "text": "couple of initial things one is a"
+    },
+    {
+      "start": 116.82,
+      "end": 121.32,
+      "duration": 4.5,
+      "text": "priority queue is what I'll require why"
+    },
+    {
+      "start": 119.58,
+      "end": 124.02,
+      "duration": 4.44,
+      "text": "I'll tell you I'll explain the algorithm"
+    },
+    {
+      "start": 121.32,
+      "end": 126.6,
+      "duration": 5.28,
+      "text": "and the other one is a visited array"
+    },
+    {
+      "start": 124.02,
+      "end": 128.82,
+      "duration": 4.8,
+      "text": "which I'll be requiring again I'll be"
+    },
+    {
+      "start": 126.6,
+      "end": 131.1,
+      "duration": 4.5,
+      "text": "telling you why will I be requiring a"
+    },
+    {
+      "start": 128.82,
+      "end": 132.72,
+      "duration": 3.9,
+      "text": "visited array while I explain this"
+    },
+    {
+      "start": 131.1,
+      "end": 134.94,
+      "duration": 3.84,
+      "text": "particular algorithm so the initial"
+    },
+    {
+      "start": 132.72,
+      "end": 136.74,
+      "duration": 4.02,
+      "text": "configuration will have a priority queue"
+    },
+    {
+      "start": 134.94,
+      "end": 139.92,
+      "duration": 4.98,
+      "text": "or a minimum Heap in which I'll be"
+    },
+    {
+      "start": 136.74,
+      "end": 142.38,
+      "duration": 5.64,
+      "text": "storing the weight the node and the"
+    },
+    {
+      "start": 139.92,
+      "end": 144.3,
+      "duration": 4.38,
+      "text": "parent along with that I'll have a"
+    },
+    {
+      "start": 142.38,
+      "end": 147.0,
+      "duration": 4.62,
+      "text": "visited array which will be initially"
+    },
+    {
+      "start": 144.3,
+      "end": 149.64,
+      "duration": 5.34,
+      "text": "marked with unvisited with all the notes"
+    },
+    {
+      "start": 147.0,
+      "end": 152.4,
+      "duration": 5.4,
+      "text": "and we will have a sum of 0 which will"
+    },
+    {
+      "start": 149.64,
+      "end": 155.1,
+      "duration": 5.46,
+      "text": "count the MST is Edge weight and I'll"
+    },
+    {
+      "start": 152.4,
+      "end": 158.7,
+      "duration": 6.3,
+      "text": "have an MST list which will be storing"
+    },
+    {
+      "start": 155.1,
+      "end": 161.88,
+      "duration": 6.78,
+      "text": "all the edge which are part of the MST"
+    },
+    {
+      "start": 158.7,
+      "end": 164.22,
+      "duration": 5.52,
+      "text": "so initially remember you will start off"
+    },
+    {
+      "start": 161.88,
+      "end": 166.14,
+      "duration": 4.26,
+      "text": "with any given node it can be any given"
+    },
+    {
+      "start": 164.22,
+      "end": 168.24,
+      "duration": 4.02,
+      "text": "node that is your choice so what I'll do"
+    },
+    {
+      "start": 166.14,
+      "end": 170.7,
+      "duration": 4.56,
+      "text": "is I'll start off with something like 0"
+    },
+    {
+      "start": 168.24,
+      "end": 173.1,
+      "duration": 4.86,
+      "text": "with the weight 0 with the node and I"
+    },
+    {
+      "start": 170.7,
+      "end": 176.24,
+      "duration": 5.54,
+      "text": "can say the parent is -1 remember this"
+    },
+    {
+      "start": 173.1,
+      "end": 179.88,
+      "duration": 6.78,
+      "text": "this is what I will initially insert 0"
+    },
+    {
+      "start": 176.24,
+      "end": 182.16,
+      "duration": 5.92,
+      "text": "weight 0 node minus 1 as the parent okay"
+    },
+    {
+      "start": 179.88,
+      "end": 185.04,
+      "duration": 5.16,
+      "text": "now we will start the iteration remember"
+    },
+    {
+      "start": 182.16,
+      "end": 186.18,
+      "duration": 4.02,
+      "text": "no visited Mark we just put it into the"
+    },
+    {
+      "start": 185.04,
+      "end": 188.22,
+      "duration": 3.18,
+      "text": "Practical that is the initial"
+    },
+    {
+      "start": 186.18,
+      "end": 190.38,
+      "duration": 4.2,
+      "text": "configuration now we start the iteration"
+    },
+    {
+      "start": 188.22,
+      "end": 192.84,
+      "duration": 4.62,
+      "text": "so while we start the iteration we get"
+    },
+    {
+      "start": 190.38,
+      "end": 195.48,
+      "duration": 5.1,
+      "text": "only element on the priority queue which"
+    },
+    {
+      "start": 192.84,
+      "end": 198.06,
+      "duration": 5.22,
+      "text": "is at the top which is 0 comma 0 comma"
+    },
+    {
+      "start": 195.48,
+      "end": 200.46,
+      "duration": 4.98,
+      "text": "minus 1. so this is the node this is the"
+    },
+    {
+      "start": 198.06,
+      "end": 203.34,
+      "duration": 5.28,
+      "text": "parent so whenever the parent is minus 1"
+    },
+    {
+      "start": 200.46,
+      "end": 205.74,
+      "duration": 5.28,
+      "text": "it means it's not an edge is the first"
+    },
+    {
+      "start": 203.34,
+      "end": 208.32,
+      "duration": 4.98,
+      "text": "node parent minus one means it's the"
+    },
+    {
+      "start": 205.74,
+      "end": 211.5,
+      "duration": 5.76,
+      "text": "first note so do not add it into the MSD"
+    },
+    {
+      "start": 208.32,
+      "end": 213.12,
+      "duration": 4.8,
+      "text": "do not add it into the MST all so though"
+    },
+    {
+      "start": 211.5,
+      "end": 215.76,
+      "duration": 4.26,
+      "text": "there is no Edge weight because this is"
+    },
+    {
+      "start": 213.12,
+      "end": 218.34,
+      "duration": 5.22,
+      "text": "the first node that's why there is no"
+    },
+    {
+      "start": 215.76,
+      "end": 221.7,
+      "duration": 5.94,
+      "text": "Edge weight as well so we have the first"
+    },
+    {
+      "start": 218.34,
+      "end": 224.88,
+      "duration": 6.54,
+      "text": "node as zero make sure you go across and"
+    },
+    {
+      "start": 221.7,
+      "end": 226.02,
+      "duration": 4.32,
+      "text": "Mark it as visited Market has visited"
+    },
+    {
+      "start": 224.88,
+      "end": 229.2,
+      "duration": 4.32,
+      "text": "now"
+    },
+    {
+      "start": 226.02,
+      "end": 231.66,
+      "duration": 5.64,
+      "text": "standard zero and look at the adjacent"
+    },
+    {
+      "start": 229.2,
+      "end": 233.52,
+      "duration": 4.32,
+      "text": "notes so when you stand at 0 you look at"
+    },
+    {
+      "start": 231.66,
+      "end": 236.04,
+      "duration": 4.38,
+      "text": "one of the adjacent node is one and"
+    },
+    {
+      "start": 233.52,
+      "end": 238.56,
+      "duration": 5.04,
+      "text": "that's still unvisited so what you do is"
+    },
+    {
+      "start": 236.04,
+      "end": 243.0,
+      "duration": 6.96,
+      "text": "you take one and you say the edge weight"
+    },
+    {
+      "start": 238.56,
+      "end": 245.22,
+      "duration": 6.66,
+      "text": "is two so two one comes from zero so"
+    },
+    {
+      "start": 243.0,
+      "end": 248.22,
+      "duration": 5.22,
+      "text": "basically you are standing at zero so"
+    },
+    {
+      "start": 245.22,
+      "end": 250.44,
+      "duration": 5.22,
+      "text": "you took the edge V2 you take you took"
+    },
+    {
+      "start": 248.22,
+      "end": 253.14,
+      "duration": 4.92,
+      "text": "the node one and it came from zero so"
+    },
+    {
+      "start": 250.44,
+      "end": 256.74,
+      "duration": 6.3,
+      "text": "basically this is The Edge that you took"
+    },
+    {
+      "start": 253.14,
+      "end": 259.44,
+      "duration": 6.3,
+      "text": "perfect done next this is also connected"
+    },
+    {
+      "start": 256.74,
+      "end": 262.62,
+      "duration": 5.88,
+      "text": "to zero so what you'll do is you you"
+    },
+    {
+      "start": 259.44,
+      "end": 265.86,
+      "duration": 6.42,
+      "text": "will see is this unvisited yes so simply"
+    },
+    {
+      "start": 262.62,
+      "end": 267.84,
+      "duration": 5.22,
+      "text": "take one as the edge weight so I'll take"
+    },
+    {
+      "start": 265.86,
+      "end": 270.84,
+      "duration": 4.98,
+      "text": "one as the edge weight the node is 2"
+    },
+    {
+      "start": 267.84,
+      "end": 273.6,
+      "duration": 5.76,
+      "text": "came from zero so what I did was I take"
+    },
+    {
+      "start": 270.84,
+      "end": 276.9,
+      "duration": 6.06,
+      "text": "both the guys who are directly connected"
+    },
+    {
+      "start": 273.6,
+      "end": 279.42,
+      "duration": 5.82,
+      "text": "to zero but please do not mark them as"
+    },
+    {
+      "start": 276.9,
+      "end": 281.76,
+      "duration": 4.86,
+      "text": "visited please do not mark them as"
+    },
+    {
+      "start": 279.42,
+      "end": 284.34,
+      "duration": 4.92,
+      "text": "visited okay so I've taken it so I can"
+    },
+    {
+      "start": 281.76,
+      "end": 287.1,
+      "duration": 5.34,
+      "text": "say the first iteration has been"
+    },
+    {
+      "start": 284.34,
+      "end": 289.56,
+      "duration": 5.22,
+      "text": "complete and I have pushed on all the"
+    },
+    {
+      "start": 287.1,
+      "end": 291.18,
+      "duration": 4.08,
+      "text": "adjacent nodes into the minimum Heap"
+    },
+    {
+      "start": 289.56,
+      "end": 293.04,
+      "duration": 3.48,
+      "text": "data structure now what does minimum"
+    },
+    {
+      "start": 291.18,
+      "end": 295.38,
+      "duration": 4.2,
+      "text": "Heap data structure say we will always"
+    },
+    {
+      "start": 293.04,
+      "end": 297.3,
+      "duration": 4.26,
+      "text": "have the least weight at the top so I'll"
+    },
+    {
+      "start": 295.38,
+      "end": 300.12,
+      "duration": 4.74,
+      "text": "get the least weight guy which is 1"
+    },
+    {
+      "start": 297.3,
+      "end": 303.18,
+      "duration": 5.88,
+      "text": "comma 2 comma zero so one comma two"
+    },
+    {
+      "start": 300.12,
+      "end": 305.7,
+      "duration": 5.58,
+      "text": "comma zero this time you're getting an"
+    },
+    {
+      "start": 303.18,
+      "end": 308.7,
+      "duration": 5.52,
+      "text": "edge zero two you're getting an edge"
+    },
+    {
+      "start": 305.7,
+      "end": 312.12,
+      "duration": 6.42,
+      "text": "zero two so it will be a part of your"
+    },
+    {
+      "start": 308.7,
+      "end": 314.16,
+      "duration": 5.46,
+      "text": "MST 0 2 is a part of your MST and"
+    },
+    {
+      "start": 312.12,
+      "end": 317.88,
+      "duration": 5.76,
+      "text": "whatever is The Edge weight you'll go"
+    },
+    {
+      "start": 314.16,
+      "end": 321.3,
+      "duration": 7.14,
+      "text": "and add it on the sum done now you have"
+    },
+    {
+      "start": 317.88,
+      "end": 324.18,
+      "duration": 6.3,
+      "text": "Edge as uh sorry you have the node as"
+    },
+    {
+      "start": 321.3,
+      "end": 327.48,
+      "duration": 6.18,
+      "text": "two so go to the two and say you are"
+    },
+    {
+      "start": 324.18,
+      "end": 329.52,
+      "duration": 5.34,
+      "text": "visited right next so you have taken 0 2"
+    },
+    {
+      "start": 327.48,
+      "end": 332.16,
+      "duration": 4.68,
+      "text": "and that is what you have taken now"
+    },
+    {
+      "start": 329.52,
+      "end": 335.52,
+      "duration": 6.0,
+      "text": "standard two say standard two and you"
+    },
+    {
+      "start": 332.16,
+      "end": 338.84,
+      "duration": 6.68,
+      "text": "look at 0 but 0 is already visited so do"
+    },
+    {
+      "start": 335.52,
+      "end": 342.36,
+      "duration": 6.84,
+      "text": "not look at zero you look at one one is"
+    },
+    {
+      "start": 338.84,
+      "end": 344.88,
+      "duration": 6.04,
+      "text": "unvisited yes one is unvisited if you"
+    },
+    {
+      "start": 342.36,
+      "end": 346.86,
+      "duration": 4.5,
+      "text": "stand it two and look at one it's still"
+    },
+    {
+      "start": 344.88,
+      "end": 350.34,
+      "duration": 5.46,
+      "text": "unvisited so it's an edge weight of one"
+    },
+    {
+      "start": 346.86,
+      "end": 352.56,
+      "duration": 5.7,
+      "text": "so you can again take one one and this"
+    },
+    {
+      "start": 350.34,
+      "end": 354.78,
+      "duration": 4.44,
+      "text": "time you came from Two and this time you"
+    },
+    {
+      "start": 352.56,
+      "end": 357.3,
+      "duration": 4.74,
+      "text": "came from do you can easily take it off"
+    },
+    {
+      "start": 354.78,
+      "end": 359.46,
+      "duration": 4.68,
+      "text": "okay next if you're standing at two zero"
+    },
+    {
+      "start": 357.3,
+      "end": 361.92,
+      "duration": 4.62,
+      "text": "is done one is done next adjacent is"
+    },
+    {
+      "start": 359.46,
+      "end": 365.52,
+      "duration": 6.06,
+      "text": "four it's unvisited so you can again"
+    },
+    {
+      "start": 361.92,
+      "end": 366.3,
+      "duration": 4.38,
+      "text": "take it so two comma uh two is The Edge"
+    },
+    {
+      "start": 365.52,
+      "end": 368.7,
+      "duration": 3.18,
+      "text": "weight"
+    },
+    {
+      "start": 366.3,
+      "end": 371.28,
+      "duration": 4.98,
+      "text": "4 is the node and they're coming from"
+    },
+    {
+      "start": 368.7,
+      "end": 373.26,
+      "duration": 4.56,
+      "text": "two so this is what you'll put it into"
+    },
+    {
+      "start": 371.28,
+      "end": 375.9,
+      "duration": 4.62,
+      "text": "the priority queue do I have anyone else"
+    },
+    {
+      "start": 373.26,
+      "end": 377.34,
+      "duration": 4.08,
+      "text": "we have a three yes we have a three so"
+    },
+    {
+      "start": 375.9,
+      "end": 379.86,
+      "duration": 3.96,
+      "text": "what I'll do is I will this time take"
+    },
+    {
+      "start": 377.34,
+      "end": 382.98,
+      "duration": 5.64,
+      "text": "the edgeway 2 we will take 3 came from"
+    },
+    {
+      "start": 379.86,
+      "end": 385.86,
+      "duration": 6.0,
+      "text": "2. perfect so apparently this is also"
+    },
+    {
+      "start": 382.98,
+      "end": 388.56,
+      "duration": 5.58,
+      "text": "done and I made sure standing at 2 all"
+    },
+    {
+      "start": 385.86,
+      "end": 391.26,
+      "duration": 5.4,
+      "text": "the adjacent guys have been put into the"
+    },
+    {
+      "start": 388.56,
+      "end": 393.0,
+      "duration": 4.44,
+      "text": "priority queue next take the next"
+    },
+    {
+      "start": 391.26,
+      "end": 394.68,
+      "duration": 3.42,
+      "text": "smaller guy out of which which is the"
+    },
+    {
+      "start": 393.0,
+      "end": 396.78,
+      "duration": 3.78,
+      "text": "next smaller guy obviously one comma one"
+    },
+    {
+      "start": 394.68,
+      "end": 400.5,
+      "duration": 5.82,
+      "text": "comma two so take one comma one comma"
+    },
+    {
+      "start": 396.78,
+      "end": 403.5,
+      "duration": 6.72,
+      "text": "two so one comma node one parent two go"
+    },
+    {
+      "start": 400.5,
+      "end": 406.56,
+      "duration": 6.06,
+      "text": "and look at the node one is it uh is it"
+    },
+    {
+      "start": 403.5,
+      "end": 409.2,
+      "duration": 5.7,
+      "text": "unvisited it is unvisited which is one"
+    },
+    {
+      "start": 406.56,
+      "end": 410.94,
+      "duration": 4.38,
+      "text": "two which is nothing but this Edge so I"
+    },
+    {
+      "start": 409.2,
+      "end": 414.12,
+      "duration": 4.92,
+      "text": "can say I'll take this Edge now one"
+    },
+    {
+      "start": 410.94,
+      "end": 415.86,
+      "duration": 4.92,
+      "text": "comma 2 is The Edge or rather 2 comma"
+    },
+    {
+      "start": 414.12,
+      "end": 418.08,
+      "duration": 3.96,
+      "text": "one you can call it whatever because one"
+    },
+    {
+      "start": 415.86,
+      "end": 420.42,
+      "duration": 4.56,
+      "text": "comma two or two comma one both are same"
+    },
+    {
+      "start": 418.08,
+      "end": 422.22,
+      "duration": 4.14,
+      "text": "right and the edge weight is two so Edge"
+    },
+    {
+      "start": 420.42,
+      "end": 424.74,
+      "duration": 4.32,
+      "text": "weight is one so you add one to it you"
+    },
+    {
+      "start": 422.22,
+      "end": 426.6,
+      "duration": 4.38,
+      "text": "will get it as two and at the same time"
+    },
+    {
+      "start": 424.74,
+      "end": 430.02,
+      "duration": 5.28,
+      "text": "make sure you mark it as visited"
+    },
+    {
+      "start": 426.6,
+      "end": 433.02,
+      "duration": 6.42,
+      "text": "separately now one is also visited now"
+    },
+    {
+      "start": 430.02,
+      "end": 436.92,
+      "duration": 6.9,
+      "text": "standard one and look at its adjacent"
+    },
+    {
+      "start": 433.02,
+      "end": 440.1,
+      "duration": 7.08,
+      "text": "it's adjacent is 0 which is visited its"
+    },
+    {
+      "start": 436.92,
+      "end": 442.14,
+      "duration": 5.22,
+      "text": "adjacent is 2 which is visited so there"
+    },
+    {
+      "start": 440.1,
+      "end": 445.2,
+      "duration": 5.1,
+      "text": "are no other adjacent so thereby I can"
+    },
+    {
+      "start": 442.14,
+      "end": 447.0,
+      "duration": 4.86,
+      "text": "say the iteration has been completed now"
+    },
+    {
+      "start": 445.2,
+      "end": 449.4,
+      "duration": 4.2,
+      "text": "let's look at the next one what is the"
+    },
+    {
+      "start": 447.0,
+      "end": 451.8,
+      "duration": 4.8,
+      "text": "next one which I'll get all of them are"
+    },
+    {
+      "start": 449.4,
+      "end": 456.18,
+      "duration": 6.78,
+      "text": "seen separately we will get this guy so"
+    },
+    {
+      "start": 451.8,
+      "end": 459.48,
+      "duration": 7.68,
+      "text": "2 1 comma zero 2 1 comma 0 but before"
+    },
+    {
+      "start": 456.18,
+      "end": 462.84,
+      "duration": 6.66,
+      "text": "moving ahead and adding this to your sum"
+    },
+    {
+      "start": 459.48,
+      "end": 467.82,
+      "duration": 8.34,
+      "text": "or to the MSD we see okay wait"
+    },
+    {
+      "start": 462.84,
+      "end": 471.9,
+      "duration": 9.06,
+      "text": "the Node 1 the Node 1 is already visited"
+    },
+    {
+      "start": 467.82,
+      "end": 472.98,
+      "duration": 5.16,
+      "text": "so you do not add it yes you do not add"
+    },
+    {
+      "start": 471.9,
+      "end": 475.08,
+      "duration": 3.18,
+      "text": "it"
+    },
+    {
+      "start": 472.98,
+      "end": 477.84,
+      "duration": 4.86,
+      "text": "and you do not do any adjacent"
+    },
+    {
+      "start": 475.08,
+      "end": 480.48,
+      "duration": 5.4,
+      "text": "operations if the one has already been"
+    },
+    {
+      "start": 477.84,
+      "end": 483.36,
+      "duration": 5.52,
+      "text": "visited which means it's a part of your"
+    },
+    {
+      "start": 480.48,
+      "end": 486.48,
+      "duration": 6.0,
+      "text": "MST it's a part of your MST but do not"
+    },
+    {
+      "start": 483.36,
+      "end": 488.76,
+      "duration": 5.4,
+      "text": "add it right next you find out the next"
+    },
+    {
+      "start": 486.48,
+      "end": 492.0,
+      "duration": 5.52,
+      "text": "guy sort of these two guys will take 2"
+    },
+    {
+      "start": 488.76,
+      "end": 494.64,
+      "duration": 5.88,
+      "text": "comma three comma 2 so 2 comma 3 comma"
+    },
+    {
+      "start": 492.0,
+      "end": 497.52,
+      "duration": 5.52,
+      "text": "two this time which is the node three so"
+    },
+    {
+      "start": 494.64,
+      "end": 499.5,
+      "duration": 4.86,
+      "text": "coin Mark 3 as visited next this is The"
+    },
+    {
+      "start": 497.52,
+      "end": 501.9,
+      "duration": 4.38,
+      "text": "Edge weight go and add it so this will"
+    },
+    {
+      "start": 499.5,
+      "end": 504.6,
+      "duration": 5.1,
+      "text": "be four next this is The Edge 2 comma"
+    },
+    {
+      "start": 501.9,
+      "end": 506.72,
+      "duration": 4.82,
+      "text": "three go and add it to your MST now"
+    },
+    {
+      "start": 504.6,
+      "end": 510.18,
+      "duration": 5.58,
+      "text": "you're standing at three standard three"
+    },
+    {
+      "start": 506.72,
+      "end": 512.52,
+      "duration": 5.8,
+      "text": "look at its adjacent one of the adjacent"
+    },
+    {
+      "start": 510.18,
+      "end": 517.26,
+      "duration": 7.08,
+      "text": "is four with one thoroughly you can add"
+    },
+    {
+      "start": 512.52,
+      "end": 519.78,
+      "duration": 7.26,
+      "text": "it one comma four comma three I've added"
+    },
+    {
+      "start": 517.26,
+      "end": 522.66,
+      "duration": 5.4,
+      "text": "it and for three the other adjacent is"
+    },
+    {
+      "start": 519.78,
+      "end": 526.74,
+      "duration": 6.96,
+      "text": "two so two comma"
+    },
+    {
+      "start": 522.66,
+      "end": 528.6,
+      "duration": 5.94,
+      "text": "2 comma 2 uh 2 comma 2 came from 3"
+    },
+    {
+      "start": 526.74,
+      "end": 530.64,
+      "duration": 3.9,
+      "text": "divided that into the priority queue"
+    },
+    {
+      "start": 528.6,
+      "end": 532.14,
+      "duration": 3.54,
+      "text": "because for this guy this was one of the"
+    },
+    {
+      "start": 530.64,
+      "end": 534.6,
+      "duration": 3.96,
+      "text": "adjacent and this was one of the"
+    },
+    {
+      "start": 532.14,
+      "end": 537.24,
+      "duration": 5.1,
+      "text": "adjacent so I've added both of them I"
+    },
+    {
+      "start": 534.6,
+      "end": 540.54,
+      "duration": 5.94,
+      "text": "can say my iteration has been completed"
+    },
+    {
+      "start": 537.24,
+      "end": 543.0,
+      "duration": 5.76,
+      "text": "Now quickly which one is the smaller one"
+    },
+    {
+      "start": 540.54,
+      "end": 547.32,
+      "duration": 6.78,
+      "text": "comma four comma three so take it out 1"
+    },
+    {
+      "start": 543.0,
+      "end": 550.5,
+      "duration": 7.5,
+      "text": "comma four comma 3 is 4 unvisited yes go"
+    },
+    {
+      "start": 547.32,
+      "end": 552.42,
+      "duration": 5.1,
+      "text": "across and Mark it as visited once"
+    },
+    {
+      "start": 550.5,
+      "end": 554.4,
+      "duration": 3.9,
+      "text": "you're marked it as visited what you"
+    },
+    {
+      "start": 552.42,
+      "end": 558.42,
+      "duration": 6.0,
+      "text": "will do is you'll take this one add it"
+    },
+    {
+      "start": 554.4,
+      "end": 561.12,
+      "duration": 6.72,
+      "text": "into this and this will become 5 and the"
+    },
+    {
+      "start": 558.42,
+      "end": 563.94,
+      "duration": 5.52,
+      "text": "three comma 4 is The Edge which will be"
+    },
+    {
+      "start": 561.12,
+      "end": 566.58,
+      "duration": 5.46,
+      "text": "added to your MST now what you will do"
+    },
+    {
+      "start": 563.94,
+      "end": 568.5,
+      "duration": 4.56,
+      "text": "is you will go ahead and say okay I I"
+    },
+    {
+      "start": 566.58,
+      "end": 570.12,
+      "duration": 3.54,
+      "text": "was at four so I'll stand at four and"
+    },
+    {
+      "start": 568.5,
+      "end": 572.46,
+      "duration": 3.96,
+      "text": "I'll look at two but I see two has"
+    },
+    {
+      "start": 570.12,
+      "end": 574.62,
+      "duration": 4.5,
+      "text": "already visited I'll not do it I'll look"
+    },
+    {
+      "start": 572.46,
+      "end": 576.54,
+      "duration": 4.08,
+      "text": "at three which is already visited I'll"
+    },
+    {
+      "start": 574.62,
+      "end": 578.52,
+      "duration": 3.9,
+      "text": "not do it separately I'll not get any"
+    },
+    {
+      "start": 576.54,
+      "end": 581.16,
+      "duration": 4.62,
+      "text": "other adjacent notes so I can say 1"
+    },
+    {
+      "start": 578.52,
+      "end": 582.96,
+      "duration": 4.44,
+      "text": "comma four comma 3 is done which is the"
+    },
+    {
+      "start": 581.16,
+      "end": 584.76,
+      "duration": 3.6,
+      "text": "next one I'll get i'll get 2 comma 2"
+    },
+    {
+      "start": 582.96,
+      "end": 587.7,
+      "duration": 4.74,
+      "text": "comma three and when I get 2 comma 2"
+    },
+    {
+      "start": 584.76,
+      "end": 589.8,
+      "duration": 5.04,
+      "text": "comma three ic2 is already visited so"
+    },
+    {
+      "start": 587.7,
+      "end": 591.78,
+      "duration": 4.08,
+      "text": "I'll also not do anything the two comma"
+    },
+    {
+      "start": 589.8,
+      "end": 594.42,
+      "duration": 4.62,
+      "text": "two comma 3 is done next I'll get 2"
+    },
+    {
+      "start": 591.78,
+      "end": 596.46,
+      "duration": 4.68,
+      "text": "comma 3 comma two and I'll see three is"
+    },
+    {
+      "start": 594.42,
+      "end": 598.26,
+      "duration": 3.84,
+      "text": "also visited so nothing to be done next"
+    },
+    {
+      "start": 596.46,
+      "end": 600.06,
+      "duration": 3.6,
+      "text": "I'll get 2 comma four comma two two"
+    },
+    {
+      "start": 598.26,
+      "end": 601.92,
+      "duration": 3.66,
+      "text": "comma four comma two and I'll see four"
+    },
+    {
+      "start": 600.06,
+      "end": 605.7,
+      "duration": 5.64,
+      "text": "is also visited so nothing to be done"
+    },
+    {
+      "start": 601.92,
+      "end": 608.04,
+      "duration": 6.12,
+      "text": "ultimately a mean Heap is empty and once"
+    },
+    {
+      "start": 605.7,
+      "end": 610.92,
+      "duration": 5.22,
+      "text": "I mean he pays empty you can say that"
+    },
+    {
+      "start": 608.04,
+      "end": 613.38,
+      "duration": 5.34,
+      "text": "it's over rims algorithm is over and the"
+    },
+    {
+      "start": 610.92,
+      "end": 617.28,
+      "duration": 6.36,
+      "text": "algorithm has got the MST sum as five"
+    },
+    {
+      "start": 613.38,
+      "end": 618.84,
+      "duration": 5.46,
+      "text": "and this is where the MSC is stored so"
+    },
+    {
+      "start": 617.28,
+      "end": 622.32,
+      "duration": 5.04,
+      "text": "now what I'll do is I'll quickly raise"
+    },
+    {
+      "start": 618.84,
+      "end": 625.5,
+      "duration": 6.66,
+      "text": "this off and try to draw the MST so that"
+    },
+    {
+      "start": 622.32,
+      "end": 628.02,
+      "duration": 5.7,
+      "text": "the idea is clear to you let's see if"
+    },
+    {
+      "start": 625.5,
+      "end": 630.78,
+      "duration": 5.28,
+      "text": "the MST was formed properly or not so"
+    },
+    {
+      "start": 628.02,
+      "end": 633.0,
+      "duration": 4.98,
+      "text": "which is the first Edge zero to two so"
+    },
+    {
+      "start": 630.78,
+      "end": 635.7,
+      "duration": 4.92,
+      "text": "let's take zero and then take two which"
+    },
+    {
+      "start": 633.0,
+      "end": 638.58,
+      "duration": 5.58,
+      "text": "is an edge weight of one next is one to"
+    },
+    {
+      "start": 635.7,
+      "end": 642.42,
+      "duration": 6.72,
+      "text": "two so next is one to two with an edge"
+    },
+    {
+      "start": 638.58,
+      "end": 646.56,
+      "duration": 7.98,
+      "text": "weight of one right X is 2 to 3 which is"
+    },
+    {
+      "start": 642.42,
+      "end": 649.26,
+      "duration": 6.84,
+      "text": "this with an edge weight of 2 x is 3 to"
+    },
+    {
+      "start": 646.56,
+      "end": 652.8,
+      "duration": 6.24,
+      "text": "4 with an edge weight of one so it's"
+    },
+    {
+      "start": 649.26,
+      "end": 655.74,
+      "duration": 6.48,
+      "text": "like one plus one two plus two four plus"
+    },
+    {
+      "start": 652.8,
+      "end": 659.22,
+      "duration": 6.42,
+      "text": "one five which is your sum and which is"
+    },
+    {
+      "start": 655.74,
+      "end": 662.96,
+      "duration": 7.22,
+      "text": "your MSD as well so what I have done is"
+    },
+    {
+      "start": 659.22,
+      "end": 662.96,
+      "duration": 3.74,
+      "text": "I have successfully"
+    },
+    {
+      "start": 663.24,
+      "end": 669.18,
+      "duration": 5.94,
+      "text": "found the sum of the MSD also I found"
+    },
+    {
+      "start": 666.18,
+      "end": 671.64,
+      "duration": 5.46,
+      "text": "the MSD which is stored over here so"
+    },
+    {
+      "start": 669.18,
+      "end": 674.64,
+      "duration": 5.46,
+      "text": "this is how you do it so I hope uh the"
+    },
+    {
+      "start": 671.64,
+      "end": 676.5,
+      "duration": 4.86,
+      "text": "algorithm is clear to you very simple"
+    },
+    {
+      "start": 674.64,
+      "end": 679.68,
+      "duration": 5.04,
+      "text": "take the elements out"
+    },
+    {
+      "start": 676.5,
+      "end": 681.66,
+      "duration": 5.16,
+      "text": "if it's unvisited mark them as visited"
+    },
+    {
+      "start": 679.68,
+      "end": 683.64,
+      "duration": 3.96,
+      "text": "take the adjacent notes put them into"
+    },
+    {
+      "start": 681.66,
+      "end": 686.58,
+      "duration": 4.92,
+      "text": "the priority queue keep on going keep on"
+    },
+    {
+      "start": 683.64,
+      "end": 688.92,
+      "duration": 5.28,
+      "text": "going and ultimately you will get your"
+    },
+    {
+      "start": 686.58,
+      "end": 690.3,
+      "duration": 3.72,
+      "text": "MST so I hope you have understood the"
+    },
+    {
+      "start": 688.92,
+      "end": 692.16,
+      "duration": 3.24,
+      "text": "entire explanation now it's time to code"
+    },
+    {
+      "start": 690.3,
+      "end": 694.08,
+      "duration": 3.78,
+      "text": "it up so as usual I'll be coding the C"
+    },
+    {
+      "start": 692.16,
+      "end": 696.42,
+      "duration": 4.26,
+      "text": "plus on the right and you can find the"
+    },
+    {
+      "start": 694.08,
+      "end": 698.82,
+      "duration": 4.74,
+      "text": "exact similar Java Solution on the left"
+    },
+    {
+      "start": 696.42,
+      "end": 700.86,
+      "duration": 4.44,
+      "text": "so what does the question State uh given"
+    },
+    {
+      "start": 698.82,
+      "end": 703.44,
+      "duration": 4.62,
+      "text": "in weighted undirected connected graph"
+    },
+    {
+      "start": 700.86,
+      "end": 705.54,
+      "duration": 4.68,
+      "text": "of V vertices and E edges task is to"
+    },
+    {
+      "start": 703.44,
+      "end": 708.72,
+      "duration": 5.28,
+      "text": "find the sum of weights of the edges"
+    },
+    {
+      "start": 705.54,
+      "end": 710.76,
+      "duration": 5.22,
+      "text": "they don't want you to find the"
+    },
+    {
+      "start": 708.72,
+      "end": 713.1,
+      "duration": 4.38,
+      "text": "uh minimum spanning tree they want just"
+    },
+    {
+      "start": 710.76,
+      "end": 715.44,
+      "duration": 4.68,
+      "text": "the sum of the weights of the edges so"
+    },
+    {
+      "start": 713.1,
+      "end": 718.44,
+      "duration": 5.34,
+      "text": "what I'll do is I I've been given the V"
+    },
+    {
+      "start": 715.44,
+      "end": 719.88,
+      "duration": 4.44,
+      "text": "and uh the graph so I'll declare a"
+    },
+    {
+      "start": 718.44,
+      "end": 721.38,
+      "duration": 2.94,
+      "text": "priority Queue at the first because that"
+    },
+    {
+      "start": 719.88,
+      "end": 723.06,
+      "duration": 3.18,
+      "text": "is what I require so this is how the"
+    },
+    {
+      "start": 721.38,
+      "end": 726.0,
+      "duration": 4.62,
+      "text": "priority queue will be or the minimum"
+    },
+    {
+      "start": 723.06,
+      "end": 727.98,
+      "duration": 4.92,
+      "text": "Heap and what else do we require we"
+    },
+    {
+      "start": 726.0,
+      "end": 730.02,
+      "duration": 4.02,
+      "text": "require a visited guy so let's take a"
+    },
+    {
+      "start": 727.98,
+      "end": 732.3,
+      "duration": 4.32,
+      "text": "visited guy if you remember and I'll"
+    },
+    {
+      "start": 730.02,
+      "end": 734.7,
+      "duration": 4.68,
+      "text": "mark everything as zero and in the"
+    },
+    {
+      "start": 732.3,
+      "end": 738.36,
+      "duration": 6.06,
+      "text": "priority queue initially now over here"
+    },
+    {
+      "start": 734.7,
+      "end": 741.3,
+      "duration": 6.6,
+      "text": "one thing I like to clarify we just need"
+    },
+    {
+      "start": 738.36,
+      "end": 744.24,
+      "duration": 5.88,
+      "text": "the sum of weights of the edges so do we"
+    },
+    {
+      "start": 741.3,
+      "end": 746.22,
+      "duration": 4.92,
+      "text": "need to carry the parent no because what"
+    },
+    {
+      "start": 744.24,
+      "end": 748.5,
+      "duration": 4.26,
+      "text": "we needed was the weight"
+    },
+    {
+      "start": 746.22,
+      "end": 750.3,
+      "duration": 4.08,
+      "text": "so that in Practical you always get the"
+    },
+    {
+      "start": 748.5,
+      "end": 753.24,
+      "duration": 4.74,
+      "text": "minimal weight and the other thing that"
+    },
+    {
+      "start": 750.3,
+      "end": 756.0,
+      "duration": 5.7,
+      "text": "I always needed was the note I needed"
+    },
+    {
+      "start": 753.24,
+      "end": 757.86,
+      "duration": 4.62,
+      "text": "the I I would have needed the parent if"
+    },
+    {
+      "start": 756.0,
+      "end": 760.08,
+      "duration": 4.08,
+      "text": "someone would have told me to get the"
+    },
+    {
+      "start": 757.86,
+      "end": 763.08,
+      "duration": 5.22,
+      "text": "MST but over here the question is just"
+    },
+    {
+      "start": 760.08,
+      "end": 765.72,
+      "duration": 5.64,
+      "text": "the sum of Weights of this so I'll just"
+    },
+    {
+      "start": 763.08,
+      "end": 768.6,
+      "duration": 5.52,
+      "text": "I'll just store something like"
+    },
+    {
+      "start": 765.72,
+      "end": 770.4,
+      "duration": 4.68,
+      "text": "the weight comma the node that's it no"
+    },
+    {
+      "start": 768.6,
+      "end": 771.96,
+      "duration": 3.36,
+      "text": "need to store the parrot if they ask you"
+    },
+    {
+      "start": 770.4,
+      "end": 773.7,
+      "duration": 3.3,
+      "text": "for MST you can go ahead and store the"
+    },
+    {
+      "start": 771.96,
+      "end": 775.8,
+      "duration": 3.84,
+      "text": "parent okay but over here we don't need"
+    },
+    {
+      "start": 773.7,
+      "end": 777.48,
+      "duration": 3.78,
+      "text": "anything so what I'll be like okay while"
+    },
+    {
+      "start": 775.8,
+      "end": 780.78,
+      "duration": 4.98,
+      "text": "PQ dot empty"
+    },
+    {
+      "start": 777.48,
+      "end": 784.32,
+      "duration": 6.84,
+      "text": "that's the case so what I'll get is auto"
+    },
+    {
+      "start": 780.78,
+      "end": 785.94,
+      "duration": 5.16,
+      "text": "of idspq.com okay at the same time I can"
+    },
+    {
+      "start": 784.32,
+      "end": 787.86,
+      "duration": 3.54,
+      "text": "do pq.com"
+    },
+    {
+      "start": 785.94,
+      "end": 790.38,
+      "duration": 4.44,
+      "text": "now I can say the node will be at the"
+    },
+    {
+      "start": 787.86,
+      "end": 792.12,
+      "duration": 4.26,
+      "text": "second position so I'll get the note and"
+    },
+    {
+      "start": 790.38,
+      "end": 794.52,
+      "duration": 4.14,
+      "text": "I know one thing the weight will be at"
+    },
+    {
+      "start": 792.12,
+      "end": 797.1,
+      "duration": 4.98,
+      "text": "the first position now something I know"
+    },
+    {
+      "start": 794.52,
+      "end": 799.32,
+      "duration": 4.8,
+      "text": "for sure is if this node is already"
+    },
+    {
+      "start": 797.1,
+      "end": 801.9,
+      "duration": 4.8,
+      "text": "visited it means it's already a part of"
+    },
+    {
+      "start": 799.32,
+      "end": 803.4,
+      "duration": 4.08,
+      "text": "the MST so I'll say hey no need to do"
+    },
+    {
+      "start": 801.9,
+      "end": 805.98,
+      "duration": 4.08,
+      "text": "anything if it's already the part of the"
+    },
+    {
+      "start": 803.4,
+      "end": 808.56,
+      "duration": 5.16,
+      "text": "MST or I can say that's rather this if"
+    },
+    {
+      "start": 805.98,
+      "end": 810.9,
+      "duration": 4.92,
+      "text": "it's already visited just go ahead just"
+    },
+    {
+      "start": 808.56,
+      "end": 813.12,
+      "duration": 4.56,
+      "text": "go out and get the next note if it's not"
+    },
+    {
+      "start": 810.9,
+      "end": 816.3,
+      "duration": 5.4,
+      "text": "visited I'll say okay come ahead be a"
+    },
+    {
+      "start": 813.12,
+      "end": 818.58,
+      "duration": 5.46,
+      "text": "part of the MSD come ahead and give it"
+    },
+    {
+      "start": 816.3,
+      "end": 820.62,
+      "duration": 4.32,
+      "text": "to the sum so probably I can declare"
+    },
+    {
+      "start": 818.58,
+      "end": 822.9,
+      "duration": 4.32,
+      "text": "something like sum equal to zero that's"
+    },
+    {
+      "start": 820.62,
+      "end": 825.12,
+      "duration": 4.5,
+      "text": "what I'll do it'll be a part of the MSD"
+    },
+    {
+      "start": 822.9,
+      "end": 827.22,
+      "duration": 4.32,
+      "text": "in case someone would have asked you to"
+    },
+    {
+      "start": 825.12,
+      "end": 829.68,
+      "duration": 4.56,
+      "text": "get the MSD you would have taken the"
+    },
+    {
+      "start": 827.22,
+      "end": 831.84,
+      "duration": 4.62,
+      "text": "parent and stored it in some list in"
+    },
+    {
+      "start": 829.68,
+      "end": 833.4,
+      "duration": 3.72,
+      "text": "this position okay but we don't need it"
+    },
+    {
+      "start": 831.84,
+      "end": 836.16,
+      "duration": 4.32,
+      "text": "now what's the next thing we've got the"
+    },
+    {
+      "start": 833.4,
+      "end": 837.96,
+      "duration": 4.56,
+      "text": "node get all the addition guys yes how"
+    },
+    {
+      "start": 836.16,
+      "end": 840.3,
+      "duration": 4.14,
+      "text": "do you get all the adjacent guys very"
+    },
+    {
+      "start": 837.96,
+      "end": 843.0,
+      "duration": 5.04,
+      "text": "simple I trade on all the adjacent guys"
+    },
+    {
+      "start": 840.3,
+      "end": 844.88,
+      "duration": 4.58,
+      "text": "like this and then where is the adjacent"
+    },
+    {
+      "start": 843.0,
+      "end": 848.28,
+      "duration": 5.28,
+      "text": "node this guy"
+    },
+    {
+      "start": 844.88,
+      "end": 851.16,
+      "duration": 6.28,
+      "text": "yes and what's the edge weight of that"
+    },
+    {
+      "start": 848.28,
+      "end": 855.9,
+      "duration": 7.62,
+      "text": "guy this one right now what do you need"
+    },
+    {
+      "start": 851.16,
+      "end": 859.2,
+      "duration": 8.04,
+      "text": "if it's not visited or not a part of MSD"
+    },
+    {
+      "start": 855.9,
+      "end": 862.02,
+      "duration": 6.12,
+      "text": "yet if it's not a part of the MST yet"
+    },
+    {
+      "start": 859.2,
+      "end": 865.02,
+      "duration": 5.82,
+      "text": "then I go ahead and say okay you're not"
+    },
+    {
+      "start": 862.02,
+      "end": 867.18,
+      "duration": 5.16,
+      "text": "a part of the embassy can you go ahead"
+    },
+    {
+      "start": 865.02,
+      "end": 869.4,
+      "duration": 4.38,
+      "text": "and"
+    },
+    {
+      "start": 867.18,
+      "end": 871.8,
+      "duration": 4.62,
+      "text": "get into the priority queue simple no"
+    },
+    {
+      "start": 869.4,
+      "end": 875.34,
+      "duration": 5.94,
+      "text": "need to Market has visited we Market has"
+    },
+    {
+      "start": 871.8,
+      "end": 878.64,
+      "duration": 6.84,
+      "text": "visited only at this Junction when we"
+    },
+    {
+      "start": 875.34,
+      "end": 883.2,
+      "duration": 7.86,
+      "text": "add it to the MSD this is when I add it"
+    },
+    {
+      "start": 878.64,
+      "end": 886.26,
+      "duration": 7.62,
+      "text": "to the MST that's when I only do it okay"
+    },
+    {
+      "start": 883.2,
+      "end": 888.48,
+      "duration": 5.28,
+      "text": "so very simple and once you've done this"
+    },
+    {
+      "start": 886.26,
+      "end": 891.36,
+      "duration": 5.1,
+      "text": "you need to return the sum so go ahead"
+    },
+    {
+      "start": 888.48,
+      "end": 893.28,
+      "duration": 4.8,
+      "text": "and return the sum so just go ahead and"
+    },
+    {
+      "start": 891.36,
+      "end": 895.38,
+      "duration": 4.02,
+      "text": "return this"
+    },
+    {
+      "start": 893.28,
+      "end": 896.82,
+      "duration": 3.54,
+      "text": "so we see it's compiling fine let's"
+    },
+    {
+      "start": 895.38,
+      "end": 899.28,
+      "duration": 3.9,
+      "text": "quickly submit this and see if it is"
+    },
+    {
+      "start": 896.82,
+      "end": 900.9,
+      "duration": 4.08,
+      "text": "running all the test cases"
+    },
+    {
+      "start": 899.28,
+      "end": 903.42,
+      "duration": 4.14,
+      "text": "we see all the test cases are running"
+    },
+    {
+      "start": 900.9,
+      "end": 905.52,
+      "duration": 4.62,
+      "text": "fine so the prim's algorithm was very"
+    },
+    {
+      "start": 903.42,
+      "end": 907.32,
+      "duration": 3.9,
+      "text": "simple I've written the code I might be"
+    },
+    {
+      "start": 905.52,
+      "end": 908.82,
+      "duration": 3.3,
+      "text": "thinking about striver what is the"
+    },
+    {
+      "start": 907.32,
+      "end": 912.3,
+      "duration": 4.98,
+      "text": "intuition the intuition is very simple"
+    },
+    {
+      "start": 908.82,
+      "end": 913.98,
+      "duration": 5.16,
+      "text": "guys you started with zero yes and after"
+    },
+    {
+      "start": 912.3,
+      "end": 916.68,
+      "duration": 4.38,
+      "text": "that what did you do you took the"
+    },
+    {
+      "start": 913.98,
+      "end": 918.6,
+      "duration": 4.62,
+      "text": "adjacent notes right so you basically"
+    },
+    {
+      "start": 916.68,
+      "end": 921.3,
+      "duration": 4.62,
+      "text": "start with the node and you know zero"
+    },
+    {
+      "start": 918.6,
+      "end": 924.36,
+      "duration": 5.76,
+      "text": "will be in MST 0 will be connected to"
+    },
+    {
+      "start": 921.3,
+      "end": 926.88,
+      "duration": 5.58,
+      "text": "someone for sure so you just entered one"
+    },
+    {
+      "start": 924.36,
+      "end": 929.58,
+      "duration": 5.22,
+      "text": "and two into the priority queue right"
+    },
+    {
+      "start": 926.88,
+      "end": 931.62,
+      "duration": 4.74,
+      "text": "and out of those out of those both"
+    },
+    {
+      "start": 929.58,
+      "end": 933.54,
+      "duration": 3.96,
+      "text": "adjacent in The Next Step you took the"
+    },
+    {
+      "start": 931.62,
+      "end": 935.52,
+      "duration": 3.9,
+      "text": "minimum so it's a greedy you took the"
+    },
+    {
+      "start": 933.54,
+      "end": 937.74,
+      "duration": 4.2,
+      "text": "minimum that's why you got two and"
+    },
+    {
+      "start": 935.52,
+      "end": 941.04,
+      "duration": 5.52,
+      "text": "that's where this was added right and"
+    },
+    {
+      "start": 937.74,
+      "end": 943.14,
+      "duration": 5.4,
+      "text": "next for two you added all the adjacent"
+    },
+    {
+      "start": 941.04,
+      "end": 945.78,
+      "duration": 4.74,
+      "text": "again for the next you got the next"
+    },
+    {
+      "start": 943.14,
+      "end": 946.98,
+      "duration": 3.84,
+      "text": "minimum which is this so you add it in"
+    },
+    {
+      "start": 945.78,
+      "end": 949.38,
+      "duration": 3.6,
+      "text": "this way"
+    },
+    {
+      "start": 946.98,
+      "end": 952.14,
+      "duration": 5.16,
+      "text": "this one but in the next when you got"
+    },
+    {
+      "start": 949.38,
+      "end": 954.54,
+      "duration": 5.16,
+      "text": "this as minimum it did not take it into"
+    },
+    {
+      "start": 952.14,
+      "end": 957.42,
+      "duration": 5.28,
+      "text": "account why because 0 was already in"
+    },
+    {
+      "start": 954.54,
+      "end": 958.98,
+      "duration": 4.44,
+      "text": "your MST 2 was already in your MST one"
+    },
+    {
+      "start": 957.42,
+      "end": 961.02,
+      "duration": 3.6,
+      "text": "was already in your MST so there is no"
+    },
+    {
+      "start": 958.98,
+      "end": 964.38,
+      "duration": 5.4,
+      "text": "point of taking this that's where this"
+    },
+    {
+      "start": 961.02,
+      "end": 966.48,
+      "duration": 5.46,
+      "text": "Edge was ignored in Your Dragon so the"
+    },
+    {
+      "start": 964.38,
+      "end": 968.4,
+      "duration": 4.02,
+      "text": "algorithm is very simple so if someone"
+    },
+    {
+      "start": 966.48,
+      "end": 971.34,
+      "duration": 4.86,
+      "text": "does ask you about the addition you can"
+    },
+    {
+      "start": 968.4,
+      "end": 974.28,
+      "duration": 5.88,
+      "text": "tell him that greedy is the intuition oh"
+    },
+    {
+      "start": 971.34,
+      "end": 975.78,
+      "duration": 4.44,
+      "text": "we simply start with zero because we"
+    },
+    {
+      "start": 974.28,
+      "end": 978.36,
+      "duration": 4.08,
+      "text": "know this will be the part of the MST"
+    },
+    {
+      "start": 975.78,
+      "end": 980.28,
+      "duration": 4.5,
+      "text": "and we we know one Edge will be"
+    },
+    {
+      "start": 978.36,
+      "end": 982.62,
+      "duration": 4.26,
+      "text": "connected with zero so get the minimal"
+    },
+    {
+      "start": 980.28,
+      "end": 986.28,
+      "duration": 6.0,
+      "text": "guy connected next get the next minimal"
+    },
+    {
+      "start": 982.62,
+      "end": 990.3,
+      "duration": 7.68,
+      "text": "guy connected next minimal is one"
+    },
+    {
+      "start": 986.28,
+      "end": 992.22,
+      "duration": 5.94,
+      "text": "connected next minimal is 2 2 but this"
+    },
+    {
+      "start": 990.3,
+      "end": 994.74,
+      "duration": 4.44,
+      "text": "will not be connected because 0 1 is"
+    },
+    {
+      "start": 992.22,
+      "end": 997.02,
+      "duration": 4.8,
+      "text": "connected right so the next guy either"
+    },
+    {
+      "start": 994.74,
+      "end": 998.34,
+      "duration": 3.6,
+      "text": "you can take this 2 or this to any one"
+    },
+    {
+      "start": 997.02,
+      "end": 999.72,
+      "duration": 2.7,
+      "text": "you can take this"
+    },
+    {
+      "start": 998.34,
+      "end": 1002.96,
+      "duration": 4.62,
+      "text": "or you can take this"
+    },
+    {
+      "start": 999.72,
+      "end": 1005.48,
+      "duration": 5.76,
+      "text": "anyone will work fine so this is what"
+    },
+    {
+      "start": 1002.96,
+      "end": 1007.76,
+      "duration": 4.8,
+      "text": "the intuition is greedy I just followed"
+    },
+    {
+      "start": 1005.48,
+      "end": 1009.32,
+      "duration": 3.84,
+      "text": "a simple greedy algorithm and that is"
+    },
+    {
+      "start": 1007.76,
+      "end": 1011.18,
+      "duration": 3.42,
+      "text": "the intuition behind solving this"
+    },
+    {
+      "start": 1009.32,
+      "end": 1013.16,
+      "duration": 3.84,
+      "text": "problem now now you must be thinking"
+    },
+    {
+      "start": 1011.18,
+      "end": 1015.8,
+      "duration": 4.62,
+      "text": "what is the time complexity of this"
+    },
+    {
+      "start": 1013.16,
+      "end": 1018.44,
+      "duration": 5.28,
+      "text": "particular algorithm so if you carefully"
+    },
+    {
+      "start": 1015.8,
+      "end": 1020.48,
+      "duration": 4.68,
+      "text": "observe we're actually running for all"
+    },
+    {
+      "start": 1018.44,
+      "end": 1022.04,
+      "duration": 3.6,
+      "text": "the edges in the priority queue so the"
+    },
+    {
+      "start": 1020.48,
+      "end": 1024.8,
+      "duration": 4.32,
+      "text": "number of iterations in the priority"
+    },
+    {
+      "start": 1022.04,
+      "end": 1026.42,
+      "duration": 4.38,
+      "text": "queue will be the number of edges or"
+    },
+    {
+      "start": 1024.8,
+      "end": 1029.18,
+      "duration": 4.38,
+      "text": "somewhere near about that at the worst"
+    },
+    {
+      "start": 1026.42,
+      "end": 1031.52,
+      "duration": 5.1,
+      "text": "case so I can say the iteration is"
+    },
+    {
+      "start": 1029.18,
+      "end": 1033.56,
+      "duration": 4.38,
+      "text": "definitely be coffee so I can say this"
+    },
+    {
+      "start": 1031.52,
+      "end": 1036.44,
+      "duration": 4.92,
+      "text": "while loop will definitely run for E"
+    },
+    {
+      "start": 1033.56,
+      "end": 1038.72,
+      "duration": 5.16,
+      "text": "times and there is a priority queue top"
+    },
+    {
+      "start": 1036.44,
+      "end": 1041.6,
+      "duration": 5.16,
+      "text": "which will take logarithmic of priority"
+    },
+    {
+      "start": 1038.72,
+      "end": 1044.54,
+      "duration": 5.82,
+      "text": "queue size what can be the worst case"
+    },
+    {
+      "start": 1041.6,
+      "end": 1046.58,
+      "duration": 4.98,
+      "text": "size imagine a graph like this"
+    },
+    {
+      "start": 1044.54,
+      "end": 1048.02,
+      "duration": 3.48,
+      "text": "imagine a graph like this and this is 0"
+    },
+    {
+      "start": 1046.58,
+      "end": 1050.78,
+      "duration": 4.2,
+      "text": "and this is one this is two three four"
+    },
+    {
+      "start": 1048.02,
+      "end": 1052.0,
+      "duration": 3.98,
+      "text": "so the first line it can have all the"
+    },
+    {
+      "start": 1050.78,
+      "end": 1054.02,
+      "duration": 3.24,
+      "text": "edges"
+    },
+    {
+      "start": 1052.0,
+      "end": 1057.2,
+      "duration": 5.2,
+      "text": "the worst case"
+    },
+    {
+      "start": 1054.02,
+      "end": 1059.6,
+      "duration": 5.58,
+      "text": "right so can I see logarithmic of e"
+    },
+    {
+      "start": 1057.2,
+      "end": 1063.62,
+      "duration": 6.42,
+      "text": "which is all the edges is what this is"
+    },
+    {
+      "start": 1059.6,
+      "end": 1066.68,
+      "duration": 7.08,
+      "text": "so this iteration interlock now adjacent"
+    },
+    {
+      "start": 1063.62,
+      "end": 1069.02,
+      "duration": 5.4,
+      "text": "notes can I say overall"
+    },
+    {
+      "start": 1066.68,
+      "end": 1071.9,
+      "duration": 5.22,
+      "text": "like throughout all the iterations we"
+    },
+    {
+      "start": 1069.02,
+      "end": 1074.72,
+      "duration": 5.7,
+      "text": "will move across all the edges all the"
+    },
+    {
+      "start": 1071.9,
+      "end": 1078.08,
+      "duration": 6.18,
+      "text": "edges so e for this and a p q dot push"
+    },
+    {
+      "start": 1074.72,
+      "end": 1080.42,
+      "duration": 5.7,
+      "text": "so log e again so basically e log e over"
+    },
+    {
+      "start": 1078.08,
+      "end": 1082.88,
+      "duration": 4.8,
+      "text": "here e log e over here overall overall"
+    },
+    {
+      "start": 1080.42,
+      "end": 1085.1,
+      "duration": 4.68,
+      "text": "because for once it will have limited"
+    },
+    {
+      "start": 1082.88,
+      "end": 1088.04,
+      "duration": 5.16,
+      "text": "number of adjacent nodes but if you"
+    },
+    {
+      "start": 1085.1,
+      "end": 1089.12,
+      "duration": 4.02,
+      "text": "combine all the notes it's e log e so e"
+    },
+    {
+      "start": 1088.04,
+      "end": 1092.72,
+      "duration": 4.68,
+      "text": "log e"
+    },
+    {
+      "start": 1089.12,
+      "end": 1094.4,
+      "duration": 5.28,
+      "text": "for iteration into this plus e log e for"
+    },
+    {
+      "start": 1092.72,
+      "end": 1096.74,
+      "duration": 4.02,
+      "text": "traversing the adjacent and putting them"
+    },
+    {
+      "start": 1094.4,
+      "end": 1099.38,
+      "duration": 4.98,
+      "text": "into the Prodigy so e log e plus e log e"
+    },
+    {
+      "start": 1096.74,
+      "end": 1102.08,
+      "duration": 5.34,
+      "text": "is so many robot that's the time"
+    },
+    {
+      "start": 1099.38,
+      "end": 1103.94,
+      "duration": 4.56,
+      "text": "complexity right what about the space so"
+    },
+    {
+      "start": 1102.08,
+      "end": 1106.28,
+      "duration": 4.2,
+      "text": "we can say the space is V over here"
+    },
+    {
+      "start": 1103.94,
+      "end": 1110.0,
+      "duration": 6.06,
+      "text": "raising a particue which can take a"
+    },
+    {
+      "start": 1106.28,
+      "end": 1112.82,
+      "duration": 6.54,
+      "text": "maximum of B go of e so that is about"
+    },
+    {
+      "start": 1110.0,
+      "end": 1114.56,
+      "duration": 4.56,
+      "text": "the time complexity and the space"
+    },
+    {
+      "start": 1112.82,
+      "end": 1116.12,
+      "duration": 3.3,
+      "text": "complexity so guys I hope you have"
+    },
+    {
+      "start": 1114.56,
+      "end": 1118.1,
+      "duration": 3.54,
+      "text": "understood everything about the prims"
+    },
+    {
+      "start": 1116.12,
+      "end": 1120.2,
+      "duration": 4.08,
+      "text": "algorithm so just in case you did please"
+    },
+    {
+      "start": 1118.1,
+      "end": 1123.08,
+      "duration": 4.98,
+      "text": "hit that like button and yeah I just"
+    },
+    {
+      "start": 1120.2,
+      "end": 1125.12,
+      "duration": 4.92,
+      "text": "checked out my stats nearly 50 of the"
+    },
+    {
+      "start": 1123.08,
+      "end": 1127.64,
+      "duration": 4.56,
+      "text": "people who watch my playlist do not"
+    },
+    {
+      "start": 1125.12,
+      "end": 1129.32,
+      "duration": 4.2,
+      "text": "subscribe to our Channel please please"
+    },
+    {
+      "start": 1127.64,
+      "end": 1131.12,
+      "duration": 3.48,
+      "text": "do consider subscribing to us because"
+    },
+    {
+      "start": 1129.32,
+      "end": 1132.5,
+      "duration": 3.18,
+      "text": "that is the only thing that keeps me"
+    },
+    {
+      "start": 1131.12,
+      "end": 1134.66,
+      "duration": 3.54,
+      "text": "going and yeah if you haven't checked"
+    },
+    {
+      "start": 1132.5,
+      "end": 1136.28,
+      "duration": 3.78,
+      "text": "out our DP series and the SD sheet the"
+    },
+    {
+      "start": 1134.66,
+      "end": 1137.6,
+      "duration": 2.94,
+      "text": "links are in the description please make"
+    },
+    {
+      "start": 1136.28,
+      "end": 1138.92,
+      "duration": 2.64,
+      "text": "sure you check them out with this I'll"
+    },
+    {
+      "start": 1137.6,
+      "end": 1141.2,
+      "duration": 3.6,
+      "text": "be wrapping up this video let's read in"
+    },
+    {
+      "start": 1138.92,
+      "end": 1145.22,
+      "duration": 6.3,
+      "text": "some other videos"
+    },
+    {
+      "start": 1141.2,
+      "end": 1149.56,
+      "duration": 8.36,
+      "text": "whenever your heart is broken don't ever"
+    },
+    {
+      "start": 1145.22,
+      "end": 1149.56,
+      "duration": 4.34,
+      "text": "forget you're golden I"
+    }
+  ]
+}
