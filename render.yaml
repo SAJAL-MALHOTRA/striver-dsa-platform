@@ -5,7 +5,7 @@ services:
     region: oregon
     plan: free
     buildCommand: pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu && pip install --no-cache-dir -r requirements.txt
-    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+    startCommand: python run_server.py
     envVars:
       - key: DEFAULT_PROVIDER
         value: groq

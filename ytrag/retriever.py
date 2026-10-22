@@ -80,50 +80,77 @@ class DenseRetriever:
         chunks: list[Chunk],
         model_name: str = "all-MiniLM-L6-v2",
         batch_size: int = 32,
+        lazy: bool = False,
     ):
-        from sentence_transformers import SentenceTransformer
-
         self.chunks = chunks
         self.model_name = model_name
-        try:
-            self.model = SentenceTransformer(model_name, local_files_only=True)
-        except Exception:
-            self.model = SentenceTransformer(model_name)
-        
-        # Check disk cache for precomputed chunk embeddings
-        cache_dir = BASE_DIR / "eval" / ".cache"
-        cache_dir.mkdir(parents=True, exist_ok=True)
-        chunk_signature = hashlib.sha256("".join(c.chunk_id for c in chunks).encode("utf-8")).hexdigest()[:16]
-        cache_file = cache_dir / f"emb_{model_name.replace('/', '_')}_{len(chunks)}_{chunk_signature}.npy"
-
+        self.batch_size = batch_size
+        self.model = None
         self.embeddings = None
-        if cache_file.exists():
-            try:
-                loaded = np.load(str(cache_file))
-                if loaded.shape[0] == len(chunks):
-                    self.embeddings = loaded
-                else:
-                    cache_file.unlink(missing_ok=True)
-            except Exception:
-                cache_file.unlink(missing_ok=True)
+        self._ready = False
+
+        if not lazy:
+            self.load()
+
+    @property
+    def is_ready(self) -> bool:
+        return self._ready and self.embeddings is not None
+
+    def load(self):
+        if self._ready:
+            return
+
+        from sentence_transformers import SentenceTransformer
+
+        try:
+            self.model = SentenceTransformer(self.model_name, local_files_only=True)
+        except Exception:
+            self.model = SentenceTransformer(self.model_name)
+
+        chunk_signature = hashlib.sha256("".join(c.chunk_id for c in self.chunks).encode("utf-8")).hexdigest()[:16]
+        filename = f"emb_{self.model_name.replace('/', '_')}_{len(self.chunks)}_{chunk_signature}.npy"
+
+        # Check candidate locations: data/ first (precomputed in git), then eval/.cache/
+        candidate_files = [
+            BASE_DIR / "data" / filename,
+            BASE_DIR / "eval" / ".cache" / filename,
+        ]
+
+        for cache_file in candidate_files:
+            if cache_file.exists():
+                try:
+                    loaded = np.load(str(cache_file))
+                    if loaded.shape[0] == len(self.chunks):
+                        self.embeddings = loaded
+                        self._ready = True
+                        return
+                except Exception:
+                    pass
 
         if self.embeddings is None:
-            texts = [c.text for c in chunks]
+            texts = [c.text for c in self.chunks]
             self.embeddings = self.model.encode(
                 texts,
-                batch_size=batch_size,
+                batch_size=self.batch_size,
                 show_progress_bar=False,
                 normalize_embeddings=True,
             )
             try:
-                tmp_file = cache_dir / f"tmp_{cache_file.name}"
+                cache_dir = BASE_DIR / "eval" / ".cache"
+                cache_dir.mkdir(parents=True, exist_ok=True)
+                tmp_file = cache_dir / f"tmp_{filename}"
                 with open(tmp_file, "wb") as f:
                     np.save(f, self.embeddings)
-                tmp_file.replace(cache_file)
+                tmp_file.replace(cache_dir / filename)
             except Exception:
                 pass
 
+        self._ready = True
+
     def retrieve(self, query: str, k: int = 3) -> list[RetrievalResult]:
+        if not self._ready or self.embeddings is None or self.model is None:
+            return []
+
         clean_query = normalize_dsa_text(query)
         query_emb = self.model.encode(
             [clean_query],

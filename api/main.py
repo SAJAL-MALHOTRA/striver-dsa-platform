@@ -117,10 +117,11 @@ def resolve_default_provider() -> str:
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Initialize index and DSA sheet on startup
+    import asyncio
+    # Initialize index and DSA sheet on startup (instant)
     chunks, raw_transcripts, videos_meta = load_corpus()
     bm25 = BM25Retriever(chunks)
-    dense = DenseRetriever(chunks, model_name="all-MiniLM-L6-v2")
+    dense = DenseRetriever(chunks, model_name="all-MiniLM-L6-v2", lazy=True)
     hybrid = HybridRetriever(bm25, dense)
     segment_index = SegmentIndex(raw_transcripts, window=1)
     summarizer = GroundedSummarizer()
@@ -132,6 +133,13 @@ async def lifespan(app: FastAPI):
     state["videos_meta"] = videos_meta
     state["summarizer"] = summarizer
     state["dsa_index"] = dsa_index
+
+    # Warm up dense retriever in background so port binds instantly in < 1 second!
+    async def _warmup_dense():
+        loop = asyncio.get_running_loop()
+        await loop.run_in_executor(None, dense.load)
+
+    asyncio.create_task(_warmup_dense())
     yield
     state.clear()
 
