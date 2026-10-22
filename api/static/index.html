@@ -2655,16 +2655,23 @@
       <div class="form-group">
         <label class="form-label">Provider</label>
         <select id="modal-provider" class="form-select">
-          <option value="local">🚀 Local RTX 5050 (Striver Qwen2.5-Coder 7B)</option>
-          <option value="groq">Groq (Llama-3.3 70B Versatile)</option>
+          <option value="groq" selected>⚡ Groq (Llama-3.3 70B - Free BYOK)</option>
+          <option id="opt-local" value="local">🚀 Local RTX 5050 (Striver Qwen2.5-Coder 7B)</option>
           <option value="grok">Grok / xAI (grok-2-latest)</option>
           <option value="openai">OpenAI (GPT-4o-mini)</option>
           <option value="custom">Custom Endpoint (Ollama / Local)</option>
         </select>
       </div>
 
-      <div id="local-info-group" class="form-group" style="font-size: 12px; color: var(--brand-accent); background: rgba(0, 180, 216, 0.08); padding: 10px 12px; border-radius: 6px; border: 1px solid rgba(0, 180, 216, 0.25);">
-        ✨ <strong>Fine-Tuned Striver LLM Active:</strong> Runs directly on your NVIDIA GeForce RTX 5050 (8GB VRAM). No external API key or internet required.
+      <div id="groq-help-box" class="form-group" style="font-size: 12px; color: #1e3a8a; background: #eff6ff; padding: 12px 14px; border-radius: 8px; border: 1px solid #bfdbfe; line-height: 1.5;">
+        🔑 <strong>Bring Your Own Groq Key:</strong><br>
+        1. Grab your free key at <a href="https://console.groq.com/keys" target="_blank" style="color: #2563eb; text-decoration: underline; font-weight: 700;">console.groq.com/keys</a> (Takes 10 seconds, no credit card).<br>
+        2. Paste below and click <strong>Connect Provider</strong>.<br>
+        <span style="font-size: 11px; color: #64748b; margin-top: 4px; display: inline-block;">🔒 Stored locally in your browser. Never saved to our server database.</span>
+      </div>
+
+      <div id="local-info-group" class="form-group" style="display: none; font-size: 12px; color: var(--brand-accent); background: rgba(0, 180, 216, 0.08); padding: 10px 12px; border-radius: 6px; border: 1px solid rgba(0, 180, 216, 0.25);">
+        ✨ <strong>Fine-Tuned Striver LLM Active:</strong> Runs directly on your local NVIDIA GeForce RTX 5050 (8GB VRAM). No external key required.
       </div>
 
       <div id="api-key-group" class="form-group" style="display: none;">
@@ -2794,15 +2801,12 @@
       if (state.provider === "local") {
         keyIndicator.classList.add("active");
         keyLabel.textContent = "⚡ RTX 5050 (Striver AI)";
-      } else if (state.provider === "groq" && (state.apiKey || state.serverHasGroq)) {
-        keyIndicator.classList.add("active");
-        keyLabel.textContent = "⚡ Groq (Llama-3.3 70B)";
       } else if (state.apiKey) {
         keyIndicator.classList.add("active");
         keyLabel.textContent = `Connected: ${state.provider.toUpperCase()}`;
       } else {
         keyIndicator.classList.remove("active");
-        keyLabel.textContent = "Key: Extractive (Offline)";
+        keyLabel.textContent = "🔑 Connect Free Groq Key";
       }
     }
     updateKeyStatusUI();
@@ -2812,8 +2816,13 @@
       .then(res => res.json())
       .then(data => {
         state.serverHasGroq = data.has_server_groq_key;
-        if (!localStorage.getItem("dsa_provider") && data.default_provider) {
-          state.provider = data.default_provider;
+        state.hasLocalModel = data.has_local_model;
+        const optLocal = document.getElementById("opt-local");
+        if (optLocal && !data.has_local_model) {
+          optLocal.style.display = "none";
+        }
+        if (!localStorage.getItem("dsa_provider")) {
+          state.provider = data.has_local_model ? "local" : "groq";
         }
         updateKeyStatusUI();
       })
@@ -3962,9 +3971,12 @@
     function syncModalProviderUI() {
       const isLocal = modalProvider.value === "local";
       const isCustom = modalProvider.value === "custom";
+      const isGroq = modalProvider.value === "groq";
       if (localInfoGroup) localInfoGroup.style.display = isLocal ? "block" : "none";
       if (apiKeyGroup) apiKeyGroup.style.display = isLocal ? "none" : "block";
       if (customUrlGroup) customUrlGroup.style.display = isCustom ? "block" : "none";
+      const groqHelp = document.getElementById("groq-help-box");
+      if (groqHelp) groqHelp.style.display = isGroq ? "block" : "none";
     }
 
     // Key Modal events
