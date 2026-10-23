@@ -1,3 +1,13 @@
+---
+title: Striver DSA Platform
+emoji: ⚡
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # YouTube Lecture RAG: Bias-Aware Timestamped Video Retrieval & Synthesis
 
 A precision-engineered retrieval-augmented generation (RAG) system for technical YouTube lecture videos. Built to solve the **video timestamp precision problem**: taking student programming doubts (symptom descriptions, conceptual confusion, algorithm mechanics) and navigating directly to the exact second where the explanation begins.
